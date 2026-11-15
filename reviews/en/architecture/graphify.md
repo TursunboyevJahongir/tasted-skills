@@ -5,8 +5,8 @@
 - **Source:** [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify)
 - **Category:** `Architecture` *(Knowledge Graph from codebases and documents)*
 - **Type:** `Skill + Python CLI (graphifyy)`
-- **Quality Score:** **9.0 / 10**
-- **Relevance to Us:** **9.0 / 10**
+- **Quality Score:** **9.5 / 10**
+- **Relevance to Us:** **9.5 / 10**
 - **Recommended Scope:** `Global (-g)`
 - **Reviewed Date:** `2026-11-15`
 - **Current Status:** `✅ Active` *(used to quickly map and query the architecture of large codebases)*

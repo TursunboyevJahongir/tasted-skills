@@ -5,8 +5,8 @@
 - **Source:** [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/blob/main/skills/ponytail/SKILL.md)
 - **Category:** `Architecture` *(Code simplicity, YAGNI, and concise reply discipline)*
 - **Type:** `Skill`
-- **Quality Score:** **9.0 / 10**
-- **Relevance to Us:** **9.0 / 10**
+- **Quality Score:** **9.5 / 10**
+- **Relevance to Us:** **9.5 / 10**
 - **Recommended Scope:** `Global (-g)`
 - **Reviewed Date:** `2026-11-15`
 - **Current Status:** `✅ Active`

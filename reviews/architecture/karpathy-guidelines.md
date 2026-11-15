@@ -5,8 +5,8 @@
 - **Manba:** [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills)
 - **Turkum:** `Architecture` *(LLM kod yozish xatolarini kamaytirish qoidalari)*
 - **Turi:** `Skill`
-- **Sifat bahosi:** **9.0 / 10**
-- **Bizga kerakliligi:** **9.0 / 10**
+- **Sifat bahosi:** **9.5 / 10**
+- **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Tekshirilgan sana:** `2026-11-15`
 - **Joriy holati:** `✅ Faol`

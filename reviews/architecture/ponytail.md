@@ -5,8 +5,8 @@
 - **Manba:** [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/blob/main/skills/ponytail/SKILL.md)
 - **Turkum:** `Architecture` *(Kod soddaligi, YAGNI va qisqa javob intizomi)*
 - **Turi:** `Skill`
-- **Sifat bahosi:** **9.0 / 10**
-- **Bizga kerakliligi:** **9.0 / 10**
+- **Sifat bahosi:** **9.5 / 10**
+- **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Tekshirilgan sana:** `2026-11-15`
 - **Joriy holati:** `✅ Faol`

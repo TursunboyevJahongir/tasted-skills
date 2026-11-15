@@ -5,8 +5,8 @@
 - **Source:** [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills)
 - **Category:** `Architecture` *(Guidelines to reduce common LLM coding mistakes)*
 - **Type:** `Skill`
-- **Quality Score:** **9.0 / 10**
-- **Relevance to Us:** **9.0 / 10**
+- **Quality Score:** **9.5 / 10**
+- **Relevance to Us:** **9.5 / 10**
 - **Recommended Scope:** `Global (-g)`
 - **Reviewed Date:** `2026-11-15`
 - **Current Status:** `✅ Active`

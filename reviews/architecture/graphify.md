@@ -5,8 +5,8 @@
 - **Manba:** [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify)
 - **Turkum:** `Architecture` *(Kod bazasi va hujjatlardan bilim grafigi — Knowledge Graph)*
 - **Turi:** `Skill + Python CLI (graphifyy)`
-- **Sifat bahosi:** **9.0 / 10**
-- **Bizga kerakliligi:** **9.0 / 10**
+- **Sifat bahosi:** **9.5 / 10**
+- **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Tekshirilgan sana:** `2026-11-15`
 - **Joriy holati:** `✅ Faol` *(katta kod bazalari arxitekturasini tez tushunish va qidirish uchun ishlatiladi)*
