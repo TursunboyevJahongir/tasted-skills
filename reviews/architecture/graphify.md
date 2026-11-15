@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **9.5 / 10**
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
-- **Tekshirilgan sana:** `2026-11-15`
+- **Ishlatilayotgan sana:** `2026-07-28` dan
 - **Joriy holati:** `✅ Faol` *(katta kod bazalari arxitekturasini tez tushunish va qidirish uchun ishlatiladi)*
 
 ---
@@ -61,4 +61,4 @@ Istalgan loyiha papkasini (kod, SQL sxemalar, Markdown hujjatlar, PDF, rasm va v
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Global o'rnatilgan arxitektura vositasi sifatida qayd etish | `✅ Faol` | `skillshare` orqali global ulangan va kod bazalarini tahlil qilishda faol ishlatilmoqda. |
+| 2026-07-28 | Loyihalarda `graphify-out/` bilim grafigini qurish va ishlatishni boshlash | `✅ Faol` | Bir nechta yirik servis va mobil repozitoriylarda kod bazasi xaritasi sifatida ishlatib kelinmoqda (`2026-09-22` CLI yangilandi, `2026-10-31` da `skillshare` orqali 5 ta agentga ulandi). |

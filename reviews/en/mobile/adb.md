@@ -8,7 +8,7 @@
 - **Quality Score:** **9.5 / 10**
 - **Need for Us:** **10.0 / 10**
 - **Recommended Scope:** `Standalone Tool` *(installed globally in PATH + governed by QA skills)*
-- **Reviewed Date:** `2026-11-15`
+- **Active Since:** `2026-09-07`
 - **Current Status:** `✅ Active` *(core tool for Android emulator and physical device testing)*
 
 ---
@@ -72,5 +72,5 @@ Complements [`agent-device`](agent-device.md) and [`agent-desktop`](../developer
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Symlinked into global PATH and integrated into mobile QA workflow | `✅ Active` | Active globally via Android SDK Platform-Tools. |
+| 2026-09-07 | Installed Android SDK `platform-tools/adb` (`2026-11-15` symlinked into global `PATH` & headless QA gate) | `✅ Active` | Active across `-no-window` emulators and physical Android phones. |
 | 2026-11-16 | Delegated UI tree/input layer to `agent-device`, retained as core transport/log CLI | `✅ Active` | Kept active: `agent-device` depends on `adb` underneath, while `adb` directly handles `reverse`, `logcat`, `install`, and `emu kill`. |

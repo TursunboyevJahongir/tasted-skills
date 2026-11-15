@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **6.5 / 10**
 - **Bizga kerakliligi:** **2.0 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(avval o'rnatib sinab ko'rildi va olib tashlandi)*
-- **Tekshirilgan sana:** `2026-11-15`
+- **Ishlatilgan davr:** `2026-04-04 → 2026-09-01` *(sinab ko'rilib o'chirilgan)*
 - **Joriy holati:** `⛔ Rad etildi` *(🧪 Sinab ko'rilib, ishni sekinlashtirgani sabab o'chirib tashlangan)*
 
 ---
@@ -79,4 +79,5 @@ Oldin o'rnatib real vazifalarda ishlatib ko'rilganda, foydadan ko'ra ko'proq zar
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Amaliyotda sinab ko'rilib, o'chirib tashlangan va sabablari hujjatlashtirilgan | `⛔ Rad etildi` | Ortiqcha o'ylanish (`using-superpowers`), keraksiz joyda `brainstorming` savollari (muqobili: `grill-me`), sekinlashtiruvchi subagent looplari va Web/Mobile/Backend uchun ikki hissa ish tug'diradigan majburiy TDD sababli global muhitdan butunlay olib tashlangan. |
+| 2026-04-04 | Global o'rnatib amaliyotda sinashni boshlash | `⛔ Rad etildi` | 14 ta jarayon skilli ulandi; ko'p oylik real ishda `SessionStart` overthinking va `brainstorming` shovqini ishni sekinlashtirdi (`2026-08-14` da majburiy `test-driven-development` o'chirib qo'yildi). |
+| 2026-09-01 | Asosiy oqimdan butunlay olib tashlash | `⛔ Rad etildi` | O'rniga `grill-me`, `ponytail`, `karpathy-guidelines` va `cross-platform-qa` qoldirildi. |

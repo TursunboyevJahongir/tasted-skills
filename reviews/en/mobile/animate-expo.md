@@ -8,7 +8,7 @@
 - **Quality Score:** **9.5 / 10**
 - **Need for Us:** **9.0 / 10**
 - **Recommended Scope:** `Global (-g)`
-- **Reviewed Date:** `2026-11-15`
+- **Active Since:** `2026-11-09`
 - **Current Status:** `✅ Active`
 
 ---

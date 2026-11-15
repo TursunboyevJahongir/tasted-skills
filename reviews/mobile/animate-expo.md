@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **9.5 / 10**
 - **Bizga kerakliligi:** **9.0 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
-- **Tekshirilgan sana:** `2026-11-15`
+- **Ishlatilayotgan sana:** `2026-11-09` dan
 - **Joriy holati:** `✅ Faol`
 
 ---

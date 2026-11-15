@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **2.5 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(avval o'rnatib ko'rildi va olib tashlandi)*
 - **O'rniga ishlatiladigan muqobillar:** [**`impeccable`**](impeccable.md) ([pbakaus/impeccable](https://github.com/pbakaus/impeccable)) + [**`animate-expo`**](../mobile/animate-expo.md) ([emilkowalski/skills](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo))
-- **Tekshirilgan sana:** `2026-11-15`
+- **Ishlatilgan davr:** `2026-10-31 → 2026-11-15` *(sinab ko'rilib o'chirilgan)*
 - **Joriy holati:** `⛔ Rad etildi` *(🧪 Sinab ko'rilib, `impeccable` + `animate-expo` o'rnini to'liq bosgani sabab olib tashlandi)*
 
 ---
@@ -64,4 +64,5 @@ Web interfeyslarni silliqlash bo'yicha 19 ta mikro-qoida (`SKILL.md`, `typograph
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | `skillshare uninstall make-interfaces-feel-better -g` orqali globaldan olib tashlash | `⛔ Rad etildi` | [`impeccable`](impeccable.md) va [`animate-expo`](../mobile/animate-expo.md) uning barcha foydali qoidalarini to'liq qamrab olgani hamda auto-trigger to'qnashuvi sababli o'chirib tashlandi. |
+| 2026-10-31 | Global `skillshare` bazasiga ulab sinab ko'rish | `⛔ Rad etildi` | Web mikro-qoidalar sifatida sinab ko'rildi (`2026-11-09` da `impeccable` qo'shilgach auto-trigger ustma-ust tushdi). |
+| 2026-11-15 | `skillshare uninstall make-interfaces-feel-better -g` orqali globaldan olib tashlash | `⛔ Rad etildi` | [`impeccable`](impeccable.md) va [`animate-expo`](../mobile/animate-expo.md) uning barcha foydali qoidalarini to'liq qamrab olgani sababli o'chirib tashlandi. |

@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **9.5 / 10**
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
-- **Tekshirilgan sana:** `2026-11-15`
+- **Ishlatilayotgan sana:** `2026-11-09` dan
 - **Joriy holati:** `✅ Faol` *(barcha veb va mobil UI/UX ishlarida asosiy dizayn skilli)*
 
 ---
@@ -64,5 +64,5 @@ Ichida `shape`, `audit`, `polish`, `simplify`, `harden`, `adapt` kabi maxsus pla
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Asosiy UI/UX tizimi sifatida katalogga kiritish | `✅ Faol` | `v4.8.1` (`mobile-routing-1` moslashuvi va xavfsiz hook cheklovi bilan) global o'rnatilgan va faol ishlatilmoqda. |
+| 2026-11-09 | `v4.8.1` (`mobile-routing-1` va hook cheklovi bilan) global o'rnatish | `✅ Faol` | Web, mobil veb va React Native ekranlari dizayni hamda kontrast/UX auditida asosiy vosita sifatida ishlatib kelinmoqda. |
 

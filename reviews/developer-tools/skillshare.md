@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **9.5 / 10**
 - **Bizga kerakliligi:** **10.0 / 10**
 - **Tavsiya etilgan ko'lam:** `Global CLI + Global Skill (-g)`
-- **Tekshirilgan sana:** `2026-11-15`
+- **Ishlatilayotgan sana:** `2026-05-30` dan
 - **Joriy holati:** `✅ Faol` *(barcha AI agentlarimizdagi skillarni boshqaruvchi markaziy vosita)*
 
 ---
@@ -59,5 +59,5 @@ Barcha global skillarimiz (jumladan ushbu `tasted-skills` ham) aynan `skillshare
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Markaziy boshqaruv vositasi sifatida qayd etish | `✅ Faol` | Global rejimda 5 ta agent target (`antigravity`, `antigravity-cli`, `claude`, `codex`, `codex-local`) sinxronizatsiyasi va auditi uchun faol ishlatilmoqda. |
+| 2026-05-30 | `Claude` va `Codex` o'rtasida yagona skill manbasini (`~/.config/skillshare/skills`) ishga tushirish | `✅ Faol` | Barcha skillarni bitta markazga yig'ish boshlandi (`2026-10-31` da `Antigravity` bilan jami 5 ta agent targetiga kengaytirildi + `skillshare audit` skill-check). |
 

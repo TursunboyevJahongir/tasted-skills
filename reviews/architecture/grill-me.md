@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **9.5 / 10**
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
-- **Tekshirilgan sana:** `2026-11-15`
+- **Ishlatilayotgan sana:** `2026-05-23` dan *(oxirgi yangilanish: `2026-11-16`)*
 - **Joriy holati:** `✅ Faol` *(kod yozishdan oldin g'oya va rejani pishitish uchun asosiy vosita)*
 
 ---
@@ -67,5 +67,5 @@ Rasmiy [mattpocock/skills](https://github.com/mattpocock/skills) reposidagi barc
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Global o'rnatilgan rejalashtirish skilli sifatida qayd etish | `✅ Faol` | `grilling`, `grill-me`, `grill-with-docs` va `domain-modeling` barcha agentlarga global ulangan. |
+| 2026-05-23 | Dastlabki o'rnatish (`grill-me` + `grill-with-docs`) | `✅ Faol` | Kod yozishdan oldin qarorlar daraxti bo'ylab talabni aniqlashtirish sifatida ishlatila boshlandi (`2026-10-31` da `skillshare` yagona bazasiga olindi). |
 | 2026-11-16 | `diagnosing-bugs` va `improve-codebase-architecture` sanitarizatsiyasi va global ulanishi | `✅ Faol` | Faqat kerak paytda ishlaydigan (`on-demand`) qilib tozalandi (`hitl-loop.template.sh` o'chirildi, `CODEBASE-DESIGN.md` biriktirildi, `0/100` audit xavfi) va barcha 5 ta agent muhitiga sinxronlandi; og'ir `tdd`/`to-tickets` skillari rad etildi (`⛔ Rad etildi`). |

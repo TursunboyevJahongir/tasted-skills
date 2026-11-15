@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **9.0 / 10**
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Standalone Desktop App + Global Consult Skilllar`
-- **Tekshirilgan sana:** `2026-11-15`
+- **Ishlatilayotgan sana:** `2026-10-23` dan
 - **Joriy holati:** `✅ Faol` *(bir nechta AI agentlarni birgalikda ishlatish uchun asosiy muhit)*
 
 ---
@@ -65,5 +65,5 @@ Global muhitimizdagi `task-context`, `antigravity-claude`, `antigravity-consult`
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Kundalik multi-agent ish oqimi sifatida qayd etish | `✅ Faol` | Desktop ilova hamda CLI subagent ko'prigi (Codex ↔ Claude ↔ Antigravity) o'rnatilgan va faol qo'llanilmoqda. |
+| 2026-10-23 | `T3 Code` desktop muhitini o'rnatish + CLI subagent review skillarini ulash (`2026-10-31`) | `✅ Faol` | Desktop ilova hamda CLI subagent ko'prigi (Codex ↔ Claude ↔ Antigravity) faol qo'llanilmoqda. |
 

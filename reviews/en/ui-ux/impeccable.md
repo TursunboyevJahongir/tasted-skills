@@ -8,7 +8,7 @@
 - **Quality Score:** **9.5 / 10**
 - **Relevance to Us:** **9.5 / 10**
 - **Recommended Scope:** `Global (-g)`
-- **Reviewed Date:** `2026-11-15`
+- **Active Since:** `2026-11-09`
 - **Current Status:** `✅ Active` *(primary design skill for all web and mobile UI/UX tasks)*
 
 ---
@@ -64,4 +64,4 @@ Includes dedicated playbooks (`shape`, `audit`, `polish`, `simplify`, `harden`, 
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Cataloged as primary UI/UX system | `✅ Active` | `v4.8.1` (with `mobile-routing-1` adaptation and safe hook restrictions) installed globally and actively used. |
+| 2026-11-09 | Installed `v4.8.1` globally (with `mobile-routing-1` and safe hook restrictions) | `✅ Active` | Actively used across web, mobile web, and React Native screens for UI design and contrast/UX auditing. |

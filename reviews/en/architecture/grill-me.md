@@ -8,7 +8,7 @@
 - **Quality Score:** **9.5 / 10**
 - **Relevance to Us:** **9.5 / 10**
 - **Recommended Scope:** `Global (-g)`
-- **Reviewed Date:** `2026-11-15`
+- **Active Since:** `2026-05-23` *(last updated: `2026-11-16`)*
 - **Current Status:** `✅ Active` *(primary tool for stress-testing ideas and plans before writing code)*
 
 ---
@@ -67,5 +67,5 @@ After auditing all skills in [mattpocock/skills](https://github.com/mattpocock/s
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Cataloged as globally installed planning skill suite | `✅ Active` | `grilling`, `grill-me`, `grill-with-docs`, and `domain-modeling` linked globally across all agents. |
+| 2026-05-23 | Initial installation (`grill-me` + `grill-with-docs`) | `✅ Active` | Adopted for pre-coding decision-tree planning (`2026-10-31` unified into `skillshare` across all agents). |
 | 2026-11-16 | Sanitized & globally synced `diagnosing-bugs` and `improve-codebase-architecture` | `✅ Active` | Configured for strict on-demand activation (`hitl-loop.template.sh` removed, `CODEBASE-DESIGN.md` bundled, `0/100` audit risk) and synced across all 5 agent targets; rejected heavy `tdd`/`to-tickets` skills (`⛔ Rejected`). |

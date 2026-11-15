@@ -8,7 +8,7 @@
 - **Quality Score:** **6.5 / 10**
 - **Relevance to Us:** **2.0 / 10**
 - **Recommended Scope:** `Do Not Install` *(previously tested in practice and uninstalled)*
-- **Reviewed Date:** `2026-11-15`
+- **Used Period:** `2026-04-04 → 2026-09-01` *(tested and removed)*
 - **Current Status:** `⛔ Rejected` *(🧪 Tested and removed because it slowed down real work)*
 
 ---
@@ -79,4 +79,5 @@ Instead of `superpowers`, we use focused, low-overhead tools for each stage:
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Tested in practice, uninstalled, and documented reasons | `⛔ Rejected` | Completely removed from the global environment due to overthinking (`using-superpowers`), uninvited `brainstorming` questions (replaced by [`grill-me`](grill-me.md)), slow subagent loops, and mandatory TDD that doubles Web/Mobile/Backend work. |
+| 2026-04-04 | Installed globally and tested in daily engineering | `⛔ Rejected` | Over months of real tasks, `SessionStart` overthinking and uninvited `brainstorming` slowed delivery (`test-driven-development` disabled on `2026-08-14`). |
+| 2026-09-01 | Removed from active workflow | `⛔ Rejected` | Replaced cleanly by [`grill-me`](grill-me.md), [`ponytail`](ponytail.md), [`karpathy-guidelines`](karpathy-guidelines.md), and `cross-platform-qa`. |
