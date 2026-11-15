@@ -69,7 +69,7 @@
 | Name | Type | Quality | Need | Status | Date | Summary |
 |---|---|---|---|---|---|---|
 | [**`opentelemetry`**](reviews/en/backend/opentelemetry.md) | Standard + Collector (`SigNoz` / `Grafana`) | **9.0/10** | **4.0/10** | `⏭️ Skipped (Not Tested)` | `2026-11-15` | Industry standard for cross-service `Traces + Metrics + Logs` and host/DB telemetry (requires `Collector + SigNoz/Grafana`). **Instead use:** [**`sentry`**](reviews/en/backend/sentry.md) (covers errors, replays, and baseline traces in one stack). |
-| [**`Shannon`**](reviews/en/backend/shannon.md) | Standalone CLI (`Docker` + `Temporal`) + `hacker-test` | **8.5/10** | **6.5/10** | `👀 Reviewed (Not Tested)` | `2026-11-16` | Autonomous White-Box AI pentester (proves Auth bypass, IDOR, Injection, XSS, and SSRF with live PoCs). Triggered on demand via `"hacker test"` (`npx @keygraph/shannon@latest`) strictly against local/staging — never production. |
+| [**`Shannon`**](reviews/en/backend/shannon.md) | Standalone CLI + [`hacker-test`](skills/hacker-test/SKILL.md) | **8.5/10** | **6.5/10** | `👀 Reviewed (Not Tested)` | `2026-11-16` | Autonomous White-Box AI pentester (Auth bypass, IDOR, Injection, XSS, SSRF). Instead of installing its heavy plugin, we trigger `npx` on demand via our lightweight [`hacker-test`](skills/hacker-test/SKILL.md) skill strictly on local/staging (never production). |
 
 ### 🛠️ Developer Tools & Memory
 
@@ -80,10 +80,10 @@
 ---
 
 <details>
-<summary>Install global <code>tasted-skills</code> skill</summary>
+<summary>Install global <code>tasted-skills</code> and <code>hacker-test</code> skills</summary>
 
 ```bash
-skillshare install TursunboyevJahongir/tasted-skills -s tasted-skills -g && skillshare sync -g
+skillshare install TursunboyevJahongir/tasted-skills -s tasted-skills -s hacker-test -g && skillshare sync -g
 ```
 
 </details>

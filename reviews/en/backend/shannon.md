@@ -4,12 +4,12 @@
 
 - **Source:** [KeygraphHQ/shannon](https://github.com/KeygraphHQ/shannon)
 - **Category:** `Backend` *(White-Box Web & HTTP API Security Auditing and Autonomous Pentesting)*
-- **Type:** `Standalone CLI (Docker + Temporal)` + lightweight local `hacker-test` trigger skill
+- **Type:** `Standalone CLI (Docker + Temporal)` + custom lightweight [`hacker-test`](../../../skills/hacker-test/SKILL.md) trigger skill
 - **Quality Score:** **8.5 / 10**
 - **Need for Us:** **6.5 / 10**
-- **Recommended Scope:** `Standalone CLI (npx @keygraph/shannon@latest)` — *run on demand before major releases against local/staging only; do not install its heavy plugin globally*
+- **Recommended Scope:** `On-Demand npx CLI + Global lightweight hacker-test skill` — *skip its heavy upstream plugin and trigger via our [`skills/hacker-test`](../../../skills/hacker-test/SKILL.md) wrapper strictly on local/staging*
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `👀 Reviewed (Not Tested)` *(source audited; wired to a tiny `hacker-test` reminder skill so we can trigger local pre-release pentests on demand)*
+- **Current Status:** `👀 Reviewed (Not Tested)` *(source audited; packaged [`skills/hacker-test`](../../../skills/hacker-test/SKILL.md) in this repo and synced globally so pre-release pentests are always one phrase away)*
 
 ---
 
@@ -53,9 +53,20 @@
 
 ---
 
-## 4. Fit & Compatibility with Our Existing Stack
+## 4. Our Approach: Why We Built [`hacker-test`](../../../skills/hacker-test/SKILL.md) Instead of Installing Upstream's Plugin
 
-- Unnecessary for daily coding turns, but a strong pre-release security gate when multi-tenant permissions, auth/device guards, or billing/subscription endpoints change — invoked on demand via `"hacker test"`.
+Pentesting is a pre-release event, not an everyday coding action. That creates two opposite traps: **1)** installing upstream `plugins/shannon` globally carries its large `llms-full.txt` bundle everywhere; **2)** installing nothing at all means a month later you forget the tool's name, Docker `host.docker.internal` mapping, `pi` auth variables, and `--validate-model` preflight check.
+
+**How we solved both:**
+1. We did **not** install `Shannon` or its upstream plugin permanently (`0` background daemons, `0` bloat).
+2. Instead, we authored a ~45-token wrapper skill inside this repository — [**`skills/hacker-test/SKILL.md`**](../../../skills/hacker-test/SKILL.md) — and synced it across `Antigravity`, `Claude Code`, and `Codex`:
+   ```bash
+   skillshare install TursunboyevJahongir/tasted-skills -s hacker-test -g && skillshare sync -g
+   ```
+3. During everyday coding it stays completely invisible, and whenever we type **`"hacker test"`** in any project, the agent automatically:
+   - enforces the **non-production safety gate** (`http://host.docker.internal:<port>` or disposable staging DB + explicit confirmation);
+   - runs the 10-second `--validate-model` cyber-safeguard preflight first;
+   - executes `npx @keygraph/shannon@latest start` and triages verified exploits into surgical code fixes.
 
 ---
 

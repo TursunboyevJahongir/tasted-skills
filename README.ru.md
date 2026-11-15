@@ -69,7 +69,7 @@
 | Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
 |---|---|---|---|---|---|---|
 | [**`opentelemetry`**](reviews/ru/backend/opentelemetry.md) | Стандарт + Collector (`SigNoz` / `Grafana`) | **9.0/10** | **4.0/10** | `⏭️ Пропущено (не тестировали)` | `2026-11-15` | Отраслевой стандарт межсервисных `Traces + Metrics + Logs` и метрик серверов/БД (требует `Collector + SigNoz/Grafana`). **Вместо него:** [**`sentry`**](reviews/ru/backend/sentry.md) (закрывает ошибки, реплеи и базовые трейсы в одной платформе). |
-| [**`Shannon`**](reviews/ru/backend/shannon.md) | Standalone CLI (`Docker` + `Temporal`) + `hacker-test` | **8.5/10** | **6.5/10** | `👀 Изучено (не тестировали)` | `2026-11-16` | Автономный White-Box AI-пентестер (доказывает Auth bypass, IDOR, Injection, XSS и SSRF реальными PoC). Вызывается фразой `"hacker test"` (`npx @keygraph/shannon@latest`) строго на local/staging — никогда на production. |
+| [**`Shannon`**](reviews/ru/backend/shannon.md) | Standalone CLI + [`hacker-test`](skills/hacker-test/SKILL.md) | **8.5/10** | **6.5/10** | `👀 Изучено (не тестировали)` | `2026-11-16` | Автономный White-Box AI-пентестер (Auth bypass, IDOR, Injection, XSS, SSRF). Вместо тяжёлого плагина вызывается по запросу через наш лёгкий скилл [`hacker-test`](skills/hacker-test/SKILL.md) и `npx` строго на local/staging (не на production). |
 
 ### 🛠️ Developer Tools и Memory
 
@@ -80,10 +80,10 @@
 ---
 
 <details>
-<summary>Подключить глобальный скилл <code>tasted-skills</code></summary>
+<summary>Подключить глобальные скиллы <code>tasted-skills</code> и <code>hacker-test</code></summary>
 
 ```bash
-skillshare install TursunboyevJahongir/tasted-skills -s tasted-skills -g && skillshare sync -g
+skillshare install TursunboyevJahongir/tasted-skills -s tasted-skills -s hacker-test -g && skillshare sync -g
 ```
 
 </details>
