@@ -35,6 +35,7 @@ Maqsad — YouTube/GitHub'dagi reklama va clickbait'ga ishonmasdan, har bir vosi
 
 | Resurs | Asl manba | Turi | Sifat | Keraklilik | Holati | Tekshirilgan sana | Qisqacha xulosa va sanitarizatsiya eslatmasi |
 |---|---|---|---|---|---|---|---|
+| [**`adb`** (Android Platform Tools)](reviews/mobile/adb.md) | [developer.android.com/tools/adb](https://developer.android.com/tools/adb) | CLI / Runtime Tool | **9.5/10** | **10.0/10** | `✅ Ishlatilyapti` | `2026-11-15` | Android emulyator (`-no-window`) va real telefonlarda ilovani boshqarish (`uiautomator dump`, `input tap`, `screencap`, `reverse`, `logcat`) uchun asosiy vosita. Har doim `-s <serial>` bilan aniq qurilmani tanlash shart. |
 | [**`mobile-native`**](reviews/mobile/mobile-native.md) | [emilkowalski/skills](https://github.com/emilkowalski/skills/tree/main/skills/mobile-native) | Skill | **8.5/10** | **7.5/10** | `📦 Nomzod` | `2026-11-15` | Mobil veb va PWA'ni native ilovadek sezdiradigan 11 ta aniq CSS/meta yechim (`dvh/svh`, `hover: hover`, `16px` input, `safe-area`, `overscroll`). O'rnatishdan oldin `Initial Response` salomlashuv bo'limi olib tashlanadi. |
 
 ---
