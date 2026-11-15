@@ -7,7 +7,7 @@
 - **Bizga kerakliligi:** **X.X / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)` | `Faqat alohida loyihaga (-p)` | `Plugin` | `Standalone Tool` | `O'rnatmaslik`
 - **Tekshirilgan sana:** `YYYY-MM-DD`
-- **Joriy holati:** `📦 Nomzod` *(yoki `✅ Ishlatilyapti` / `⏭️ Ishlatilmagan` / `⚠️ Globalga emas` / `⛔ Rad etilgan`)*
+- **Joriy holati:** `👀 Ko'rib chiqdik (sinab ko'rmadik)` *(yoki `✅ Ishlatilyapti` / `🧪 Sinab ko'rildi` / `⚠️ Faqat local (-p) (sinab ko'rmadik)` / `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` / `⛔ Rad etildi`)*
 
 ---
 

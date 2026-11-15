@@ -7,7 +7,7 @@
 - **Bizga kerakliligi:** **7.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)` *(tozalangan holda)*
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `📦 Nomzod` *(tekshirildi, hali o'rnatilmadi)*
+- **Joriy holati:** `👀 Ko'rib chiqdik (sinab ko'rmadik)` *(yaxshi nomzod)*
 
 ---
 

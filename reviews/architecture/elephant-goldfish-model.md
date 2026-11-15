@@ -7,7 +7,7 @@
 - **Bizga kerakliligi:** **8.0 / 10**
 - **Tavsiya etilgan ko'lam:** `Plugin` *(barcha skillarida manual chaqiruv saqlangan holda)*
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `📦 Nomzod` *(tekshirildi, katta arxitektura vazifalari uchun tavsiya etilgan, hali o'rnatilmadi)*
+- **Joriy holati:** `👀 Ko'rib chiqdik (sinab ko'rmadik)` *(katta arxitektura uchun kuchli nomzod)*
 
 ---
 

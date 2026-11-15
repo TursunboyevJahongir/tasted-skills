@@ -7,7 +7,7 @@
 - **Bizga kerakliligi:** **4.0 / 10** *(global muhit uchun past; faqat noldan promo-landing qurishda foydali)*
 - **Tavsiya etilgan ko'lam:** `Faqat alohida loyihaga (-p)` *(tozalangan holda; globalga o'rnatmaslik)*
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `⚠️ Globalga emas` *(zaxirada — hozircha o'rnatilmadi)*
+- **Joriy holati:** `⚠️ Faqat local (-p) (sinab ko'rmadik)`
 
 ---
 

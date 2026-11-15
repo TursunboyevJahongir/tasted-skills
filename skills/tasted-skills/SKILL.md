@@ -46,8 +46,8 @@ When the user asks what skills, plugins, MCPs, or AI tools help with a project o
 1. Read `~/Projects/tasted-skills/README.md` and inspect currently active skills/plugins (for example via `skillshare list -g` when available).
 2. Read `reviews/<category>/<slug>.md` only for relevant matches.
 3. Recommend in three buckets:
-   - **Already active** — installed tools/skills ready to use now.
-   - **Worth adding (`-g` global vs `-p` project-only)** — vetted `📦 Nomzod` or `🧪 Local (-p)` items, noting any required sanitization steps before installation.
+   - **Already active** — installed tools/skills (`✅ Ishlatilyapti`) ready to use now.
+   - **Worth adding (`-g` global vs `-p` project-only)** — vetted `👀 Ko'rib chiqdik (sinab ko'rmadik)` or `🧪 Sinab ko'rildi` items, noting any required sanitization steps before installation.
    - **Avoid / skip** — items already reviewed as conflicting, bloated, or unsafe for this type of project.
 
 ### 2. Audit a new skill, plugin, tool, URL, or video
@@ -65,7 +65,9 @@ When the user shares a GitHub repository, documentation site, package, MCP serve
    - Recommended scope (`Global -g`, `Project -p`, `Plugin`, `Standalone CLI/MCP`, or `Skip`).
 3. **Record when requested:**
    - Create `reviews/<category>/<slug>.md` from `reviews/TEMPLATE.md` in Uzbek, always setting `Tekshirilgan sana` (`YYYY-MM-DD`) in both the top metadata block and the history table.
-   - Add or update its row under the matching category section in `README.md` with a relative link (`reviews/<category>/<slug>.md`) and the `Tekshirilgan sana` column (`YYYY-MM-DD`).
+   - Keep `README.md` concise (no long prose instructions):
+     - Essential, battle-tested daily items (`✅ Ishlatilyapti`) go in the top ungrouped **`⭐ Eng keraklilari`** table.
+     - All remaining items (tested `🧪 Sinab ko'rildi` or reviewed-only `👀 Ko'rib chiqdik (sinab ko'rmadik)`, `⚠️ Faqat local (-p) (sinab ko'rmadik)`, `⏭️ O'tkazib yuborildi (sinab ko'rmadik)`, `⛔ Rad etildi`) go under **`Yo'nalishlar bo'yicha`** in their category table without duplicating rows from `⭐ Eng keraklilari`.
 
 ### 3. Sanitize before installing & update usage status
 

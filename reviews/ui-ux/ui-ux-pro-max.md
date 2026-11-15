@@ -7,7 +7,7 @@
 - **Bizga kerakliligi:** **3.5 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(asosiy UI skilli sifatida kerak emas)*
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `⏭️ Ishlatilmagan` *(ko'rib chiqildi va o'tkazib yuborildi)*
+- **Joriy holati:** `⏭️ O'tkazib yuborildi (sinab ko'rmadik)`
 
 ---
 
