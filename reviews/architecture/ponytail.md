@@ -16,10 +16,10 @@
 "Lazy senior dev mode" — vazifani to'liq hal qiladigan **eng kichik o'zgarish** (YAGNI) va band odam **bir o'qishda tushunadigan** qisqa javob yozishga o'rgatuvchi sof Markdown skill (`SKILL.md`, 3.5 KB).
 
 Ichida 3 xil rejim (`lite`, `full` default, `ultra`) va aniq qoidalar bor:
-- So'ralmagan kelajak uchun "universal" abstraksiya, factory yoki wrapper yozmaslik;
-- 3 marta takrorlanmaguncha alohida helper chiqarmaslik;
-- So'ralmagan test, konfiguratsiya fayli yoki yangi kutubxona qo'shmaslik;
-- Javobda kodni qayta hikoya qilmasdan, faqat nima o'zgargani va nega o'zgarganini 1–5 qatorda aytish.
+- So'ralmagan kelajak uchun "universal" abstraksiya, factory, wrapper, konfiguratsiya yoki bir necha qatorlik ish uchun yangi kutubxona qo'shmaslik;
+- Kod yozishdan oldin tegadigan barcha chaqiruvchilar (`callers`), testlar va eksportlarni tekshirib, muammoni eng qisqa to'liq o'zgarish bilan yopish;
+- Murakkab yangi mantiqda 1 ta kichik test yoki `assert` qoldirish; xavfsizlik, accessibility va ma'lumot yo'qolishidan himoyani hech qachon kesmaslik;
+- Javob oxirida 1–2 qatorda nima tekshirilmagani yoki tashlab ketilgani hamda mavjud xavfni ochiq yozish.
 
 ---
 
