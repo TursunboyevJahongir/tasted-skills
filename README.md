@@ -21,10 +21,11 @@
 
 | Nomi | Yo'nalish | Turi | Baho | Holati | Sana | Qisqacha izoh |
 |---|---|---|---|---|---|---|
-| [**`agent-desktop`**](reviews/developer-tools/agent-desktop.md) | Desktop / Web / iOS | CLI + Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | [agent-browser.dev/desktop](https://agent-browser.dev/desktop) — macOS Accessibility (`AX`) orqali Chrome, desktop dasturlar va iOS `Device Hub` ni kursorni qimirlatmasdan fonda boshqaradi. |
-| [**`adb`**](reviews/mobile/adb.md) | Mobile (Android) | CLI | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Android emulyator (`-no-window`) va real telefonlarda ilovani boshqarish (`uiautomator dump`, `input tap`, `screencap`, `reverse`, `logcat`). `-s <serial>` majburiy. |
+| [**`agent-desktop`**](reviews/developer-tools/agent-desktop.md) | Desktop / Web | CLI + Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | [agent-browser.dev/desktop](https://agent-browser.dev/desktop) — macOS Accessibility (`AX`) orqali Chrome va desktop dasturlarni kursorni qimirlatmasdan fonda boshqaradi (`iOS Device Hub` uchun ham fallback). |
+| [**`agent-device`**](reviews/mobile/agent-device.md) | Mobile / TV (`iOS` / `Android` / `tvOS`) | CLI + Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-16` | [agent-device.dev](https://agent-device.dev) — Callstack'ning 0-dependency CLI'i: oynasiz fonda iOS/tvOS Simulator (`~197ms`) va `-no-window` Android/TV Emulator (`~888ms`, 27x kam token, UTF-8/o'zbekcha input) UI'ini `@ref` hamda `--settle` diff bilan boshqaradi (`0` MCP shishishi). |
+| [**`adb`**](reviews/mobile/adb.md) | Mobile (Android) | CLI | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Android emulyator (`-no-window`) va real telefonlarda port ulash (`reverse`), `logcat`, APK o'rnatish hamda past darajadagi boshqaruv. `-s <serial>` majburiy. |
 | [**`skillshare`**](reviews/developer-tools/skillshare.md) | Developer Tools | CLI + Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Barcha AI agentlar (`Codex`, `Claude`, `Antigravity`) o'rtasida skill/pluginlarni bitta manbadan sinxronlash hamda o'rnatilgan tezkor **skill-check (`skillshare audit`)** orqali xavfsizlikdan o'tkazish. |
-| [**`cross-platform-qa`**](reviews/mobile/cross-platform-qa.md) | Web / iOS / Android | Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | 2-bosqichli QA: 1) lokal kompyuterda (`agent-desktop` + `Device Hub` + `adb` emulyator) tekshirish, 2) "Done" oldidan real telefonda `adb` orqali 1 marta sinash. |
+| [**`cross-platform-qa`**](reviews/mobile/cross-platform-qa.md) | Web / iOS / Android / TV | Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-16` | 2-bosqichli QA: 1) lokal kompyuterda (`agent-desktop` Web + `agent-device` headless iOS/Android/TV + `adb`) tekshirish, 2) "Done" oldidan real qurilmada 1 marta yakuniy sinash. |
 | [**`impeccable`**](reviews/ui-ux/impeccable.md) | UI/UX | Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Web, mobil veb va native iOS/Android ekranlar uchun asosiy dizayn va UX audit tizimi (xavfli tashqi hooklari o'chirilgan holda). |
 | [**`grill-me`**](reviews/architecture/grill-me.md) | Architecture / Planning | Skilllar to'plami | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Kod yozishdan oldin qarorlar daraxti (`design tree`) bo'ylab tavsiya etilgan javoblar bilan talabni oxirigacha pishitadi (`grilling` + `grill-with-docs`). |
 | [**`elephant-goldfish-model`**](reviews/architecture/elephant-goldfish-model.md) | Architecture / Audit | Plugin (7 skill + 10 agent) | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Xotirali me'mor (*Elephant*) + xotirasiz tanqidchi subagentlar (*Goldfish*): `egm-drift-report` va 5 bosqichli `egm-review` ko'p-repoli tizimlarda hujjat-kod uzilishlari va yashirin xatolarni aniq topadi. |
@@ -49,7 +50,11 @@
 
 ### 📱 Mobile
 
-*Asosiy faol mobil vositalar (`adb`, `xcrun simctl` + `Device Hub`, `cross-platform-qa`, `animate-expo`, `mobile-native`) yuqoridagi **⭐ Eng keraklilari** jadvalida.*
+*Asosiy faol mobil va TV vositalar (`agent-device`, `adb`, `xcrun simctl` + `Device Hub`, `cross-platform-qa`, `animate-expo`, `mobile-native`) yuqoridagi **⭐ Eng keraklilari** jadvalida.*
+
+| Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
+|---|---|---|---|---|---|---|
+| [**`mobile-mcp`**](reviews/mobile/mobile-mcp.md) | MCP Server (34 tool) | **7.0/10** | **2.0/10** | `⛔ Rad etildi` | `2026-11-16` | Jonli sinovda rad etildi: har bitta xabarda `~7,580` token MCP sxema shishishi, `agent-device` dan `6.5x–37x` sekin (`7.3s` iOS, `5.8s` Android), `Scarf` + `PostHog` telemetriyasi va `mobilenext.ai` cloud reklamalari bor. **O'rniga:** [**`agent-device`**](reviews/mobile/agent-device.md) + [**`adb`**](reviews/mobile/adb.md). |
 
 ### 🎨 UI/UX
 

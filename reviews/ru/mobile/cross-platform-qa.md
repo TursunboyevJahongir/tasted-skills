@@ -3,27 +3,27 @@
 [🇺🇿 O'zbekcha](../../mobile/cross-platform-qa.md) | [🇬🇧 English](../../en/mobile/cross-platform-qa.md) | **🇷🇺 Русский**
 
 - **Источник:** Внутренний глобальный скилл (`skills/cross-platform-qa/SKILL.md`)
-- **Категория:** `Mobile` *(Двухэтапный регламент проверки Web + iOS + Android)*
+- **Категория:** `Mobile` *(Двухэтапный регламент проверки Web + iOS/tvOS + Android/Android TV)*
 - **Тип:** `Skill`
 - **Оценка качества:** **9.5 / 10**
 - **Насколько нужно нам:** **9.5 / 10**
 - **Рекомендуемый масштаб:** `Глобально (-g)`
-- **Дата проверки:** `2026-11-15`
+- **Дата проверки:** `2026-11-16`
 - **Текущий статус:** `✅ Используется`
 
 ---
 
 ## 1. Что это и как работает?
 
-Двухэтапный глобальный QA-скилл для быстрой и надёжной проверки изменений в Web, iOS и Android прямо на живом интерфейсе **без предварительного написания unit-тестов (TDD)**:
+Двухэтапный глобальный QA-скилл для быстрой и надёжной проверки изменений в Web, iOS/tvOS и Android/Android TV прямо на живом интерфейсе **без предварительного написания unit-тестов (TDD)**:
 
 1. **Этап 1 (В процессе разработки — 100% локально на компьютере):**
    - Во время написания кода и отладки сборки не ставятся раз за разом на физический телефон/планшет.
    - **Web (`Google Chrome`):** Проверяется в фоне в открытом браузере через [`agent-desktop`](../developer-tools/agent-desktop.md) (`AXPress`, `~0.2–0.3s`).
-   - **iOS (`Device Hub` / iOS Simulator):** Запускается через `xcrun simctl`, а внутренние элементы React Native / UIKit управляются в фоне через окно Xcode `Device Hub` + `agent-desktop` по `@ref` (`~0.3–0.8s`).
-   - **Android (Локальный Android-эмулятор):** Запускается в фоне через `emulator -avd ... -no-window`, а внутренний UI проверяется через [`adb`](adb.md) `-s emulator-5554` (`uiautomator dump`, `input tap`, `screencap`).
+   - **iOS / tvOS (Headless Simulator):** Запускается без окна на экране через `xcrun simctl boot <UDID>`, а интерфейс проверяется в фоне через [`agent-device`](agent-device.md) (`--platform ios --udid <UDID>`, `@ref`, `diff snapshot -i --settle`, `~0.2s`; `Device Hub` остаётся резервом).
+   - **Android / Android TV (Headless Emulator):** Запускается в фоне через `emulator -avd ... -no-window`, UI-сценарии прогоняются через [`agent-device`](agent-device.md) (`--platform android --serial emulator-5554`, `~0.9s`, полный UTF-8 ввод), а проброс портов и логи — через [`adb`](adb.md) (`reverse`, `logcat`).
 2. **Этап 2 (Финальное правило «Done» — 1 раз на реальном телефоне):**
-   - Когда все локальные проверки пройдены, перед закрытием задачи (**Done**) выполняется **один финальный прогон** на подключённом по USB реальном телефоне/планшете (`adb devices` / `devicectl`).
+   - Когда все локальные проверки пройдены, перед закрытием задачи (**Done**) выполняется **один финальный прогон** на подключённом по USB реальном телефоне/планшете (`agent-device` + `adb` / `devicectl`).
 
 ---
 
@@ -47,13 +47,13 @@
 
 ## 4. Совместимость с нашими текущими инструментами
 
-- Объединяет [`agent-desktop`](../developer-tools/agent-desktop.md), [`adb`](adb.md) и [`xcrun simctl` + `Device Hub`](ios-simulator-device-hub.md) в единую дисциплину проверки.
+- Объединяет [`agent-desktop`](../developer-tools/agent-desktop.md) (Web), [`agent-device`](agent-device.md) (iOS/Android/TV UI), [`adb`](adb.md) и [`xcrun simctl` + `Device Hub`](ios-simulator-device-hub.md) в единую дисциплину проверки.
 
 ---
 
 ## 5. В каких задачах полезно?
 
-- **Когда использовать:** При любых UI или функциональных изменениях в проектах Web, iOS, Android и React Native / Expo.
+- **Когда использовать:** При любых UI или функциональных изменениях в проектах Web, iOS, tvOS, Android, Android TV и React Native / Expo.
 
 ---
 
@@ -62,3 +62,4 @@
 | Дата | Действие | Статус | Примечание |
 |---|---|---|---|
 | 2026-11-15 | Создание через `skillshare new cross-platform-qa -g` и синхронизация | `✅ Используется` | Подключён ко всем 5 глобальным целям агентов. |
+| 2026-11-16 | Перевод мобильного и TV-этапов на `agent-device` | `✅ Используется` | `agent-device` стал основным инструментом для фоновых iOS/tvOS Simulator и `-no-window` Android/TV Emulator; для Web сохранён `agent-desktop`. |

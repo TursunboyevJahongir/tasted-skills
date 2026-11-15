@@ -21,10 +21,11 @@
 
 | Name | Domain | Type | Score | Status | Date | Summary |
 |---|---|---|---|---|---|---|
-| [**`agent-desktop`**](reviews/en/developer-tools/agent-desktop.md) | Desktop / Web / iOS | CLI + Skill | **9.5/10** | `✅ In Active Use` | `2026-11-15` | [agent-browser.dev/desktop](https://agent-browser.dev/desktop) — drives Chrome, desktop apps, and iOS `Device Hub` in the background via macOS Accessibility (`AX`) without hijacking the cursor. |
-| [**`adb`**](reviews/en/mobile/adb.md) | Mobile (Android) | CLI | **9.5/10** | `✅ In Active Use` | `2026-11-15` | Controls headless Android emulators (`-no-window`) and physical phones (`uiautomator dump`, `input tap`, `screencap`, `reverse`, `logcat`). Explicit `-s <serial>` required. |
+| [**`agent-desktop`**](reviews/en/developer-tools/agent-desktop.md) | Desktop / Web | CLI + Skill | **9.5/10** | `✅ In Active Use` | `2026-11-15` | [agent-browser.dev/desktop](https://agent-browser.dev/desktop) — drives Chrome and desktop apps in the background via macOS Accessibility (`AX`) without hijacking the cursor (also fallback for iOS `Device Hub`). |
+| [**`agent-device`**](reviews/en/mobile/agent-device.md) | Mobile / TV (`iOS` / `Android` / `tvOS`) | CLI + Skill | **9.5/10** | `✅ In Active Use` | `2026-11-16` | [agent-device.dev](https://agent-device.dev) — Callstack's zero-dependency CLI: drives headless iOS/tvOS Simulators (`~197ms`) and `-no-window` Android/TV Emulators (`~888ms`, 27x fewer tokens, full UTF-8 input) via `@ref` handles and `--settle` diffs (`0` MCP bloat). |
+| [**`adb`**](reviews/en/mobile/adb.md) | Mobile (Android) | CLI | **9.5/10** | `✅ In Active Use` | `2026-11-15` | Handles port forwarding (`reverse`), `logcat`, APK installs, and low-level control across headless Android emulators (`-no-window`) and physical phones. Explicit `-s <serial>` required. |
 | [**`skillshare`**](reviews/en/developer-tools/skillshare.md) | Developer Tools | CLI + Skill | **9.5/10** | `✅ In Active Use` | `2026-11-15` | Syncs skills/plugins across all AI agents (`Codex`, `Claude`, `Antigravity`) from a single source with a fast built-in **skill-check (`skillshare audit`)** during install. |
-| [**`cross-platform-qa`**](reviews/en/mobile/cross-platform-qa.md) | Web / iOS / Android | Skill | **9.5/10** | `✅ In Active Use` | `2026-11-15` | 2-stage QA workflow: 1) iterate locally (`agent-desktop` + `Device Hub` + `adb` emulator), 2) run a single final verification pass on a real phone via `adb` before marking Done. |
+| [**`cross-platform-qa`**](reviews/en/mobile/cross-platform-qa.md) | Web / iOS / Android / TV | Skill | **9.5/10** | `✅ In Active Use` | `2026-11-16` | 2-stage QA workflow: 1) iterate locally (`agent-desktop` Web + `agent-device` headless iOS/Android/TV + `adb`), 2) run a single final verification pass on physical hardware before marking Done. |
 | [**`impeccable`**](reviews/en/ui-ux/impeccable.md) | UI/UX | Skill | **9.5/10** | `✅ In Active Use` | `2026-11-15` | Primary design system and UX audit engine across web, mobile web, and native iOS/Android screens (external hooks disabled for safety). |
 | [**`grill-me`**](reviews/en/architecture/grill-me.md) | Architecture / Planning | Skill Suite | **9.5/10** | `✅ In Active Use` | `2026-11-15` | Stress-tests requirements before coding by walking the design decision tree with recommended answers (`grilling` + `grill-with-docs`). |
 | [**`elephant-goldfish-model`**](reviews/en/architecture/elephant-goldfish-model.md) | Architecture / Audit | Plugin (7 skills + 10 agents) | **9.5/10** | `✅ In Active Use` | `2026-11-15` | Context-rich architect (*Elephant*) + fresh-context hostile reviewers (*Goldfish*): `egm-drift-report` and 5-stage `egm-review` uncover doc-code drift and hidden production bugs across multi-repo systems. |
@@ -49,7 +50,11 @@
 
 ### 📱 Mobile
 
-*All active mobile tools (`adb`, `xcrun simctl` + `Device Hub`, `cross-platform-qa`, `animate-expo`, `mobile-native`) are listed in the **⭐ Top Essentials** table above.*
+*All active mobile and TV tools (`agent-device`, `adb`, `xcrun simctl` + `Device Hub`, `cross-platform-qa`, `animate-expo`, `mobile-native`) are listed in the **⭐ Top Essentials** table above.*
+
+| Name | Type | Quality | Need | Status | Date | Summary |
+|---|---|---|---|---|---|---|
+| [**`mobile-mcp`**](reviews/en/mobile/mobile-mcp.md) | MCP Server (34 tools) | **7.0/10** | **2.0/10** | `⛔ Rejected` | `2026-11-16` | Benchmarked live and rejected: `~7,580` tokens of permanent MCP schema bloat per turn, `6.5x–37x` slower than `agent-device` (`7.3s` iOS, `5.8s` Android), `Scarf` + `PostHog` telemetry, and `mobilenext.ai` cloud upsell tools. **Instead use:** [**`agent-device`**](reviews/en/mobile/agent-device.md) + [**`adb`**](reviews/en/mobile/adb.md). |
 
 ### 🎨 UI/UX
 

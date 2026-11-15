@@ -3,27 +3,27 @@
 **🇺🇿 O'zbekcha** | [🇬🇧 English](../en/mobile/cross-platform-qa.md) | [🇷🇺 Русский](../ru/mobile/cross-platform-qa.md)
 
 - **Manba:** Ichki global skill (`skills/cross-platform-qa/SKILL.md`)
-- **Turkum:** `Mobile` *(Web + iOS + Android 2-bosqichli tekshiruv qoidasi)*
+- **Turkum:** `Mobile` *(Web + iOS/tvOS + Android/Android TV 2-bosqichli tekshiruv qoidasi)*
 - **Turi:** `Skill`
 - **Sifat bahosi:** **9.5 / 10**
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
-- **Tekshirilgan sana:** `2026-11-15`
+- **Tekshirilgan sana:** `2026-11-16`
 - **Joriy holati:** `✅ Ishlatilyapti`
 
 ---
 
 ## 1. Nima va qanday ishlaydi?
 
-Web, iOS va Android ilovalarda kod yozish hamda tekshirishni **oldindan unit-test (TDD) yozmasdan**, haqiqiy UI'da tez va tartibli o'tkazish uchun yaratilgan 2-bosqichli global skill:
+Web, iOS/tvOS va Android/Android TV ilovalarda kod yozish hamda tekshirishni **oldindan unit-test (TDD) yozmasdan**, haqiqiy UI'da tez va tartibli o'tkazish uchun yaratilgan 2-bosqichli global skill:
 
 1. **1-Bosqich (Ish jarayoni — 100% lokal kompyuterda):**
    - Ish davomida fizikiy telefon/planshetga qayta-qayta build o'rnatilmaydi.
-   - **Web (`Google Chrome`):** `agent-desktop` orqali ochiq va login qilingan brauzerda fonda (`AXPress`, `~0.2–0.3s`) tekshiriladi.
-   - **iOS (`Device Hub` / iOS Simulator):** `xcrun simctl` bilan simulyator yoqilib, Xcode `Device Hub` oynasi orqali `agent-desktop` yordamida ichki iOS React Native/UIKit elementlari `@ref` bilan (`~0.3–0.8s`) boshqariladi.
-   - **Android (Lokal Android Emulator):** `emulator -avd ... -no-window` fonda yoqilib, ichki Android UI `adb -s emulator-5554` (`uiautomator dump`, `input tap`, `screencap`) orqali tekshiriladi.
+   - **Web (`Google Chrome`):** [`agent-desktop`](../developer-tools/agent-desktop.md) orqali ochiq va login qilingan brauzerda fonda (`AXPress`, `~0.2–0.3s`) tekshiriladi.
+   - **iOS / tvOS (Headless Simulator):** `xcrun simctl boot <UDID>` bilan oynasiz fonda yoqilib, [`agent-device`](agent-device.md) (`--platform ios --udid <UDID>`, `@ref`, `diff snapshot -i --settle`, `~0.2s`) orqali tekshiriladi (`Device Hub` fallback sifatida qoladi).
+   - **Android / Android TV (Headless Emulator):** `emulator -avd ... -no-window` fonda yoqilib, UI oqimi [`agent-device`](agent-device.md) (`--platform android --serial emulator-5554`, `~0.9s`, o'zbekcha UTF-8 input bilan) hamda past darajadagi port/log ishlari [`adb`](adb.md) (`reverse`, `logcat`) orqali tekshiriladi.
 2. **2-Bosqich (Yakuniy "Done" qoidasi — Real qurilmada 1 marta tekshirish):**
-   - Barcha lokal tekshiruvlar bitib, vazifa **Done** bo'lishidan oldin kompyuterga ulangan real telefon/planshetda (`adb devices` / `devicectl`) **1 marta yakuniy sinov** o'tkazilib tasdiqlanadi.
+   - Barcha lokal tekshiruvlar bitib, vazifa **Done** bo'lishidan oldin kompyuterga ulangan real telefon/planshetda (`agent-device` + `adb` / `devicectl`) **1 marta yakuniy sinov** o'tkazilib tasdiqlanadi.
 
 ---
 
@@ -47,13 +47,13 @@ Web, iOS va Android ilovalarda kod yozish hamda tekshirishni **oldindan unit-tes
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
-- `agent-desktop`, `adb` va `xcrun simctl + Device Hub` vositalarini yagona intizomga birlashtiradi.
+- [`agent-desktop`](../developer-tools/agent-desktop.md) (Web), [`agent-device`](agent-device.md) (iOS/Android/TV UI), [`adb`](adb.md) va [`xcrun simctl` + `Device Hub`](ios-simulator-device-hub.md) vositalarini yagona intizomga birlashtiradi.
 
 ---
 
 ## 5. Qaysi yo'nalish va vazifalarda foydali?
 
-- **Qachon ishlatish kerak:** Web, iOS, Android va React Native / Expo loyihalaridagi har qanday UI yoki funksional o'zgarishda.
+- **Qachon ishlatish kerak:** Web, iOS, tvOS, Android, Android TV va React Native / Expo loyihalaridagi har qanday UI yoki funksional o'zgarishda.
 
 ---
 
@@ -62,3 +62,4 @@ Web, iOS va Android ilovalarda kod yozish hamda tekshirishni **oldindan unit-tes
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
 | 2026-11-15 | `skillshare new cross-platform-qa -g` orqali yaratish va sinxronlash | `✅ Ishlatilyapti` | Barcha 5 ta global targetga ulandi. |
+| 2026-11-16 | Mobil va TV bosqichlarini `agent-device` bilan yangilash | `✅ Ishlatilyapti` | Headless iOS/tvOS Simulator va `-no-window` Android/TV Emulator uchun `agent-device` asosiy vosita qilindi; Web uchun `agent-desktop` saqlab qolindi. |

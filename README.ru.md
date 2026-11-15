@@ -21,10 +21,11 @@
 
 | Название | Направление | Тип | Оценка | Статус | Дата | Краткое описание |
 |---|---|---|---|---|---|---|
-| [**`agent-desktop`**](reviews/ru/developer-tools/agent-desktop.md) | Desktop / Web / iOS | CLI + Skill | **9.5/10** | `✅ Используется` | `2026-11-15` | [agent-browser.dev/desktop](https://agent-browser.dev/desktop) — фоновое управление Chrome, десктопными приложениями и iOS `Device Hub` через macOS Accessibility (`AX`) без перехвата курсора. |
-| [**`adb`**](reviews/ru/mobile/adb.md) | Mobile (Android) | CLI | **9.5/10** | `✅ Используется` | `2026-11-15` | Управление фоновым Android-эмулятором (`-no-window`) и реальными телефонами (`uiautomator dump`, `input tap`, `screencap`, `reverse`, `logcat`). Флаг `-s <serial>` обязателен. |
+| [**`agent-desktop`**](reviews/ru/developer-tools/agent-desktop.md) | Desktop / Web | CLI + Skill | **9.5/10** | `✅ Используется` | `2026-11-15` | [agent-browser.dev/desktop](https://agent-browser.dev/desktop) — фоновое управление Chrome и десктопными приложениями через macOS Accessibility (`AX`) без перехвата курсора (+ резерв для iOS `Device Hub`). |
+| [**`agent-device`**](reviews/ru/mobile/agent-device.md) | Mobile / TV (`iOS` / `Android` / `tvOS`) | CLI + Skill | **9.5/10** | `✅ Используется` | `2026-11-16` | [agent-device.dev](https://agent-device.dev) — 0-dependency CLI от Callstack: управляет фоновым iOS/tvOS Simulator без окна (`~197ms`) и `-no-window` Android/TV Emulator (`~888ms`, в 27x меньше токенов, полный UTF-8 ввод) через `@ref` и `--settle` diff (`0` MCP-раздувания). |
+| [**`adb`**](reviews/ru/mobile/adb.md) | Mobile (Android) | CLI | **9.5/10** | `✅ Используется` | `2026-11-15` | Проброс портов (`reverse`), `logcat`, установка APK и низкоуровневое управление на фоновых Android-эмуляторах (`-no-window`) и реальных телефонах. Флаг `-s <serial>` обязателен. |
 | [**`skillshare`**](reviews/ru/developer-tools/skillshare.md) | Developer Tools | CLI + Skill | **9.5/10** | `✅ Используется` | `2026-11-15` | Синхронизация скиллов и плагинов между всеми AI-агентами (`Codex`, `Claude`, `Antigravity`) из единого источника + быстрый встроенный **skill-check (`skillshare audit`)** при установке. |
-| [**`cross-platform-qa`**](reviews/ru/mobile/cross-platform-qa.md) | Web / iOS / Android | Skill | **9.5/10** | `✅ Используется` | `2026-11-15` | 2-этапный QA: 1) локальная проверка на компьютере (`agent-desktop` + `Device Hub` + эмулятор `adb`), 2) финальная разовая проверка на реальном телефоне через `adb` перед Done. |
+| [**`cross-platform-qa`**](reviews/ru/mobile/cross-platform-qa.md) | Web / iOS / Android / TV | Skill | **9.5/10** | `✅ Используется` | `2026-11-16` | 2-этапный QA: 1) локальная проверка (`agent-desktop` Web + `agent-device` фоновые iOS/Android/TV + `adb`), 2) финальная разовая проверка на реальном устройстве перед Done. |
 | [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) | UI/UX | Skill | **9.5/10** | `✅ Используется` | `2026-11-15` | Основная дизайн-система и UX-аудит для веб, мобильного веба и нативных экранов iOS/Android (внешние хуки отключены). |
 | [**`grill-me`**](reviews/ru/architecture/grill-me.md) | Architecture / Planning | Набор скиллов | **9.5/10** | `✅ Используется` | `2026-11-15` | Проработка требований до написания кода по дереву решений (`design tree`) с рекомендуемыми ответами (`grilling` + `grill-with-docs`). |
 | [**`elephant-goldfish-model`**](reviews/ru/architecture/elephant-goldfish-model.md) | Architecture / Audit | Плагин (7 скиллов + 10 агентов) | **9.5/10** | `✅ Используется` | `2026-11-15` | Архитектор с памятью (*Elephant*) + субагенты-критики без контекста (*Goldfish*): `egm-drift-report` и 5-этапный `egm-review` находят расхождения документации с кодом и скрытые баги. |
@@ -49,7 +50,11 @@
 
 ### 📱 Mobile
 
-*Все активные мобильные инструменты (`adb`, `xcrun simctl` + `Device Hub`, `cross-platform-qa`, `animate-expo`, `mobile-native`) находятся в таблице **⭐ Самые необходимые** выше.*
+*Все активные мобильные и TV-инструменты (`agent-device`, `adb`, `xcrun simctl` + `Device Hub`, `cross-platform-qa`, `animate-expo`, `mobile-native`) находятся в таблице **⭐ Самые необходимые** выше.*
+
+| Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
+|---|---|---|---|---|---|---|
+| [**`mobile-mcp`**](reviews/ru/mobile/mobile-mcp.md) | MCP Server (34 tool) | **7.0/10** | **2.0/10** | `⛔ Отклонено` | `2026-11-16` | Протестировано вживую и отклонено: `~7,580` токенов постоянного раздувания MCP-схемы на каждый ход, в `6.5x–37x` медленнее `agent-device` (`7.3s` iOS, `5.8s` Android), телеметрия `Scarf` + `PostHog` и реклама облака `mobilenext.ai`. **Вместо него:** [**`agent-device`**](reviews/ru/mobile/agent-device.md) + [**`adb`**](reviews/ru/mobile/adb.md). |
 
 ### 🎨 UI/UX
 
