@@ -1,9 +1,9 @@
 # `kimi-k3-in-c` (2.78T MoE CPU Disk-Streaming Engine)
 
-[🇺🇿 O'zbekcha](../../developer-tools/kimi-k3-in-c.md) | **🇬🇧 English** | [🇷🇺 Русский](../../ru/developer-tools/kimi-k3-in-c.md)
+[🇺🇿 O'zbekcha](../../local-models/kimi-k3-in-c.md) | **🇬🇧 English** | [🇷🇺 Русский](../../ru/local-models/kimi-k3-in-c.md)
 
 - **Source:** [FareedKhan-dev/kimi-k3-in-c](https://github.com/FareedKhan-dev/kimi-k3-in-c)
-- **Category:** `Developer Tools` *(Local LLM Inference & Disk-Streaming Experiment)*
+- **Category:** `Local Models` *(Local LLM Inference & Disk-Streaming Experiment)*
 - **Type:** `Standalone C99 CLI Engine`
 - **Quality Score:** **8.5 / 10** *(as a pure C99 systems engineering proof-of-concept)*
 - **Need for Us:** **1.0 / 10** *(unusable for practical coding)*
@@ -58,7 +58,7 @@ Despite viral social-media clips framing it as *"running a 2.78T parameter AI lo
 ## 4. Fit & Compatibility with Our Existing Stack
 
 - **Incompatible with practical multi-agent coding:**
-  - For our *"implement with one AI, review independently with Claude / Codex / Argon"* workflow, [**`T3 Code` + CLI Subagents**](t3-code.md) (`argon`, `antigravity-claude`, `antigravity-consult`, `task-context`) already runs in seconds with `0 GB` local model storage overhead.
+  - For our *"implement with one AI, review independently with Claude / Codex / Argon"* workflow, [**`T3 Code` + CLI Subagents**](../developer-tools/t3-code.md) (`argon`, `antigravity-claude`, `antigravity-consult`, `task-context`) already runs in seconds with `0 GB` local model storage overhead.
   - If a 100% free, offline local coder is desired on an `Apple Silicon` (`32 GB RAM`) machine, fitting **`Ollama` / `MLX`** models (`Qwen2.5-Coder-14B` or `Qwen3-Coder`, `~9–18 GB`) inside unified memory achieves **`30–65 tokens/s` (`~1000x` faster)** without hammering the SSD.
 
 ---

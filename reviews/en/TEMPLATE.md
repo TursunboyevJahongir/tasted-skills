@@ -3,7 +3,7 @@
 [🇺🇿 O'zbekcha](../TEMPLATE.md) | **🇬🇧 English** | [🇷🇺 Русский](../ru/TEMPLATE.md)
 
 - **Source:** [<owner/repo or website>](https://...)
-- **Category:** `Web` | `Mobile` | `UI/UX` | `Architecture` | `Backend` | `Developer Tools`
+- **Category:** `Local Models` | `Web` | `Mobile` | `UI/UX` | `Architecture` | `Backend` | `Developer Tools`
 - **Type:** `Skill` | `Plugin` | `MCP` | `CLI / Desktop Tool` | `Memory`
 - **Quality Score:** **X.X / 10**
 - **Need for Us:** **X.X / 10**

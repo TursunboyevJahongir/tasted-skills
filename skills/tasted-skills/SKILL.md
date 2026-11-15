@@ -29,6 +29,7 @@ Use this skill to recommend vetted AI resources for a task, audit newly shared s
 5. Security and sanitization rubric: [references/audit-checklist.md](references/audit-checklist.md).
 
 Categories:
+- `local-models` — Local LLMs, inference engines (`Ollama`, `MLX`, `llama.cpp`, `C99`), quantized coder models
 - `web` — Web apps, landing engines, browser rendering, frontend frameworks
 - `mobile` — Mobile web, PWA, React Native, Expo, iOS, Android
 - `ui-ux` — Design systems, UI polish, Figma, motion, accessibility

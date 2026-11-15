@@ -1,9 +1,9 @@
 # `kimi-k3-in-c` (2.78T MoE CPU Disk-Streaming Engine)
 
-**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/developer-tools/kimi-k3-in-c.md) | [🇷🇺 Русский](../ru/developer-tools/kimi-k3-in-c.md)
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/local-models/kimi-k3-in-c.md) | [🇷🇺 Русский](../ru/local-models/kimi-k3-in-c.md)
 
 - **Manba:** [FareedKhan-dev/kimi-k3-in-c](https://github.com/FareedKhan-dev/kimi-k3-in-c)
-- **Turkum:** `Developer Tools` *(Lokal LLM Inference va Disk-Streaming Eksperimenti)*
+- **Turkum:** `Lokal modellar` *(Lokal LLM Inference va Disk-Streaming Eksperimenti)*
 - **Turi:** `Standalone C99 CLI Engine`
 - **Sifat bahosi:** **8.5 / 10** *(tizimli C99 muhandislik ishi sifatida)*
 - **Bizga kerakliligi:** **1.0 / 10** *(amaliy kod yozish uchun yaroqsiz)*
@@ -58,7 +58,7 @@ Ijtimoiy tarmoqlarda *"2.78 trillion parametrli modelni 8 GB RAM'da GPU'siz ishl
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
 - **Amaliy kod yozish va Cross-AI review uchun umuman mos emas:**
-  - Bizning asosiy *"biri kod yozsin, boshqa model (`Claude` / `Codex` / `Argon`) mustaqil tekshirsin"* ish oqimimiz uchun allaqachon [**`T3 Code` + CLI Subagent ko'prigi**](t3-code.md) (`argon`, `antigravity-claude`, `antigravity-consult`, `task-context`) qo'shimcha disk va CPU yuklamasisiz soniyalar ichida ishlayapti.
+  - Bizning asosiy *"biri kod yozsin, boshqa model (`Claude` / `Codex` / `Argon`) mustaqil tekshirsin"* ish oqimimiz uchun allaqachon [**`T3 Code` + CLI Subagent ko'prigi**](../developer-tools/t3-code.md) (`argon`, `antigravity-claude`, `antigravity-consult`, `task-context`) qo'shimcha disk va CPU yuklamasisiz soniyalar ichida ishlayapti.
   - Agar `32 GB` RAM'li Apple Silicon kompyuterda 100% lokal va bepul kod yozuvchi model sinash kerak bo'lsa, diskdan `1.7 TB` stream qilish o'rniga to'liq RAM/GPU ichiga sig'adigan **`Ollama` / `MLX` (`Qwen2.5-Coder-14B` yoki `Qwen3-Coder`, `~9–18 GB`, sekundiga `30–65 token`)** `1000x` tezroq va xavfsizroq alternativa bo'ladi.
 
 ---

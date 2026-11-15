@@ -39,6 +39,12 @@
 
 ## By Category
 
+### 🧠 Local Models
+
+| Name | Type | Quality | Need | Status | Date | Summary |
+|---|---|---|---|---|---|---|
+| [**`kimi-k3-in-c`**](reviews/en/local-models/kimi-k3-in-c.md) | C99 CLI Inference Engine | **8.5/10** | **1.0/10** | `⛔ Rejected` | `2026-11-16` | C99 proof-of-concept that streams the `2.78T` Kimi K3 model from disk in `8 GB RAM` with no GPU: requires **`~1.7 TB` free NVMe storage** and runs at **`~24–33s/token`** (`500` tokens of code = `~3.5 hours` + `~50 TB` of SSD reads). **Instead use:** [**`T3 Code`**](reviews/en/developer-tools/t3-code.md) + CLI Subagents (`Argon` / `Claude` / `Codex`). |
+
 ### 🌐 Web
 
 | Name | Type | Quality | Need | Status | Date | Summary |
@@ -82,7 +88,6 @@
 | Name | Type | Quality | Need | Status | Date | Summary |
 |---|---|---|---|---|---|---|
 | [**`SkillSpector`**](reviews/en/developer-tools/skillspector.md) | Python CLI + MCP + Skill | **9.0/10** | **3.5/10** | `⛔ Rejected` | `2026-11-16` | NVIDIA's AI skill & MCP security scanner (`AST + YARA + OSV + LLM`). Not installed to avoid an extra daily loop — **Instead use:** [**`skillshare`**](reviews/en/developer-tools/skillshare.md) (`skillshare audit` skill-check) + **direct AI agent source-code inspection**. |
-| [**`kimi-k3-in-c`**](reviews/en/developer-tools/kimi-k3-in-c.md) | C99 CLI Inference Engine | **8.5/10** | **1.0/10** | `⛔ Rejected` | `2026-11-16` | C99 proof-of-concept that streams the `2.78T` Kimi K3 model from disk in `8 GB RAM` with no GPU: requires **`~1.7 TB` free NVMe storage** and runs at **`~24–33s/token`** (`500` tokens of code = `~3.5 hours` + `~50 TB` of SSD reads). **Instead use:** [**`T3 Code`**](reviews/en/developer-tools/t3-code.md) + CLI Subagents (`Argon` / `Claude` / `Codex`). |
 | [**`AssetDiet`**](reviews/en/developer-tools/assetdiet.md) | Standalone CLI + [`asset-diet`](skills/asset-diet/SKILL.md) | **7.5/10** | **6.5/10** | `✅ Active` | `2026-11-16` | 100% local image/SVG/video/3D compression (`Sharp`, `SVGO`, `FFmpeg`) with rollback. Synced globally via our lightweight [`asset-diet`](skills/asset-diet/SKILL.md) skill to run `npx assetdiet-mcp@0.1.4` strictly on demand (`0` MCP bloat). |
 | [**`humanizer` + `stop-slop`**](reviews/en/developer-tools/humanizer-stop-slop.md) | Skill (`Markdown`) | **7.5/10** | **2.0/10** | `⛔ Rejected` | `2026-11-16` | Long-form prose editors that strip AI writing clichés (`humanizer` is `~32 KB`); not built for code or product UI. **Instead use:** [**`ponytail`**](reviews/en/architecture/ponytail.md) + [**`impeccable`**](reviews/en/ui-ux/impeccable.md) (`clarify`). |
 | [**`claude-code-setup`**](reviews/en/developer-tools/claude-code-setup.md) | Plugin (Recommender Skill) | **7.5/10** | **2.0/10** | `⛔ Rejected` | `2026-11-16` | Anthropic's read-only onboarding recommender for starter `CLAUDE.md` rules, hooks, and MCP servers. **Instead use:** [**`skillshare`**](reviews/en/developer-tools/skillshare.md). |

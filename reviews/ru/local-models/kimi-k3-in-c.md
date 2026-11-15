@@ -1,9 +1,9 @@
 # `kimi-k3-in-c` (2.78T MoE CPU Disk-Streaming Engine)
 
-[🇺🇿 O'zbekcha](../../developer-tools/kimi-k3-in-c.md) | [🇬🇧 English](../../en/developer-tools/kimi-k3-in-c.md) | **🇷🇺 Русский**
+[🇺🇿 O'zbekcha](../../local-models/kimi-k3-in-c.md) | [🇬🇧 English](../../en/local-models/kimi-k3-in-c.md) | **🇷🇺 Русский**
 
 - **Источник:** [FareedKhan-dev/kimi-k3-in-c](https://github.com/FareedKhan-dev/kimi-k3-in-c)
-- **Категория:** `Developer Tools` *(Эксперимент локального LLM-инференса с потоковым чтением с диска)*
+- **Категория:** `Локальные модели` *(Эксперимент локального LLM-инференса с потоковым чтением с диска)*
 - **Тип:** `Standalone C99 CLI Engine`
 - **Оценка качества:** **8.5 / 10** *(как системная инженерная работа на чистом C99)*
 - **Насколько нужно нам:** **1.0 / 10** *(непригоден для практического написания кода)*
@@ -58,7 +58,7 @@
 ## 4. Совместимость с нашими текущими инструментами
 
 - **Не подходит для практической разработки и кросс-ревью:**
-  - Для сценария *«один AI пишет код, другой (`Claude` / `Codex` / `Argon`) независимо проверяет»* у нас уже за секунды и с нулевой нагрузкой на диск работает связка [**`T3 Code` + CLI Subagents**](t3-code.md) (`argon`, `antigravity-claude`, `antigravity-consult`, `task-context`).
+  - Для сценария *«один AI пишет код, другой (`Claude` / `Codex` / `Argon`) независимо проверяет»* у нас уже за секунды и с нулевой нагрузкой на диск работает связка [**`T3 Code` + CLI Subagents**](../developer-tools/t3-code.md) (`argon`, `antigravity-claude`, `antigravity-consult`, `task-context`).
   - Если нужен 100% бесплатный офлайн-кодер на `Apple Silicon` (`32 GB RAM`), правильная альтернатива — модели в **`Ollama` / `MLX`** (`Qwen2.5-Coder-14B` или `Qwen3-Coder`, `~9–18 GB`), которые полностью помещаются в унифицированную память и работают со скоростью **`30–65 токенов/сек` (~в 1000 раз быстрее)** без износа диска.
 
 ---
