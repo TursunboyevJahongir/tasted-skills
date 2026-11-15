@@ -2,7 +2,7 @@
 
 [🇺🇿 O'zbekcha](../../architecture/grill-me.md) | [🇬🇧 English](../../en/architecture/grill-me.md) | **🇷🇺 Русский**
 
-- **Источник:** [aihero.dev/skills-grill-me](https://www.aihero.dev/skills-grill-me)
+- **Источник:** [aihero.dev/skills-grill-me](https://www.aihero.dev/skills-grill-me) · [mattpocock/skills](https://github.com/mattpocock/skills)
 - **Категория:** `Architecture` *(Планирование, дерево решений и проработка требований)*
 - **Тип:** `Набор скиллов` (`grill-me`, `grilling`, `grill-with-docs`)
 - **Оценка качества:** **9.5 / 10**
@@ -47,6 +47,15 @@
 - Углубленная интерактивная форма принципа *Think Before Coding* из [`karpathy-guidelines`](karpathy-guidelines.md).
 - Тесно работает с `domain-modeling` и `task-context`: `grill-me` проясняет решения, а `task-context` записывает их для агентов-исполнителей (implementer) и ревьюеров (reviewer).
 
+### Аудит остальных скиллов из `mattpocock/skills` (`2026-11-16`)
+
+Мы также проверили все 25 скиллов в основном репозитории [mattpocock/skills](https://github.com/mattpocock/skills) (`skillshare audit`: `0 issues`):
+- **Уже активно используются (`✅`):** `grill-me`, `grilling`, `grill-with-docs` и `domain-modeling`.
+- **Чистые кандидаты в резерв (`👀 Изучено, не тестировали`):**
+  - **`diagnosing-bugs`** (`138` строк): Требует перед фиксом собрать быстрый детерминированный цикл воспроизведения бага, выдвинуть 3–5 опровержимых гипотез и помечать временные логи тегом `[DEBUG-xxxx]` с обязательной зачисткой в конце.
+  - **`improve-codebase-architecture`** (`71` строка, `disable-model-invocation: true` — не срабатывает сам по себе): Анализирует горячие файлы в `git log` на «мелкие модули» (*Ousterhout deep modules*), генерирует наглядный `Before / After` HTML-отчёт с Mermaid в `/tmp/architecture-review-<timestamp>.html` и передаёт управление в `grilling`.
+- **Пропущены (`⏭️`):** `tdd`, `implement`, `implement-spec`, `to-tickets`, `triage`, `setup-matt-pocock-skills` — принудительный TDD и конвейер тикетов создают лишние циклы в нашей работе.
+
 ---
 
 ## 5. В каких направлениях и задачах полезен?
@@ -61,3 +70,4 @@
 | Дата | Действие | Статус | Примечание |
 |---|---|---|---|
 | 2026-11-15 | Внесение в каталог как глобально установленного скилла планирования | `✅ Используется` | `grilling`, `grill-me` и `grill-with-docs` глобально подключены ко всем агентам и активно применяются. |
+| 2026-11-16 | Аудит полного репозитория `mattpocock/skills` | `👀 Изучено` / `⏭️ Пропущено` | Отмечены в резерв `diagnosing-bugs` и `improve-codebase-architecture`; тяжёлые процессные скиллы (`tdd`, `to-tickets`) пропущены. |

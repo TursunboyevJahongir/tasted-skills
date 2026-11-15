@@ -2,7 +2,7 @@
 
 **🇺🇿 O'zbekcha** | [🇬🇧 English](../en/architecture/grill-me.md) | [🇷🇺 Русский](../ru/architecture/grill-me.md)
 
-- **Manba:** [aihero.dev/skills-grill-me](https://www.aihero.dev/skills-grill-me)
+- **Manba:** [aihero.dev/skills-grill-me](https://www.aihero.dev/skills-grill-me) · [mattpocock/skills](https://github.com/mattpocock/skills)
 - **Turkum:** `Architecture` *(Rejalashtirish, Qarorlar daraxti va Talablarni charxlash)*
 - **Turi:** `Skilllar to'plami` (`grill-me`, `grilling`, `grill-with-docs`)
 - **Sifat bahosi:** **9.5 / 10**
@@ -47,6 +47,15 @@ Matt Pocock tomonidan yaratilgan, reja yoki arxitektura g'oyasini kod yozishdan 
 - `karpathy-guidelines` (*Think Before Coding*) tamoyilining chuqurlashtirilgan interaktiv shakli.
 - `domain-modeling` va `task-context` bilan uzviy ishlaydi: `grill-me` qarorlarni aniqlashtiradi, `task-context` esa ularni implementer va reviewer agentlar uchun yozib qo'yadi.
 
+### `mattpocock/skills` to'plamidagi boshqa skillar auditi (`2026-11-16`)
+
+Rasmiy [mattpocock/skills](https://github.com/mattpocock/skills) reposidagi jami 25 ta skill ham tekshirib chiqildi (`skillshare audit`: `0 issues`):
+- **Allaqachon faol ishlatayotganlarimiz (`✅`):** `grill-me`, `grilling`, `grill-with-docs` va `domain-modeling`.
+- **Ko'rib chiqilgan toza zaxira nomzodlar (`👀 Ko'rib chiqdik, sinab ko'rmadik`):**
+  - **`diagnosing-bugs`** (`138` qator): Murakkab xatoni tuzatishdan oldin tez va deterministik repro-sikl qurish, 3–5 ta inkor etib bo'ladigan gipoteza tuzish hamda vaqtinchalik loglarni `[DEBUG-xxxx]` tegi bilan qo'yib yakunda tozalab tashlashni talab qiladi.
+  - **`improve-codebase-architecture`** (`71` qator, `disable-model-invocation: true` — o'zicha ishga tushmaydi): `git log` da eng ko'p o'zgargan fayllarni tahlil qilib, sayoz modullarni (*Ousterhout deep modules*) topadi va `/tmp/architecture-review-<timestamp>.html` ga vizual `Before / After` Mermaid hisobot yozib, `grilling` ga ulaydi.
+- **O'tkazib yuborilganlar (`⏭️`):** `tdd`, `implement`, `implement-spec`, `to-tickets`, `triage`, `setup-matt-pocock-skills` — majburiy TDD va issue-tracker konveyeri kundalik ishimizda ortiqcha sikl yaratadi.
+
 ---
 
 ## 5. Qaysi yo'nalish va vazifalarda foydali?
@@ -61,3 +70,4 @@ Matt Pocock tomonidan yaratilgan, reja yoki arxitektura g'oyasini kod yozishdan 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
 | 2026-11-15 | Global o'rnatilgan rejalashtirish skilli sifatida qayd etish | `✅ Ishlatilyapti` | `grilling`, `grill-me` va `grill-with-docs` barcha agentlarga global ulangan va faol qo'llanilmoqda. |
+| 2026-11-16 | To'liq `mattpocock/skills` reposi auditi | `👀 Ko'rib chiqdik` / `⏭️ O'tkazib yuborildi` | `diagnosing-bugs` va `improve-codebase-architecture` toza zaxira nomzod sifatida belgilandi; og'ir `tdd`/`to-tickets` workflow skillari o'tkazib yuborildi. |
