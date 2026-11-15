@@ -61,7 +61,7 @@
 
 | Name | Type | Quality | Need | Status | Date | Summary |
 |---|---|---|---|---|---|---|
-| [**`agency-agents`**](reviews/en/architecture/agency-agents.md) | 283 persona prompts + installer | **6.5/10** | **2.5/10** | `⏭️ Skipped (Not Tested)` | `2026-11-16` | 283 `.md` roleplay prompts across 18 divisions (`~18.5K`-token frontmatter bloat and leftover copy-paste rules). **Instead use:** [**`impeccable`**](reviews/en/ui-ux/impeccable.md), [**`ponytail`**](reviews/en/architecture/ponytail.md), [**`elephant-goldfish-model`**](reviews/en/architecture/elephant-goldfish-model.md), [**`cross-platform-qa`**](reviews/en/mobile/cross-platform-qa.md). |
+| [**`agency-agents`**](reviews/en/architecture/agency-agents.md) | 283 persona prompts + installer | **6.5/10** | **2.5/10** | `⛔ Rejected (Not Tested)` | `2026-11-16` | 283 `.md` roleplay prompts across 18 divisions (`~18.5K`-token frontmatter bloat and leftover copy-paste rules). **Instead use:** [**`impeccable`**](reviews/en/ui-ux/impeccable.md), [**`ponytail`**](reviews/en/architecture/ponytail.md), [**`elephant-goldfish-model`**](reviews/en/architecture/elephant-goldfish-model.md), [**`cross-platform-qa`**](reviews/en/mobile/cross-platform-qa.md). |
 | [**`superpowers`**](reviews/en/architecture/superpowers.md) | Plugin (14 skills + hook) | **6.5/10** | **2.0/10** | `⛔ Rejected` | `2026-11-15` | Tested and removed: causes overthinking (`SessionStart` hook), noisy `brainstorming` questions (replaced by `grill-me`), slow subagent loops, and mandatory TDD that doubles work across Web/Mobile/Backend. |
 
 ### ⚙️ Backend

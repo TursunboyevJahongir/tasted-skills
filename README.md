@@ -61,7 +61,7 @@
 
 | Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
 |---|---|---|---|---|---|---|
-| [**`agency-agents`**](reviews/architecture/agency-agents.md) | 283 persona prompt + installer | **6.5/10** | **2.5/10** | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | `2026-11-16` | 18 bo'limdagi 283 ta `.md` rol-prompt (`~18.5K` token frontmatter shishishi va shablon copy-paste qoldiqlari bor). **O'rniga:** [**`impeccable`**](reviews/ui-ux/impeccable.md), [**`ponytail`**](reviews/architecture/ponytail.md), [**`elephant-goldfish-model`**](reviews/architecture/elephant-goldfish-model.md), [**`cross-platform-qa`**](reviews/mobile/cross-platform-qa.md). |
+| [**`agency-agents`**](reviews/architecture/agency-agents.md) | 283 persona prompt + installer | **6.5/10** | **2.5/10** | `⛔ Rad etildi (sinab ko'rmadik)` | `2026-11-16` | 18 bo'limdagi 283 ta `.md` rol-prompt (`~18.5K` token frontmatter shishishi va shablon copy-paste qoldiqlari bor). **O'rniga:** [**`impeccable`**](reviews/ui-ux/impeccable.md), [**`ponytail`**](reviews/architecture/ponytail.md), [**`elephant-goldfish-model`**](reviews/architecture/elephant-goldfish-model.md), [**`cross-platform-qa`**](reviews/mobile/cross-platform-qa.md). |
 | [**`superpowers`**](reviews/architecture/superpowers.md) | Plugin (14 skill + hook) | **6.5/10** | **2.0/10** | `⛔ Rad etildi` | `2026-11-15` | Sinab ko'rilib o'chirib tashlandi: ortiqcha o'ylanish (`SessionStart` hook), keraksiz `brainstorming` savollari (muqobili: `grill-me`), sekinlashtiruvchi subagent looplari va Web/Mobile/Backend uchun 2x ortiqcha ish bo'ladigan majburiy TDD. |
 
 ### ⚙️ Backend

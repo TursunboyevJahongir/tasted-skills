@@ -52,4 +52,4 @@ Pick the narrowest scope that delivers the value:
 - `👀 Ko'rib chiqdik (sinab ko'rmadik)` — Vetted from source, strong candidate, not yet installed/tested.
 - `⚠️ Faqat local (-p) (sinab ko'rmadik)` — Useful only in an isolated project, unsafe/noisy globally, not yet tested.
 - `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` — Reviewed and intentionally skipped without testing.
-- `⛔ Rad etildi` — Rejected due to security, bloat, or severe conflict.
+- `⛔ Rad etildi` / `⛔ Rad etildi (sinab ko'rmadik)` — Rejected due to security, bloat, or severe conflict (either after testing or directly from code audit without testing).
