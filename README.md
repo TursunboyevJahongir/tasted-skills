@@ -1,4 +1,4 @@
-# Ishlatib ko'rilgan Skill va AI Tool'lar
+# Sinab ko'rilgan va ishlatilayotgan AI Skill hamda Tool'lar
 
 **🇺🇿 O'zbekcha** | [🇬🇧 English](README.en.md) | [🇷🇺 Русский](README.ru.md)
 

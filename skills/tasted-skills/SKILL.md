@@ -77,11 +77,11 @@ When the user shares a GitHub repository, documentation site, package, MCP serve
    - Keep `README.md`, `README.en.md`, and `README.ru.md` concise (no long prose instructions), using only the 4 short status badges (`✅ Faol`, `👍 Yaxshi variant`, `⏳ Navbatda`, `⛔ Rad etildi` / `✅ Active`, `👍 Good Option`, `⏳ Queued`, `⛔ Rejected` / `✅ Активен`, `👍 Хороший вариант`, `⏳ В очереди`, `⛔ Отклонено`):
      - Essential, battle-tested daily items (`✅ Faol` / `✅ Active` / `✅ Активен`) go in the top ungrouped **`⭐ Eng keraklilari`** / **`⭐ Top Essentials`** / **`⭐ Самые необходимые`** table.
      - All remaining items go under **`Yo'nalishlar bo'yicha`** / **`By Category`** / **`По направлениям`** in their category table without duplicating rows from the top essentials table.
-     - **Score sorting rule (mandatory):** Keep every table in `README.md`, `README.en.md`, and `README.ru.md` sorted **descending by score** (`Baho` / `Score` / `Оценка` highest-to-lowest in top essentials, breaking ties by `Bizga kerakliligi` / `Need`; `Sifat` / `Quality` highest-to-lowest in category tables, breaking ties by `Keraklilik` / `Need`).
+     - **Ordering rule (mandatory):** Keep **`⭐ Eng keraklilari`** / **`⭐ Top Essentials`** / **`⭐ Самые необходимые`** ordered by daily workflow priority (`grill-me` #1, `graphify` #2, etc., with numbered `#` and `Asosiy vazifasi` / `Core Job` / `Основная задача` columns). Keep every category table under **`Yo'nalishlar bo'yicha`** sorted **descending by score** (`Sifat` / `Quality` / `Качество` highest-to-lowest, breaking ties by `Keraklilik` / `Need` / `Нужность`).
 
 ### 3. Sanitize before installing & update usage status
 
 When installing, testing, or retiring a cataloged item:
 1. Read `reviews/<category>/<slug>.md` first and apply every required removal/edit from its **Xavfsizlik va Sanitarizatsiya** section before syncing.
 2. Run `skillshare audit` on new or modified skills before enabling them globally.
-3. Update `README.md`, `README.en.md`, and `README.ru.md` (preserving descending score sort order in every table) and section `6` in all three language review files (`uz`, `en`, `ru`) with the date, install scope, stripped parts, and real-world outcome.
+3. Update `README.md`, `README.en.md`, and `README.ru.md` (preserving workflow-priority order in top essentials and descending score order in category tables) and section `6` in all three language review files (`uz`, `en`, `ru`) with the date, install scope, stripped parts, and real-world outcome.
