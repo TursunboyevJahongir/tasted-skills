@@ -26,6 +26,7 @@
 | [**`grill-me`**](reviews/architecture/grill-me.md) | Architecture / Planning | Skilllar to'plami | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Kod yozishdan oldin qarorlar daraxti (`design tree`) bo'ylab tavsiya etilgan javoblar bilan talabni oxirigacha pishitadi (`grilling` + `grill-with-docs`). |
 | [**`elephant-goldfish-model`**](reviews/architecture/elephant-goldfish-model.md) | Architecture / Audit | Plugin (7 skill + 10 agent) | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Xotirali me'mor (*Elephant*) + xotirasiz tanqidchi subagentlar (*Goldfish*): `egm-drift-report` va 5 bosqichli `egm-review` ko'p-repoli tizimlarda hujjat-kod uzilishlari va yashirin xatolarni aniq topadi. |
 | [**`animate-expo`**](reviews/mobile/animate-expo.md) | Mobile (Expo / RN) | Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Expo va React Native ilovalarda `Reanimated`, `Gesture Handler`, `expo-haptics` orqali UI oqimida (60/120fps) qotmaydigan animatsiya va jestlar (`LOCAL-COMPATIBILITY.md` himoyasi bilan). |
+| [**`sentry`**](reviews/backend/sentry.md) | Backend / Web / Mobile | Self-Hosted + Skill / MCP | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Full-stack xatolar (`Issue Grouping`, `dSYM`/`ProGuard`, `Source Maps`), `Breadcrumbs`, `Session Replay` va `v8+` OTel-trace'larni bitta markazda AI orqali tahlil qilish. |
 | [**`T3 Code`** + CLI Subagent](reviews/developer-tools/t3-code.md) | Multi-Agent | Desktop App + CLI | **9.0/10** | `✅ Ishlatilyapti` | `2026-11-15` | Bir nechta AI'ni birga ishlatish (*"Codex yozsin, Claude tekshirsin"* deyilganda CLI orqali subagent qilib mustaqil review yurgizadi). |
 | [**`xcrun simctl` + `Device Hub`**](reviews/mobile/ios-simulator-device-hub.md) | Mobile (iOS) | Xcode CLI + App | **9.0/10** | `✅ Ishlatilyapti` | `2026-11-15` | iOS Simulator'ni yoqish va Xcode `Device Hub` + `agent-desktop` orqali ichki iOS UI elementlarini fonda boshqarish (+ real iPhone uchun `devicectl`). |
 | [**`ponytail`**](reviews/architecture/ponytail.md) | Architecture / Code | Skill | **9.0/10** | `✅ Ishlatilyapti` | `2026-11-15` | Vazifani hal qiladigan eng kichik o'zgarish (YAGNI), ortiqcha abstraksiyasiz kod va bir o'qishda tushunarli qisqa javob. |
@@ -64,7 +65,9 @@
 
 ### ⚙️ Backend
 
-*Hozircha bo'sh.*
+| Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
+|---|---|---|---|---|---|---|
+| [**`opentelemetry`**](reviews/backend/opentelemetry.md) | Standard + Collector (`SigNoz` / `Grafana`) | **9.0/10** | **4.0/10** | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | `2026-11-15` | Servislararo `Traces + Metrics + Logs` va server/DB yuklamasi uchun kuchli standart (`Collector + SigNoz/Grafana` talab qiladi). **O'rniga:** [**`sentry`**](reviews/backend/sentry.md) (xato, replay va bazaviy trace'larni bitta joyda yopadi). |
 
 ### 🛠️ Developer Tools va Memory
 

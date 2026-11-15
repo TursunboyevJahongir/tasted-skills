@@ -26,6 +26,7 @@
 | [**`grill-me`**](reviews/en/architecture/grill-me.md) | Architecture / Planning | Skill Suite | **9.5/10** | `✅ In Active Use` | `2026-11-15` | Stress-tests requirements before coding by walking the design decision tree with recommended answers (`grilling` + `grill-with-docs`). |
 | [**`elephant-goldfish-model`**](reviews/en/architecture/elephant-goldfish-model.md) | Architecture / Audit | Plugin (7 skills + 10 agents) | **9.5/10** | `✅ In Active Use` | `2026-11-15` | Context-rich architect (*Elephant*) + fresh-context hostile reviewers (*Goldfish*): `egm-drift-report` and 5-stage `egm-review` uncover doc-code drift and hidden production bugs across multi-repo systems. |
 | [**`animate-expo`**](reviews/en/mobile/animate-expo.md) | Mobile (Expo / RN) | Skill | **9.5/10** | `✅ In Active Use` | `2026-11-15` | Builds 60/120fps UI-thread animations and gestures in Expo / React Native using `Reanimated`, `Gesture Handler`, and `expo-haptics` (protected by `LOCAL-COMPATIBILITY.md`). |
+| [**`sentry`**](reviews/en/backend/sentry.md) | Backend / Web / Mobile | Self-Hosted + Skill / MCP | **9.5/10** | `✅ In Active Use` | `2026-11-15` | Full-stack error diagnostics (`Issue Grouping`, `dSYM`/`ProGuard`, `Source Maps`), `Breadcrumbs`, `Session Replay`, and `v8+` OTel-based traces investigated directly by AI agents. |
 | [**`T3 Code`** + CLI Subagent](reviews/en/developer-tools/t3-code.md) | Multi-Agent | Desktop App + CLI | **9.0/10** | `✅ In Active Use` | `2026-11-15` | Multi-AI orchestration (*"let Codex implement and Claude review"* via isolated CLI subagent review loops). |
 | [**`xcrun simctl` + `Device Hub`**](reviews/en/mobile/ios-simulator-device-hub.md) | Mobile (iOS) | Xcode CLI + App | **9.0/10** | `✅ In Active Use` | `2026-11-15` | Boots iOS Simulators and drives internal iOS UI elements in the background via Xcode `Device Hub` + `agent-desktop` (plus `devicectl` for physical iPhones). |
 | [**`ponytail`**](reviews/en/architecture/ponytail.md) | Architecture / Code | Skill | **9.0/10** | `✅ In Active Use` | `2026-11-15` | Smallest change that completely solves the task (YAGNI), zero speculative abstraction, and concise replies readable in one pass. |
@@ -64,7 +65,9 @@
 
 ### ⚙️ Backend
 
-*Empty for now.*
+| Name | Type | Quality | Need | Status | Date | Summary |
+|---|---|---|---|---|---|---|
+| [**`opentelemetry`**](reviews/en/backend/opentelemetry.md) | Standard + Collector (`SigNoz` / `Grafana`) | **9.0/10** | **4.0/10** | `⏭️ Skipped (Not Tested)` | `2026-11-15` | Industry standard for cross-service `Traces + Metrics + Logs` and host/DB telemetry (requires `Collector + SigNoz/Grafana`). **Instead use:** [**`sentry`**](reviews/en/backend/sentry.md) (covers errors, replays, and baseline traces in one stack). |
 
 ### 🛠️ Developer Tools & Memory
 
@@ -80,3 +83,4 @@ skillshare install TursunboyevJahongir/tasted-skills -s tasted-skills -g && skil
 ```
 
 </details>
+

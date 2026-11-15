@@ -26,6 +26,7 @@
 | [**`grill-me`**](reviews/ru/architecture/grill-me.md) | Architecture / Planning | Набор скиллов | **9.5/10** | `✅ Используется` | `2026-11-15` | Проработка требований до написания кода по дереву решений (`design tree`) с рекомендуемыми ответами (`grilling` + `grill-with-docs`). |
 | [**`elephant-goldfish-model`**](reviews/ru/architecture/elephant-goldfish-model.md) | Architecture / Audit | Плагин (7 скиллов + 10 агентов) | **9.5/10** | `✅ Используется` | `2026-11-15` | Архитектор с памятью (*Elephant*) + субагенты-критики без контекста (*Goldfish*): `egm-drift-report` и 5-этапный `egm-review` находят расхождения документации с кодом и скрытые баги. |
 | [**`animate-expo`**](reviews/ru/mobile/animate-expo.md) | Mobile (Expo / RN) | Skill | **9.5/10** | `✅ Используется` | `2026-11-15` | Плавные 60/120fps анимации и жесты в UI-потоке для Expo и React Native на базе `Reanimated`, `Gesture Handler` и `expo-haptics` (с защитой `LOCAL-COMPATIBILITY.md`). |
+| [**`sentry`**](reviews/ru/backend/sentry.md) | Backend / Web / Mobile | Self-Hosted + Skill / MCP | **9.5/10** | `✅ Используется` | `2026-11-15` | Full-stack диагностика ошибок (`Issue Grouping`, `dSYM`/`ProGuard`, `Source Maps`), `Breadcrumbs`, `Session Replay` и `v8+` OTel-трейсов с прямым анализом через AI-агентов. |
 | [**`T3 Code`** + CLI Subagent](reviews/ru/developer-tools/t3-code.md) | Multi-Agent | Desktop App + CLI | **9.0/10** | `✅ Используется` | `2026-11-15` | Совместная работа нескольких AI (*«Codex пишет, Claude проверяет»* через вызов независимого CLI-субагента для ревью). |
 | [**`xcrun simctl` + `Device Hub`**](reviews/ru/mobile/ios-simulator-device-hub.md) | Mobile (iOS) | Xcode CLI + App | **9.0/10** | `✅ Используется` | `2026-11-15` | Запуск iOS Simulator и фоновое управление внутренними элементами iOS через Xcode `Device Hub` + `agent-desktop` (+ `devicectl` для реального iPhone). |
 | [**`ponytail`**](reviews/ru/architecture/ponytail.md) | Architecture / Code | Skill | **9.0/10** | `✅ Используется` | `2026-11-15` | Минимальное изменение, полностью решающее задачу (YAGNI), код без лишних абстракций и краткий ответ, понятный с первого прочтения. |
@@ -64,7 +65,9 @@
 
 ### ⚙️ Backend
 
-*Пока пусто.*
+| Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
+|---|---|---|---|---|---|---|
+| [**`opentelemetry`**](reviews/ru/backend/opentelemetry.md) | Стандарт + Collector (`SigNoz` / `Grafana`) | **9.0/10** | **4.0/10** | `⏭️ Пропущено (не тестировали)` | `2026-11-15` | Отраслевой стандарт межсервисных `Traces + Metrics + Logs` и метрик серверов/БД (требует `Collector + SigNoz/Grafana`). **Вместо него:** [**`sentry`**](reviews/ru/backend/sentry.md) (закрывает ошибки, реплеи и базовые трейсы в одной платформе). |
 
 ### 🛠️ Developer Tools и Memory
 
@@ -80,3 +83,4 @@ skillshare install TursunboyevJahongir/tasted-skills -s tasted-skills -g && skil
 ```
 
 </details>
+
