@@ -47,8 +47,6 @@
 
 ### 📱 Mobile
 
-*Все активные мобильные и TV-инструменты (`agent-device`, `adb`, `xcrun simctl` + `Device Hub`, `cross-platform-qa`, `animate-expo`, `mobile-native`) находятся в таблице **⭐ Самые необходимые** выше. Ни один из прежних инструментов не удалён — их роли чётко разделены: **Web/Desktop** → [`agent-desktop`](reviews/ru/developer-tools/agent-desktop.md), **внутренний UI Mobile/TV** → [`agent-device`](reviews/ru/mobile/agent-device.md), **проброс портов и логи Android (`reverse`, `logcat`)** → [`adb`](reviews/ru/mobile/adb.md), **фоновый boot iOS и реальный iPhone (`devicectl`)** → [`xcrun simctl`](reviews/ru/mobile/ios-simulator-device-hub.md) (`Device Hub` оставлен в резерве).*
-
 | Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
 |---|---|---|---|---|---|---|
 | [**`swiftui-agent-skill`**](reviews/ru/mobile/swiftui-agent-skill.md) | Skill (`twostraws` / `AvdLee` / `apple-design`) | **8.5/10** | **3.0/10** | `👍 Хороший вариант` | `2026-11-16` | Чистый SwiftUI и Apple HIG; так как основной стек у нас Expo / React Native, нужен только локально (`-p`) для нативных SwiftUI-модулей (Widgets / Live Activities). **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`reference/ios.md`) + [**`animate-expo`**](reviews/ru/mobile/animate-expo.md). |

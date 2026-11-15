@@ -47,8 +47,6 @@
 
 ### 📱 Mobile
 
-*Asosiy faol mobil va TV vositalar (`agent-device`, `adb`, `xcrun simctl` + `Device Hub`, `cross-platform-qa`, `animate-expo`, `mobile-native`) yuqoridagi **⭐ Eng keraklilari** jadvalida. Oldingi vositalarning birortasi o'chirilmagan — vazifalari aniq bo'lingan: **Web/Desktop** → [`agent-desktop`](reviews/developer-tools/agent-desktop.md), **Mobil/TV ichki UI** → [`agent-device`](reviews/mobile/agent-device.md), **Android port/log (`reverse`, `logcat`)** → [`adb`](reviews/mobile/adb.md), **iOS headless boot + real iPhone (`devicectl`)** → [`xcrun simctl`](reviews/mobile/ios-simulator-device-hub.md) (`Device Hub` zaxirada).*
-
 | Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
 |---|---|---|---|---|---|---|
 | [**`swiftui-agent-skill`**](reviews/mobile/swiftui-agent-skill.md) | Skill (`twostraws` / `AvdLee` / `apple-design`) | **8.5/10** | **3.0/10** | `👍 Yaxshi variant` | `2026-11-16` | Sof SwiftUI va Apple HIG qoidalari; asosiy stekimiz Expo / React Native bo'lgani uchun faqat sof SwiftUI moduli (Widget / Live Activity) yozilganda `-p` da olinadi. **O'rniga:** [**`impeccable`**](reviews/ui-ux/impeccable.md) (`reference/ios.md`) + [**`animate-expo`**](reviews/mobile/animate-expo.md). |

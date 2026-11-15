@@ -47,8 +47,6 @@
 
 ### 📱 Mobile
 
-*All active mobile and TV tools (`agent-device`, `adb`, `xcrun simctl` + `Device Hub`, `cross-platform-qa`, `animate-expo`, `mobile-native`) are listed in the **⭐ Top Essentials** table above. None of our previously installed tools were removed — their roles are cleanly split: **Web/Desktop** → [`agent-desktop`](reviews/en/developer-tools/agent-desktop.md), **Mobile/TV internal UI** → [`agent-device`](reviews/en/mobile/agent-device.md), **Android port forwarding & logs (`reverse`, `logcat`)** → [`adb`](reviews/en/mobile/adb.md), **iOS windowless boot & physical iPhone (`devicectl`)** → [`xcrun simctl`](reviews/en/mobile/ios-simulator-device-hub.md) (`Device Hub` kept as fallback).*
-
 | Name | Type | Quality | Need | Status | Date | Summary |
 |---|---|---|---|---|---|---|
 | [**`swiftui-agent-skill`**](reviews/en/mobile/swiftui-agent-skill.md) | Skill (`twostraws` / `AvdLee` / `apple-design`) | **8.5/10** | **3.0/10** | `👍 Good Option` | `2026-11-16` | Idiomatic SwiftUI & Apple HIG rules; since our primary stack is Expo / React Native, reserve strictly for `-p` project installs on pure SwiftUI targets (Widgets / Live Activities). **Instead use:** [**`impeccable`**](reviews/en/ui-ux/impeccable.md) (`reference/ios.md`) + [**`animate-expo`**](reviews/en/mobile/animate-expo.md). |
