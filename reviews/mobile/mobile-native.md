@@ -6,6 +6,7 @@
 - **Sifat bahosi:** **8.5 / 10**
 - **Bizga kerakliligi:** **7.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)` *(tozalangan holda)*
+- **Tekshirilgan sana:** `2026-11-15`
 - **Joriy holati:** `📦 Nomzod` *(tekshirildi, hali o'rnatilmadi)*
 
 ---

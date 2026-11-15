@@ -25,33 +25,33 @@ Maqsad — YouTube/GitHub'dagi reklama va clickbait'ga ishonmasdan, har bir vosi
 
 ### 🌐 Web (Veb-ilovalar, Landing va Frontend)
 
-| Resurs | Asl manba | Turi | Sifat | Keraklilik | Holati | Qisqacha xulosa va sanitarizatsiya eslatmasi |
-|---|---|---|---|---|---|---|
-| [**`taste-skill` v2.5** (`design-taste-frontend`)](reviews/web/taste-skill.md) | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | Landing Kit + Stop Hook | **8.0/10** | **4.0/10** | `⚠️ Globalga emas` | Noldan promo/landing sayt qurishda kuchli, lekin web-app'larga begona `system.css` qo'shadi. O'rnatilsa `Stop` hook (600s) kesib tashlanishi va faqat `-p` rejimda ishlatilishi shart. |
+| Resurs | Asl manba | Turi | Sifat | Keraklilik | Holati | Tekshirilgan sana | Qisqacha xulosa va sanitarizatsiya eslatmasi |
+|---|---|---|---|---|---|---|---|
+| [**`taste-skill` v2.5** (`design-taste-frontend`)](reviews/web/taste-skill.md) | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | Landing Kit + Stop Hook | **8.0/10** | **4.0/10** | `⚠️ Globalga emas` | `2026-11-15` | Noldan promo/landing sayt qurishda kuchli, lekin web-app'larga begona `system.css` qo'shadi. O'rnatilsa `Stop` hook (600s) kesib tashlanishi va faqat `-p` rejimda ishlatilishi shart. |
 
 ---
 
 ### 📱 Mobile va Mobile Web (PWA, iOS, Android, Expo)
 
-| Resurs | Asl manba | Turi | Sifat | Keraklilik | Holati | Qisqacha xulosa va sanitarizatsiya eslatmasi |
-|---|---|---|---|---|---|---|
-| [**`mobile-native`**](reviews/mobile/mobile-native.md) | [emilkowalski/skills](https://github.com/emilkowalski/skills/tree/main/skills/mobile-native) | Skill | **8.5/10** | **7.5/10** | `📦 Nomzod` | Mobil veb va PWA'ni native ilovadek sezdiradigan 11 ta aniq CSS/meta yechim (`dvh/svh`, `hover: hover`, `16px` input, `safe-area`, `overscroll`). O'rnatishdan oldin `Initial Response` salomlashuv bo'limi olib tashlanadi. |
+| Resurs | Asl manba | Turi | Sifat | Keraklilik | Holati | Tekshirilgan sana | Qisqacha xulosa va sanitarizatsiya eslatmasi |
+|---|---|---|---|---|---|---|---|
+| [**`mobile-native`**](reviews/mobile/mobile-native.md) | [emilkowalski/skills](https://github.com/emilkowalski/skills/tree/main/skills/mobile-native) | Skill | **8.5/10** | **7.5/10** | `📦 Nomzod` | `2026-11-15` | Mobil veb va PWA'ni native ilovadek sezdiradigan 11 ta aniq CSS/meta yechim (`dvh/svh`, `hover: hover`, `16px` input, `safe-area`, `overscroll`). O'rnatishdan oldin `Initial Response` salomlashuv bo'limi olib tashlanadi. |
 
 ---
 
 ### 🎨 UI/UX va Dizayn
 
-| Resurs | Asl manba | Turi | Sifat | Keraklilik | Holati | Qisqacha xulosa va sanitarizatsiya eslatmasi |
-|---|---|---|---|---|---|---|
-| [**`ui-ux-pro-max`**](reviews/ui-ux/ui-ux-pro-max.md) | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Skill + CSV/Python | **7.0/10** | **3.5/10** | `⏭️ Ishlatilmagan` | Tez MVP uchun tayyor CSV rang/shrift bazasi, lekin mavjud `impeccable` + `make-interfaces-feel-better` tizimidan kuchsizroq va auto-trigger'i ular bilan to'qnashadi. |
+| Resurs | Asl manba | Turi | Sifat | Keraklilik | Holati | Tekshirilgan sana | Qisqacha xulosa va sanitarizatsiya eslatmasi |
+|---|---|---|---|---|---|---|---|
+| [**`ui-ux-pro-max`**](reviews/ui-ux/ui-ux-pro-max.md) | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Skill + CSV/Python | **7.0/10** | **3.5/10** | `⏭️ Ishlatilmagan` | `2026-11-15` | Tez MVP uchun tayyor CSV rang/shrift bazasi, lekin mavjud `impeccable` + `make-interfaces-feel-better` tizimidan kuchsizroq va auto-trigger'i ular bilan to'qnashadi. |
 
 ---
 
 ### 🏗️ Arxitektura, Rejalashtirish va Review
 
-| Resurs | Asl manba | Turi | Sifat | Keraklilik | Holati | Qisqacha xulosa va sanitarizatsiya eslatmasi |
-|---|---|---|---|---|---|---|
-| [**`elephant-goldfish-model`** (EGM)](reviews/architecture/elephant-goldfish-model.md) | [google/elephant-goldfish-model](https://github.com/google/elephant-goldfish-model) | Plugin (7 skill + 10 agent) | **9.0/10** | **8.0/10** | `📦 Nomzod` | Katta arxitektura hujjatini 5 bosqichda toza (`fresh-context`) Goldfish subagentlar bilan tekshiradi + `egm-drift-report` (hujjat va real kod farqini topadi). To'liq plugin sifatida o'rnatiladi, manual chaqiruv (`disable-model-invocation: true`) saqlanadi. |
+| Resurs | Asl manba | Turi | Sifat | Keraklilik | Holati | Tekshirilgan sana | Qisqacha xulosa va sanitarizatsiya eslatmasi |
+|---|---|---|---|---|---|---|---|
+| [**`elephant-goldfish-model`** (EGM)](reviews/architecture/elephant-goldfish-model.md) | [google/elephant-goldfish-model](https://github.com/google/elephant-goldfish-model) | Plugin (7 skill + 10 agent) | **9.0/10** | **8.0/10** | `📦 Nomzod` | `2026-11-15` | Katta arxitektura hujjatini 5 bosqichda toza (`fresh-context`) Goldfish subagentlar bilan tekshiradi + `egm-drift-report` (hujjat va real kod farqini topadi). To'liq plugin sifatida o'rnatiladi, manual chaqiruv (`disable-model-invocation: true`) saqlanadi. |
 
 ---
 

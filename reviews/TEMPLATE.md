@@ -6,6 +6,7 @@
 - **Sifat bahosi:** **X.X / 10**
 - **Bizga kerakliligi:** **X.X / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)` | `Faqat alohida loyihaga (-p)` | `Plugin` | `Standalone Tool` | `O'rnatmaslik`
+- **Tekshirilgan sana:** `YYYY-MM-DD`
 - **Joriy holati:** `📦 Nomzod` *(yoki `✅ Ishlatilyapti` / `⏭️ Ishlatilmagan` / `⚠️ Globalga emas` / `⛔ Rad etilgan`)*
 
 ---

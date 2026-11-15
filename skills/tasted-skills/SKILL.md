@@ -64,8 +64,8 @@ When the user shares a GitHub repository, documentation site, package, MCP serve
    - Fit and conflict score (`X/10`) against our already-installed skills and tools;
    - Recommended scope (`Global -g`, `Project -p`, `Plugin`, `Standalone CLI/MCP`, or `Skip`).
 3. **Record when requested:**
-   - Create `reviews/<category>/<slug>.md` from `reviews/TEMPLATE.md` in Uzbek.
-   - Add or update its row under the matching category section in `README.md` with a relative link (`reviews/<category>/<slug>.md`).
+   - Create `reviews/<category>/<slug>.md` from `reviews/TEMPLATE.md` in Uzbek, always setting `Tekshirilgan sana` (`YYYY-MM-DD`) in both the top metadata block and the history table.
+   - Add or update its row under the matching category section in `README.md` with a relative link (`reviews/<category>/<slug>.md`) and the `Tekshirilgan sana` column (`YYYY-MM-DD`).
 
 ### 3. Sanitize before installing & update usage status
 
