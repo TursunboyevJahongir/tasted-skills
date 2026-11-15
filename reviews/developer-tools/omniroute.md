@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **2.0 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` *(rasmiy muhitlar, `T3 Code` va `ponytail` ishlatilgani hamda ToS/sessiya xavflari sabab o'rnatilmadi)*
+- **Joriy holati:** `⛔ Rad etildi` *(rasmiy muhitlar, `T3 Code` va `ponytail` ishlatilgani hamda ToS/sessiya xavflari sabab o'rnatilmadi)*
 
 ---
 
@@ -69,4 +69,4 @@ Ko'pchilik `OmniRoute` ni kod yozish sifatini oshiradigan skill deb o'ylaydi, le
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kodi (`v3.8.54`), `postinstall.mjs` va 44 ta `SKILL.md` auditi | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | Ichidagi skillar kodlash skilli emasligi (faqat proxy sozlamalari), uzoq sessiyalarni uzishi (`#7287`), yashirin model pasayishi va `wreq-js` TLS-stealth orqali pullik obunalarda ToS bloklanish xavfi borligi sabab o'rnatmaslikka qaror qilindi. |
+| 2026-11-16 | Manba kodi (`v3.8.54`), `postinstall.mjs` va 44 ta `SKILL.md` auditi | `⛔ Rad etildi` | Ichidagi skillar kodlash skilli emasligi (faqat proxy sozlamalari), uzoq sessiyalarni uzishi (`#7287`), yashirin model pasayishi va `wreq-js` TLS-stealth orqali pullik obunalarda ToS bloklanish xavfi borligi sabab o'rnatmaslikka qaror qilindi. |
