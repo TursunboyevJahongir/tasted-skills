@@ -7,7 +7,6 @@
 
 - `✅ Active` — used daily in our workflow
 - `👍 Good Option` — vetted, worth using when the right case arises
-- `⏳ Queued` — queued for inspection or testing
 - `⛔ Rejected` — not needed, conflicting, bloated, or unsafe
 
 </details>

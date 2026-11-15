@@ -49,5 +49,4 @@ Pick the narrowest scope that delivers the value:
 
 - `✅ Faol` (`✅ Active` / `✅ Активен`) — Tested and actively used daily (top essentials go in `⭐ Eng keraklilari`).
 - `👍 Yaxshi variant` (`👍 Good Option` / `👍 Хороший вариант`) — Vetted and worth using when the right task/project arises (on-demand CLI or `-p` project scope).
-- `⏳ Navbatda` (`⏳ Queued` / `⏳ В очереди`) — Queued for source inspection or practical testing.
 - `⛔ Rad etildi` (`⛔ Rejected` / `⛔ Отклонено`) — Not needed (covered by a stronger active tool), conflicting, bloated, or unsafe.

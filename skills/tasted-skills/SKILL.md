@@ -56,7 +56,7 @@ When the user asks what skills, plugins, MCPs, or AI tools help with a project o
 2. Read `reviews/<category>/<slug>.md` only for relevant matches.
 3. Recommend in three buckets:
    - **Already active** — installed tools/skills (`✅ Faol` / `✅ Active` / `✅ Активен`) ready to use now.
-   - **Worth adding (`-g` global vs `-p` project-only / CLI)** — vetted `👍 Yaxshi variant` (`👍 Good Option` / `👍 Хороший вариант`) items, noting any required sanitization steps before installation. (`⏳ Navbatda` / `⏳ Queued` / `⏳ В очереди` marks items still queued for inspection/testing.)
+   - **Worth adding (`-g` global vs `-p` project-only / CLI)** — vetted `👍 Yaxshi variant` (`👍 Good Option` / `👍 Хороший вариант`) items, noting any required sanitization steps before installation.
    - **Avoid / skip** — `⛔ Rad etildi` (`⛔ Rejected` / `⛔ Отклонено`) items already reviewed as redundant, conflicting, bloated, or unsafe.
 
 ### 2. Audit a new skill, plugin, tool, URL, or video
@@ -74,7 +74,7 @@ When the user shares a GitHub repository, documentation site, package, MCP serve
    - Recommended scope (`Global -g`, `Project -p`, `Plugin`, `Standalone CLI/MCP`, or `Skip`).
 3. **Record when requested:**
    - Create `reviews/<category>/<slug>.md` (Uzbek default), `reviews/en/<category>/<slug>.md` (English), and `reviews/ru/<category>/<slug>.md` (Russian) from their respective templates, always setting the review date (`YYYY-MM-DD`) in both the top metadata block and the history table, and including the flag switcher right under the `#` H1 title.
-   - Keep `README.md`, `README.en.md`, and `README.ru.md` concise (no long prose instructions), using only the 4 short status badges (`✅ Faol`, `👍 Yaxshi variant`, `⏳ Navbatda`, `⛔ Rad etildi` / `✅ Active`, `👍 Good Option`, `⏳ Queued`, `⛔ Rejected` / `✅ Активен`, `👍 Хороший вариант`, `⏳ В очереди`, `⛔ Отклонено`):
+   - Keep `README.md`, `README.en.md`, and `README.ru.md` concise (no long prose instructions), using only the 3 short status badges (`✅ Faol`, `👍 Yaxshi variant`, `⛔ Rad etildi` / `✅ Active`, `👍 Good Option`, `⛔ Rejected` / `✅ Активен`, `👍 Хороший вариант`, `⛔ Отклонено`):
      - Essential, battle-tested daily items (`✅ Faol` / `✅ Active` / `✅ Активен`) go in the top ungrouped **`⭐ Eng keraklilari`** / **`⭐ Top Essentials`** / **`⭐ Самые необходимые`** table.
      - All remaining items go under **`Yo'nalishlar bo'yicha`** / **`By Category`** / **`По направлениям`** in their category table without duplicating rows from the top essentials table.
      - **Ordering rule (mandatory):** Keep **`⭐ Eng keraklilari`** / **`⭐ Top Essentials`** / **`⭐ Самые необходимые`** ordered by daily workflow priority (`grill-me` #1, `graphify` #2, etc., with numbered `#` and `Asosiy vazifasi` / `Core Job` / `Основная задача` columns). Keep every category table under **`Yo'nalishlar bo'yicha`** sorted **descending by score** (`Sifat` / `Quality` / `Качество` highest-to-lowest, breaking ties by `Keraklilik` / `Need` / `Нужность`).

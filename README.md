@@ -7,7 +7,6 @@
 
 - `✅ Faol` — doimiy ishlatilyapti
 - `👍 Yaxshi variant` — tekshirilgan, kerakli vaziyatda ishlatishga arziydi
-- `⏳ Navbatda` — tekshirish yoki sinab ko'rish navbatida
 - `⛔ Rad etildi` — bizga kerak emas, ziddiyatli yoki xavfli
 
 </details>
