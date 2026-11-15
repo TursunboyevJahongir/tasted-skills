@@ -67,3 +67,4 @@ Asosiy ishlash zanjiri (`observe → act → verify`):
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
 | 2026-11-15 | Lokal o'rnatish va amaliy QA oqimiga ulash | `✅ Ishlatilyapti` | CLI hamda `agent-desktop`, `agent-desktop-macos`, `agent-desktop-ffi` skillari global o'rnatilgan; Web va iOS Simulator tekshiruvlarida doimiy ishlatilmoqda. |
+

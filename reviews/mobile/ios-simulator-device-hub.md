@@ -67,3 +67,4 @@ macOS'da iOS va Expo / React Native ilovalarini fonda ishga tushirish, boshqaris
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
 | 2026-11-15 | Mobil QA jarayonida iOS vositasi sifatida qayd etish | `✅ Ishlatilyapti` | Xcode tarkibida o'rnatilgan; `agent-desktop` bilan birgalikda iOS Simulator va `devicectl` orqali real qurilma tekshiruvlarida faol ishlatilmoqda. |
+

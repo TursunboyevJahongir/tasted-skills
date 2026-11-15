@@ -63,3 +63,4 @@ Ichida `shape`, `audit`, `polish`, `simplify`, `harden`, `adapt` kabi maxsus pla
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
 | 2026-11-15 | Asosiy UI/UX tizimi sifatida katalogga kiritish | `✅ Ishlatilyapti` | `v4.8.1` (`mobile-routing-1` moslashuvi va xavfsiz hook cheklovi bilan) global o'rnatilgan va faol ishlatilmoqda. |
+

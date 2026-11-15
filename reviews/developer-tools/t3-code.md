@@ -64,3 +64,4 @@ Global muhitimizdagi `task-context`, `antigravity-claude`, `antigravity-consult`
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
 | 2026-11-15 | Kundalik multi-agent ish oqimi sifatida qayd etish | `✅ Ishlatilyapti` | Desktop ilova hamda CLI subagent ko'prigi (Codex ↔ Claude ↔ Antigravity) o'rnatilgan va faol qo'llanilmoqda. |
+
