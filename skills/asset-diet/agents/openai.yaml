@@ -1,0 +1,5 @@
+interface:
+  display_name: "AssetDiet (On-Demand CLI)"
+  short_description: "Audit and compress local images, SVGs, videos, and 3D assets via npx"
+policy:
+  allow_implicit_invocation: false

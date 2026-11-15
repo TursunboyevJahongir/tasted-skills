@@ -52,7 +52,7 @@
 После аудита репозитория [mattpocock/skills](https://github.com/mattpocock/skills) мы очистили и глобально подключили **ещё 2 скилла строго в режиме по запросу (`on-demand`, `✅ Активен`)**:
 - **`diagnosing-bugs` (`✅ Активен` — только для сложных/плавающих багов и просадок производительности):** Сужен триггер (простые баги закрываются сразу по `ponytail`), удалён зависающий интерактивный скрипт `scripts/hitl-loop.template.sh`, а воспроизведение UI привязано к нашим `agent-desktop` / `agent-device` / `sentry` (`skillshare audit`: `0 issues`).
 - **`improve-codebase-architecture` (`✅ Активен` — `disable-model-invocation: true`):** Запускается строго по явному запросу; словарь из 8 терминов встроен локально в `CODEBASE-DESIGN.md` (без засорения контекста глобальным `codebase-design`), синхронизирован с `CONTEXT.md` (`domain-modeling`) и генерирует визуальный `Before / After` HTML-отчёт с Mermaid в `/tmp/architecture-review-<timestamp>.html` с переходом в `grilling` (`skillshare audit`: `0 issues`).
-- **Пропущены (`⏭️`):** `tdd`, `implement`, `implement-spec`, `to-tickets`, `triage`, `setup-matt-pocock-skills` — принудительный TDD и конвейер тикетов создают лишние циклы.
+- **Отклонены (`⛔ Отклонено`):** `tdd`, `implement`, `implement-spec`, `to-tickets`, `triage`, `setup-matt-pocock-skills` — принудительный TDD и конвейер тикетов создают лишние циклы.
 
 ---
 
@@ -68,4 +68,4 @@
 | Дата | Действие | Статус | Примечание |
 |---|---|---|---|
 | 2026-11-15 | Внесение в каталог как глобально установленного скилла планирования | `✅ Активен` | `grilling`, `grill-me`, `grill-with-docs` и `domain-modeling` глобально подключены ко всем агентам. |
-| 2026-11-16 | Санитаризация и глобальное подключение `diagnosing-bugs` и `improve-codebase-architecture` | `✅ Активен` | Настроены строго на режим по запросу (`hitl-loop.template.sh` удалён, `CODEBASE-DESIGN.md` встроен, риск аудита `0/100`) и синхронизированы во все 5 агентных сред; тяжёлые `tdd`/`to-tickets` пропущены (`⏭️`). |
+| 2026-11-16 | Санитаризация и глобальное подключение `diagnosing-bugs` и `improve-codebase-architecture` | `✅ Активен` | Настроены строго на режим по запросу (`hitl-loop.template.sh` удалён, `CODEBASE-DESIGN.md` встроен, риск аудита `0/100`) и синхронизированы во все 5 агентных сред; тяжёлые `tdd`/`to-tickets` отклонены (`⛔ Отклонено`). |

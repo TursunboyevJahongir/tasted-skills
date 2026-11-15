@@ -52,7 +52,7 @@ Created by Matt Pocock, this lightweight yet powerful skill stress-tests a plan 
 After auditing all skills in [mattpocock/skills](https://github.com/mattpocock/skills), we sanitized and globally installed **2 additional on-demand skills (`✅ Active`)**:
 - **`diagnosing-bugs` (`✅ Active` — scoped strictly to elusive/flaky bugs & perf regressions):** Narrowed its trigger description so trivial typos stay fast under `ponytail`, stripped the blocking interactive `scripts/hitl-loop.template.sh` script, and wired UI repro loops to our `agent-desktop` / `agent-device` / `sentry` stack (`skillshare audit`: `0 issues`).
 - **`improve-codebase-architecture` (`✅ Active` — `disable-model-invocation: true`):** Fires strictly on explicit request; embeds the 8-term deep-module vocabulary inside a self-contained `CODEBASE-DESIGN.md` (avoiding global `codebase-design` auto-trigger noise), aligns with `CONTEXT.md` (`domain-modeling`), renders a visual `Before / After` Mermaid HTML report to `/tmp/architecture-review-<timestamp>.html`, and hands off to `grilling` (`skillshare audit`: `0 issues`).
-- **Skipped (`⏭️`):** `tdd`, `implement`, `implement-spec`, `to-tickets`, `triage`, `setup-matt-pocock-skills` — mandatory TDD and issue-tracker ceremony add unnecessary loops.
+- **Rejected (`⛔ Rejected`):** `tdd`, `implement`, `implement-spec`, `to-tickets`, `triage`, `setup-matt-pocock-skills` — mandatory TDD and issue-tracker ceremony add unnecessary loops.
 
 ---
 
@@ -68,4 +68,4 @@ After auditing all skills in [mattpocock/skills](https://github.com/mattpocock/s
 | Date | Action | Status | Notes |
 |---|---|---|---|
 | 2026-11-15 | Cataloged as globally installed planning skill suite | `✅ Active` | `grilling`, `grill-me`, `grill-with-docs`, and `domain-modeling` linked globally across all agents. |
-| 2026-11-16 | Sanitized & globally synced `diagnosing-bugs` and `improve-codebase-architecture` | `✅ Active` | Configured for strict on-demand activation (`hitl-loop.template.sh` removed, `CODEBASE-DESIGN.md` bundled, `0/100` audit risk) and synced across all 5 agent targets; skipped heavy `tdd`/`to-tickets` skills (`⏭️`). |
+| 2026-11-16 | Sanitized & globally synced `diagnosing-bugs` and `improve-codebase-architecture` | `✅ Active` | Configured for strict on-demand activation (`hitl-loop.template.sh` removed, `CODEBASE-DESIGN.md` bundled, `0/100` audit risk) and synced across all 5 agent targets; rejected heavy `tdd`/`to-tickets` skills (`⛔ Rejected`). |

@@ -52,7 +52,7 @@ Matt Pocock tomonidan yaratilgan, reja yoki arxitektura g'oyasini kod yozishdan 
 Rasmiy [mattpocock/skills](https://github.com/mattpocock/skills) reposidagi barcha skillar tekshirilib, eng foydali **2 tasi sanitarizatsiya bilan faqat kerak paytda ishlaydigan (`on-demand`) qilib global ulandi (`✅ Faol`)**:
 - **`diagnosing-bugs` (`✅ Faol` — faqat murakkab/noaniq xatolar uchun):** Oddiy 1 qatorli xatolarda ishga tushmasligi uchun trigger chegarasi toraytirildi (`ponytail` ustuvor), osilib qoladigan interaktiv `scripts/hitl-loop.template.sh` olib tashlandi va Web/Mobil UI sikli bizning `agent-desktop` / `agent-device` / `sentry` stekimizga moslandi (`skillshare audit`: `0 issues`).
 - **`improve-codebase-architecture` (`✅ Faol` — `disable-model-invocation: true`):** Faqat arxitektura tekshiruvi so'ralganda ishlaydi; global `codebase-design` auto-trigger shovqinisiz ishlashi uchun 8 atamali lug'at ichki `CODEBASE-DESIGN.md` fayliga joylandi, `CONTEXT.md` (`domain-modeling`) bilan uyg'unlashtirildi hamda `/tmp/architecture-review-<timestamp>.html` ga vizual `Before / After` Mermaid hisobot chiqarib `grilling` ga ulaydi (`skillshare audit`: `0 issues`).
-- **O'tkazib yuborilganlar (`⏭️`):** `tdd`, `implement`, `implement-spec`, `to-tickets`, `triage`, `setup-matt-pocock-skills` — majburiy TDD va issue-tracker konveyeri kundalik ishimizda ortiqcha sikl yaratadi.
+- **Rad etilganlar (`⛔ Rad etildi`):** `tdd`, `implement`, `implement-spec`, `to-tickets`, `triage`, `setup-matt-pocock-skills` — majburiy TDD va issue-tracker konveyeri kundalik ishimizda ortiqcha sikl yaratadi.
 
 ---
 
@@ -68,4 +68,4 @@ Rasmiy [mattpocock/skills](https://github.com/mattpocock/skills) reposidagi barc
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
 | 2026-11-15 | Global o'rnatilgan rejalashtirish skilli sifatida qayd etish | `✅ Faol` | `grilling`, `grill-me`, `grill-with-docs` va `domain-modeling` barcha agentlarga global ulangan. |
-| 2026-11-16 | `diagnosing-bugs` va `improve-codebase-architecture` sanitarizatsiyasi va global ulanishi | `✅ Faol` | Faqat kerak paytda ishlaydigan (`on-demand`) qilib tozalandi (`hitl-loop.template.sh` o'chirildi, `CODEBASE-DESIGN.md` biriktirildi, `0/100` audit xavfi) va barcha 5 ta agent muhitiga sinxronlandi; og'ir `tdd`/`to-tickets` skillari o'tkazib yuborildi (`⏭️`). |
+| 2026-11-16 | `diagnosing-bugs` va `improve-codebase-architecture` sanitarizatsiyasi va global ulanishi | `✅ Faol` | Faqat kerak paytda ishlaydigan (`on-demand`) qilib tozalandi (`hitl-loop.template.sh` o'chirildi, `CODEBASE-DESIGN.md` biriktirildi, `0/100` audit xavfi) va barcha 5 ta agent muhitiga sinxronlandi; og'ir `tdd`/`to-tickets` skillari rad etildi (`⛔ Rad etildi`). |
