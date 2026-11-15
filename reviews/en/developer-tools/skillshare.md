@@ -17,7 +17,7 @@
 
 A CLI tool that manages and distributes skills, agents, hooks, plugins, and MCP configurations across multiple AI coding agents (**Claude Code**, **Codex**, **Antigravity**, **Cursor**, etc.) from a **single source directory (`~/.config/skillshare/`)**:
 - `skillshare install` / `link` / `sync -g` — installs a skill once and automatically symlinks (or copies) it into every configured agent target directory.
-- `skillshare audit` — scans installed skills and scripts for security threats (prompt injection, hidden bidirectional Unicode, data exfiltration, malicious install commands) and blocks `CRITICAL` findings.
+- **`skillshare audit` (built-in Skill-Check / Security Scanner)** — single Go binary that scans 6 analyzers (`static`, `dataflow`, `tier`, `integrity`, `structure`, `cross-skill`) in `~0.1s` for prompt injection, hidden bidirectional Unicode, data exfiltration, malicious install commands, and cross-skill trigger collisions (`text`, `json`, `sarif`, `markdown` outputs). Crucially, it **runs automatically during `skillshare install`** and blocks `CRITICAL` findings on the spot.
 - `skillshare analyze` — measures always-loaded and on-demand token/context cost per agent target.
 
 ---
@@ -26,7 +26,7 @@ A CLI tool that manages and distributes skills, agents, hooks, plugins, and MCP 
 
 ### Strengths
 - Eliminates manual copy-pasting and version drift across `~/.claude`, `~/.codex`, `~/.agents`, and `~/.gemini`.
-- Built-in static security scanner (`audit`) plus automatic backup and trash recovery.
+- **Built-in Skill-Check (`audit`) + backup/trash recovery:** Combining `skillshare audit` with direct AI-agent source-code inspection covers daily security vetting cleanly without needing heavy standalone Python/LLM scanners like [`SkillSpector`](skillspector.md).
 
 ### Weaknesses and Limitations
 - Interactive commands must be invoked with `--no-tui` or `--json` when called from non-interactive agent shells so they do not hang waiting for TUI input.

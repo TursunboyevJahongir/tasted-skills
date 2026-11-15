@@ -14,13 +14,16 @@
 
 </details>
 
+> [!TIP]
+> **🛡️ Our Security Rule (Recommended for You Too):** Never install third-party skills, plugins, or MCP servers based solely on their `README` or GitHub stars. Before installing anything, **we always have our AI coding agent inspect the primary source code directly** (`SKILL.md`, scripts, hooks, network/env access) and run [**`skillshare`**](reviews/en/developer-tools/skillshare.md)'s built-in skill-check (`skillshare audit`). We strongly recommend asking your own AI agent to audit any new skill's code before installing it.
+
 ## ⭐ Top Essentials
 
 | Name | Domain | Type | Score | Status | Date | Summary |
 |---|---|---|---|---|---|---|
 | [**`agent-desktop`**](reviews/en/developer-tools/agent-desktop.md) | Desktop / Web / iOS | CLI + Skill | **9.5/10** | `✅ In Active Use` | `2026-11-15` | [agent-browser.dev/desktop](https://agent-browser.dev/desktop) — drives Chrome, desktop apps, and iOS `Device Hub` in the background via macOS Accessibility (`AX`) without hijacking the cursor. |
 | [**`adb`**](reviews/en/mobile/adb.md) | Mobile (Android) | CLI | **9.5/10** | `✅ In Active Use` | `2026-11-15` | Controls headless Android emulators (`-no-window`) and physical phones (`uiautomator dump`, `input tap`, `screencap`, `reverse`, `logcat`). Explicit `-s <serial>` required. |
-| [**`skillshare`**](reviews/en/developer-tools/skillshare.md) | Developer Tools | CLI + Skill | **9.5/10** | `✅ In Active Use` | `2026-11-15` | Syncs skills/plugins across all AI agents (`Codex`, `Claude`, `Antigravity`) from a single source and enforces security scans (`audit`). |
+| [**`skillshare`**](reviews/en/developer-tools/skillshare.md) | Developer Tools | CLI + Skill | **9.5/10** | `✅ In Active Use` | `2026-11-15` | Syncs skills/plugins across all AI agents (`Codex`, `Claude`, `Antigravity`) from a single source with a fast built-in **skill-check (`skillshare audit`)** during install. |
 | [**`cross-platform-qa`**](reviews/en/mobile/cross-platform-qa.md) | Web / iOS / Android | Skill | **9.5/10** | `✅ In Active Use` | `2026-11-15` | 2-stage QA workflow: 1) iterate locally (`agent-desktop` + `Device Hub` + `adb` emulator), 2) run a single final verification pass on a real phone via `adb` before marking Done. |
 | [**`impeccable`**](reviews/en/ui-ux/impeccable.md) | UI/UX | Skill | **9.5/10** | `✅ In Active Use` | `2026-11-15` | Primary design system and UX audit engine across web, mobile web, and native iOS/Android screens (external hooks disabled for safety). |
 | [**`grill-me`**](reviews/en/architecture/grill-me.md) | Architecture / Planning | Skill Suite | **9.5/10** | `✅ In Active Use` | `2026-11-15` | Stress-tests requirements before coding by walking the design decision tree with recommended answers (`grilling` + `grill-with-docs`). |
@@ -75,6 +78,7 @@
 
 | Name | Type | Quality | Need | Status | Date | Summary |
 |---|---|---|---|---|---|---|
+| [**`SkillSpector`**](reviews/en/developer-tools/skillspector.md) | Python CLI + MCP + Skill | **9.0/10** | **3.5/10** | `⏭️ Skipped (Not Tested)` | `2026-11-16` | NVIDIA's AI skill & MCP security scanner (`AST + YARA + OSV + LLM`). Not installed to avoid an extra daily loop — **Instead use:** [**`skillshare`**](reviews/en/developer-tools/skillshare.md) (`skillshare audit` skill-check) + **direct AI agent source-code inspection**. |
 | [**`OmniRoute`**](reviews/en/developer-tools/omniroute.md) | Local Proxy + 44 Admin Skills | **7.5/10** | **2.0/10** | `⛔ Rejected (Not Tested)` | `2026-11-16` | Local LLM reverse-proxy (`localhost:20128`); its 44 bundled skills are proxy admin manuals, default routing breaks long sessions (`#7287`) and silently downgrades models, and `wreq-js` TLS-stealth carries subscription ToS ban risk. **Instead use:** [**`T3 Code`**](reviews/en/developer-tools/t3-code.md) + [**`ponytail`**](reviews/en/architecture/ponytail.md). |
 
 ---

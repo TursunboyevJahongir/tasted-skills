@@ -17,7 +17,7 @@
 
 Bir nechta AI coding agentlar (**Claude Code**, **Codex**, **Antigravity**, **Cursor** va b.) uchun skill, agent, hook, plugin va MCP sozlamalarini **bitta markaziy manbadan (`~/.config/skillshare/`)** tarqatadigan va boshqaradigan CLI vosita:
 - `skillshare install` / `link` / `sync -g` — skillni bitta joyga qo'shib, barcha agent papkalariga avtomatik symlink (yoki nusxa) yaratadi.
-- `skillshare audit` — o'rnatilayotgan skill va skriptlarni xavfsizlik tahdidlariga (prompt injection, yashirin unicode, data exfiltration, zararli o'rnatish buyruqlari) tekshiradi va `CRITICAL` xavflarni bloklaydi.
+- **`skillshare audit` (o'rnatilgan Skill-Check / Xavfsizlik skaneri)** — yagona Go binari orqali `~0.1` soniyada 6 yo'nalishda (`static`, `dataflow`, `tier`, `integrity`, `structure`, `cross-skill`) prompt injection, yashirin unicode, data exfiltration, zararli o'rnatish buyruqlari va trigger to'qnashuvlarini tekshiradi (`text`, `json`, `sarif`, `markdown` formatlarida). Eng qulayi — **`skillshare install` paytida avtomatik ishga tushib**, `CRITICAL` xavflarni joyidayoq bloklaydi.
 - `skillshare analyze` — har bir agentda skillar qancha token/kontekst yeyayotganini hisoblab beradi.
 
 ---
@@ -26,7 +26,7 @@ Bir nechta AI coding agentlar (**Claude Code**, **Codex**, **Antigravity**, **Cu
 
 ### Kuchli tomonlari
 - Har bir agent (`~/.claude`, `~/.codex`, `~/.agents`, `~/.gemini`) uchun qo'lda alohida nusxa ko'chirish va versiya chalkashligini butunlay yo'qotadi.
-- O'rnatilgan xavfsizlik skaneri (`audit`) va avtomatik backup/trash tizimi bor.
+- **Tayyor Skill-Check (`audit`) va backup/trash tizimi bor:** `skillshare audit` + AI agentga birlamchi kodni o'qitib tekshirtirish kombinatsiyasi kundalik xavfsizlikni to'liq yopgani uchun [`SkillSpector`](skillspector.md) kabi og'ir alohida skanerlarni o'rnatishga hojat qolmaydi.
 
 ### Zaif tomonlari va cheklovlari
 - Interaktiv buyruqlar skript yoki agent ichidan chaqirilganda osilib qolmasligi uchun doim `--no-tui` yoki `--json` flaglarini berish talab etiladi.

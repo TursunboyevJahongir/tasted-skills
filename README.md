@@ -14,13 +14,16 @@
 
 </details>
 
+> [!TIP]
+> **🛡️ Xavfsizlik qoidamiz (sizga ham tavsiya):** Hech qachon begona skill, plugin yoki MCP serverni faqat `README` yoki yulduzlariga qarab o'rnatmang. Biz har bitta nomzodni o'rnatishdan oldin **o'zimizning AI coding agentga birlamchi kodini (`SKILL.md`, skriptlar, hooklar, tarmoq/env murojaatlari) o'qitib tekshirtiramiz** hamda [**`skillshare`**](reviews/developer-tools/skillshare.md) ichidagi tayyor skill-check (`skillshare audit`) dan o'tkazamiz. Sizga ham har qanday yangi skillni o'rnatishdan avval AI agentingizga tekshirtirib olishni tavsiya qilamiz.
+
 ## ⭐ Eng keraklilari
 
 | Nomi | Yo'nalish | Turi | Baho | Holati | Sana | Qisqacha izoh |
 |---|---|---|---|---|---|---|
 | [**`agent-desktop`**](reviews/developer-tools/agent-desktop.md) | Desktop / Web / iOS | CLI + Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | [agent-browser.dev/desktop](https://agent-browser.dev/desktop) — macOS Accessibility (`AX`) orqali Chrome, desktop dasturlar va iOS `Device Hub` ni kursorni qimirlatmasdan fonda boshqaradi. |
 | [**`adb`**](reviews/mobile/adb.md) | Mobile (Android) | CLI | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Android emulyator (`-no-window`) va real telefonlarda ilovani boshqarish (`uiautomator dump`, `input tap`, `screencap`, `reverse`, `logcat`). `-s <serial>` majburiy. |
-| [**`skillshare`**](reviews/developer-tools/skillshare.md) | Developer Tools | CLI + Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Barcha AI agentlar (`Codex`, `Claude`, `Antigravity`) o'rtasida skill/pluginlarni bitta manbadan sinxronlash va xavfsizlik auditidan (`audit`) o'tkazish. |
+| [**`skillshare`**](reviews/developer-tools/skillshare.md) | Developer Tools | CLI + Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Barcha AI agentlar (`Codex`, `Claude`, `Antigravity`) o'rtasida skill/pluginlarni bitta manbadan sinxronlash hamda o'rnatilgan tezkor **skill-check (`skillshare audit`)** orqali xavfsizlikdan o'tkazish. |
 | [**`cross-platform-qa`**](reviews/mobile/cross-platform-qa.md) | Web / iOS / Android | Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | 2-bosqichli QA: 1) lokal kompyuterda (`agent-desktop` + `Device Hub` + `adb` emulyator) tekshirish, 2) "Done" oldidan real telefonda `adb` orqali 1 marta sinash. |
 | [**`impeccable`**](reviews/ui-ux/impeccable.md) | UI/UX | Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Web, mobil veb va native iOS/Android ekranlar uchun asosiy dizayn va UX audit tizimi (xavfli tashqi hooklari o'chirilgan holda). |
 | [**`grill-me`**](reviews/architecture/grill-me.md) | Architecture / Planning | Skilllar to'plami | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Kod yozishdan oldin qarorlar daraxti (`design tree`) bo'ylab tavsiya etilgan javoblar bilan talabni oxirigacha pishitadi (`grilling` + `grill-with-docs`). |
@@ -75,6 +78,7 @@
 
 | Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
 |---|---|---|---|---|---|---|
+| [**`SkillSpector`**](reviews/developer-tools/skillspector.md) | Python CLI + MCP + Skill | **9.0/10** | **3.5/10** | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | `2026-11-16` | NVIDIA'ning AI skill va MCP xavfsizlik skaneri (`AST + YARA + OSV + LLM`). Kundalik ishda ortiqcha sikl bo'lgani uchun o'rnatmadik — **O'rniga:** [**`skillshare`**](reviews/developer-tools/skillshare.md) (`skillshare audit` skill-check) + **AI agent orqali kodni bevosita tekshirtirish**. |
 | [**`OmniRoute`**](reviews/developer-tools/omniroute.md) | Local Proxy + 44 Admin Skill | **7.5/10** | **2.0/10** | `⛔ Rad etildi (sinab ko'rmadik)` | `2026-11-16` | Lokal LLM reverse-proxy (`localhost:20128`); ichidagi 44 ta skill kodlash uchun emas, uzoq sessiyalarni uzadi (`#7287`), limitda kuchsiz modelga tushiradi va TLS-stealth (`wreq-js`) pullik obunalarda ToS ban xavfini tug'diradi. **O'rniga:** [**`T3 Code`**](reviews/developer-tools/t3-code.md) + [**`ponytail`**](reviews/architecture/ponytail.md). |
 
 ---
