@@ -7,7 +7,7 @@
 - **Bizga kerakliligi:** **2.0 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(avval o'rnatib sinab ko'rildi va olib tashlandi)*
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `⛔ Rad etildi` *(🧪 Sinab ko'rilib, ishni sekinlashtirgani sabab o'chirib tashlangan)*
+- **Joriy holati:** `⛔ Rad etildi` *(🧪 Tatib ko'rilib, ishni sekinlashtirgani sabab o'chirib tashlangan)*
 
 ---
 

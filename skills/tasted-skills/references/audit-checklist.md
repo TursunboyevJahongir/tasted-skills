@@ -47,9 +47,9 @@ Pick the narrowest scope that delivers the value:
 
 ## 5. Status Labels (Used in `README.md` and Review Logs)
 
-- `✅ Ishlatilyapti` — Tested and actively used (top essentials go in `⭐ Eng keraklilari`).
-- `🧪 Sinab ko'rildi` — Installed and tested in practice (temporary or project-scoped).
-- `👀 Ko'rib chiqdik (sinab ko'rmadik)` — Vetted from source, strong candidate, not yet installed/tested.
-- `⚠️ Faqat local (-p) (sinab ko'rmadik)` — Useful only in an isolated project, unsafe/noisy globally, not yet tested.
-- `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` — Reviewed and intentionally skipped without testing.
+- `✅ Ishlatilyapti` — Tasted and actively used (top essentials go in `⭐ Eng keraklilari`).
+- `🧪 Tatib ko'rildi` — Installed and tasted in practice (temporary or project-scoped).
+- `👀 Ko'rib chiqdik (tatib ko'rmadik)` — Vetted from source, strong candidate, not yet installed/tasted.
+- `⚠️ Faqat local (-p) (tatib ko'rmadik)` — Useful only in an isolated project, unsafe/noisy globally, not yet tasted.
+- `⏭️ O'tkazib yuborildi (tatib ko'rmadik)` — Reviewed and intentionally skipped without tasting.
 - `⛔ Rad etildi` — Rejected due to security, bloat, or severe conflict.
