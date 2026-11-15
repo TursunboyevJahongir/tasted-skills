@@ -24,6 +24,7 @@
 | [**`cross-platform-qa`**](reviews/mobile/cross-platform-qa.md) | Web / iOS / Android | Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | 2-bosqichli QA: 1) lokal kompyuterda (`agent-desktop` + `Device Hub` + `adb` emulyator) tekshirish, 2) "Done" oldidan real telefonda `adb` orqali 1 marta sinash. |
 | [**`impeccable`**](reviews/ui-ux/impeccable.md) | UI/UX | Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Web, mobil veb va native iOS/Android ekranlar uchun asosiy dizayn va UX audit tizimi (xavfli tashqi hooklari o'chirilgan holda). |
 | [**`animate-expo`**](reviews/mobile/animate-expo.md) | Mobile (Expo / RN) | Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Expo va React Native ilovalarda `Reanimated`, `Gesture Handler`, `expo-haptics` orqali UI oqimida (60/120fps) qotmaydigan animatsiya va jestlar (`LOCAL-COMPATIBILITY.md` himoyasi bilan). |
+| [**`mobile-native`**](reviews/mobile/mobile-native.md) | Mobile Web / PWA | Skill | **8.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Mobil veb va PWA'ni native sezdiradigan 11 ta CSS/meta yechim (`dvh/svh`, `safe-area`, `16px` input, `overscroll-behavior`, hover gating; `LOCAL-COMPATIBILITY.md` himoyasi bilan). |
 | [**`ponytail`**](reviews/architecture/ponytail.md) | Architecture / Code | Skill | **9.0/10** | `✅ Ishlatilyapti` | `2026-11-15` | Vazifani hal qiladigan eng kichik o'zgarish (YAGNI), ortiqcha abstraksiyasiz kod va bir o'qishda tushunarli qisqa javob. |
 | [**`karpathy-guidelines`**](reviews/architecture/karpathy-guidelines.md) | Architecture / Code | Skill | **9.0/10** | `✅ Ishlatilyapti` | `2026-11-15` | Taxminlarni ochiq aytish, soddalik va mavjud kodning boshqa qismlariga tegmasdan jarrohlik aniqligida (`surgical`) tahrirlash. |
 | [**`grill-me`**](reviews/architecture/grill-me.md) | Architecture / Planning | Skilllar to'plami | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Kod yozishdan oldin qarorlar daraxti (`design tree`) bo'ylab tavsiya etilgan javoblar bilan talabni oxirigacha pishitadi (`grilling` + `grill-with-docs`). |
@@ -41,14 +42,14 @@
 
 ### 📱 Mobile
 
-| Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
-|---|---|---|---|---|---|---|
-| [**`mobile-native`**](reviews/mobile/mobile-native.md) | Skill | **8.5/10** | **7.5/10** | `👀 Ko'rib chiqdik (sinab ko'rmadik)` | `2026-11-15` | Mobil veb va PWA'ni native sezdiradigan 11 ta CSS/meta yechim; o'rnatishdan oldin `Initial Response` olib tashlanadi. |
+*Asosiy faol mobil vositalar (`adb`, `xcrun simctl` + `Device Hub`, `cross-platform-qa`, `animate-expo`, `mobile-native`) yuqoridagi **⭐ Eng keraklilari** jadvalida.*
 
 ### 🎨 UI/UX
 
 | Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
 |---|---|---|---|---|---|---|
+| [**`animate`**](reviews/ui-ux/animate.md) | Skill (2 fayl) | **8.5/10** | **3.0/10** | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | `2026-11-15` | Emil Kowalski'ning veb-animatsiya skilli; `auto-trigger` va qoidalari mavjud tizim bilan to'qnashadi. **O'rniga:** [**`impeccable`**](reviews/ui-ux/impeccable.md) (`animate`) + [**`animate-expo`**](reviews/mobile/animate-expo.md). |
+| [**`break-ui`**](reviews/ui-ux/break-ui.md) | Skill (2 fayl) | **8.0/10** | **3.0/10** | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | `2026-11-15` | Worst-case data stress-test; repoga vaqtinchalik fixture/toggle qo'shadi va tuzatmay to'xtaydi. **O'rniga:** [**`impeccable`**](reviews/ui-ux/impeccable.md) (`harden`). |
 | [**`make-interfaces-feel-better`**](reviews/ui-ux/make-interfaces-feel-better.md) | Skill (6 fayl) | **7.5/10** | **2.5/10** | `⛔ Rad etildi` | `2026-11-15` | Sinab ko'rilib olib tashlandi (`auto-trigger` to'qnashuvi va uzun hisobot jadvallari sabab). **O'rniga:** [**`impeccable`**](reviews/ui-ux/impeccable.md) + [**`animate-expo`**](reviews/mobile/animate-expo.md). |
 | [**`ui-ux-pro-max`**](reviews/ui-ux/ui-ux-pro-max.md) | Skill + CSV/Python | **7.0/10** | **3.5/10** | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | `2026-11-15` | `impeccable` dan kuchsizroq va auto-trigger'i u bilan urishadi. **O'rniga:** [**`impeccable`**](reviews/ui-ux/impeccable.md). |
 
