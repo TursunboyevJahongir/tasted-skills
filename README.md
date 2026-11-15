@@ -69,6 +69,7 @@
 | Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
 |---|---|---|---|---|---|---|
 | [**`opentelemetry`**](reviews/backend/opentelemetry.md) | Standard + Collector (`SigNoz` / `Grafana`) | **9.0/10** | **4.0/10** | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | `2026-11-15` | Servislararo `Traces + Metrics + Logs` va server/DB yuklamasi uchun kuchli standart (`Collector + SigNoz/Grafana` talab qiladi). **O'rniga:** [**`sentry`**](reviews/backend/sentry.md) (xato, replay va bazaviy trace'larni bitta joyda yopadi). |
+| [**`Shannon`**](reviews/backend/shannon.md) | Standalone CLI (`Docker` + `Temporal`) + `hacker-test` | **8.5/10** | **6.5/10** | `👀 Ko'rib chiqdik (sinab ko'rmadik)` | `2026-11-16` | Avtonom White-Box AI pentester (Auth bypass, IDOR, Injection, XSS, SSRF ni real PoC bilan isbotlaydi). Faqat lokal/staging'da `"hacker test"` (`npx @keygraph/shannon@latest`) orqali ishlatiladi — production'ga ulash taqiqlangan. |
 
 ### 🛠️ Developer Tools va Memory
 
