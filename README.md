@@ -71,7 +71,9 @@
 
 ### 🛠️ Developer Tools va Memory
 
-*Hozircha bo'sh.*
+| Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
+|---|---|---|---|---|---|---|
+| [**`OmniRoute`**](reviews/developer-tools/omniroute.md) | Local Proxy + 44 Admin Skill | **7.5/10** | **2.0/10** | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | `2026-11-16` | Lokal LLM reverse-proxy (`localhost:20128`); ichidagi 44 ta skill kodlash uchun emas, uzoq sessiyalarni uzadi (`#7287`), limitda kuchsiz modelga tushiradi va TLS-stealth (`wreq-js`) pullik obunalarda ToS ban xavfini tug'diradi. **O'rniga:** [**`T3 Code`**](reviews/developer-tools/t3-code.md) + [**`ponytail`**](reviews/architecture/ponytail.md). |
 
 ---
 

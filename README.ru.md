@@ -71,7 +71,9 @@
 
 ### 🛠️ Developer Tools и Memory
 
-*Пока пусто.*
+| Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
+|---|---|---|---|---|---|---|
+| [**`OmniRoute`**](reviews/ru/developer-tools/omniroute.md) | Local Proxy + 44 админ-скилла | **7.5/10** | **2.0/10** | `⏭️ Пропущено (не тестировали)` | `2026-11-16` | Локальный LLM reverse-proxy (`localhost:20128`); его 44 скилла — лишь мануалы прокси, дефолтный роутинг рвёт длинные сессии (`#7287`) и понижает модель, а TLS-stealth (`wreq-js`) несёт риск бана подписок по ToS. **Вместо него:** [**`T3 Code`**](reviews/ru/developer-tools/t3-code.md) + [**`ponytail`**](reviews/ru/architecture/ponytail.md). |
 
 ---
 
