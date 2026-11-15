@@ -9,7 +9,7 @@
 - **Need for Us:** **2.0 / 10**
 - **Recommended Scope:** `Do Not Install`
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⛔ Rejected` *(skipped because native official harnesses + `T3 Code` + `ponytail` already cover our workflow without ToS or session-affinity risks)*
+- **Current Status:** `⛔ Rejected (Not Tested)` *(skipped because native official harnesses + `T3 Code` + `ponytail` already cover our workflow without ToS or session-affinity risks)*
 
 ---
 
@@ -69,4 +69,4 @@ Although often shared as an "AI coding skill", inspecting the `v3.8.54` reposito
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Source code (`v3.8.54`), `postinstall.mjs`, and 44 `SKILL.md` audit | `⛔ Rejected` | Skipped without installing: bundled skills are only proxy admin manuals, default routing breaks long Codex/Claude sessions (`#7287`) and silently downgrades models, and `wreq-js` TLS-stealth proxying carries subscription ToS ban risk. |
+| 2026-11-16 | Source code (`v3.8.54`), `postinstall.mjs`, and 44 `SKILL.md` audit | `⛔ Rejected (Not Tested)` | Skipped without installing: bundled skills are only proxy admin manuals, default routing breaks long Codex/Claude sessions (`#7287`) and silently downgrades models, and `wreq-js` TLS-stealth proxying carries subscription ToS ban risk. |

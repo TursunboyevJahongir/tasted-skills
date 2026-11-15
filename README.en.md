@@ -10,7 +10,7 @@
 - `👀 Reviewed (Not Tested)` — source code audited, strong candidate, not yet installed/tested
 - `⚠️ Local Only (-p) (Not Tested)` — suitable for narrow project scope, unsafe/noisy globally, not yet tested
 - `⏭️ Skipped (Not Tested)` — reviewed and intentionally skipped because a stronger alternative is already active
-- `⛔ Rejected` — rejected due to security risk, bloat, or workflow conflict
+- `⛔ Rejected` / `⛔ Rejected (Not Tested)` — rejected due to security risk, bloat, or workflow conflict
 
 </details>
 
@@ -74,7 +74,7 @@
 
 | Name | Type | Quality | Need | Status | Date | Summary |
 |---|---|---|---|---|---|---|
-| [**`OmniRoute`**](reviews/en/developer-tools/omniroute.md) | Local Proxy + 44 Admin Skills | **7.5/10** | **2.0/10** | `⛔ Rejected` | `2026-11-16` | Local LLM reverse-proxy (`localhost:20128`); its 44 bundled skills are proxy admin manuals, default routing breaks long sessions (`#7287`) and silently downgrades models, and `wreq-js` TLS-stealth carries subscription ToS ban risk. **Instead use:** [**`T3 Code`**](reviews/en/developer-tools/t3-code.md) + [**`ponytail`**](reviews/en/architecture/ponytail.md). |
+| [**`OmniRoute`**](reviews/en/developer-tools/omniroute.md) | Local Proxy + 44 Admin Skills | **7.5/10** | **2.0/10** | `⛔ Rejected (Not Tested)` | `2026-11-16` | Local LLM reverse-proxy (`localhost:20128`); its 44 bundled skills are proxy admin manuals, default routing breaks long sessions (`#7287`) and silently downgrades models, and `wreq-js` TLS-stealth carries subscription ToS ban risk. **Instead use:** [**`T3 Code`**](reviews/en/developer-tools/t3-code.md) + [**`ponytail`**](reviews/en/architecture/ponytail.md). |
 
 ---
 
