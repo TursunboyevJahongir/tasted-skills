@@ -52,9 +52,16 @@ Open-source (`MIT`, `0` внешних npm-зависимостей) инстр�
 
 ---
 
-## 4. Совместимость с нашими текущими инструментами
+## 4. Что стало с ранее установленными инструментами? (Разделение ролей)
 
-- Идеально дополняет [**`agent-desktop`**](../developer-tools/agent-desktop.md) (Web + macOS) и низкоуровневые [**`adb`**](adb.md) / [**`xcrun simctl`**](ios-simulator-device-hub.md) (`adb reverse`, `logcat`, запуск `-no-window` эмулятора) в рамках [**`cross-platform-qa`**](cross-platform-qa.md).
+**Ни один из наших прежних инструментов не был удалён** — поскольку `agent-device` под капотом всё равно опирается на `adb` и `xcrun simctl` и не управляет браузером, за каждым инструментом закреплена чёткая зона ответственности без пересечений:
+
+| Прежний инструмент | Текущий статус | Что изменилось? |
+|---|---|---|
+| [**`agent-desktop`**](../developer-tools/agent-desktop.md) | `✅ Оставлен (Основной — Web/Desktop)` | Остаётся **на 100% основным** для **Google Chrome (Web)** и **десктопных окон macOS**. Мобильный и TV UI переведён на `agent-device`. |
+| [**`adb`**](adb.md) | `✅ Оставлен (Транспорт + Порты/Логи)` | На Android `agent-device` внутри всё равно вызывает `adb`. Кроме того, **`adb reverse`** (проброс портов Metro/бэкенда), **`adb logcat`** (crash-логи), установка APK и **`emu kill`** остаются на самом `adb` — `agent-device` заменил только медленный `uiautomator dump` + `input tap` по координатам. |
+| [**`xcrun simctl` + `devicectl`**](ios-simulator-device-hub.md) | `✅ Оставлен (Boot + Реальный iPhone)` | По-прежнему нужен для фонового запуска/остановки симулятора без окон (`simctl boot/shutdown`) и установки сборок на реальный iPhone (`devicectl`). Окно **`Device Hub`** больше не открывается каждый раз и оставлено как резерв (`fallback`). |
+| [**`cross-platform-qa`**](cross-platform-qa.md) | `✅ Обновлён` | Двухэтапное правило сохранено, а мобильная и TV UI-проверка внутри переведена на `agent-device`. |
 
 ---
 

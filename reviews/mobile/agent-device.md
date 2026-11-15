@@ -52,9 +52,16 @@ iOS 26.5 Simulator va jonli vektor xarita ishlab turgan real Android planshetda 
 
 ---
 
-## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
+## 4. Oldindan bor vositalar nima bo'ldi? (Aniq rol taqsimoti)
 
-- [**`agent-desktop`**](../developer-tools/agent-desktop.md) (Web + macOS Desktop) + **`agent-device`** (iOS + Android + tvOS + Android TV UI) + [**`adb`**](adb.md) / [**`xcrun simctl`**](ios-simulator-device-hub.md) (port reverse, crash logcat, headless AVD boot) — uchalasi [**`cross-platform-qa`**](cross-platform-qa.md) tizimini ideal darajada yakunlaydi.
+Oldindan ishlatib kelayotgan vositalarimizning **birortasi ham o'chirilmadi** — `agent-device` kapot ostida baribir `adb` va `xcrun simctl` ga tayanganligi hamda Web'ni boshqarmasligi sababli, ularning har biriga aniq vazifa berildi:
+
+| Oldingi vosita | Hozirgi holati | Vazifasi qanday o'zgardi? |
+|---|---|---|
+| [**`agent-desktop`**](../developer-tools/agent-desktop.md) | `✅ Qoldi (Asosiy — Web/Desktop)` | **Google Chrome (Web)** va **macOS desktop** oynalarida 100% asosiy vosita bo'lib qoldi. Mobil va TV UI ishlari `agent-device` ga o'tdi. |
+| [**`adb`**](adb.md) | `✅ Qoldi (Transport + Port/Log)` | `agent-device` Android'da ichidan baribir `adb` ni chaqiradi. Bundan tashqari **`adb reverse`** (Metro/lokal backend port ulash), **`adb logcat`** (crash loglar), APK o'rnatish va **`emu kill`** `adb` ning o'zida qoldi — faqat sekin `uiautomator dump` + koordinatali `input tap` o'rnini `agent-device` oldi. |
+| [**`xcrun simctl` + `devicectl`**](ios-simulator-device-hub.md) | `✅ Qoldi (Boot + Real iPhone)` | Simulyatorni oynasiz fonda yoqish/yopish (`simctl boot/shutdown`) va real iPhone'ga build o'rnatish (`devicectl`) uchun kerak. **`Device Hub` oynasi** esa endi har safar ochilmaydi — faqat zaxira (`fallback`) bo'lib turadi. |
+| [**`cross-platform-qa`**](cross-platform-qa.md) | `✅ Yangilandi` | 2-bosqichli qoida saqlanib qoldi va ichidagi mobil/TV UI qismi `agent-device` ga ulandi. |
 
 ---
 
