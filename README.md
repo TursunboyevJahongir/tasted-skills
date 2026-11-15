@@ -1,13 +1,13 @@
-# Tasted Skills — Tatib ko'rilgan Skill va AI Tool'lar
+# Ishlatib ko'rilgan Skill va AI Tool'lar
 
 <details>
 <summary>Holat belgilari</summary>
 
-- `✅ Ishlatilyapti` — tatib ko'rilgan, doimiy ishlatilyapti
-- `🧪 Tatib ko'rildi` — o'rnatib tatib ko'rilgan (vaqtincha yoki alohida loyihada)
-- `👀 Ko'rib chiqdik (tatib ko'rmadik)` — kodi tekshirildi, yaxshi nomzod, hali tatib ko'rilmadi
-- `⚠️ Faqat local (-p) (tatib ko'rmadik)` — tor holat uchun yaroqli, globalga emas, hali tatib ko'rilmadi
-- `⏭️ O'tkazib yuborildi (tatib ko'rmadik)` — ko'rib chiqdik, kerak bo'lmagani uchun tatib ko'rmadik
+- `✅ Ishlatilyapti` — sinab ko'rilgan, doimiy ishlatilyapti
+- `🧪 Sinab ko'rildi` — o'rnatib sinab ko'rilgan (vaqtincha yoki alohida loyihada)
+- `👀 Ko'rib chiqdik (sinab ko'rmadik)` — kodi tekshirildi, yaxshi nomzod, hali sinab ko'rilmadi
+- `⚠️ Faqat local (-p) (sinab ko'rmadik)` — tor holat uchun yaroqli, globalga emas, hali sinab ko'rilmadi
+- `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` — ko'rib chiqdik, kerak bo'lmagani uchun sinab ko'rmadik
 - `⛔ Rad etildi` — xavfsizlik yoki ziddiyat sababli rad etilgan
 
 </details>
@@ -39,7 +39,7 @@
 
 | Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
 |---|---|---|---|---|---|---|
-| [**`taste-skill` v2.5**](reviews/web/taste-skill.md) | Landing Kit + Hook | **8.0/10** | **4.0/10** | `⚠️ Faqat local (-p) (tatib ko'rmadik)` | `2026-11-15` | Noldan promo-landing qurishda kuchli; o'rnatilsa `Stop` hook (600s) kesib tashlanishi va faqat `-p` da ishlatilishi shart. |
+| [**`taste-skill` v2.5**](reviews/web/taste-skill.md) | Landing Kit + Hook | **8.0/10** | **4.0/10** | `⚠️ Faqat local (-p) (sinab ko'rmadik)` | `2026-11-15` | Noldan promo-landing qurishda kuchli; o'rnatilsa `Stop` hook (600s) kesib tashlanishi va faqat `-p` da ishlatilishi shart. |
 
 ### 📱 Mobile
 
@@ -49,16 +49,16 @@
 
 | Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
 |---|---|---|---|---|---|---|
-| [**`animate`**](reviews/ui-ux/animate.md) | Skill (2 fayl) | **8.5/10** | **3.0/10** | `⏭️ O'tkazib yuborildi (tatib ko'rmadik)` | `2026-11-15` | Emil Kowalski'ning veb-animatsiya skilli; `auto-trigger` va qoidalari mavjud tizim bilan to'qnashadi. **O'rniga:** [**`impeccable`**](reviews/ui-ux/impeccable.md) (`animate`) + [**`animate-expo`**](reviews/mobile/animate-expo.md). |
-| [**`break-ui`**](reviews/ui-ux/break-ui.md) | Skill (2 fayl) | **8.0/10** | **3.0/10** | `⏭️ O'tkazib yuborildi (tatib ko'rmadik)` | `2026-11-15` | Worst-case data stress-test; repoga vaqtinchalik fixture/toggle qo'shadi va tuzatmay to'xtaydi. **O'rniga:** [**`impeccable`**](reviews/ui-ux/impeccable.md) (`harden`). |
-| [**`make-interfaces-feel-better`**](reviews/ui-ux/make-interfaces-feel-better.md) | Skill (6 fayl) | **7.5/10** | **2.5/10** | `⛔ Rad etildi` | `2026-11-15` | Tatib ko'rilib olib tashlandi (`auto-trigger` to'qnashuvi va uzun hisobot jadvallari sabab). **O'rniga:** [**`impeccable`**](reviews/ui-ux/impeccable.md) + [**`animate-expo`**](reviews/mobile/animate-expo.md). |
-| [**`ui-ux-pro-max`**](reviews/ui-ux/ui-ux-pro-max.md) | Skill + CSV/Python | **7.0/10** | **3.5/10** | `⏭️ O'tkazib yuborildi (tatib ko'rmadik)` | `2026-11-15` | `impeccable` dan kuchsizroq va auto-trigger'i u bilan urishadi. **O'rniga:** [**`impeccable`**](reviews/ui-ux/impeccable.md). |
+| [**`animate`**](reviews/ui-ux/animate.md) | Skill (2 fayl) | **8.5/10** | **3.0/10** | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | `2026-11-15` | Emil Kowalski'ning veb-animatsiya skilli; `auto-trigger` va qoidalari mavjud tizim bilan to'qnashadi. **O'rniga:** [**`impeccable`**](reviews/ui-ux/impeccable.md) (`animate`) + [**`animate-expo`**](reviews/mobile/animate-expo.md). |
+| [**`break-ui`**](reviews/ui-ux/break-ui.md) | Skill (2 fayl) | **8.0/10** | **3.0/10** | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | `2026-11-15` | Worst-case data stress-test; repoga vaqtinchalik fixture/toggle qo'shadi va tuzatmay to'xtaydi. **O'rniga:** [**`impeccable`**](reviews/ui-ux/impeccable.md) (`harden`). |
+| [**`make-interfaces-feel-better`**](reviews/ui-ux/make-interfaces-feel-better.md) | Skill (6 fayl) | **7.5/10** | **2.5/10** | `⛔ Rad etildi` | `2026-11-15` | Sinab ko'rilib olib tashlandi (`auto-trigger` to'qnashuvi va uzun hisobot jadvallari sabab). **O'rniga:** [**`impeccable`**](reviews/ui-ux/impeccable.md) + [**`animate-expo`**](reviews/mobile/animate-expo.md). |
+| [**`ui-ux-pro-max`**](reviews/ui-ux/ui-ux-pro-max.md) | Skill + CSV/Python | **7.0/10** | **3.5/10** | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | `2026-11-15` | `impeccable` dan kuchsizroq va auto-trigger'i u bilan urishadi. **O'rniga:** [**`impeccable`**](reviews/ui-ux/impeccable.md). |
 
 ### 🏗️ Arxitektura va Review
 
 | Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
 |---|---|---|---|---|---|---|
-| [**`superpowers`**](reviews/architecture/superpowers.md) | Plugin (14 skill + hook) | **6.5/10** | **2.0/10** | `⛔ Rad etildi` | `2026-11-15` | Tatib ko'rilib o'chirib tashlandi: ortiqcha o'ylanish (`SessionStart` hook), keraksiz `brainstorming` savollari (muqobili: `grill-me`), sekinlashtiruvchi subagent looplari va Web/Mobile/Backend uchun 2x ortiqcha ish bo'ladigan majburiy TDD. |
+| [**`superpowers`**](reviews/architecture/superpowers.md) | Plugin (14 skill + hook) | **6.5/10** | **2.0/10** | `⛔ Rad etildi` | `2026-11-15` | Sinab ko'rilib o'chirib tashlandi: ortiqcha o'ylanish (`SessionStart` hook), keraksiz `brainstorming` savollari (muqobili: `grill-me`), sekinlashtiruvchi subagent looplari va Web/Mobile/Backend uchun 2x ortiqcha ish bo'ladigan majburiy TDD. |
 
 ### ⚙️ Backend
 

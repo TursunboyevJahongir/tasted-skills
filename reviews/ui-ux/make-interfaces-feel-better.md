@@ -8,7 +8,7 @@
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(avval o'rnatib ko'rildi va olib tashlandi)*
 - **O'rniga ishlatiladigan muqobillar:** [**`impeccable`**](impeccable.md) ([pbakaus/impeccable](https://github.com/pbakaus/impeccable)) + [**`animate-expo`**](../mobile/animate-expo.md) ([emilkowalski/skills](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo))
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `⛔ Rad etildi` *(🧪 Tatib ko'rilib, `impeccable` + `animate-expo` o'rnini to'liq bosgani sabab olib tashlandi)*
+- **Joriy holati:** `⛔ Rad etildi` *(🧪 Sinab ko'rilib, `impeccable` + `animate-expo` o'rnini to'liq bosgani sabab olib tashlandi)*
 
 ---
 

@@ -8,7 +8,7 @@
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
 - **O'rniga ishlatiladigan muqobillar:** [**`impeccable`**](impeccable.md) (`animate` bo'limi — Web uchun) + [**`animate-expo`**](../mobile/animate-expo.md) (React Native / Expo uchun)
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `⏭️ O'tkazib yuborildi (tatib ko'rmadik)`
+- **Joriy holati:** `⏭️ O'tkazib yuborildi (sinab ko'rmadik)`
 
 ---
 
@@ -62,4 +62,4 @@ Global o'rnatish shart emas, chunki mavjud ikki skillimiz bu yo'nalishni to'liq 
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | GitHub `SKILL.md` + `RECIPES.md` va konflikt auditi | `⏭️ O'tkazib yuborildi (tatib ko'rmadik)` | Sifati baland (`8.5/10`), lekin [`impeccable`](impeccable.md) bilan `auto-trigger` va qoida to'qnashuvi berishi sababli o'tkazib yuborildi. |
+| 2026-11-15 | GitHub `SKILL.md` + `RECIPES.md` va konflikt auditi | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | Sifati baland (`8.5/10`), lekin [`impeccable`](impeccable.md) bilan `auto-trigger` va qoida to'qnashuvi berishi sababli o'tkazib yuborildi. |

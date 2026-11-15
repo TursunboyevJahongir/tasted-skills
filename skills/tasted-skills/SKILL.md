@@ -47,7 +47,7 @@ When the user asks what skills, plugins, MCPs, or AI tools help with a project o
 2. Read `reviews/<category>/<slug>.md` only for relevant matches.
 3. Recommend in three buckets:
    - **Already active** — installed tools/skills (`✅ Ishlatilyapti`) ready to use now.
-   - **Worth adding (`-g` global vs `-p` project-only)** — vetted `👀 Ko'rib chiqdik (tatib ko'rmadik)` or `🧪 Tatib ko'rildi` items, noting any required sanitization steps before installation.
+   - **Worth adding (`-g` global vs `-p` project-only)** — vetted `👀 Ko'rib chiqdik (sinab ko'rmadik)` or `🧪 Sinab ko'rildi` items, noting any required sanitization steps before installation.
    - **Avoid / skip** — items already reviewed as conflicting, bloated, or unsafe for this type of project.
 
 ### 2. Audit a new skill, plugin, tool, URL, or video
@@ -67,7 +67,7 @@ When the user shares a GitHub repository, documentation site, package, MCP serve
    - Create `reviews/<category>/<slug>.md` from `reviews/TEMPLATE.md` in Uzbek, always setting `Tekshirilgan sana` (`YYYY-MM-DD`) in both the top metadata block and the history table.
    - Keep `README.md` concise (no long prose instructions):
      - Essential, battle-tested daily items (`✅ Ishlatilyapti`) go in the top ungrouped **`⭐ Eng keraklilari`** table.
-     - All remaining items (tasted `🧪 Tatib ko'rildi` or reviewed-only `👀 Ko'rib chiqdik (tatib ko'rmadik)`, `⚠️ Faqat local (-p) (tatib ko'rmadik)`, `⏭️ O'tkazib yuborildi (tatib ko'rmadik)`, `⛔ Rad etildi`) go under **`Yo'nalishlar bo'yicha`** in their category table without duplicating rows from `⭐ Eng keraklilari`.
+     - All remaining items (tested `🧪 Sinab ko'rildi` or reviewed-only `👀 Ko'rib chiqdik (sinab ko'rmadik)`, `⚠️ Faqat local (-p) (sinab ko'rmadik)`, `⏭️ O'tkazib yuborildi (sinab ko'rmadik)`, `⛔ Rad etildi`) go under **`Yo'nalishlar bo'yicha`** in their category table without duplicating rows from `⭐ Eng keraklilari`.
 
 ### 3. Sanitize before installing & update usage status
 
