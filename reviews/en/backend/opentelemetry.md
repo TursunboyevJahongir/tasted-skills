@@ -10,7 +10,7 @@
 - **Recommended Scope:** `Skip Standalone Deployment for Now` *(adopt only when multi-service Backend + Infra metrics/logs outgrow Sentry)*
 - **Used Instead:** [**`sentry`**](sentry.md) *(Self-Hosted Sentry + v8+ OTel SDK + AI Skill)*
 - **Reviewed Date:** `2026-11-15`
-- **Current Status:** `⏭️ Skipped (not tested)` *(we run [`sentry`](sentry.md) instead of maintaining a second observability stack)*
+- **Current Status:** `👍 Good Option` *(we run [`sentry`](sentry.md) instead of maintaining a second observability stack)*
 
 ---
 
@@ -76,4 +76,4 @@ A complete, production-safe OpenTelemetry deployment requires 4 building blocks:
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Architectural review, required stack blueprint, and comparison against [`sentry`](sentry.md) | `⏭️ Skipped (not tested)` | Excellent industry standard (`9.0/10`), but skipped as a separate deployment because [`sentry`](sentry.md) already covers our errors, replays, and baseline traces. |
+| 2026-11-15 | Architectural review, required stack blueprint, and comparison against [`sentry`](sentry.md) | `👍 Good Option` | Excellent industry standard (`9.0/10`), but skipped as a separate deployment because [`sentry`](sentry.md) already covers our errors, replays, and baseline traces. |

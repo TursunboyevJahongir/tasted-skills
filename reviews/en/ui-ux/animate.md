@@ -10,7 +10,7 @@
 - **Recommended Scope:** `Do Not Install`
 - **Used Instead:** [**`impeccable`**](impeccable.md) (`animate` playbook — for Web) + [**`animate-expo`**](../mobile/animate-expo.md) (for React Native / Expo)
 - **Reviewed Date:** `2026-11-15`
-- **Current Status:** `⏭️ Skipped (not tested)`
+- **Current Status:** `⛔ Rejected`
 
 ---
 
@@ -64,4 +64,4 @@ Global installation is unnecessary because two of our active skills cover this d
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Audited GitHub `SKILL.md` + `RECIPES.md` and conflicts | `⏭️ Skipped (not tested)` | High quality (`8.5/10`), but skipped due to `auto-trigger` and rule collisions with [`impeccable`](impeccable.md). |
+| 2026-11-15 | Audited GitHub `SKILL.md` + `RECIPES.md` and conflicts | `⛔ Rejected` | High quality (`8.5/10`), but skipped due to `auto-trigger` and rule collisions with [`impeccable`](impeccable.md). |

@@ -9,7 +9,7 @@
 - **Need for Us:** **5.0 / 10** *(useful as an occasional pre-release `npx` CLI pass, not as an always-on MCP server)*
 - **Recommended Scope:** `Do not attach as permanent MCP — run on-demand via npx CLI`
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `👀 Reviewed (Not Tested)` *(100% local pipeline; keep in reserve for one-off CLI runs)*
+- **Current Status:** `👍 Good Option` *(100% local pipeline; keep in reserve for one-off CLI runs)*
 
 ---
 
@@ -42,4 +42,4 @@ npx assetdiet-mcp audit . --policy safe
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Primary-source audit | `👀 Reviewed (Not Tested)` | Located and audited the canonical repo (`092Abdullah/AssetDiet`) and npm package; recommended strictly as an on-demand `npx` CLI rather than a persistent 16-tool MCP server. |
+| 2026-11-16 | Primary-source audit | `👍 Good Option` | Located and audited the canonical repo (`092Abdullah/AssetDiet`) and npm package; recommended strictly as an on-demand `npx` CLI rather than a persistent 16-tool MCP server. |

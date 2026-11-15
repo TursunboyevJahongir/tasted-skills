@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `✅ Ishlatilyapti` *(barcha veb va mobil UI/UX ishlarida asosiy dizayn skilli)*
+- **Joriy holati:** `✅ Faol` *(barcha veb va mobil UI/UX ishlarida asosiy dizayn skilli)*
 
 ---
 
@@ -64,5 +64,5 @@ Ichida `shape`, `audit`, `polish`, `simplify`, `harden`, `adapt` kabi maxsus pla
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Asosiy UI/UX tizimi sifatida katalogga kiritish | `✅ Ishlatilyapti` | `v4.8.1` (`mobile-routing-1` moslashuvi va xavfsiz hook cheklovi bilan) global o'rnatilgan va faol ishlatilmoqda. |
+| 2026-11-15 | Asosiy UI/UX tizimi sifatida katalogga kiritish | `✅ Faol` | `v4.8.1` (`mobile-routing-1` moslashuvi va xavfsiz hook cheklovi bilan) global o'rnatilgan va faol ishlatilmoqda. |
 

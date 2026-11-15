@@ -10,7 +10,7 @@
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
 - **O'rniga ishlatiladigan tizim:** [**`ponytail`**](../architecture/ponytail.md) (qisqa va aniq texnik javoblar) + [**`impeccable`**](../ui-ux/impeccable.md) (`clarify` — UI matnlari uchun)
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⏭️ O'tkazib yuborildi (sinab ko'rmadik)`
+- **Joriy holati:** `⛔ Rad etildi`
 
 ---
 
@@ -34,4 +34,4 @@ AI yozgan matnlardagi sun'iy ohang va shtamplarni olib tashlashga qaratilgan ikk
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kod auditi | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | Uzun maqolalar uchun foydali (`7.5/10`), lekin kod va UI ish oqimimizda keraksiz yuk bo'lgani uchun o'rnatilmadi. |
+| 2026-11-16 | Manba kod auditi | `⛔ Rad etildi` | Uzun maqolalar uchun foydali (`7.5/10`), lekin kod va UI ish oqimimizda keraksiz yuk bo'lgani uchun o'rnatilmadi. |

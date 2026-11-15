@@ -4,7 +4,7 @@
 
 - **Source:** [aihero.dev/skills-grill-me](https://www.aihero.dev/skills-grill-me) · [mattpocock/skills](https://github.com/mattpocock/skills)
 - **Category:** `Architecture` *(Planning, Decision Trees, and Requirement Sharpening)*
-- **Type:** `Skill Suite` (`grill-me`, `grilling`, `grill-with-docs`)
+- **Type:** `Skill Suite` (`grill-me`, `grilling`, `grill-with-docs`, `domain-modeling`, `diagnosing-bugs`, `improve-codebase-architecture`)
 - **Quality Score:** **9.5 / 10**
 - **Relevance to Us:** **9.5 / 10**
 - **Recommended Scope:** `Global (-g)`
@@ -47,20 +47,18 @@ Created by Matt Pocock, this lightweight yet powerful skill stress-tests a plan 
 - Serves as the interactive, deep-dive counterpart to [`karpathy-guidelines`](karpathy-guidelines.md) (*Think Before Coding*).
 - Works seamlessly with `domain-modeling` and `task-context`: `grill-me` resolves design decisions, and `task-context` persists them for implementer and reviewer subagents.
 
-### Audit of Remaining Skills in `mattpocock/skills` (`2026-11-16`)
+### Additional Skills Adopted from `mattpocock/skills` (`2026-11-16`)
 
-We also audited all 25 skills in the upstream [mattpocock/skills](https://github.com/mattpocock/skills) repository (`skillshare audit`: `0 issues`):
-- **Already active (`✅`):** `grill-me`, `grilling`, `grill-with-docs`, and `domain-modeling`.
-- **Clean optional candidates (`👀 Reviewed, Not Tested`):**
-  - **`diagnosing-bugs`** (`138` lines): Enforces building a fast deterministic red-capable repro loop first, ranking 3–5 falsifiable hypotheses, and tagging temporary debug logs with `[DEBUG-xxxx]` so none leak into commits.
-  - **`improve-codebase-architecture`** (`71` lines, `disable-model-invocation: true` — zero auto-trigger bloat): Scans `git log` hotspots for shallow modules (*Ousterhout deep modules*), writes a visual `Before / After` Mermaid HTML report to `/tmp/architecture-review-<timestamp>.html`, and hands off to `grilling`.
-- **Skipped (`⏭️`):** `tdd`, `implement`, `implement-spec`, `to-tickets`, `triage`, `setup-matt-pocock-skills` — mandatory TDD and issue-tracker ceremony add unnecessary loops to our workflow.
+After auditing all skills in [mattpocock/skills](https://github.com/mattpocock/skills), we sanitized and globally installed **2 additional on-demand skills (`✅ Active`)**:
+- **`diagnosing-bugs` (`✅ Active` — scoped strictly to elusive/flaky bugs & perf regressions):** Narrowed its trigger description so trivial typos stay fast under `ponytail`, stripped the blocking interactive `scripts/hitl-loop.template.sh` script, and wired UI repro loops to our `agent-desktop` / `agent-device` / `sentry` stack (`skillshare audit`: `0 issues`).
+- **`improve-codebase-architecture` (`✅ Active` — `disable-model-invocation: true`):** Fires strictly on explicit request; embeds the 8-term deep-module vocabulary inside a self-contained `CODEBASE-DESIGN.md` (avoiding global `codebase-design` auto-trigger noise), aligns with `CONTEXT.md` (`domain-modeling`), renders a visual `Before / After` Mermaid HTML report to `/tmp/architecture-review-<timestamp>.html`, and hands off to `grilling` (`skillshare audit`: `0 issues`).
+- **Skipped (`⏭️`):** `tdd`, `implement`, `implement-spec`, `to-tickets`, `triage`, `setup-matt-pocock-skills` — mandatory TDD and issue-tracker ceremony add unnecessary loops.
 
 ---
 
 ## 5. Best Use Cases
 
-- **When to use:** Before coding a new feature, complex refactoring, database schema change, or business workflow with open design questions.
+- **When to use:** Before coding features or refactors with open design choices (`grill-me`), when hunting elusive/flaky bugs or perf regressions (`diagnosing-bugs`), and when auditing hotspots for module deepening (`improve-codebase-architecture`).
 - **When not to use:** 100% clear minor bugfixes or one-line changes.
 
 ---
@@ -69,5 +67,5 @@ We also audited all 25 skills in the upstream [mattpocock/skills](https://github
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Cataloged as globally installed planning skill suite | `✅ Active` | `grilling`, `grill-me`, and `grill-with-docs` are linked globally across all agents and actively used. |
-| 2026-11-16 | Audited full `mattpocock/skills` repository | `👀 Reviewed` / `⏭️ Skipped` | Highlighted `diagnosing-bugs` and `improve-codebase-architecture` as clean optional candidates; skipped heavy `tdd`/`to-tickets` workflow skills. |
+| 2026-11-15 | Cataloged as globally installed planning skill suite | `✅ Active` | `grilling`, `grill-me`, `grill-with-docs`, and `domain-modeling` linked globally across all agents. |
+| 2026-11-16 | Sanitized & globally synced `diagnosing-bugs` and `improve-codebase-architecture` | `✅ Active` | Configured for strict on-demand activation (`hitl-loop.template.sh` removed, `CODEBASE-DESIGN.md` bundled, `0/100` audit risk) and synced across all 5 agent targets; skipped heavy `tdd`/`to-tickets` skills (`⏭️`). |

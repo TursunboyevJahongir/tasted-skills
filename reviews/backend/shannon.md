@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **6.5 / 10**
 - **Tavsiya etilgan ko'lam:** `On-Demand npx CLI + Global yengil hacker-test skilli` — *rasmiy og'ir pluginini global o'rnatmasdan, o'zimizning [`skills/hacker-test`](../../skills/hacker-test/SKILL.md) eslatma-skilli orqali faqat lokal/staging'da chaqirish*
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `👀 Ko'rib chiqdik (sinab ko'rmadik)` *(kodi tekshirildi; esdan chiqmasligi va xavfsiz ishlashi uchun ushbu repoga [`skills/hacker-test`](../../skills/hacker-test/SKILL.md) qo'shilib global ulandi)*
+- **Joriy holati:** `👍 Yaxshi variant` *(kodi tekshirildi; esdan chiqmasligi va xavfsiz ishlashi uchun ushbu repoga [`skills/hacker-test`](../../skills/hacker-test/SKILL.md) qo'shilib global ulandi)*
 
 ---
 
@@ -81,4 +81,4 @@ Pentest har kuni qilinmaydi — faqat katta reliz oldidan kerak bo'ladi. Shuning
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kodi, Docker/Temporal arxitekturasi va `ai-providers.md` auditi + yengil `hacker-test` trigger skilli yaratish | `👀 Ko'rib chiqdik (sinab ko'rmadik)` | Kuchli `npx` pentest vositasi sifatida tasdiqlandi; esdan chiqmasligi uchun barcha agentlarga xavfsiz lokal `hacker-test` eslatma-skilli ulandi. |
+| 2026-11-16 | Manba kodi, Docker/Temporal arxitekturasi va `ai-providers.md` auditi + yengil `hacker-test` trigger skilli yaratish | `👍 Yaxshi variant` | Kuchli `npx` pentest vositasi sifatida tasdiqlandi; esdan chiqmasligi uchun barcha agentlarga xavfsiz lokal `hacker-test` eslatma-skilli ulandi. |

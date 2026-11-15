@@ -10,7 +10,7 @@
 - **Recommended Scope:** `Local Only (-p)` *(strictly inside native Swift/SwiftUI repos or targets)*
 - **Instead Use:** [**`impeccable`**](../ui-ux/impeccable.md) (`reference/ios.md` for Apple HIG) + [**`animate-expo`**](animate-expo.md) (for Expo / RN)
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⚠️ Local Only (-p) (Not Tested)`
+- **Current Status:** `👍 Good Option`
 
 ---
 
@@ -34,4 +34,4 @@ The three main open-source skills behind "SwiftUI Expert / Apple Design" recomme
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Primary-source review | `⚠️ Local Only (-p) (Not Tested)` | Unnecessary globally on React Native / Expo; keep in reserve for `-p` project installs on native SwiftUI widgets/extensions. |
+| 2026-11-16 | Primary-source review | `👍 Good Option` | Unnecessary globally on React Native / Expo; keep in reserve for `-p` project installs on native SwiftUI widgets/extensions. |

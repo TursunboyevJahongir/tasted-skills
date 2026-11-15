@@ -10,7 +10,7 @@
 - **Recommended Scope:** `Do Not Install`
 - **Instead Use:** [**`skillshare`**](skillshare.md) + this **`tasted-skills`** registry
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⏭️ Skipped (Not Tested)`
+- **Current Status:** `⛔ Rejected`
 
 ---
 
@@ -31,4 +31,4 @@ An official read-only plugin inside `anthropics/claude-plugins-official` that in
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Primary-source audit | `⏭️ Skipped (Not Tested)` | Safe read-only onboarding recommender (`7.5/10`), skipped because `skillshare` + `tasted-skills` already govern our multi-agent stack. |
+| 2026-11-16 | Primary-source audit | `⛔ Rejected` | Safe read-only onboarding recommender (`7.5/10`), skipped because `skillshare` + `tasted-skills` already govern our multi-agent stack. |

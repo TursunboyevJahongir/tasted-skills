@@ -55,9 +55,9 @@ When the user asks what skills, plugins, MCPs, or AI tools help with a project o
 1. Read `~/Projects/tasted-skills/README.md` and inspect currently active skills/plugins (for example via `skillshare list -g` when available).
 2. Read `reviews/<category>/<slug>.md` only for relevant matches.
 3. Recommend in three buckets:
-   - **Already active** — installed tools/skills (`✅ Ishlatilyapti`) ready to use now.
-   - **Worth adding (`-g` global vs `-p` project-only)** — vetted `👀 Ko'rib chiqdik (sinab ko'rmadik)` or `🧪 Sinab ko'rildi` items, noting any required sanitization steps before installation.
-   - **Avoid / skip** — items already reviewed as conflicting, bloated, or unsafe for this type of project.
+   - **Already active** — installed tools/skills (`✅ Faol` / `✅ Active` / `✅ Активен`) ready to use now.
+   - **Worth adding (`-g` global vs `-p` project-only / CLI)** — vetted `👍 Yaxshi variant` (`👍 Good Option` / `👍 Хороший вариант`) items, noting any required sanitization steps before installation. (`⏳ Navbatda` / `⏳ Queued` / `⏳ В очереди` marks items still queued for inspection/testing.)
+   - **Avoid / skip** — `⛔ Rad etildi` (`⛔ Rejected` / `⛔ Отклонено`) items already reviewed as redundant, conflicting, bloated, or unsafe.
 
 ### 2. Audit a new skill, plugin, tool, URL, or video
 
@@ -74,8 +74,8 @@ When the user shares a GitHub repository, documentation site, package, MCP serve
    - Recommended scope (`Global -g`, `Project -p`, `Plugin`, `Standalone CLI/MCP`, or `Skip`).
 3. **Record when requested:**
    - Create `reviews/<category>/<slug>.md` (Uzbek default), `reviews/en/<category>/<slug>.md` (English), and `reviews/ru/<category>/<slug>.md` (Russian) from their respective templates, always setting the review date (`YYYY-MM-DD`) in both the top metadata block and the history table, and including the flag switcher right under the `#` H1 title.
-   - Keep `README.md`, `README.en.md`, and `README.ru.md` concise (no long prose instructions):
-     - Essential, battle-tested daily items (`✅ Ishlatilyapti`) go in the top ungrouped **`⭐ Eng keraklilari`** / **`⭐ Top Essentials`** / **`⭐ Самые необходимые`** table.
+   - Keep `README.md`, `README.en.md`, and `README.ru.md` concise (no long prose instructions), using only the 4 short status badges (`✅ Faol`, `👍 Yaxshi variant`, `⏳ Navbatda`, `⛔ Rad etildi` / `✅ Active`, `👍 Good Option`, `⏳ Queued`, `⛔ Rejected` / `✅ Активен`, `👍 Хороший вариант`, `⏳ В очереди`, `⛔ Отклонено`):
+     - Essential, battle-tested daily items (`✅ Faol` / `✅ Active` / `✅ Активен`) go in the top ungrouped **`⭐ Eng keraklilari`** / **`⭐ Top Essentials`** / **`⭐ Самые необходимые`** table.
      - All remaining items go under **`Yo'nalishlar bo'yicha`** / **`By Category`** / **`По направлениям`** in their category table without duplicating rows from the top essentials table.
      - **Score sorting rule (mandatory):** Keep every table in `README.md`, `README.en.md`, and `README.ru.md` sorted **descending by score** (`Baho` / `Score` / `Оценка` highest-to-lowest in top essentials, breaking ties by `Bizga kerakliligi` / `Need`; `Sifat` / `Quality` highest-to-lowest in category tables, breaking ties by `Keraklilik` / `Need`).
 

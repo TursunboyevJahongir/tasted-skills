@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **5.0 / 10** *(doimiy MCP sifatida emas, faqat reliz oldidan `npx` CLI orqali bir martalik audit/optimizatsiya uchun)*
 - **Tavsiya etilgan ko'lam:** `Doimiy MCP ulamaslik — faqat bir martalik npx CLI`
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `👀 Ko'rib chiqdik (sinab ko'rmadik)` *(100% lokal ishlaydi; kerak bo'lganda faqat CLI rejimida chaqiriladi)*
+- **Joriy holati:** `👍 Yaxshi variant` *(100% lokal ishlaydi; kerak bo'lganda faqat CLI rejimida chaqiriladi)*
 
 ---
 
@@ -42,4 +42,4 @@ npx assetdiet-mcp audit . --policy safe
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kod auditi | `👀 Ko'rib chiqdik (sinab ko'rmadik)` | Asl GitHub reposi (`092Abdullah/AssetDiet`) va npm paketi topilib tekshirildi; 16-tool MCP o'rniga faqat kerak paytda `npx assetdiet-mcp` CLI rejimida ishlatish tavsiya etildi. |
+| 2026-11-16 | Manba kod auditi | `👍 Yaxshi variant` | Asl GitHub reposi (`092Abdullah/AssetDiet`) va npm paketi topilib tekshirildi; 16-tool MCP o'rniga faqat kerak paytda `npx assetdiet-mcp` CLI rejimida ishlatish tavsiya etildi. |

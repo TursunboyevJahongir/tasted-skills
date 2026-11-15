@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `✅ Ishlatilyapti`
+- **Joriy holati:** `✅ Faol`
 
 ---
 
@@ -61,5 +61,5 @@ Web, iOS/tvOS va Android/Android TV ilovalarda kod yozish hamda tekshirishni **o
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | `skillshare new cross-platform-qa -g` orqali yaratish va sinxronlash | `✅ Ishlatilyapti` | Barcha 5 ta global targetga ulandi. |
-| 2026-11-16 | Mobil va TV bosqichlarini `agent-device` bilan yangilash | `✅ Ishlatilyapti` | Headless iOS/tvOS Simulator va `-no-window` Android/TV Emulator uchun `agent-device` asosiy vosita qilindi; Web uchun `agent-desktop` saqlab qolindi. |
+| 2026-11-15 | `skillshare new cross-platform-qa -g` orqali yaratish va sinxronlash | `✅ Faol` | Barcha 5 ta global targetga ulandi. |
+| 2026-11-16 | Mobil va TV bosqichlarini `agent-device` bilan yangilash | `✅ Faol` | Headless iOS/tvOS Simulator va `-no-window` Android/TV Emulator uchun `agent-device` asosiy vosita qilindi; Web uchun `agent-desktop` saqlab qolindi. |

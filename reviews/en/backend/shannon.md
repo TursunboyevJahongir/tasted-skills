@@ -9,7 +9,7 @@
 - **Need for Us:** **6.5 / 10**
 - **Recommended Scope:** `On-Demand npx CLI + Global lightweight hacker-test skill` — *skip its heavy upstream plugin and trigger via our [`skills/hacker-test`](../../../skills/hacker-test/SKILL.md) wrapper strictly on local/staging*
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `👀 Reviewed (Not Tested)` *(source audited; packaged [`skills/hacker-test`](../../../skills/hacker-test/SKILL.md) in this repo and synced globally so pre-release pentests are always one phrase away)*
+- **Current Status:** `👍 Good Option` *(source audited; packaged [`skills/hacker-test`](../../../skills/hacker-test/SKILL.md) in this repo and synced globally so pre-release pentests are always one phrase away)*
 
 ---
 
@@ -81,4 +81,4 @@ Pentesting is a pre-release event, not an everyday coding action. That creates t
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Source code, Docker/Temporal architecture, and `ai-providers.md` audit + created lightweight `hacker-test` trigger skill | `👀 Reviewed (Not Tested)` | Approved as an on-demand `npx` pentest tool; synced a minimal local/staging-only `hacker-test` reminder skill across all agents so it is never forgotten. |
+| 2026-11-16 | Source code, Docker/Temporal architecture, and `ai-providers.md` audit + created lightweight `hacker-test` trigger skill | `👍 Good Option` | Approved as an on-demand `npx` pentest tool; synced a minimal local/staging-only `hacker-test` reminder skill across all agents so it is never forgotten. |

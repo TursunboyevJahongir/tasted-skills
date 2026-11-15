@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **10.0 / 10**
 - **Tavsiya etilgan ko'lam:** `Standalone Tool` *(global CLI sifatida o'rnatilgan + QA skillar orqali boshqariladi)*
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `✅ Ishlatilyapti` *(Android emulyator va jismoniy qurilma testlarida asosiy vosita)*
+- **Joriy holati:** `✅ Faol` *(Android emulyator va jismoniy qurilma testlarida asosiy vosita)*
 
 ---
 
@@ -72,5 +72,5 @@ macOS'da iOS Simulator (`Device Hub` + `xcrun simctl`) ichki UI elementlarini Ac
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Amaliy mobil QA jarayonida qo'llash va katalogga kiritish | `✅ Ishlatilyapti` | Lokal CLI (`Android SDK Platform-Tools`) sifatida global `PATH` da faol. |
-| 2026-11-16 | UI qatlamini `agent-device` ga o'tkazib, transport/log bazasi sifatida saqlash | `✅ Ishlatilyapti` | O'chirilmadi: `agent-device` kapot ostida `adb` ga tayanadi; `adb` o'zi esa `reverse`, `logcat`, `install` va `emu kill` uchun asosiy vosita bo'lib qoldi. |
+| 2026-11-15 | Amaliy mobil QA jarayonida qo'llash va katalogga kiritish | `✅ Faol` | Lokal CLI (`Android SDK Platform-Tools`) sifatida global `PATH` da faol. |
+| 2026-11-16 | UI qatlamini `agent-device` ga o'tkazib, transport/log bazasi sifatida saqlash | `✅ Faol` | O'chirilmadi: `agent-device` kapot ostida `adb` ga tayanadi; `adb` o'zi esa `reverse`, `logcat`, `install` va `emu kill` uchun asosiy vosita bo'lib qoldi. |

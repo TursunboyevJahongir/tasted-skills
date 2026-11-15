@@ -10,7 +10,7 @@
 - **Tavsiya etilgan ko'lam:** `Faqat local (-p)` *(faqat native Swift/SwiftUI loyihalarda)*
 - **O'rniga ishlatiladigan tizim:** [**`impeccable`**](../ui-ux/impeccable.md) (`reference/ios.md` — Apple HIG uchun) + [**`animate-expo`**](animate-expo.md) (Expo / RN uchun)
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⚠️ Faqat local (-p) (sinab ko'rmadik)`
+- **Joriy holati:** `👍 Yaxshi variant`
 
 ---
 
@@ -34,4 +34,4 @@ Ochiq manbadagi yetakchi SwiftUI va Apple HIG skill'lari uchligi:
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba tekshiruvi | `⚠️ Faqat local (-p) (sinab ko'rmadik)` | React Native / Expo stekimizda global shart emas; sof SwiftUI (Widget / Live Activity) paydo bo'lganda `-p` rejimida olinadi. |
+| 2026-11-16 | Manba tekshiruvi | `👍 Yaxshi variant` | React Native / Expo stekimizda global shart emas; sof SwiftUI (Widget / Live Activity) paydo bo'lganda `-p` rejimida olinadi. |

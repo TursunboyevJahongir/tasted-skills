@@ -10,7 +10,7 @@
 - **Recommended Scope:** `Do Not Install`
 - **Instead Use:** [**`ponytail`**](../architecture/ponytail.md) (concise engineering replies) + [**`impeccable`**](../ui-ux/impeccable.md) (`clarify` for product UX copy)
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⏭️ Skipped (Not Tested)`
+- **Current Status:** `⛔ Rejected`
 
 ---
 
@@ -34,4 +34,4 @@ Two popular Markdown skills focused on stripping LLM clichés from long-form pro
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Primary-source audit | `⏭️ Skipped (Not Tested)` | Clean prose-editing references (`7.5/10`), skipped because our engineering reply style and UI copy are already handled by `ponytail` + `impeccable`. |
+| 2026-11-16 | Primary-source audit | `⛔ Rejected` | Clean prose-editing references (`7.5/10`), skipped because our engineering reply style and UI copy are already handled by `ponytail` + `impeccable`. |

@@ -9,7 +9,7 @@
 - **Need for Us:** **4.0 / 10** *(low for global setup; useful only when building greenfield promo landing pages)*
 - **Recommended Scope:** `Project Only (-p)` *(sanitized; never install globally)*
 - **Reviewed Date:** `2026-11-15`
-- **Current Status:** `⚠️ Local Only (-p) (Not Tested)`
+- **Current Status:** `👍 Good Option`
 
 ---
 
@@ -64,4 +64,4 @@ Unlike its lightweight v1 ruleset, `tasteskill 2.5.1` (`design-taste-frontend`) 
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Full audit of `tasteskill 2.5.1` source, scripts, and `Stop` hook | `⚠️ Local Only (-p) (Not Tested)` | Global installation rejected due to the 600s `Stop` hook and incompatibility with functional web apps. Documented with sanitization steps for isolated landing projects. |
+| 2026-11-15 | Full audit of `tasteskill 2.5.1` source, scripts, and `Stop` hook | `👍 Good Option` | Global installation rejected due to the 600s `Stop` hook and incompatibility with functional web apps. Documented with sanitization steps for isolated landing projects. |

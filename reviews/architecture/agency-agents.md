@@ -10,7 +10,7 @@
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(global o'rnatish kontekstni shishirib yuboradi)*
 - **O'rniga ishlatiladigan muqobillar:** [**`impeccable`**](../ui-ux/impeccable.md) + [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) + [**`elephant-goldfish-model`**](elephant-goldfish-model.md) + [**`cross-platform-qa`**](../mobile/cross-platform-qa.md)
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⛔ Rad etildi (sinab ko'rmadik)` *(bizga kerak emas — mavjud ixtisoslashgan skillarimiz ancha toza va kuchli)*
+- **Joriy holati:** `⛔ Rad etildi` *(bizga kerak emas — mavjud ixtisoslashgan skillarimiz ancha toza va kuchli)*
 
 ---
 
@@ -76,4 +76,4 @@ Bu repodagi barcha asosiy yo'nalishlar bizda allaqachon ancha ixcham va amalda s
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | 283 ta agent fayli, `convert.sh` / `install.sh` va kontekst hajmi auditi | `⛔ Rad etildi (sinab ko'rmadik)` | `~18.5K` tokenlik frontmatter shishishi, ko'p fayllardagi shablon matnlar/copy-paste qoldiqlari hamda mavjud skillarimiz (`impeccable`, `ponytail`, `elephant-goldfish-model`, `cross-platform-qa`) undan ancha ustun bo'lgani sababli o'rnatmaslikka qaror qilindi. |
+| 2026-11-16 | 283 ta agent fayli, `convert.sh` / `install.sh` va kontekst hajmi auditi | `⛔ Rad etildi` | `~18.5K` tokenlik frontmatter shishishi, ko'p fayllardagi shablon matnlar/copy-paste qoldiqlari hamda mavjud skillarimiz (`impeccable`, `ponytail`, `elephant-goldfish-model`, `cross-platform-qa`) undan ancha ustun bo'lgani sababli o'rnatmaslikka qaror qilindi. |

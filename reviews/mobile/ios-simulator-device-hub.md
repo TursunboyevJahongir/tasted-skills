@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Standalone Tool` *(Xcode bilan o'rnatilgan + `agent-desktop` bilan birga ishlaydi)*
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `✅ Ishlatilyapti` *(iOS ilovalarni simulyator va qurilmada tekshirish uchun asosiy vosita)*
+- **Joriy holati:** `✅ Faol` *(iOS ilovalarni simulyator va qurilmada tekshirish uchun asosiy vosita)*
 
 ---
 
@@ -69,6 +69,6 @@ macOS'da iOS va Expo / React Native ilovalarini fonda ishga tushirish, boshqaris
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Mobil QA jarayonida iOS vositasi sifatida qayd etish | `✅ Ishlatilyapti` | Xcode tarkibida o'rnatilgan; `simctl` va `devicectl` faol ishlatilmoqda. |
-| 2026-11-16 | iOS/tvOS UI qatlamini `agent-device` ga o'tkazish | `✅ Ishlatilyapti` | `xcrun simctl` (headless boot/shutdown) va `devicectl` asosiy baza bo'lib qoldi; `Device Hub` + `agent-desktop` esa zaxira (`fallback`) roliga o'tkazildi. |
+| 2026-11-15 | Mobil QA jarayonida iOS vositasi sifatida qayd etish | `✅ Faol` | Xcode tarkibida o'rnatilgan; `simctl` va `devicectl` faol ishlatilmoqda. |
+| 2026-11-16 | iOS/tvOS UI qatlamini `agent-device` ga o'tkazish | `✅ Faol` | `xcrun simctl` (headless boot/shutdown) va `devicectl` asosiy baza bo'lib qoldi; `Device Hub` + `agent-desktop` esa zaxira (`fallback`) roliga o'tkazildi. |
 

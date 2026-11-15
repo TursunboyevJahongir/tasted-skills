@@ -10,7 +10,7 @@
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
 - **O'rniga ishlatiladigan muqobillar:** [**`grill-me`**](grill-me.md) + [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) + [**`elephant-goldfish-model`**](elephant-goldfish-model.md) + [**`T3 Code`**](../developer-tools/t3-code.md)
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⏭️ O'tkazib yuborildi (sinab ko'rmadik)`
+- **Joriy holati:** `⛔ Rad etildi`
 
 ---
 
@@ -36,4 +36,4 @@ Addy Osmani tomonidan yig'ilgan 25 ta muhandislik skilli (`interview-me`, `spec-
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kod auditi | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | Sifatli yozilgan (`8.0/10`), ammo 25 ta skilldan iborat og'ir SDLC konveyeri mavjud yengil va kuchli stekimizni dublikat qilgani uchun o'rnatilmadi. |
+| 2026-11-16 | Manba kod auditi | `⛔ Rad etildi` | Sifatli yozilgan (`8.0/10`), ammo 25 ta skilldan iborat og'ir SDLC konveyeri mavjud yengil va kuchli stekimizni dublikat qilgani uchun o'rnatilmadi. |

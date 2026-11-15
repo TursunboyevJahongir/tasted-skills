@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **9.0 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `✅ Ishlatilyapti`
+- **Joriy holati:** `✅ Faol`
 
 ---
 
@@ -67,5 +67,5 @@ Asosiy qaror qabul qilish zanjiri (ketma-ketlikda ishlaydi):
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-09 | `LOCAL-COMPATIBILITY.md` moslik qoidasi bilan global o'rnatish | `✅ Ishlatilyapti` | `impeccable` va mavjud React Native/Expo loyihalar bilan moslashtirildi. |
-| 2026-11-15 | `Initial Response` blokini tozalash va katalogga kiritish | `✅ Ishlatilyapti` | Barcha 5 ta global agent targetiga sinxronlangan. |
+| 2026-11-09 | `LOCAL-COMPATIBILITY.md` moslik qoidasi bilan global o'rnatish | `✅ Faol` | `impeccable` va mavjud React Native/Expo loyihalar bilan moslashtirildi. |
+| 2026-11-15 | `Initial Response` blokini tozalash va katalogga kiritish | `✅ Faol` | Barcha 5 ta global agent targetiga sinxronlangan. |

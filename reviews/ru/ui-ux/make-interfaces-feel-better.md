@@ -10,7 +10,7 @@
 - **Рекомендуемый охват:** `Не устанавливать` *(ранее был протестирован и удален)*
 - **Используемая замена:** [**`impeccable`**](impeccable.md) ([pbakaus/impeccable](https://github.com/pbakaus/impeccable)) + [**`animate-expo`**](../mobile/animate-expo.md) ([emilkowalski/skills](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo))
 - **Дата проверки:** `2026-11-15`
-- **Текущий статус:** `⛔ Отклонен` *(🧪 Протестирован и удален, так как `impeccable` + `animate-expo` полностью его заменяют)*
+- **Текущий статус:** `⛔ Отклонено` *(🧪 Протестирован и удален, так как `impeccable` + `animate-expo` полностью его заменяют)*
 
 ---
 
@@ -64,4 +64,4 @@
 
 | Дата | Действие | Статус | Примечание |
 |---|---|---|---|
-| 2026-11-15 | Удаление из глобального окружения через `skillshare uninstall make-interfaces-feel-better -g` | `⛔ Отклонен` | Удален, так как [`impeccable`](impeccable.md) и [`animate-expo`](../mobile/animate-expo.md) полностью покрывают все его полезные правила и не вызывают конфликта auto-trigger. |
+| 2026-11-15 | Удаление из глобального окружения через `skillshare uninstall make-interfaces-feel-better -g` | `⛔ Отклонено` | Удален, так как [`impeccable`](impeccable.md) и [`animate-expo`](../mobile/animate-expo.md) полностью покрывают все его полезные правила и не вызывают конфликта auto-trigger. |

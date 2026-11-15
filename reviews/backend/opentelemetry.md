@@ -10,7 +10,7 @@
 - **Tavsiya etilgan ko'lam:** `Hozircha alohida ko'tarmaslik` *(kerak bo'lganda faqat ko'p-servisli Backend + Infra monitoringi uchun)*
 - **O'rniga ishlatiladigan tizim:** [**`sentry`**](sentry.md) *(Self-Hosted Sentry + v8+ OTel SDK + AI Skill)*
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` *(asosiy tizim sifatida [`sentry`](sentry.md) ishlatilayotgani uchun alohida OTel backend ko'tarilmagan)*
+- **Joriy holati:** `👍 Yaxshi variant` *(asosiy tizim sifatida [`sentry`](sentry.md) ishlatilayotgani uchun alohida OTel backend ko'tarilmagan)*
 
 ---
 
@@ -76,4 +76,4 @@ To'liq va xavfsiz OpenTelemetry steki uchun 4 ta qism kerak bo'ladi:
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Arxitektura, kerakli komponentlar va [`sentry`](sentry.md) bilan solishtirma tahlil | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | Kuchli sanoat standarti (`9.0/10`), biroq bizda xatolar, replay va bazaviy trace'lar uchun [`sentry`](sentry.md) ishlatilayotgani sababli ikkinchi parallel stek sifatida ko'tarilmadi. |
+| 2026-11-15 | Arxitektura, kerakli komponentlar va [`sentry`](sentry.md) bilan solishtirma tahlil | `👍 Yaxshi variant` | Kuchli sanoat standarti (`9.0/10`), biroq bizda xatolar, replay va bazaviy trace'lar uchun [`sentry`](sentry.md) ishlatilayotgani sababli ikkinchi parallel stek sifatida ko'tarilmadi. |

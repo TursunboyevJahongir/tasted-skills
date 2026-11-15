@@ -10,7 +10,7 @@
 - **Recommended Scope:** `Do not install permanently` *(optional one-off `uvx ... --no-llm` scan only for large, untrusted MCP servers)*
 - **Instead Use:** [**`skillshare`**](skillshare.md) (`skillshare audit`) + **AI agent primary-source code inspection**
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⏭️ Skipped (Not Tested)` *(source code audited; not installed because our lighter built-in workflow already covers daily skill vetting)*
+- **Current Status:** `⛔ Rejected` *(source code audited; not installed because our lighter built-in workflow already covers daily skill vetting)*
 
 ---
 
@@ -48,4 +48,4 @@ uvx --python 3.12 --from git+https://github.com/NVIDIA/skillspector.git skillspe
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Primary-source audit | `⏭️ Skipped (Not Tested)` | Strong scanner (`9.0/10`), skipped to avoid redundant workflow cycles since [`skillshare`](skillshare.md) (`audit`) + direct AI agent code review already handle our vetting. |
+| 2026-11-16 | Primary-source audit | `⛔ Rejected` | Strong scanner (`9.0/10`), skipped to avoid redundant workflow cycles since [`skillshare`](skillshare.md) (`audit`) + direct AI agent code review already handle our vetting. |

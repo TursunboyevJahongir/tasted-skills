@@ -10,7 +10,7 @@
 - **Recommended Scope:** `Do Not Install`
 - **Used Instead:** [**`impeccable`**](impeccable.md) (`harden` playbook — `reference/harden.md`)
 - **Reviewed Date:** `2026-11-15`
-- **Current Status:** `⏭️ Skipped (not tested)`
+- **Current Status:** `⛔ Rejected`
 
 ---
 
@@ -59,4 +59,4 @@ A skill for stress-testing UI components with realistic worst-case production pa
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Audited GitHub `SKILL.md` + `CATALOG.md` and conflicts | `⏭️ Skipped (not tested)` | Skipped because [`impeccable`](impeccable.md) (`harden`) handles this cleanly without injecting fixture files or toggle pills into the repo. |
+| 2026-11-15 | Audited GitHub `SKILL.md` + `CATALOG.md` and conflicts | `⛔ Rejected` | Skipped because [`impeccable`](impeccable.md) (`harden`) handles this cleanly without injecting fixture files or toggle pills into the repo. |

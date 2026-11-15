@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **10.0 / 10**
 - **Tavsiya etilgan ko'lam:** `Global CLI + Global Skill (-g)`
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `✅ Ishlatilyapti` *(barcha AI agentlarimizdagi skillarni boshqaruvchi markaziy vosita)*
+- **Joriy holati:** `✅ Faol` *(barcha AI agentlarimizdagi skillarni boshqaruvchi markaziy vosita)*
 
 ---
 
@@ -59,5 +59,5 @@ Barcha global skillarimiz (jumladan ushbu `tasted-skills` ham) aynan `skillshare
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Markaziy boshqaruv vositasi sifatida qayd etish | `✅ Ishlatilyapti` | Global rejimda 5 ta agent target (`antigravity`, `antigravity-cli`, `claude`, `codex`, `codex-local`) sinxronizatsiyasi va auditi uchun faol ishlatilmoqda. |
+| 2026-11-15 | Markaziy boshqaruv vositasi sifatida qayd etish | `✅ Faol` | Global rejimda 5 ta agent target (`antigravity`, `antigravity-cli`, `claude`, `codex`, `codex-local`) sinxronizatsiyasi va auditi uchun faol ishlatilmoqda. |
 

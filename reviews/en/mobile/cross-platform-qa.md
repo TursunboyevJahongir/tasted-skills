@@ -9,7 +9,7 @@
 - **Need for Us:** **9.5 / 10**
 - **Recommended Scope:** `Global (-g)`
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `✅ In Active Use`
+- **Current Status:** `✅ Active`
 
 ---
 
@@ -61,5 +61,5 @@ A custom 2-stage global QA skill designed to verify Web, iOS/tvOS, and Android/A
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Created via `skillshare new cross-platform-qa -g` and synced | `✅ In Active Use` | Linked across all 5 global agent targets. |
-| 2026-11-16 | Upgraded mobile & TV stages to `agent-device` | `✅ In Active Use` | Adopted `agent-device` as the primary driver for headless iOS/tvOS Simulators and `-no-window` Android/TV Emulators while keeping `agent-desktop` for Web. |
+| 2026-11-15 | Created via `skillshare new cross-platform-qa -g` and synced | `✅ Active` | Linked across all 5 global agent targets. |
+| 2026-11-16 | Upgraded mobile & TV stages to `agent-device` | `✅ Active` | Adopted `agent-device` as the primary driver for headless iOS/tvOS Simulators and `-no-window` Android/TV Emulators while keeping `agent-desktop` for Web. |

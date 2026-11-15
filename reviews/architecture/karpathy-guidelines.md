@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **9.0 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `✅ Ishlatilyapti`
+- **Joriy holati:** `✅ Faol`
 
 ---
 
@@ -57,4 +57,4 @@ Andrej Karpathy tomonidan ta'kidlangan LLM kodlash muammolariga qarshi 4 ta asos
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | `skillshare install multica-ai/andrej-karpathy-skills -g` orqali o'rnatish | `✅ Ishlatilyapti` | Auditdan toza o'tdi va 5 ta global targetga sinxronlandi. |
+| 2026-11-15 | `skillshare install multica-ai/andrej-karpathy-skills -g` orqali o'rnatish | `✅ Faol` | Auditdan toza o'tdi va 5 ta global targetga sinxronlandi. |

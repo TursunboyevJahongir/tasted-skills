@@ -10,7 +10,7 @@
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
 - **O'rniga ishlatiladigan muqobillar:** [**`impeccable`**](impeccable.md) (`craft-floor` + `polish` / `quieter` / `clarify` / `harden` — Web va Native Mobile uchun) + [**`animate-expo`**](../mobile/animate-expo.md)
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⏭️ O'tkazib yuborildi (sinab ko'rmadik)`
+- **Joriy holati:** `⛔ Rad etildi`
 
 ---
 
@@ -41,4 +41,4 @@ Damir Sokolovsky (`@heydamir`) tomonidan X'dagi *Unslopping* rukni asosida yozil
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kod va `skillshare audit` tekshiruvi | `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` | Didli anti-slop skill (`8.5/10`), biroq barcha asosiy imkoniyatlari bizdagi [`impeccable`](impeccable.md) da kengroq (Web + Native Mobile) borligi va `auto-trigger` to'qnashuvi oldini olish uchun o'rnatilmadi. |
+| 2026-11-16 | Manba kod va `skillshare audit` tekshiruvi | `⛔ Rad etildi` | Didli anti-slop skill (`8.5/10`), biroq barcha asosiy imkoniyatlari bizdagi [`impeccable`](impeccable.md) da kengroq (Web + Native Mobile) borligi va `auto-trigger` to'qnashuvi oldini olish uchun o'rnatilmadi. |

@@ -10,7 +10,7 @@
 - **Recommended Scope:** `Do Not Install` *(global install severely bloats context)*
 - **Used Instead:** [**`impeccable`**](../ui-ux/impeccable.md) + [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) + [**`elephant-goldfish-model`**](elephant-goldfish-model.md) + [**`cross-platform-qa`**](../mobile/cross-platform-qa.md)
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⛔ Rejected (Not Tested)` *(not needed — our existing focused skills are much cleaner and stronger)*
+- **Current Status:** `⛔ Rejected` *(not needed — our existing focused skills are much cleaner and stronger)*
 
 ---
 
@@ -76,4 +76,4 @@ Every core domain in `agency-agents` is already covered much more cleanly by our
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Audited all 283 agent files, `convert.sh` / `install.sh`, and context footprint | `⛔ Rejected (Not Tested)` | Skipped due to `~18.5K`-token frontmatter bloat, generic roleplay/copy-paste artifacts, and full coverage by our stronger existing skills (`impeccable`, `ponytail`, `elephant-goldfish-model`, `cross-platform-qa`). |
+| 2026-11-16 | Audited all 283 agent files, `convert.sh` / `install.sh`, and context footprint | `⛔ Rejected` | Skipped due to `~18.5K`-token frontmatter bloat, generic roleplay/copy-paste artifacts, and full coverage by our stronger existing skills (`impeccable`, `ponytail`, `elephant-goldfish-model`, `cross-platform-qa`). |

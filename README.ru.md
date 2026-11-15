@@ -5,12 +5,10 @@
 <details>
 <summary>Обозначения статусов</summary>
 
-- `✅ Используется` — протестировано на практике, активно используется каждый день
-- `🧪 Протестировано` — устанавливалось и проверялось (временно или в отдельном проекте)
-- `👀 Изучено (не тестировали)` — исходный код проверен, хороший кандидат, пока не устанавливали
-- `⚠️ Только локально (-p) (не тестировали)` — подходит только для узкой задачи в отдельном проекте, не для глобальной установки
-- `⏭️ Пропущено (не тестировали)` — изучено и пропущено, так как уже есть более сильная альтернатива
-- `⛔ Отклонено` / `⛔ Отклонено (не тестировали)` — отклонено из-за рисков безопасности, лишней тяжеловесности или конфликтов
+- `✅ Активен` — постоянно используется в работе
+- `👍 Хороший вариант` — проверено, стоит применить в подходящей задаче
+- `⏳ В очереди` — в очереди на проверку или тест
+- `⛔ Отклонено` — не нужно нам, конфликтует или небезопасно
 
 </details>
 
@@ -21,22 +19,22 @@
 
 | Название | Направление | Тип | Оценка | Статус | Дата | Краткое описание |
 |---|---|---|---|---|---|---|
-| [**`agent-device`**](reviews/ru/mobile/agent-device.md) | Mobile / TV (`iOS` / `Android` / `tvOS`) | CLI + Skill | **9.5/10** | `✅ Используется` | `2026-11-16` | [agent-device.dev](https://agent-device.dev) — 0-dependency CLI от Callstack: управляет фоновым iOS/tvOS Simulator без окна (`~197ms`) и `-no-window` Android/TV Emulator (`~888ms`, в 27x меньше токенов, полный UTF-8 ввод) через `@ref` и `--settle` diff (`0` MCP-раздувания). |
-| [**`agent-desktop`**](reviews/ru/developer-tools/agent-desktop.md) | Desktop / Web | CLI + Skill | **9.5/10** | `✅ Используется` | `2026-11-15` | [agent-browser.dev/desktop](https://agent-browser.dev/desktop) — фоновое управление Chrome и десктопными приложениями через macOS Accessibility (`AX`) без перехвата курсора (+ резерв для iOS `Device Hub`). |
-| [**`adb`**](reviews/ru/mobile/adb.md) | Mobile (Android) | CLI | **9.5/10** | `✅ Используется` | `2026-11-15` | Проброс портов (`reverse`), `logcat`, установка APK и низкоуровневое управление на фоновых Android-эмуляторах (`-no-window`) и реальных телефонах. Флаг `-s <serial>` обязателен. |
-| [**`skillshare`**](reviews/ru/developer-tools/skillshare.md) | Developer Tools | CLI + Skill | **9.5/10** | `✅ Используется` | `2026-11-15` | Синхронизация скиллов и плагинов между всеми AI-агентами (`Codex`, `Claude`, `Antigravity`) из единого источника + быстрый встроенный **skill-check (`skillshare audit`)** при установке. |
-| [**`cross-platform-qa`**](reviews/ru/mobile/cross-platform-qa.md) | Web / iOS / Android / TV | Skill | **9.5/10** | `✅ Используется` | `2026-11-16` | 2-этапный QA: 1) локальная проверка (`agent-desktop` Web + `agent-device` фоновые iOS/Android/TV + `adb`), 2) финальная разовая проверка на реальном устройстве перед Done. |
-| [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) | UI/UX | Skill | **9.5/10** | `✅ Используется` | `2026-11-15` | Основная дизайн-система и UX-аудит для веб, мобильного веба и нативных экранов iOS/Android (внешние хуки отключены). |
-| [**`grill-me`**](reviews/ru/architecture/grill-me.md) | Architecture / Planning | Набор скиллов | **9.5/10** | `✅ Используется` | `2026-11-16` | Проработка требований до написания кода по дереву решений (`design tree`) с рекомендуемыми ответами (`grilling` + `grill-with-docs`; также проверен весь репозиторий `mattpocock/skills`). |
-| [**`elephant-goldfish-model`**](reviews/ru/architecture/elephant-goldfish-model.md) | Architecture / Audit | Плагин (7 скиллов + 10 агентов) | **9.5/10** | `✅ Используется` | `2026-11-15` | Архитектор с памятью (*Elephant*) + субагенты-критики без контекста (*Goldfish*): `egm-drift-report` и 5-этапный `egm-review` находят расхождения документации с кодом и скрытые баги. |
-| [**`animate-expo`**](reviews/ru/mobile/animate-expo.md) | Mobile (Expo / RN) | Skill | **9.5/10** | `✅ Используется` | `2026-11-15` | Плавные 60/120fps анимации и жесты в UI-потоке для Expo и React Native на базе `Reanimated`, `Gesture Handler` и `expo-haptics` (с защитой `LOCAL-COMPATIBILITY.md`). |
-| [**`sentry`**](reviews/ru/backend/sentry.md) | Backend / Web / Mobile | Self-Hosted + Skill / MCP | **9.5/10** | `✅ Используется` | `2026-11-15` | Full-stack диагностика ошибок (`Issue Grouping`, `dSYM`/`ProGuard`, `Source Maps`), `Breadcrumbs`, `Session Replay` и `v8+` OTel-трейсов с прямым анализом через AI-агентов. |
-| [**`T3 Code`** + CLI Subagent](reviews/ru/developer-tools/t3-code.md) | Multi-Agent | Desktop App + CLI | **9.0/10** | `✅ Используется` | `2026-11-15` | Совместная работа нескольких AI (*«Codex пишет, Claude проверяет»* через вызов независимого CLI-субагента для ревью). |
-| [**`xcrun simctl` + `Device Hub`**](reviews/ru/mobile/ios-simulator-device-hub.md) | Mobile (iOS) | Xcode CLI + App | **9.0/10** | `✅ Используется` | `2026-11-16` | Фоновый запуск/остановка iOS Simulator без окна (`simctl boot/shutdown`), установка сборок на реальный iPhone (`devicectl`) и резерв `Device Hub`. |
-| [**`ponytail`**](reviews/ru/architecture/ponytail.md) | Architecture / Code | Skill | **9.0/10** | `✅ Используется` | `2026-11-15` | Минимальное изменение, полностью решающее задачу (YAGNI), код без лишних абстракций и краткий ответ, понятный с первого прочтения. |
-| [**`karpathy-guidelines`**](reviews/ru/architecture/karpathy-guidelines.md) | Architecture / Code | Skill | **9.0/10** | `✅ Используется` | `2026-11-15` | Явное озвучивание допущений, простота и точечные (`surgical`) правки без затрагивания соседнего кода. |
-| [**`graphify`**](reviews/ru/architecture/graphify.md) | Architecture / Codebase | Skill + Python CLI | **9.0/10** | `✅ Используется` | `2026-11-15` | Построение постоянного графа знаний (`graph.json` + HTML) из кода (локальный AST, 0 токенов) и документации для мгновенного поиска связей между модулями. |
-| [**`mobile-native`**](reviews/ru/mobile/mobile-native.md) | Mobile Web / PWA | Skill | **8.5/10** | `✅ Используется` | `2026-11-15` | 11 CSS/meta-решений, придающих мобильному вебу и PWA ощущение нативного приложения (`dvh/svh`, `safe-area`, инпуты `16px`, `overscroll-behavior`, hover gating; с защитой `LOCAL-COMPATIBILITY.md`). |
+| [**`agent-device`**](reviews/ru/mobile/agent-device.md) | Mobile / TV (`iOS` / `Android` / `tvOS`) | CLI + Skill | **9.5/10** | `✅ Активен` | `2026-11-16` | [agent-device.dev](https://agent-device.dev) — 0-dependency CLI от Callstack: управляет фоновым iOS/tvOS Simulator без окна (`~197ms`) и `-no-window` Android/TV Emulator (`~888ms`, в 27x меньше токенов, полный UTF-8 ввод) через `@ref` и `--settle` diff (`0` MCP-раздувания). |
+| [**`agent-desktop`**](reviews/ru/developer-tools/agent-desktop.md) | Desktop / Web | CLI + Skill | **9.5/10** | `✅ Активен` | `2026-11-15` | [agent-browser.dev/desktop](https://agent-browser.dev/desktop) — фоновое управление Chrome и десктопными приложениями через macOS Accessibility (`AX`) без перехвата курсора (+ резерв для iOS `Device Hub`). |
+| [**`adb`**](reviews/ru/mobile/adb.md) | Mobile (Android) | CLI | **9.5/10** | `✅ Активен` | `2026-11-15` | Проброс портов (`reverse`), `logcat`, установка APK и низкоуровневое управление на фоновых Android-эмуляторах (`-no-window`) и реальных телефонах. Флаг `-s <serial>` обязателен. |
+| [**`skillshare`**](reviews/ru/developer-tools/skillshare.md) | Developer Tools | CLI + Skill | **9.5/10** | `✅ Активен` | `2026-11-15` | Синхронизация скиллов и плагинов между всеми AI-агентами (`Codex`, `Claude`, `Antigravity`) из единого источника + быстрый встроенный **skill-check (`skillshare audit`)** при установке. |
+| [**`cross-platform-qa`**](reviews/ru/mobile/cross-platform-qa.md) | Web / iOS / Android / TV | Skill | **9.5/10** | `✅ Активен` | `2026-11-16` | 2-этапный QA: 1) локальная проверка (`agent-desktop` Web + `agent-device` фоновые iOS/Android/TV + `adb`), 2) финальная разовая проверка на реальном устройстве перед Done. |
+| [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) | UI/UX | Skill | **9.5/10** | `✅ Активен` | `2026-11-15` | Основная дизайн-система и UX-аудит для веб, мобильного веба и нативных экранов iOS/Android (внешние хуки отключены). |
+| [**`grill-me`**](reviews/ru/architecture/grill-me.md) | Architecture / Planning / Debug | Набор скиллов | **9.5/10** | `✅ Активен` | `2026-11-16` | Проработка требований по дереву решений (`grilling` + `grill-with-docs` + `domain-modeling`) + очищенные on-demand скиллы **`diagnosing-bugs`** и **`improve-codebase-architecture`** из `mattpocock/skills`. |
+| [**`elephant-goldfish-model`**](reviews/ru/architecture/elephant-goldfish-model.md) | Architecture / Audit | Плагин (7 скиллов + 10 агентов) | **9.5/10** | `✅ Активен` | `2026-11-15` | Архитектор с памятью (*Elephant*) + субагенты-критики без контекста (*Goldfish*): `egm-drift-report` и 5-этапный `egm-review` находят расхождения документации с кодом и скрытые баги. |
+| [**`animate-expo`**](reviews/ru/mobile/animate-expo.md) | Mobile (Expo / RN) | Skill | **9.5/10** | `✅ Активен` | `2026-11-15` | Плавные 60/120fps анимации и жесты в UI-потоке для Expo и React Native на базе `Reanimated`, `Gesture Handler` и `expo-haptics` (с защитой `LOCAL-COMPATIBILITY.md`). |
+| [**`sentry`**](reviews/ru/backend/sentry.md) | Backend / Web / Mobile | Self-Hosted + Skill / MCP | **9.5/10** | `✅ Активен` | `2026-11-15` | Full-stack диагностика ошибок (`Issue Grouping`, `dSYM`/`ProGuard`, `Source Maps`), `Breadcrumbs`, `Session Replay` и `v8+` OTel-трейсов с прямым анализом через AI-агентов. |
+| [**`T3 Code`** + CLI Subagent](reviews/ru/developer-tools/t3-code.md) | Multi-Agent | Desktop App + CLI | **9.0/10** | `✅ Активен` | `2026-11-15` | Совместная работа нескольких AI (*«Codex пишет, Claude проверяет»* через вызов независимого CLI-субагента для ревью). |
+| [**`xcrun simctl` + `Device Hub`**](reviews/ru/mobile/ios-simulator-device-hub.md) | Mobile (iOS) | Xcode CLI + App | **9.0/10** | `✅ Активен` | `2026-11-16` | Фоновый запуск/остановка iOS Simulator без окна (`simctl boot/shutdown`), установка сборок на реальный iPhone (`devicectl`) и резерв `Device Hub`. |
+| [**`ponytail`**](reviews/ru/architecture/ponytail.md) | Architecture / Code | Skill | **9.0/10** | `✅ Активен` | `2026-11-15` | Минимальное изменение, полностью решающее задачу (YAGNI), код без лишних абстракций и краткий ответ, понятный с первого прочтения. |
+| [**`karpathy-guidelines`**](reviews/ru/architecture/karpathy-guidelines.md) | Architecture / Code | Skill | **9.0/10** | `✅ Активен` | `2026-11-15` | Явное озвучивание допущений, простота и точечные (`surgical`) правки без затрагивания соседнего кода. |
+| [**`graphify`**](reviews/ru/architecture/graphify.md) | Architecture / Codebase | Skill + Python CLI | **9.0/10** | `✅ Активен` | `2026-11-15` | Построение постоянного графа знаний (`graph.json` + HTML) из кода (локальный AST, 0 токенов) и документации для мгновенного поиска связей между модулями. |
+| [**`mobile-native`**](reviews/ru/mobile/mobile-native.md) | Mobile Web / PWA | Skill | **8.5/10** | `✅ Активен` | `2026-11-15` | 11 CSS/meta-решений, придающих мобильному вебу и PWA ощущение нативного приложения (`dvh/svh`, `safe-area`, инпуты `16px`, `overscroll-behavior`, hover gating; с защитой `LOCAL-COMPATIBILITY.md`). |
 
 ---
 
@@ -46,7 +44,7 @@
 
 | Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
 |---|---|---|---|---|---|---|
-| [**`taste-skill` v2.5**](reviews/ru/web/taste-skill.md) | Landing Kit + Hook | **8.0/10** | **4.0/10** | `⚠️ Только локально (-p) (не тестировали)` | `2026-11-15` | Сильный движок для промо-лендингов с нуля; при установке обязательно вырезать `Stop` хук (600с) и ставить только локально (`-p`). |
+| [**`taste-skill` v2.5**](reviews/ru/web/taste-skill.md) | Landing Kit + Hook | **8.0/10** | **4.0/10** | `👍 Хороший вариант` | `2026-11-15` | Сильный движок для промо-лендингов с нуля; при установке обязательно вырезать `Stop` хук (600с) и ставить только локально (`-p`). |
 
 ### 📱 Mobile
 
@@ -54,51 +52,51 @@
 
 | Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
 |---|---|---|---|---|---|---|
-| [**`swiftui-agent-skill`**](reviews/ru/mobile/swiftui-agent-skill.md) | Skill (`twostraws` / `AvdLee` / `apple-design`) | **8.5/10** | **3.0/10** | `⚠️ Только локально (-p) (не тестировали)` | `2026-11-16` | Чистый SwiftUI и Apple HIG; так как основной стек у нас Expo / React Native, нужен только локально (`-p`) для нативных SwiftUI-модулей (Widgets / Live Activities). **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`reference/ios.md`) + [**`animate-expo`**](reviews/ru/mobile/animate-expo.md). |
+| [**`swiftui-agent-skill`**](reviews/ru/mobile/swiftui-agent-skill.md) | Skill (`twostraws` / `AvdLee` / `apple-design`) | **8.5/10** | **3.0/10** | `👍 Хороший вариант` | `2026-11-16` | Чистый SwiftUI и Apple HIG; так как основной стек у нас Expo / React Native, нужен только локально (`-p`) для нативных SwiftUI-модулей (Widgets / Live Activities). **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`reference/ios.md`) + [**`animate-expo`**](reviews/ru/mobile/animate-expo.md). |
 | [**`mobile-mcp`**](reviews/ru/mobile/mobile-mcp.md) | MCP Server (34 tool) | **7.0/10** | **2.0/10** | `⛔ Отклонено` | `2026-11-16` | Протестировано вживую и отклонено: `~7,580` токенов постоянного раздувания MCP-схемы на каждый ход, в `6.5x–37x` медленнее `agent-device` (`7.3s` iOS, `5.8s` Android), телеметрия `Scarf` + `PostHog` и реклама облака `mobilenext.ai`. **Вместо него:** [**`agent-device`**](reviews/ru/mobile/agent-device.md) + [**`adb`**](reviews/ru/mobile/adb.md). |
 
 ### 🎨 UI/UX
 
 | Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
 |---|---|---|---|---|---|---|
-| [**`animate`**](reviews/ru/ui-ux/animate.md) | Skill (2 файла) | **8.5/10** | **3.0/10** | `⏭️ Пропущено (не тестировали)` | `2026-11-15` | Скилл веб-анимаций от Эмиля Ковальски; конфликтует по auto-trigger и правилам с нашей системой. **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`animate`) + [**`animate-expo`**](reviews/ru/mobile/animate-expo.md). |
-| [**`unslop`**](reviews/ru/ui-ux/unslop.md) | Skill + Playwright скрипты | **8.5/10** | **2.5/10** | `⏭️ Пропущено (не тестировали)` | `2026-11-16` | 9-проходный скилл очистки AI/vibecoded веб-экранов от `@heydamir` (`CC-BY-4.0`); только для Web и конфликтует по auto-trigger. **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`craft-floor` + `polish` / `quieter` / `clarify`). |
-| [**`break-ui`**](reviews/ru/ui-ux/break-ui.md) | Skill (2 файла) | **8.0/10** | **3.0/10** | `⏭️ Пропущено (не тестировали)` | `2026-11-15` | Стресс-тест UI экстремальными данными; добавляет временные фикстуры/переключатели в проект и останавливается без фикса. **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`harden`). |
+| [**`animate`**](reviews/ru/ui-ux/animate.md) | Skill (2 файла) | **8.5/10** | **3.0/10** | `⛔ Отклонено` | `2026-11-15` | Скилл веб-анимаций от Эмиля Ковальски; конфликтует по auto-trigger и правилам с нашей системой. **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`animate`) + [**`animate-expo`**](reviews/ru/mobile/animate-expo.md). |
+| [**`unslop`**](reviews/ru/ui-ux/unslop.md) | Skill + Playwright скрипты | **8.5/10** | **2.5/10** | `⛔ Отклонено` | `2026-11-16` | 9-проходный скилл очистки AI/vibecoded веб-экранов от `@heydamir` (`CC-BY-4.0`); только для Web и конфликтует по auto-trigger. **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`craft-floor` + `polish` / `quieter` / `clarify`). |
+| [**`break-ui`**](reviews/ru/ui-ux/break-ui.md) | Skill (2 файла) | **8.0/10** | **3.0/10** | `⛔ Отклонено` | `2026-11-15` | Стресс-тест UI экстремальными данными; добавляет временные фикстуры/переключатели в проект и останавливается без фикса. **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`harden`). |
 | [**`make-interfaces-feel-better`**](reviews/ru/ui-ux/make-interfaces-feel-better.md) | Skill (6 файлов) | **7.5/10** | **2.5/10** | `⛔ Отклонено` | `2026-11-15` | Протестировано и удалено (из-за конфликта auto-trigger и громоздких таблиц отчётов). **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) + [**`animate-expo`**](reviews/ru/mobile/animate-expo.md). |
-| [**`ui-ux-pro-max`**](reviews/ru/ui-ux/ui-ux-pro-max.md) | Skill + CSV/Python | **7.0/10** | **3.5/10** | `⏭️ Пропущено (не тестировали)` | `2026-11-15` | Слабее `impeccable` и конфликтует с ним по auto-trigger. **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md). |
+| [**`ui-ux-pro-max`**](reviews/ru/ui-ux/ui-ux-pro-max.md) | Skill + CSV/Python | **7.0/10** | **3.5/10** | `⛔ Отклонено` | `2026-11-15` | Слабее `impeccable` и конфликтует с ним по auto-trigger. **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md). |
 
 ### 🏗️ Архитектура и Ревью
 
 | Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
 |---|---|---|---|---|---|---|
-| [**`addy-agent-skills`**](reviews/ru/architecture/addy-agent-skills.md) | Плагин (25 скиллов + 9 команд) | **8.0/10** | **2.5/10** | `⏭️ Пропущено (не тестировали)` | `2026-11-16` | Полный SDLC-конвейер от Эдди Османи (`/spec -> /ship`); обязательный TDD и паузы `doubt-driven` создают лишние циклы. **Вместо него:** [**`grill-me`**](reviews/ru/architecture/grill-me.md) + [**`ponytail`**](reviews/ru/architecture/ponytail.md) + [**`elephant-goldfish-model`**](reviews/ru/architecture/elephant-goldfish-model.md). |
-| [**`agency-agents`**](reviews/ru/architecture/agency-agents.md) | 283 persona-промпта + installer | **6.5/10** | **2.5/10** | `⛔ Отклонено (не тестировали)` | `2026-11-16` | 283 ролевых `.md` промпта в 18 отделах (`~18.5K` токенов раздувания frontmatter и чужие остатки copy-paste). **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md), [**`ponytail`**](reviews/ru/architecture/ponytail.md), [**`elephant-goldfish-model`**](reviews/ru/architecture/elephant-goldfish-model.md), [**`cross-platform-qa`**](reviews/ru/mobile/cross-platform-qa.md). |
+| [**`addy-agent-skills`**](reviews/ru/architecture/addy-agent-skills.md) | Плагин (25 скиллов + 9 команд) | **8.0/10** | **2.5/10** | `⛔ Отклонено` | `2026-11-16` | Полный SDLC-конвейер от Эдди Османи (`/spec -> /ship`); обязательный TDD и паузы `doubt-driven` создают лишние циклы. **Вместо него:** [**`grill-me`**](reviews/ru/architecture/grill-me.md) + [**`ponytail`**](reviews/ru/architecture/ponytail.md) + [**`elephant-goldfish-model`**](reviews/ru/architecture/elephant-goldfish-model.md). |
+| [**`agency-agents`**](reviews/ru/architecture/agency-agents.md) | 283 persona-промпта + installer | **6.5/10** | **2.5/10** | `⛔ Отклонено` | `2026-11-16` | 283 ролевых `.md` промпта в 18 отделах (`~18.5K` токенов раздувания frontmatter и чужие остатки copy-paste). **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md), [**`ponytail`**](reviews/ru/architecture/ponytail.md), [**`elephant-goldfish-model`**](reviews/ru/architecture/elephant-goldfish-model.md), [**`cross-platform-qa`**](reviews/ru/mobile/cross-platform-qa.md). |
 | [**`superpowers`**](reviews/ru/architecture/superpowers.md) | Плагин (14 скиллов + хук) | **6.5/10** | **2.0/10** | `⛔ Отклонено` | `2026-11-15` | Протестировано и удалено: лишние размышления (`SessionStart` хук), ненужные вопросы `brainstorming` (альтернатива: `grill-me`), медленные циклы субагентов и принудительный TDD (2x лишней работы для Web/Mobile/Backend). |
 
 ### ⚙️ Backend
 
 | Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
 |---|---|---|---|---|---|---|
-| [**`opentelemetry`**](reviews/ru/backend/opentelemetry.md) | Стандарт + Collector (`SigNoz` / `Grafana`) | **9.0/10** | **4.0/10** | `⏭️ Пропущено (не тестировали)` | `2026-11-15` | Отраслевой стандарт межсервисных `Traces + Metrics + Logs` и метрик серверов/БД (требует `Collector + SigNoz/Grafana`). **Вместо него:** [**`sentry`**](reviews/ru/backend/sentry.md) (закрывает ошибки, реплеи и базовые трейсы в одной платформе). |
-| [**`Shannon`**](reviews/ru/backend/shannon.md) | Standalone CLI + [`hacker-test`](skills/hacker-test/SKILL.md) | **8.5/10** | **6.5/10** | `👀 Изучено (не тестировали)` | `2026-11-16` | Автономный White-Box AI-пентестер (Auth bypass, IDOR, Injection, XSS, SSRF). Вместо тяжёлого плагина вызывается по запросу через наш лёгкий скилл [`hacker-test`](skills/hacker-test/SKILL.md) и `npx` строго на local/staging (не на production). |
+| [**`opentelemetry`**](reviews/ru/backend/opentelemetry.md) | Стандарт + Collector (`SigNoz` / `Grafana`) | **9.0/10** | **4.0/10** | `👍 Хороший вариант` | `2026-11-15` | Отраслевой стандарт межсервисных `Traces + Metrics + Logs` и метрик серверов/БД (требует `Collector + SigNoz/Grafana`). **Вместо него:** [**`sentry`**](reviews/ru/backend/sentry.md) (закрывает ошибки, реплеи и базовые трейсы в одной платформе). |
+| [**`Shannon`**](reviews/ru/backend/shannon.md) | Standalone CLI + [`hacker-test`](skills/hacker-test/SKILL.md) | **8.5/10** | **6.5/10** | `👍 Хороший вариант` | `2026-11-16` | Автономный White-Box AI-пентестер (Auth bypass, IDOR, Injection, XSS, SSRF). Вместо тяжёлого плагина вызывается по запросу через наш лёгкий скилл [`hacker-test`](skills/hacker-test/SKILL.md) и `npx` строго на local/staging (не на production). |
 
 ### 🛠️ Developer Tools и Memory
 
 | Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
 |---|---|---|---|---|---|---|
-| [**`SkillSpector`**](reviews/ru/developer-tools/skillspector.md) | Python CLI + MCP + Skill | **9.0/10** | **3.5/10** | `⏭️ Пропущено (не тестировали)` | `2026-11-16` | Сканер безопасности AI-скиллов и MCP от NVIDIA (`AST + YARA + OSV + LLM`). Не устанавливали, чтобы не плодить лишний цикл — **Вместо него:** [**`skillshare`**](reviews/ru/developer-tools/skillshare.md) (skill-check `skillshare audit`) + **прямая проверка кода через AI-агента**. |
-| [**`AssetDiet`**](reviews/ru/developer-tools/assetdiet.md) | CLI + MCP Server (16 tool) | **7.5/10** | **5.0/10** | `👀 Изучено (не тестировали)` | `2026-11-16` | 100% локальное сжатие картинок/SVG/видео/3D (`Sharp`, `SVGO`, `FFmpeg`) с откатом и миграцией импортов. Вместо постоянного 16-tool MCP запускать разово через `npx assetdiet-mcp audit . --policy safe`. |
-| [**`humanizer` + `stop-slop`**](reviews/ru/developer-tools/humanizer-stop-slop.md) | Skill (`Markdown`) | **7.5/10** | **2.0/10** | `⏭️ Пропущено (не тестировали)` | `2026-11-16` | Редакторы статей и эссе от штампов ИИ (`humanizer` весит `~32 KB`); не для кода и не для продуктового UI. **Вместо них:** [**`ponytail`**](reviews/ru/architecture/ponytail.md) + [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`clarify`). |
-| [**`claude-code-setup`**](reviews/ru/developer-tools/claude-code-setup.md) | Плагин (Recommender Skill) | **7.5/10** | **2.0/10** | `⏭️ Пропущено (не тестировали)` | `2026-11-16` | Официальный read-only рекомендатель стартовых секций `CLAUDE.md`, хуков и MCP-серверов под проект. **Вместо него:** [**`skillshare`**](reviews/ru/developer-tools/skillshare.md). |
-| [**`OmniRoute`**](reviews/ru/developer-tools/omniroute.md) | Local Proxy + 44 админ-скилла | **7.5/10** | **2.0/10** | `⛔ Отклонено (не тестировали)` | `2026-11-16` | Локальный LLM reverse-proxy (`localhost:20128`); его 44 скилла — лишь мануалы прокси, дефолтный роутинг рвёт длинные сессии (`#7287`) и понижает модель, а TLS-stealth (`wreq-js`) несёт риск бана подписок по ToS. **Вместо него:** [**`T3 Code`**](reviews/ru/developer-tools/t3-code.md) + [**`ponytail`**](reviews/ru/architecture/ponytail.md). |
+| [**`SkillSpector`**](reviews/ru/developer-tools/skillspector.md) | Python CLI + MCP + Skill | **9.0/10** | **3.5/10** | `⛔ Отклонено` | `2026-11-16` | Сканер безопасности AI-скиллов и MCP от NVIDIA (`AST + YARA + OSV + LLM`). Не устанавливали, чтобы не плодить лишний цикл — **Вместо него:** [**`skillshare`**](reviews/ru/developer-tools/skillshare.md) (skill-check `skillshare audit`) + **прямая проверка кода через AI-агента**. |
+| [**`AssetDiet`**](reviews/ru/developer-tools/assetdiet.md) | Standalone CLI + [`asset-diet`](skills/asset-diet/SKILL.md) | **7.5/10** | **6.5/10** | `✅ Активен` | `2026-11-16` | 100% локальное сжатие картинок/SVG/видео/3D (`Sharp`, `SVGO`, `FFmpeg`) с откатом. Вместо постоянного 16-tool MCP подключён через наш лёгкий скилл [`asset-diet`](skills/asset-diet/SKILL.md) для разового вызова `npx assetdiet-mcp@0.1.4`. |
+| [**`humanizer` + `stop-slop`**](reviews/ru/developer-tools/humanizer-stop-slop.md) | Skill (`Markdown`) | **7.5/10** | **2.0/10** | `⛔ Отклонено` | `2026-11-16` | Редакторы статей и эссе от штампов ИИ (`humanizer` весит `~32 KB`); не для кода и не для продуктового UI. **Вместо них:** [**`ponytail`**](reviews/ru/architecture/ponytail.md) + [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`clarify`). |
+| [**`claude-code-setup`**](reviews/ru/developer-tools/claude-code-setup.md) | Плагин (Recommender Skill) | **7.5/10** | **2.0/10** | `⛔ Отклонено` | `2026-11-16` | Официальный read-only рекомендатель стартовых секций `CLAUDE.md`, хуков и MCP-серверов под проект. **Вместо него:** [**`skillshare`**](reviews/ru/developer-tools/skillshare.md). |
+| [**`OmniRoute`**](reviews/ru/developer-tools/omniroute.md) | Local Proxy + 44 админ-скилла | **7.5/10** | **2.0/10** | `⛔ Отклонено` | `2026-11-16` | Локальный LLM reverse-proxy (`localhost:20128`); его 44 скилла — лишь мануалы прокси, дефолтный роутинг рвёт длинные сессии (`#7287`) и понижает модель, а TLS-stealth (`wreq-js`) несёт риск бана подписок по ToS. **Вместо него:** [**`T3 Code`**](reviews/ru/developer-tools/t3-code.md) + [**`ponytail`**](reviews/ru/architecture/ponytail.md). |
 
 ---
 
 <details>
-<summary>Подключить глобальные скиллы <code>tasted-skills</code> и <code>hacker-test</code></summary>
+<summary>Подключить глобальные скиллы <code>tasted-skills</code>, <code>hacker-test</code> и <code>asset-diet</code></summary>
 
 ```bash
-skillshare install TursunboyevJahongir/tasted-skills -s tasted-skills -s hacker-test -g && skillshare sync -g
+skillshare install TursunboyevJahongir/tasted-skills -s tasted-skills -s hacker-test -s asset-diet -g && skillshare sync -g
 ```
 
 </details>

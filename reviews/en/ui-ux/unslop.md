@@ -10,7 +10,7 @@
 - **Recommended Scope:** `Do Not Install`
 - **Used Instead:** [**`impeccable`**](impeccable.md) (`craft-floor` + `polish` / `quieter` / `clarify` / `harden` — across Web and Native Mobile) + [**`animate-expo`**](../mobile/animate-expo.md)
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⏭️ Skipped (Not Tested)`
+- **Current Status:** `⛔ Rejected`
 
 ---
 
@@ -41,4 +41,4 @@ A web UI "unslopping" skill created by Damir Sokolovsky (`@heydamir`) from his X
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Primary-source & `skillshare audit` review | `⏭️ Skipped (Not Tested)` | Tasteful anti-slop skill (`8.5/10`), skipped because [`impeccable`](impeccable.md) already covers and extends its scope across Web + Native Mobile without trigger conflicts. |
+| 2026-11-16 | Primary-source & `skillshare audit` review | `⛔ Rejected` | Tasteful anti-slop skill (`8.5/10`), skipped because [`impeccable`](impeccable.md) already covers and extends its scope across Web + Native Mobile without trigger conflicts. |

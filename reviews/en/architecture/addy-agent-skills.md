@@ -10,7 +10,7 @@
 - **Recommended Scope:** `Do Not Install`
 - **Used Instead:** [**`grill-me`**](grill-me.md) + [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) + [**`elephant-goldfish-model`**](elephant-goldfish-model.md) + [**`T3 Code`**](../developer-tools/t3-code.md)
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⏭️ Skipped (Not Tested)`
+- **Current Status:** `⛔ Rejected`
 
 ---
 
@@ -36,4 +36,4 @@ Cleaner and better structured than `superpowers`, but still introduces **ceremon
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Primary-source audit | `⏭️ Skipped (Not Tested)` | Well-written (`8.0/10`), skipped to avoid 25-skill SDLC ceremony and auto-trigger overlap with our leaner active stack. |
+| 2026-11-16 | Primary-source audit | `⛔ Rejected` | Well-written (`8.0/10`), skipped to avoid 25-skill SDLC ceremony and auto-trigger overlap with our leaner active stack. |

@@ -45,11 +45,9 @@ Pick the narrowest scope that delivers the value:
 - **Standalone CLI / MCP / App:** External developer tool (memory store, desktop/browser driver) configured on demand.
 - **Skip / Reject:** Fails quality, security, or conflict checks.
 
-## 5. Status Labels (Used in `README.md` and Review Logs)
+## 5. Status Labels (Used in `README*.md` and Review Logs)
 
-- `✅ Ishlatilyapti` — Tested and actively used (top essentials go in `⭐ Eng keraklilari`).
-- `🧪 Sinab ko'rildi` — Installed and tested in practice (temporary or project-scoped).
-- `👀 Ko'rib chiqdik (sinab ko'rmadik)` — Vetted from source, strong candidate, not yet installed/tested.
-- `⚠️ Faqat local (-p) (sinab ko'rmadik)` — Useful only in an isolated project, unsafe/noisy globally, not yet tested.
-- `⏭️ O'tkazib yuborildi (sinab ko'rmadik)` — Reviewed and intentionally skipped without testing.
-- `⛔ Rad etildi` / `⛔ Rad etildi (sinab ko'rmadik)` — Rejected due to security, bloat, or severe conflict (either after testing or directly from code audit without testing).
+- `✅ Faol` (`✅ Active` / `✅ Активен`) — Tested and actively used daily (top essentials go in `⭐ Eng keraklilari`).
+- `👍 Yaxshi variant` (`👍 Good Option` / `👍 Хороший вариант`) — Vetted and worth using when the right task/project arises (on-demand CLI or `-p` project scope).
+- `⏳ Navbatda` (`⏳ Queued` / `⏳ В очереди`) — Queued for source inspection or practical testing.
+- `⛔ Rad etildi` (`⛔ Rejected` / `⛔ Отклонено`) — Not needed (covered by a stronger active tool), conflicting, bloated, or unsafe.

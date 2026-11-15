@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **4.0 / 10** *(global muhit uchun past; faqat noldan promo-landing qurishda foydali)*
 - **Tavsiya etilgan ko'lam:** `Faqat alohida loyihaga (-p)` *(tozalangan holda; globalga o'rnatmaslik)*
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `⚠️ Faqat local (-p) (sinab ko'rmadik)`
+- **Joriy holati:** `👍 Yaxshi variant`
 
 ---
 
@@ -65,4 +65,4 @@ Eski v1 versiyasidan farqli o'laroq, `tasteskill 2.5.1` (`design-taste-frontend`
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | `tasteskill 2.5.1` kodi, skriptlari va `Stop` hook auditi | `⚠️ Globalga emas` | Global o'rnatish rad etildi (`Stop` hook va web-app arxitekturasiga zidligi sababli). Alohida landing loyihalar uchun sanitarizatsiya qo'llanmasi bilan zaxiraga olindi. |
+| 2026-11-15 | `tasteskill 2.5.1` kodi, skriptlari va `Stop` hook auditi | `👍 Yaxshi variant` | Global o'rnatish rad etildi (`Stop` hook va web-app arxitekturasiga zidligi sababli). Alohida landing loyihalar uchun sanitarizatsiya qo'llanmasi bilan zaxiraga olindi. |

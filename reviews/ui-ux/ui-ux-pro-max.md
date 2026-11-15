@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **3.5 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(asosiy UI skilli sifatida kerak emas)*
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `⏭️ O'tkazib yuborildi (sinab ko'rmadik)`
+- **Joriy holati:** `⛔ Rad etildi`
 
 ---
 
@@ -66,4 +66,4 @@ Global muhitimizda allaqachon undan **ancha kuchli UI tizim (`impeccable` + `mak
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | `SKILL.md`, `pro-rules.md` va CSV/BM25 arxitekturasi auditi | `⏭️ Ishlatilmagan` | Mavjud `impeccable` + `make-interfaces-feel-better` juftligidan kuchsizroq va ular bilan ziddiyatga kirishgani sababli o'rnatmaslikka qaror qilindi. |
+| 2026-11-15 | `SKILL.md`, `pro-rules.md` va CSV/BM25 arxitekturasi auditi | `⛔ Rad etildi` | Mavjud `impeccable` + `make-interfaces-feel-better` juftligidan kuchsizroq va ular bilan ziddiyatga kirishgani sababli o'rnatmaslikka qaror qilindi. |

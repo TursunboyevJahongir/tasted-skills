@@ -9,7 +9,7 @@
 - **Need for Us:** **9.5 / 10**
 - **Recommended Scope:** `Standalone Tool` *(bundled with Xcode + paired with `agent-desktop`)*
 - **Reviewed Date:** `2026-11-15`
-- **Current Status:** `✅ In Active Use` *(core toolchain for iOS simulator and physical device verification)*
+- **Current Status:** `✅ Active` *(core toolchain for iOS simulator and physical device verification)*
 
 ---
 
@@ -69,5 +69,5 @@ Apple's official toolchain for booting, driving, and verifying iOS and Expo / Re
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Documented as core iOS QA toolchain | `✅ In Active Use` | Installed with Xcode (`simctl` and `devicectl`). |
-| 2026-11-16 | Shifted primary iOS/tvOS UI automation to `agent-device` | `✅ In Active Use` | `xcrun simctl` (headless boot/shutdown) and `devicectl` remain essential; `Device Hub` + `agent-desktop` moved to fallback role. |
+| 2026-11-15 | Documented as core iOS QA toolchain | `✅ Active` | Installed with Xcode (`simctl` and `devicectl`). |
+| 2026-11-16 | Shifted primary iOS/tvOS UI automation to `agent-device` | `✅ Active` | `xcrun simctl` (headless boot/shutdown) and `devicectl` remain essential; `Device Hub` + `agent-desktop` moved to fallback role. |
