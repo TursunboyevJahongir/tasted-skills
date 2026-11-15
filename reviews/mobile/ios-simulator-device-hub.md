@@ -53,14 +53,15 @@ macOS'da iOS va Expo / React Native ilovalarini fonda ishga tushirish, boshqaris
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
-- Android uchun `adb` qanday rol o'ynasa, iOS uchun `xcrun simctl` + `Device Hub` + `agent-desktop` xuddi shu o'rinni to'ldiradi (`cross-platform-qa` tizimining iOS qanoti).
+- **`xcrun simctl` va `devicectl`:** [`agent-device`](agent-device.md) hamda [`cross-platform-qa`](cross-platform-qa.md) uchun asosiy iOS/tvOS poydevor (simulyatorni oynasiz `boot`/`shutdown` qilish, `privacy` ruxsatlari va real iPhone'da ilova o'rnatish).
+- **Xcode `Device Hub` + `agent-desktop`:** endi **zaxira (`fallback`)** vazifasini bajaradi — chunki u ekranda GUI oyna ochiq turishini talab qiladi, [`agent-device`](agent-device.md) esa oynasiz fonda `~197ms` da ishlaydi.
 
 ---
 
 ## 5. Qaysi yo'nalish va vazifalarda foydali?
 
-- **Qachon ishlatish kerak:** Native iOS hamda React Native / Expo ilovalarining iOS versiyasini simulyatorda va yakunda real iPhone/iPad'da tekshirishda.
-- **Qachon ishlatmaslik kerak:** Sof veb yoki faqat Android vazifalarida.
+- **Qachon ishlatish kerak:** `xcrun simctl` orqali simulyatorni oynasiz yoqish/yopish, deep-link/ruxsatlarni boshqarish, `devicectl` orqali real iPhone/iPad'ga build uzatish hamda `agent-device` ishlamagan paytda `Device Hub` zaxirasi sifatida.
+- **Qachon ishlatmaslik kerak:** Odatiy kundalik iOS/tvOS UI elementlarini bosish va tekshirishda (u yerda [`agent-device`](agent-device.md) asosiy vosita).
 
 ---
 
@@ -68,5 +69,6 @@ macOS'da iOS va Expo / React Native ilovalarini fonda ishga tushirish, boshqaris
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Mobil QA jarayonida iOS vositasi sifatida qayd etish | `✅ Ishlatilyapti` | Xcode tarkibida o'rnatilgan; `agent-desktop` bilan birgalikda iOS Simulator va `devicectl` orqali real qurilma tekshiruvlarida faol ishlatilmoqda. |
+| 2026-11-15 | Mobil QA jarayonida iOS vositasi sifatida qayd etish | `✅ Ishlatilyapti` | Xcode tarkibida o'rnatilgan; `simctl` va `devicectl` faol ishlatilmoqda. |
+| 2026-11-16 | iOS/tvOS UI qatlamini `agent-device` ga o'tkazish | `✅ Ishlatilyapti` | `xcrun simctl` (headless boot/shutdown) va `devicectl` asosiy baza bo'lib qoldi; `Device Hub` + `agent-desktop` esa zaxira (`fallback`) roliga o'tkazildi. |
 

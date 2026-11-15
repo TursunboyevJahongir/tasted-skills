@@ -54,17 +54,17 @@ On macOS, iOS Simulator (`Device Hub` + `xcrun simctl`) exposes internal UI elem
 
 ## 4. Fit & Compatibility with Our Existing Stack
 
-Complements [`agent-desktop`](../developer-tools/agent-desktop.md) 100%:
-- Web (`Google Chrome`) and iOS Simulator (`Device Hub` + `xcrun simctl`) → driven via `agent-desktop`;
-- Android Emulator and physical Android devices → driven via **`adb`**;
-- Together they power our [`cross-platform-qa`](cross-platform-qa.md) workflow.
+Complements [`agent-device`](agent-device.md) and [`agent-desktop`](../developer-tools/agent-desktop.md):
+- **Interactive Android & Android TV UI flows (`snapshot`, `@ref`, `press`, UTF-8 `fill`):** now driven primarily via [`agent-device`](agent-device.md) (which uses `adb` under the hood, running `4.5x` faster with `27x` fewer tokens than raw `uiautomator dump`);
+- **Low-level Android operations (`adb reverse`, `adb logcat`, `emu kill`, APK installs, fallback `screencap`):** handled directly by **`adb`**;
+- Together they power the Android wing of [`cross-platform-qa`](cross-platform-qa.md).
 
 ---
 
 ## 5. When to Use (and When Not To)
 
-- **When to use:** Verifying UI changes, tapping through flows, capturing screenshots, forwarding ports (`adb reverse`), and inspecting crash logs in React Native / Expo and native Android apps.
-- **When not to use:** Pure web or iOS-only tasks (use `agent-desktop` and `xcrun simctl`).
+- **When to use:** Forwarding ports (`adb reverse`), inspecting crash logs (`adb logcat`), installing APKs, managing `-no-window` emulators (`emu kill`), and serving as the underlying transport/fallback for `agent-device`.
+- **When not to use:** Routine interactive UI tapping and form filling (use [`agent-device`](agent-device.md) instead) or pure Web/iOS tasks.
 
 ---
 
@@ -72,4 +72,5 @@ Complements [`agent-desktop`](../developer-tools/agent-desktop.md) 100%:
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Symlinked into global PATH and integrated into mobile QA workflow | `✅ In Active Use` | Used in Stage 1 for headless Android emulator testing (`-no-window`, `uiautomator dump`, `screencap`) and Stage 2 for final USB device verification. |
+| 2026-11-15 | Symlinked into global PATH and integrated into mobile QA workflow | `✅ In Active Use` | Active globally via Android SDK Platform-Tools. |
+| 2026-11-16 | Delegated UI tree/input layer to `agent-device`, retained as core transport/log CLI | `✅ In Active Use` | Kept active: `agent-device` depends on `adb` underneath, while `adb` directly handles `reverse`, `logcat`, `install`, and `emu kill`. |

@@ -54,17 +54,17 @@ macOS'da iOS Simulator (`Device Hub` + `xcrun simctl`) ichki UI elementlarini Ac
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
-`agent-desktop` (Web va iOS Simulator uchun) bilan **100% bir-birini to'ldiradi**:
-- Web (`Google Chrome`) va iOS Simulator (`Device Hub` + `xcrun simctl`) → `agent-desktop` orqali boshqariladi;
-- Android Emulator va jismoniy Android telefon/planshet → **`adb`** orqali boshqariladi;
-- Ushbu ikkalasi birgalikda `cross-platform-qa` jarayonining poydevorini tashkil qiladi.
+[`agent-device`](agent-device.md) va [`agent-desktop`](../developer-tools/agent-desktop.md) bilan bir-birini to'ldiradi:
+- **Android va TV ichki UI oqimi (`snapshot`, `@ref`, `press`, UTF-8 `fill`):** endi [`agent-device`](agent-device.md) asosiy vosita (kapot ostida baribir `adb` ustida ishlaydi, lekin `uiautomator dump` dan `4.5x` tez va `27x` kam token sarflaydi);
+- **Past darajadagi Android boshqaruvi (`adb reverse`, `adb logcat`, `emu kill`, APK install, fallback `screencap`):** aynan **`adb`** ning o'zi bajaradi;
+- Ushbu juftlik [`cross-platform-qa`](cross-platform-qa.md) ning Android qanotini tashkil qiladi.
 
 ---
 
 ## 5. Qaysi yo'nalish va vazifalarda foydali?
 
-- **Qachon ishlatish kerak:** React Native / Expo va native Android ilovalarida UI o'zgarishlarni tekshirish, tugmalarni bosib oqimni sinash, skrinshot olish, port ulash (`adb reverse`) va crash loglarni ko'rishda.
-- **Qachon ishlatmaslik kerak:** Sof veb yoki faqat iOS Simulator vazifalarida (u yerda `agent-desktop` va `xcrun simctl` ishlatiladi).
+- **Qachon ishlatish kerak:** Port ulash (`adb reverse`), crash loglarni ko'rish (`adb logcat`), APK o'rnatish, `-no-window` emulyatorni boshqarish (`emu kill`) hamda `agent-device` ga poydevor/zaxira sifatida.
+- **Qachon ishlatmaslik kerak:** Oddiy UI tugma bosish va formalarni to'ldirishda (u yerda [`agent-device`](agent-device.md) ancha tez va toza ishlaydi) yoki sof Web/iOS vazifalarida.
 
 ---
 
@@ -72,4 +72,5 @@ macOS'da iOS Simulator (`Device Hub` + `xcrun simctl`) ichki UI elementlarini Ac
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Amaliy mobil QA jarayonida qo'llash va katalogga kiritish | `✅ Ishlatilyapti` | Lokal CLI (`Android SDK Platform-Tools`) sifatida o'rnatilgan va faol ishlatilmoqda: 1-bosqichda lokal Android emulyatorni (`-no-window` hamda `uiautomator dump` + `screencap`) boshqarishda, 2-bosqichda esa USB orqali ulangan real qurilmada yakuniy tekshiruv o'tkazishda asosiy vosita sifatida xizmat qilyapti. |
+| 2026-11-15 | Amaliy mobil QA jarayonida qo'llash va katalogga kiritish | `✅ Ishlatilyapti` | Lokal CLI (`Android SDK Platform-Tools`) sifatida global `PATH` da faol. |
+| 2026-11-16 | UI qatlamini `agent-device` ga o'tkazib, transport/log bazasi sifatida saqlash | `✅ Ishlatilyapti` | O'chirilmadi: `agent-device` kapot ostida `adb` ga tayanadi; `adb` o'zi esa `reverse`, `logcat`, `install` va `emu kill` uchun asosiy vosita bo'lib qoldi. |

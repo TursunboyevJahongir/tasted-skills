@@ -51,16 +51,16 @@ Asosiy ishlash zanjiri (`observe → act → verify`):
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
-- **Web va iOS Simulator:** `agent-desktop` asosiy fonda tekshiruvchi vosita.
-- **Android:** `adb` bilan to'ldiriladi (chunki Android Emulator `AX` daraxtini ochmaydi).
+- **Web (`Google Chrome`) va macOS desktop dasturlar:** `agent-desktop` **100% asosiy** fonda tekshiruvchi vosita.
+- **Mobil va TV (`iOS`, `Android`, `tvOS`, `Android TV`):** [`agent-device`](../mobile/agent-device.md) asosiy vosita (`agent-desktop` + `Device Hub` faqat iOS uchun zaxira bo'lib turadi).
 - C/Python/Node/Swift dasturlar ichidan CLI chaqirmasdan to'g'ridan-to'g'ri ulash uchun yonida `agent-desktop-ffi` skilli ham o'rnatilgan.
 
 ---
 
 ## 5. Qaysi yo'nalish va vazifalarda foydali?
 
-- **Qachon ishlatish kerak:** Lokal veb-ilovalarni Chrome'da tekshirish, macOS desktop dasturlarni avtomatlashtirish va Xcode `Device Hub` orqali iOS Simulator UI oqimlarini sinashda.
-- **Qachon ishlatmaslik kerak:** Android Emulator ichki ekranida (`adb` kerak) yoki chuqur HTTP/WebSocket trafik va CPU throttling o'lchovlarida (Chrome DevTools kerak).
+- **Qachon ishlatish kerak:** Lokal veb-ilovalarni `Google Chrome` da tekshirish va macOS desktop GUI dasturlarni fonda avtomatlashtirishda.
+- **Qachon ishlatmaslik kerak:** Mobil va TV emulyator/simulyatorlarda ([`agent-device`](../mobile/agent-device.md) ishlatiladi) yoki chuqur HTTP/WebSocket trafik va CPU throttling o'lchovlarida (Chrome DevTools kerak).
 
 ---
 
@@ -68,5 +68,6 @@ Asosiy ishlash zanjiri (`observe → act → verify`):
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Lokal o'rnatish va amaliy QA oqimiga ulash | `✅ Ishlatilyapti` | CLI hamda `agent-desktop`, `agent-desktop-macos`, `agent-desktop-ffi` skillari global o'rnatilgan; Web va iOS Simulator tekshiruvlarida doimiy ishlatilmoqda. |
+| 2026-11-15 | Lokal o'rnatish va amaliy QA oqimiga ulash | `✅ Ishlatilyapti` | CLI hamda `agent-desktop`, `agent-desktop-macos`, `agent-desktop-ffi` skillari global o'rnatilgan. |
+| 2026-11-16 | Vazifa chegarasini aniqlashtirish (`Web/Desktop` vs `Mobile/TV`) | `✅ Ishlatilyapti` | Web (`Google Chrome`) va macOS desktop uchun asosiy vosita bo'lib qoldi; mobil/TV UI tekshiruvlari `agent-device` ga o'tkazildi. |
 

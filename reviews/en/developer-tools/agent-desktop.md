@@ -51,16 +51,16 @@ Core workflow (`observe → act → verify`):
 
 ## 4. Fit & Compatibility with Our Existing Stack
 
-- **Web & iOS Simulator:** `agent-desktop` is our primary background UI verification tool.
-- **Android:** Paired with [`adb`](../mobile/adb.md) (since Android Emulator does not expose an `AX` tree).
+- **Web (`Google Chrome`) & macOS desktop apps:** `agent-desktop` remains our **100% primary** background UI verification tool.
+- **Mobile & TV (`iOS`, `Android`, `tvOS`, `Android TV`):** Driven primarily via [`agent-device`](../mobile/agent-device.md) (`agent-desktop` + `Device Hub` remains a fallback for iOS).
 - Includes the companion `agent-desktop-ffi` skill for direct C-ABI bindings from Python, Swift, Node, or Rust when needed.
 
 ---
 
 ## 5. When to Use (and When Not To)
 
-- **When to use:** Testing local web apps in Chrome, automating macOS desktop apps, and driving iOS Simulator UI flows through Xcode `Device Hub`.
-- **When not to use:** Inside the Android Emulator screen (use `adb`) or for low-level network waterfall / 6x CPU throttling benchmarks (use Chrome DevTools).
+- **When to use:** Testing local web apps in `Google Chrome` and automating macOS desktop GUI applications in the background.
+- **When not to use:** Mobile and TV simulators/emulators (use [`agent-device`](../mobile/agent-device.md)) or low-level network waterfall / 6x CPU throttling benchmarks (use Chrome DevTools).
 
 ---
 
@@ -68,4 +68,5 @@ Core workflow (`observe → act → verify`):
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Local CLI installation and integration into daily QA workflow | `✅ In Active Use` | CLI and `agent-desktop`, `agent-desktop-macos`, `agent-desktop-ffi` skills installed globally; used daily for Web and iOS Simulator verification. |
+| 2026-11-15 | Local CLI installation and integration into daily QA workflow | `✅ In Active Use` | CLI and `agent-desktop`, `agent-desktop-macos`, `agent-desktop-ffi` skills installed globally. |
+| 2026-11-16 | Clarified domain split (`Web/Desktop` vs `Mobile/TV`) | `✅ In Active Use` | Retained as primary driver for Web (`Google Chrome`) and macOS desktop apps, while mobile/TV UI flows moved to `agent-device`. |

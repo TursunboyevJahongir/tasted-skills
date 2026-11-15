@@ -53,14 +53,15 @@ Apple's official toolchain for booting, driving, and verifying iOS and Expo / Re
 
 ## 4. Fit & Compatibility with Our Existing Stack
 
-- Plays the exact same role for iOS that [`adb`](adb.md) plays for Android, forming the iOS wing of our [`cross-platform-qa`](cross-platform-qa.md) workflow.
+- **`xcrun simctl` & `devicectl`:** Core iOS/tvOS lifecycle foundation underneath [`agent-device`](agent-device.md) and [`cross-platform-qa`](cross-platform-qa.md) (windowless simulator `boot`/`shutdown`, `privacy` grants, and physical iPhone build installs).
+- **Xcode `Device Hub` + `agent-desktop`:** Now serves as a **fallback** — `Device Hub` requires a GUI window open on screen, whereas [`agent-device`](agent-device.md) drives booted simulators completely windowlessly in `~197ms`.
 
 ---
 
 ## 5. When to Use (and When Not To)
 
-- **When to use:** Verifying native iOS and React Native / Expo iOS builds in the simulator and on physical iPhones/iPads.
-- **When not to use:** Pure web or Android-only tasks.
+- **When to use:** Booting/shutting down headless simulators via `xcrun simctl`, granting permissions/deep-links, installing builds onto physical iPhones via `devicectl`, or falling back to `Device Hub` when needed.
+- **When not to use:** Routine iOS/tvOS UI snapshot and tap flows (use [`agent-device`](agent-device.md) as the primary driver).
 
 ---
 
@@ -68,4 +69,5 @@ Apple's official toolchain for booting, driving, and verifying iOS and Expo / Re
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Documented as core iOS QA toolchain | `✅ In Active Use` | Installed with Xcode; actively used alongside `agent-desktop` for iOS Simulator and `devicectl` for physical device verification. |
+| 2026-11-15 | Documented as core iOS QA toolchain | `✅ In Active Use` | Installed with Xcode (`simctl` and `devicectl`). |
+| 2026-11-16 | Shifted primary iOS/tvOS UI automation to `agent-device` | `✅ In Active Use` | `xcrun simctl` (headless boot/shutdown) and `devicectl` remain essential; `Device Hub` + `agent-desktop` moved to fallback role. |
