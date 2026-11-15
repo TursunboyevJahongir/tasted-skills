@@ -68,10 +68,11 @@ When the user shares a GitHub repository, documentation site, package, MCP serve
    - Keep `README.md` concise (no long prose instructions):
      - Essential, battle-tested daily items (`✅ Ishlatilyapti`) go in the top ungrouped **`⭐ Eng keraklilari`** table.
      - All remaining items (tested `🧪 Sinab ko'rildi` or reviewed-only `👀 Ko'rib chiqdik (sinab ko'rmadik)`, `⚠️ Faqat local (-p) (sinab ko'rmadik)`, `⏭️ O'tkazib yuborildi (sinab ko'rmadik)`, `⛔ Rad etildi`) go under **`Yo'nalishlar bo'yicha`** in their category table without duplicating rows from `⭐ Eng keraklilari`.
+     - **Score sorting rule (mandatory):** Keep every table in `README.md` sorted **descending by score** (`Baho` highest-to-lowest in `⭐ Eng keraklilari`, breaking ties by `Bizga kerakliligi` from the review file; `Sifat` highest-to-lowest in `Yo'nalishlar bo'yicha` category tables, breaking ties by `Keraklilik`).
 
 ### 3. Sanitize before installing & update usage status
 
 When installing, testing, or retiring a cataloged item:
 1. Read `reviews/<category>/<slug>.md` first and apply every required removal/edit from its **Xavfsizlik va Sanitarizatsiya** section before syncing.
 2. Run `skillshare audit` on new or modified skills before enabling them globally.
-3. Update both `README.md` and section `6. Holat va Qilingan ishlar tarixi` in the review file with the date, install scope, stripped parts, and real-world outcome (used vs unused, kept vs removed).
+3. Update both `README.md` (preserving descending score sort order in every table) and section `6. Holat va Qilingan ishlar tarixi` in the review file with the date, install scope, stripped parts, and real-world outcome (used vs unused, kept vs removed).
