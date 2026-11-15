@@ -1,5 +1,7 @@
 # `grill-me` (`grilling` + `grill-with-docs`)
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/architecture/grill-me.md) | [🇷🇺 Русский](../ru/architecture/grill-me.md)
+
 - **Manba:** [aihero.dev/skills-grill-me](https://www.aihero.dev/skills-grill-me)
 - **Turkum:** `Architecture` *(Rejalashtirish, Qarorlar daraxti va Talablarni charxlash)*
 - **Turi:** `Skilllar to'plami` (`grill-me`, `grilling`, `grill-with-docs`)

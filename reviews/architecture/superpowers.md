@@ -1,5 +1,7 @@
 # `superpowers` (Obra / Jesse Vincent)
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/architecture/superpowers.md) | [🇷🇺 Русский](../ru/architecture/superpowers.md)
+
 - **Manba:** [obra/superpowers](https://github.com/obra/superpowers)
 - **Turkum:** `Architecture` *(Ish jarayoni, Brainstorming, Rejalashtirish va Majburiy TDD)*
 - **Turi:** `Plugin` *(14 ta skill + `SessionStart` hook + subagent skriptlari)*

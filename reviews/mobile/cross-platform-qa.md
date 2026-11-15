@@ -1,5 +1,7 @@
 # `cross-platform-qa` (Lokal Emulator → Yakuniy Real Qurilma QA Oqimi)
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/mobile/cross-platform-qa.md) | [🇷🇺 Русский](../ru/mobile/cross-platform-qa.md)
+
 - **Manba:** Ichki global skill (`skills/cross-platform-qa/SKILL.md`)
 - **Turkum:** `Mobile` *(Web + iOS + Android 2-bosqichli tekshiruv qoidasi)*
 - **Turi:** `Skill`

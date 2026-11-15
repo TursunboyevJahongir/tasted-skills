@@ -1,5 +1,7 @@
 # `adb` (Android Debug Bridge — Platform Tools)
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/mobile/adb.md) | [🇷🇺 Русский](../ru/mobile/adb.md)
+
 - **Manba:** [Android SDK Platform-Tools (`adb`)](https://developer.android.com/tools/adb)
 - **Turkum:** `Mobile` *(Android Emulator va haqiqiy Android qurilmalarni boshqarish)*
 - **Turi:** `CLI / Runtime Tool` *(rasmiy Android SDK vositasi)*

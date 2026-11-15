@@ -1,5 +1,7 @@
 # `agent-desktop`
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/developer-tools/agent-desktop.md) | [🇷🇺 Русский](../ru/developer-tools/agent-desktop.md)
+
 - **Manba:** [agent-browser.dev/desktop](https://agent-browser.dev/desktop)
 - **Turkum:** `Developer Tools` *(Desktop GUI, Web brauzer va iOS Simulator avtomatlashtirish)*
 - **Turi:** `CLI + Global Skilllar` (`agent-desktop`, `agent-desktop-macos`, `agent-desktop-ffi`)

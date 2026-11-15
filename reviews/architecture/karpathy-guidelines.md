@@ -1,5 +1,7 @@
 # `karpathy-guidelines` (Multica AI / Andrej Karpathy)
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/architecture/karpathy-guidelines.md) | [🇷🇺 Русский](../ru/architecture/karpathy-guidelines.md)
+
 - **Manba:** [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills)
 - **Turkum:** `Architecture` *(LLM kod yozish xatolarini kamaytirish qoidalari)*
 - **Turi:** `Skill`

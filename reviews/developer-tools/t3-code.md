@@ -1,5 +1,7 @@
 # `T3 Code` + CLI Subagent Ko'prigi
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/developer-tools/t3-code.md) | [🇷🇺 Русский](../ru/developer-tools/t3-code.md)
+
 - **Manba:** [pingdotgg/t3code](https://github.com/pingdotgg/t3code)
 - **Turkum:** `Developer Tools` *(Multi-Agent Orkestratsiya va Cross-AI Code Review)*
 - **Turi:** `Desktop App + CLI Subagent Workflow`

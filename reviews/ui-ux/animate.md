@@ -1,5 +1,7 @@
 # `animate` (Emil Kowalski — Web Motion Construction)
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/ui-ux/animate.md) | [🇷🇺 Русский](../ru/ui-ux/animate.md)
+
 - **Manba:** [emilkowalski/skills — `skills/animate`](https://github.com/emilkowalski/skills/tree/main/skills/animate)
 - **Turkum:** `UI/UX` *(Web CSS, WAAPI va Motion kutubxonasi animatsiyalari)*
 - **Turi:** `Skill` *(`SKILL.md` + `RECIPES.md`, ~410 qator)*

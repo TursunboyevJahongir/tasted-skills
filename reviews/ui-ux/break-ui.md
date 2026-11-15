@@ -1,5 +1,7 @@
 # `break-ui` (Emil Kowalski — Adversarial UI Stress-Testing)
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/ui-ux/break-ui.md) | [🇷🇺 Русский](../ru/ui-ux/break-ui.md)
+
 - **Manba:** [emilkowalski/skills — `skills/break-ui`](https://github.com/emilkowalski/skills/tree/main/skills/break-ui)
 - **Turkum:** `UI/UX` *(UI chekka holatlari / Edge-case data sinovi)*
 - **Turi:** `Skill` *(`SKILL.md` + `CATALOG.md`, ~312 qator)*

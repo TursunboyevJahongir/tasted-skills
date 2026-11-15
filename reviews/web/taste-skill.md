@@ -1,5 +1,7 @@
 # `taste-skill` v2.5 (`design-taste-frontend`)
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/web/taste-skill.md) | [🇷🇺 Русский](../ru/web/taste-skill.md)
+
 - **Manba:** [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) *(eski yengil versiyalari: [Leonxlnx/taste-skill-classics](https://github.com/Leonxlnx/taste-skill-classics))*
 - **Turkum:** `Web` *(Marketing veb-saytlar va kompaniya landing sahifalari)*
 - **Turi:** `Skill + Landing Kit + Headless Chrome Gate + Stop Hook`

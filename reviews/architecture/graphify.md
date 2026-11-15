@@ -1,5 +1,7 @@
 # `graphify`
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/architecture/graphify.md) | [🇷🇺 Русский](../ru/architecture/graphify.md)
+
 - **Manba:** [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify)
 - **Turkum:** `Architecture` *(Kod bazasi va hujjatlardan bilim grafigi — Knowledge Graph)*
 - **Turi:** `Skill + Python CLI (graphifyy)`

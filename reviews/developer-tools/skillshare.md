@@ -1,5 +1,7 @@
 # `skillshare`
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/developer-tools/skillshare.md) | [🇷🇺 Русский](../ru/developer-tools/skillshare.md)
+
 - **Manba:** [runkids/skillshare](https://github.com/runkids/skillshare)
 - **Turkum:** `Developer Tools` *(Skill, Plugin, Agent va MCP sinxronizatsiyasi hamda xavfsizlik auditi)*
 - **Turi:** `CLI + Global Skill`

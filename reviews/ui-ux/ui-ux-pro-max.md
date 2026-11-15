@@ -1,5 +1,7 @@
 # `ui-ux-pro-max` (NextLevelBuilder)
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/ui-ux/ui-ux-pro-max.md) | [🇷🇺 Русский](../ru/ui-ux/ui-ux-pro-max.md)
+
 - **Manba:** [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
 - **Turkum:** `UI/UX` *(Dizayn shablonlari, palitra va shrift qidiruvi)*
 - **Turi:** `Skill + Python CLI / CSV baza`

@@ -1,5 +1,7 @@
 # `elephant-goldfish-model` (Google EGM)
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/architecture/elephant-goldfish-model.md) | [🇷🇺 Русский](../ru/architecture/elephant-goldfish-model.md)
+
 - **Manba:** [google/elephant-goldfish-model](https://github.com/google/elephant-goldfish-model)
 - **Turkum:** `Architecture` *(Spec-Driven Development, Arxitektura va Kod/Hujjat Auditi)*
 - **Turi:** `Plugin` *(7 ta skill + 10 ta maxsus subagent + hujjat standartlari)*

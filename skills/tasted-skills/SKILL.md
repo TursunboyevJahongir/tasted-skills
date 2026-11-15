@@ -17,9 +17,15 @@ Use this skill to recommend vetted AI resources for a task, audit newly shared s
 ## Locate the registry
 
 1. Primary checkout: `~/Projects/tasted-skills` (or two directories above the resolved `realpath` of this `SKILL.md`).
-2. Master grouped index: `README.md` at the registry root.
-3. Detailed reviews: `reviews/<category>/<slug>.md`.
-4. New-entry template: `reviews/TEMPLATE.md`.
+2. Master grouped indexes (tri-lingual, `uz` default):
+   - Uzbek (default): `README.md`
+   - English: `README.en.md`
+   - Russian: `README.ru.md`
+3. Detailed reviews (tri-lingual):
+   - Uzbek (default): `reviews/<category>/<slug>.md`
+   - English: `reviews/en/<category>/<slug>.md`
+   - Russian: `reviews/ru/<category>/<slug>.md`
+4. New-entry templates: `reviews/TEMPLATE.md`, `reviews/en/TEMPLATE.md`, `reviews/ru/TEMPLATE.md`.
 5. Security and sanitization rubric: [references/audit-checklist.md](references/audit-checklist.md).
 
 Categories:
@@ -30,12 +36,15 @@ Categories:
 - `backend` — APIs, databases, cloud, pipelines, observability
 - `developer-tools` — Memory (`claude-mem`, etc.), browser/desktop automation (`agent-desktop`, etc.), CLIs, MCP servers, workflow tools
 
-## Public repository safety rule
+## Public repository safety & tri-lingual rules
 
 `TursunboyevJahongir/tasted-skills` is a **public** GitHub repository:
 - Never write secrets, tokens, internal company/project names, private URLs, IPs, or personal `/Users/<name>/...` paths into tracked files.
 - Refer to project types generically (for example: "funksional web-app", "admin panel", "real-time xarita ilovasi", "Expo mobil ilova").
-- Write `README.md` and `reviews/**/*.md` in clear **Uzbek** (keeping technical identifiers, code, and CLI flags exact).
+- **Tri-lingual documentation (`uz` default + `en` + `ru` with flags):**
+  - Default language is **Uzbek (`uz`)** (`README.md` and `reviews/<category>/<slug>.md`).
+  - Right below the `#` H1 heading of every index and review file, include the flag language switcher (`**🇺🇿 O'zbekcha** | [🇬🇧 English](...) | [🇷🇺 Русский](...)`, bolding the active language).
+  - Whenever adding or updating a review or `README.md`, always generate and update the complete **English (`README.en.md`, `reviews/en/<category>/<slug>.md`)** and **Russian (`README.ru.md`, `reviews/ru/<category>/<slug>.md`)** counterparts in full (never leave stubs or untranslated placeholders).
 - Commit or push to GitHub only when the user asks to save or publish changes.
 
 ## Workflows
@@ -64,15 +73,15 @@ When the user shares a GitHub repository, documentation site, package, MCP serve
    - Fit and conflict score (`X/10`) against our already-installed skills and tools;
    - Recommended scope (`Global -g`, `Project -p`, `Plugin`, `Standalone CLI/MCP`, or `Skip`).
 3. **Record when requested:**
-   - Create `reviews/<category>/<slug>.md` from `reviews/TEMPLATE.md` in Uzbek, always setting `Tekshirilgan sana` (`YYYY-MM-DD`) in both the top metadata block and the history table.
-   - Keep `README.md` concise (no long prose instructions):
-     - Essential, battle-tested daily items (`✅ Ishlatilyapti`) go in the top ungrouped **`⭐ Eng keraklilari`** table.
-     - All remaining items (tested `🧪 Sinab ko'rildi` or reviewed-only `👀 Ko'rib chiqdik (sinab ko'rmadik)`, `⚠️ Faqat local (-p) (sinab ko'rmadik)`, `⏭️ O'tkazib yuborildi (sinab ko'rmadik)`, `⛔ Rad etildi`) go under **`Yo'nalishlar bo'yicha`** in their category table without duplicating rows from `⭐ Eng keraklilari`.
-     - **Score sorting rule (mandatory):** Keep every table in `README.md` sorted **descending by score** (`Baho` highest-to-lowest in `⭐ Eng keraklilari`, breaking ties by `Bizga kerakliligi` from the review file; `Sifat` highest-to-lowest in `Yo'nalishlar bo'yicha` category tables, breaking ties by `Keraklilik`).
+   - Create `reviews/<category>/<slug>.md` (Uzbek default), `reviews/en/<category>/<slug>.md` (English), and `reviews/ru/<category>/<slug>.md` (Russian) from their respective templates, always setting the review date (`YYYY-MM-DD`) in both the top metadata block and the history table, and including the flag switcher right under the `#` H1 title.
+   - Keep `README.md`, `README.en.md`, and `README.ru.md` concise (no long prose instructions):
+     - Essential, battle-tested daily items (`✅ Ishlatilyapti`) go in the top ungrouped **`⭐ Eng keraklilari`** / **`⭐ Top Essentials`** / **`⭐ Самые необходимые`** table.
+     - All remaining items go under **`Yo'nalishlar bo'yicha`** / **`By Category`** / **`По направлениям`** in their category table without duplicating rows from the top essentials table.
+     - **Score sorting rule (mandatory):** Keep every table in `README.md`, `README.en.md`, and `README.ru.md` sorted **descending by score** (`Baho` / `Score` / `Оценка` highest-to-lowest in top essentials, breaking ties by `Bizga kerakliligi` / `Need`; `Sifat` / `Quality` highest-to-lowest in category tables, breaking ties by `Keraklilik` / `Need`).
 
 ### 3. Sanitize before installing & update usage status
 
 When installing, testing, or retiring a cataloged item:
 1. Read `reviews/<category>/<slug>.md` first and apply every required removal/edit from its **Xavfsizlik va Sanitarizatsiya** section before syncing.
 2. Run `skillshare audit` on new or modified skills before enabling them globally.
-3. Update both `README.md` (preserving descending score sort order in every table) and section `6. Holat va Qilingan ishlar tarixi` in the review file with the date, install scope, stripped parts, and real-world outcome (used vs unused, kept vs removed).
+3. Update `README.md`, `README.en.md`, and `README.ru.md` (preserving descending score sort order in every table) and section `6` in all three language review files (`uz`, `en`, `ru`) with the date, install scope, stripped parts, and real-world outcome.

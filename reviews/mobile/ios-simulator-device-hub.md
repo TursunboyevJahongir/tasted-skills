@@ -1,5 +1,7 @@
 # `xcrun simctl` + Xcode `Device Hub` (`devicectl`)
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/mobile/ios-simulator-device-hub.md) | [🇷🇺 Русский](../ru/mobile/ios-simulator-device-hub.md)
+
 - **Manba:** [Apple Xcode Command Line & Simulator Tools (`simctl` / `devicectl`)](https://developer.apple.com/documentation/xcode/interacting-with-simulator-from-the-command-line)
 - **Turkum:** `Mobile` *(iOS Simulator va haqiqiy iPhone/iPad ilovalarini boshqarish)*
 - **Turi:** `CLI + macOS App Bridge` (`Xcode.app` tarkibida)

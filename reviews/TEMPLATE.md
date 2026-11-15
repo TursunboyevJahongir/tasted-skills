@@ -1,5 +1,7 @@
 # <Nomi>
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](en/TEMPLATE.md) | [🇷🇺 Русский](ru/TEMPLATE.md)
+
 - **Manba:** [<owner/repo yoki sayt>](https://...)
 - **Turkum:** `Web` | `Mobile` | `UI/UX` | `Architecture` | `Backend` | `Developer Tools`
 - **Turi:** `Skill` | `Plugin` | `MCP` | `CLI / Desktop Tool` | `Memory`

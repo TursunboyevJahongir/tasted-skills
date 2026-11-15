@@ -1,5 +1,7 @@
 # `mobile-native` (Emil Kowalski — Mobile Web & PWA Platform Layer)
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/mobile/mobile-native.md) | [🇷🇺 Русский](../ru/mobile/mobile-native.md)
+
 - **Manba:** [emilkowalski/skills — `skills/mobile-native`](https://github.com/emilkowalski/skills/tree/main/skills/mobile-native)
 - **Turkum:** `Mobile` *(Mobile Web, PWA & Mini App)*
 - **Turi:** `Skill` *(`SKILL.md` + lokal `LOCAL-COMPATIBILITY.md` moslik himoyasi)*

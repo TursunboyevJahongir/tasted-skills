@@ -1,5 +1,7 @@
 # `ponytail` (Dietrich Gebert)
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/architecture/ponytail.md) | [🇷🇺 Русский](../ru/architecture/ponytail.md)
+
 - **Manba:** [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/blob/main/skills/ponytail/SKILL.md)
 - **Turkum:** `Architecture` *(Kod soddaligi, YAGNI va qisqa javob intizomi)*
 - **Turi:** `Skill`

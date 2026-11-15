@@ -1,5 +1,7 @@
 # Ishlatib ko'rilgan Skill va AI Tool'lar
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](README.en.md) | [🇷🇺 Русский](README.ru.md)
+
 <details>
 <summary>Holat belgilari</summary>
 

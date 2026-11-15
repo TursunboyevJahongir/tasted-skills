@@ -1,5 +1,7 @@
 # `impeccable`
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/ui-ux/impeccable.md) | [🇷🇺 Русский](../ru/ui-ux/impeccable.md)
+
 - **Manba:** [pbakaus/impeccable](https://github.com/pbakaus/impeccable)
 - **Turkum:** `UI/UX` *(Web, Mobile Web va Native iOS/Android dizayn tizimi va UX auditi)*
 - **Turi:** `Skill` *(v4.8.1, lokal mobil yo'naltirish bilan moslashtirilgan)*

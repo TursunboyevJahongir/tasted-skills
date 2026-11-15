@@ -1,5 +1,7 @@
 # `make-interfaces-feel-better` (Jakub Krehel — Design Engineering Micro-Polish)
 
+**🇺🇿 O'zbekcha** | [🇬🇧 English](../en/ui-ux/make-interfaces-feel-better.md) | [🇷🇺 Русский](../ru/ui-ux/make-interfaces-feel-better.md)
+
 - **Manba:** [jakubkrehel/make-interfaces-feel-better](https://github.com/jakubkrehel/make-interfaces-feel-better)
 - **Turkum:** `UI/UX` *(Web CSS mikro-detallar: radius, tabular-nums, soyalar, tugma bosilishi)*
 - **Turi:** `Skill` *(6 ta Markdown fayl, 1154 qator)*
