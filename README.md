@@ -29,6 +29,7 @@
 | [**`karpathy-guidelines`**](reviews/architecture/karpathy-guidelines.md) | Architecture / Code | Skill | **9.0/10** | `✅ Ishlatilyapti` | `2026-11-15` | Taxminlarni ochiq aytish, soddalik va mavjud kodning boshqa qismlariga tegmasdan jarrohlik aniqligida (`surgical`) tahrirlash. |
 | [**`grill-me`**](reviews/architecture/grill-me.md) | Architecture / Planning | Skilllar to'plami | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Kod yozishdan oldin qarorlar daraxti (`design tree`) bo'ylab tavsiya etilgan javoblar bilan talabni oxirigacha pishitadi (`grilling` + `grill-with-docs`). |
 | [**`graphify`**](reviews/architecture/graphify.md) | Architecture / Codebase | Skill + Python CLI | **9.0/10** | `✅ Ishlatilyapti` | `2026-11-15` | Kod (lokal AST, 0 token) va hujjatlardan doimiy bilim grafigi (`graph.json` + HTML) qurib, katta repoda modullar aloqasini soniyada topadi. |
+| [**`elephant-goldfish-model`**](reviews/architecture/elephant-goldfish-model.md) | Architecture / Audit | Plugin (7 skill + 10 agent) | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Xotirali me'mor (*Elephant*) + xotirasiz tanqidchi subagentlar (*Goldfish*): `egm-drift-report` va 5 bosqichli `egm-review` ko'p-repoli tizimlarda hujjat-kod uzilishlari va yashirin xatolarni aniq topadi. |
 
 ---
 
@@ -57,7 +58,6 @@
 
 | Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
 |---|---|---|---|---|---|---|
-| [**`elephant-goldfish-model`**](reviews/architecture/elephant-goldfish-model.md) | Plugin (7 skill + 10 agent) | **9.0/10** | **8.0/10** | `👀 Ko'rib chiqdik (sinab ko'rmadik)` | `2026-11-15` | 5 bosqichli fresh-context Goldfish spec-review + `egm-drift-report`; katta arxitektura uchun kuchli nomzod. |
 | [**`superpowers`**](reviews/architecture/superpowers.md) | Plugin (14 skill + hook) | **6.5/10** | **2.0/10** | `⛔ Rad etildi` | `2026-11-15` | Sinab ko'rilib o'chirib tashlandi: ortiqcha o'ylanish (`SessionStart` hook), keraksiz `brainstorming` savollari (muqobili: `grill-me`), sekinlashtiruvchi subagent looplari va Web/Mobile/Backend uchun 2x ortiqcha ish bo'ladigan majburiy TDD. |
 
 ### ⚙️ Backend
