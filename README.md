@@ -16,7 +16,12 @@
 
 | Nomi | Yo'nalish | Turi | Baho | Holati | Sana | Qisqacha izoh |
 |---|---|---|---|---|---|---|
-| [**`adb`**](reviews/mobile/adb.md) | Mobile | CLI | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Android emulyator (`-no-window`) va real telefonlarda ilovani boshqarish (`uiautomator dump`, `input tap`, `screencap`, `reverse`, `logcat`). `-s <serial>` majburiy. |
+| [**`T3 Code`** + CLI Subagent](reviews/developer-tools/t3-code.md) | Multi-Agent | Desktop App + CLI | **9.0/10** | `✅ Ishlatilyapti` | `2026-11-15` | Bir nechta AI'ni birga ishlatish (*"Codex yozsin, Claude tekshirsin"* deyilganda CLI orqali subagent qilib mustaqil review yurgizadi). |
+| [**`agent-desktop`**](reviews/developer-tools/agent-desktop.md) | Desktop / Web / iOS | CLI + Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | [agent-browser.dev/desktop](https://agent-browser.dev/desktop) — macOS Accessibility (`AX`) orqali Chrome, desktop dasturlar va iOS `Device Hub` ni kursorni qimirlatmasdan fonda boshqaradi. |
+| [**`adb`**](reviews/mobile/adb.md) | Mobile (Android) | CLI | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Android emulyator (`-no-window`) va real telefonlarda ilovani boshqarish (`uiautomator dump`, `input tap`, `screencap`, `reverse`, `logcat`). `-s <serial>` majburiy. |
+| [**`xcrun simctl` + `Device Hub`**](reviews/mobile/ios-simulator-device-hub.md) | Mobile (iOS) | Xcode CLI + App | **9.0/10** | `✅ Ishlatilyapti` | `2026-11-15` | iOS Simulator'ni yoqish va Xcode `Device Hub` + `agent-desktop` orqali ichki iOS UI elementlarini fonda boshqarish (+ real iPhone uchun `devicectl`). |
+| [**`skillshare`**](reviews/developer-tools/skillshare.md) | Developer Tools | CLI + Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Barcha AI agentlar (`Codex`, `Claude`, `Antigravity`) o'rtasida skill/pluginlarni bitta manbadan sinxronlash va xavfsizlik auditidan (`audit`) o'tkazish. |
+| [**`impeccable`**](reviews/ui-ux/impeccable.md) | UI/UX | Skill | **9.5/10** | `✅ Ishlatilyapti` | `2026-11-15` | Web, mobil veb va native iOS/Android ekranlar uchun asosiy dizayn va UX audit tizimi (xavfli tashqi hooklari o'chirilgan holda). |
 
 ---
 
