@@ -61,6 +61,7 @@
 
 | Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
 |---|---|---|---|---|---|---|
+| [**`agency-agents`**](reviews/ru/architecture/agency-agents.md) | 283 persona-промпта + installer | **6.5/10** | **2.5/10** | `⏭️ Пропущено (не тестировали)` | `2026-11-16` | 283 ролевых `.md` промпта в 18 отделах (`~18.5K` токенов раздувания frontmatter и чужие остатки copy-paste). **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md), [**`ponytail`**](reviews/ru/architecture/ponytail.md), [**`elephant-goldfish-model`**](reviews/ru/architecture/elephant-goldfish-model.md), [**`cross-platform-qa`**](reviews/ru/mobile/cross-platform-qa.md). |
 | [**`superpowers`**](reviews/ru/architecture/superpowers.md) | Плагин (14 скиллов + хук) | **6.5/10** | **2.0/10** | `⛔ Отклонено` | `2026-11-15` | Протестировано и удалено: лишние размышления (`SessionStart` хук), ненужные вопросы `brainstorming` (альтернатива: `grill-me`), медленные циклы субагентов и принудительный TDD (2x лишней работы для Web/Mobile/Backend). |
 
 ### ⚙️ Backend
