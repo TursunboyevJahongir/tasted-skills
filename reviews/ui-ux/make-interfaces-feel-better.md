@@ -1,13 +1,14 @@
-# `make-interfaces-feel-better` (Design Engineering Micro-Polish)
+# `make-interfaces-feel-better` (Jakub Krehel — Design Engineering Micro-Polish)
 
-- **Manba:** Lokal/Global skill (`make-interfaces-feel-better`)
+- **Manba:** [jakubkrehel/make-interfaces-feel-better](https://github.com/jakubkrehel/make-interfaces-feel-better)
 - **Turkum:** `UI/UX` *(Web CSS mikro-detallar: radius, tabular-nums, soyalar, tugma bosilishi)*
 - **Turi:** `Skill` *(6 ta Markdown fayl, 1154 qator)*
 - **Sifat bahosi:** **7.5 / 10**
-- **Bizga kerakliligi:** **3.5 / 10**
-- **Tavsiya etilgan ko'lam:** `O'rnatmaslik / O'chirib qo'yish` *(`impeccable` va `animate-expo` bilan ustma-ust tushadi)*
+- **Bizga kerakliligi:** **2.5 / 10**
+- **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(avval o'rnatib ko'rildi va olib tashlandi)*
+- **O'rniga ishlatiladigan muqobillar:** [**`impeccable`**](impeccable.md) ([pbakaus/impeccable](https://github.com/pbakaus/impeccable)) + [**`animate-expo`**](../mobile/animate-expo.md) ([emilkowalski/skills](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo))
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `🧪 Sinab ko'rildi` *(o'rnini `impeccable` + `animate-expo` to'liq bosadi)*
+- **Joriy holati:** `⛔ Rad etildi` *(🧪 Sinab ko'rilib, `impeccable` + `animate-expo` o'rnini to'liq bosgani sabab olib tashlandi)*
 
 ---
 
@@ -23,37 +24,37 @@ Web interfeyslarni silliqlash bo'yicha 19 ta mikro-qoida (`SKILL.md`, `typograph
 
 ---
 
-## 2. Qanchalik yaxshi va qanchalik yomon?
+## 2. Nega olib tashlandi? (Zaif tomonlari va xarajati)
 
-### Kuchli tomonlari
-- Konsentrik border-radius (`outer = inner + padding`), `tabular-nums` va rasm chetidagi `1px oklch` kontur kabi CSS detallari aniq misollar bilan yozilgan.
-
-### Zaif tomonlari va xarajati
-- **`impeccable` bilan to'g'ridan-to'g'ri ustma-ust tushadi (`Auto-trigger overlap`):** Har qanday UI/frontend vazifada `impeccable` bilan bir vaqtda avtomatik yuklanib, kontekstni ikki barobar band qiladi.
-- **Qotib qolgan raqamlar:** Har bir tugmaga `scale(0.96)`, har bir ikonkaga `scale(0.25) + blur(4px)` qo'yishni majburlashi loyihaning o'z dizayn tizimiga har doim ham mos kelmaydi.
-- **`ponytail` ga zid uzun hisobot:** Har bir UI tekshiruvda rad etilgan nomzodlar (`Considered but Rejected`) jadvalini to'qib chiqarishni talab qiladi.
+1. **[`impeccable`](impeccable.md) bilan to'g'ridan-to'g'ri ustma-ust tushadi (`Auto-trigger overlap`):**
+   - `description` qismi deyarli har qanday frontend/UI vazifani tutib oladi — natijada agent bir vaqtda ham `impeccable` ni, ham `make-interfaces-feel-better` ni yuklab, kontekstni ikki hissa band qiladi va qarama-qarshi qoidalar oladi.
+2. **Qotib qolgan (rigid) shablon raqamlar:**
+   - Har bir tugmaga majburiy `scale(0.96)`, har bir ikonkaga `scale(0.25) + blur(4px)` qo'yishni talab qilishi loyihaning o'z dizayn tizimiga har doim ham tushavermaydi.
+3. **[`ponytail`](../architecture/ponytail.md) ga zid uzun hisobot jadvali:**
+   - Skillning katta qismi (`120–187`-qatorlar) agentni rad etilgan sun'iy nomzodlar (`Considered but Rejected`) va uzun `Before/After` jadvallarini to'qib chiqarishga majbur qiladi.
 
 ---
 
 ## 3. Xavfsizlik va Sanitarizatsiya
 
-- **Xavf darajasi:** `Past` *(skript yoki hook yo'q, faqat auto-trigger va hisobot shabloni og'ir)*
-- **Agar saqlansa tozalanishi kerak bo'lgan qism:** `Review Output Format` (`120–187`-qatorlar) olib tashlanishi va `disable-model-invocation: true` qo'yilishi kerak.
+- **Xavf darajasi:** `Past` *(skript yoki hook yo'q, biroq auto-trigger va hisobot shabloni og'ir)*
 
 ---
 
-## 4. Bizdagi to'liq o'rinbosarlar
+## 4. O'rniga nima ishlatiladi? (To'liq o'rinbosarlar)
 
-Uning barcha foydali qoidalari bizda allaqachon 2 ta kuchliroq skill ichida bor:
-1. **[`impeccable`](impeccable.md)** (`craft-floor.md`, `polish.md`, `animate.md`, `typeset.md`) — Web hamda native iOS/Android uchun `tabular-nums`, `text-wrap: balance`, optik tekislash, soyalar, kontrast va animatsiyalarni loyiha dizayn tizimiga moslab bajaradi.
-2. **[`animate-expo`](../mobile/animate-expo.md)** — Mobil (`React Native / Expo`) ilovalarda press-scale, spring, gesture va haptics'ni UI oqimida (`Reanimated`) hal qiladi.
+`make-interfaces-feel-better` olib tashlandi va uning o'rniga quyidagi 2 ta kuchliroq skill ishlatiladi:
+
+1. **O'rniga (Web + iOS + Android UI/UX va Polish):** [**`impeccable`**](impeccable.md) — [pbakaus/impeccable](https://github.com/pbakaus/impeccable)
+   - Uning `craft-floor.md`, `polish.md`, `animate.md` va `typeset.md` bo'limlarida `tabular-nums`, `text-wrap: balance`, optik tekislash, soyalar, `44×44px` bosish maydoni va `will-change` cheklovi allaqachon bor, ustiga-ustak faqat Web emas, native iOS va Android'ni ham qamrab oladi.
+2. **O'rniga (Mobil React Native / Expo animatsiyalar):** [**`animate-expo`**](../mobile/animate-expo.md) — [emilkowalski/skills (`animate-expo`)](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo)
+   - Mobil ilovalarda tugma bosilishi (`press feedback`), bottom-sheet, spring va haptics'ni `Reanimated` UI oqimida (`60/120fps`) hal qiladi.
 
 ---
 
 ## 5. Qaysi yo'nalish va vazifalarda foydali?
 
-- **Qachon ishlatish mumkin:** Faqat `impeccable` o'rnatilmagan oddiy Tailwind/React veb-loyihada tez CSS checklist sifatida.
-- **Qachon ishlatmaslik kerak:** `impeccable` va `ponytail` ishlatilayotgan global muhitda.
+- **Qachon ishlatish kerak:** O'rnatmaslik — o'rniga [`impeccable`](impeccable.md) va [`animate-expo`](../mobile/animate-expo.md) ishlatiladi.
 
 ---
 
@@ -61,4 +62,4 @@ Uning barcha foydali qoidalari bizda allaqachon 2 ta kuchliroq skill ichida bor:
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | `impeccable` va `animate-expo` bilan solishtirma audit | `🧪 Sinab ko'rildi` | Qoidalari `impeccable` (`craft-floor` / `polish`) va `animate-expo` ichida to'liq qamrab olingani hamda auto-trigger ustma-ust tushishi aniqlandi. |
+| 2026-11-15 | `skillshare uninstall make-interfaces-feel-better -g` orqali globaldan olib tashlash | `⛔ Rad etildi` | [`impeccable`](impeccable.md) va [`animate-expo`](../mobile/animate-expo.md) uning barcha foydali qoidalarini to'liq qamrab olgani hamda auto-trigger to'qnashuvi sababli o'chirib tashlandi. |
