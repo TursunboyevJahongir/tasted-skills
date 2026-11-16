@@ -9,7 +9,7 @@
 - **Need for Us:** **10.0 / 10**
 - **Recommended Scope:** `Global CLI + Global Skill (-g)`
 - **Active Since:** `2026-05-30`
-- **Current Status:** `✅ Active` *(central manager for skills across all our AI coding agents)*
+- **Current Status:** `✅ Using` *(central manager for skills across all our AI coding agents)*
 
 ---
 
@@ -59,4 +59,4 @@ All of our global skills (including `tasted-skills`) are synced across 5 agent t
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-05-30 | Initialized unified skill source (`~/.config/skillshare/skills`) across `Claude` & `Codex` | `✅ Active` | Expanded on `2026-10-31` to sync and audit (`skillshare audit`) across all 5 agent targets (`antigravity`, `antigravity-cli`, `claude`, `codex`, `codex-local`). |
+| 2026-05-30 | Initialized unified skill source (`~/.config/skillshare/skills`) across `Claude` & `Codex` | `✅ Using` | Expanded on `2026-10-31` to sync and audit (`skillshare audit`) across all 5 agent targets (`antigravity`, `antigravity-cli`, `claude`, `codex`, `codex-local`). |

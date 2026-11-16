@@ -9,7 +9,7 @@
 - **Need for Us:** **9.0 / 10**
 - **Recommended Scope:** `Global (-g)`
 - **Active Since:** `2026-11-09`
-- **Current Status:** `✅ Active`
+- **Current Status:** `✅ Using`
 
 ---
 
@@ -68,5 +68,5 @@ Core decision sequence (executed in strict order):
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-09 | Installed globally with `LOCAL-COMPATIBILITY.md` guard | `✅ Active` | Reconciled with `impeccable` and existing React Native/Expo projects. |
-| 2026-11-15 | Stripped `Initial Response`, pointed web motion to `impeccable`, and cataloged | `✅ Active` | Synced across all 5 global agent targets. |
+| 2026-11-09 | Installed globally with `LOCAL-COMPATIBILITY.md` guard | `✅ Using` | Reconciled with `impeccable` and existing React Native/Expo projects. |
+| 2026-11-15 | Stripped `Initial Response`, pointed web motion to `impeccable`, and cataloged | `✅ Using` | Synced across all 5 global agent targets. |

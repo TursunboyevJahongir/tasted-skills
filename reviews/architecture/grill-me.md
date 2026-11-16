@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Ishlatilayotgan sana:** `2026-05-23` dan *(oxirgi yangilanish: `2026-11-16`)*
-- **Joriy holati:** `✅ Faol` *(kod yozishdan oldin g'oya va rejani pishitish uchun asosiy vosita)*
+- **Joriy holati:** `✅ Ishlatyapman` *(kod yozishdan oldin g'oya va rejani pishitish uchun asosiy vosita)*
 
 ---
 
@@ -49,9 +49,9 @@ Matt Pocock tomonidan yaratilgan, reja yoki arxitektura g'oyasini kod yozishdan 
 
 ### `mattpocock/skills` to'plamidagi qo'shimcha skillar (`2026-11-16`)
 
-Rasmiy [mattpocock/skills](https://github.com/mattpocock/skills) reposidagi barcha skillar tekshirilib, eng foydali **2 tasi sanitarizatsiya bilan faqat kerak paytda ishlaydigan (`on-demand`) qilib global ulandi (`✅ Faol`)**:
-- **`diagnosing-bugs` (`✅ Faol` — faqat murakkab/noaniq xatolar uchun):** Oddiy 1 qatorli xatolarda ishga tushmasligi uchun trigger chegarasi toraytirildi (`ponytail` ustuvor), osilib qoladigan interaktiv `scripts/hitl-loop.template.sh` olib tashlandi va Web/Mobil UI sikli bizning `agent-desktop` / `agent-device` / `sentry` stekimizga moslandi (`skillshare audit`: `0 issues`).
-- **`improve-codebase-architecture` (`✅ Faol` — `disable-model-invocation: true`):** Faqat arxitektura tekshiruvi so'ralganda ishlaydi; global `codebase-design` auto-trigger shovqinisiz ishlashi uchun 8 atamali lug'at ichki `CODEBASE-DESIGN.md` fayliga joylandi, `CONTEXT.md` (`domain-modeling`) bilan uyg'unlashtirildi hamda `/tmp/architecture-review-<timestamp>.html` ga vizual `Before / After` Mermaid hisobot chiqarib `grilling` ga ulaydi (`skillshare audit`: `0 issues`).
+Rasmiy [mattpocock/skills](https://github.com/mattpocock/skills) reposidagi barcha skillar tekshirilib, eng foydali **2 tasi sanitarizatsiya bilan faqat kerak paytda ishlaydigan (`on-demand`) qilib global ulandi (`✅ Ishlatyapman`)**:
+- **`diagnosing-bugs` (`✅ Ishlatyapman` — faqat murakkab/noaniq xatolar uchun):** Oddiy 1 qatorli xatolarda ishga tushmasligi uchun trigger chegarasi toraytirildi (`ponytail` ustuvor), osilib qoladigan interaktiv `scripts/hitl-loop.template.sh` olib tashlandi va Web/Mobil UI sikli bizning `agent-desktop` / `agent-device` / `sentry` stekimizga moslandi (`skillshare audit`: `0 issues`).
+- **`improve-codebase-architecture` (`✅ Ishlatyapman` — `disable-model-invocation: true`):** Faqat arxitektura tekshiruvi so'ralganda ishlaydi; global `codebase-design` auto-trigger shovqinisiz ishlashi uchun 8 atamali lug'at ichki `CODEBASE-DESIGN.md` fayliga joylandi, `CONTEXT.md` (`domain-modeling`) bilan uyg'unlashtirildi hamda `/tmp/architecture-review-<timestamp>.html` ga vizual `Before / After` Mermaid hisobot chiqarib `grilling` ga ulaydi (`skillshare audit`: `0 issues`).
 - **Rad etilganlar (`⛔ Rad etildi`):** `tdd`, `implement`, `implement-spec`, `to-tickets`, `triage`, `setup-matt-pocock-skills` — majburiy TDD va issue-tracker konveyeri kundalik ishimizda ortiqcha sikl yaratadi.
 
 ---
@@ -67,5 +67,5 @@ Rasmiy [mattpocock/skills](https://github.com/mattpocock/skills) reposidagi barc
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-05-23 | Dastlabki o'rnatish (`grill-me` + `grill-with-docs`) | `✅ Faol` | Kod yozishdan oldin qarorlar daraxti bo'ylab talabni aniqlashtirish sifatida ishlatila boshlandi (`2026-10-31` da `skillshare` yagona bazasiga olindi). |
-| 2026-11-16 | `diagnosing-bugs` va `improve-codebase-architecture` sanitarizatsiyasi va global ulanishi | `✅ Faol` | Faqat kerak paytda ishlaydigan (`on-demand`) qilib tozalandi (`hitl-loop.template.sh` o'chirildi, `CODEBASE-DESIGN.md` biriktirildi, `0/100` audit xavfi) va barcha 5 ta agent muhitiga sinxronlandi; og'ir `tdd`/`to-tickets` skillari rad etildi (`⛔ Rad etildi`). |
+| 2026-05-23 | Dastlabki o'rnatish (`grill-me` + `grill-with-docs`) | `✅ Ishlatyapman` | Kod yozishdan oldin qarorlar daraxti bo'ylab talabni aniqlashtirish sifatida ishlatila boshlandi (`2026-10-31` da `skillshare` yagona bazasiga olindi). |
+| 2026-11-16 | `diagnosing-bugs` va `improve-codebase-architecture` sanitarizatsiyasi va global ulanishi | `✅ Ishlatyapman` | Faqat kerak paytda ishlaydigan (`on-demand`) qilib tozalandi (`hitl-loop.template.sh` o'chirildi, `CODEBASE-DESIGN.md` biriktirildi, `0/100` audit xavfi) va barcha 5 ta agent muhitiga sinxronlandi; og'ir `tdd`/`to-tickets` skillari rad etildi (`⛔ Rad etildi`). |

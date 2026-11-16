@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Standalone Desktop App (/Applications/Orca.app) + Global orchestration Skill`
 - **Ishlatilayotgan sana:** `2026-11-16` dan
-- **Joriy holati:** `✅ Faol` *(T3 Code o'rniga asosiy multi-agent ish muhiti sifatida o'tdik)*
+- **Joriy holati:** `✅ Ishlatyapman` *(T3 Code o'rniga asosiy multi-agent ish muhiti sifatida o'tdik)*
 
 ---
 
@@ -73,4 +73,4 @@
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | `stablyai/orca` (`v1.4.261`) o'rnatish, `PostHog` ni o'chirish, `caffeinate` + `Mobile` + `Codex/Claude/Antigravity` ni ulash va jonli multi-agent test (`run_33e8e230b9fe`) | `✅ Faol` | `T3 Code` to'liq o'chirildi va uning o'rniga `Orca` asosiy multi-agent orchestrator sifatida qoldi. |
+| 2026-11-16 | `stablyai/orca` (`v1.4.261`) o'rnatish, `PostHog` ni o'chirish, `caffeinate` + `Mobile` + `Codex/Claude/Antigravity` ni ulash va jonli multi-agent test (`run_33e8e230b9fe`) | `✅ Ishlatyapman` | `T3 Code` to'liq o'chirildi va uning o'rniga `Orca` asosiy multi-agent orchestrator sifatida qoldi. |

@@ -67,6 +67,6 @@ Global muhitimizdagi `task-context`, `antigravity-claude`, `antigravity-consult`
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-10-23 | `T3 Code` desktop muhitini o'rnatish + CLI subagent review skillarini ulash (`2026-10-31`) | `✅ Faol` | Desktop ilova hamda CLI subagent ko'prigi (Codex ↔ Claude ↔ Antigravity) faol qo'llanildi. |
+| 2026-10-23 | `T3 Code` desktop muhitini o'rnatish + CLI subagent review skillarini ulash (`2026-10-31`) | `✅ Ishlatyapman` | Desktop ilova hamda CLI subagent ko'prigi (Codex ↔ Claude ↔ Antigravity) faol qo'llanildi. |
 | 2026-11-16 | [**`Orca` (`stablyai/orca`)**](orca.md) bilan jonli solishtirish va `T3 Code` ni to'liq o'chirish (`~3.87 GB` bo'shatildi) | `⛔ Rad etildi` | Mobil barqarorlik, Lock Screen (`caffeinate`) va bitta promptdan ichki multi-agent orkestratsiya sabab to'liq `Orca` ga o'tildi. |
 

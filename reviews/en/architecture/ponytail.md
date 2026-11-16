@@ -9,7 +9,7 @@
 - **Relevance to Us:** **9.5 / 10**
 - **Recommended Scope:** `Global (-g)`
 - **Reviewed Date:** `2026-11-15`
-- **Current Status:** `✅ Active`
+- **Current Status:** `✅ Using`
 
 ---
 
@@ -61,4 +61,4 @@ Includes 3 levels (`lite`, `full` default, `ultra`) and clear engineering rules:
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Installed via `skillshare install DietrichGebert/ponytail/skills/ponytail -g` | `✅ Active` | Passed security audit cleanly and synced across all 5 global agent targets. |
+| 2026-11-15 | Installed via `skillshare install DietrichGebert/ponytail/skills/ponytail -g` | `✅ Using` | Passed security audit cleanly and synced across all 5 global agent targets. |

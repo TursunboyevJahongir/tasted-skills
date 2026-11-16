@@ -9,7 +9,7 @@
 - **Relevance to Us:** **9.5 / 10**
 - **Recommended Scope:** `Global (-g)`
 - **Active Since:** `2026-11-09`
-- **Current Status:** `✅ Active` *(primary design skill for all web and mobile UI/UX tasks)*
+- **Current Status:** `✅ Using` *(primary design skill for all web and mobile UI/UX tasks)*
 
 ---
 
@@ -129,5 +129,5 @@ Instead of installing a separate contrast skill (which would collide on auto-tri
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-09 | Installed `v4.8.1` globally (with `mobile-routing-1` and safe hook restrictions) | `✅ Active` | Actively used across web, mobile web, and React Native screens for UI design and contrast/UX auditing. |
-| 2026-11-16 | Added `apca-contrast-1` perceptual contrast patch and ran `skillshare sync -g` | `✅ Active` | Patched `SKILL.md`, `craft-floor.md`, `colorize.md`, `audit.md`, `audit.native.md`, and `critique.md` to check both `WCAG 2` and `APCA (\|Lc\| ≥ 60)`, preventing false failures on crisp white text over mid-tone brand buttons. |
+| 2026-11-09 | Installed `v4.8.1` globally (with `mobile-routing-1` and safe hook restrictions) | `✅ Using` | Actively used across web, mobile web, and React Native screens for UI design and contrast/UX auditing. |
+| 2026-11-16 | Added `apca-contrast-1` perceptual contrast patch and ran `skillshare sync -g` | `✅ Using` | Patched `SKILL.md`, `craft-floor.md`, `colorize.md`, `audit.md`, `audit.native.md`, and `critique.md` to check both `WCAG 2` and `APCA (\|Lc\| ≥ 60)`, preventing false failures on crisp white text over mid-tone brand buttons. |

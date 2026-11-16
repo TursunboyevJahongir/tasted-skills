@@ -72,7 +72,7 @@ When the user asks what skills, plugins, MCPs, or AI tools help with a project o
 1. Read `~/Projects/tasted-skills/README.md` and inspect currently active skills/plugins (for example via `skillshare list -g` when available).
 2. Read `reviews/<category>/<slug>.md` only for relevant matches.
 3. Recommend in three buckets:
-   - **Already active** — installed tools/skills (`✅ Faol` / `✅ Active` / `✅ Активен`) ready to use now.
+   - **Already active** — installed tools/skills (`✅ Ishlatyapman` / `✅ Using` / `✅ Использую`) ready to use now.
    - **Worth adding (`-g` global vs `-p` project-only / CLI)** — vetted `👍 Yaxshi variant` (`👍 Good Option` / `👍 Хороший вариант`) items, noting any required sanitization steps before installation.
    - **Avoid / skip** — `⛔ Rad etildi` (`⛔ Rejected` / `⛔ Отклонено`) items already reviewed as redundant, conflicting, bloated, or unsafe.
 
@@ -91,8 +91,8 @@ When the user shares a GitHub repository, documentation site, package, MCP serve
    - Recommended scope (`Global -g`, `Project -p`, `Plugin`, `Standalone CLI/MCP`, or `Skip`).
 3. **Record when requested:**
    - Create `reviews/<category>/<slug>.md` (Uzbek default), `reviews/en/<category>/<slug>.md` (English), and `reviews/ru/<category>/<slug>.md` (Russian) from their respective templates, always setting the review date (`YYYY-MM-DD`) in both the top metadata block and the history table, and including the flag switcher right under the `#` H1 title.
-   - Keep `README.md`, `README.en.md`, and `README.ru.md` concise (no long prose instructions), using only the 3 short status badges (`✅ Faol`, `👍 Yaxshi variant`, `⛔ Rad etildi` / `✅ Active`, `👍 Good Option`, `⛔ Rejected` / `✅ Активен`, `👍 Хороший вариант`, `⛔ Отклонено`):
-     - Essential, battle-tested daily items (`✅ Faol` / `✅ Active` / `✅ Активен`) go in the top ungrouped **`⭐ Eng keraklilari`** / **`⭐ Top Essentials`** / **`⭐ Самые необходимые`** section.
+   - Keep `README.md`, `README.en.md`, and `README.ru.md` concise (no long prose instructions), using only the 3 short status badges (`✅ Ishlatyapman`, `👍 Yaxshi variant`, `⛔ Rad etildi` / `✅ Using`, `👍 Good Option`, `⛔ Rejected` / `✅ Использую`, `👍 Хороший вариант`, `⛔ Отклонено`):
+     - Essential, battle-tested daily items (`✅ Ishlatyapman` / `✅ Using` / `✅ Использую`) go in the top ungrouped **`⭐ Eng keraklilari`** / **`⭐ Top Essentials`** / **`⭐ Самые необходимые`** section.
      - All remaining items go under **`Yo'nalishlar bo'yicha`** / **`By Category`** / **`По направлениям`** in their category section without duplicating rows from the top essentials section.
      - **Readable entry blocks:** Use separate blocks in all three `README*.md` files rather than wide metadata tables. Each entry has a linked `<h4>` name, a short visible purpose, compact labeled scores/status/type/date, and a localized `<details>` section containing the complete technical description. Separate entries with `<hr>`. Keep names and metadata out of code badges; reserve inline code for technical details. Preserve every review/source link and all catalog metadata.
      - **Ordering rule:** Keep Top Essentials in daily workflow priority order (`grill-me` first, `graphify` second, etc.) without a number column. Keep category entries sorted descending by quality score, breaking ties by need score. Do not duplicate essentials in the categories.

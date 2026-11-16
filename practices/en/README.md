@@ -26,7 +26,7 @@ This section documents **which skills and CLI tools to combine together**, **why
 
 👉 **Full 7-domain comparison matrix:** [**`07-tool-and-skill-comparisons.md`**](07-tool-and-skill-comparisons.md)
 
-| Domain | ✅ Our Active Primary (`Active`) | ⚖️ Compared Alternatives | Key Difference (Why We Picked Ours) |
+| Domain | ✅ Our Primary Tool (`Using`) | ⚖️ Compared Alternatives | Key Difference (Why We Picked Ours) |
 |---|---|---|---|
 | **Mobile & TV UI Testing** | [**`agent-device`**](../../reviews/en/mobile/agent-device.md) | `Maestro CLI` · [**`ARTEMIS`**](../../reviews/en/mobile/artemis.md) · [**`mobile-mcp`**](../../reviews/en/mobile/mobile-mcp.md) | `197–888 ms` speed, `$0` API cost, `0` MCP token bloat, no Java dependency, and built-in `--maestro` replay (`mobile-mcp` burns `~7,580` tokens/turn and is `37x` slower; `ARTEMIS` is paid at runtime & Android-only). |
 | **iOS & Android Emulator RAM/GPU** | [**`simslim`**](../../reviews/en/mobile/simslim.md) + [**`avdslim`**](../../reviews/en/mobile/avdslim.md) | Stock `iOS Simulator` & `Android Studio AVD` | iOS RAM **`2.70 -> 1.16 GB` (`-57%`)** + `1.51 GB` disk cleanup; Android RAM **`4.41 -> 2.64 GB` (`-40.2%`)** + native **Apple Metal GPU (`host`)** instead of CPU `SwiftShader` + `13.8s` Golden Snapshot boot. |

@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **7.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)` *(toraytirilgan explicit trigger va `quick` profil himoyasi bilan)*
 - **Ishlatilayotgan sana:** `2026-11-16` dan
-- **Joriy holati:** `✅ Faol` *(Docker ko'tarmasdan Backend, Web va Mobil manba kodidan zaiflik topish uchun asosiy audit skilli)*
+- **Joriy holati:** `✅ Ishlatyapman` *(Docker ko'tarmasdan Backend, Web va Mobil manba kodidan zaiflik topish uchun asosiy audit skilli)*
 
 ---
 
@@ -54,7 +54,7 @@ Cloudflare xavfsizlik jamoasining ichki zaiflik qidirish tizimidan (`vulnerabili
 
 Ikkalasi bir-birining o'rnini bosmaydi, balki **2 bosqichli xavfsizlik zanjirini** hosil qiladi:
 
-| Mezon | **`security-audit`** *(Cloudflare — `✅ Faol`)* | [**`Shannon` (`hacker-test`)**](shannon.md) *(`👍 Yaxshi variant`)* |
+| Mezon | **`security-audit`** *(Cloudflare — `✅ Ishlatyapman`)* | [**`Shannon` (`hacker-test`)**](shannon.md) *(`👍 Yaxshi variant`)* |
 |---|---|---|
 | **Qanday ishlaydi?** | Manba kodini 6 bosqichda (`Hunter` + `Verifier` subagentlar) tahlil qiladi | Docker + Temporal + Playwright ko'tarib jonli URL'ga real hujum qiladi |
 | **Qamrovi** | Backend, Web, **Mobil (`iOS`/`Android`/`Expo`)**, CLI, Cloud/CI, LLM | Faqat ishlab turgan Web ilova va HTTP API |
@@ -73,5 +73,5 @@ Ikkalasi bir-birining o'rnini bosmaydi, balki **2 bosqichli xavfsizlik zanjirini
 
 | Sana | Amal | Holat | Izoh (ishlatildimi, qayerda sinab ko'rildi, nima tozalandi) |
 |---|---|---|---|
-| 2026-11-16 | Manba kodi, `.cjs` validatorlar (`65/65` test), `skillshare audit` tekshiruvi + sanitarizatsiya bilan global o'rnatish | `✅ Faol` | `SKILL.md` auto-trigger'i aniq so'rovlarga toraytirildi va sukut bo'yicha `quick`/`scoped` profil o'rnatilib barcha 5 ta global agent targetiga (`skillshare sync -g`) ulandi. |
+| 2026-11-16 | Manba kodi, `.cjs` validatorlar (`65/65` test), `skillshare audit` tekshiruvi + sanitarizatsiya bilan global o'rnatish | `✅ Ishlatyapman` | `SKILL.md` auto-trigger'i aniq so'rovlarga toraytirildi va sukut bo'yicha `quick`/`scoped` profil o'rnatilib barcha 5 ta global agent targetiga (`skillshare sync -g`) ulandi. |
 

@@ -9,7 +9,7 @@
 - **Relevance to Us:** **9.5 / 10**
 - **Recommended Scope:** `Global (-g)`
 - **Active Since:** `2026-07-28`
-- **Current Status:** `✅ Active` *(used to quickly map and query the architecture of large codebases)*
+- **Current Status:** `✅ Using` *(used to quickly map and query the architecture of large codebases)*
 
 ---
 
@@ -61,4 +61,4 @@ A tool that turns any project folder (code, SQL schemas, Markdown docs, PDFs, im
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-07-28 | Started building `graphify-out/` knowledge graphs across production repositories | `✅ Active` | Used across multiple large backend and mobile repositories (`2026-09-22` CLI updated, `2026-10-31` synced globally via `skillshare`). |
+| 2026-07-28 | Started building `graphify-out/` knowledge graphs across production repositories | `✅ Using` | Used across multiple large backend and mobile repositories (`2026-09-22` CLI updated, `2026-10-31` synced globally via `skillshare`). |

@@ -26,7 +26,7 @@ Ushbu bo'limda alohida skill va CLI vositalarni **bir-biri bilan qanday ulab ish
 
 👉 **Batafsil 7 yo'nalishli solishtiruv jadvali:** [**`07-tool-and-skill-comparisons.md`**](07-tool-and-skill-comparisons.md)
 
-| Yo'nalish | ✅ Bizdagi Asosiy Vosita (`Faol`) | ⚖️ Solishtirilgan Muqobillar | Asosiy Farq (Nega biznikini tanladik?) |
+| Yo'nalish | ✅ Bizdagi Asosiy Vosita (`Ishlatyapman`) | ⚖️ Solishtirilgan Muqobillar | Asosiy Farq (Nega biznikini tanladik?) |
 |---|---|---|---|
 | **Mobil va TV UI Test** | [**`agent-device`**](../reviews/mobile/agent-device.md) | `Maestro CLI` · [**`ARTEMIS`**](../reviews/mobile/artemis.md) · [**`mobile-mcp`**](../reviews/mobile/mobile-mcp.md) | `197–888 ms` tezlik, `$0` API xarajati, `0` MCP token shishishi, Java kerakmas va ichida tayyor `--maestro` bor (`mobile-mcp` `~7,580` token yeydi va `37x` sekin; `ARTEMIS` pullik va faqat Android). |
 | **iOS va Android Emulyator RAM/GPU** | [**`simslim`**](../reviews/mobile/simslim.md) + [**`avdslim`**](../reviews/mobile/avdslim.md) | Odatiy (Stock) `iOS Simulator` va `Android Studio AVD` | iOS RAM **`2.70 -> 1.16 GB` (`-57%`)** + `1.51 GB` disk tozalash; Android RAM **`4.41 -> 2.64 GB` (`-40.2%`)** + CPU `SwiftShader` o'rniga **Apple Metal GPU (`host`)** va `13.8s` Golden Snapshot boot. |

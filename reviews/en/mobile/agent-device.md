@@ -9,7 +9,7 @@
 - **Need for Us:** **9.5 / 10**
 - **Recommended Scope:** `Global CLI (npm i -g agent-device) + Sanitized Global Skill (-g)`
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `✅ Active` *(primary driver for mobile and TV UI verification)*
+- **Current Status:** `✅ Using` *(primary driver for mobile and TV UI verification)*
 
 ---
 
@@ -77,4 +77,4 @@ Measured live on macOS against an iOS 26.5 Simulator and a connected Android tab
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Source audit, live iOS Simulator & Android tablet benchmark, sanitization, and global install | `✅ Active` | Installed `0.21.37` CLI + sanitized `agent-device` skill across all 5 agent targets and upgraded `cross-platform-qa` (`197 ms` windowless iOS, `888 ms` / `~100-token` Android snapshots). |
+| 2026-11-16 | Source audit, live iOS Simulator & Android tablet benchmark, sanitization, and global install | `✅ Using` | Installed `0.21.37` CLI + sanitized `agent-device` skill across all 5 agent targets and upgraded `cross-platform-qa` (`197 ms` windowless iOS, `888 ms` / `~100-token` Android snapshots). |

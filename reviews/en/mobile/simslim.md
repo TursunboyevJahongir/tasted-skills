@@ -10,7 +10,7 @@
 - **Recommended Scope:** `Global CLI (Homebrew)` — applied once per local `iOS 18.5+` / `tvOS` simulator with a safe feature-preserving profile
 - **Works Alongside:** [**`agent-device`**](agent-device.md) + [**`xcrun simctl`**](ios-simulator-device-hub.md) + [**`cross-platform-qa`**](cross-platform-qa.md) *(note: skip the companion closed-source `MobAI Pro` / `mobai-mcp` app — [`agent-device`](agent-device.md) handles all UI driving)*
 - **Active Since:** `2026-11-16`
-- **Current Status:** `✅ Active`
+- **Current Status:** `✅ Using`
 
 ---
 
@@ -87,4 +87,4 @@ Measured live on an `Apple M1 Max (32 GB RAM)` booting `iPhone 17 Pro (iOS 26.5)
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Go source audit, `brew install mobai-app/tap/simslim` (`v0.14.0`), live `iPhone 17 Pro (iOS 26.5)` RAM/disk benchmark, and safe-profile rollout across all 10 local simulators | `✅ Active` | Cut headless boot from `182 -> 78` processes and `2.70 GB -> 1.16 GB` RAM (`-57%`) while keeping `push`, `universal-links`, `photos`, `spotlight`, and `agent-device` 100% working. |
+| 2026-11-16 | Go source audit, `brew install mobai-app/tap/simslim` (`v0.14.0`), live `iPhone 17 Pro (iOS 26.5)` RAM/disk benchmark, and safe-profile rollout across all 10 local simulators | `✅ Using` | Cut headless boot from `182 -> 78` processes and `2.70 GB -> 1.16 GB` RAM (`-57%`) while keeping `push`, `universal-links`, `photos`, `spotlight`, and `agent-device` 100% working. |

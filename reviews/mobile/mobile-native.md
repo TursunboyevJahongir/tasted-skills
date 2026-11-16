@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **7.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)` *(tozalangan va moslashtirilgan holda)*
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `✅ Faol`
+- **Joriy holati:** `✅ Ishlatyapman`
 
 ---
 
@@ -80,5 +80,5 @@ Tozalangandan keyin mavjud global skillar bilan **umuman to'qnashmaydi**, aksinc
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Video + GitHub `SKILL.md` dastlabki auditi | `✅ Faol` | Sifatli va xavfsiz deb topildi (`8.5/10`). |
-| 2026-11-15 | Sanitarizatsiya + `LOCAL-COMPATIBILITY.md` + `skillshare` orqali global o'rnatish | `✅ Faol` | `Initial Response` olib tashlandi, admin/native istisnolari va `impeccable` mosligi qo'shilib, barcha 5 ta global agentga sinxronlandi. |
+| 2026-11-15 | Video + GitHub `SKILL.md` dastlabki auditi | `✅ Ishlatyapman` | Sifatli va xavfsiz deb topildi (`8.5/10`). |
+| 2026-11-15 | Sanitarizatsiya + `LOCAL-COMPATIBILITY.md` + `skillshare` orqali global o'rnatish | `✅ Ishlatyapman` | `Initial Response` olib tashlandi, admin/native istisnolari va `impeccable` mosligi qo'shilib, barcha 5 ta global agentga sinxronlandi. |

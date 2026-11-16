@@ -9,7 +9,7 @@
 - **Need for Us:** **7.5 / 10**
 - **Recommended Scope:** `Global (-g)` *(sanitized and scoped)*
 - **Reviewed Date:** `2026-11-15`
-- **Current Status:** `✅ Active`
+- **Current Status:** `✅ Using`
 
 ---
 
@@ -80,5 +80,5 @@ Fills the exact mobile-browser platform gap without colliding with our existing 
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Initial video + GitHub `SKILL.md` audit | `✅ Active` | Rated `8.5/10` quality and safe. |
-| 2026-11-15 | Sanitized + added `LOCAL-COMPATIBILITY.md` + installed globally via `skillshare` | `✅ Active` | Stripped `Initial Response`, added admin/native exclusions and `impeccable` compatibility guard, and synced across all 5 global agent targets. |
+| 2026-11-15 | Initial video + GitHub `SKILL.md` audit | `✅ Using` | Rated `8.5/10` quality and safe. |
+| 2026-11-15 | Sanitized + added `LOCAL-COMPATIBILITY.md` + installed globally via `skillshare` | `✅ Using` | Stripped `Initial Response`, added admin/native exclusions and `impeccable` compatibility guard, and synced across all 5 global agent targets. |

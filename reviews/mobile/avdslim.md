@@ -10,7 +10,7 @@
 - **Tavsiya etilgan ko'lam:** `Global CLI (/opt/homebrew/bin/avdslim)` — barcha lokal Android AVD'larga `tune-avd` + `bake --headless` va GPS himoyalangan `defaults` bilan qo'llanadi (`install-shim` shart emas)
 - **Birga ishlaydigan tizimlar:** [**`agent-device`**](agent-device.md) + [**`adb`**](adb.md) + [**`simslim`**](simslim.md) + [**`cross-platform-qa`**](cross-platform-qa.md)
 - **Ishlatilayotgan sana:** `2026-11-16` dan
-- **Joriy holati:** `✅ Faol`
+- **Joriy holati:** `✅ Ishlatyapman`
 
 ---
 
@@ -74,4 +74,4 @@ Bir vaqtda ham iOS Simulator, ham Android Emulator ko'rinmas fonda yoqilganda um
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Go manba kodi auditi, `v1.0.16` o'rnatish, `defaults` (`--skip=location --keep=com.google.android.apps.maps`), 4 ta AVD `tune-avd` va `API 35` telefon + planshet AVD'lariga headless Golden Snapshot (`bake`) yig'ish | `✅ Faol` | `4 413 MB -> 2 640 MB` (`-40.2%` Footprint) va `SwiftShader -> Apple Metal GPU` o'tishi tasdiqlandi; `cross-platform-qa` oqimiga ulandi. |
+| 2026-11-16 | Go manba kodi auditi, `v1.0.16` o'rnatish, `defaults` (`--skip=location --keep=com.google.android.apps.maps`), 4 ta AVD `tune-avd` va `API 35` telefon + planshet AVD'lariga headless Golden Snapshot (`bake`) yig'ish | `✅ Ishlatyapman` | `4 413 MB -> 2 640 MB` (`-40.2%` Footprint) va `SwiftShader -> Apple Metal GPU` o'tishi tasdiqlandi; `cross-platform-qa` oqimiga ulandi. |

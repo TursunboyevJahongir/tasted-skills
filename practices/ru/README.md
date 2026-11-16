@@ -26,7 +26,7 @@
 
 👉 **Полная таблица сравнения по 7 направлениям:** [**`07-tool-and-skill-comparisons.md`**](07-tool-and-skill-comparisons.md)
 
-| Направление | ✅ Наш Основной Инструмент (`Активен`) | ⚖️ Сравненные Альтернативы | Главная Разница (Почему выбрали наш вариант?) |
+| Направление | ✅ Наш Основной Инструмент (`Использую`) | ⚖️ Сравненные Альтернативы | Главная Разница (Почему выбрали наш вариант?) |
 |---|---|---|---|
 | **Тестирование Mobile и TV UI** | [**`agent-device`**](../../reviews/ru/mobile/agent-device.md) | `Maestro CLI` · [**`ARTEMIS`**](../../reviews/ru/mobile/artemis.md) · [**`mobile-mcp`**](../../reviews/ru/mobile/mobile-mcp.md) | Скорость `197–888 мс`, `$0` за API, `0` раздувания MCP-токенов, не требует Java и включает `--maestro` (`mobile-mcp` сжигает `~7,580` токенов/ход и в `37x` медленнее; `ARTEMIS` платный и только под Android). |
 | **RAM и GPU Эмуляторов iOS/Android** | [**`simslim`**](../../reviews/ru/mobile/simslim.md) + [**`avdslim`**](../../reviews/ru/mobile/avdslim.md) | Обычные (Stock) `iOS Simulator` и `Android Studio AVD` | iOS RAM **`2.70 -> 1.16 GB` (`-57%`)** + очистка `1.51 GB` диска; Android RAM **`4.41 -> 2.64 GB` (`-40.2%`)** + нативный **Apple Metal GPU (`host`)** вместо CPU `SwiftShader` + старт за `13.8s` из Golden Snapshot. |

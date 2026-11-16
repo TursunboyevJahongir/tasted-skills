@@ -9,7 +9,7 @@
 - **Need for Us:** **10.0 / 10**
 - **Recommended Scope:** `Global (-g) + Standalone CLI`
 - **Reviewed Date:** `2026-11-15`
-- **Current Status:** `✅ Active` *(primary background driver for macOS desktop apps, Chrome, and iOS Simulator)*
+- **Current Status:** `✅ Using` *(primary background driver for macOS desktop apps, Chrome, and iOS Simulator)*
 
 ---
 
@@ -68,5 +68,5 @@ Core workflow (`observe → act → verify`):
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Local CLI installation and integration into daily QA workflow | `✅ Active` | CLI and `agent-desktop`, `agent-desktop-macos`, `agent-desktop-ffi` skills installed globally. |
-| 2026-11-16 | Clarified domain split (`Web/Desktop` vs `Mobile/TV`) | `✅ Active` | Retained as primary driver for Web (`Google Chrome`) and macOS desktop apps, while mobile/TV UI flows moved to `agent-device`. |
+| 2026-11-15 | Local CLI installation and integration into daily QA workflow | `✅ Using` | CLI and `agent-desktop`, `agent-desktop-macos`, `agent-desktop-ffi` skills installed globally. |
+| 2026-11-16 | Clarified domain split (`Web/Desktop` vs `Mobile/TV`) | `✅ Using` | Retained as primary driver for Web (`Google Chrome`) and macOS desktop apps, while mobile/TV UI flows moved to `agent-device`. |

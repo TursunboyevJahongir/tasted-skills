@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `✅ Faol`
+- **Joriy holati:** `✅ Ishlatyapman`
 
 ---
 
@@ -61,4 +61,4 @@ Ichida 3 xil rejim (`lite`, `full` default, `ultra`) va aniq qoidalar bor:
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | `skillshare install DietrichGebert/ponytail/skills/ponytail -g` orqali o'rnatish | `✅ Faol` | Audit toza o'tdi va barcha 5 ta global agent targetiga sinxronlandi. |
+| 2026-11-15 | `skillshare install DietrichGebert/ponytail/skills/ponytail -g` orqali o'rnatish | `✅ Ishlatyapman` | Audit toza o'tdi va barcha 5 ta global agent targetiga sinxronlandi. |

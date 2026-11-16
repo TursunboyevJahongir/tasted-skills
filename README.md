@@ -5,7 +5,7 @@
 <details>
 <summary>Holat belgilari</summary>
 
-- `✅ Faol` — doimiy ishlatilyapti
+- `✅ Ishlatyapman` — doimiy ishlatilyapti
 - `👍 Yaxshi variant` — tekshirilgan, kerakli vaziyatda ishlatishga arziydi
 - `⛔ Rad etildi` — bizga kerak emas, ziddiyatli yoki xavfli
 
@@ -22,7 +22,7 @@
 
 <p>Reja, Qarorlar va Chuqur Debug</p>
 
-<p>Baho: 9.5/10 · ✅ Faol · Skilllar to'plami<br>Sana: 2026-05-23 dan</p>
+<p>Baho: 9.5/10 · ✅ Ishlatyapman · Skilllar to'plami<br>Sana: 2026-05-23 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -37,7 +37,7 @@
 
 <p>Kod bazasi xaritasi (Knowledge Graph)</p>
 
-<p>Baho: 9.5/10 · ✅ Faol · Skill + Python CLI<br>Sana: 2026-07-28 dan</p>
+<p>Baho: 9.5/10 · ✅ Ishlatyapman · Skill + Python CLI<br>Sana: 2026-07-28 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -52,7 +52,7 @@
 
 <p>Minimal va toza kod (YAGNI)</p>
 
-<p>Baho: 9.5/10 · ✅ Faol · Skill<br>Sana: 2026-11-15 dan</p>
+<p>Baho: 9.5/10 · ✅ Ishlatyapman · Skill<br>Sana: 2026-11-15 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -67,7 +67,7 @@
 
 <p>Jarrohlik aniqligida tahrir (Surgical)</p>
 
-<p>Baho: 9.5/10 · ✅ Faol · Skill<br>Sana: 2026-11-15 dan</p>
+<p>Baho: 9.5/10 · ✅ Ishlatyapman · Skill<br>Sana: 2026-11-15 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -82,7 +82,7 @@
 
 <p>Asosiy UI/UX dizayn va audit</p>
 
-<p>Baho: 9.5/10 · ✅ Faol · Skill<br>Sana: 2026-11-09 dan</p>
+<p>Baho: 9.5/10 · ✅ Ishlatyapman · Skill<br>Sana: 2026-11-09 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -97,7 +97,7 @@
 
 <p>Mustaqil Arxitektura va Kod Review</p>
 
-<p>Baho: 9.5/10 · ✅ Faol · Plugin (7 skill + 10 agent)<br>Sana: 2026-11-15 dan</p>
+<p>Baho: 9.5/10 · ✅ Ishlatyapman · Plugin (7 skill + 10 agent)<br>Sana: 2026-11-15 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -112,7 +112,7 @@
 
 <p>Web (Chrome) va Desktop UI test</p>
 
-<p>Baho: 9.5/10 · ✅ Faol · CLI + Skill<br>Sana: 2026-11-15 dan</p>
+<p>Baho: 9.5/10 · ✅ Ishlatyapman · CLI + Skill<br>Sana: 2026-11-15 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -127,7 +127,7 @@
 
 <p>Mobil va TV (iOS / Android / tvOS) UI test</p>
 
-<p>Baho: 9.5/10 · ✅ Faol · CLI + Skill<br>Sana: 2026-11-16 dan</p>
+<p>Baho: 9.5/10 · ✅ Ishlatyapman · CLI + Skill<br>Sana: 2026-11-16 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -142,7 +142,7 @@
 
 <p>2-bosqichli Web / Mobil / TV QA</p>
 
-<p>Baho: 9.5/10 · ✅ Faol · Skill<br>Sana: 2026-11-15 dan</p>
+<p>Baho: 9.5/10 · ✅ Ishlatyapman · Skill<br>Sana: 2026-11-15 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -157,7 +157,7 @@
 
 <p>Full-Stack Xatolar va Trace tahlili</p>
 
-<p>Baho: 9.5/10 · ✅ Faol · Self-Hosted + Skill / MCP<br>Sana: 2026-07-08 dan</p>
+<p>Baho: 9.5/10 · ✅ Ishlatyapman · Self-Hosted + Skill / MCP<br>Sana: 2026-07-08 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -172,7 +172,7 @@
 
 <p>Skill sinxronlash va Xavfsizlik (audit)</p>
 
-<p>Baho: 9.5/10 · ✅ Faol · CLI + Skill<br>Sana: 2026-05-30 dan</p>
+<p>Baho: 9.5/10 · ✅ Ishlatyapman · CLI + Skill<br>Sana: 2026-05-30 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -187,7 +187,7 @@
 
 <p>Expo / React Native 60/120fps animatsiya</p>
 
-<p>Baho: 9.5/10 · ✅ Faol · Skill<br>Sana: 2026-11-09 dan</p>
+<p>Baho: 9.5/10 · ✅ Ishlatyapman · Skill<br>Sana: 2026-11-09 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -202,7 +202,7 @@
 
 <p>Multi-Agent orkestratsiya va Mobil boshqaruv</p>
 
-<p>Baho: 9.5/10 · ✅ Faol · Desktop + Mobile App + CLI + Skill<br>Sana: 2026-11-16 dan</p>
+<p>Baho: 9.5/10 · ✅ Ishlatyapman · Desktop + Mobile App + CLI + Skill<br>Sana: 2026-11-16 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -217,7 +217,7 @@
 
 <p>Android port (reverse) va logcat</p>
 
-<p>Baho: 9.0/10 · ✅ Faol · CLI<br>Sana: 2026-09-07 dan</p>
+<p>Baho: 9.0/10 · ✅ Ishlatyapman · CLI<br>Sana: 2026-09-07 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -232,7 +232,7 @@
 
 <p>iOS headless boot va devicectl</p>
 
-<p>Baho: 9.0/10 · ✅ Faol · Xcode CLI + App<br>Sana: 2026-10-20 dan</p>
+<p>Baho: 9.0/10 · ✅ Ishlatyapman · Xcode CLI + App<br>Sana: 2026-10-20 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -247,7 +247,7 @@
 
 <p>iOS / tvOS Simulator RAM va Disk optimizatori</p>
 
-<p>Baho: 9.0/10 · ✅ Faol · Standalone Go CLI<br>Sana: 2026-11-16 dan</p>
+<p>Baho: 9.0/10 · ✅ Ishlatyapman · Standalone Go CLI<br>Sana: 2026-11-16 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -262,7 +262,7 @@
 
 <p>Android AVD RAM va Metal GPU optimizatori</p>
 
-<p>Baho: 9.0/10 · ✅ Faol · Standalone Go CLI<br>Sana: 2026-11-16 dan</p>
+<p>Baho: 9.0/10 · ✅ Ishlatyapman · Standalone Go CLI<br>Sana: 2026-11-16 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -277,7 +277,7 @@
 
 <p>6-bosqichli Manba Kodi Xavfsizlik Auditi</p>
 
-<p>Baho: 9.0/10 · ✅ Faol · Skill<br>Sana: 2026-11-16 dan</p>
+<p>Baho: 9.0/10 · ✅ Ishlatyapman · Skill<br>Sana: 2026-11-16 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -292,7 +292,7 @@
 
 <p>Mobil Web / PWA va Web->App ko'chirish</p>
 
-<p>Baho: 8.5/10 · ✅ Faol · Skilllar to'plami<br>Sana: 2026-11-15 dan</p>
+<p>Baho: 8.5/10 · ✅ Ishlatyapman · Skilllar to'plami<br>Sana: 2026-11-15 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -307,7 +307,7 @@
 
 <p>Lokal Rasm / SVG / Video / 3D siqish</p>
 
-<p>Baho: 7.5/10 · ✅ Faol · CLI + <a href="skills/asset-diet/SKILL.md">asset-diet</a><br>Sana: 2026-11-16 dan</p>
+<p>Baho: 7.5/10 · ✅ Ishlatyapman · CLI + <a href="skills/asset-diet/SKILL.md">asset-diet</a><br>Sana: 2026-11-16 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -322,7 +322,7 @@
 
 <p>Video, Reel va QA Bug-Video tahlili</p>
 
-<p>Baho: 9.0/10 · ✅ Faol · Skill + CLI (yt-dlp + ffmpeg)<br>Sana: 2026-10-25 dan</p>
+<p>Baho: 9.0/10 · ✅ Ishlatyapman · Skill + CLI (yt-dlp + ffmpeg)<br>Sana: 2026-10-25 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -337,7 +337,7 @@
 
 <p>Ikki tomonlama Figma &lt;-&gt; Kod ko'prigi</p>
 
-<p>Baho: 9.0/10 · ✅ Faol · 6 ta Skill + MCP<br>Sana: 2026-10-20 dan</p>
+<p>Baho: 9.0/10 · ✅ Ishlatyapman · 6 ta Skill + MCP<br>Sana: 2026-10-20 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -352,7 +352,7 @@
 
 <p>Web / Mobile Web / WebOS tezlik va recovery</p>
 
-<p>Baho: 9.0/10 · ✅ Faol · Skill<br>Sana: 2026-11-10 dan</p>
+<p>Baho: 9.0/10 · ✅ Ishlatyapman · Skill<br>Sana: 2026-11-10 dan</p>
 
 <details>
 <summary>Batafsil</summary>
@@ -367,7 +367,7 @@
 
 <p>Drizzle ORM v2 sxema va relyatsiya</p>
 
-<p>Baho: 8.5/10 · ✅ Faol · Skill<br>Sana: 2026-11-05 dan</p>
+<p>Baho: 8.5/10 · ✅ Ishlatyapman · Skill<br>Sana: 2026-11-05 dan</p>
 
 <details>
 <summary>Batafsil</summary>

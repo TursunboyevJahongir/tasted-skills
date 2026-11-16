@@ -10,7 +10,7 @@
 - **Tavsiya etilgan ko'lam:** `Global (-g)` *(AI navigatsiya skilli / MCP orqali barcha loyihalar uchun)*
 - **Muqobil tizim bilan bog'liqlik:** [**`opentelemetry`**](opentelemetry.md) *(Sentry v8+ SDK kapot ostida OTel ustiga qurilgan)*
 - **Ishlatilayotgan sana:** `2026-07-08` dan
-- **Joriy holati:** `✅ Faol` *(Backend, Web va iOS/Android ilovalarda asosiy xato, trace va replay tahlil tizimi)*
+- **Joriy holati:** `✅ Ishlatyapman` *(Backend, Web va iOS/Android ilovalarda asosiy xato, trace va replay tahlil tizimi)*
 
 ---
 
@@ -70,4 +70,4 @@ Web (`React`, `Next.js`), Mobile (`iOS`, `Android`, `React Native / Expo`) va Ba
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-07-08 | Self-hosted Sentry platformasini loyihalarga ulash + AI navigatsiya skilli (`2026-10-31`) | `✅ Faol` | Backend, Web va iOS/Android loyihalar ulangan; xato, stack-trace, breadcrumbs va trace tahlilida asosiy observability tizimi sifatida faol ishlatilmoqda. |
+| 2026-07-08 | Self-hosted Sentry platformasini loyihalarga ulash + AI navigatsiya skilli (`2026-10-31`) | `✅ Ishlatyapman` | Backend, Web va iOS/Android loyihalar ulangan; xato, stack-trace, breadcrumbs va trace tahlilida asosiy observability tizimi sifatida faol ishlatilmoqda. |

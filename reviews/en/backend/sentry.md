@@ -10,7 +10,7 @@
 - **Recommended Scope:** `Global (-g)` *(across all projects via AI navigation skill / MCP)*
 - **Related Alternative:** [**`opentelemetry`**](opentelemetry.md) *(Sentry v8+ SDKs run on OpenTelemetry under the hood)*
 - **Active Since:** `2026-07-08`
-- **Current Status:** `✅ Active` *(primary error, trace, and replay investigation platform across Backend, Web, and iOS/Android)*
+- **Current Status:** `✅ Using` *(primary error, trace, and replay investigation platform across Backend, Web, and iOS/Android)*
 
 ---
 
@@ -70,4 +70,4 @@ A unified observability platform that captures real-time errors, slow requests, 
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-07-08 | Integrated Self-Hosted Sentry across projects + synced AI diagnostic skill (`2026-10-31`) | `✅ Active` | Connected across Backend, Web, and iOS/Android projects as our primary platform for error, stack-trace, breadcrumb, and trace diagnostics. |
+| 2026-07-08 | Integrated Self-Hosted Sentry across projects + synced AI diagnostic skill (`2026-10-31`) | `✅ Using` | Connected across Backend, Web, and iOS/Android projects as our primary platform for error, stack-trace, breadcrumb, and trace diagnostics. |

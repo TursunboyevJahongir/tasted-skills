@@ -10,7 +10,7 @@
 - **Tavsiya etilgan ko'lam:** `Global CLI (Homebrew)` — barcha lokal `iOS 18.5+` / `tvOS` simulyatorlarga xavfsiz profil bilan bir marta qo'llanadi
 - **Birga ishlaydigan tizimlar:** [**`agent-device`**](agent-device.md) + [**`xcrun simctl`**](ios-simulator-device-hub.md) + [**`cross-platform-qa`**](cross-platform-qa.md) *(eslatma: ushbu jamoaning yopiq `MobAI Pro` / `mobai-mcp` qismi kerak emas — UI boshqaruv to'liq `agent-device` da)*
 - **Ishlatilayotgan sana:** `2026-11-16` dan
-- **Joriy holati:** `✅ Faol`
+- **Joriy holati:** `✅ Ishlatyapman`
 
 ---
 
@@ -87,4 +87,4 @@ simslim doctor <UDID> --requires push,universal-links,photos,spotlight
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Go manba kodi auditi, `brew install mobai-app/tap/simslim` (`v0.14.0`), `iPhone 17 Pro (iOS 26.5)` da jonli RAM/disk benchmark va barcha 10 ta simulyatorga xavfsiz profil qo'llash | `✅ Faol` | Oynasiz bootda `182 -> 78` jarayon va `2.70 GB -> 1.16 GB` RAM (`-57%`) tasdiqlandi; `push`, `universal-links`, `photos`, `spotlight` va `agent-device` 100% ishchi holatda qoldi. |
+| 2026-11-16 | Go manba kodi auditi, `brew install mobai-app/tap/simslim` (`v0.14.0`), `iPhone 17 Pro (iOS 26.5)` da jonli RAM/disk benchmark va barcha 10 ta simulyatorga xavfsiz profil qo'llash | `✅ Ishlatyapman` | Oynasiz bootda `182 -> 78` jarayon va `2.70 GB -> 1.16 GB` RAM (`-57%`) tasdiqlandi; `push`, `universal-links`, `photos`, `spotlight` va `agent-device` 100% ishchi holatda qoldi. |

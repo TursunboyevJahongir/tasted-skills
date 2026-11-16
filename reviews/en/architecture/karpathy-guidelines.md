@@ -9,7 +9,7 @@
 - **Relevance to Us:** **9.5 / 10**
 - **Recommended Scope:** `Global (-g)`
 - **Reviewed Date:** `2026-11-15`
-- **Current Status:** `✅ Active`
+- **Current Status:** `✅ Using`
 
 ---
 
@@ -57,4 +57,4 @@ A compact Markdown skill (`SKILL.md`, 2.5 KB) distilling Andrej Karpathy's 4 cor
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Installed via `skillshare install multica-ai/andrej-karpathy-skills -g` | `✅ Active` | Passed security audit cleanly and synced across all 5 global agent targets. |
+| 2026-11-15 | Installed via `skillshare install multica-ai/andrej-karpathy-skills -g` | `✅ Using` | Passed security audit cleanly and synced across all 5 global agent targets. |

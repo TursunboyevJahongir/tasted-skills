@@ -5,7 +5,7 @@
 <details>
 <summary>Status Legend</summary>
 
-- `✅ Active` — used daily in our workflow
+- `✅ Using` — used daily in our workflow
 - `👍 Good Option` — vetted, worth using when the right case arises
 - `⛔ Rejected` — not needed, conflicting, bloated, or unsafe
 
@@ -22,7 +22,7 @@
 
 <p>Planning, Decisions &amp; Deep Debug</p>
 
-<p>Score: 9.5/10 · ✅ Active · Skill Suite<br>Date: Since 2026-05-23</p>
+<p>Score: 9.5/10 · ✅ Using · Skill Suite<br>Date: Since 2026-05-23</p>
 
 <details>
 <summary>Details</summary>
@@ -37,7 +37,7 @@
 
 <p>Codebase Map (Knowledge Graph)</p>
 
-<p>Score: 9.5/10 · ✅ Active · Skill + Python CLI<br>Date: Since 2026-07-28</p>
+<p>Score: 9.5/10 · ✅ Using · Skill + Python CLI<br>Date: Since 2026-07-28</p>
 
 <details>
 <summary>Details</summary>
@@ -52,7 +52,7 @@
 
 <p>Minimal Clean Code (YAGNI)</p>
 
-<p>Score: 9.5/10 · ✅ Active · Skill<br>Date: Since 2026-11-15</p>
+<p>Score: 9.5/10 · ✅ Using · Skill<br>Date: Since 2026-11-15</p>
 
 <details>
 <summary>Details</summary>
@@ -67,7 +67,7 @@
 
 <p>Surgical Code Edits</p>
 
-<p>Score: 9.5/10 · ✅ Active · Skill<br>Date: Since 2026-11-15</p>
+<p>Score: 9.5/10 · ✅ Using · Skill<br>Date: Since 2026-11-15</p>
 
 <details>
 <summary>Details</summary>
@@ -82,7 +82,7 @@
 
 <p>Primary UI/UX Design &amp; Audit</p>
 
-<p>Score: 9.5/10 · ✅ Active · Skill<br>Date: Since 2026-11-09</p>
+<p>Score: 9.5/10 · ✅ Using · Skill<br>Date: Since 2026-11-09</p>
 
 <details>
 <summary>Details</summary>
@@ -97,7 +97,7 @@
 
 <p>Independent Architecture &amp; Code Review</p>
 
-<p>Score: 9.5/10 · ✅ Active · Plugin (7 skills + 10 agents)<br>Date: Since 2026-11-15</p>
+<p>Score: 9.5/10 · ✅ Using · Plugin (7 skills + 10 agents)<br>Date: Since 2026-11-15</p>
 
 <details>
 <summary>Details</summary>
@@ -112,7 +112,7 @@
 
 <p>Web (Chrome) &amp; Desktop UI Testing</p>
 
-<p>Score: 9.5/10 · ✅ Active · CLI + Skill<br>Date: Since 2026-11-15</p>
+<p>Score: 9.5/10 · ✅ Using · CLI + Skill<br>Date: Since 2026-11-15</p>
 
 <details>
 <summary>Details</summary>
@@ -127,7 +127,7 @@
 
 <p>Mobile &amp; TV (iOS / Android / tvOS) UI Testing</p>
 
-<p>Score: 9.5/10 · ✅ Active · CLI + Skill<br>Date: Since 2026-11-16</p>
+<p>Score: 9.5/10 · ✅ Using · CLI + Skill<br>Date: Since 2026-11-16</p>
 
 <details>
 <summary>Details</summary>
@@ -142,7 +142,7 @@
 
 <p>2-Stage Web / Mobile / TV QA Gate</p>
 
-<p>Score: 9.5/10 · ✅ Active · Skill<br>Date: Since 2026-11-15</p>
+<p>Score: 9.5/10 · ✅ Using · Skill<br>Date: Since 2026-11-15</p>
 
 <details>
 <summary>Details</summary>
@@ -157,7 +157,7 @@
 
 <p>Full-Stack Error &amp; Trace Diagnostics</p>
 
-<p>Score: 9.5/10 · ✅ Active · Self-Hosted + Skill / MCP<br>Date: Since 2026-07-08</p>
+<p>Score: 9.5/10 · ✅ Using · Self-Hosted + Skill / MCP<br>Date: Since 2026-07-08</p>
 
 <details>
 <summary>Details</summary>
@@ -172,7 +172,7 @@
 
 <p>Multi-Agent Skill Sync &amp; Security (audit)</p>
 
-<p>Score: 9.5/10 · ✅ Active · CLI + Skill<br>Date: Since 2026-05-30</p>
+<p>Score: 9.5/10 · ✅ Using · CLI + Skill<br>Date: Since 2026-05-30</p>
 
 <details>
 <summary>Details</summary>
@@ -187,7 +187,7 @@
 
 <p>Expo / React Native 60/120fps Motion</p>
 
-<p>Score: 9.5/10 · ✅ Active · Skill<br>Date: Since 2026-11-09</p>
+<p>Score: 9.5/10 · ✅ Using · Skill<br>Date: Since 2026-11-09</p>
 
 <details>
 <summary>Details</summary>
@@ -202,7 +202,7 @@
 
 <p>Multi-Agent Orchestration &amp; Mobile Control</p>
 
-<p>Score: 9.5/10 · ✅ Active · Desktop + Mobile App + CLI + Skill<br>Date: Since 2026-11-16</p>
+<p>Score: 9.5/10 · ✅ Using · Desktop + Mobile App + CLI + Skill<br>Date: Since 2026-11-16</p>
 
 <details>
 <summary>Details</summary>
@@ -217,7 +217,7 @@
 
 <p>Android Port Forwarding (reverse) &amp; logcat</p>
 
-<p>Score: 9.0/10 · ✅ Active · CLI<br>Date: Since 2026-09-07</p>
+<p>Score: 9.0/10 · ✅ Using · CLI<br>Date: Since 2026-09-07</p>
 
 <details>
 <summary>Details</summary>
@@ -232,7 +232,7 @@
 
 <p>iOS Windowless Boot &amp; devicectl</p>
 
-<p>Score: 9.0/10 · ✅ Active · Xcode CLI + App<br>Date: Since 2026-10-20</p>
+<p>Score: 9.0/10 · ✅ Using · Xcode CLI + App<br>Date: Since 2026-10-20</p>
 
 <details>
 <summary>Details</summary>
@@ -247,7 +247,7 @@
 
 <p>iOS / tvOS Simulator RAM &amp; Disk Optimizer</p>
 
-<p>Score: 9.0/10 · ✅ Active · Standalone Go CLI<br>Date: Since 2026-11-16</p>
+<p>Score: 9.0/10 · ✅ Using · Standalone Go CLI<br>Date: Since 2026-11-16</p>
 
 <details>
 <summary>Details</summary>
@@ -262,7 +262,7 @@
 
 <p>Android AVD RAM &amp; Metal GPU Optimizer</p>
 
-<p>Score: 9.0/10 · ✅ Active · Standalone Go CLI<br>Date: Since 2026-11-16</p>
+<p>Score: 9.0/10 · ✅ Using · Standalone Go CLI<br>Date: Since 2026-11-16</p>
 
 <details>
 <summary>Details</summary>
@@ -277,7 +277,7 @@
 
 <p>6-Phase Source-Code Security Audit</p>
 
-<p>Score: 9.0/10 · ✅ Active · Skill<br>Date: Since 2026-11-16</p>
+<p>Score: 9.0/10 · ✅ Using · Skill<br>Date: Since 2026-11-16</p>
 
 <details>
 <summary>Details</summary>
@@ -292,7 +292,7 @@
 
 <p>Mobile Web / PWA &amp; Web-to-App Porting</p>
 
-<p>Score: 8.5/10 · ✅ Active · Skill Suite<br>Date: Since 2026-11-15</p>
+<p>Score: 8.5/10 · ✅ Using · Skill Suite<br>Date: Since 2026-11-15</p>
 
 <details>
 <summary>Details</summary>
@@ -307,7 +307,7 @@
 
 <p>Local Image / SVG / Video / 3D Compression</p>
 
-<p>Score: 7.5/10 · ✅ Active · CLI + <a href="skills/asset-diet/SKILL.md">asset-diet</a><br>Date: Since 2026-11-16</p>
+<p>Score: 7.5/10 · ✅ Using · CLI + <a href="skills/asset-diet/SKILL.md">asset-diet</a><br>Date: Since 2026-11-16</p>
 
 <details>
 <summary>Details</summary>
@@ -322,7 +322,7 @@
 
 <p>Video, Reel &amp; QA Bug-Video Analysis</p>
 
-<p>Score: 9.0/10 · ✅ Active · Skill + CLI (yt-dlp + ffmpeg)<br>Date: Since 2026-10-25</p>
+<p>Score: 9.0/10 · ✅ Using · Skill + CLI (yt-dlp + ffmpeg)<br>Date: Since 2026-10-25</p>
 
 <details>
 <summary>Details</summary>
@@ -337,7 +337,7 @@
 
 <p>Two-Way Figma &lt;-&gt; Code Bridge</p>
 
-<p>Score: 9.0/10 · ✅ Active · 6 Skills + MCP<br>Date: Since 2026-10-20</p>
+<p>Score: 9.0/10 · ✅ Using · 6 Skills + MCP<br>Date: Since 2026-10-20</p>
 
 <details>
 <summary>Details</summary>
@@ -352,7 +352,7 @@
 
 <p>Web / Mobile Web / WebOS Speed &amp; Recovery Gate</p>
 
-<p>Score: 9.0/10 · ✅ Active · Skill<br>Date: Since 2026-11-10</p>
+<p>Score: 9.0/10 · ✅ Using · Skill<br>Date: Since 2026-11-10</p>
 
 <details>
 <summary>Details</summary>
@@ -367,7 +367,7 @@
 
 <p>Drizzle ORM v2 Schema &amp; Relations</p>
 
-<p>Score: 8.5/10 · ✅ Active · Skill<br>Date: Since 2026-11-05</p>
+<p>Score: 8.5/10 · ✅ Using · Skill<br>Date: Since 2026-11-05</p>
 
 <details>
 <summary>Details</summary>

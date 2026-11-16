@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global Plugin (-g / scope: user)` *(barcha skillarida `disable-model-invocation: true` saqlangan holda)*
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `✅ Faol` *(Antigravity, agy CLI, Claude Code va Codex muhitlariga global o'rnatilgan va real ko'p-repoli loyihalarda sinovdan o'tgan)*
+- **Joriy holati:** `✅ Ishlatyapman` *(Antigravity, agy CLI, Claude Code va Codex muhitlariga global o'rnatilgan va real ko'p-repoli loyihalarda sinovdan o'tgan)*
 
 ---
 
@@ -76,5 +76,5 @@ Ichida **7 ta skill** mavjud:
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Arxitektura, subagent promptlari va harness mosligi auditi | `✅ Faol` | Yuqori sifatli plugin sifatida tasdiqlandi; katta arxitektura ishi uchun to'liq plugin ko'rinishida o'rnatish tavsiya etildi. |
-| 2026-11-15 | Barcha 4 agent muhitiga (`Antigravity`, `agy CLI`, `Claude Code`, `Codex`) global o'rnatish va 2 ta real tizimda (monorepo va 7-repoli kross-platforma ekotizim) chuqur Goldfish sinovi | `✅ Faol` | 4 ta parallel xotirasiz Goldfish subagent (`egm-drift-report`, `egm-codebase-details`, `egm-design`, `egm-zoom-out`) birinchi urinishdayoq 38 ta jiddiy (`Blocker`) nomuvofiqlik va real production xatolarni (eskirgan texnologiyaga yozilgan YAGNI rejalar, mobil fon kvotasi bo'roni, kross-platforma pleyer/auth header va status-kod uzilishlari, eskirgan `AGENTS.md` yo'riqnomalari) aniq fayl va qator raqamlari bilan topib berdi. |
+| 2026-11-15 | Arxitektura, subagent promptlari va harness mosligi auditi | `✅ Ishlatyapman` | Yuqori sifatli plugin sifatida tasdiqlandi; katta arxitektura ishi uchun to'liq plugin ko'rinishida o'rnatish tavsiya etildi. |
+| 2026-11-15 | Barcha 4 agent muhitiga (`Antigravity`, `agy CLI`, `Claude Code`, `Codex`) global o'rnatish va 2 ta real tizimda (monorepo va 7-repoli kross-platforma ekotizim) chuqur Goldfish sinovi | `✅ Ishlatyapman` | 4 ta parallel xotirasiz Goldfish subagent (`egm-drift-report`, `egm-codebase-details`, `egm-design`, `egm-zoom-out`) birinchi urinishdayoq 38 ta jiddiy (`Blocker`) nomuvofiqlik va real production xatolarni (eskirgan texnologiyaga yozilgan YAGNI rejalar, mobil fon kvotasi bo'roni, kross-platforma pleyer/auth header va status-kod uzilishlari, eskirgan `AGENTS.md` yo'riqnomalari) aniq fayl va qator raqamlari bilan topib berdi. |

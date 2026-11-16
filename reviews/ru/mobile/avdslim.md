@@ -10,7 +10,7 @@
 - **Рекомендуемый масштаб:** `Global CLI (/opt/homebrew/bin/avdslim)` — применяется ко всем локальным Android AVD через `tune-avd` + `bake --headless` с защитой GPS в `defaults` (без `install-shim`)
 - **Работает в связке с:** [**`agent-device`**](agent-device.md) + [**`adb`**](adb.md) + [**`simslim`**](simslim.md) + [**`cross-platform-qa`**](cross-platform-qa.md)
 - **Используется с:** `2026-11-16`
-- **Текущий статус:** `✅ Активен`
+- **Текущий статус:** `✅ Использую`
 
 ---
 
@@ -74,4 +74,4 @@
 
 | Дата | Действие | Статус | Примечание |
 |---|---|---|---|
-| 2026-11-16 | Аудит Go-кода, установка `v1.0.16`, настройка `defaults` (`--skip=location --keep=com.google.android.apps.maps`), `tune-avd` всех 4 AVD и сборка headless Golden Snapshot для телефонного и планшетного AVD `API 35` | `✅ Активен` | Подтверждено снижение с `4 413 MB -> 2 640 MB` (`-40.2%` Footprint) и переход со `SwiftShader` на `Apple Metal GPU`; интегрировано в `cross-platform-qa`. |
+| 2026-11-16 | Аудит Go-кода, установка `v1.0.16`, настройка `defaults` (`--skip=location --keep=com.google.android.apps.maps`), `tune-avd` всех 4 AVD и сборка headless Golden Snapshot для телефонного и планшетного AVD `API 35` | `✅ Использую` | Подтверждено снижение с `4 413 MB -> 2 640 MB` (`-40.2%` Footprint) и переход со `SwiftShader` на `Apple Metal GPU`; интегрировано в `cross-platform-qa`. |

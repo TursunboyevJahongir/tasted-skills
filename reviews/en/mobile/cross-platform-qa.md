@@ -9,7 +9,7 @@
 - **Need for Us:** **9.5 / 10**
 - **Recommended Scope:** `Global (-g)`
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `✅ Active`
+- **Current Status:** `✅ Using`
 
 ---
 
@@ -61,5 +61,5 @@ A custom 2-stage global QA skill designed to verify Web, iOS/tvOS, and Android/A
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Created via `skillshare new cross-platform-qa -g` and synced | `✅ Active` | Linked across all 5 global agent targets. |
-| 2026-11-16 | Upgraded mobile & TV stages with `agent-device`, `simslim`, and `avdslim` | `✅ Active` | Adopted `agent-device` (`+ --maestro`) as the primary driver for headless iOS/tvOS Simulators (`simslim`, `1.16 GB`) and `-no-window` Android/TV Emulators (`avdslim`, `2.64 GB` Metal GPU) while keeping `agent-desktop` for Web. |
+| 2026-11-15 | Created via `skillshare new cross-platform-qa -g` and synced | `✅ Using` | Linked across all 5 global agent targets. |
+| 2026-11-16 | Upgraded mobile & TV stages with `agent-device`, `simslim`, and `avdslim` | `✅ Using` | Adopted `agent-device` (`+ --maestro`) as the primary driver for headless iOS/tvOS Simulators (`simslim`, `1.16 GB`) and `-no-window` Android/TV Emulators (`avdslim`, `2.64 GB` Metal GPU) while keeping `agent-desktop` for Web. |

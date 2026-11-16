@@ -67,5 +67,5 @@ Works seamlessly alongside our global `task-context`, `antigravity-claude`, `ant
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-10-23 | Installed `T3 Code` desktop app + unified CLI subagent review skills (`2026-10-31`) | `✅ Active` | Desktop app and CLI subagent bridge (Codex ↔ Claude ↔ Antigravity) used daily. |
+| 2026-10-23 | Installed `T3 Code` desktop app + unified CLI subagent review skills (`2026-10-31`) | `✅ Using` | Desktop app and CLI subagent bridge (Codex ↔ Claude ↔ Antigravity) used daily. |
 | 2026-11-16 | Benchmarked live against [**`Orca` (`stablyai/orca`)**](orca.md) and uninstalled `T3 Code` (`~3.87 GB` reclaimed) | `⛔ Rejected` | Switched completely to `Orca` for stable mobile pairing, Lock-Screen (`caffeinate`) support, and native single-prompt multi-agent orchestration. |

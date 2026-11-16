@@ -9,7 +9,7 @@
 - **Need for Us:** **7.5 / 10**
 - **Recommended Scope:** `Global (-g)` *(with narrowed explicit trigger and `quick`-profile quota guard)*
 - **Active Since:** `2026-11-16`
-- **Current Status:** `✅ Active` *(primary source-level vulnerability audit skill across Backend, Web, and Mobile repos without spinning up Docker)*
+- **Current Status:** `✅ Using` *(primary source-level vulnerability audit skill across Backend, Web, and Mobile repos without spinning up Docker)*
 
 ---
 
@@ -54,7 +54,7 @@ Extracted from Cloudflare's internal vulnerability discovery harness, `security-
 
 Together they form a **2-tier pre-release security workflow**:
 
-| Dimension | **`security-audit`** *(Cloudflare — `✅ Active`)* | [**`Shannon` (`hacker-test`)**](shannon.md) *(`👍 Good Option`)* |
+| Dimension | **`security-audit`** *(Cloudflare — `✅ Using`)* | [**`Shannon` (`hacker-test`)**](shannon.md) *(`👍 Good Option`)* |
 |---|---|---|
 | **Mechanism** | 6-phase source-first adversarial audit (`Hunter` + `Verifier` subagents) | Live Docker + Temporal + Playwright dynamic exploitation |
 | **Targets** | Backend, Web, **Mobile (`iOS`/`Android`/`Expo`)**, CLI, Cloud/CI, LLM | Running local/staging Web apps & HTTP APIs only |
@@ -73,5 +73,5 @@ Together they form a **2-tier pre-release security workflow**:
 
 | Date | Action | Status | Notes (where tested, what was sanitized, outcome) |
 |---|---|---|---|
-| 2026-11-16 | Audited source files, `.cjs` validators (`65/65` tests), and `skillshare audit`; sanitized and installed globally | `✅ Active` | Narrowed `SKILL.md` auto-trigger to explicit audit requests, set `quick`/`scoped` as the default profile, and synced across all 5 global agent targets (`skillshare sync -g`). |
+| 2026-11-16 | Audited source files, `.cjs` validators (`65/65` tests), and `skillshare audit`; sanitized and installed globally | `✅ Using` | Narrowed `SKILL.md` auto-trigger to explicit audit requests, set `quick`/`scoped` as the default profile, and synced across all 5 global agent targets (`skillshare sync -g`). |
 

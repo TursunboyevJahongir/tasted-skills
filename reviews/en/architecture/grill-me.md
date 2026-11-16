@@ -9,7 +9,7 @@
 - **Relevance to Us:** **9.5 / 10**
 - **Recommended Scope:** `Global (-g)`
 - **Active Since:** `2026-05-23` *(last updated: `2026-11-16`)*
-- **Current Status:** `✅ Active` *(primary tool for stress-testing ideas and plans before writing code)*
+- **Current Status:** `✅ Using` *(primary tool for stress-testing ideas and plans before writing code)*
 
 ---
 
@@ -49,9 +49,9 @@ Created by Matt Pocock, this lightweight yet powerful skill stress-tests a plan 
 
 ### Additional Skills Adopted from `mattpocock/skills` (`2026-11-16`)
 
-After auditing all skills in [mattpocock/skills](https://github.com/mattpocock/skills), we sanitized and globally installed **2 additional on-demand skills (`✅ Active`)**:
-- **`diagnosing-bugs` (`✅ Active` — scoped strictly to elusive/flaky bugs & perf regressions):** Narrowed its trigger description so trivial typos stay fast under `ponytail`, stripped the blocking interactive `scripts/hitl-loop.template.sh` script, and wired UI repro loops to our `agent-desktop` / `agent-device` / `sentry` stack (`skillshare audit`: `0 issues`).
-- **`improve-codebase-architecture` (`✅ Active` — `disable-model-invocation: true`):** Fires strictly on explicit request; embeds the 8-term deep-module vocabulary inside a self-contained `CODEBASE-DESIGN.md` (avoiding global `codebase-design` auto-trigger noise), aligns with `CONTEXT.md` (`domain-modeling`), renders a visual `Before / After` Mermaid HTML report to `/tmp/architecture-review-<timestamp>.html`, and hands off to `grilling` (`skillshare audit`: `0 issues`).
+After auditing all skills in [mattpocock/skills](https://github.com/mattpocock/skills), we sanitized and globally installed **2 additional on-demand skills (`✅ Using`)**:
+- **`diagnosing-bugs` (`✅ Using` — scoped strictly to elusive/flaky bugs & perf regressions):** Narrowed its trigger description so trivial typos stay fast under `ponytail`, stripped the blocking interactive `scripts/hitl-loop.template.sh` script, and wired UI repro loops to our `agent-desktop` / `agent-device` / `sentry` stack (`skillshare audit`: `0 issues`).
+- **`improve-codebase-architecture` (`✅ Using` — `disable-model-invocation: true`):** Fires strictly on explicit request; embeds the 8-term deep-module vocabulary inside a self-contained `CODEBASE-DESIGN.md` (avoiding global `codebase-design` auto-trigger noise), aligns with `CONTEXT.md` (`domain-modeling`), renders a visual `Before / After` Mermaid HTML report to `/tmp/architecture-review-<timestamp>.html`, and hands off to `grilling` (`skillshare audit`: `0 issues`).
 - **Rejected (`⛔ Rejected`):** `tdd`, `implement`, `implement-spec`, `to-tickets`, `triage`, `setup-matt-pocock-skills` — mandatory TDD and issue-tracker ceremony add unnecessary loops.
 
 ---
@@ -67,5 +67,5 @@ After auditing all skills in [mattpocock/skills](https://github.com/mattpocock/s
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-05-23 | Initial installation (`grill-me` + `grill-with-docs`) | `✅ Active` | Adopted for pre-coding decision-tree planning (`2026-10-31` unified into `skillshare` across all agents). |
-| 2026-11-16 | Sanitized & globally synced `diagnosing-bugs` and `improve-codebase-architecture` | `✅ Active` | Configured for strict on-demand activation (`hitl-loop.template.sh` removed, `CODEBASE-DESIGN.md` bundled, `0/100` audit risk) and synced across all 5 agent targets; rejected heavy `tdd`/`to-tickets` skills (`⛔ Rejected`). |
+| 2026-05-23 | Initial installation (`grill-me` + `grill-with-docs`) | `✅ Using` | Adopted for pre-coding decision-tree planning (`2026-10-31` unified into `skillshare` across all agents). |
+| 2026-11-16 | Sanitized & globally synced `diagnosing-bugs` and `improve-codebase-architecture` | `✅ Using` | Configured for strict on-demand activation (`hitl-loop.template.sh` removed, `CODEBASE-DESIGN.md` bundled, `0/100` audit risk) and synced across all 5 agent targets; rejected heavy `tdd`/`to-tickets` skills (`⛔ Rejected`). |

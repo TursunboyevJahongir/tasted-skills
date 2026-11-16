@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Ishlatilayotgan sana:** `2026-11-09` dan
-- **Joriy holati:** `✅ Faol` *(barcha veb va mobil UI/UX ishlarida asosiy dizayn skilli)*
+- **Joriy holati:** `✅ Ishlatyapman` *(barcha veb va mobil UI/UX ishlarida asosiy dizayn skilli)*
 
 ---
 
@@ -129,5 +129,5 @@ Alohida yangi skill o'rnatish (`auto-trigger` to'qnashuvi va ortiqcha kontekst) 
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-09 | `v4.8.1` (`mobile-routing-1` va hook cheklovi bilan) global o'rnatish | `✅ Faol` | Web, mobil veb va React Native ekranlari dizayni hamda kontrast/UX auditida asosiy vosita sifatida ishlatib kelinmoqda. |
-| 2026-11-16 | `apca-contrast-1` lokal perceptual kontrast qoidasini qo'shish va `skillshare sync -g` | `✅ Faol` | `SKILL.md`, `craft-floor.md`, `colorize.md`, `audit.md`, `audit.native.md` va `critique.md` fayllariga `WCAG 2 + APCA (\|Lc\| ≥ 60)` ikki tomonlama tekshiruvi kiritildi (rangli brend tugmalarda oq yozuv buzilishining oldi olindi). |
+| 2026-11-09 | `v4.8.1` (`mobile-routing-1` va hook cheklovi bilan) global o'rnatish | `✅ Ishlatyapman` | Web, mobil veb va React Native ekranlari dizayni hamda kontrast/UX auditida asosiy vosita sifatida ishlatib kelinmoqda. |
+| 2026-11-16 | `apca-contrast-1` lokal perceptual kontrast qoidasini qo'shish va `skillshare sync -g` | `✅ Ishlatyapman` | `SKILL.md`, `craft-floor.md`, `colorize.md`, `audit.md`, `audit.native.md` va `critique.md` fayllariga `WCAG 2 + APCA (\|Lc\| ≥ 60)` ikki tomonlama tekshiruvi kiritildi (rangli brend tugmalarda oq yozuv buzilishining oldi olindi). |

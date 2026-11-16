@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global CLI (npm i -g agent-device) + Sanitarizatsiya qilingan Global Skill (-g)`
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `✅ Faol` *(mobil va TV UI avtomatizatsiyasida asosiy vosita)*
+- **Joriy holati:** `✅ Ishlatyapman` *(mobil va TV UI avtomatizatsiyasida asosiy vosita)*
 
 ---
 
@@ -77,4 +77,4 @@ Oldindan ishlatib kelayotgan vositalarimizning **birortasi ham o'chirilmadi** �
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kodi auditi, iOS Simulator va real Android planshetda jonli benchmark, sanitarizatsiya va global o'rnatish | `✅ Faol` | `0.21.37` global CLI + tozalangan `agent-device` skilli barcha 5 ta AI muhitiga ulandi va `cross-platform-qa` yangilandi (iOS `197 ms` oynasiz, Android `888 ms` / `~100 token`). |
+| 2026-11-16 | Manba kodi auditi, iOS Simulator va real Android planshetda jonli benchmark, sanitarizatsiya va global o'rnatish | `✅ Ishlatyapman` | `0.21.37` global CLI + tozalangan `agent-device` skilli barcha 5 ta AI muhitiga ulandi va `cross-platform-qa` yangilandi (iOS `197 ms` oynasiz, Android `888 ms` / `~100 token`). |

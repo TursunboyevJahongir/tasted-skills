@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **10.0 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g) + Standalone CLI`
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `✅ Faol` *(macOS'da desktop, Chrome va iOS Simulator testlarida asosiy vosita)*
+- **Joriy holati:** `✅ Ishlatyapman` *(macOS'da desktop, Chrome va iOS Simulator testlarida asosiy vosita)*
 
 ---
 
@@ -68,6 +68,6 @@ Asosiy ishlash zanjiri (`observe → act → verify`):
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Lokal o'rnatish va amaliy QA oqimiga ulash | `✅ Faol` | CLI hamda `agent-desktop`, `agent-desktop-macos`, `agent-desktop-ffi` skillari global o'rnatilgan. |
-| 2026-11-16 | Vazifa chegarasini aniqlashtirish (`Web/Desktop` vs `Mobile/TV`) | `✅ Faol` | Web (`Google Chrome`) va macOS desktop uchun asosiy vosita bo'lib qoldi; mobil/TV UI tekshiruvlari `agent-device` ga o'tkazildi. |
+| 2026-11-15 | Lokal o'rnatish va amaliy QA oqimiga ulash | `✅ Ishlatyapman` | CLI hamda `agent-desktop`, `agent-desktop-macos`, `agent-desktop-ffi` skillari global o'rnatilgan. |
+| 2026-11-16 | Vazifa chegarasini aniqlashtirish (`Web/Desktop` vs `Mobile/TV`) | `✅ Ishlatyapman` | Web (`Google Chrome`) va macOS desktop uchun asosiy vosita bo'lib qoldi; mobil/TV UI tekshiruvlari `agent-device` ga o'tkazildi. |
 

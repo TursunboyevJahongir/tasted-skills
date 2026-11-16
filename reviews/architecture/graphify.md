@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Ishlatilayotgan sana:** `2026-07-28` dan
-- **Joriy holati:** `✅ Faol` *(katta kod bazalari arxitekturasini tez tushunish va qidirish uchun ishlatiladi)*
+- **Joriy holati:** `✅ Ishlatyapman` *(katta kod bazalari arxitekturasini tez tushunish va qidirish uchun ishlatiladi)*
 
 ---
 
@@ -61,4 +61,4 @@ Istalgan loyiha papkasini (kod, SQL sxemalar, Markdown hujjatlar, PDF, rasm va v
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-07-28 | Loyihalarda `graphify-out/` bilim grafigini qurish va ishlatishni boshlash | `✅ Faol` | Bir nechta yirik servis va mobil repozitoriylarda kod bazasi xaritasi sifatida ishlatib kelinmoqda (`2026-09-22` CLI yangilandi, `2026-10-31` da `skillshare` orqali 5 ta agentga ulandi). |
+| 2026-07-28 | Loyihalarda `graphify-out/` bilim grafigini qurish va ishlatishni boshlash | `✅ Ishlatyapman` | Bir nechta yirik servis va mobil repozitoriylarda kod bazasi xaritasi sifatida ishlatib kelinmoqda (`2026-09-22` CLI yangilandi, `2026-10-31` da `skillshare` orqali 5 ta agentga ulandi). |

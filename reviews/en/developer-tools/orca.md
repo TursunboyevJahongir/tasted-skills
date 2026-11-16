@@ -9,7 +9,7 @@
 - **Need for Us:** **9.5 / 10**
 - **Recommended Scope:** `Standalone Desktop App (/Applications/Orca.app) + Global orchestration Skill`
 - **Active Since:** `2026-11-16`
-- **Current Status:** `✅ Active` *(replaced T3 Code as our primary multi-agent workspace)*
+- **Current Status:** `✅ Using` *(replaced T3 Code as our primary multi-agent workspace)*
 
 ---
 
@@ -73,4 +73,4 @@
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Installed `stablyai/orca` (`v1.4.261`), disabled `PostHog`, configured `caffeinate` + `Mobile` + `Codex/Claude/Antigravity`, and verified live multi-agent run (`run_33e8e230b9fe`) | `✅ Active` | Uninstalled `T3 Code` and adopted `Orca` as our primary multi-agent orchestrator. |
+| 2026-11-16 | Installed `stablyai/orca` (`v1.4.261`), disabled `PostHog`, configured `caffeinate` + `Mobile` + `Codex/Claude/Antigravity`, and verified live multi-agent run (`run_33e8e230b9fe`) | `✅ Using` | Uninstalled `T3 Code` and adopted `Orca` as our primary multi-agent orchestrator. |

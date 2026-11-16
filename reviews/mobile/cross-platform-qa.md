@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `✅ Faol`
+- **Joriy holati:** `✅ Ishlatyapman`
 
 ---
 
@@ -61,5 +61,5 @@ Web, iOS/tvOS va Android/Android TV ilovalarda kod yozish hamda tekshirishni **o
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | `skillshare new cross-platform-qa -g` orqali yaratish va sinxronlash | `✅ Faol` | Barcha 5 ta global targetga ulandi. |
-| 2026-11-16 | Mobil va TV bosqichlarini `agent-device`, `simslim` va `avdslim` bilan yangilash | `✅ Faol` | Headless iOS/tvOS Simulator (`simslim`, `1.16 GB`) va `-no-window` Android/TV Emulator (`avdslim`, `2.64 GB` Metal GPU) uchun `agent-device` (`+ --maestro`) asosiy vosita qilindi; Web uchun `agent-desktop` saqlab qolindi. |
+| 2026-11-15 | `skillshare new cross-platform-qa -g` orqali yaratish va sinxronlash | `✅ Ishlatyapman` | Barcha 5 ta global targetga ulandi. |
+| 2026-11-16 | Mobil va TV bosqichlarini `agent-device`, `simslim` va `avdslim` bilan yangilash | `✅ Ishlatyapman` | Headless iOS/tvOS Simulator (`simslim`, `1.16 GB`) va `-no-window` Android/TV Emulator (`avdslim`, `2.64 GB` Metal GPU) uchun `agent-device` (`+ --maestro`) asosiy vosita qilindi; Web uchun `agent-desktop` saqlab qolindi. |
