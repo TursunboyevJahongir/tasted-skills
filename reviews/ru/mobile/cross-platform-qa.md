@@ -47,7 +47,7 @@
 
 ## 4. Совместимость с нашими текущими инструментами
 
-- Объединяет [`agent-desktop`](../developer-tools/agent-desktop.md) (Web), [`agent-device`](agent-device.md) (iOS/Android/TV UI), [`adb`](adb.md) и [`xcrun simctl` + `Device Hub`](ios-simulator-device-hub.md) в единую дисциплину проверки.
+- Объединяет [`agent-desktop`](../developer-tools/agent-desktop.md) (Web), [`agent-device`](agent-device.md) (iOS/Android/TV UI + `--maestro` E2E), [`simslim`](simslim.md) (iOS Simulator `1.16 GB` RAM), [`avdslim`](avdslim.md) (Android AVD `2.64 GB` RAM + Apple Metal GPU), [`adb`](adb.md) и [`xcrun simctl` + `Device Hub`](ios-simulator-device-hub.md) в единую двухэтапную дисциплину проверки.
 
 ---
 
@@ -62,4 +62,4 @@
 | Дата | Действие | Статус | Примечание |
 |---|---|---|---|
 | 2026-11-15 | Создание через `skillshare new cross-platform-qa -g` и синхронизация | `✅ Активен` | Подключён ко всем 5 глобальным целям агентов. |
-| 2026-11-16 | Перевод мобильного и TV-этапов на `agent-device` | `✅ Активен` | `agent-device` стал основным инструментом для фоновых iOS/tvOS Simulator и `-no-window` Android/TV Emulator; для Web сохранён `agent-desktop`. |
+| 2026-11-16 | Перевод мобильного и TV-этапов на `agent-device`, `simslim` и `avdslim` | `✅ Активен` | `agent-device` (`+ --maestro`) стал основным инструментом для фоновых iOS/tvOS Simulator (`simslim`, `1.16 GB`) и `-no-window` Android/TV Emulator (`avdslim`, `2.64 GB` Metal GPU); для Web сохранён `agent-desktop`. |

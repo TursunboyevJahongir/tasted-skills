@@ -21,7 +21,8 @@ Har bir qadamda og'ir skrinshot yoki 10–40 KB xom XML (`uiautomator dump`) o'q
 1. **iOS va tvOS'da:** Mahalliy keshlangan XCUITest runner orqali **ekranda birorta ham Simulator yoki `Device Hub` oynasi ochmasdan 100% ko'rinmas fonda** `@e1`, `@e2` accessibility reflarini o'qiydi va bosadi.
 2. **Android va Android TV'da:** Yengil `snapshot-helper` (`BoundedUiAutomationConnection`) va `ime-helper` orqali jonli animatsiya/xarita ekranlarida qotmasdan UI daraxtini oladi hamda o'zbekcha (`o'`, `g'`, `‘`), kirillcha va probelli matnlarni toza UTF-8 da yozadi.
 3. **`--settle` va `diff` javoblari:** Bosish yoki skrolldan keyin animatsiya tinchishini o'zi kutadi va butun ekranni emas, faqat o'zgargan qatorlarni (`+12 -16`) qaytaradi.
-4. **Git-worktree izolyatsiyasi:** Parallel ishlayotgan bir nechta AI agentlar bitta simulyator sessiyasini bir-biridan tortib olmaydi.
+4. **O'rnatilgan Maestro (`.yaml`) E2E va Self-Healing (`.ad`) dvijogi:** Alohida Java (`JDK`) yoki `Maestro` CLI o'rnatmasdan, `agent-device replay flow.yaml --maestro` va `agent-device test ./e2e --maestro` orqali Maestro `.yaml` avto-testlarni yurgizadi; `--save-script` bilan sinib qolgan skriptlarni o'zi davolab (`<stem>.healed.ad`), `record contact-sheet` bilan video-kadrlar jadvalini chiqaradi.
+5. **Git-worktree izolyatsiyasi:** Parallel ishlayotgan bir nechta AI agentlar bitta simulyator sessiyasini bir-biridan tortib olmaydi.
 
 ---
 

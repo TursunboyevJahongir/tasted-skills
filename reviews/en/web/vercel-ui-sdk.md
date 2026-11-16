@@ -71,3 +71,4 @@ We do not need either the library or its global skill because both jobs are alre
 | Date | Action | Status | Notes (where tested, what was sanitized, outcome) |
 |---|---|---|---|
 | 2026-11-16 | Audited `@githubradar` video claim, `vercel-labs/ui` source (`SKILL.md`, `agent-ready.md`), and `skillshare audit` | `⛔ Rejected` | Rejected because `createAgent` works only on apps rewritten in beta `@ui-sdk/*` parts (blind to standard HTML/Shadcn). Instead use our existing UI stack + `impeccable` + `agent-desktop`. |
+

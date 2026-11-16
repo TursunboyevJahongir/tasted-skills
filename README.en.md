@@ -179,13 +179,13 @@
       <td align="center"><strong>13</strong></td>
       <td><a href="reviews/en/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong> + CLI Subagent</a></td>
       <td><strong>Multi-Agent Code &amp; Review Orchestration</strong></td>
-      <td>Desktop App + CLI</td>
+      <td>Desktop App + CLI + Skill</td>
       <td align="center"><strong>9.0/10</strong></td>
       <td align="center"><code>✅&nbsp;Active</code></td>
       <td align="center">Since&nbsp;<code>2026&#8209;10&#8209;23</code></td>
     </tr>
     <tr>
-      <td colspan="7" width="2000">Multi-AI orchestration (<em>"let Codex implement and Claude review"</em> via isolated CLI subagent review loops).</td>
+      <td colspan="7" width="2000">Multi-AI orchestration via <code>task-context</code> + CLI subagents (<code>argon</code>, <code>antigravity-claude</code>, <code>claude-opus</code>, <code>antigravity-consult</code>) and <strong><code>orchestration</code></strong> (Orca <code>worker-start</code> DAGs) for independent implementation and review.</td>
     </tr>
     <tr>
       <td align="center"><strong>14</strong></td>
@@ -249,15 +249,15 @@
     </tr>
     <tr>
       <td align="center"><strong>19</strong></td>
-      <td><a href="reviews/en/mobile/mobile-native.md"><strong><code>mobile-native</code></strong></a></td>
-      <td><strong>Mobile Web / PWA Native Polish</strong></td>
-      <td>Skill</td>
+      <td><a href="reviews/en/mobile/mobile-native.md"><strong><code>mobile-native</code></strong></a> + <code>web-to-native-mobile</code></td>
+      <td><strong>Mobile Web / PWA &amp; Web-to-App Porting</strong></td>
+      <td>Skill Suite</td>
       <td align="center"><strong>8.5/10</strong></td>
       <td align="center"><code>✅&nbsp;Active</code></td>
       <td align="center">Since&nbsp;<code>2026&#8209;11&#8209;15</code></td>
     </tr>
     <tr>
-      <td colspan="7" width="2000">11 CSS/meta fixes that make mobile web apps and PWAs feel native (<code>dvh/svh</code>, <code>safe-area</code>, <code>16px</code> inputs, <code>overscroll-behavior</code>, hover gating; protected by <code>LOCAL-COMPATIBILITY.md</code>).</td>
+      <td colspan="7" width="2000">11 CSS/meta fixes that make mobile web apps and PWAs feel native (<code>dvh/svh</code>, <code>safe-area</code>, <code>16px</code> inputs, <code>overscroll-behavior</code>, hover gating) + desktop-to-mobile feature porting rules (<code>web-to-native-mobile</code>) and UI copy punctuation rules (<code>ui-message-punctuation</code>).</td>
     </tr>
     <tr>
       <td align="center"><strong>20</strong></td>
@@ -270,6 +270,54 @@
     </tr>
     <tr>
       <td colspan="7" width="2000">100% local image/SVG/video/3D compression (<code>Sharp</code>, <code>SVGO</code>, <code>FFmpeg</code>) with rollback. Synced globally via our lightweight <a href="skills/asset-diet/SKILL.md"><code>asset-diet</code></a> skill to run <code>npx assetdiet-mcp@0.1.4</code> strictly on demand (<code>0</code> MCP bloat).</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>21</strong></td>
+      <td><a href="practices/en/06-video-figma-and-db-workflows.md"><strong><code>watch</code> + <code>video-analyzer</code></strong></a></td>
+      <td><strong>Video, Reel &amp; QA Bug-Video Analysis</strong></td>
+      <td>Skill + CLI (<code>yt-dlp</code> + <code>ffmpeg</code>)</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><code>✅&nbsp;Active</code></td>
+      <td align="center">Since&nbsp;<code>2026&#8209;10&#8209;25</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Frame-by-frame analysis of YouTube videos, Instagram Reels, Looms, and customer QA screen recordings combining <code>Whisper</code> audio transcripts with <code>scene-change</code> (or <code>5fps</code>) frame extraction.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>22</strong></td>
+      <td><a href="practices/en/06-video-figma-and-db-workflows.md"><strong><code>figma</code> Skill Suite</strong></a></td>
+      <td><strong>Two-Way <code>Figma &lt;-&gt; Code</code> Bridge</strong></td>
+      <td>6 Skills + MCP</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><code>✅&nbsp;Active</code></td>
+      <td align="center">Since&nbsp;<code>2026&#8209;10&#8209;20</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">1:1 design-to-code implementation (<code>figma-implement-design</code>) plus <strong>reverse code-to-Figma screen and design-system generation</strong> (<code>figma-generate-design</code>, <code>figma-generate-library</code>, <code>figma-use</code>).</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>23</strong></td>
+      <td><a href="practices/en/03-web-and-mobile-ui-polish.md"><strong><code>client-performance-gate</code></strong></a></td>
+      <td><strong>Web / Mobile Web / WebOS Speed &amp; Recovery Gate</strong></td>
+      <td>Skill</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><code>✅&nbsp;Active</code></td>
+      <td align="center">Since&nbsp;<code>2026&#8209;11&#8209;10</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Verifies end-user Web, Mobile Web, and WebOS TV apps across a 4-profile <code>1x/6x CPU × fast/constrained/offline</code> matrix, <code>≤200ms</code> input budget, and reload-free recovery once headroom returns <em>(excludes Admin panels)</em>.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>24</strong></td>
+      <td><a href="practices/en/06-video-figma-and-db-workflows.md"><strong><code>drizzle-relations-v2</code></strong></a></td>
+      <td><strong>Drizzle ORM <code>v2</code> Schema &amp; Relations</strong></td>
+      <td>Skill</td>
+      <td align="center"><strong>8.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Active</code></td>
+      <td align="center">Since&nbsp;<code>2026&#8209;11&#8209;05</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Prevents legacy Drizzle <code>v1 relations()</code> hallucinations by enforcing <code>v2 defineRelations</code> syntax and object-based relational <code>where</code> filters.</td>
     </tr>
   </tbody>
 </table>

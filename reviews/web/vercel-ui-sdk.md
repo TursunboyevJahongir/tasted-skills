@@ -71,3 +71,4 @@ Bizga bu kutubxona ham, uning skilli ham kerak emas — chunki uning ikkala vazi
 | Sana | Amal | Holat | Izoh (ishlatildimi, qayerda sinab ko'rildi, nima tozalandi) |
 |---|---|---|---|
 | 2026-11-16 | Video demo (`@githubradar`), `vercel-labs/ui` manba kodi (`SKILL.md`, `agent-ready.md`) va `skillshare audit` tekshiruvi | `⛔ Rad etildi` | Faqat `@ui-sdk/*` da yozilgan Beta veb-ilovalar uchungina ishlashi (oddiy HTML/Shadcn'ni ko'rmasligi) sabab rad etildi. O'rniga: mavjud UI stekimiz + `impeccable` + `agent-desktop`. |
+

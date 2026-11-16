@@ -179,13 +179,13 @@
       <td align="center"><strong>13</strong></td>
       <td><a href="reviews/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong> + CLI Subagent</a></td>
       <td><strong>Multi-Agent kod va review</strong></td>
-      <td>Desktop App + CLI</td>
+      <td>Desktop App + CLI + Skill</td>
       <td align="center"><strong>9.0/10</strong></td>
       <td align="center"><code>✅&nbsp;Faol</code></td>
       <td align="center"><code>2026&#8209;10&#8209;23</code>&nbsp;dan</td>
     </tr>
     <tr>
-      <td colspan="7" width="2000">Bir nechta AI'ni birga ishlatish (<em>"Codex yozsin, Claude tekshirsin"</em> deyilganda CLI orqali subagent qilib mustaqil review yurgizadi).</td>
+      <td colspan="7" width="2000">Bir nechta AI'ni birga ishlatish: <code>task-context</code> + CLI subagentlar (<code>argon</code>, <code>antigravity-claude</code>, <code>claude-opus</code>, <code>antigravity-consult</code>) hamda Orca muhitida <strong><code>orchestration</code></strong> (<code>worker-start</code> DAG) orqali mustaqil kod yozish va review.</td>
     </tr>
     <tr>
       <td align="center"><strong>14</strong></td>
@@ -249,15 +249,15 @@
     </tr>
     <tr>
       <td align="center"><strong>19</strong></td>
-      <td><a href="reviews/mobile/mobile-native.md"><strong><code>mobile-native</code></strong></a></td>
-      <td><strong>Mobil Web / PWA native moslashtirish</strong></td>
-      <td>Skill</td>
+      <td><a href="reviews/mobile/mobile-native.md"><strong><code>mobile-native</code></strong></a> + <code>web-to-native-mobile</code></td>
+      <td><strong>Mobil Web / PWA va Web->App ko'chirish</strong></td>
+      <td>Skilllar to'plami</td>
       <td align="center"><strong>8.5/10</strong></td>
       <td align="center"><code>✅&nbsp;Faol</code></td>
       <td align="center"><code>2026&#8209;11&#8209;15</code>&nbsp;dan</td>
     </tr>
     <tr>
-      <td colspan="7" width="2000">Mobil veb va PWA'ni native sezdiradigan 11 ta CSS/meta yechim (<code>dvh/svh</code>, <code>safe-area</code>, <code>16px</code> input, <code>overscroll-behavior</code>, hover gating; <code>LOCAL-COMPATIBILITY.md</code> himoyasi bilan).</td>
+      <td colspan="7" width="2000">Mobil veb va PWA'ni native sezdiradigan 11 ta CSS/meta yechim (<code>dvh/svh</code>, <code>safe-area</code>, <code>16px</code> input, <code>overscroll-behavior</code>, hover gating) + veb funksiyani native ilovaga ko'chirish qarorlari (<code>web-to-native-mobile</code>) va UI xabarlari tinish belgilari qoidasi (<code>ui-message-punctuation</code>).</td>
     </tr>
     <tr>
       <td align="center"><strong>20</strong></td>
@@ -270,6 +270,54 @@
     </tr>
     <tr>
       <td colspan="7" width="2000">100% lokal rasm/SVG/video/3D siqish (<code>Sharp</code>, <code>SVGO</code>, <code>FFmpeg</code>) + rollback. Doimiy 16-tool MCP o'rniga ushbu repodagi yengil <a href="skills/asset-diet/SKILL.md"><code>asset-diet</code></a> skilli orqali faqat kerak paytda <code>npx assetdiet-mcp@0.1.4</code> CLI chaqiriladi.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>21</strong></td>
+      <td><a href="practices/06-video-figma-and-db-workflows.md"><strong><code>watch</code> + <code>video-analyzer</code></strong></a></td>
+      <td><strong>Video, Reel va QA Bug-Video tahlili</strong></td>
+      <td>Skill + CLI (<code>yt-dlp</code> + <code>ffmpeg</code>)</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><code>✅&nbsp;Faol</code></td>
+      <td align="center"><code>2026&#8209;10&#8209;25</code>&nbsp;dan</td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">YouTube, Instagram Reels, Loom va mijoz yuborgan bug-videolarni <code>Whisper</code> transkripsiya hamda <code>scene-change</code> (yoki <code>5fps</code>) kadrlar bilan kadr-ba-kadr tahlil qilish.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>22</strong></td>
+      <td><a href="practices/06-video-figma-and-db-workflows.md"><strong><code>figma</code> skilllar to'plami</strong></a></td>
+      <td><strong>Ikki tomonlama <code>Figma &lt;-&gt; Kod</code> ko'prigi</strong></td>
+      <td>6 ta Skill + MCP</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><code>✅&nbsp;Faol</code></td>
+      <td align="center"><code>2026&#8209;10&#8209;20</code>&nbsp;dan</td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Figma maketdan 1:1 kod yozish (<code>figma-implement-design</code>) hamda <strong>tayyor yozilgan koddan Figma'ga ekran va Design System chizish</strong> (<code>figma-generate-design</code>, <code>figma-generate-library</code>, <code>figma-use</code>).</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>23</strong></td>
+      <td><a href="practices/03-web-and-mobile-ui-polish.md"><strong><code>client-performance-gate</code></strong></a></td>
+      <td><strong>Web / Mobile Web / WebOS tezlik va <code>recovery</code></strong></td>
+      <td>Skill</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><code>✅&nbsp;Faol</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;10</code>&nbsp;dan</td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Mijoz Web, Mobile Web va WebOS TV ilovalarida <code>1x/6x CPU × fast/constrained/offline</code> 4-profil matritsasi, <code>≤200ms</code> javob va internet/CPU qaytishi bilan sahifani yangilamasdan avto-tiklanish (<code>recovery</code>) tekshiruvi <em>(Admin panellarga qo'llanmaydi)</em>.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>24</strong></td>
+      <td><a href="practices/06-video-figma-and-db-workflows.md"><strong><code>drizzle-relations-v2</code></strong></a></td>
+      <td><strong>Drizzle ORM <code>v2</code> sxema va relyatsiya</strong></td>
+      <td>Skill</td>
+      <td align="center"><strong>8.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Faol</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;05</code>&nbsp;dan</td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Backendda Drizzle ORM yozishda eski <code>v1 relations()</code> xatolarini oldini olib, to'g'ri <code>v2 defineRelations</code> va obyekt-asosli <code>where</code> filterlarini qo'llaydi.</td>
     </tr>
   </tbody>
 </table>

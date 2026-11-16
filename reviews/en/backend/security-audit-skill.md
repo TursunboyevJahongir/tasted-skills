@@ -74,3 +74,4 @@ Together they form a **2-tier pre-release security workflow**:
 | Date | Action | Status | Notes (where tested, what was sanitized, outcome) |
 |---|---|---|---|
 | 2026-11-16 | Audited source files, `.cjs` validators (`65/65` tests), and `skillshare audit`; sanitized and installed globally | `✅ Active` | Narrowed `SKILL.md` auto-trigger to explicit audit requests, set `quick`/`scoped` as the default profile, and synced across all 5 global agent targets (`skillshare sync -g`). |
+

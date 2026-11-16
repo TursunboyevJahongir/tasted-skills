@@ -47,7 +47,7 @@ A custom 2-stage global QA skill designed to verify Web, iOS/tvOS, and Android/A
 
 ## 4. Fit & Compatibility with Our Existing Stack
 
-- Unifies [`agent-desktop`](../developer-tools/agent-desktop.md) (Web), [`agent-device`](agent-device.md) (iOS/Android/TV UI), [`adb`](adb.md), and [`xcrun simctl` + `Device Hub`](ios-simulator-device-hub.md) into a single disciplined workflow.
+- Unifies [`agent-desktop`](../developer-tools/agent-desktop.md) (Web), [`agent-device`](agent-device.md) (iOS/Android/TV UI + `--maestro` E2E), [`simslim`](simslim.md) (iOS Simulator `1.16 GB` RAM), [`avdslim`](avdslim.md) (Android AVD `2.64 GB` RAM + Apple Metal GPU), [`adb`](adb.md), and [`xcrun simctl` + `Device Hub`](ios-simulator-device-hub.md) into a single disciplined 2-stage workflow.
 
 ---
 
@@ -62,4 +62,4 @@ A custom 2-stage global QA skill designed to verify Web, iOS/tvOS, and Android/A
 | Date | Action | Status | Notes |
 |---|---|---|---|
 | 2026-11-15 | Created via `skillshare new cross-platform-qa -g` and synced | `✅ Active` | Linked across all 5 global agent targets. |
-| 2026-11-16 | Upgraded mobile & TV stages to `agent-device` | `✅ Active` | Adopted `agent-device` as the primary driver for headless iOS/tvOS Simulators and `-no-window` Android/TV Emulators while keeping `agent-desktop` for Web. |
+| 2026-11-16 | Upgraded mobile & TV stages with `agent-device`, `simslim`, and `avdslim` | `✅ Active` | Adopted `agent-device` (`+ --maestro`) as the primary driver for headless iOS/tvOS Simulators (`simslim`, `1.16 GB`) and `-no-window` Android/TV Emulators (`avdslim`, `2.64 GB` Metal GPU) while keeping `agent-desktop` for Web. |

@@ -179,13 +179,13 @@
       <td align="center"><strong>13</strong></td>
       <td><a href="reviews/ru/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong> + CLI Subagent</a></td>
       <td><strong>Мультиагентная разработка и ревью</strong></td>
-      <td>Desktop App + CLI</td>
+      <td>Desktop App + CLI + Skill</td>
       <td align="center"><strong>9.0/10</strong></td>
       <td align="center"><code>✅&nbsp;Активен</code></td>
       <td align="center">С&nbsp;<code>2026&#8209;10&#8209;23</code></td>
     </tr>
     <tr>
-      <td colspan="7" width="2000">Совместная работа нескольких AI (<em>«Codex пишет, Claude проверяет»</em> через вызов независимого CLI-субагента для ревью).</td>
+      <td colspan="7" width="2000">Совместная работа нескольких AI через <code>task-context</code> + CLI-субагенты (<code>argon</code>, <code>antigravity-claude</code>, <code>claude-opus</code>, <code>antigravity-consult</code>) и <strong><code>orchestration</code></strong> (Orca <code>worker-start</code> DAG) для независимой разработки и ревью.</td>
     </tr>
     <tr>
       <td align="center"><strong>14</strong></td>
@@ -249,15 +249,15 @@
     </tr>
     <tr>
       <td align="center"><strong>19</strong></td>
-      <td><a href="reviews/ru/mobile/mobile-native.md"><strong><code>mobile-native</code></strong></a></td>
-      <td><strong>Адаптация Mobile Web / PWA под натив</strong></td>
-      <td>Skill</td>
+      <td><a href="reviews/ru/mobile/mobile-native.md"><strong><code>mobile-native</code></strong></a> + <code>web-to-native-mobile</code></td>
+      <td><strong>Mobile Web / PWA и перенос Web->App</strong></td>
+      <td>Набор скиллов</td>
       <td align="center"><strong>8.5/10</strong></td>
       <td align="center"><code>✅&nbsp;Активен</code></td>
       <td align="center">С&nbsp;<code>2026&#8209;11&#8209;15</code></td>
     </tr>
     <tr>
-      <td colspan="7" width="2000">11 CSS/meta-решений, придающих мобильному вебу и PWA ощущение нативного приложения (<code>dvh/svh</code>, <code>safe-area</code>, инпуты <code>16px</code>, <code>overscroll-behavior</code>, hover gating; с защитой <code>LOCAL-COMPATIBILITY.md</code>).</td>
+      <td colspan="7" width="2000">11 CSS/meta-решений, придающих мобильному вебу и PWA ощущение нативного приложения (<code>dvh/svh</code>, <code>safe-area</code>, инпуты <code>16px</code>, <code>overscroll-behavior</code>, hover gating) + правила переноса веб-фич в мобильное приложение (<code>web-to-native-mobile</code>) и пунктуации UI-сообщений (<code>ui-message-punctuation</code>).</td>
     </tr>
     <tr>
       <td align="center"><strong>20</strong></td>
@@ -270,6 +270,54 @@
     </tr>
     <tr>
       <td colspan="7" width="2000">100% локальное сжатие картинок/SVG/видео/3D (<code>Sharp</code>, <code>SVGO</code>, <code>FFmpeg</code>) с откатом. Вместо постоянного 16-tool MCP подключён через наш лёгкий скилл <a href="skills/asset-diet/SKILL.md"><code>asset-diet</code></a> для разового вызова <code>npx assetdiet-mcp@0.1.4</code>.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>21</strong></td>
+      <td><a href="practices/ru/06-video-figma-and-db-workflows.md"><strong><code>watch</code> + <code>video-analyzer</code></strong></a></td>
+      <td><strong>Разбор видео, Reels и QA баг-видео</strong></td>
+      <td>Skill + CLI (<code>yt-dlp</code> + <code>ffmpeg</code>)</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;10&#8209;25</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Покадровый анализ роликов YouTube, Instagram Reels, Loom и клиентских видео-багрепортов со склейкой транскрипции <code>Whisper</code> и кадров смены сцен (<code>scene-change</code> / <code>5fps</code>).</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>22</strong></td>
+      <td><a href="practices/ru/06-video-figma-and-db-workflows.md"><strong>Набор скиллов <code>figma</code></strong></a></td>
+      <td><strong>Двусторонний мост <code>Figma &lt;-&gt; Код</code></strong></td>
+      <td>6 скиллов + MCP</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;10&#8209;20</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Вёрстка кода 1:1 по макету (<code>figma-implement-design</code>) и <strong>обратная генерация экранов и дизайн-системы в Figma из готового кода</strong> (<code>figma-generate-design</code>, <code>figma-generate-library</code>, <code>figma-use</code>).</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>23</strong></td>
+      <td><a href="practices/ru/03-web-and-mobile-ui-polish.md"><strong><code>client-performance-gate</code></strong></a></td>
+      <td><strong>Скорость и <code>recovery</code> в Web / Mobile Web / WebOS</strong></td>
+      <td>Skill</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;10</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Проверка клиентских Web, Mobile Web и WebOS TV приложений по матрице <code>1x/6x CPU × fast/constrained/offline</code>, отклику <code>≤200ms</code> и авто-восстановлению качества без перезагрузки страницы <em>(не применяется к админкам)</em>.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>24</strong></td>
+      <td><a href="practices/ru/06-video-figma-and-db-workflows.md"><strong><code>drizzle-relations-v2</code></strong></a></td>
+      <td><strong>Схемы и реляции Drizzle ORM <code>v2</code></strong></td>
+      <td>Skill</td>
+      <td align="center"><strong>8.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;05</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Защищает от устаревшего синтаксиса Drizzle <code>v1 relations()</code>, применяя <code>v2 defineRelations</code> и объектные фильтры <code>where</code>.</td>
     </tr>
   </tbody>
 </table>

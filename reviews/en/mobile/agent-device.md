@@ -21,7 +21,8 @@ Instead of feeding heavy screenshots or 10–40 KB raw XML dumps (`uiautomator d
 1. **iOS & tvOS:** Uses a cached local XCUITest runner to read and act on `@e1`, `@e2` accessibility refs **100% headlessly in the background without opening any `Simulator.app` or `Device Hub` window on screen**.
 2. **Android & Android TV:** Uses lightweight `snapshot-helper` (`BoundedUiAutomationConnection`) and `ime-helper` APKs to capture live animated/map screens without `uiautomator` idle hangs, and types full UTF-8 text (spaces, apostrophes, Cyrillic) cleanly.
 3. **`--settle` & Differential Output:** Waits for UI animations to settle automatically and prints only changed elements (`+12 -16`) rather than re-dumping the entire screen.
-4. **Git-Worktree Isolation:** Scopes device sessions per git worktree so parallel coding agents do not collide on the same simulator.
+4. **Built-in Maestro (`.yaml`) E2E & Self-Healing (`.ad`) Engine:** Runs Maestro `.yaml` flows directly (`agent-device replay flow.yaml --maestro`, `agent-device test ./e2e --maestro`) without installing Java (`JDK`) or the standalone Maestro CLI; auto-heals broken flows via `--save-script` (`<stem>.healed.ad`) and generates scene-change video frame grids via `record contact-sheet`.
+5. **Git-Worktree Isolation:** Scopes device sessions per git worktree so parallel coding agents do not collide on the same simulator.
 
 ---
 

@@ -47,7 +47,7 @@ Web, iOS/tvOS va Android/Android TV ilovalarda kod yozish hamda tekshirishni **o
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
-- [`agent-desktop`](../developer-tools/agent-desktop.md) (Web), [`agent-device`](agent-device.md) (iOS/Android/TV UI), [`adb`](adb.md) va [`xcrun simctl` + `Device Hub`](ios-simulator-device-hub.md) vositalarini yagona intizomga birlashtiradi.
+- [`agent-desktop`](../developer-tools/agent-desktop.md) (Web), [`agent-device`](agent-device.md) (iOS/Android/TV UI + `--maestro` E2E), [`simslim`](simslim.md) (iOS Simulator `1.16 GB` RAM), [`avdslim`](avdslim.md) (Android AVD `2.64 GB` RAM + Apple Metal GPU), [`adb`](adb.md) va [`xcrun simctl` + `Device Hub`](ios-simulator-device-hub.md) vositalarini yagona 2-bosqichli intizomga birlashtiradi.
 
 ---
 
@@ -62,4 +62,4 @@ Web, iOS/tvOS va Android/Android TV ilovalarda kod yozish hamda tekshirishni **o
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
 | 2026-11-15 | `skillshare new cross-platform-qa -g` orqali yaratish va sinxronlash | `✅ Faol` | Barcha 5 ta global targetga ulandi. |
-| 2026-11-16 | Mobil va TV bosqichlarini `agent-device` bilan yangilash | `✅ Faol` | Headless iOS/tvOS Simulator va `-no-window` Android/TV Emulator uchun `agent-device` asosiy vosita qilindi; Web uchun `agent-desktop` saqlab qolindi. |
+| 2026-11-16 | Mobil va TV bosqichlarini `agent-device`, `simslim` va `avdslim` bilan yangilash | `✅ Faol` | Headless iOS/tvOS Simulator (`simslim`, `1.16 GB`) va `-no-window` Android/TV Emulator (`avdslim`, `2.64 GB` Metal GPU) uchun `agent-device` (`+ --maestro`) asosiy vosita qilindi; Web uchun `agent-desktop` saqlab qolindi. |
