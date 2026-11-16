@@ -14,6 +14,26 @@
 > [!TIP]
 > **🛡️ Наше правило безопасности (рекомендуем и вам):** Никогда не устанавливайте чужие скиллы, плагины или MCP-серверы только по красивому `README` или количеству звёзд. Перед установкой каждого инструмента **мы обязательно поручаем нашему AI-агенту проверить исходный код напрямую** (`SKILL.md`, скрипты, хуки, сетевые вызовы и доступ к env) и прогоняем встроенный skill-check в [**`skillshare`**](reviews/ru/developer-tools/skillshare.md) (`skillshare audit`). Рекомендуем и вам всегда проверять код новых скиллов через своего AI-агента перед установкой.
 
+## 🧩 Практики и Связки Инструментов ([Перейти в раздел `Practices` →](practices/ru/README.md))
+
+Практические руководства о том, **что с чем комбинировать (`Что + С чем = Результат`)**, как вдвое снизить расход RAM и токенов и какие дополнительные возможности можно включить (например, запуск Maestro `.yaml` E2E-тестов в фоне без Java или перекрёстное ревью кода двумя разными AI-моделями):
+
+<details>
+<summary><b>📖 Открыть оглавление — Что с чем комбинировать и как использовать? (4 готовые цепочки)</b></summary>
+
+<br>
+
+| # | Направление и руководство | Связка инструментов | Главная выгода и как лучше применять |
+|---|---|---|---|
+| **1** | [**Фоновый Mobile & TV QA + Maestro E2E Автотесты**](practices/ru/01-mobile-tv-headless-qa.md) | [`simslim`](reviews/ru/mobile/simslim.md) + [`avdslim`](reviews/ru/mobile/avdslim.md) + [`agent-device`](reviews/ru/mobile/agent-device.md) + [`adb`](reviews/ru/mobile/adb.md) + [`xcrun simctl`](reviews/ru/mobile/ios-simulator-device-hub.md) + [`cross-platform-qa`](reviews/ru/mobile/cross-platform-qa.md) | Запускает эмуляторы iOS (`1.16 GB`) и Android (`2.64 GB`, Metal GPU) полностью без окон (экономия `~3.3 GB` RAM), вводит чистый UTF-8 и **прогоняет Maestro `.yaml` / `.ad` E2E-сценарии (`--maestro`) и самовосстанавливающиеся (`healed.ad`) тесты** в фоне без установки Java и Maestro CLI. |
+| **2** | [**От Проектирования и Графа до Чистого Кода и Независимого Ревью**](practices/ru/02-spec-to-surgical-code.md) | [`graphify`](reviews/ru/architecture/graphify.md) + [`grill-me`](reviews/ru/architecture/grill-me.md) + [`ponytail`](reviews/ru/architecture/ponytail.md) + [`karpathy-guidelines`](reviews/ru/architecture/karpathy-guidelines.md) + [`T3 Code`](reviews/ru/developer-tools/t3-code.md) + [`elephant-goldfish-model`](reviews/ru/architecture/elephant-goldfish-model.md) | За секунды находит связи в большом репозитории через AST-граф (`0` токенов), прорабатывает решения до кода, пишет минимальный YAGNI diff и отдаёт на независимое ревью другой модели (*«Codex пишет, Claude/Argon проверяет»*). |
+| **3** | [**Дизайн, Анимации и Проверка Web, Mobile Web и Native UI**](practices/ru/03-web-and-mobile-ui-polish.md) | [`impeccable`](reviews/ru/ui-ux/impeccable.md) + [`mobile-native`](reviews/ru/mobile/mobile-native.md) + [`animate-expo`](reviews/ru/mobile/animate-expo.md) + [`asset-diet`](reviews/ru/developer-tools/assetdiet.md) + [`agent-desktop`](reviews/ru/developer-tools/agent-desktop.md) | Вычищает визуальную иерархию и UX-тексты (`polish`, `clarify`, `harden`), адаптирует мобильный веб под натив (`dvh`, `safe-area`, инпуты `16px`), строит `60/120fps` UI-thread анимации в Expo, локально сжимает медиа и проверяет Chrome в фоне без захвата курсора. |
+| **4** | [**Санитаризация Скиллов, White-Box Пентест и Мониторинг Ошибок**](practices/ru/04-skill-and-security-hygiene.md) | [`tasted-skills`](skills/tasted-skills/SKILL.md) + [`skillshare`](reviews/ru/developer-tools/skillshare.md) + [`Shannon` (`hacker-test`)](reviews/ru/backend/shannon.md) + [`sentry`](reviews/ru/backend/sentry.md) | Проверяет исходный код чужих скиллов и вырезает опасные хуки/телеметрию до установки (`skillshare audit`), проводит автономный White-Box пентест локальных/staging API и разбирает боевые ошибки/трейсы в `sentry`. |
+
+➡️ [**Все практические руководства (`practices/ru/README.md`)**](practices/ru/README.md)
+
+</details>
+
 ## ⭐ Самые необходимые (В порядке частоты и важности в работе)
 
 | # | Название | Основная задача | Тип | Оценка | Статус | Дата | Краткое описание |

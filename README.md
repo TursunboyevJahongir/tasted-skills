@@ -14,6 +14,26 @@
 > [!TIP]
 > **🛡️ Xavfsizlik qoidamiz (sizga ham tavsiya):** Hech qachon begona skill, plugin yoki MCP serverni faqat `README` yoki yulduzlariga qarab o'rnatmang. Biz har bitta nomzodni o'rnatishdan oldin **o'zimizning AI coding agentga birlamchi kodini (`SKILL.md`, skriptlar, hooklar, tarmoq/env murojaatlari) o'qitib tekshirtiramiz** hamda [**`skillshare`**](reviews/developer-tools/skillshare.md) ichidagi tayyor skill-check (`skillshare audit`) dan o'tkazamiz. Sizga ham har qanday yangi skillni o'rnatishdan avval AI agentingizga tekshirtirib olishni tavsiya qilamiz.
 
+## 🧩 Amaliy Qo'llanmalar va Bog'lamalar ([`Practices` bo'limiga o'tish →](practices/README.md))
+
+Alohida skill va CLI vositalarni bir-biri bilan ulab ishlatish (`Nima + Nima = Natija`), RAM/kontekstni 2x tejash va qo'shimcha yashirin imkoniyatlar (masalan, alohida Java/Maestro o'rnatmasdan E2E avto-test yurgizish yoki ikkita AI modelni bir-biriga tekshirtirish) bo'yicha tayyor amaliy qo'llanmalar:
+
+<details>
+<summary><b>📖 Mundarijani ochish — Nimani nima bilan va qanday birga ishlatish kerak? (4 ta amaliy zanjir)</b></summary>
+
+<br>
+
+| # | Yo'nalish va Qo'llanma | Birgalikda ishlatiladigan vositalar | Nima beradi va qanday ishlatish yaxshi? (Foydasi) |
+|---|---|---|---|
+| **1** | [**Mobil va TV Oynasiz QA + Maestro E2E Avto-Testlar**](practices/01-mobile-tv-headless-qa.md) | [`simslim`](reviews/mobile/simslim.md) + [`avdslim`](reviews/mobile/avdslim.md) + [`agent-device`](reviews/mobile/agent-device.md) + [`adb`](reviews/mobile/adb.md) + [`xcrun simctl`](reviews/mobile/ios-simulator-device-hub.md) + [`cross-platform-qa`](reviews/mobile/cross-platform-qa.md) | iOS (`1.16 GB`) va Android (`2.64 GB`, Metal GPU) emulyatorlarni ekranda oyna ochmasdan yurgizadi (`~3.3 GB` RAM tejaladi), o'zbekcha UTF-8 yozadi hamda **Java/Maestro o'rnatmasdan `.yaml` / `.ad` E2E testlarni (`--maestro`) va o'zini-o'zi davolovchi (`healed.ad`) skriptlarni** fonda aylantiradi. |
+| **2** | [**Rejadan Toza Kod va Mustaqil Review'gacha**](practices/02-spec-to-surgical-code.md) | [`graphify`](reviews/architecture/graphify.md) + [`grill-me`](reviews/architecture/grill-me.md) + [`ponytail`](reviews/architecture/ponytail.md) + [`karpathy-guidelines`](reviews/architecture/karpathy-guidelines.md) + [`T3 Code`](reviews/developer-tools/t3-code.md) + [`elephant-goldfish-model`](reviews/architecture/elephant-goldfish-model.md) | Katta repoda `0` token AST-graf bilan bog'liqliklarni topadi, kod yozishdan oldin qarorlarni pishitadi, eng kichik YAGNI o'zgarish yozadi va boshqa AI modelga (*"Codex yozsin, Claude/Argon tekshirsin"*) xotirasiz mustaqil audit qildiradi. |
+| **3** | [**Web, Mobile Web va Native UI Dizayn + Tekshiruv**](practices/03-web-and-mobile-ui-polish.md) | [`impeccable`](reviews/ui-ux/impeccable.md) + [`mobile-native`](reviews/mobile/mobile-native.md) + [`animate-expo`](reviews/mobile/animate-expo.md) + [`asset-diet`](reviews/developer-tools/assetdiet.md) + [`agent-desktop`](reviews/developer-tools/agent-desktop.md) | Vizual dizayn va UX matnlarni tozalaydi (`polish`, `clarify`, `harden`), mobil vebni native sezdiradi (`dvh`, `safe-area`, `16px`), Expo'da `60/120fps` UI-thread animatsiya beradi, rasm/videolarni lokal siqadi va Chrome'ni kursorni qimirlatmasdan fonda tekshiradi. |
+| **4** | [**Skill Sanitarizatsiyasi, Pentest va Xatolar Monitoringi**](practices/04-skill-and-security-hygiene.md) | [`tasted-skills`](skills/tasted-skills/SKILL.md) + [`skillshare`](reviews/developer-tools/skillshare.md) + [`Shannon` (`hacker-test`)](reviews/backend/shannon.md) + [`sentry`](reviews/backend/sentry.md) | Begona skill/pluginlarni o'rnatishdan oldin xavfli hook va telemetriyadan tozalaydi (`skillshare audit`), lokal/staging API'larni avtonom White-Box pentestdan o'tkazadi va production xatolarni `sentry` trace'lari bilan tutadi. |
+
+➡️ [**Barcha qo'llanmalar va to'liq sharhlar (`practices/README.md`)**](practices/README.md)
+
+</details>
+
 ## ⭐ Eng keraklilari (Ishlatilish ustuvorligi bo'yicha)
 
 | # | Nomi | Asosiy vazifasi | Turi | Baho | Holati | Sana | Qisqacha izoh |

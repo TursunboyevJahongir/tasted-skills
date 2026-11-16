@@ -14,6 +14,26 @@
 > [!TIP]
 > **🛡️ Our Security Rule (Recommended for You Too):** Never install third-party skills, plugins, or MCP servers based solely on their `README` or GitHub stars. Before installing anything, **we always have our AI coding agent inspect the primary source code directly** (`SKILL.md`, scripts, hooks, network/env access) and run [**`skillshare`**](reviews/en/developer-tools/skillshare.md)'s built-in skill-check (`skillshare audit`). We strongly recommend asking your own AI agent to audit any new skill's code before installing it.
 
+## 🧩 Best Practices & Combined Workflows ([Open `Practices` Guide →](practices/en/README.md))
+
+Practical guides on **which tools to pair together (`What + What = Outcome`)**, how to cut RAM and token usage in half, and how to unlock hidden capabilities (such as running Maestro `.yaml` E2E suites headlessly without Java or running cross-model code reviews):
+
+<details>
+<summary><b>📖 Open Table of Contents — What to Combine & How to Use It Best (4 Proven Workflows)</b></summary>
+
+<br>
+
+| # | Practice Guide | Combined Tools | Core Benefit & Best-Practice Usage |
+|---|---|---|---|
+| **1** | [**Headless Mobile & TV QA + Maestro E2E Automation**](practices/en/01-mobile-tv-headless-qa.md) | [`simslim`](reviews/en/mobile/simslim.md) + [`avdslim`](reviews/en/mobile/avdslim.md) + [`agent-device`](reviews/en/mobile/agent-device.md) + [`adb`](reviews/en/mobile/adb.md) + [`xcrun simctl`](reviews/en/mobile/ios-simulator-device-hub.md) + [`cross-platform-qa`](reviews/en/mobile/cross-platform-qa.md) | Runs iOS (`1.16 GB`) and Android (`2.64 GB`, Metal GPU) emulators completely windowlessly (`~3.3 GB` RAM saved), types full UTF-8, and executes **Maestro `.yaml` / `.ad` E2E suites (`--maestro`) and self-healing (`healed.ad`) scripts** in the background without installing Java or Maestro CLI. |
+| **2** | [**From Spec & Graph to Surgical Code & Independent Review**](practices/en/02-spec-to-surgical-code.md) | [`graphify`](reviews/en/architecture/graphify.md) + [`grill-me`](reviews/en/architecture/grill-me.md) + [`ponytail`](reviews/en/architecture/ponytail.md) + [`karpathy-guidelines`](reviews/en/architecture/karpathy-guidelines.md) + [`T3 Code`](reviews/en/developer-tools/t3-code.md) + [`elephant-goldfish-model`](reviews/en/architecture/elephant-goldfish-model.md) | Maps large repos in seconds with a `0`-token AST graph, resolves design decisions before coding, writes minimal YAGNI diffs, and runs fresh-context independent reviews (*"let Codex implement and Claude/Argon review"*). |
+| **3** | [**Web, Mobile Web & Native UI Design + Verification**](practices/en/03-web-and-mobile-ui-polish.md) | [`impeccable`](reviews/en/ui-ux/impeccable.md) + [`mobile-native`](reviews/en/mobile/mobile-native.md) + [`animate-expo`](reviews/en/mobile/animate-expo.md) + [`asset-diet`](reviews/en/developer-tools/assetdiet.md) + [`agent-desktop`](reviews/en/developer-tools/agent-desktop.md) | Polishes visual hierarchy and UX copy (`polish`, `clarify`, `harden`), makes mobile web/PWAs feel native (`dvh`, `safe-area`, `16px` inputs), builds `60/120fps` UI-thread Expo motion, compresses repo media locally, and verifies Chrome in the background without moving the cursor. |
+| **4** | [**Skill Sanitization, White-Box Pentesting & Error Telemetry**](practices/en/04-skill-and-security-hygiene.md) | [`tasted-skills`](skills/tasted-skills/SKILL.md) + [`skillshare`](reviews/en/developer-tools/skillshare.md) + [`Shannon` (`hacker-test`)](reviews/en/backend/shannon.md) + [`sentry`](reviews/en/backend/sentry.md) | Audits and strips risky hooks/telemetry from third-party skills before installation (`skillshare audit`), runs on-demand White-Box AI pentests against local/staging APIs, and investigates production errors/traces via `sentry`. |
+
+➡️ [**View All Practice Guides (`practices/en/README.md`)**](practices/en/README.md)
+
+</details>
+
 ## ⭐ Top Essentials (Ordered by Daily Workflow Priority)
 
 | # | Name | Core Job | Type | Score | Status | Date | Summary |

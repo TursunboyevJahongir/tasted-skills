@@ -25,8 +25,12 @@ Use this skill to recommend vetted AI resources for a task, audit newly shared s
    - Uzbek (default): `reviews/<category>/<slug>.md`
    - English: `reviews/en/<category>/<slug>.md`
    - Russian: `reviews/ru/<category>/<slug>.md`
-4. New-entry templates: `reviews/TEMPLATE.md`, `reviews/en/TEMPLATE.md`, `reviews/ru/TEMPLATE.md`.
-5. Security and sanitization rubric: [references/audit-checklist.md](references/audit-checklist.md).
+4. Combined workflow practices & guides (tri-lingual):
+   - Uzbek (default): `practices/README.md` and `practices/<NN>-<slug>.md`
+   - English: `practices/en/README.md` and `practices/en/<NN>-<slug>.md`
+   - Russian: `practices/ru/README.md` and `practices/ru/<NN>-<slug>.md`
+5. New-entry templates: `reviews/TEMPLATE.md`, `reviews/en/TEMPLATE.md`, `reviews/ru/TEMPLATE.md`.
+6. Security and sanitization rubric: [references/audit-checklist.md](references/audit-checklist.md).
 
 Categories:
 - `local-models` — Local LLMs, inference engines (`Ollama`, `MLX`, `llama.cpp`, `C99`), quantized coder models
