@@ -42,6 +42,17 @@ Categories:
 - `backend` — APIs, databases, cloud, pipelines, observability
 - `developer-tools` — Memory (`claude-mem`, etc.), browser/desktop automation (`agent-desktop`, etc.), CLIs, MCP servers, workflow tools
 
+### Special rules for `local-models` (`🧠 Lokal modellar`) & `external-apis` (`🔌 Tashqi API'lar`)
+
+Keep entries in both sections **simple, direct, and free of bloated filler**:
+1. **Never list `T3 Code` as the alternative (`O'rniga` / `Instead use` / `Вместо него`) to a local model or external API.** `T3 Code` is a desktop/CLI multi-agent orchestrator, not an LLM weight package or API endpoint.
+2. **Always answer these core questions clearly and concisely:**
+   - **Nimaga mo'ljallangan va nima ish qila oladi (Primary direction & capabilities):** What the model/engine is built for (e.g., general reasoning, multimodal `text + image + video`, OCR, office automation, or disk-streaming inference) and what tasks it handles well.
+   - **Kod yozishga ishlaydimi? (Does it work for coding?):** State directly whether it works for practical software engineering, citing real coding benchmarks (e.g., `Terminal-Bench`, `SWE-bench`, `NL2Repo`) and real generation speed (`tok/s`).
+   - **Talablar / Narx (Hardware or Pricing):** For `local-models`, give concise `Min` vs `Yaxshi ishlashi uchun` (`Recommended`) hardware specs (`GPU/VRAM`, `RAM`, `SSD`, `tok/s`). For `external-apis`, give concise price (`$/1M` input/output/cached), speed (`TPS`), and context window (`1M`).
+   - **Alternativa qanchalik kerak (Realistic alternative):** State whether a local/API alternative is actually needed, and if someone wants a true local coding model on normal `32–64 GB` Mac hardware, name real local model alternatives (`Ollama` / `MLX` `Qwen3-Coder` / `Qwen2.5-Coder`) or link to the model's cloud API.
+   - **Statistika linklari (Direct links to live benchmarks & stats):** Always include clickable links in the catalog and review files to official model cards, benchmarks, and live throughput/leaderboard stats (such as `huggingface.co`, `openrouter.ai`, and `artificialanalysis.ai`).
+
 ## Public repository safety & tri-lingual rules
 
 `TursunboyevJahongir/tasted-skills` is a **public** GitHub repository:

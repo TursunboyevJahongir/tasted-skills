@@ -3,81 +3,56 @@
 [🇺🇿 O'zbekcha](../../local-models/kimi-k3-in-c.md) | **🇬🇧 English** | [🇷🇺 Русский](../../ru/local-models/kimi-k3-in-c.md)
 
 - **Source:** [FareedKhan-dev/kimi-k3-in-c](https://github.com/FareedKhan-dev/kimi-k3-in-c)
+- **Statistics & Benchmarks:** [GitHub Repo Benchmarks](https://github.com/FareedKhan-dev/kimi-k3-in-c#benchmarks) · [Artificial Analysis LLM Leaderboard](https://artificialanalysis.ai/leaderboards/models)
 - **Category:** `Local Models` *(Local LLM Inference & Disk-Streaming Experiment)*
 - **Type:** `Standalone C99 CLI Engine`
-- **Quality Score:** **8.5 / 10** *(as a pure C99 systems engineering proof-of-concept)*
-- **Need for Us:** **1.0 / 10** *(unusable for practical coding)*
+- **Quality Score:** **8.5 / 10** *(as a pure C99 systems engineering experiment)*
+- **Need for Us:** **1.0 / 10** *(unusable for practical coding and daily work)*
 - **Recommended Scope:** `Do Not Install`
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⛔ Rejected` *(unusable for real software development due to ~1.8 TB NVMe requirement, ~24–33 s/token speed, and extreme SSD read wear)*
+- **Current Status:** `⛔ Rejected` *(requires ~1.8 TB NVMe storage, runs at ~24–33 s/token, and causes ~50 TB of SSD reads per 500-token reply)*
 
 ---
 
-## 1. What It Is and How It Works
+## 1. What Is It Designed For & What Can It Do? (Primary Direction)
 
-Despite viral social-media clips framing it as *"running a 2.78T parameter AI locally on 8 GB RAM without a GPU"*, `kimi-k3-in-c` is **not an AI coding skill or developer agent** — it is a portable C99 inference engine (`~176 KB` compiled binary using `OpenMP` + `AVX2`/`NEON` + `O_DIRECT`).
-
-**Core mechanism:**
-- `Kimi K3` (`2.78T` total / `~104B` active Mixture-of-Experts model, `1M` context) occupies **`1.56 TB`** on disk even in native `MXFP4` quantization (over `5 TB` in FP16).
-- For every generated token, this engine reads only the **`16` active experts out of `896`** per layer (in packed `MXFP4` 4-bit form) directly from NVMe storage.
-- The remaining **`109 GB`** dense trunk (`93` layers) is streamed layer-by-layer off disk instead of staying resident in RAM, keeping peak RSS around `8.24 GB`.
-- The repository contains `src/` (`core`, `io`, `cache`, `model`, `chat`, `cli`, `tokenizer`), `tools/`, and `scripts/`, with zero `.claude`, `.codex`, or `SKILL.md` components.
+- **The model itself (`Kimi K3`, `2.78T` total / `~104B` active parameters, `1M` context):** A frontier-scale Mixture-of-Experts (`MoE`) language model designed for deep reasoning, software engineering, math, and long-document analysis.
+- **What `kimi-k3-in-c` does:** A C99 systems experiment (`~176 KB` binary using `O_DIRECT`) designed to prove that a `1.56 TB` `MXFP4` checkpoint normally requiring `2.25 TB` of GPU VRAM can execute **with zero GPU inside `8–16 GB RAM`** by streaming only the **`16` active experts out of `896`** and the `109 GB` dense trunk layer-by-layer directly off an NVMe SSD.
 
 ---
 
-## 2. Strengths, Weaknesses & Hardware Requirements
+## 2. Does It Work for Writing Code?
 
-### Strengths
-- **Zero-dependency C99 engineering:** Built cleanly without `PyTorch`, `llama.cpp`, or external BLAS libraries.
-- **Byte-identical determinism:** Produces identical token output from `8 GB` RAM presets up to `224 GB+` workstations; extra RAM only reduces disk waits.
-- **Weightless oracle validation (`make test`):** Runs a 3-gate numerical verification suite (`teacher forcing`, `greedy decode`, `incremental KV + KDA`) against PyTorch reference fixtures in under a minute with no model checkpoint.
+- **The base `Kimi K3` model — Yes; this local C99 disk-streaming method — No (`Unusable`):**
+  1. **Catastrophically slow generation:** `1 token = ~24.2 – 32.7 seconds`. Writing a tiny `def fibonacci(n):` (`28` tokens) took **`~5 minutes` (`299.3s`)** on a `124`-core server, and a `500`-token code block takes **`~3.5–4 hours`**.
+  2. **Destroys NVMe SSD lifespan (`TBW`):** A single `500`-token code reply reads **`~50+ TB` from the NVMe drive**, rapidly wearing out soldered laptop SSDs.
+  3. **No IDE/agent tooling:** Cannot read/edit repository files or execute terminal tests.
 
-### Hardware Requirements (`Minimum` vs. `Recommended for Smooth Performance`)
+---
 
-| Component | Minimum (Barely runs via `kimi-k3-in-c` disk streaming) | Recommended for Smooth Use (`vLLM` / `SGLang` at `30–60+ tok/s`) |
+## 3. Hardware Requirements (`Minimum` vs. `Recommended`)
+
+| Component | Minimum (`kimi-k3-in-c` disk-streaming mode) | Recommended for Smooth Use (`vLLM` / `SGLang`, `30–60+ tok/s`) |
 |---|---|---|
-| **GPU / VRAM** | **`0 GB`** *(no GPU required; 100% CPU execution)* | **`16× NVIDIA H200` (`141 GB`, `~2.25 TB VRAM` across 2 NVLink nodes)** or **`8× NVIDIA B300` (`288 GB`, `~2.30 TB VRAM`)** *(`32× H200` for full `1M` context)* |
-| **CPU** | **`16+ cores`** (`AVX2` Linux x86_64 or `NEON`; benchmarked on `124`-core EPYC) | **`64–128 cores`** (`AMD EPYC` / `Intel Xeon` data-center CPUs) |
-| **RAM** | **`8–16 GB` free RAM** *(`128–224 GB RAM` caches the `109 GB` trunk, still slow)* | **`512 GB – 1 TB` DDR5 ECC RAM** |
-| **SSD (Storage)** | **`≥ 1.8 TB` free PCIe Gen4/Gen5 NVMe** *(`1.56 TB` weights + `109 GB` packed trunk; `7+ GB/s` read)* | **`4 TB` Enterprise Gen5 NVMe** *(high `DWPD`/`TBW` data-center endurance)* |
-| **Actual Speed** | **`~24.2 – 32.7 seconds / token`** (`500` tokens of code = **`~3.5–4 hours`**) | **`~30 – 60+ tokens / second`** *(usable interactive coding speed)* |
+| **GPU / VRAM** | **`0 GB`** *(100% CPU + NVMe disk)* | **`16× NVIDIA H200` (`~2.25 TB VRAM`)** or **`8× NVIDIA B300` (`~2.30 TB VRAM`)** |
+| **CPU** | **`16+ cores`** (`AVX2` / `NEON`; benchmarked on `124`-core EPYC) | **`64–128 cores`** (`AMD EPYC` / `Intel Xeon`) |
+| **RAM** | **`8–16 GB` free RAM** | **`512 GB – 1 TB` DDR5 ECC RAM** |
+| **SSD (Storage)** | **`≥ 1.8 TB` free PCIe Gen4/Gen5 NVMe** *(`1.56 TB` weights + `109 GB` trunk)* | **`4 TB` Enterprise Gen5 NVMe** |
+| **Actual Speed** | **`~24.2 – 32.7 s / token`** (`500` tokens = `~3.5–4 hours`) | **`~30 – 60+ tokens / s`** |
 
-### Weaknesses and Cost
-- **Does not fit standard laptops and is prohibitively slow:** Cannot fit on `512 GB – 1 TB` developer machines; even on a `124`-core server with `128 GB RAM`, generating `def fibonacci(n):` (`28` tokens) took **`~5 minutes` (`299.3s`)**.
-- **No agentic or IDE capabilities:** Cannot inspect repositories, edit files, run terminal tools, or plug into multi-agent review pipelines; helper scripts like `scripts/k3-doctor.sh` are Linux-only.
+> ⚠️ **Security note:** Never connect private repository code to unvetted `:free` community proxies to work around slow local speeds — free endpoints log prompts and code for training.
 
 ---
 
-## 3. Security, Local Execution & "Free Tier" Risks
+## 4. How Much Do We Need a Local Alternative?
 
-- **Risk Level:** `Low` *(C99 source code cleanliness)* / **`High` *(Local SSD wear & "free" proxy data leakage risks)***
-- **1. Local Execution Hazards (Hardware & SSD Endurance):**
-  - **Destroys NVMe SSD lifespan (`TBW`):** Generating each token streams `~100+ GB` via `O_DIRECT` — a single `500`-token code reply triggers **`~50+ TB` of NVMe reads**. On laptops with soldered SSDs (such as MacBooks), sustained multi-terabyte reads and severe thermal throttling rapidly degrade drive health.
-  - **System-wide I/O stalls:** Saturating NVMe bandwidth starves IDEs, browsers, and local dev servers.
-  - **Unverified third-party weight/converter scripts:** Pulling repacked `1.5 TB` shards or Python conversion helpers (`trust_remote_code=True`, `pickle`) from unofficial mirrors carries arbitrary code execution risk.
-- **2. ⚠️ Caution When Using "For Free" (Free API / Proxy Trap):**
-  - Because local CPU streaming is unusable, developers often look for `:free` OpenRouter endpoints or unvetted free community proxies to wire Kimi K3 into `Claude Code` or IDEs.
-  - **Never connect proprietary repos to free endpoints:** Free tiers routinely **log full prompts, private source files, `.env` secrets, and repository context for model training and dataset collection**.
+- **We do not need this local engine (`1.0/10`):** Our daily coding and architecture workflows already run on frontier cloud models (`Claude Opus`, `Codex`, `Gemini`) in seconds with `0 GB` of local disk overhead.
+- **If a true 100% offline local coding model is needed:** Instead of streaming `1.8 TB` off disk, use local models that fit completely inside `32–64 GB` Mac Unified RAM via **`Ollama` or `MLX` — such as `Qwen3-Coder` or `Qwen2.5-Coder-14B/32B`** (`~9–20 GB`, **`30–65 tokens/s`**, zero SSD wear).
 
 ---
 
-## 4. Fit & Compatibility with Our Existing Stack
+## 5. Status & Action History
 
-- **Incompatible with practical multi-agent coding:**
-  - For our *"implement with one AI, review independently with Claude / Codex / Argon"* workflow, [**`T3 Code` + CLI Subagents**](../developer-tools/t3-code.md) (`argon`, `antigravity-claude`, `antigravity-consult`, `task-context`) already runs in seconds with `0 GB` local model storage overhead.
-  - If a safe, 100% free offline local coder is needed on an `Apple Silicon` (`32 GB RAM`) machine, fitting **`Ollama` / `MLX`** models (`Qwen2.5-Coder-14B` or `Qwen3-Coder`, `~9–18 GB`) completely inside unified memory achieves **`30–65 tokens/s` (`~1000x` faster)** with zero SSD read wear.
-
----
-
-## 5. When to Use (and When Not To)
-
-- **When to use:** Only for studying how C99 disk-streaming MoE inference works (`make test` without downloading weights).
-- **When not to use:** Daily coding, refactoring, code review, interactive chat, or any workstation with less than `2 TB` of spare storage or soldered laptop SSDs.
-
----
-
-## 6. Status & Action History
-
-| Date | Action | Status | Notes (where tested, what was sanitized, outcome) |
+| Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Video demo, GitHub source (`src/`, `scripts/`), `Min`/`Recommended` hardware sizing, and local/free-tier risk audit | `⛔ Rejected` | Rejected for practical coding: `Min` setup needs `~1.8 TB` NVMe at `~24–33 s/token` (`~50 TB` SSD reads per 500 tokens), while smooth speed requires a `16× H200` (`~2.25 TB VRAM`) cluster. Keep using `T3 Code` + CLI subagents. |
+| 2026-11-16 | Audited C99 engine, speed (`~24–33 s/token`), hardware specs, and local coder alternatives | `⛔ Rejected` | Rejected for practical coding due to `~1.8 TB` NVMe requirement and `~30s/token` speed; for offline local coding, use RAM-resident `Ollama`/`MLX` (`Qwen3-Coder`). |

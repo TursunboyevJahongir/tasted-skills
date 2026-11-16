@@ -2,69 +2,61 @@
 
 **🇺🇿 O'zbekcha** | [🇬🇧 English](../en/external-apis/minimax-m3-1-flash-api.md) | [🇷🇺 Русский](../ru/external-apis/minimax-m3-1-flash-api.md)
 
-- **Manba:** [MiniMax Platform](https://www.minimax.io/) · [OpenRouter (`minimax/minimax-m3.1-flash`)](https://openrouter.ai/)
+- **Manba:** [MiniMax Platform](https://www.minimax.io/) · [OpenRouter (`minimax/minimax-m3.1-flash`)](https://openrouter.ai/minimax/minimax-m3.1-flash)
+- **Statistika va Benchmarklar:** [OpenRouter Live Stats & Throughput](https://openrouter.ai/minimax/minimax-m3.1-flash) · [Hugging Face Benchmarks](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [Artificial Analysis Leaderboard](https://artificialanalysis.ai/leaderboards/models)
 - **Turkum:** `Tashqi API'lar` *(Mahsulot backendi, botlar va multimodal avtomatizatsiya uchun arzon bulut LLM API)*
 - **Turi:** `External Cloud API` *(`1M` kontekst, `matn + rasm + video`, OpenAI/Anthropic-mos REST API)*
 - **Sifat bahosi:** **8.0 / 10** *(narx / tezlik / multimodal sifat nisbati bo'yicha)*
-- **Bizga kerakliligi:** **5.0 / 10** *(kod yozish agentimiz uchun emas, balki mahsulot backendidagi ommaviy AI vazifalar uchun zaxira API)*
-- **Tavsiya etilgan ko'lam:** `Faqat mahsulot backendida Pullik API (Zero-Data-Retention) sifatida`
+- **Bizga kerakliligi:** **5.0 / 10** *(mahsulot backendidagi ommaviy AI funksiyalar uchun tejamkor API)*
+- **Tavsiya etilgan ko'lam:** `Mahsulot backendida Pullik API (Zero-Data-Retention) sifatida`
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `👍 Yaxshi variant` *(`$0.15 / $0.60` narx va `170+ TPS` tezlik bilan katta oqimli bot, OCR/rasm/video tahlili va ofis avtomatizatsiyasida juda tejamkor taklif)*
+- **Joriy holati:** `👍 Yaxshi variant` *(`$0.15 / $0.60` narx va `170+ tok/s` tezlik bilan ommaviy bot, OCR/rasm/video tahlili va SaaS avtomatizatsiyasi uchun qulay)*
 
 ---
 
-## 1. Nima va qanday ishlaydi?
+## 1. Nimaga mo'ljallangan va nima ish qila oladi? (Asosiy yo'nalishi)
 
-OpenRouter'da 10 kun davomida **`space-bunny`** nomi ostida `#1` o'rinni egallagan **`MiniMax M3.1 Flash`** modelining bulut API ko'rinishi (lokal kompyuterga sig'masligi sababli lokal versiyasi [Lokal modellar bo'limida rad etilgan](../local-models/minimax-m3-1-flash.md)).
+**`MiniMax M3.1 Flash API`** — mahsulotlar ichida (web-app, mobil ilova yoki admin panel backendida) katta oqimli so'rovlarni **juda arzon va yuqori tezlikda** qayta ishlashga mo'ljallangan multimodal (`matn + rasm + video`) bulut API.
 
-**Asosiy texnik ko'rsatkichlari va narxi:**
-- **Narxi (`1M` token uchun):** Input — **`$0.15`**, Output — **`$0.60`**, Cached Input — **`$0.015`** *(masalan, `Claude Opus 5.5` `$4 / $20` narxidan `~25–33 baravar` arzon)*.
-- **Tezligi:** O'rtacha **`170–200+ token/soniya`** (`P50 = 170+ TPS`) — real vaqt chatlari va ko'p qadamli pipeline'larda javobni deyarli kuttirmaydi.
-- **Kontekst va Multimodallik:** **`1,000,000` token** oyna; bir vaqtning o'zida **matn, rasm (`BabyVision: 91`) va video** qabul qiladi hamda `tool-calling` / `structured output` qo'llab-quvvatlaydi.
-
----
-
-## 2. Qanchalik yaxshi va qanchalik yomon? (Qo'shimcha muhim ma'lumotlar)
-
-### Kuchli tomonlari (Nega yaxshi taklif?)
-- **Ommaviy servis va botlarda juda katta tejamkorlik:** Kuniga yuz minglab so'rov bo'ladigan mijozlarni qo'llab-quvvatlash botlari, tarjima, moderatsiya, chek/hujjat/rasm o'qish (`OCR`), qisqa video-kadr tasnifi va ofis SaaS integratsiyalarida (`Automation-Bench: 62.8%`, `BankerToolBench: 76.2%`) yuqori natija beradi.
-- **Standart SDK mosligi:** Qo'shimcha kutubxona o'rnatmasdan, standart `OpenAI` yoki `Anthropic` SDK `baseURL` orqali ulab ketish mumkin (`Cached input $0.015` katta tizimli promptlarda xarajatlarni yana `10x` qisqartiradi).
-
-### Zaif tomonlari va chegaralari (Qayerda adashmaslik kerak?)
-- **Asosiy dasturlash agentlarida `Opus` / `Codex` o'rnini bosmaydi:** Videolarda *"Opus'dan kuchli"* deb maqtalsa ham, haqiqiy muhandislik va repozitoriy benchmarklarida (`Terminal-Bench 4.0: 38.1%` vs `Opus 5: 51.8%`, `NL2Repo: 61.2%` vs `Opus: 75.3%`) murakkab full-stack / mobil arxitekturada ko'proq xato qiladi. Uni `Claude Code` yoki `Codex` ichida asosiy dasturchi modeli qilib ulamaslik kerak.
-- **Tashqi bulut yurisdiksiyasi:** Provayder xalqaro / Osiyo (`MiniMax` / `Nanonoble Pte. Ltd.`) serverlarida ishlaydi — foydalanuvchi shaxsiy ma'lumotlari (`PII`) mamlakat ichida qolishi qat'iy talab etiladigan loyihalarda buni oldindan hisobga olish zarur.
+**Qo'lidan keladigan asosiy ishlar:**
+1. **Ommaviy mijoz botlari va tarjima:** `170–200+ token/s` tezlikda kuttirmasdan javob berish va matnlarni xulosalash.
+2. **Rasm, hujjat (`OCR`) va video tahlili:** Chek, skrinshot, pasport/hujjat yoki qisqa videolarni o'qib, tayyor `JSON` (`structured output`) qaytarish (`BabyVision: 91`).
+3. **Ofis va SaaS avtomatizatsiyasi:** Jadval, CRM va veb-formalarni avtomatik to'ldirish hamda ko'p qadamli `tool-calling` (`Automation-Bench: 62.8%`, `BankerToolBench: 76.2%`).
+4. **Katta kontekst (`1,000,000` token):** Uzun loglar yoki katta hujjatlarni bo'laklamasdan bitta so'rovda tahlil qilish.
 
 ---
 
-## 3. Xavfsizlik va "Tekin" Rejimlarda Ehtiyot Choralari
+## 2. Kod yozishga ishlaydimi?
 
-- **Xavf darajasi:** `Past–O'rta` *(pullik Zero-Retention API'da)* / **`Yuqori` *(`MiniMax Code` tekin kreditlari va `:free` endpointlarda)***
-- **⚠️ "Tekin qilib ishlatishda" qat'iy ehtiyot bo'ling:**
-  1. **`MiniMax Code` kunlik tekin kreditlari (`Daily check-in: 400 credits`) va OpenRouter `:free` endpointlariga yopiq ma'lumot bermang:** Bepul rejimlar va promo-chatlarda kiritilgan kodlar, foydalanuvchi ma'lumotlari va promptlar **loglanishi hamda modelni o'qitish (`training`) uchun ishlatilishi mumkin** (MiniMax'ning o'z shartlarida ham bepul/ommaviy demoga yopiq kod, sirlar va kalitlarni yubormaslik yozilgan).
-  2. **Lokal `Claude Code` / CLI agentga tekin API ulamang:** Terminal agenti ishga tushganda lokal fayllar, git tarixi va loyiha strukturasini avtomatik o'qib API serverga uzatadi — bepul endpointda bu butun yopiq repozitoriyning tashqariga chiqib ketishini anglatadi.
-- **Xavfsiz ulash qoidalari (ishlatilsa):**
-  1. Faqat **pullik API kalit** orqali ulang; OpenRouter ishlatilsa akkaunt sozlamalarida **`Zero Data Retention` / `Do not allow providers to train on prompts`** rejimini majburiy yoqing.
-  2. API'ga foydalanuvchi parollari, to'lov rekvizitlari, `.env` sirlari va tozalanmagan `PII` yubormang.
+- **Oddiy skript va yordamchi avtomatizatsiyaga — Ha; murakkab loyiha arxitekturasiga — Yo'q:**
+  - Bir faylli skriptlar, oddiy UI prototiplar, regex/SQL tuzish va ma'lumot konvertatsiya qilishda yaxshi ishlaydi.
+  - **Asosiy dasturlash agentida (`Claude Code`, `Codex`) `Opus` yoki `Codex` o'rnini bosa olmaydi:** Real muhandislik testlarida **`Terminal-Bench 4.0` = `38.1%`** *(vs `Claude Opus 5`: `51.8%`)* va **`NL2Repo-Bench` = `61.2%`** *(vs `Opus`: `75.3%`)* — ko'p faylli murakkab kod bazasida ko'proq xato qiladi.
 
 ---
 
-## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
+## 3. Narx, Tezlik va Xavfsizlik
 
-- **Kod yozish va Review zanjirimizga tegmaydi:** Dasturlash, arxitektura va mustaqil code review uchun [**`T3 Code` + CLI Subagentlar**](../developer-tools/t3-code.md) (`Claude Opus 5.5`, `Codex`, `Gemini 4 Carbon / Argon`) o'zgarishsiz asosiy vosita bo'lib qoladi.
-- **Mahsulot ichidagi AI funksiyalar uchun toza bo'shliqni to'ldiradi:** Agar biror web-app, mobil ilova yoki admin panel ichida arzon AI yordamchi, kontent/rasm moderatsiyasi, avto-kategoriyalash yoki katta matn/video tahlili kerak bo'lsa, qimmat frontier API o'rniga `$0.15/$0.60` narxda kuchli ishchi ot vazifasini bajaradi.
+| Ko'rsatkich | Qiymati |
+|---|---|
+| **Input narxi** | **`$0.15 / 1M token`** *(Cached Input: **`$0.015 / 1M`**)* |
+| **Output narxi** | **`$0.60 / 1M token`** *(frontier `$4/$20` modellardan `~25–33x` arzon)* |
+| **Tezlik (`Throughput`)** | **`170 – 200+ token / soniya`** |
+| **Kontekst oynasi** | **`1,000,000 token`** (`matn + rasm + video`) |
+| **Integratsiya** | Standart `OpenAI` yoki `Anthropic` SDK (`baseURL` orqali) |
+
+> ⚠️ **Xavfsizlik eslatmasi:** Yopiq loyiha kodi yoki mijoz ma'lumotlarini `MiniMax Code` kunlik tekin kreditlariga yoki `:free` endpointlarga yubormang (ular o'qitish uchun loglanadi). Faqat **pullik `Zero-Data-Retention` API kalit** ishlating.
 
 ---
 
-## 5. Qaysi yo'nalish va vazifalarda foydali?
+## 4. Bizga qanchalik kerak?
 
-- **Qachon ishlatish kerak:** Mahsulot backendidagi ommaviy chatbotlar, rasm/skrinshot/hujjat o'qish (`vision`), tarjima va xulosalash (`summarization`), test/sandbox avtomatizatsiyasi hamda `1M` kontekstli katta log/matn tahlilida (faqat pullik Zero-Retention API orqali).
-- **Qachon ishlatmaslik kerak:** Asosiy dasturlash agentida murakkab kod yozdirishda, yopiq repozitoriylarni `MiniMax Code` bepul rejimiga ulashda va qat'iy lokal `PII` talabi bor ma'lumotlarda.
+- **Mahsulot backendi uchun — foydali (`5.0/10`, `👍 Yaxshi variant`):** Ilovalarimiz ichida ommaviy AI chat, rasm/chek o'qish (`OCR`), moderatsiya yoki tarjima kerak bo'lganda qimmat API'lar o'rniga xarajatlarni `25–30 baravar` qisqartiradi.
+- **Kod yozish uchun — kerak emas:** Dasturlashda o'zimizning asosiy frontier modellarimiz (`Claude Opus`, `Codex`, `Gemini`) ishlatiladi.
 
 ---
 
-## 6. Holat va Qilingan ishlar tarixi
+## 5. Holat va Qilingan ishlar tarixi
 
-| Sana | Amal | Holat | Izoh (ishlatildimi, qayerda sinab ko'rildi, nima tozalandi) |
+| Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Narx, tezlik (`170+ TPS`), multimodal benchmarklar va API maxfiylik shartlari auditi | `👍 Yaxshi variant` | Mahsulot backendi va botlar uchun tejamkor tashqi API sifatida katalogga qo'shildi (faqat pullik Zero-Retention API bilan ishlatish, bepul kredit rejimlariga yopiq kod bermaslik sharti bilan). |
-
+| 2026-11-16 | Yo'nalishi, coding ko'rsatkichi (`Terminal-Bench 38.1%`), narxi (`$0.15/$0.60`) va statistika linklari tahlili | `👍 Yaxshi variant` | Mahsulot backendidagi ommaviy bot, OCR/vision va avtomatizatsiya vazifalari uchun tejamkor bulut API sifatida katalogga kiritildi. |
