@@ -198,16 +198,16 @@
 
 <hr>
 
-<h4><a href="reviews/developer-tools/t3-code.md">T3 Code + CLI Subagent</a></h4>
+<h4><a href="reviews/developer-tools/orca.md">Orca + CLI Subagent</a></h4>
 
-<p>Multi-Agent kod va review</p>
+<p>Multi-Agent orkestratsiya va Mobil boshqaruv</p>
 
-<p>Baho: 9.0/10 · ✅ Faol · Desktop App + CLI + Skill<br>Sana: 2026-10-23 dan</p>
+<p>Baho: 9.5/10 · ✅ Faol · Desktop + Mobile App + CLI + Skill<br>Sana: 2026-11-16 dan</p>
 
 <details>
 <summary>Batafsil</summary>
 
-<p>Bir nechta AI'ni birga ishlatish: <code>task-context</code> + CLI subagentlar (<code>argon</code>, <code>antigravity-claude</code>, <code>claude-opus</code>, <code>antigravity-consult</code>) hamda Orca muhitida <strong><code>orchestration</code></strong> (<code>worker-start</code> DAG) orqali mustaqil kod yozish va review.</p>
+<p>Bitta promptdan <strong><code>orchestration</code></strong> (<code>orca orchestration worker-start</code> DAG) va <code>task-context</code> + CLI subagentlar (<code>argon</code>, <code>antigravity-claude</code>, <code>claude-opus</code>) orqali <code>Codex</code>, <code>Claude</code> va <code>Antigravity</code> ni Chat UI ichida jonli kartalar bilan ishlatish + uzilmaydigan <strong><code>Orca IDE</code> mobil ilovasi</strong> va Lock Screen'da ishlash (<code>caffeinate</code>; <code>PostHog</code> o'chirilgan).</p>
 
 </details>
 
@@ -681,6 +681,21 @@
 
 <hr>
 
+<h4><a href="reviews/developer-tools/t3-code.md">T3 Code</a></h4>
+
+<p>Sinab ko&#x27;rilib o&#x27;chirib tashlandi (~3.87 GB disk bo&#x27;shatildi): telefon ilovasi (Beta) ekran o&#x27;chganda tez-tez uzilib qoladi, kompyuter bloklanganda (Lock Screen) to&#x27;xtab qoladi va Chat UI ichida native subagent kartalari yo&#x27;q.</p>
+
+<p>Sifat: 8.5/10 · Keraklilik: 2.5/10 · ⛔ Rad etildi · Desktop App + CLI Subagent Workflow<br>Sana: 2026-10-23 → 2026-11-16</p>
+
+<details>
+<summary>Batafsil</summary>
+
+<p>Sinab ko'rilib o'chirib tashlandi (<code>~3.87 GB</code> disk bo'shatildi): telefon ilovasi (Beta) ekran o'chganda tez-tez uzilib qoladi, kompyuter bloklanganda (<code>Lock Screen</code>) to'xtab qoladi va Chat UI ichida native subagent kartalari yo'q. <strong>O'rniga:</strong> <a href="reviews/developer-tools/orca.md"><strong><code>Orca</code> (<code>stablyai/orca</code>)</strong></a>.</p>
+
+</details>
+
+<hr>
+
 <h4><a href="reviews/developer-tools/caveman.md">caveman</a></h4>
 
 <p>ASD-STE100 asosidagi o&#x27;ta qisqa terminal javob rejimi (SKILL.md); o&#x27;rnatilsa @caveman-ai/cli telemetriyasi va plugin.json hooklarisiz faqat tozalangan yolg&#x27;iz SKILL.md (disable-model-invocation: true) olinishi shart.</p>
@@ -735,7 +750,7 @@
 <details>
 <summary>Batafsil</summary>
 
-<p>Lokal LLM reverse-proxy (<code>localhost:20128</code>); ichidagi 44 ta skill kodlash uchun emas, uzoq sessiyalarni uzadi (<code>#7287</code>), limitda kuchsiz modelga tushiradi va TLS-stealth (<code>wreq-js</code>) pullik obunalarda ToS ban xavfini tug'diradi. <strong>O'rniga:</strong> <a href="reviews/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong></a> + <a href="reviews/architecture/ponytail.md"><strong><code>ponytail</code></strong></a>.</p>
+<p>Lokal LLM reverse-proxy (<code>localhost:20128</code>); ichidagi 44 ta skill kodlash uchun emas, uzoq sessiyalarni uzadi (<code>#7287</code>), limitda kuchsiz modelga tushiradi va TLS-stealth (<code>wreq-js</code>) pullik obunalarda ToS ban xavfini tug'diradi. <strong>O'rniga:</strong> <a href="reviews/developer-tools/orca.md"><strong><code>Orca</code></strong></a> + <a href="reviews/architecture/ponytail.md"><strong><code>ponytail</code></strong></a>.</p>
 
 </details>
 

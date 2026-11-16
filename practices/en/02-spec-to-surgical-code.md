@@ -4,7 +4,7 @@
 
 ⬅️ [Back to Practices Table of Contents](README.md)
 
-- **Combined Tools:** [**`graphify`**](../../reviews/en/architecture/graphify.md) + [**`grill-me`**](../../reviews/en/architecture/grill-me.md) + [**`ponytail`**](../../reviews/en/architecture/ponytail.md) + [**`karpathy-guidelines`**](../../reviews/en/architecture/karpathy-guidelines.md) + [**`T3 Code`**](../../reviews/en/developer-tools/t3-code.md) + [**`elephant-goldfish-model`**](../../reviews/en/architecture/elephant-goldfish-model.md)
+- **Combined Tools:** [**`graphify`**](../../reviews/en/architecture/graphify.md) + [**`grill-me`**](../../reviews/en/architecture/grill-me.md) + [**`ponytail`**](../../reviews/en/architecture/ponytail.md) + [**`karpathy-guidelines`**](../../reviews/en/architecture/karpathy-guidelines.md) + [**`Orca`**](../../reviews/en/developer-tools/orca.md) + [**`elephant-goldfish-model`**](../../reviews/en/architecture/elephant-goldfish-model.md)
 - **Target Projects:** All Backend, Web, Mobile, and Architecture tasks.
 
 ---
@@ -37,9 +37,9 @@ Both skills stay active together during implementation:
 - **`karpathy-guidelines`:** Surfaces assumptions upfront and makes surgical edits without reformatting or refactoring neighboring code.
 - **`ponytail`:** Rejects unrequested wrappers, factories, and "just in case" config; updates all affected callers/tests and ends with 1–2 lines naming what was skipped and any residual risk.
 
-### Stage 4: Verify with a Second Pair of Eyes (`T3 Code` + `elephant-goldfish-model`)
+### Stage 4: Verify with a Second Pair of Eyes (`Orca` + `elephant-goldfish-model`)
 Never let the authoring agent be the sole reviewer of complex changes:
-- **Cross-Model CLI Review (`T3 Code`):** When `Codex` writes the implementation, spawn `Claude Opus` or `Argon` as an isolated CLI subagent to audit the diff independently.
+- **Cross-Model CLI Review (`Orca`):** When `Codex` writes the implementation, spawn `Claude Opus` or `Argon` as an isolated CLI subagent to audit the diff independently.
 - **Doc-Code Drift & Hostile Review (`elephant-goldfish-model`):**
   - `egm-drift-report`: Detects mismatches between `README` / `DESIGN.md` and actual code.
   - `egm-review`: Dispatches stateless *Goldfish* critics (`egm-design`, `egm-codebase-details`, `egm-zoom-out`) across 5 review angles.

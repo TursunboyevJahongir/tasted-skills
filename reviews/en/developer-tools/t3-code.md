@@ -5,11 +5,12 @@
 - **Source:** [pingdotgg/t3code](https://github.com/pingdotgg/t3code)
 - **Category:** `Developer Tools` *(Multi-Agent Orchestration & Cross-AI Code Review)*
 - **Type:** `Desktop App + CLI Subagent Workflow`
-- **Quality Score:** **9.0 / 10**
-- **Need for Us:** **9.5 / 10**
-- **Recommended Scope:** `Standalone Desktop App + Global Consult Skills`
-- **Active Since:** `2026-10-23`
-- **Current Status:** `✅ Active` *(primary environment for multi-AI collaborative coding and review)*
+- **Quality Score:** **8.5 / 10**
+- **Need for Us:** **2.5 / 10**
+- **Recommended Scope:** `Skip (Uninstalled)`
+- **Instead Use (Alternative):** [**`Orca` (`stablyai/orca`)**](orca.md)
+- **Used Dates:** `2026-10-23 → 2026-11-16`
+- **Current Status:** `⛔ Rejected` *(retired and uninstalled in favor of `Orca` due to mobile beta disconnects, lock-screen sleep drops, and `Orca`'s built-in multi-agent orchestration)*
 
 ---
 
@@ -32,8 +33,10 @@ It enables combining multiple independent AI models on a single task. For exampl
 - **True Cross-Model verification:** One model often misses its own blind spots; having Claude or Argon review Codex's code (or vice versa) catches subtle bugs early.
 - **Git worktree isolation:** Run parallel tasks across branches without working-tree collisions.
 
-### Weaknesses and Cost
-- Running cross-model CLI review loops consumes quota from both subscriptions and adds 1–5 minutes per review pass.
+### Weaknesses and Why We Switched to `Orca`
+- **Mobile app instability (Beta):** Frequently disconnects when the phone screen locks or switches networks, requiring manual re-pairing.
+- **Fails when Mac is on Lock Screen:** Drops sessions when the workstation screen locks (whereas [**`Orca`**](orca.md) includes built-in `caffeinate -i -s` and a background PTY daemon).
+- **No native inline multi-agent worker cards:** [**`Orca`**](orca.md) spawns and tracks `Claude`, `Codex`, and `Antigravity` workers directly inside Chat UI from a single prompt via `orca orchestration worker-start` (`841 MB` RAM vs `T3 Code`'s `~1.1–1.4 GB` RAM + `~3.87 GB` `~/.t3` cache).
 
 ---
 
@@ -65,3 +68,4 @@ Works seamlessly alongside our global `task-context`, `antigravity-claude`, `ant
 | Date | Action | Status | Notes |
 |---|---|---|---|
 | 2026-10-23 | Installed `T3 Code` desktop app + unified CLI subagent review skills (`2026-10-31`) | `✅ Active` | Desktop app and CLI subagent bridge (Codex ↔ Claude ↔ Antigravity) used daily. |
+| 2026-11-16 | Benchmarked live against [**`Orca` (`stablyai/orca`)**](orca.md) and uninstalled `T3 Code` (`~3.87 GB` reclaimed) | `⛔ Rejected` | Switched completely to `Orca` for stable mobile pairing, Lock-Screen (`caffeinate`) support, and native single-prompt multi-agent orchestration. |

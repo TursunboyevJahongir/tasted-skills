@@ -45,7 +45,7 @@ Categories:
 ### Special rules for `local-models` (`🧠 Lokal modellar`) & `external-apis` (`🔌 Tashqi API'lar`)
 
 Keep entries in both sections **simple, direct, and free of bloated filler**:
-1. **Never list `T3 Code` as the alternative (`O'rniga` / `Instead use` / `Вместо него`) to a local model or external API.** `T3 Code` is a desktop/CLI multi-agent orchestrator, not an LLM weight package or API endpoint.
+1. **Never list `Orca` as the alternative (`O'rniga` / `Instead use` / `Вместо него`) to a local model or external API.** `Orca` is a desktop/CLI multi-agent orchestrator, not an LLM weight package or API endpoint.
 2. **Always answer these core questions clearly and concisely:**
    - **Nimaga mo'ljallangan va nima ish qila oladi (Primary direction & capabilities):** What the model/engine is built for (e.g., general reasoning, multimodal `text + image + video`, OCR, office automation, or disk-streaming inference) and what tasks it handles well.
    - **Kod yozishga ishlaydimi? (Does it work for coding?):** State directly whether it works for practical software engineering, citing real coding benchmarks (e.g., `Terminal-Bench`, `SWE-bench`, `NL2Repo`) and real generation speed (`tok/s`).

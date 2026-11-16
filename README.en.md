@@ -198,16 +198,16 @@
 
 <hr>
 
-<h4><a href="reviews/en/developer-tools/t3-code.md">T3 Code + CLI Subagent</a></h4>
+<h4><a href="reviews/en/developer-tools/orca.md">Orca + CLI Subagent</a></h4>
 
-<p>Multi-Agent Code &amp; Review Orchestration</p>
+<p>Multi-Agent Orchestration &amp; Mobile Control</p>
 
-<p>Score: 9.0/10 · ✅ Active · Desktop App + CLI + Skill<br>Date: Since 2026-10-23</p>
+<p>Score: 9.5/10 · ✅ Active · Desktop + Mobile App + CLI + Skill<br>Date: Since 2026-11-16</p>
 
 <details>
 <summary>Details</summary>
 
-<p>Multi-AI orchestration via <code>task-context</code> + CLI subagents (<code>argon</code>, <code>antigravity-claude</code>, <code>claude-opus</code>, <code>antigravity-consult</code>) and <strong><code>orchestration</code></strong> (Orca <code>worker-start</code> DAGs) for independent implementation and review.</p>
+<p>Chains <code>Codex</code>, <code>Claude</code>, and <code>Antigravity</code> from a single prompt via native <strong><code>orchestration</code></strong> (<code>orca orchestration worker-start</code> DAGs) and <code>task-context</code> + CLI subagents (<code>argon</code>, <code>antigravity-claude</code>, <code>claude-opus</code>) with live Chat UI worker cards + reliable <strong><code>Orca IDE</code> mobile app</strong> and Lock-Screen wake (<code>caffeinate</code>; <code>PostHog</code> disabled).</p>
 
 </details>
 
@@ -681,6 +681,21 @@
 
 <hr>
 
+<h4><a href="reviews/en/developer-tools/t3-code.md">T3 Code</a></h4>
+
+<p>Used and uninstalled (~3.87 GB reclaimed): its beta mobile app disconnects frequently when the phone locks, sessions drop on Mac Lock Screen, and it lacks native inline worker cards in Chat UI.</p>
+
+<p>Quality: 8.5/10 · Need: 2.5/10 · ⛔ Rejected · Desktop App + CLI Subagent Workflow<br>Date: 2026-10-23 → 2026-11-16</p>
+
+<details>
+<summary>Details</summary>
+
+<p>Used and uninstalled (<code>~3.87 GB</code> reclaimed): its beta mobile app disconnects frequently when the phone locks, sessions drop on Mac <code>Lock Screen</code>, and it lacks native inline worker cards in Chat UI. <strong>Instead use:</strong> <a href="reviews/en/developer-tools/orca.md"><strong><code>Orca</code> (<code>stablyai/orca</code>)</strong></a>.</p>
+
+</details>
+
+<hr>
+
 <h4><a href="reviews/en/developer-tools/caveman.md">caveman</a></h4>
 
 <p>ASD-STE100-based terse terminal response skill (SKILL.md); if used, take only the sanitized standalone SKILL.md (disable-model-invocation: true) without @caveman-ai/cli telemetry or plugin.json hooks.</p>
@@ -735,7 +750,7 @@
 <details>
 <summary>Details</summary>
 
-<p>Local LLM reverse-proxy (<code>localhost:20128</code>); its 44 bundled skills are proxy admin manuals, default routing breaks long sessions (<code>#7287</code>) and silently downgrades models, and <code>wreq-js</code> TLS-stealth carries subscription ToS ban risk. <strong>Instead use:</strong> <a href="reviews/en/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong></a> + <a href="reviews/en/architecture/ponytail.md"><strong><code>ponytail</code></strong></a>.</p>
+<p>Local LLM reverse-proxy (<code>localhost:20128</code>); its 44 bundled skills are proxy admin manuals, default routing breaks long sessions (<code>#7287</code>) and silently downgrades models, and <code>wreq-js</code> TLS-stealth carries subscription ToS ban risk. <strong>Instead use:</strong> <a href="reviews/en/developer-tools/orca.md"><strong><code>Orca</code></strong></a> + <a href="reviews/en/architecture/ponytail.md"><strong><code>ponytail</code></strong></a>.</p>
 
 </details>
 

@@ -5,11 +5,12 @@
 - **Manba:** [pingdotgg/t3code](https://github.com/pingdotgg/t3code)
 - **Turkum:** `Developer Tools` *(Multi-Agent Orkestratsiya va Cross-AI Code Review)*
 - **Turi:** `Desktop App + CLI Subagent Workflow`
-- **Sifat bahosi:** **9.0 / 10**
-- **Bizga kerakliligi:** **9.5 / 10**
-- **Tavsiya etilgan ko'lam:** `Standalone Desktop App + Global Consult Skilllar`
-- **Ishlatilayotgan sana:** `2026-10-23` dan
-- **Joriy holati:** `✅ Faol` *(bir nechta AI agentlarni birgalikda ishlatish uchun asosiy muhit)*
+- **Sifat bahosi:** **8.5 / 10**
+- **Bizga kerakliligi:** **2.5 / 10**
+- **Tavsiya etilgan ko'lam:** `Skip (O'chirib tashlandi)`
+- **O'rniga ishlatiladigan tizim (Alternativa):** [**`Orca` (`stablyai/orca`)**](orca.md)
+- **Ishlatilgan sana:** `2026-10-23 → 2026-11-16`
+- **Joriy holati:** `⛔ Rad etildi` *(mobil ulanish uzilishlari, Lock Screen'da to'xtab qolishi va `Orca` ning ustun ichki multi-agent orkestratsiyasi sabab `Orca` ga o'tildi va o'chirildi)*
 
 ---
 
@@ -32,9 +33,10 @@ Bitta vazifada bir nechta mustaqil AI modellarini birga ishlatish imkonini berad
 - **Haqiqiy Cross-Model tekshiruv:** Bitta model o'z xatosini o'zi ko'rmay qolishi mumkin; Codex yozgan kodni Claude (yoki Argon) CLI subagent orqali tekshirishi sifatni keskin oshiradi.
 - **Git worktree izolyatsiyasi:** Bir vaqtda bir nechta vazifani bir-biriga aralashtirmasdan parallel yurgizish qulay.
 
-### Zaif tomonlari va xarajati
-- Bir nechta CLI agent parallel yoki ketma-ket chaqirilganda har ikki obuna kvotasidan sarflanadi va review sikli qo'shimcha vaqt (1–5 daqiqa) oladi.
-- Beta/Nightly relizlarda ba'zan UI yoki sessiya holati yangilanishlarini kuzatib borish kerak bo'ladi.
+### Zaif tomonlari va nima uchun `Orca` ga o'tdik?
+- **Mobil ilova xomligi (Beta):** Telefon ekrani o'chganda yoki tarmoq almashganda aloqa tez-tez uzilib qoladi va har safar qayta ulashni talab qiladi.
+- **Kompyuter blokda (`Lock Screen`) ishlamasligi:** Kompyuter bloklanganda sessiyalar uzilib qoladi ([**`Orca`**](orca.md) da esa ichki `caffeinate -i -s` va fon daemoni bor).
+- **UI ichida native multi-agent subagent kartalari yo'q:** [**`Orca`**](orca.md) bitta promptdan `orca orchestration worker-start` orqali `Claude`, `Codex` va `Antigravity` workerlarini Chat UI ichida jonli kartalar bilan boshqaradi (`841 MB` RAM vs `T3 Code` ning `~1.1–1.4 GB` RAM + `~3.87 GB` `~/.t3` keshi).
 
 ---
 
@@ -65,5 +67,6 @@ Global muhitimizdagi `task-context`, `antigravity-claude`, `antigravity-consult`
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-10-23 | `T3 Code` desktop muhitini o'rnatish + CLI subagent review skillarini ulash (`2026-10-31`) | `✅ Faol` | Desktop ilova hamda CLI subagent ko'prigi (Codex ↔ Claude ↔ Antigravity) faol qo'llanilmoqda. |
+| 2026-10-23 | `T3 Code` desktop muhitini o'rnatish + CLI subagent review skillarini ulash (`2026-10-31`) | `✅ Faol` | Desktop ilova hamda CLI subagent ko'prigi (Codex ↔ Claude ↔ Antigravity) faol qo'llanildi. |
+| 2026-11-16 | [**`Orca` (`stablyai/orca`)**](orca.md) bilan jonli solishtirish va `T3 Code` ni to'liq o'chirish (`~3.87 GB` bo'shatildi) | `⛔ Rad etildi` | Mobil barqarorlik, Lock Screen (`caffeinate`) va bitta promptdan ichki multi-agent orkestratsiya sabab to'liq `Orca` ga o'tildi. |
 

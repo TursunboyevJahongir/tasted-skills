@@ -1,10 +1,10 @@
-# 5. Мультиагентная Работа (`T3 Code` + CLI Subagents) и Передача Контекста без Потерь
+# 5. Мультиагентная Работа (`Orca` + CLI Subagents) и Передача Контекста без Потерь
 
 [🇺🇿 O'zbekcha](../05-multi-agent-and-context-handoff.md) | [🇬🇧 English](../en/05-multi-agent-and-context-handoff.md) | **🇷🇺 Русский**
 
 ⬅️ [Вернуться к оглавлению практик](README.md)
 
-- **Связка инструментов:** [**`T3 Code`**](../../reviews/ru/developer-tools/t3-code.md) + `task-context` + CLI-субагенты (`antigravity-claude`, `argon`, `claude-opus`, `antigravity-consult`) + [**`elephant-goldfish-model`**](../../reviews/ru/architecture/elephant-goldfish-model.md)
+- **Связка инструментов:** [**`Orca`**](../../reviews/ru/developer-tools/orca.md) + `task-context` + CLI-субагенты (`antigravity-claude`, `argon`, `claude-opus`, `antigravity-consult`) + [**`elephant-goldfish-model`**](../../reviews/ru/architecture/elephant-goldfish-model.md)
 - **Задачи:** Крупные фичи, параллельная разработка в нескольких ветках/worktree, передача задачи при исчерпании квоты модели и глубокое ревью кода и архитектуры.
 
 ---
@@ -26,7 +26,7 @@
 
 | Ситуация | Какая связка используется | Почему именно так |
 |---|---|---|
-| **Проверка написанного кода/diff'а и соответствия требованиям** | `task-context` + **`argon` / `antigravity-claude` / `claude-opus`** (CLI-субагент `T3 Code`) | Ревьюеру важно знать, *что именно* просил пользователь и *почему* выбрано такое решение (`task-context`), но смотреть на код глазами другой модели (*«Codex написал -> Argon/Claude проверил»*). |
+| **Проверка написанного кода/diff'а и соответствия требованиям** | `task-context` + **`argon` / `antigravity-claude` / `claude-opus`** (CLI-субагент `Orca`) | Ревьюеру важно знать, *что именно* просил пользователь и *почему* выбрано такое решение (`task-context`), но смотреть на код глазами другой модели (*«Codex написал -> Argon/Claude проверил»*). |
 | **Проверка архитектурного плана, дизайн-дока или расхождения Документация-Код** | [**`elephant-goldfish-model`**](../../reviews/ru/architecture/elephant-goldfish-model.md) (`egm-review`, `egm-drift-report`) | Здесь история переписки **вредит** — субагенты без памяти (*Goldfish*) читают документ и код с нуля, сразу вскрывая неявные допущения и лишнюю сложность (YAGNI). |
 
 ---
@@ -46,5 +46,5 @@
 Если модель упёрлась в лимит или зациклилась на сложном баге:
 - Достаточно сказать другому агенту прочитать папку `task-context` — он за 5 секунд подхватывает цель, список затронутых файлов и открытые замечания ревью.
 
-### 4) Параллельная работа в нескольких Git Worktree без конфликта симуляторов (`T3 Code` + `agent-device`)
-- `T3 Code` разводит задачи по отдельным git worktree, а [**`agent-device`**](../../reviews/ru/mobile/agent-device.md) и [**`simslim`**](../../reviews/ru/mobile/simslim.md) изолируют сессии симуляторов между ветками.
+### 4) Параллельная работа в нескольких Git Worktree без конфликта симуляторов (`Orca` + `agent-device`)
+- `Orca` разводит задачи по отдельным git worktree, а [**`agent-device`**](../../reviews/ru/mobile/agent-device.md) и [**`simslim`**](../../reviews/ru/mobile/simslim.md) изолируют сессии симуляторов между ветками.

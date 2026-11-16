@@ -9,7 +9,7 @@
 - **Need for Us:** **2.0 / 10**
 - **Recommended Scope:** `Do Not Install`
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⛔ Rejected` *(skipped because native official harnesses + `T3 Code` + `ponytail` already cover our workflow without ToS or session-affinity risks)*
+- **Current Status:** `⛔ Rejected` *(skipped because native official harnesses + `Orca` + `ponytail` already cover our workflow without ToS or session-affinity risks)*
 
 ---
 
@@ -53,7 +53,7 @@ Although often shared as an "AI coding skill", inspecting the `v3.8.54` reposito
 ## 4. Fit & Compatibility with Our Existing Stack
 
 - **Redundant and counterproductive for our setup:**
-  - Multi-agent collaboration and cross-model verification are already handled cleanly by [**`T3 Code`**](t3-code.md) across native `Antigravity`, `Codex`, and `Claude` harnesses with full prompt caching and zero TLS-proxy ban risk (`Antigravity` does not route through external `OPENAI_BASE_URL` proxies anyway).
+  - Multi-agent collaboration and cross-model verification are already handled cleanly by [**`Orca`**](orca.md) across native `Antigravity`, `Codex`, and `Claude` harnesses with full prompt caching and zero TLS-proxy ban risk (`Antigravity` does not route through external `OPENAI_BASE_URL` proxies anyway).
   - Token efficiency is already handled safely without mutating compiler/test logs via [**`ponytail`**](../architecture/ponytail.md) and [**`graphify`**](../architecture/graphify.md).
 
 ---
@@ -61,7 +61,7 @@ Although often shared as an "AI coding skill", inspecting the `v3.8.54` reposito
 ## 5. When to Use (and When Not To)
 
 - **When to use:** Only if working without official AI subscriptions and aggregating many third-party API keys (`OpenRouter`, `Groq`, local `Ollama`) behind a single endpoint for `Cline` or `OpenCode`.
-- **When not to use:** When using official `Antigravity`, `Claude Code`, and `Codex` subscriptions with `T3 Code`, or on long-running multi-repo architecture and debugging tasks where model consistency and intact stack traces matter.
+- **When not to use:** When using official `Antigravity`, `Claude Code`, and `Codex` subscriptions with `Orca`, or on long-running multi-repo architecture and debugging tasks where model consistency and intact stack traces matter.
 
 ---
 

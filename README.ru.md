@@ -198,16 +198,16 @@
 
 <hr>
 
-<h4><a href="reviews/ru/developer-tools/t3-code.md">T3 Code + CLI Subagent</a></h4>
+<h4><a href="reviews/ru/developer-tools/orca.md">Orca + CLI Subagent</a></h4>
 
-<p>Мультиагентная разработка и ревью</p>
+<p>Мультиагентная оркестрация и Мобильное управление</p>
 
-<p>Оценка: 9.0/10 · ✅ Активен · Desktop App + CLI + Skill<br>Дата: С 2026-10-23</p>
+<p>Оценка: 9.5/10 · ✅ Активен · Desktop + Mobile App + CLI + Skill<br>Дата: С 2026-11-16</p>
 
 <details>
 <summary>Подробнее</summary>
 
-<p>Совместная работа нескольких AI через <code>task-context</code> + CLI-субагенты (<code>argon</code>, <code>antigravity-claude</code>, <code>claude-opus</code>, <code>antigravity-consult</code>) и <strong><code>orchestration</code></strong> (Orca <code>worker-start</code> DAG) для независимой разработки и ревью.</p>
+<p>Запуск цепочек <code>Codex</code>, <code>Claude</code> и <code>Antigravity</code> из одного промпта через встроенный <strong><code>orchestration</code></strong> (<code>orca orchestration worker-start</code> DAG) и <code>task-context</code> + CLI-субагенты (<code>argon</code>, <code>antigravity-claude</code>, <code>claude-opus</code>) с живыми карточками в Chat UI + стабильное мобильное приложение <strong><code>Orca IDE</code></strong> и работа при Lock Screen (<code>caffeinate</code>; <code>PostHog</code> отключён).</p>
 
 </details>
 
@@ -681,6 +681,21 @@
 
 <hr>
 
+<h4><a href="reviews/ru/developer-tools/t3-code.md">T3 Code</a></h4>
+
+<p>Использовался и удалён (освобождено ~3.87 GB): мобильное бета-приложение часто отключается при блокировке телефона, сессии рвутся при Lock Screen на Mac и нет встроенных карточек воркеров в Chat UI.</p>
+
+<p>Качество: 8.5/10 · Нужность: 2.5/10 · ⛔ Отклонено · Desktop App + CLI Subagent Workflow<br>Дата: 2026-10-23 → 2026-11-16</p>
+
+<details>
+<summary>Подробнее</summary>
+
+<p>Использовался и удалён (освобождено <code>~3.87 GB</code>): мобильное бета-приложение часто отключается при блокировке телефона, сессии рвутся при <code>Lock Screen</code> на Mac и нет встроенных карточек воркеров в Chat UI. <strong>Вместо него:</strong> <a href="reviews/ru/developer-tools/orca.md"><strong><code>Orca</code> (<code>stablyai/orca</code>)</strong></a>.</p>
+
+</details>
+
+<hr>
+
 <h4><a href="reviews/ru/developer-tools/caveman.md">caveman</a></h4>
 
 <p>Режим сверхкратких ответов в терминале на базе ASD-STE100 (SKILL.md); при установке брать только очищенный одиночный SKILL.md (disable-model-invocation: true) без телеметрии @caveman-ai/cli и хуков plugin.json.</p>
@@ -735,7 +750,7 @@
 <details>
 <summary>Подробнее</summary>
 
-<p>Локальный LLM reverse-proxy (<code>localhost:20128</code>); его 44 скилла — лишь мануалы прокси, дефолтный роутинг рвёт длинные сессии (<code>#7287</code>) и понижает модель, а TLS-stealth (<code>wreq-js</code>) несёт риск бана подписок по ToS. <strong>Вместо него:</strong> <a href="reviews/ru/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong></a> + <a href="reviews/ru/architecture/ponytail.md"><strong><code>ponytail</code></strong></a>.</p>
+<p>Локальный LLM reverse-proxy (<code>localhost:20128</code>); его 44 скилла — лишь мануалы прокси, дефолтный роутинг рвёт длинные сессии (<code>#7287</code>) и понижает модель, а TLS-stealth (<code>wreq-js</code>) несёт риск бана подписок по ToS. <strong>Вместо него:</strong> <a href="reviews/ru/developer-tools/orca.md"><strong><code>Orca</code></strong></a> + <a href="reviews/ru/architecture/ponytail.md"><strong><code>ponytail</code></strong></a>.</p>
 
 </details>
 

@@ -1,10 +1,10 @@
-# 5. Multi-Agent Orchestration (`T3 Code` + CLI Subagents) & Zero-Loss Context Handoff
+# 5. Multi-Agent Orchestration (`Orca` + CLI Subagents) & Zero-Loss Context Handoff
 
 [🇺🇿 O'zbekcha](../05-multi-agent-and-context-handoff.md) | **🇬🇧 English** | [🇷🇺 Русский](../ru/05-multi-agent-and-context-handoff.md)
 
 ⬅️ [Back to Practices Table of Contents](README.md)
 
-- **Combined Tools:** [**`T3 Code`**](../../reviews/en/developer-tools/t3-code.md) + `task-context` + CLI Subagents (`antigravity-claude`, `argon`, `claude-opus`, `antigravity-consult`) + [**`elephant-goldfish-model`**](../../reviews/en/architecture/elephant-goldfish-model.md)
+- **Combined Tools:** [**`Orca`**](../../reviews/en/developer-tools/orca.md) + `task-context` + CLI Subagents (`antigravity-claude`, `argon`, `claude-opus`, `antigravity-consult`) + [**`elephant-goldfish-model`**](../../reviews/en/architecture/elephant-goldfish-model.md)
 - **Target Tasks:** Complex features, parallel worktree development, model quota handoffs, and deep code/architecture verification.
 
 ---
@@ -26,7 +26,7 @@ Both review modes serve distinct purposes:
 
 | Scenario | Which Combination to Use | Why It Works Best |
 |---|---|---|
-| **Verifying an implemented diff against user requirements** | `task-context` + **`argon` / `antigravity-claude` / `claude-opus`** (`T3 Code` CLI subagent) | The reviewer needs to know *what* the user asked for and *why* key trade-offs were chosen (`task-context`), while auditing the code with a different model family (*"Codex wrote it -> Argon/Claude verifies it"*). |
+| **Verifying an implemented diff against user requirements** | `task-context` + **`argon` / `antigravity-claude` / `claude-opus`** (`Orca` CLI subagent) | The reviewer needs to know *what* the user asked for and *why* key trade-offs were chosen (`task-context`), while auditing the code with a different model family (*"Codex wrote it -> Argon/Claude verifies it"*). |
 | **Auditing a design doc, system architecture, or Doc-Code drift** | [**`elephant-goldfish-model`**](../../reviews/en/architecture/elephant-goldfish-model.md) (`egm-review`, `egm-drift-report`) | Here conversation history is a **liability** — stateless *Goldfish* subagents read only the document and codebase cold, exposing unstated assumptions and YAGNI bloat. |
 
 ---
@@ -46,5 +46,5 @@ When onboarding onto a legacy or undocumented repository:
 If an agent hits a rate limit or loops on a stubborn bug:
 - Point the next model at the gitignored `task-context` folder — it picks up the exact intent, touched files, and pending review items in seconds.
 
-### 4) Parallel Multi-Branch Development Without Simulator Collisions (`T3 Code` + `agent-device`)
-- `T3 Code` isolates each task in its own git worktree while [**`agent-device`**](../../reviews/en/mobile/agent-device.md) and [**`simslim`**](../../reviews/en/mobile/simslim.md) keep simulator sessions isolated per worktree.
+### 4) Parallel Multi-Branch Development Without Simulator Collisions (`Orca` + `agent-device`)
+- `Orca` isolates each task in its own git worktree while [**`agent-device`**](../../reviews/en/mobile/agent-device.md) and [**`simslim`**](../../reviews/en/mobile/simslim.md) keep simulator sessions isolated per worktree.
