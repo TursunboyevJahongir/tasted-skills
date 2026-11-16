@@ -14,27 +14,7 @@
 > [!TIP]
 > **🛡️ Xavfsizlik qoidamiz (sizga ham tavsiya):** Hech qachon begona skill, plugin yoki MCP serverni faqat `README` yoki yulduzlariga qarab o'rnatmang. Biz har bitta nomzodni o'rnatishdan oldin **o'zimizning AI coding agentga birlamchi kodini (`SKILL.md`, skriptlar, hooklar, tarmoq/env murojaatlari) o'qitib tekshirtiramiz** hamda [**`skillshare`**](reviews/developer-tools/skillshare.md) ichidagi tayyor skill-check (`skillshare audit`) dan o'tkazamiz. Sizga ham har qanday yangi skillni o'rnatishdan avval AI agentingizga tekshirtirib olishni tavsiya qilamiz.
 
-## 🧩 Amaliy Qo'llanmalar va Bog'lamalar ([`Practices` bo'limiga o'tish →](practices/README.md))
-
-Alohida skill va CLI vositalarni bir-biri bilan ulab ishlatish (`Nima + Nima = Natija`), RAM/kontekstni 2x tejash va qo'shimcha yashirin imkoniyatlar (masalan, alohida Java/Maestro o'rnatmasdan E2E avto-test yurgizish yoki ikkita AI modelni bir-biriga tekshirtirish) bo'yicha tayyor amaliy qo'llanmalar:
-
-<details>
-<summary><b>📖 Mundarijani ochish — Nimani nima bilan birga va yana nimalarga ishlatish mumkin? (6 ta amaliy zanjir + Yashirin imkoniyatlar)</b></summary>
-
-<br>
-
-| # | Yo'nalish va Qo'llanma | Birgalikda ishlatiladigan vositalar | Nima beradi va qanday qo'shimcha imkoniyatlar ochadi? |
-|---|---|---|---|
-| **1** | [**Mobil va TV Oynasiz QA + Maestro E2E Avto-Testlar**](practices/01-mobile-tv-headless-qa.md) | [`simslim`](reviews/mobile/simslim.md) + [`avdslim`](reviews/mobile/avdslim.md) + [`agent-device`](reviews/mobile/agent-device.md) + [`adb`](reviews/mobile/adb.md) + [`xcrun simctl`](reviews/mobile/ios-simulator-device-hub.md) + [`cross-platform-qa`](reviews/mobile/cross-platform-qa.md) | iOS (`1.16 GB`) va Android (`2.64 GB`, Metal GPU) emulyatorlarni ekranda oyna ochmasdan yurgizadi (`~3.3 GB` RAM tejaladi), o'zbekcha UTF-8 yozadi hamda **Java/Maestro o'rnatmasdan `.yaml` / `.ad` E2E testlarni (`--maestro`), o'zini-o'zi davolovchi (`healed.ad`) skriptlarni va `contact-sheet` video-isbotlarni** fonda oladi. |
-| **2** | [**Rejadan Toza Kod va Mustaqil Review'gacha**](practices/02-spec-to-surgical-code.md) | [`graphify`](reviews/architecture/graphify.md) + [`grill-me`](reviews/architecture/grill-me.md) + [`ponytail`](reviews/architecture/ponytail.md) + [`karpathy-guidelines`](reviews/architecture/karpathy-guidelines.md) + [`T3 Code`](reviews/developer-tools/t3-code.md) + [`elephant-goldfish-model`](reviews/architecture/elephant-goldfish-model.md) | Katta repoda `0` token AST-graf bilan bog'liqliklarni topadi, kod yozishdan oldin qarorlarni pishitadi, eng kichik YAGNI o'zgarish yozadi hamda `diagnosing-bugs` va `improve-codebase-architecture` bilan murakkab bug/modullarni tozalaydi. |
-| **3** | [**Web, Mobile Web va Native UI Dizayn + Tekshiruv**](practices/03-web-and-mobile-ui-polish.md) | [`impeccable`](reviews/ui-ux/impeccable.md) + [`mobile-native`](reviews/mobile/mobile-native.md) + [`animate-expo`](reviews/mobile/animate-expo.md) + [`asset-diet`](reviews/developer-tools/assetdiet.md) + [`agent-desktop`](reviews/developer-tools/agent-desktop.md) | Vizual dizayn va UX matnlarni tozalaydi (`polish`, `clarify`, `harden`), mobil vebni native sezdiradi (`dvh`, `safe-area`, `16px`), Expo'da `60/120fps` UI-thread animatsiya beradi, veb funksiyani mobilga ko'chiradi (`web-to-native-mobile`), rasm/videolarni lokal siqadi va Chrome'ni kursorni qimirlatmasdan fonda tekshiradi. |
-| **4** | [**Skill Sanitarizatsiyasi, Pentest va Xatolar Monitoringi**](practices/04-skill-and-security-hygiene.md) | [`tasted-skills`](skills/tasted-skills/SKILL.md) + [`skillshare`](reviews/developer-tools/skillshare.md) + [`Shannon` (`hacker-test`)](reviews/backend/shannon.md) + [`sentry`](reviews/backend/sentry.md) | Begona skill/pluginlarni o'rnatishdan oldin xavfli hook va telemetriyadan tozalaydi (`skillshare audit`), lokal/staging API'larni avtonom White-Box pentestdan o'tkazadi va production xatolarni `sentry` trace'lari bilan tutadi. |
-| **5** | [**Ko'p-Agentli Ishlash (`T3 Code`) va Kontekstni Yo'qotmaslik**](practices/05-multi-agent-and-context-handoff.md) | [`T3 Code`](reviews/developer-tools/t3-code.md) + `task-context` + CLI Subagentlar (`argon`, `antigravity-claude`, `claude-opus`) + [`elephant-goldfish-model`](reviews/architecture/elephant-goldfish-model.md) | Qachon *kontekstli* review (`task-context` + CLI subagent) va qachon *xotirasiz Goldfish* review (`egm-review`) ishlatish, **TRIZ** orqali arxitektura ziddiyatini yechish (`egm-brainstorm`), hujjatsiz reponi avto-hujjatlashtirish (`egm-bootstrap`) va kvota tugaganda ishni boshqa modelga uzatish. |
-| **6** | [**Video Tahlil (`watch`), Figma Ko'prigi (`figma`) va Nostandart Imkoniyatlar**](practices/06-video-figma-and-db-workflows.md) | `watch` (`video-analyzer`) + `figma` (`implement` / `generate-design` / `generate-library`) + [`agent-desktop`](reviews/developer-tools/agent-desktop.md) (`ffi`) + [`graphify`](reviews/architecture/graphify.md) + `drizzle-relations-v2` | Mijoz yuborgan bug-videolarni kadr-ba-kadr tahlil qilish, videodagi animatsiyani kodga ko'chirish, **tayyor koddan Figma ekran va Design System chizish (`Kod -> Figma`)**, macOS dasturlarini C-ABI (`ffi`) orqali boshqarish va PDF/videolardan bilim grafigi qurish. |
-
-➡️ [**Barcha qo'llanmalar va "Qaysi vositani yana nimalarga ishlatish mumkin?" xaritasi (`practices/README.md`)**](practices/README.md)
-
-</details>
+📖 [Qaysi skill va tool'larni bir-biri bilan birga qanday ishlatish va ularning qo'shimcha imkoniyatlari →](practices/README.md)
 
 ## ⭐ Eng keraklilari (Ishlatilish ustuvorligi bo'yicha)
 
@@ -65,13 +45,21 @@ Alohida skill va CLI vositalarni bir-biri bilan ulab ishlatish (`Nima + Nima = N
 
 | Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
 |---|---|---|---|---|---|---|
-| [**`kimi-k3-in-c`**](reviews/local-models/kimi-k3-in-c.md) | C99 CLI Inference Engine | **8.5/10** | **1.0/10** | `⛔ Rad etildi` | `2026-11-16` | `2.78T` Kimi K3 modelini `8 GB RAM` da GPU'siz diskdan o'qib yurgizuvchi C99 eksperiment: **`~1.7 TB` bo'sh disk** talab qiladi, **1 ta token = `~24–33 soniya`** (`500` token kod = `~3.5 soat` + SSD'dan `~50 TB` o'qish). **O'rniga:** [**`T3 Code`**](reviews/developer-tools/t3-code.md) + CLI Subagent (`Argon` / `Claude` / `Codex`). |
+| [**`kimi-k3-in-c`**](reviews/local-models/kimi-k3-in-c.md) | C99 CLI Inference Engine (`2.78T` MoE) | **8.5/10** | **1.0/10** | `⛔ Rad etildi` | `2026-11-16` | **Min (zo'rg'a oqimli yoqish):** `GPU: 0` · `CPU: 16+ yadro` · `RAM: 8–16 GB` · `SSD: ≥1.8 TB bo'sh NVMe` *(`~24–33 s/token`, `500` token = `~3.5 soat` + `~50 TB` SSD o'qish — disk umrini yeydi)*. **Yaxshi ishlashi uchun (`30–60+ tok/s`):** `GPU: 16× H200 (141 GB, ~2.25 TB VRAM)` yoki `8× B300 (288 GB)` · `CPU: 64–128 yadro` · `RAM: 512 GB–1 TB` · `SSD: 4 TB Gen5 NVMe`. ⚠️ Tekin `:free` proxy'larga yopiq kod ulashda ma'lumot chiqib ketish xavfi bor. **O'rniga:** [**`T3 Code`**](reviews/developer-tools/t3-code.md) + CLI Subagent. |
+| [**`MiniMax-M3.1-Flash`** *(Lokal)*](reviews/local-models/minimax-m3-1-flash.md) | Open-Weight `428B` MoE (`~23B` aktiv) | **8.0/10** | **1.0/10** | `⛔ Rad etildi` | `2026-11-16` | **Min (zo'rg'a yoqish):** `GPU: 0–24 GB` *(disk offload, `~0.5–3 tok/s`)* yoki `Mac Studio Ultra 512 GB RAM` · `CPU: 16–32 yadro` · `RAM: 64–128 GB+` · `SSD: ≥350–500 GB NVMe` *(`~250–285 GB` vazn)*. **Yaxshi ishlashi uchun (`100–170+ tok/s`):** `GPU: 8× H100 (80 GB = 640 GB VRAM)` yoki `4× B200 (180 GB = 720 GB VRAM)` · `CPU: 64+ yadro` · `RAM: 512 GB` · `SSD: 1–2 TB NVMe`. ⚠️ Lokalda SSD yemirilishi, `custom_code` (`RCE`), `MiniMax Community License` sharti va *"tekin"* rejimlarda yopiq kod chiqib ketish xavfi bor. **O'rniga:** [**`T3 Code`**](reviews/developer-tools/t3-code.md) (bulut API'da — [`MiniMax M3.1 Flash API`](reviews/external-apis/minimax-m3-1-flash-api.md)). |
+
+### 🔌 Tashqi API'lar
+
+| Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
+|---|---|---|---|---|---|---|
+| [**`MiniMax M3.1 Flash API`**](reviews/external-apis/minimax-m3-1-flash-api.md) | Cloud Multimodal API (`MiniMax` / `OpenRouter`) | **8.0/10** | **5.0/10** | `👍 Yaxshi variant` | `2026-11-16` | `$0.15 / 1M` input, `$0.60 / 1M` output (`Cached: $0.015`), `170+ TPS` tezlik va `1M` kontekst (`matn + rasm + video`) — mahsulot backendidagi ommaviy bot, tarjima, `OCR`/rasm/video tahlili va ofis avtomatizatsiyasi (`Automation-Bench: 62.8%`) uchun yaxshi taklif. **Qo'shimcha eslatma:** asosiy kod yozishda `Opus` / `Codex` o'rnini bosmaydi (`Terminal-Bench 4.0: 38.1%`); ⚠️ **tekin qilib ishlatishda ehtiyot bo'ling** — `MiniMax Code` kunlik kreditlari va `:free` endpointlarga yopiq kod/sirlarni yubormang, faqat pullik `Zero-Data-Retention` API kalit bilan ishlating. |
 
 ### 🌐 Web
 
 | Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
 |---|---|---|---|---|---|---|
 | [**`taste-skill` v2.5**](reviews/web/taste-skill.md) | Landing Kit + Hook | **8.0/10** | **4.0/10** | `👍 Yaxshi variant` | `2026-11-15` | Noldan promo-landing qurishda kuchli; o'rnatilsa `Stop` hook (600s) kesib tashlanishi va faqat `-p` da ishlatilishi shart. |
+| [**`vercel-labs/ui`**](reviews/web/vercel-ui-sdk.md) | `@ui-sdk/*` Library + Skill (`Beta`) | **8.0/10** | **2.0/10** | `⛔ Rad etildi` | `2026-11-16` | Vercel Labs'ning Public Beta bosqichidagi headless UI kutubxonasi va `ui-sdk` skilli: *"skrinshotsiz 2x tez boshqaruv"* (`createAgent`) faqat `@ui-sdk/*` da qayta yozilgan saytlardagina ishlaydi (oddiy `<button>`/`<input>` va `Shadcn`/`Radix` ni ko'rmaydi, `Expo` da ishlamaydi). **O'rniga:** mavjud UI stekimiz + [**`impeccable`**](reviews/ui-ux/impeccable.md) + [**`agent-desktop`**](reviews/developer-tools/agent-desktop.md). |
 
 ### 📱 Mobile
 
@@ -105,6 +93,7 @@ Alohida skill va CLI vositalarni bir-biri bilan ulab ishlatish (`Nima + Nima = N
 
 | Nomi | Turi | Sifat | Keraklilik | Holati | Sana | Qisqacha izoh |
 |---|---|---|---|---|---|---|
+| [**`security-audit`**](reviews/backend/security-audit-skill.md) | Skill (`cloudflare/security-audit-skill`) | **9.0/10** | **7.5/10** | `✅ Faol` | `2026-11-16` dan | Cloudflare'ning 6 bosqichli *adversarial* manba kodi xavfsizligi auditi (`Hunter` + mustaqil `Verifier` subagentlar + 0-dep Node JSON tekshirgich): Docker ko'tarmasdan Backend, Web, **Mobil (`deep-link`/`WebView`/`IPC`)**, CLI va CI/CD zaifliklarini topadi (`quick`/`scoped` profil himoyasi bilan). |
 | [**`opentelemetry`**](reviews/backend/opentelemetry.md) | Standard + Collector (`SigNoz` / `Grafana`) | **9.0/10** | **4.0/10** | `👍 Yaxshi variant` | `2026-11-15` | Servislararo `Traces + Metrics + Logs` va server/DB yuklamasi uchun kuchli standart (`Collector + SigNoz/Grafana` talab qiladi). **O'rniga:** [**`sentry`**](reviews/backend/sentry.md) (xato, replay va bazaviy trace'larni bitta joyda yopadi). |
 | [**`Shannon`**](reviews/backend/shannon.md) | Standalone CLI + [`hacker-test`](skills/hacker-test/SKILL.md) | **8.5/10** | **6.5/10** | `👍 Yaxshi variant` | `2026-11-16` | Avtonom White-Box AI pentester (Auth bypass, IDOR, Injection, XSS, SSRF). Og'ir pluginini o'rnatmasdan, ushbu repodagi yengil [`hacker-test`](skills/hacker-test/SKILL.md) skilli orqali faqat lokal/staging'da `npx` bilan chaqiriladi (production taqiqlangan). |
 

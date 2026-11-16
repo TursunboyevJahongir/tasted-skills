@@ -3,7 +3,7 @@
 **🇺🇿 O'zbekcha** | [🇬🇧 English](en/TEMPLATE.md) | [🇷🇺 Русский](ru/TEMPLATE.md)
 
 - **Manba:** [<owner/repo yoki sayt>](https://...)
-- **Turkum:** `Lokal modellar` | `Web` | `Mobile` | `UI/UX` | `Architecture` | `Backend` | `Developer Tools`
+- **Turkum:** `Lokal modellar` | `Tashqi API'lar` | `Web` | `Mobile` | `UI/UX` | `Architecture` | `Backend` | `Developer Tools`
 - **Turi:** `Skill` | `Plugin` | `MCP` | `CLI / Desktop Tool` | `Memory`
 - **Sifat bahosi:** **X.X / 10**
 - **Bizga kerakliligi:** **X.X / 10**

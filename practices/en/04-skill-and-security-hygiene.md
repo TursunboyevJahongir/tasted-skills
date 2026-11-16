@@ -4,7 +4,7 @@
 
 ⬅️ [Back to Practices Table of Contents](README.md)
 
-- **Combined Tools:** [**`tasted-skills`**](../../skills/tasted-skills/SKILL.md) + [**`skillshare`**](../../reviews/en/developer-tools/skillshare.md) + [**`Shannon` (`hacker-test`)**](../../reviews/en/backend/shannon.md) + [**`sentry`**](../../reviews/en/backend/sentry.md)
+- **Combined Tools:** [**`tasted-skills`**](../../skills/tasted-skills/SKILL.md) + [**`skillshare`**](../../reviews/en/developer-tools/skillshare.md) + [**`security-audit`**](../../reviews/en/backend/security-audit-skill.md) + [**`Shannon` (`hacker-test`)**](../../reviews/en/backend/shannon.md) + [**`sentry`**](../../reviews/en/backend/sentry.md)
 - **Target Projects:** AI developer environment security, Backend APIs, and Full-Stack production systems.
 
 ---
@@ -33,10 +33,11 @@ Never run `npx skills add ...` or `claude plugin install ...` blindly:
    skillshare sync -g
    ```
 
-### Ring 2: Autonomous White-Box API Pentesting (`hacker-test` / `Shannon`)
+### Ring 2: Source Security Audit (`security-audit`) + Live API Pentesting (`hacker-test` / `Shannon`)
 
-Before shipping new auth, payment, or role-based (`RBAC`) endpoints, run an on-demand White-Box security audit against your local or disposable staging environment:
-- Our lightweight `hacker-test` skill invokes `npx @keygraph/shannon@latest` on demand to inspect both source code and live local endpoints for `IDOR`, `Auth bypass`, `Injection`, `XSS`, and `SSRF` with reproducible PoCs *(strictly forbidden against production)*.
+Before shipping new auth, payment, multi-tenant (`RBAC`), mobile `deep-link`/`WebView`, or CI/CD modules, run a **2-step pre-release check**:
+1. **Fast Docker-free source audit (`security-audit` — Cloudflare):** Audits Backend, Web, **iOS/Android/Expo mobile**, CLI, and Cloud/CI source code across 6 adversarial phases (`Hunter` + independent `Verifier` subagents) with zero server setup, writing verified reports to `~/security-audit-skill/<repo>/run-<N>/REPORT.md`.
+2. **Live local/staging API pentest (`hacker-test` / `Shannon`):** Invokes `npx @keygraph/shannon@latest` against running local/staging Web & HTTP endpoints to prove real `IDOR`, `Auth bypass`, `Injection`, `XSS`, and `SSRF` exploits with live PoCs *(strictly forbidden against production)*.
 
 ### Ring 3: Production Error & Trace Diagnostics (`sentry`)
 

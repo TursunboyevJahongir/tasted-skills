@@ -4,7 +4,7 @@
 
 ⬅️ [Вернуться к оглавлению практик](README.md)
 
-- **Связка инструментов:** [**`tasted-skills`**](../../skills/tasted-skills/SKILL.md) + [**`skillshare`**](../../reviews/ru/developer-tools/skillshare.md) + [**`Shannon` (`hacker-test`)**](../../reviews/ru/backend/shannon.md) + [**`sentry`**](../../reviews/ru/backend/sentry.md)
+- **Связка инструментов:** [**`tasted-skills`**](../../skills/tasted-skills/SKILL.md) + [**`skillshare`**](../../reviews/ru/developer-tools/skillshare.md) + [**`security-audit`**](../../reviews/ru/backend/security-audit-skill.md) + [**`Shannon` (`hacker-test`)**](../../reviews/ru/backend/shannon.md) + [**`sentry`**](../../reviews/ru/backend/sentry.md)
 - **Проекты:** Безопасность AI-среды разработки, Backend API и Full-Stack production-системы.
 
 ---
@@ -33,10 +33,11 @@
    skillshare sync -g
    ```
 
-### Кольцо 2: Автономный White-Box пентест API (`hacker-test` / `Shannon`)
+### Кольцо 2: Аудит кода (`security-audit`) + Живой пентест API (`hacker-test` / `Shannon`)
 
-Перед выкаткой новых модулей авторизации, платежей или ролей (`RBAC`) прогоняется автономный White-Box пентест на локальном или тестовом (`staging`) стенде:
-- Лёгкий скилл `hacker-test` по запросу вызывает `npx @keygraph/shannon@latest`, анализируя исходный код и локальные эндпоинты на `IDOR`, `Auth bypass`, `Injection`, `XSS` и `SSRF` с проверкой реальными PoC *(запуск на production строго запрещён)*.
+Перед выкаткой новых модулей авторизации, платежей, ролей (`RBAC`), мобильных `deep-link`/`WebView` или CI/CD выполняется **двухступенчатая проверка**:
+1. **Быстрый аудит исходников без Docker (`security-audit` — Cloudflare):** Проверяет код Backend, Web, **iOS/Android/Expo**, CLI и Cloud/CI в 6 фаз (`Hunter` + независимые опровергающие `Verifier`-субагенты) без поднятия серверов, сохраняя отчёт в `~/security-audit-skill/<repo>/run-<N>/REPORT.md`.
+2. **Живой пентест локального/staging API (`hacker-test` / `Shannon`):** Запускает `npx @keygraph/shannon@latest` против поднятого стенда, подтверждая реальными PoC уязвимости `IDOR`, `Auth bypass`, `Injection`, `XSS` и `SSRF` *(строго запрещено на production)*.
 
 ### Кольцо 3: Диагностика ошибок и трейсов в продакшене (`sentry`)
 

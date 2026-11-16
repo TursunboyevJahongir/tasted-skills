@@ -14,27 +14,7 @@
 > [!TIP]
 > **🛡️ Наше правило безопасности (рекомендуем и вам):** Никогда не устанавливайте чужие скиллы, плагины или MCP-серверы только по красивому `README` или количеству звёзд. Перед установкой каждого инструмента **мы обязательно поручаем нашему AI-агенту проверить исходный код напрямую** (`SKILL.md`, скрипты, хуки, сетевые вызовы и доступ к env) и прогоняем встроенный skill-check в [**`skillshare`**](reviews/ru/developer-tools/skillshare.md) (`skillshare audit`). Рекомендуем и вам всегда проверять код новых скиллов через своего AI-агента перед установкой.
 
-## 🧩 Практики и Связки Инструментов ([Перейти в раздел `Practices` →](practices/ru/README.md))
-
-Практические руководства о том, **что с чем комбинировать (`Что + С чем = Результат`)**, как вдвое снизить расход RAM и токенов и какие дополнительные возможности можно включить (например, запуск Maestro `.yaml` E2E-тестов в фоне без Java или перекрёстное ревью кода двумя разными AI-моделями):
-
-<details>
-<summary><b>📖 Открыть оглавление — Что с чем комбинировать и для чего ещё применять? (6 цепочек + Карта скрытых функций)</b></summary>
-
-<br>
-
-| # | Направление и руководство | Связка инструментов | Главная выгода и дополнительные возможности |
-|---|---|---|---|
-| **1** | [**Фоновый Mobile & TV QA + Maestro E2E Автотесты**](practices/ru/01-mobile-tv-headless-qa.md) | [`simslim`](reviews/ru/mobile/simslim.md) + [`avdslim`](reviews/ru/mobile/avdslim.md) + [`agent-device`](reviews/ru/mobile/agent-device.md) + [`adb`](reviews/ru/mobile/adb.md) + [`xcrun simctl`](reviews/ru/mobile/ios-simulator-device-hub.md) + [`cross-platform-qa`](reviews/ru/mobile/cross-platform-qa.md) | Запускает эмуляторы iOS (`1.16 GB`) и Android (`2.64 GB`, Metal GPU) полностью без окон (экономия `~3.3 GB` RAM), вводит чистый UTF-8 и **прогоняет Maestro `.yaml` / `.ad` E2E-сценарии (`--maestro`), самовосстанавливающиеся (`healed.ad`) тесты и видео-отчёты (`contact-sheet`)** в фоне без Java. |
-| **2** | [**От Проектирования и Графа до Чистого Кода и Независимого Ревью**](practices/ru/02-spec-to-surgical-code.md) | [`graphify`](reviews/ru/architecture/graphify.md) + [`grill-me`](reviews/ru/architecture/grill-me.md) + [`ponytail`](reviews/ru/architecture/ponytail.md) + [`karpathy-guidelines`](reviews/ru/architecture/karpathy-guidelines.md) + [`T3 Code`](reviews/ru/developer-tools/t3-code.md) + [`elephant-goldfish-model`](reviews/ru/architecture/elephant-goldfish-model.md) | За секунды находит связи в большом репозитории через AST-граф (`0` токенов), прорабатывает решения до кода, пишет минимальный YAGNI diff + глубокий поиск багов и рефакторинг с `diagnosing-bugs` и `improve-codebase-architecture`. |
-| **3** | [**Дизайн, Анимации и Проверка Web, Mobile Web и Native UI**](practices/ru/03-web-and-mobile-ui-polish.md) | [`impeccable`](reviews/ru/ui-ux/impeccable.md) + [`mobile-native`](reviews/ru/mobile/mobile-native.md) + [`animate-expo`](reviews/ru/mobile/animate-expo.md) + [`asset-diet`](reviews/ru/developer-tools/assetdiet.md) + [`agent-desktop`](reviews/ru/developer-tools/agent-desktop.md) | Вычищает визуальную иерархию и UX-тексты (`polish`, `clarify`, `harden`), адаптирует мобильный веб под натив (`dvh`, `safe-area`, инпуты `16px`), строит `60/120fps` UI-thread анимации в Expo, переносит веб-фичи на мобилки (`web-to-native-mobile`), сжимает медиа и проверяет Chrome в фоне. |
-| **4** | [**Санитаризация Скиллов, White-Box Пентест и Мониторинг Ошибок**](practices/ru/04-skill-and-security-hygiene.md) | [`tasted-skills`](skills/tasted-skills/SKILL.md) + [`skillshare`](reviews/ru/developer-tools/skillshare.md) + [`Shannon` (`hacker-test`)](reviews/ru/backend/shannon.md) + [`sentry`](reviews/ru/backend/sentry.md) | Проверяет исходный код чужих скиллов и вырезает опасные хуки/телеметрию до установки (`skillshare audit`), проводит автономный White-Box пентест локальных/staging API и разбирает боевые ошибки/трейсы в `sentry`. |
-| **5** | [**Мультиагентная Работа (`T3 Code`) и Передача Контекста**](practices/ru/05-multi-agent-and-context-handoff.md) | [`T3 Code`](reviews/ru/developer-tools/t3-code.md) + `task-context` + CLI-субагенты (`argon`, `antigravity-claude`, `claude-opus`) + [`elephant-goldfish-model`](reviews/ru/architecture/elephant-goldfish-model.md) | Когда применять *контекстное* ревью (`task-context` + CLI-субагент), а когда *ревью без памяти Goldfish* (`egm-review`), решение противоречий по **ТРИЗ** (`egm-brainstorm`), авто-документирование репозиториев (`egm-bootstrap`) и передача работы при лимите квоты. |
-| **6** | [**Видео-Анализ (`watch`), Двусторонний Мост Figma (`figma`) и Скрытые Функции**](practices/ru/06-video-figma-and-db-workflows.md) | `watch` (`video-analyzer`) + `figma` (`implement` / `generate-design` / `generate-library`) + [`agent-desktop`](reviews/ru/developer-tools/agent-desktop.md) (`ffi`) + [`graphify`](reviews/ru/architecture/graphify.md) + `drizzle-relations-v2` | Покадровый разбор клиентских видео-багрепортов, перенос анимаций с видео в код, **генерация экранов и дизайн-системы в Figma из готового кода (`Код -> Figma`)**, управление macOS-приложениями через C-ABI (`ffi`) и граф знаний из PDF/видео. |
-
-➡️ [**Все руководства и карта «Для чего ещё можно использовать каждый инструмент» (`practices/ru/README.md`)**](practices/ru/README.md)
-
-</details>
+📖 [Какие скиллы и инструменты как использовать вместе и их дополнительные возможности →](practices/ru/README.md)
 
 ## ⭐ Самые необходимые (В порядке частоты и важности в работе)
 
@@ -65,13 +45,21 @@
 
 | Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
 |---|---|---|---|---|---|---|
-| [**`kimi-k3-in-c`**](reviews/ru/local-models/kimi-k3-in-c.md) | C99 CLI Inference Engine | **8.5/10** | **1.0/10** | `⛔ Отклонено` | `2026-11-16` | C99-эксперимент запуска модели Kimi K3 (`2.78T`) на `8 GB RAM` без GPU потоковым чтением с диска: требует **`~1.7 TB` свободного места** и выдаёт **`~24–33 сек/токен`** (`500` токенов кода = `~3.5 часа` и `~50 TB` чтения с SSD). **Вместо него:** [**`T3 Code`**](reviews/ru/developer-tools/t3-code.md) + CLI Subagents (`Argon` / `Claude` / `Codex`). |
+| [**`kimi-k3-in-c`**](reviews/ru/local-models/kimi-k3-in-c.md) | C99 CLI Inference Engine (`2.78T` MoE) | **8.5/10** | **1.0/10** | `⛔ Отклонено` | `2026-11-16` | **Мин. (едва запустить с диска):** `GPU: 0` · `CPU: 16+ ядер` · `RAM: 8–16 GB` · `SSD: ≥1.8 TB NVMe` *(`~24–33 сек/токен`, `500` токенов = `~3.5 ч` + `~50 TB` чтения — сжигает ресурс SSD)*. **Для хорошей работы (`30–60+ ток/с`):** `GPU: 16× H200 (141 GB, ~2.25 TB VRAM)` или `8× B300 (288 GB)` · `CPU: 64–128 ядер` · `RAM: 512 GB–1 TB` · `SSD: 4 TB Gen5 NVMe`. ⚠️ Опасно подключать закрытый код в бесплатные `:free`-прокси. **Вместо него:** [**`T3 Code`**](reviews/ru/developer-tools/t3-code.md) + CLI Subagents. |
+| [**`MiniMax-M3.1-Flash`** *(Локально)*](reviews/ru/local-models/minimax-m3-1-flash.md) | Open-Weight `428B` MoE (`~23B` актив.) | **8.0/10** | **1.0/10** | `⛔ Отклонено` | `2026-11-16` | **Мин. (едва запустить):** `GPU: 0–24 GB` *(disk offload, `~0.5–3 ток/с`)* или `Mac Studio Ultra 512 GB RAM` · `CPU: 16–32 ядра` · `RAM: 64–128 GB+` · `SSD: ≥350–500 GB NVMe` *(`~250–285 GB` веса)*. **Для хорошей работы (`100–170+ ток/с`):** `GPU: 8× H100 (80 GB = 640 GB VRAM)` или `4× B200 (180 GB = 720 GB VRAM)` · `CPU: 64+ ядер` · `RAM: 512 GB` · `SSD: 1–2 TB NVMe`. ⚠️ Локально грозит износом SSD, `RCE` в `custom_code`, условиями `MiniMax Community License`, а в «бесплатных» режимах — утечкой кода. **Вместо него:** [**`T3 Code`**](reviews/ru/developer-tools/t3-code.md) (облако — [`MiniMax M3.1 Flash API`](reviews/ru/external-apis/minimax-m3-1-flash-api.md)). |
+
+### 🔌 Внешние API
+
+| Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
+|---|---|---|---|---|---|---|
+| [**`MiniMax M3.1 Flash API`**](reviews/ru/external-apis/minimax-m3-1-flash-api.md) | Cloud Multimodal API (`MiniMax` / `OpenRouter`) | **8.0/10** | **5.0/10** | `👍 Хороший вариант` | `2026-11-16` | `$0.15 / 1M` input, `$0.60 / 1M` output (`Cached: $0.015`), скорость `170+ TPS` и окно `1M` (`текст + фото + видео`) — отличное бюджетное предложение для массовых ботов в бэкенде, переводов, `OCR`/видео-анализа и SaaS-автоматизации (`Automation-Bench: 62.8%`). **Важные уточнения:** не заменяет `Opus` / `Codex` в сложной разработке (`Terminal-Bench 4.0: 38.1%`); ⚠️ **осторожно при бесплатном использовании** — не отправляйте закрытый код и `.env` в бесплатные кредиты `MiniMax Code` и `:free`-эндпоинты, работайте только через платный `Zero-Data-Retention` API. |
 
 ### 🌐 Web
 
 | Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
 |---|---|---|---|---|---|---|
 | [**`taste-skill` v2.5**](reviews/ru/web/taste-skill.md) | Landing Kit + Hook | **8.0/10** | **4.0/10** | `👍 Хороший вариант` | `2026-11-15` | Сильный движок для промо-лендингов с нуля; при установке обязательно вырезать `Stop` хук (600с) и ставить только локально (`-p`). |
+| [**`vercel-labs/ui`**](reviews/ru/web/vercel-ui-sdk.md) | `@ui-sdk/*` Library + Skill (`Beta`) | **8.0/10** | **2.0/10** | `⛔ Отклонено` | `2026-11-16` | Headless UI-библиотека Vercel Labs в стадии Public Beta и скилл `ui-sdk`: заявленное *«управление в 2 раза быстрее без скриншотов»* (`createAgent`) работает только на сайтах, переписанных на `@ui-sdk/*` (не видит обычные `<button>`/`<input>` и `Shadcn`/`Radix`, нет поддержки `Expo`). **Вместо него:** наш текущий UI-стек + [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) + [**`agent-desktop`**](reviews/ru/developer-tools/agent-desktop.md). |
 
 ### 📱 Mobile
 
@@ -105,6 +93,7 @@
 
 | Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
 |---|---|---|---|---|---|---|
+| [**`security-audit`**](reviews/ru/backend/security-audit-skill.md) | Skill (`cloudflare/security-audit-skill`) | **9.0/10** | **7.5/10** | `✅ Активен` | С `2026-11-16` | 6-фазный *adversarial* аудит безопасности исходного кода от Cloudflare (`Hunter` + независимые `Verifier`-субагенты + Node JSON-валидаторы): находит уязвимости в Backend, Web, **Mobile (`deep-link`/`WebView`/`IPC`)**, CLI и CI/CD без Docker (с экономным профилем `quick`/`scoped`). |
 | [**`opentelemetry`**](reviews/ru/backend/opentelemetry.md) | Стандарт + Collector (`SigNoz` / `Grafana`) | **9.0/10** | **4.0/10** | `👍 Хороший вариант` | `2026-11-15` | Отраслевой стандарт межсервисных `Traces + Metrics + Logs` и метрик серверов/БД (требует `Collector + SigNoz/Grafana`). **Вместо него:** [**`sentry`**](reviews/ru/backend/sentry.md) (закрывает ошибки, реплеи и базовые трейсы в одной платформе). |
 | [**`Shannon`**](reviews/ru/backend/shannon.md) | Standalone CLI + [`hacker-test`](skills/hacker-test/SKILL.md) | **8.5/10** | **6.5/10** | `👍 Хороший вариант` | `2026-11-16` | Автономный White-Box AI-пентестер (Auth bypass, IDOR, Injection, XSS, SSRF). Вместо тяжёлого плагина вызывается по запросу через наш лёгкий скилл [`hacker-test`](skills/hacker-test/SKILL.md) и `npx` строго на local/staging (не на production). |
 

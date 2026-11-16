@@ -31,7 +31,7 @@ Ikki xil tekshiruvni adashtirmaslik kerak — har birining o'z o'rni bor:
 
 ---
 
-## 3. Qo'shimcha nimalar qilish mumkin? (Yashirin imkoniyatlar)
+## 3. Qo'shimcha imkoniyatlari
 
 ### 1) TRIZ orqali "yechimi yo'q" arxitektura ziddiyatini yechish (`egm-brainstorm` / `inventive-catalyst`)
 Agar tizimda *"tezlikni oshirsak ma'lumot aniqligi tushadi, aniqlikni oshirsak tizim sekinlashadi"* kabi qarama-qarshilik chiqsa:

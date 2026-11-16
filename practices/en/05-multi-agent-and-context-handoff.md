@@ -31,7 +31,7 @@ Both review modes serve distinct purposes:
 
 ---
 
-## 3. Extra Power Practices (Hidden Capabilities)
+## 3. Additional Capabilities
 
 ### 1) Resolve "Impossible" Architecture Trade-Offs with TRIZ (`egm-brainstorm` / `inventive-catalyst`)
 When a design hits a contradiction (*"improving speed degrades consistency, enforcing consistency hurts speed"*):

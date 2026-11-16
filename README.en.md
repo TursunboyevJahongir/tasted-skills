@@ -14,27 +14,7 @@
 > [!TIP]
 > **🛡️ Our Security Rule (Recommended for You Too):** Never install third-party skills, plugins, or MCP servers based solely on their `README` or GitHub stars. Before installing anything, **we always have our AI coding agent inspect the primary source code directly** (`SKILL.md`, scripts, hooks, network/env access) and run [**`skillshare`**](reviews/en/developer-tools/skillshare.md)'s built-in skill-check (`skillshare audit`). We strongly recommend asking your own AI agent to audit any new skill's code before installing it.
 
-## 🧩 Best Practices & Combined Workflows ([Open `Practices` Guide →](practices/en/README.md))
-
-Practical guides on **which tools to pair together (`What + What = Outcome`)**, how to cut RAM and token usage in half, and how to unlock hidden capabilities (such as running Maestro `.yaml` E2E suites headlessly without Java or running cross-model code reviews):
-
-<details>
-<summary><b>📖 Open Table of Contents — What to Combine & What Else Each Tool Can Do (6 Proven Workflows + Hidden Capabilities)</b></summary>
-
-<br>
-
-| # | Practice Guide | Combined Tools | Core Benefit & Hidden Capabilities |
-|---|---|---|---|
-| **1** | [**Headless Mobile & TV QA + Maestro E2E Automation**](practices/en/01-mobile-tv-headless-qa.md) | [`simslim`](reviews/en/mobile/simslim.md) + [`avdslim`](reviews/en/mobile/avdslim.md) + [`agent-device`](reviews/en/mobile/agent-device.md) + [`adb`](reviews/en/mobile/adb.md) + [`xcrun simctl`](reviews/en/mobile/ios-simulator-device-hub.md) + [`cross-platform-qa`](reviews/en/mobile/cross-platform-qa.md) | Runs iOS (`1.16 GB`) and Android (`2.64 GB`, Metal GPU) emulators completely windowlessly (`~3.3 GB` RAM saved), types full UTF-8, and executes **Maestro `.yaml` / `.ad` E2E suites (`--maestro`), self-healing (`healed.ad`) scripts, and `contact-sheet` video proofs** in the background without Java. |
-| **2** | [**From Spec & Graph to Surgical Code & Independent Review**](practices/en/02-spec-to-surgical-code.md) | [`graphify`](reviews/en/architecture/graphify.md) + [`grill-me`](reviews/en/architecture/grill-me.md) + [`ponytail`](reviews/en/architecture/ponytail.md) + [`karpathy-guidelines`](reviews/en/architecture/karpathy-guidelines.md) + [`T3 Code`](reviews/en/developer-tools/t3-code.md) + [`elephant-goldfish-model`](reviews/en/architecture/elephant-goldfish-model.md) | Maps large repos in seconds with a `0`-token AST graph, resolves design decisions before coding, writes minimal YAGNI diffs, and pairs with `diagnosing-bugs` and `improve-codebase-architecture` for deep root-cause fixes. |
-| **3** | [**Web, Mobile Web & Native UI Design + Verification**](practices/en/03-web-and-mobile-ui-polish.md) | [`impeccable`](reviews/en/ui-ux/impeccable.md) + [`mobile-native`](reviews/en/mobile/mobile-native.md) + [`animate-expo`](reviews/en/mobile/animate-expo.md) + [`asset-diet`](reviews/en/developer-tools/assetdiet.md) + [`agent-desktop`](reviews/en/developer-tools/agent-desktop.md) | Polishes visual hierarchy and UX copy (`polish`, `clarify`, `harden`), makes mobile web/PWAs feel native (`dvh`, `safe-area`, `16px`), builds `60/120fps` UI-thread Expo motion, ports desktop features to mobile (`web-to-native-mobile`), compresses media locally, and verifies Chrome in the background. |
-| **4** | [**Skill Sanitization, White-Box Pentesting & Error Telemetry**](practices/en/04-skill-and-security-hygiene.md) | [`tasted-skills`](skills/tasted-skills/SKILL.md) + [`skillshare`](reviews/en/developer-tools/skillshare.md) + [`Shannon` (`hacker-test`)](reviews/en/backend/shannon.md) + [`sentry`](reviews/en/backend/sentry.md) | Audits and strips risky hooks/telemetry from third-party skills before installation (`skillshare audit`), runs on-demand White-Box AI pentests against local/staging APIs, and investigates production errors/traces via `sentry`. |
-| **5** | [**Multi-Agent Orchestration (`T3 Code`) & Context Handoff**](practices/en/05-multi-agent-and-context-handoff.md) | [`T3 Code`](reviews/en/developer-tools/t3-code.md) + `task-context` + CLI Subagents (`argon`, `antigravity-claude`, `claude-opus`) + [`elephant-goldfish-model`](reviews/en/architecture/elephant-goldfish-model.md) | When to use *context-aware* CLI reviews (`task-context`) vs *stateless Goldfish* reviews (`egm-review`), solving architectural contradictions via **TRIZ** (`egm-brainstorm`), auto-documenting legacy repos (`egm-bootstrap`), and handing off work across models when quota runs out. |
-| **6** | [**Video Analysis (`watch`), Two-Way Figma Bridge (`figma`) & Hidden Superpowers**](practices/en/06-video-figma-and-db-workflows.md) | `watch` (`video-analyzer`) + `figma` (`implement` / `generate-design` / `generate-library`) + [`agent-desktop`](reviews/en/developer-tools/agent-desktop.md) (`ffi`) + [`graphify`](reviews/en/architecture/graphify.md) + `drizzle-relations-v2` | Triaging customer bug-report videos frame by frame, cloning reference animations into code, **pushing live code back into Figma screens & design systems (`Code -> Figma`)**, driving macOS apps via C-ABI (`ffi`), and graphing PDFs/videos alongside code. |
-
-➡️ [**View All Practice Guides & the Secondary Capabilities Matrix (`practices/en/README.md`)**](practices/en/README.md)
-
-</details>
+📖 [Which skills and tools to use together, how to combine them, and their additional capabilities →](practices/en/README.md)
 
 ## ⭐ Top Essentials (Ordered by Daily Workflow Priority)
 
@@ -65,13 +45,21 @@ Practical guides on **which tools to pair together (`What + What = Outcome`)**, 
 
 | Name | Type | Quality | Need | Status | Date | Summary |
 |---|---|---|---|---|---|---|
-| [**`kimi-k3-in-c`**](reviews/en/local-models/kimi-k3-in-c.md) | C99 CLI Inference Engine | **8.5/10** | **1.0/10** | `⛔ Rejected` | `2026-11-16` | C99 proof-of-concept that streams the `2.78T` Kimi K3 model from disk in `8 GB RAM` with no GPU: requires **`~1.7 TB` free NVMe storage** and runs at **`~24–33s/token`** (`500` tokens of code = `~3.5 hours` + `~50 TB` of SSD reads). **Instead use:** [**`T3 Code`**](reviews/en/developer-tools/t3-code.md) + CLI Subagents (`Argon` / `Claude` / `Codex`). |
+| [**`kimi-k3-in-c`**](reviews/en/local-models/kimi-k3-in-c.md) | C99 CLI Inference Engine (`2.78T` MoE) | **8.5/10** | **1.0/10** | `⛔ Rejected` | `2026-11-16` | **Min (barely streams):** `GPU: 0` · `CPU: 16+ cores` · `RAM: 8–16 GB` · `SSD: ≥1.8 TB free NVMe` *(`~24–33s/token`, `500` tokens = `~3.5h` + `~50 TB` SSD reads — burns drive `TBW`)*. **Recommended (`30–60+ tok/s`):** `GPU: 16× H200 (141 GB, ~2.25 TB VRAM)` or `8× B300 (288 GB)` · `CPU: 64–128 cores` · `RAM: 512 GB–1 TB` · `SSD: 4 TB Gen5 NVMe`. ⚠️ Free `:free` community proxies risk leaking private code. **Instead use:** [**`T3 Code`**](reviews/en/developer-tools/t3-code.md) + CLI Subagents. |
+| [**`MiniMax-M3.1-Flash`** *(Local)*](reviews/en/local-models/minimax-m3-1-flash.md) | Open-Weight `428B` MoE (`~23B` active) | **8.0/10** | **1.0/10** | `⛔ Rejected` | `2026-11-16` | **Min (barely boots):** `GPU: 0–24 GB` *(disk offload, `~0.5–3 tok/s`)* or `Mac Studio Ultra 512 GB RAM` · `CPU: 16–32 cores` · `RAM: 64–128 GB+` · `SSD: ≥350–500 GB NVMe` *(`~250–285 GB` weights)*. **Recommended (`100–170+ tok/s`):** `GPU: 8× H100 (80 GB = 640 GB VRAM)` or `4× B200 (180 GB = 720 GB VRAM)` · `CPU: 64+ cores` · `RAM: 512 GB` · `SSD: 1–2 TB NVMe`. ⚠️ Risks SSD wear, `custom_code` `RCE`, `MiniMax Community License` attribution rules, and repo leakage on "free" tiers. **Instead use:** [**`T3 Code`**](reviews/en/developer-tools/t3-code.md) (or cloud [`MiniMax M3.1 Flash API`](reviews/en/external-apis/minimax-m3-1-flash-api.md)). |
+
+### 🔌 External APIs
+
+| Name | Type | Quality | Need | Status | Date | Summary |
+|---|---|---|---|---|---|---|
+| [**`MiniMax M3.1 Flash API`**](reviews/en/external-apis/minimax-m3-1-flash-api.md) | Cloud Multimodal API (`MiniMax` / `OpenRouter`) | **8.0/10** | **5.0/10** | `👍 Good Option` | `2026-11-16` | `$0.15 / 1M` input, `$0.60 / 1M` output (`Cached: $0.015`), `170+ TPS` speed, and `1M` context (`text + image + video`) — strong budget offer for high-volume product backend bots, translation, `OCR`/vision/video tagging, and SaaS automation (`Automation-Bench: 62.8%`). **Important caveats:** does not replace `Opus` / `Codex` in core coding (`Terminal-Bench 4.0: 38.1%`); ⚠️ **use caution with "free" tiers** — never send private repos or `.env` secrets to `MiniMax Code` daily check-in credits or `:free` endpoints; use paid `Zero-Data-Retention` API keys only. |
 
 ### 🌐 Web
 
 | Name | Type | Quality | Need | Status | Date | Summary |
 |---|---|---|---|---|---|---|
 | [**`taste-skill` v2.5**](reviews/en/web/taste-skill.md) | Landing Kit + Hook | **8.0/10** | **4.0/10** | `👍 Good Option` | `2026-11-15` | Strong for greenfield promo/landing sites; if installed, its 600s `Stop` hook must be stripped and scoped strictly to `-p`. |
+| [**`vercel-labs/ui`**](reviews/en/web/vercel-ui-sdk.md) | `@ui-sdk/*` Library + Skill (`Beta`) | **8.0/10** | **2.0/10** | `⛔ Rejected` | `2026-11-16` | Vercel Labs' Public Beta headless UI primitives and `ui-sdk` skill: its *"screenshot-free 2x faster agent control"* (`createAgent`) works strictly on apps rewritten in `@ui-sdk/*` (blind to plain `<button>`/`<input>` and `Shadcn`/`Radix`, no `Expo` support). **Instead use:** our existing UI stack + [**`impeccable`**](reviews/en/ui-ux/impeccable.md) + [**`agent-desktop`**](reviews/en/developer-tools/agent-desktop.md). |
 
 ### 📱 Mobile
 
@@ -105,6 +93,7 @@ Practical guides on **which tools to pair together (`What + What = Outcome`)**, 
 
 | Name | Type | Quality | Need | Status | Date | Summary |
 |---|---|---|---|---|---|---|
+| [**`security-audit`**](reviews/en/backend/security-audit-skill.md) | Skill (`cloudflare/security-audit-skill`) | **9.0/10** | **7.5/10** | `✅ Active` | Since `2026-11-16` | Cloudflare's 6-phase *adversarial* source-code security audit (`Hunter` + fresh `Verifier` subagents + zero-dep Node JSON validators): finds Backend, Web, **Mobile (`deep-link`/`WebView`/`IPC`)**, CLI, and CI/CD vulnerabilities with zero Docker setup (sanitized with `quick`/`scoped` default). |
 | [**`opentelemetry`**](reviews/en/backend/opentelemetry.md) | Standard + Collector (`SigNoz` / `Grafana`) | **9.0/10** | **4.0/10** | `👍 Good Option` | `2026-11-15` | Industry standard for cross-service `Traces + Metrics + Logs` and host/DB telemetry (requires `Collector + SigNoz/Grafana`). **Instead use:** [**`sentry`**](reviews/en/backend/sentry.md) (covers errors, replays, and baseline traces in one stack). |
 | [**`Shannon`**](reviews/en/backend/shannon.md) | Standalone CLI + [`hacker-test`](skills/hacker-test/SKILL.md) | **8.5/10** | **6.5/10** | `👍 Good Option` | `2026-11-16` | Autonomous White-Box AI pentester (Auth bypass, IDOR, Injection, XSS, SSRF). Instead of installing its heavy plugin, we trigger `npx` on demand via our lightweight [`hacker-test`](skills/hacker-test/SKILL.md) skill strictly on local/staging (never production). |
 

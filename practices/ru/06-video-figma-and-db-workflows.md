@@ -1,4 +1,4 @@
-# 6. Видео-Анализ (`watch`), Двусторонний Мост Figma (`figma`) и Нестандартные Возможности
+# 6. Видео-Анализ (`watch`), Двусторонний Мост Figma (`figma`) и Дополнительные Возможности
 
 [🇺🇿 O'zbekcha](../06-video-figma-and-db-workflows.md) | [🇬🇧 English](../en/06-video-figma-and-db-workflows.md) | **🇷🇺 Русский**
 

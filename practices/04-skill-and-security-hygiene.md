@@ -4,7 +4,7 @@
 
 ⬅️ [Practices Mundarijasiga qaytish](README.md)
 
-- **Birlashtiriladigan vositalar:** [**`tasted-skills`**](../skills/tasted-skills/SKILL.md) + [**`skillshare`**](../reviews/developer-tools/skillshare.md) + [**`Shannon` (`hacker-test`)**](../reviews/backend/shannon.md) + [**`sentry`**](../reviews/backend/sentry.md)
+- **Birlashtiriladigan vositalar:** [**`tasted-skills`**](../skills/tasted-skills/SKILL.md) + [**`skillshare`**](../reviews/developer-tools/skillshare.md) + [**`security-audit`**](../reviews/backend/security-audit-skill.md) + [**`Shannon` (`hacker-test`)**](../reviews/backend/shannon.md) + [**`sentry`**](../reviews/backend/sentry.md)
 - **Qo'llaniladigan loyihalar:** AI ish muhiti xavfsizligi, Backend API'lar va Full-Stack production tizimlar.
 
 ---
@@ -33,10 +33,11 @@ Hech qachon `npx skills add ...` yoki `claude plugin install ...` ni ko'r-ko'ron
    skillshare sync -g
    ```
 
-### 2-Halqa: Lokal va Staging API'larni "Xaker ko'zi bilan" tekshirish (`hacker-test` / `Shannon`)
+### 2-Halqa: Manba kodi auditi (`security-audit`) + Jonli API Pentest (`hacker-test` / `Shannon`)
 
-Yangi auth, to'lov yoki rolga asoslangan (`RBAC`) API yozilganda, production'ga chiqarishdan oldin lokal/staging muhitda avtonom White-Box pentest yurgizish:
-- `hacker-test` skilli og'ir plugin o'rnatmasdan, faqat so'ralgan paytda `npx @keygraph/shannon@latest` orqali kod bazasini va ishlab turgan lokal endpointlarni tahlil qilib, `IDOR`, `Auth bypass`, `SQLi/NoSQLi`, `XSS` va `SSRF` zaifliklarini real PoC bilan tekshiradi *(production URL'larda ishlatish qat'iyan man etilgan)*.
+Yangi auth, to'lov, multi-tenant (`RBAC`), mobil `deep-link`/`WebView` yoki CI/CD modullari yozilganda production'ga chiqarishdan oldin **2 bosqichli tekshiruv** yurgiziladi:
+1. **Docker'siz tezkor manba kodi auditi (`security-audit` — Cloudflare):** Server ko'tarmasdan Backend, Web, **iOS/Android/Expo mobil**, CLI va Cloud/CI kodlarini 6 bosqichda (`Hunter` + mustaqil rad etuvchi `Verifier` subagentlar) tekshirib, `~/security-audit-skill/<repo>/run-<N>/REPORT.md` ga tasdiqlangan zaifliklarni chiqaradi.
+2. **Jonli lokal/staging API pentesti (`hacker-test` / `Shannon`):** Web va HTTP API'lar uchun `npx @keygraph/shannon@latest` orqali ishlab turgan lokal endpointlarga real brauzer va HTTP payload yuborib, `IDOR`, `Auth bypass`, `SQLi/NoSQLi`, `XSS` va `SSRF` zaifliklarini amalda buzib isbotlaydi *(production URL'larda ishlatish qat'iyan man etilgan)*.
 
 ### 3-Halqa: Production xatolarni va sekin so'rovlarni tutish (`sentry`)
 

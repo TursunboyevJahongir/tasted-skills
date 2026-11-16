@@ -1,4 +1,4 @@
-# 6. Video Analysis (`watch`), Two-Way Figma Bridge (`figma`) & Non-Obvious Capabilities
+# 6. Video Analysis (`watch`), Two-Way Figma Bridge (`figma`) & Additional Capabilities
 
 [🇺🇿 O'zbekcha](../06-video-figma-and-db-workflows.md) | **🇬🇧 English** | [🇷🇺 Русский](../ru/06-video-figma-and-db-workflows.md)
 

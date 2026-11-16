@@ -1,4 +1,4 @@
-# 6. Video Tahlil (`watch`), Figma Ko'prigi (`figma`) va Nostandart Imkoniyatlar
+# 6. Video Tahlil (`watch`), Figma Ko'prigi (`figma`) va Qo'shimcha Imkoniyatlari
 
 **🇺🇿 O'zbekcha** | [🇬🇧 English](en/06-video-figma-and-db-workflows.md) | [🇷🇺 Русский](ru/06-video-figma-and-db-workflows.md)
 

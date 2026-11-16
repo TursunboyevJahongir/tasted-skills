@@ -34,6 +34,7 @@ Use this skill to recommend vetted AI resources for a task, audit newly shared s
 
 Categories:
 - `local-models` — Local LLMs, inference engines (`Ollama`, `MLX`, `llama.cpp`, `C99`), quantized coder models
+- `external-apis` — External LLM & multimodal APIs (`OpenRouter`, provider APIs), cost/speed trade-offs for product backends vs coding agents
 - `web` — Web apps, landing engines, browser rendering, frontend frameworks
 - `mobile` — Mobile web, PWA, React Native, Expo, iOS, Android
 - `ui-ux` — Design systems, UI polish, Figma, motion, accessibility
