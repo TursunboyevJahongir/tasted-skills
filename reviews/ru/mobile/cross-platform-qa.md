@@ -20,8 +20,8 @@
 1. **Этап 1 (В процессе разработки — 100% локально на компьютере):**
    - Во время написания кода и отладки сборки не ставятся раз за разом на физический телефон/планшет.
    - **Web (`Google Chrome`):** Проверяется в фоне в открытом браузере через [`agent-desktop`](../developer-tools/agent-desktop.md) (`AXPress`, `~0.2–0.3s`).
-   - **iOS / tvOS (Headless Simulator):** Запускается без окна на экране через `xcrun simctl boot <UDID>`, а интерфейс проверяется в фоне через [`agent-device`](agent-device.md) (`--platform ios --udid <UDID>`, `@ref`, `diff snapshot -i --settle`, `~0.2s`; `Device Hub` остаётся резервом).
-   - **Android / Android TV (Headless Emulator):** Запускается в фоне через `emulator -avd ... -no-window`, UI-сценарии прогоняются через [`agent-device`](agent-device.md) (`--platform android --serial emulator-5554`, `~0.9s`, полный UTF-8 ввод), а проброс портов и логи — через [`adb`](adb.md) (`reverse`, `logcat`).
+   - **iOS / tvOS (Headless Simulator):** Облегчённый через [`simslim`](simslim.md) (`~1.16 GB` RAM) симулятор запускается без окна через `xcrun simctl boot <UDID>`, а интерфейс проверяется в фоне через [`agent-device`](agent-device.md) (`--platform ios --udid <UDID>`, `@ref`, `diff snapshot -i --settle`, `~0.2s`; `Device Hub` остаётся резервом).
+   - **Android / Android TV (Headless Emulator):** Запускается в фоне через [`avdslim`](avdslim.md) (`avdslim start ... --headless --no-slim`, `1536 MB` + Apple Metal `host` GPU Golden Snapshot, `~2.64 GB` RAM), UI-сценарии прогоняются через [`agent-device`](agent-device.md) (`--platform android --serial emulator-5554`, `~0.9s`, полный UTF-8 ввод), а проброс портов и логи — через [`adb`](adb.md) (`reverse`, `logcat`).
 2. **Этап 2 (Финальное правило «Done» — 1 раз на реальном телефоне):**
    - Когда все локальные проверки пройдены, перед закрытием задачи (**Done**) выполняется **один финальный прогон** на подключённом по USB реальном телефоне/планшете (`agent-device` + `adb` / `devicectl`).
 

@@ -20,8 +20,8 @@ A custom 2-stage global QA skill designed to verify Web, iOS/tvOS, and Android/A
 1. **Stage 1 (Iterative Development — 100% Local on Mac):**
    - Never repeatedly install builds onto a physical phone/tablet during active coding and debugging.
    - **Web (`Google Chrome`):** Verified in the background against the open authenticated browser via [`agent-desktop`](../developer-tools/agent-desktop.md) (`AXPress`, `~0.2–0.3s`).
-   - **iOS / tvOS (Headless Simulator):** Booted windowlessly via `xcrun simctl boot <UDID>` and driven in the background via [`agent-device`](agent-device.md) (`--platform ios --udid <UDID>`, `@ref`, `diff snapshot -i --settle`, `~0.2s`; `Device Hub` remains a fallback).
-   - **Android / Android TV (Headless Emulator):** Booted headlessly with `emulator -avd ... -no-window`, driving UI flows via [`agent-device`](agent-device.md) (`--platform android --serial emulator-5554`, `~0.9s`, full UTF-8 input) while using [`adb`](adb.md) for low-level port forwarding (`reverse`) and `logcat`.
+   - **iOS / tvOS (Headless Simulator):** Pre-slimmed via [`simslim`](simslim.md) (`~1.16 GB` RAM), booted windowlessly via `xcrun simctl boot <UDID>`, and driven in the background via [`agent-device`](agent-device.md) (`--platform ios --udid <UDID>`, `@ref`, `diff snapshot -i --settle`, `~0.2s`; `Device Hub` remains a fallback).
+   - **Android / Android TV (Headless Emulator):** Launched headlessly via [`avdslim`](avdslim.md) (`avdslim start ... --headless --no-slim`, `1536 MB` + Apple Metal `host` GPU Golden Snapshot, `~2.64 GB` RAM), driving UI flows via [`agent-device`](agent-device.md) (`--platform android --serial emulator-5554`, `~0.9s`, full UTF-8 input) while using [`adb`](adb.md) for low-level port forwarding (`reverse`) and `logcat`.
 2. **Stage 2 (Final "Done" Gate — Single Pass on Physical Hardware):**
    - Once all local checks pass and right before marking the task **Done**, run **one final verification pass** on the USB-connected physical phone/tablet (`agent-device` + `adb` / `devicectl`).
 

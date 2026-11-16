@@ -20,8 +20,8 @@ Web, iOS/tvOS va Android/Android TV ilovalarda kod yozish hamda tekshirishni **o
 1. **1-Bosqich (Ish jarayoni — 100% lokal kompyuterda):**
    - Ish davomida fizikiy telefon/planshetga qayta-qayta build o'rnatilmaydi.
    - **Web (`Google Chrome`):** [`agent-desktop`](../developer-tools/agent-desktop.md) orqali ochiq va login qilingan brauzerda fonda (`AXPress`, `~0.2–0.3s`) tekshiriladi.
-   - **iOS / tvOS (Headless Simulator):** `xcrun simctl boot <UDID>` bilan oynasiz fonda yoqilib, [`agent-device`](agent-device.md) (`--platform ios --udid <UDID>`, `@ref`, `diff snapshot -i --settle`, `~0.2s`) orqali tekshiriladi (`Device Hub` fallback sifatida qoladi).
-   - **Android / Android TV (Headless Emulator):** `emulator -avd ... -no-window` fonda yoqilib, UI oqimi [`agent-device`](agent-device.md) (`--platform android --serial emulator-5554`, `~0.9s`, o'zbekcha UTF-8 input bilan) hamda past darajadagi port/log ishlari [`adb`](adb.md) (`reverse`, `logcat`) orqali tekshiriladi.
+   - **iOS / tvOS (Headless Simulator):** [`simslim`](simslim.md) bilan yengillashtirilgan (`~1.16 GB` RAM) simulyator `xcrun simctl boot <UDID>` orqali oynasiz fonda yoqilib, [`agent-device`](agent-device.md) (`--platform ios --udid <UDID>`, `@ref`, `diff snapshot -i --settle`, `~0.2s`) orqali tekshiriladi (`Device Hub` fallback sifatida qoladi).
+   - **Android / Android TV (Headless Emulator):** [`avdslim`](avdslim.md) (`avdslim start ... --headless --no-slim`, `1536 MB` + Apple Metal `host` GPU Golden Snapshot, `~2.64 GB` RAM) bilan fonda yoqilib, UI oqimi [`agent-device`](agent-device.md) (`--platform android --serial emulator-5554`, `~0.9s`, o'zbekcha UTF-8 input bilan) hamda past darajadagi port/log ishlari [`adb`](adb.md) (`reverse`, `logcat`) orqali tekshiriladi.
 2. **2-Bosqich (Yakuniy "Done" qoidasi — Real qurilmada 1 marta tekshirish):**
    - Barcha lokal tekshiruvlar bitib, vazifa **Done** bo'lishidan oldin kompyuterga ulangan real telefon/planshetda (`agent-device` + `adb` / `devicectl`) **1 marta yakuniy sinov** o'tkazilib tasdiqlanadi.
 
