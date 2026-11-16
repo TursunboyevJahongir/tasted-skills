@@ -177,15 +177,15 @@
     </tr>
     <tr>
       <td align="center"><strong>13</strong></td>
-      <td><a href="reviews/en/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong> + CLI Subagent</a></td>
-      <td><strong>Multi-Agent Code &amp; Review Orchestration</strong></td>
-      <td>Desktop App + CLI + Skill</td>
-      <td align="center"><strong>9.0/10</strong></td>
+      <td><a href="reviews/en/developer-tools/orca.md"><strong><code>Orca</code></strong> + CLI Subagent</a></td>
+      <td><strong>Multi-Agent Orchestration &amp; Mobile Control</strong></td>
+      <td>Desktop + Mobile App + CLI + Skill</td>
+      <td align="center"><strong>9.5/10</strong></td>
       <td align="center"><code>✅&nbsp;Active</code></td>
-      <td align="center">Since&nbsp;<code>2026&#8209;10&#8209;23</code></td>
+      <td align="center">Since&nbsp;<code>2026&#8209;11&#8209;16</code></td>
     </tr>
     <tr>
-      <td colspan="7" width="2000">Multi-AI orchestration via <code>task-context</code> + CLI subagents (<code>argon</code>, <code>antigravity-claude</code>, <code>claude-opus</code>, <code>antigravity-consult</code>) and <strong><code>orchestration</code></strong> (Orca <code>worker-start</code> DAGs) for independent implementation and review.</td>
+      <td colspan="7" width="2000">Chains <code>Codex</code>, <code>Claude</code>, and <code>Antigravity</code> from a single prompt via native <strong><code>orchestration</code></strong> (<code>orca orchestration worker-start</code> DAGs) and <code>task-context</code> + CLI subagents (<code>argon</code>, <code>antigravity-claude</code>, <code>claude-opus</code>) with live Chat UI worker cards + reliable <strong><code>Orca IDE</code> mobile app</strong> and Lock-Screen wake (<code>caffeinate</code>; <code>PostHog</code> disabled).</td>
     </tr>
     <tr>
       <td align="center"><strong>14</strong></td>
@@ -669,6 +669,17 @@
       <td colspan="6" width="2000">NVIDIA's AI skill &amp; MCP security scanner (<code>AST + YARA + OSV + LLM</code>). Not installed to avoid an extra daily loop — <strong>Instead use:</strong> <a href="reviews/en/developer-tools/skillshare.md"><strong><code>skillshare</code></strong></a> (<code>skillshare audit</code> skill-check) + <strong>direct AI agent source-code inspection</strong>.</td>
     </tr>
     <tr>
+      <td><a href="reviews/en/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong></a></td>
+      <td>Desktop App + CLI Subagent Workflow</td>
+      <td align="center"><strong>8.5/10</strong></td>
+      <td align="center"><strong>2.5/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Rejected</code></td>
+      <td align="center"><code>2026&#8209;10&#8209;23 → 2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Used and uninstalled (<code>~3.87 GB</code> reclaimed): its beta mobile app disconnects frequently when the phone locks, sessions drop on Mac <code>Lock Screen</code>, and it lacks native inline worker cards in Chat UI. <strong>Instead use:</strong> <a href="reviews/en/developer-tools/orca.md"><strong><code>Orca</code> (<code>stablyai/orca</code>)</strong></a>.</td>
+    </tr>
+    <tr>
       <td><a href="reviews/en/developer-tools/caveman.md"><strong><code>caveman</code></strong></a></td>
       <td>Skill <em>(+ optional CLI/Proxy)</em></td>
       <td align="center"><strong>8.0/10</strong></td>
@@ -710,7 +721,7 @@
       <td align="center"><code>2026&#8209;11&#8209;16</code></td>
     </tr>
     <tr>
-      <td colspan="6" width="2000">Local LLM reverse-proxy (<code>localhost:20128</code>); its 44 bundled skills are proxy admin manuals, default routing breaks long sessions (<code>#7287</code>) and silently downgrades models, and <code>wreq-js</code> TLS-stealth carries subscription ToS ban risk. <strong>Instead use:</strong> <a href="reviews/en/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong></a> + <a href="reviews/en/architecture/ponytail.md"><strong><code>ponytail</code></strong></a>.</td>
+      <td colspan="6" width="2000">Local LLM reverse-proxy (<code>localhost:20128</code>); its 44 bundled skills are proxy admin manuals, default routing breaks long sessions (<code>#7287</code>) and silently downgrades models, and <code>wreq-js</code> TLS-stealth carries subscription ToS ban risk. <strong>Instead use:</strong> <a href="reviews/en/developer-tools/orca.md"><strong><code>Orca</code></strong></a> + <a href="reviews/en/architecture/ponytail.md"><strong><code>ponytail</code></strong></a>.</td>
     </tr>
   </tbody>
 </table>

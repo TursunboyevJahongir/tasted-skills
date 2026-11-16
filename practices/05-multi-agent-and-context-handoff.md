@@ -1,10 +1,10 @@
-# 5. Ko'p-Agentli Ishlash (`T3 Code` + CLI Subagentlar) va Kontekstni Yo'qotmaslik
+# 5. Ko'p-Agentli Ishlash (`Orca` + CLI Subagentlar) va Kontekstni Yo'qotmaslik
 
 **🇺🇿 O'zbekcha** | [🇬🇧 English](en/05-multi-agent-and-context-handoff.md) | [🇷🇺 Русский](ru/05-multi-agent-and-context-handoff.md)
 
 ⬅️ [Practices Mundarijasiga qaytish](README.md)
 
-- **Birlashtiriladigan vositalar:** [**`T3 Code`**](../reviews/developer-tools/t3-code.md) + `task-context` + CLI Subagentlar (`antigravity-claude`, `argon`, `claude-opus`, `antigravity-consult`) + [**`elephant-goldfish-model`**](../reviews/architecture/elephant-goldfish-model.md)
+- **Birlashtiriladigan vositalar:** [**`Orca`**](../reviews/developer-tools/orca.md) + `task-context` + CLI Subagentlar (`antigravity-claude`, `argon`, `claude-opus`, `antigravity-consult`) + [**`elephant-goldfish-model`**](../reviews/architecture/elephant-goldfish-model.md)
 - **Qo'llaniladigan vazifalar:** Katta fiychalar, parallel branch/worktree ishlari, bir model kvotasi tugaganda ishni boshqa modelga uzatish va chuqur kod/arxitektura tekshiruvi.
 
 ---
@@ -26,7 +26,7 @@ Ikki xil tekshiruvni adashtirmaslik kerak — har birining o'z o'rni bor:
 
 | Vaziyat | Qaysi bog'lama ishlatiladi? | Nima uchun? |
 |---|---|---|
-| **Yozilgan kod/diff'ni va biznes-talabga moslikni tekshirish** | `task-context` + **`argon` / `antigravity-claude` / `claude-opus`** (`T3 Code` CLI subagent) | Reviewer foydalanuvchi aslida nima so'raganini va nima uchun shu yo'l tanlanganini (`task-context`) bilishi, lekin kodni boshqa model ko'zi bilan tekshirishi kerak (*"Codex yozdi -> Argon/Claude tekshirdi"*). |
+| **Yozilgan kod/diff'ni va biznes-talabga moslikni tekshirish** | `task-context` + **`argon` / `antigravity-claude` / `claude-opus`** (`Orca` CLI subagent) | Reviewer foydalanuvchi aslida nima so'raganini va nima uchun shu yo'l tanlanganini (`task-context`) bilishi, lekin kodni boshqa model ko'zi bilan tekshirishi kerak (*"Codex yozdi -> Argon/Claude tekshirdi"*). |
 | **Arxitektura rejasi, yangi dizayn hujjati yoki Hujjat-Kod uzilishini tekshirish** | [**`elephant-goldfish-model`**](../reviews/architecture/elephant-goldfish-model.md) (`egm-review`, `egm-drift-report`) | Bu yerda suhbat tarixi **zarar beradi** — xotirasiz *Goldfish* subagentlar oldingi bahslarni ko'rmasdan, hujjat yoki kodni noldan o'qib, yashirin taxmin va xatolarni ayovsiz topadi. |
 
 ---
@@ -46,5 +46,5 @@ Yangi yoki eski hujjatsiz loyihaga kirganda:
 Agar bitta model murakkab bug'da aylanib qolsa yoki sessiya limiti tugasa:
 - Yangi agentga shunchaki *"task-context papkasini o'qi va qolgan joyidan davom et"* deyish kifoya — u barcha oldingi qarorlar va o'zgargan fayllarni 5 soniyada tushunib oladi.
 
-### 4) Parallel Git Worktree'larda 2–3 ta fiycha ustida baravar ishlash (`T3 Code` + `agent-device`)
-- `T3 Code` har bir vazifani alohida git worktree'da ochadi, [**`agent-device`**](../reviews/mobile/agent-device.md) va [**`simslim`**](../reviews/mobile/simslim.md) esa worktree'lar o'rtasida simulyator sessiyalari urishib ketmasligini ta'minlaydi.
+### 4) Parallel Git Worktree'larda 2–3 ta fiycha ustida baravar ishlash (`Orca` + `agent-device`)
+- `Orca` har bir vazifani alohida git worktree'da ochadi, [**`agent-device`**](../reviews/mobile/agent-device.md) va [**`simslim`**](../reviews/mobile/simslim.md) esa worktree'lar o'rtasida simulyator sessiyalari urishib ketmasligini ta'minlaydi.

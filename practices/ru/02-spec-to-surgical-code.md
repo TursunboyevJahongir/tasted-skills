@@ -4,7 +4,7 @@
 
 ⬅️ [Вернуться к оглавлению практик](README.md)
 
-- **Связка инструментов:** [**`graphify`**](../../reviews/ru/architecture/graphify.md) + [**`grill-me`**](../../reviews/ru/architecture/grill-me.md) + [**`ponytail`**](../../reviews/ru/architecture/ponytail.md) + [**`karpathy-guidelines`**](../../reviews/ru/architecture/karpathy-guidelines.md) + [**`T3 Code`**](../../reviews/ru/developer-tools/t3-code.md) + [**`elephant-goldfish-model`**](../../reviews/ru/architecture/elephant-goldfish-model.md)
+- **Связка инструментов:** [**`graphify`**](../../reviews/ru/architecture/graphify.md) + [**`grill-me`**](../../reviews/ru/architecture/grill-me.md) + [**`ponytail`**](../../reviews/ru/architecture/ponytail.md) + [**`karpathy-guidelines`**](../../reviews/ru/architecture/karpathy-guidelines.md) + [**`Orca`**](../../reviews/ru/developer-tools/orca.md) + [**`elephant-goldfish-model`**](../../reviews/ru/architecture/elephant-goldfish-model.md)
 - **Проекты:** Любые задачи Backend, Web, Mobile и Архитектуры.
 
 ---
@@ -37,9 +37,9 @@
 - **`karpathy-guidelines`:** Озвучивает допущения заранее и правит только целевые строки, не трогая соседний код.
 - **`ponytail`:** Отсекает непрошеные обёртки, фабрики и конфиги «на вырост»; обновляет все вызовы и тесты и завершает ответ 1–2 строками о том, что было пропущено и какие риски остались.
 
-### Этап 4: Независимая проверка вторыми глазами (`T3 Code` + `elephant-goldfish-model`)
+### Этап 4: Независимая проверка вторыми глазами (`Orca` + `elephant-goldfish-model`)
 Готовый код проверяет не тот же агент, который его писал:
-- **Кросс-модельное ревью (`T3 Code` + CLI Subagent):** Если код написал `Codex`, через CLI-субагента вызывается `Claude Opus` или `Argon` для независимого аудита diff'а.
+- **Кросс-модельное ревью (`Orca` + CLI Subagent):** Если код написал `Codex`, через CLI-субагента вызывается `Claude Opus` или `Argon` для независимого аудита diff'а.
 - **Проверка расхождений и архитектурное ревью (`elephant-goldfish-model`):**
   - `egm-drift-report`: Находит расхождения между документацией (`README` / `DESIGN.md`) и реальным кодом.
   - `egm-review`: Запускает субагентов-критиков без контекста (*Goldfish*: `egm-design`, `egm-codebase-details`, `egm-zoom-out`) по 5 направлениям.

@@ -4,7 +4,7 @@
 
 ⬅️ [Practices Mundarijasiga qaytish](README.md)
 
-- **Birlashtiriladigan vositalar:** [**`graphify`**](../reviews/architecture/graphify.md) + [**`grill-me`**](../reviews/architecture/grill-me.md) + [**`ponytail`**](../reviews/architecture/ponytail.md) + [**`karpathy-guidelines`**](../reviews/architecture/karpathy-guidelines.md) + [**`T3 Code`**](../reviews/developer-tools/t3-code.md) + [**`elephant-goldfish-model`**](../reviews/architecture/elephant-goldfish-model.md)
+- **Birlashtiriladigan vositalar:** [**`graphify`**](../reviews/architecture/graphify.md) + [**`grill-me`**](../reviews/architecture/grill-me.md) + [**`ponytail`**](../reviews/architecture/ponytail.md) + [**`karpathy-guidelines`**](../reviews/architecture/karpathy-guidelines.md) + [**`Orca`**](../reviews/developer-tools/orca.md) + [**`elephant-goldfish-model`**](../reviews/architecture/elephant-goldfish-model.md)
 - **Qo'llaniladigan loyihalar:** Barcha Backend, Web, Mobile va Arxitektura vazifalari.
 
 ---
@@ -39,9 +39,9 @@ Kod yozish vaqtida ikkala skill birga ishlaydi:
 - **`karpathy-guidelines`:** Taxminlarni ochiq aytadi va tegishli bo'lmagan qo'shni qatorlarga umuman tegmaydi.
 - **`ponytail`:** So'ralmagan factory, wrapper, "kelajak uchun" config qo'shmaydi; barcha `caller` va testlarni yangilab, javob oxirida 1–2 qatorda nima tekshirilmagani va qanday xavf borligini ochiq yozadi.
 
-### 4-Qadam: Mustaqil ikkinchi ko'z bilan tekshirish (`T3 Code` + `elephant-goldfish-model`)
+### 4-Qadam: Mustaqil ikkinchi ko'z bilan tekshirish (`Orca` + `elephant-goldfish-model`)
 Kod yozib bo'lingach, uni yozgan agentning o'ziga emas, mustaqil tekshiruvchiga topshirish:
-- **Multi-Model Review (`T3 Code` + CLI Subagent):** Masalan, kodni `Codex` yozgan bo'lsa, CLI subagent orqali `Claude Opus` yoki `Argon` ni chaqirib diff'ni tekshirtirish.
+- **Multi-Model Review (`Orca` + CLI Subagent):** Masalan, kodni `Codex` yozgan bo'lsa, CLI subagent orqali `Claude Opus` yoki `Argon` ni chaqirib diff'ni tekshirtirish.
 - **Arxitektura va Hujjat-Kod mosligi (`elephant-goldfish-model`):**
   - `egm-drift-report`: Hujjat (`README` / `DESIGN.md`) va haqiqiy kod o'rtasidagi farqlarni topadi.
   - `egm-review`: Xotirasiz *Goldfish* subagentlar (`egm-design`, `egm-codebase-details`, `egm-zoom-out`) kodni 5 xil burchakdan tanqid qiladi.

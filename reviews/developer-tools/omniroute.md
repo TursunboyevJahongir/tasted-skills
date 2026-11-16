@@ -9,7 +9,7 @@
 - **Bizga kerakliligi:** **2.0 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⛔ Rad etildi` *(rasmiy muhitlar, `T3 Code` va `ponytail` ishlatilgani hamda ToS/sessiya xavflari sabab o'rnatilmadi)*
+- **Joriy holati:** `⛔ Rad etildi` *(rasmiy muhitlar, `Orca` va `ponytail` ishlatilgani hamda ToS/sessiya xavflari sabab o'rnatilmadi)*
 
 ---
 
@@ -53,7 +53,7 @@ Ko'pchilik `OmniRoute` ni kod yozish sifatini oshiradigan skill deb o'ylaydi, le
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
 - **To'liq ortiqcha va ziddiyatli:**
-  - Ko'p-model orkestratsiyasi uchun bizda allaqachon [**`T3 Code`**](t3-code.md) + rasmiy `Antigravity`, `Codex` va `Claude` muhitlari to'g'ridan-to'g'ri, TLS proxy'siz va prompt-cache'ni buzmasdan ishlayapti (`Antigravity` esa baribir tashqi `OPENAI_BASE_URL` proxy'ni ishlatmaydi).
+  - Ko'p-model orkestratsiyasi uchun bizda allaqachon [**`Orca`**](orca.md) + rasmiy `Antigravity`, `Codex` va `Claude` muhitlari to'g'ridan-to'g'ri, TLS proxy'siz va prompt-cache'ni buzmasdan ishlayapti (`Antigravity` esa baribir tashqi `OPENAI_BASE_URL` proxy'ni ishlatmaydi).
   - Token va javob hajmini tejash uchun kiruvchi loglarni buzmaydigan [**`ponytail`**](../architecture/ponytail.md) hamda [**`graphify`**](../architecture/graphify.md) faol.
 
 ---
@@ -61,7 +61,7 @@ Ko'pchilik `OmniRoute` ni kod yozish sifatini oshiradigan skill deb o'ylaydi, le
 ## 5. Qaysi yo'nalish va vazifalarda foydali?
 
 - **Qachon ishlatish kerak:** Faqat rasmiy AI obunasi bo'lmagan, o'nlab turli API kalitlarni (`OpenRouter`, `Groq`, lokal `Ollama` va b.) bitta lokal shlyuz orqali `Cline` yoki `OpenCode` ga ulamoqchi bo'lgan holatda.
-- **Qachon ishlatmaslik kerak:** Rasmiy `Antigravity`, `Claude Code` va `Codex` obunalari hamda `T3 Code` ishlatiladigan professional ish muhitida, uzoq davom etuvchi murakkab arxitektura va ko'p-repoli vazifalarda.
+- **Qachon ishlatmaslik kerak:** Rasmiy `Antigravity`, `Claude Code` va `Codex` obunalari hamda `Orca` ishlatiladigan professional ish muhitida, uzoq davom etuvchi murakkab arxitektura va ko'p-repoli vazifalarda.
 
 ---
 

@@ -45,7 +45,7 @@ Categories:
 ### Special rules for `local-models` (`🧠 Lokal modellar`) & `external-apis` (`🔌 Tashqi API'lar`)
 
 Keep entries in both sections **simple, direct, and free of bloated filler**:
-1. **Never list `T3 Code` as the alternative (`O'rniga` / `Instead use` / `Вместо него`) to a local model or external API.** `T3 Code` is a desktop/CLI multi-agent orchestrator, not an LLM weight package or API endpoint.
+1. **Never list `Orca` as the alternative (`O'rniga` / `Instead use` / `Вместо него`) to a local model or external API.** `Orca` is a desktop/CLI multi-agent orchestrator, not an LLM weight package or API endpoint.
 2. **Always answer these core questions clearly and concisely:**
    - **Nimaga mo'ljallangan va nima ish qila oladi (Primary direction & capabilities):** What the model/engine is built for (e.g., general reasoning, multimodal `text + image + video`, OCR, office automation, or disk-streaming inference) and what tasks it handles well.
    - **Kod yozishga ishlaydimi? (Does it work for coding?):** State directly whether it works for practical software engineering, citing real coding benchmarks (e.g., `Terminal-Bench`, `SWE-bench`, `NL2Repo`) and real generation speed (`tok/s`).
@@ -94,6 +94,9 @@ When the user shares a GitHub repository, documentation site, package, MCP serve
    - Keep `README.md`, `README.en.md`, and `README.ru.md` concise (no long prose instructions), using only the 3 short status badges (`✅ Faol`, `👍 Yaxshi variant`, `⛔ Rad etildi` / `✅ Active`, `👍 Good Option`, `⛔ Rejected` / `✅ Активен`, `👍 Хороший вариант`, `⛔ Отклонено`):
      - Essential, battle-tested daily items (`✅ Faol` / `✅ Active` / `✅ Активен`) go in the top ungrouped **`⭐ Eng keraklilari`** / **`⭐ Top Essentials`** / **`⭐ Самые необходимые`** table.
      - All remaining items go under **`Yo'nalishlar bo'yicha`** / **`By Category`** / **`По направлениям`** in their category table without duplicating rows from the top essentials table.
+     - **2-Row Full-Width HTML Table Layout (mandatory):** Every table in `README*.md` uses `<table width="100%">` with **2 `<tr>` rows per entry** and **no `Qisqacha izoh` / `Summary` / `Краткое описание` column or label prefix**:
+       - **Row 1 (metadata stretched full-width):** 7 columns in Top Essentials (`#`, `Nomi`, `Asosiy vazifasi`, `Turi`, `Baho`, `Holati`, `Sana` at `5% / 18% / 24% / 16% / 9% / 14% / 14%`) or 6 columns in category tables (`Nomi`, `Turi`, `Sifat`, `Keraklilik`, `Holati`, `Sana` at `22% / 27% / 10% / 11% / 16% / 14%`), using `&nbsp;` inside status badges and `&#8209;` inside `YYYY-MM-DD` dates.
+       - **Row 2 (full-width description):** `<td colspan="7" width="2000">...</td>` (Top Essentials) or `<td colspan="6" width="2000">...</td>` (category tables) with clean inline HTML (`<a href="...">`, `<strong>`, `<em>`, `<code>`, escaped `&lt;`/`&gt;`/`&amp;`, and zero blank lines inside `<table>...</table>`).
      - **Ordering rule (mandatory):** Keep **`⭐ Eng keraklilari`** / **`⭐ Top Essentials`** / **`⭐ Самые необходимые`** ordered by daily workflow priority (`grill-me` #1, `graphify` #2, etc., with numbered `#` and `Asosiy vazifasi` / `Core Job` / `Основная задача` columns). Keep every category table under **`Yo'nalishlar bo'yicha`** sorted **descending by score** (`Sifat` / `Quality` / `Качество` highest-to-lowest, breaking ties by `Keraklilik` / `Need` / `Нужность`).
 
 ### 3. Sanitize before installing & update usage status

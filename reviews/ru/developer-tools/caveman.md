@@ -8,7 +8,7 @@
 - **Оценка качества:** **8.0 / 10**
 - **Насколько нужно нам:** **3.5 / 10** *(краткие ответы и минимальный объём кода у нас уже закрывает активный `ponytail`)*
 - **Рекомендуемый масштаб:** `Только очищенный одиночный SKILL.md (-p или ручной /caveman)` — без полного плагина/CLI
-- **Альтернатива у нас:** [**`ponytail`**](../architecture/ponytail.md) *(держит в минимуме и текст ответа, и сам код/diff)* + [**`karpathy-guidelines`**](../architecture/karpathy-guidelines.md) + [**`T3 Code`**](t3-code.md)
+- **Альтернатива у нас:** [**`ponytail`**](../architecture/ponytail.md) *(держит в минимуме и текст ответа, и сам код/diff)* + [**`karpathy-guidelines`**](../architecture/karpathy-guidelines.md) + [**`Orca`**](orca.md)
 - **Дата проверки:** `2026-11-16`
 - **Текущий статус:** `👍 Хороший вариант`
 
@@ -57,7 +57,7 @@
 - **Наша основная альтернатива — [**`ponytail`**](../architecture/ponytail.md) (`9.5/10`, `#3` активный глобальный скилл):**
   - `caveman` сжимает только реплики в чате и никак не влияет на раздувание самого кода.
   - [**`ponytail`**](../architecture/ponytail.md) решает **обе задачи сразу**: обеспечивает краткий ответ на одно прочтение **и** отсекает лишние абстракции, обёртки и ненужный код (YAGNI) — главный источник расхода токенов в разработке.
-- Дополнительные скиллы репозитория (`surgical-patch`, `lean-build`, `cavecrew`) и роутер `Auto` у нас полностью и чище закрыты связкой [**`karpathy-guidelines`**](../architecture/karpathy-guidelines.md), [**`elephant-goldfish-model`**](../architecture/elephant-goldfish-model.md) и [**`T3 Code`**](t3-code.md).
+- Дополнительные скиллы репозитория (`surgical-patch`, `lean-build`, `cavecrew`) и роутер `Auto` у нас полностью и чище закрыты связкой [**`karpathy-guidelines`**](../architecture/karpathy-guidelines.md), [**`elephant-goldfish-model`**](../architecture/elephant-goldfish-model.md) и [**`Orca`**](orca.md).
 
 ---
 

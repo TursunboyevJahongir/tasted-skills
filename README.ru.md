@@ -177,15 +177,15 @@
     </tr>
     <tr>
       <td align="center"><strong>13</strong></td>
-      <td><a href="reviews/ru/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong> + CLI Subagent</a></td>
-      <td><strong>Мультиагентная разработка и ревью</strong></td>
-      <td>Desktop App + CLI + Skill</td>
-      <td align="center"><strong>9.0/10</strong></td>
+      <td><a href="reviews/ru/developer-tools/orca.md"><strong><code>Orca</code></strong> + CLI Subagent</a></td>
+      <td><strong>Мультиагентная оркестрация и Мобильное управление</strong></td>
+      <td>Desktop + Mobile App + CLI + Skill</td>
+      <td align="center"><strong>9.5/10</strong></td>
       <td align="center"><code>✅&nbsp;Активен</code></td>
-      <td align="center">С&nbsp;<code>2026&#8209;10&#8209;23</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;16</code></td>
     </tr>
     <tr>
-      <td colspan="7" width="2000">Совместная работа нескольких AI через <code>task-context</code> + CLI-субагенты (<code>argon</code>, <code>antigravity-claude</code>, <code>claude-opus</code>, <code>antigravity-consult</code>) и <strong><code>orchestration</code></strong> (Orca <code>worker-start</code> DAG) для независимой разработки и ревью.</td>
+      <td colspan="7" width="2000">Запуск цепочек <code>Codex</code>, <code>Claude</code> и <code>Antigravity</code> из одного промпта через встроенный <strong><code>orchestration</code></strong> (<code>orca orchestration worker-start</code> DAG) и <code>task-context</code> + CLI-субагенты (<code>argon</code>, <code>antigravity-claude</code>, <code>claude-opus</code>) с живыми карточками в Chat UI + стабильное мобильное приложение <strong><code>Orca IDE</code></strong> и работа при Lock Screen (<code>caffeinate</code>; <code>PostHog</code> отключён).</td>
     </tr>
     <tr>
       <td align="center"><strong>14</strong></td>
@@ -669,6 +669,17 @@
       <td colspan="6" width="2000">Сканер безопасности AI-скиллов и MCP от NVIDIA (<code>AST + YARA + OSV + LLM</code>). Не устанавливали, чтобы не плодить лишний цикл — <strong>Вместо него:</strong> <a href="reviews/ru/developer-tools/skillshare.md"><strong><code>skillshare</code></strong></a> (skill-check <code>skillshare audit</code>) + <strong>прямая проверка кода через AI-агента</strong>.</td>
     </tr>
     <tr>
+      <td><a href="reviews/ru/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong></a></td>
+      <td>Desktop App + CLI Subagent Workflow</td>
+      <td align="center"><strong>8.5/10</strong></td>
+      <td align="center"><strong>2.5/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;10&#8209;23 → 2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Использовался и удалён (освобождено <code>~3.87 GB</code>): мобильное бета-приложение часто отключается при блокировке телефона, сессии рвутся при <code>Lock Screen</code> на Mac и нет встроенных карточек воркеров в Chat UI. <strong>Вместо него:</strong> <a href="reviews/ru/developer-tools/orca.md"><strong><code>Orca</code> (<code>stablyai/orca</code>)</strong></a>.</td>
+    </tr>
+    <tr>
       <td><a href="reviews/ru/developer-tools/caveman.md"><strong><code>caveman</code></strong></a></td>
       <td>Skill <em>(+ опц. CLI/Proxy)</em></td>
       <td align="center"><strong>8.0/10</strong></td>
@@ -710,7 +721,7 @@
       <td align="center"><code>2026&#8209;11&#8209;16</code></td>
     </tr>
     <tr>
-      <td colspan="6" width="2000">Локальный LLM reverse-proxy (<code>localhost:20128</code>); его 44 скилла — лишь мануалы прокси, дефолтный роутинг рвёт длинные сессии (<code>#7287</code>) и понижает модель, а TLS-stealth (<code>wreq-js</code>) несёт риск бана подписок по ToS. <strong>Вместо него:</strong> <a href="reviews/ru/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong></a> + <a href="reviews/ru/architecture/ponytail.md"><strong><code>ponytail</code></strong></a>.</td>
+      <td colspan="6" width="2000">Локальный LLM reverse-proxy (<code>localhost:20128</code>); его 44 скилла — лишь мануалы прокси, дефолтный роутинг рвёт длинные сессии (<code>#7287</code>) и понижает модель, а TLS-stealth (<code>wreq-js</code>) несёт риск бана подписок по ToS. <strong>Вместо него:</strong> <a href="reviews/ru/developer-tools/orca.md"><strong><code>Orca</code></strong></a> + <a href="reviews/ru/architecture/ponytail.md"><strong><code>ponytail</code></strong></a>.</td>
     </tr>
   </tbody>
 </table>

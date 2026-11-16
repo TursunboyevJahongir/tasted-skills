@@ -177,15 +177,15 @@
     </tr>
     <tr>
       <td align="center"><strong>13</strong></td>
-      <td><a href="reviews/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong> + CLI Subagent</a></td>
-      <td><strong>Multi-Agent kod va review</strong></td>
-      <td>Desktop App + CLI + Skill</td>
-      <td align="center"><strong>9.0/10</strong></td>
+      <td><a href="reviews/developer-tools/orca.md"><strong><code>Orca</code></strong> + CLI Subagent</a></td>
+      <td><strong>Multi-Agent orkestratsiya va Mobil boshqaruv</strong></td>
+      <td>Desktop + Mobile App + CLI + Skill</td>
+      <td align="center"><strong>9.5/10</strong></td>
       <td align="center"><code>✅&nbsp;Faol</code></td>
-      <td align="center"><code>2026&#8209;10&#8209;23</code>&nbsp;dan</td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code>&nbsp;dan</td>
     </tr>
     <tr>
-      <td colspan="7" width="2000">Bir nechta AI'ni birga ishlatish: <code>task-context</code> + CLI subagentlar (<code>argon</code>, <code>antigravity-claude</code>, <code>claude-opus</code>, <code>antigravity-consult</code>) hamda Orca muhitida <strong><code>orchestration</code></strong> (<code>worker-start</code> DAG) orqali mustaqil kod yozish va review.</td>
+      <td colspan="7" width="2000">Bitta promptdan <strong><code>orchestration</code></strong> (<code>orca orchestration worker-start</code> DAG) va <code>task-context</code> + CLI subagentlar (<code>argon</code>, <code>antigravity-claude</code>, <code>claude-opus</code>) orqali <code>Codex</code>, <code>Claude</code> va <code>Antigravity</code> ni Chat UI ichida jonli kartalar bilan ishlatish + uzilmaydigan <strong><code>Orca IDE</code> mobil ilovasi</strong> va Lock Screen'da ishlash (<code>caffeinate</code>; <code>PostHog</code> o'chirilgan).</td>
     </tr>
     <tr>
       <td align="center"><strong>14</strong></td>
@@ -669,6 +669,17 @@
       <td colspan="6" width="2000">NVIDIA'ning AI skill va MCP xavfsizlik skaneri (<code>AST + YARA + OSV + LLM</code>). Kundalik ishda ortiqcha sikl bo'lgani uchun o'rnatmadik — <strong>O'rniga:</strong> <a href="reviews/developer-tools/skillshare.md"><strong><code>skillshare</code></strong></a> (<code>skillshare audit</code> skill-check) + <strong>AI agent orqali kodni bevosita tekshirtirish</strong>.</td>
     </tr>
     <tr>
+      <td><a href="reviews/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong></a></td>
+      <td>Desktop App + CLI Subagent Workflow</td>
+      <td align="center"><strong>8.5/10</strong></td>
+      <td align="center"><strong>2.5/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Rad&nbsp;etildi</code></td>
+      <td align="center"><code>2026&#8209;10&#8209;23 → 2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Sinab ko'rilib o'chirib tashlandi (<code>~3.87 GB</code> disk bo'shatildi): telefon ilovasi (Beta) ekran o'chganda tez-tez uzilib qoladi, kompyuter bloklanganda (<code>Lock Screen</code>) to'xtab qoladi va Chat UI ichida native subagent kartalari yo'q. <strong>O'rniga:</strong> <a href="reviews/developer-tools/orca.md"><strong><code>Orca</code> (<code>stablyai/orca</code>)</strong></a>.</td>
+    </tr>
+    <tr>
       <td><a href="reviews/developer-tools/caveman.md"><strong><code>caveman</code></strong></a></td>
       <td>Skill <em>(+ ixtiyoriy CLI/Proxy)</em></td>
       <td align="center"><strong>8.0/10</strong></td>
@@ -710,7 +721,7 @@
       <td align="center"><code>2026&#8209;11&#8209;16</code></td>
     </tr>
     <tr>
-      <td colspan="6" width="2000">Lokal LLM reverse-proxy (<code>localhost:20128</code>); ichidagi 44 ta skill kodlash uchun emas, uzoq sessiyalarni uzadi (<code>#7287</code>), limitda kuchsiz modelga tushiradi va TLS-stealth (<code>wreq-js</code>) pullik obunalarda ToS ban xavfini tug'diradi. <strong>O'rniga:</strong> <a href="reviews/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong></a> + <a href="reviews/architecture/ponytail.md"><strong><code>ponytail</code></strong></a>.</td>
+      <td colspan="6" width="2000">Lokal LLM reverse-proxy (<code>localhost:20128</code>); ichidagi 44 ta skill kodlash uchun emas, uzoq sessiyalarni uzadi (<code>#7287</code>), limitda kuchsiz modelga tushiradi va TLS-stealth (<code>wreq-js</code>) pullik obunalarda ToS ban xavfini tug'diradi. <strong>O'rniga:</strong> <a href="reviews/developer-tools/orca.md"><strong><code>Orca</code></strong></a> + <a href="reviews/architecture/ponytail.md"><strong><code>ponytail</code></strong></a>.</td>
     </tr>
   </tbody>
 </table>
