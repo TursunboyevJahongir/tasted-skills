@@ -21,6 +21,25 @@ Standard mobile development suffers from three recurring bottlenecks:
 - **100% Windowless (`Headless`) Execution:** Zero windows pop up on screen; your mouse cursor never moves.
 - **Built-in Maestro E2E Replay Without Java:** `agent-device` includes a native `--maestro` and `.ad` replay engine, running saved regression flows in the background with zero extra JVM/Maestro installation.
 
+### 🍏 A. Our Installed `simslim` (iOS / tvOS Simulator Optimizer): WITHOUT vs. WITH
+
+| Metric | ❌ WITHOUT `simslim` (Stock iOS 26.5 Simulator) | ✅ WITH `simslim` (Our Feature-Safe Profile) | Difference |
+|---|---|---|---|
+| **Windowless (`simctl boot`) RAM** | `2,704 MB` (`~2.70 GB`) | **`1,164 MB` (`~1.16 GB`)** | **`-1.54 GB` (`-57%`)** |
+| **Windowed (`Simulator.app` GUI) RAM** | `~4.0 GB` | **`~0.9 GB`** | **`-3.1 GB` (`-77.5%`)** |
+| **Background Daemons (`launchctl`)** | `182` processes (`Siri`, `Apple Intelligence`, `Wallpaper`, `GameCenter`...) | **`78` processes** *(only app & QA essentials)* | **`-104` daemons (`-57%`)** |
+| **SSD Disk Cleanup (`disk-clean`)** | `simctl erase` wipes installed apps & logins | **Reclaims `~1.51 GB` logs/caches without touching apps** | **`+1.51 GB` / simulator** |
+| **Push, Deep Links, Photo Picker, GPS** | Works | **`100% intact`** (`--except web,photos,search --keep com.apple.apsd`) | **Zero regression (`4/4 OK`)** |
+
+### 🤖 B. Our Installed `avdslim` (Android AVD RAM & Metal GPU Optimizer): WITHOUT vs. WITH
+
+| Metric | ❌ WITHOUT `avdslim` (Stock API 35 AVD) | ✅ WITH `avdslim` (Metal GPU + Golden Snapshot) | Difference |
+|---|---|---|---|
+| **Actual RAM (`Footprint`)** | `4,413 MB` (`~4.41 GB`; `~8.5 GB` on default Studio AVDs) | **`2,640 MB` (`~2.64 GB`)** | **`-1.77 GB` (`-40.2%`, `-69%` vs Studio default)** |
+| **Graphics (`OpenGL / GPU`)** | `SwiftShader LLVM` *(slow CPU software rendering)* | **Native `Apple M4 Pro GPU` (`Metal host`)** | **Smooth Mapbox/Maps & `0%` CPU GPU overhead** |
+| **Windowless (`-no-window`) Boot Time** | `22.81s` *(cold boot)* | **`13.79s`** *(warm `avdslim_clean` Golden Snapshot)* | **`1.65x` faster boot** |
+| **GPS (`location_mode`) & Google Maps** | Works | **`location_mode=3` (High Accuracy) + Maps preserved** (`defaults` guard) | **100% GPS & `agent-device` compatibility** |
+
 ---
 
 ## 2. How to Run Them Together (Step-by-Step)

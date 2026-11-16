@@ -21,6 +21,25 @@ Odatiy mobil dasturlashda 3 ta katta muammo bor:
 - **100% ko'rinmas (`headless`) ishlaydi:** Ekranda birorta ham oyna ochilmaydi, kursor qimirlamaydi.
 - **Alohida Java yoki Maestro CLI o'rnatmasdan E2E avto-test:** `agent-device` ichidagi tayyor `--maestro` va `.ad` dvijogi orqali saqlangan ssenariylar soniyalar ichida fonda qayta yurgiziladi.
 
+### 🍏 A. Bizda o'rnatilgan `simslim` (iOS / tvOS Simulator optimizatori): USIZ vs U BILAN
+
+| Ko'rsatkich | ❌ `simslim` USIZ (Odatiy iOS 26.5 Simulator) | ✅ `simslim` BILAN (Bizdagi xavfsiz profil) | Farqi |
+|---|---|---|---|
+| **Oynasiz (`simctl boot`) RAM** | `2,704 MB` (`~2.70 GB`) | **`1,164 MB` (`~1.16 GB`)** | **`-1.54 GB` (`-57%`)** |
+| **Oynali (`Simulator.app` GUI) RAM** | `~4.0 GB` | **`~0.9 GB`** | **`-3.1 GB` (`-77.5%`)** |
+| **Fon jarayonlari (`launchctl`)** | `182` ta (`Siri`, `Apple Intelligence`, `Wallpaper`, `GameCenter`...) | **`78` ta** *(faqat ilova va QA uchun zarur servislar)* | **`-104` ta (`-57%`)** |
+| **SSD disk tozalash (`disk-clean`)** | `simctl erase` ilova va loginlarni o'chirib yuboradi | **Ilova va loginlarga tegmay `~1.51 GB` log/keshni tozalaydi** | **`+1.51 GB` / simulyator** |
+| **Push, Deep Link, Photo Picker, GPS** | Ishlaydi | **`100% ishlaydi`** (`--except web,photos,search --keep com.apple.apsd`) | **Yo'qotish yo'q (`4/4 OK`)** |
+
+### 🤖 B. Bizda o'rnatilgan `avdslim` (Android AVD RAM va Metal GPU optimizatori): USIZ vs U BILAN
+
+| Ko'rsatkich | ❌ `avdslim` USIZ (Odatiy API 35 AVD) | ✅ `avdslim` BILAN (Metal GPU + Golden Snapshot) | Farqi |
+|---|---|---|---|
+| **Haqiqiy RAM (`Footprint`)** | `4,413 MB` (`~4.41 GB`; Studio standart AVD'da `~8.5 GB`) | **`2,640 MB` (`~2.64 GB`)** | **`-1.77 GB` (`-40.2%`, Studio'dan `-69%`)** |
+| **Grafika (`OpenGL / GPU`)** | `SwiftShader LLVM` *(sekin dasturiy CPU emulyatsiya)* | **Native `Apple M4 Pro GPU` (`Metal host`)** | **Tez xarita (Mapbox/Maps) va `0%` CPU GPU yuki** |
+| **Oynasiz (`-no-window`) yonish vaqti** | `22.81s` *(sovuq boot)* | **`13.79s`** *(tayyor `avdslim_clean` Golden Snapshot)* | **`1.65x` tezroq boot** |
+| **GPS (`location_mode`) va Google Maps** | Ishlaydi | **`location_mode=3` (High Accuracy) + Maps saqlangan** (`defaults` himoyasi) | **GPS va `agent-device` 100% ishlaydi** |
+
 ---
 
 ## 2. Qanday birgalikda ishlatiladi? (Qadam-ba-qadam)

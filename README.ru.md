@@ -14,28 +14,265 @@
 > [!TIP]
 > **🛡️ Наше правило безопасности (рекомендуем и вам):** Никогда не устанавливайте чужие скиллы, плагины или MCP-серверы только по красивому `README` или количеству звёзд. Перед установкой каждого инструмента **мы обязательно поручаем нашему AI-агенту проверить исходный код напрямую** (`SKILL.md`, скрипты, хуки, сетевые вызовы и доступ к env) и прогоняем встроенный skill-check в [**`skillshare`**](reviews/ru/developer-tools/skillshare.md) (`skillshare audit`). Рекомендуем и вам всегда проверять код новых скиллов через своего AI-агента перед установкой.
 
-📖 [Какие скиллы и инструменты как использовать вместе и их дополнительные возможности →](practices/ru/README.md)
+📖 [Какие скиллы и инструменты как использовать вместе, их доп. возможности и **⚖️ Сравнение скиллов и инструментов** →](practices/ru/README.md)
 
 ## ⭐ Самые необходимые (В порядке частоты и важности в работе)
 
-| # | Название | Основная задача | Тип | Оценка | Статус | Дата | Краткое описание |
-|---|---|---|---|---|---|---|---|
-| **1** | [**`grill-me`**](reviews/ru/architecture/grill-me.md) | **Планирование, Решения и Глубокий Debug** | Набор скиллов | **9.5/10** | `✅ Активен` | С `2026-05-23` | Проработка требований по дереву решений до кода (`grilling` + `grill-with-docs` + `domain-modeling`) + очищенные on-demand скиллы **`diagnosing-bugs`** и **`improve-codebase-architecture`** из `mattpocock/skills`. |
-| **2** | [**`graphify`**](reviews/ru/architecture/graphify.md) | **Карта кодовой базы (Knowledge Graph)** | Skill + Python CLI | **9.5/10** | `✅ Активен` | С `2026-07-28` | Построение постоянного графа знаний (`graph.json` + HTML) из кода (локальный AST, `0` токенов) и документации для мгновенного поиска связей между модулями и файлами. |
-| **3** | [**`ponytail`**](reviews/ru/architecture/ponytail.md) | **Минимальный чистый код (YAGNI)** | Skill | **9.5/10** | `✅ Активен` | С `2026-11-15` | Базовое правило при написании любого кода: минимальное изменение, полностью решающее задачу, без лишних абстракций, и краткий ответ с первого прочтения. |
-| **4** | [**`karpathy-guidelines`**](reviews/ru/architecture/karpathy-guidelines.md) | **Точечные правки кода (`Surgical`)** | Skill | **9.5/10** | `✅ Активен` | С `2026-11-15` | Явное озвучивание допущений, простота и точечные (`surgical`) правки без затрагивания соседнего рабочего кода. |
-| **5** | [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) | **Основной UI/UX дизайн и аудит** | Skill | **9.5/10** | `✅ Активен` | С `2026-11-09` | Проектирование, UX/контраст/типографика и полировка (`polish`, `clarify`, `harden`) для веб, мобильного веба и нативных экранов iOS/Android. **💡 Совет:** стоит добавить внутрь правило **перцептивного контраста `APCA` (`\|Lc\| ≥ 60`)**, чтобы `WCAG 2` (`4.5:1`) не браковал чистый белый текст на цветных бренд-кнопках ([точные правки](reviews/ru/ui-ux/impeccable.md#apca-contrast)). |
-| **6** | [**`elephant-goldfish-model`**](reviews/ru/architecture/elephant-goldfish-model.md) | **Независимое Архитектурное и Код-Ревью** | Плагин (7 скиллов + 10 агентов) | **9.5/10** | `✅ Активен` | С `2026-11-15` | Архитектор с памятью (*Elephant*) + субагенты-критики без контекста (*Goldfish*): `egm-drift-report` и 5-этапный `egm-review` находят расхождения документации с кодом и скрытые баги. |
-| **7** | [**`agent-desktop`**](reviews/ru/developer-tools/agent-desktop.md) | **Тестирование Web (`Chrome`) и Desktop UI** | CLI + Skill | **9.5/10** | `✅ Активен` | С `2026-11-15` | [agent-browser.dev/desktop](https://agent-browser.dev/desktop) — фоновое управление Chrome и десктопными приложениями через macOS Accessibility (`AX`) без перехвата курсора (+ резерв для iOS `Device Hub`). |
-| **8** | [**`agent-device`**](reviews/ru/mobile/agent-device.md) | **Тестирование Mobile и TV (`iOS` / `Android` / `tvOS`) UI** | CLI + Skill | **9.5/10** | `✅ Активен` | С `2026-11-16` | [agent-device.dev](https://agent-device.dev) — 0-dependency CLI от Callstack: управляет фоновым iOS/tvOS Simulator без окна (`~197ms`) и `-no-window` Android/TV Emulator (`~888ms`, в 27x меньше токенов, полный UTF-8 ввод) через `@ref` и `--settle` diff (`0` MCP-раздувания). |
-| **9** | [**`cross-platform-qa`**](reviews/ru/mobile/cross-platform-qa.md) | **2-этапный QA для Web / Mobile / TV** | Skill | **9.5/10** | `✅ Активен` | С `2026-11-15` | 1-й этап — локальная проверка (`agent-desktop` Web + `agent-device` фоновые iOS/Android/TV + `adb`), 2-й этап — финальная проверка на реальном устройстве перед Done. |
-| **10** | [**`sentry`**](reviews/ru/backend/sentry.md) | **Full-Stack диагностика ошибок и трейсов** | Self-Hosted + Skill / MCP | **9.5/10** | `✅ Активен` | С `2026-07-08` | Диагностика ошибок (`Issue Grouping`, `dSYM`/`ProGuard`, `Source Maps`), `Breadcrumbs`, `Session Replay` и `v8+` OTel-трейсов с прямым анализом через AI-агентов. |
-| **11** | [**`skillshare`**](reviews/ru/developer-tools/skillshare.md) | **Синхронизация скиллов и Безопасность (`audit`)** | CLI + Skill | **9.5/10** | `✅ Активен` | С `2026-05-30` | Синхронизация скиллов и плагинов между всеми AI-агентами (`Codex`, `Claude`, `Antigravity`) из единого источника + встроенный **skill-check (`skillshare audit`)**. |
-| **12** | [**`animate-expo`**](reviews/ru/mobile/animate-expo.md) | **Expo / React Native 60/120fps анимации** | Skill | **9.5/10** | `✅ Активен` | С `2026-11-09` | Плавные 60/120fps анимации и жесты в UI-потоке для Expo и React Native на базе `Reanimated`, `Gesture Handler` и `expo-haptics` (с защитой `LOCAL-COMPATIBILITY.md`). |
-| **13** | [**`T3 Code`** + CLI Subagent](reviews/ru/developer-tools/t3-code.md) | **Мультиагентная разработка и ревью** | Desktop App + CLI | **9.0/10** | `✅ Активен` | С `2026-10-23` | Совместная работа нескольких AI (*«Codex пишет, Claude проверяет»* через вызов независимого CLI-субагента для ревью). |
-| **14** | [**`adb`**](reviews/ru/mobile/adb.md) | **Android проброс портов (`reverse`) и `logcat`** | CLI | **9.0/10** | `✅ Активен` | С `2026-09-07` | Проброс портов (`reverse`), `logcat`, установка APK и низкоуровневое управление на фоновых Android-эмуляторах (`-no-window`) и реальных телефонах (`-s <serial>` обязателен). |
-| **15** | [**`xcrun simctl` + `Device Hub`**](reviews/ru/mobile/ios-simulator-device-hub.md) | **Фоновый boot iOS и `devicectl`** | Xcode CLI + App | **9.0/10** | `✅ Активен` | С `2026-10-20` | Фоновый запуск/остановка iOS Simulator без окна (`simctl boot/shutdown`), установка сборок на реальный iPhone (`devicectl`) и резерв `Device Hub`. |
-| **16** | [**`mobile-native`**](reviews/ru/mobile/mobile-native.md) | **Адаптация Mobile Web / PWA под натив** | Skill | **8.5/10** | `✅ Активен` | С `2026-11-15` | 11 CSS/meta-решений, придающих мобильному вебу и PWA ощущение нативного приложения (`dvh/svh`, `safe-area`, инпуты `16px`, `overscroll-behavior`, hover gating; с защитой `LOCAL-COMPATIBILITY.md`). |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="center" width="5%">#</th>
+      <th align="left" width="18%">Название</th>
+      <th align="left" width="24%">Основная задача</th>
+      <th align="left" width="16%">Тип</th>
+      <th align="center" width="9%">Оценка</th>
+      <th align="center" width="14%">Статус</th>
+      <th align="center" width="14%">Дата</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><strong>1</strong></td>
+      <td><a href="reviews/ru/architecture/grill-me.md"><strong><code>grill-me</code></strong></a></td>
+      <td><strong>Планирование, Решения и Глубокий Debug</strong></td>
+      <td>Набор скиллов</td>
+      <td align="center"><strong>9.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;05&#8209;23</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Проработка требований по дереву решений до кода (<code>grilling</code> + <code>grill-with-docs</code> + <code>domain-modeling</code>) + очищенные on-demand скиллы <strong><code>diagnosing-bugs</code></strong> и <strong><code>improve-codebase-architecture</code></strong> из <code>mattpocock/skills</code>.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>2</strong></td>
+      <td><a href="reviews/ru/architecture/graphify.md"><strong><code>graphify</code></strong></a></td>
+      <td><strong>Карта кодовой базы (Knowledge Graph)</strong></td>
+      <td>Skill + Python CLI</td>
+      <td align="center"><strong>9.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;07&#8209;28</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Построение постоянного графа знаний (<code>graph.json</code> + HTML) из кода (локальный AST, <code>0</code> токенов) и документации для мгновенного поиска связей между модулями и файлами.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>3</strong></td>
+      <td><a href="reviews/ru/architecture/ponytail.md"><strong><code>ponytail</code></strong></a></td>
+      <td><strong>Минимальный чистый код (YAGNI)</strong></td>
+      <td>Skill</td>
+      <td align="center"><strong>9.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;15</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Базовое правило при написании любого кода: минимальное изменение, полностью решающее задачу, без лишних абстракций, и краткий ответ с первого прочтения.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>4</strong></td>
+      <td><a href="reviews/ru/architecture/karpathy-guidelines.md"><strong><code>karpathy-guidelines</code></strong></a></td>
+      <td><strong>Точечные правки кода (<code>Surgical</code>)</strong></td>
+      <td>Skill</td>
+      <td align="center"><strong>9.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;15</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Явное озвучивание допущений, простота и точечные (<code>surgical</code>) правки без затрагивания соседнего рабочего кода.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>5</strong></td>
+      <td><a href="reviews/ru/ui-ux/impeccable.md"><strong><code>impeccable</code></strong></a></td>
+      <td><strong>Основной UI/UX дизайн и аудит</strong></td>
+      <td>Skill</td>
+      <td align="center"><strong>9.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;09</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Проектирование, UX/контраст/типографика и полировка (<code>polish</code>, <code>clarify</code>, <code>harden</code>) для веб, мобильного веба и нативных экранов iOS/Android. <strong>💡 Совет:</strong> стоит добавить внутрь правило <strong>перцептивного контраста <code>APCA</code> (<code>|Lc| ≥ 60</code>)</strong>, чтобы <code>WCAG 2</code> (<code>4.5:1</code>) не браковал чистый белый текст на цветных бренд-кнопках (<a href="reviews/ru/ui-ux/impeccable.md#apca-contrast">точные правки</a>).</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>6</strong></td>
+      <td><a href="reviews/ru/architecture/elephant-goldfish-model.md"><strong><code>elephant-goldfish-model</code></strong></a></td>
+      <td><strong>Независимое Архитектурное и Код-Ревью</strong></td>
+      <td>Плагин (7 скиллов + 10 агентов)</td>
+      <td align="center"><strong>9.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;15</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Архитектор с памятью (<em>Elephant</em>) + субагенты-критики без контекста (<em>Goldfish</em>): <code>egm-drift-report</code> и 5-этапный <code>egm-review</code> находят расхождения документации с кодом и скрытые баги.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>7</strong></td>
+      <td><a href="reviews/ru/developer-tools/agent-desktop.md"><strong><code>agent-desktop</code></strong></a></td>
+      <td><strong>Тестирование Web (<code>Chrome</code>) и Desktop UI</strong></td>
+      <td>CLI + Skill</td>
+      <td align="center"><strong>9.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;15</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000"><a href="https://agent-browser.dev/desktop">agent-browser.dev/desktop</a> — фоновое управление Chrome и десктопными приложениями через macOS Accessibility (<code>AX</code>) без перехвата курсора (+ резерв для iOS <code>Device Hub</code>).</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>8</strong></td>
+      <td><a href="reviews/ru/mobile/agent-device.md"><strong><code>agent-device</code></strong></a></td>
+      <td><strong>Тестирование Mobile и TV (<code>iOS</code> / <code>Android</code> / <code>tvOS</code>) UI</strong></td>
+      <td>CLI + Skill</td>
+      <td align="center"><strong>9.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000"><a href="https://agent-device.dev">agent-device.dev</a> — 0-dependency CLI от Callstack: управляет фоновым iOS/tvOS Simulator без окна (<code>~197ms</code>) и <code>-no-window</code> Android/TV Emulator (<code>~888ms</code>, в 27x меньше токенов, полный UTF-8 ввод) через <code>@ref</code> и <code>--settle</code> diff (<code>0</code> MCP-раздувания).</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>9</strong></td>
+      <td><a href="reviews/ru/mobile/cross-platform-qa.md"><strong><code>cross-platform-qa</code></strong></a></td>
+      <td><strong>2-этапный QA для Web / Mobile / TV</strong></td>
+      <td>Skill</td>
+      <td align="center"><strong>9.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;15</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">1-й этап — локальная проверка (<code>agent-desktop</code> Web + <code>agent-device</code> фоновые iOS/Android/TV + <code>adb</code>), 2-й этап — финальная проверка на реальном устройстве перед Done.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>10</strong></td>
+      <td><a href="reviews/ru/backend/sentry.md"><strong><code>sentry</code></strong></a></td>
+      <td><strong>Full-Stack диагностика ошибок и трейсов</strong></td>
+      <td>Self-Hosted + Skill / MCP</td>
+      <td align="center"><strong>9.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;07&#8209;08</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Диагностика ошибок (<code>Issue Grouping</code>, <code>dSYM</code>/<code>ProGuard</code>, <code>Source Maps</code>), <code>Breadcrumbs</code>, <code>Session Replay</code> и <code>v8+</code> OTel-трейсов с прямым анализом через AI-агентов.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>11</strong></td>
+      <td><a href="reviews/ru/developer-tools/skillshare.md"><strong><code>skillshare</code></strong></a></td>
+      <td><strong>Синхронизация скиллов и Безопасность (<code>audit</code>)</strong></td>
+      <td>CLI + Skill</td>
+      <td align="center"><strong>9.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;05&#8209;30</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Синхронизация скиллов и плагинов между всеми AI-агентами (<code>Codex</code>, <code>Claude</code>, <code>Antigravity</code>) из единого источника + встроенный <strong>skill-check (<code>skillshare audit</code>)</strong>.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>12</strong></td>
+      <td><a href="reviews/ru/mobile/animate-expo.md"><strong><code>animate-expo</code></strong></a></td>
+      <td><strong>Expo / React Native 60/120fps анимации</strong></td>
+      <td>Skill</td>
+      <td align="center"><strong>9.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;09</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Плавные 60/120fps анимации и жесты в UI-потоке для Expo и React Native на базе <code>Reanimated</code>, <code>Gesture Handler</code> и <code>expo-haptics</code> (с защитой <code>LOCAL-COMPATIBILITY.md</code>).</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>13</strong></td>
+      <td><a href="reviews/ru/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong> + CLI Subagent</a></td>
+      <td><strong>Мультиагентная разработка и ревью</strong></td>
+      <td>Desktop App + CLI</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;10&#8209;23</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Совместная работа нескольких AI (<em>«Codex пишет, Claude проверяет»</em> через вызов независимого CLI-субагента для ревью).</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>14</strong></td>
+      <td><a href="reviews/ru/mobile/adb.md"><strong><code>adb</code></strong></a></td>
+      <td><strong>Android проброс портов (<code>reverse</code>) и <code>logcat</code></strong></td>
+      <td>CLI</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;09&#8209;07</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Проброс портов (<code>reverse</code>), <code>logcat</code>, установка APK и низкоуровневое управление на фоновых Android-эмуляторах (<code>-no-window</code>) и реальных телефонах (<code>-s &lt;serial&gt;</code> обязателен).</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>15</strong></td>
+      <td><a href="reviews/ru/mobile/ios-simulator-device-hub.md"><strong><code>xcrun simctl</code> + <code>Device Hub</code></strong></a></td>
+      <td><strong>Фоновый boot iOS и <code>devicectl</code></strong></td>
+      <td>Xcode CLI + App</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;10&#8209;20</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Фоновый запуск/остановка iOS Simulator без окна (<code>simctl boot/shutdown</code>), установка сборок на реальный iPhone (<code>devicectl</code>) и резерв <code>Device Hub</code>.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>16</strong></td>
+      <td><a href="reviews/ru/mobile/simslim.md"><strong><code>simslim</code></strong></a></td>
+      <td><strong>Оптимизатор RAM и диска iOS / tvOS Simulator</strong></td>
+      <td>Standalone Go CLI</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Отключает <code>~149–180</code> лишних фоновых служб симуляторов <code>iOS</code>/<code>tvOS</code> (<code>Siri</code>, <code>Apple Intelligence</code>, <code>Wallpaper</code>): сжимает живой headless-запуск со <code>182 -&gt; 78</code> процессов и <strong><code>2.70 GB -&gt; 1.16 GB</code> RAM (<code>-57%</code>)</strong> (<code>4.0 GB -&gt; 0.9 GB</code> / <code>-77.5%</code> в GUI) и безопасно чистит <code>1.5 GB+</code> логов/кэша без сброса приложений (<code>--except web,photos,search --keep com.apple.apsd</code> сохраняет <code>push</code> и <code>agent-device</code>).</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>17</strong></td>
+      <td><a href="reviews/ru/mobile/avdslim.md"><strong><code>avdslim</code></strong></a></td>
+      <td><strong>Оптимизатор RAM и Metal GPU для Android AVD</strong></td>
+      <td>Standalone Go CLI</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">Оптимизатор RAM и GPU для Android Emulator (<code>AVD</code>): переключает CPU-рендер <code>SwiftShader</code> на <strong>Apple Metal GPU (<code>host</code>)</strong> с <code>-lowram</code> (<code>1536 MB</code>) и Golden Snapshot, снижая память с <strong><code>4.41 GB -&gt; 2.64 GB</code> (<code>-40.2%</code>, <code>-69%</code> от 8.5 GB Studio AVD)</strong> при 100% работе GPS (<code>--skip=location --keep=com.google.android.apps.maps</code>) и <code>agent-device</code>.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>18</strong></td>
+      <td><a href="reviews/ru/backend/security-audit-skill.md"><strong><code>security-audit</code></strong></a></td>
+      <td><strong>6-фазный аудит безопасности исходного кода</strong></td>
+      <td>Skill</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">6-фазный <em>adversarial</em> аудит безопасности исходного кода от Cloudflare (<code>Hunter</code> + независимые <code>Verifier</code>-субагенты + Node JSON-валидаторы): находит уязвимости в Backend, Web, <strong>Mobile (<code>deep-link</code>/<code>WebView</code>/<code>IPC</code>)</strong>, CLI и CI/CD без Docker (с экономным профилем <code>quick</code>/<code>scoped</code>).</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>19</strong></td>
+      <td><a href="reviews/ru/mobile/mobile-native.md"><strong><code>mobile-native</code></strong></a></td>
+      <td><strong>Адаптация Mobile Web / PWA под натив</strong></td>
+      <td>Skill</td>
+      <td align="center"><strong>8.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;15</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">11 CSS/meta-решений, придающих мобильному вебу и PWA ощущение нативного приложения (<code>dvh/svh</code>, <code>safe-area</code>, инпуты <code>16px</code>, <code>overscroll-behavior</code>, hover gating; с защитой <code>LOCAL-COMPATIBILITY.md</code>).</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>20</strong></td>
+      <td><a href="reviews/ru/developer-tools/assetdiet.md"><strong><code>AssetDiet</code></strong></a></td>
+      <td><strong>Локальное сжатие картинок / SVG / видео / 3D</strong></td>
+      <td>CLI + <a href="skills/asset-diet/SKILL.md"><code>asset-diet</code></a></td>
+      <td align="center"><strong>7.5/10</strong></td>
+      <td align="center"><code>✅&nbsp;Активен</code></td>
+      <td align="center">С&nbsp;<code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="7" width="2000">100% локальное сжатие картинок/SVG/видео/3D (<code>Sharp</code>, <code>SVGO</code>, <code>FFmpeg</code>) с откатом. Вместо постоянного 16-tool MCP подключён через наш лёгкий скилл <a href="skills/asset-diet/SKILL.md"><code>asset-diet</code></a> для разового вызова <code>npx assetdiet-mcp@0.1.4</code>.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -43,70 +280,392 @@
 
 ### 🧠 Локальные модели
 
-| Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
-|---|---|---|---|---|---|---|
-| [**`kimi-k3-in-c`**](reviews/ru/local-models/kimi-k3-in-c.md) | C99 CLI Engine (`2.78T` MoE) | **8.5/10** | **1.0/10** | `⛔ Отклонено` | `2026-11-16` | **Назначение:** C99-эксперимент потокового чтения MoE-модели `Kimi K3` (`2.78T` / `~104B` актив.) прямо с NVMe-диска без GPU. **Работает ли для кодинга?** Сама модель `Kimi K3` сильна в коде и логике, **но в этом disk-stream режиме писать код невозможно** (`1 токен = ~24–33 сек`, `500` токенов = `~3.5 ч` + `~50 TB` чтения с SSD). **Железо:** Мин.: `GPU: 0, RAM: 8–16 GB, SSD: ≥1.8 TB NVMe`; Для работы: `16× H200 (~2.25 TB VRAM)`. **Если нужна локальная модель для кода:** `Ollama` / `MLX` (`Qwen3-Coder`, `30–65 ток/с` в `32–64 GB` RAM на Mac). 📊 [GitHub Benchmark](https://github.com/FareedKhan-dev/kimi-k3-in-c) · [Artificial Analysis](https://artificialanalysis.ai/leaderboards/models) |
-| [**`MiniMax-M3.1-Flash`** *(Локально)*](reviews/ru/local-models/minimax-m3-1-flash.md) | Open-Weight `428B` MoE (`~23B` актив.) | **8.0/10** | **1.0/10** | `⛔ Отклонено` | `2026-11-16` | **Назначение:** Быстрая мультимодальная (`текст + фото + видео`, `1M` контекст) модель для чатов, `OCR`/анализа фото и видео и офисной автоматизации (`Automation-Bench: 62.8%`). **Работает ли для кодинга?** Подходит для простых скриптов и UI/автоматизации, но не для сложной репозиторной разработки (`Terminal-Bench 4.0: 38.1%`). **Железо:** Веса `~250–285 GB` не помещаются на обычный ПК (`Мин.: 512 GB Mac Studio`, для работы: `8× H100 / 640 GB VRAM`). **Альтернатива:** Локально — `Ollama` / `MLX` (`Qwen3-Coder`); если нужна именно эта модель — [🔌 `MiniMax M3.1 Flash API`](reviews/ru/external-apis/minimax-m3-1-flash-api.md). 📊 [HuggingFace](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [OpenRouter Stats](https://openrouter.ai/minimax/minimax-m3.1-flash) |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left" width="22%">Название</th>
+      <th align="left" width="27%">Тип</th>
+      <th align="center" width="10%">Качество</th>
+      <th align="center" width="11%">Нужно&nbsp;нам</th>
+      <th align="center" width="16%">Статус</th>
+      <th align="center" width="14%">Дата</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="reviews/ru/local-models/kimi-k3-in-c.md"><strong><code>kimi-k3-in-c</code></strong></a></td>
+      <td>C99 CLI Engine (<code>2.78T</code> MoE)</td>
+      <td align="center"><strong>8.5/10</strong></td>
+      <td align="center"><strong>1.0/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000"><strong>Назначение:</strong> C99-эксперимент потокового чтения MoE-модели <code>Kimi K3</code> (<code>2.78T</code> / <code>~104B</code> актив.) прямо с NVMe-диска без GPU. <strong>Работает ли для кодинга?</strong> Сама модель <code>Kimi K3</code> сильна в коде и логике, <strong>но в этом disk-stream режиме писать код невозможно</strong> (<code>1 токен = ~24–33 сек</code>, <code>500</code> токенов = <code>~3.5 ч</code> + <code>~50 TB</code> чтения с SSD). <strong>Железо:</strong> Мин.: <code>GPU: 0, RAM: 8–16 GB, SSD: ≥1.8 TB NVMe</code>; Для работы: <code>16× H200 (~2.25 TB VRAM)</code>. <strong>Если нужна локальная модель для кода:</strong> <code>Ollama</code> / <code>MLX</code> (<code>Qwen3-Coder</code>, <code>30–65 ток/с</code> в <code>32–64 GB</code> RAM на Mac). 📊 <a href="https://github.com/FareedKhan-dev/kimi-k3-in-c">GitHub Benchmark</a> · <a href="https://artificialanalysis.ai/leaderboards/models">Artificial Analysis</a></td>
+    </tr>
+    <tr>
+      <td><a href="reviews/ru/local-models/minimax-m3-1-flash.md"><strong><code>MiniMax-M3.1-Flash</code></strong> <em>(Локально)</em></a></td>
+      <td>Open-Weight <code>428B</code> MoE (<code>~23B</code> актив.)</td>
+      <td align="center"><strong>8.0/10</strong></td>
+      <td align="center"><strong>1.0/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000"><strong>Назначение:</strong> Быстрая мультимодальная (<code>текст + фото + видео</code>, <code>1M</code> контекст) модель для чатов, <code>OCR</code>/анализа фото и видео и офисной автоматизации (<code>Automation-Bench: 62.8%</code>). <strong>Работает ли для кодинга?</strong> Подходит для простых скриптов и UI/автоматизации, но не для сложной репозиторной разработки (<code>Terminal-Bench 4.0: 38.1%</code>). <strong>Железо:</strong> Веса <code>~250–285 GB</code> не помещаются на обычный ПК (<code>Мин.: 512 GB Mac Studio</code>, для работы: <code>8× H100 / 640 GB VRAM</code>). <strong>Альтернатива:</strong> Локально — <code>Ollama</code> / <code>MLX</code> (<code>Qwen3-Coder</code>); если нужна именно эта модель — <a href="reviews/ru/external-apis/minimax-m3-1-flash-api.md">🔌 <code>MiniMax M3.1 Flash API</code></a>. 📊 <a href="https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash">HuggingFace</a> · <a href="https://openrouter.ai/minimax/minimax-m3.1-flash">OpenRouter Stats</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 🔌 Внешние API
 
-| Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
-|---|---|---|---|---|---|---|
-| [**`MiniMax M3.1 Flash API`**](reviews/ru/external-apis/minimax-m3-1-flash-api.md) | Cloud Multimodal API (`MiniMax` / `OpenRouter`) | **8.0/10** | **5.0/10** | `👍 Хороший вариант` | `2026-11-16` | **Назначение:** Очень дешёвый (`$0.15 / $0.60`, `Cached: $0.015`) и быстрый (`170+ ток/с`, окно `1M`) мультимодальный API для массовых ботов в бэкенде, переводов, `OCR`/анализа фото и видео и SaaS-автоматизации. **Работает ли для кодинга?** Работает для простых скриптов и вспомогательной автоматизации, но не для сложной архитектуры проекта (`Terminal-Bench 4.0: 38.1%`). *(Использовать только через платный Zero-Retention API; не отправлять закрытый код в `:free`).* 📊 [OpenRouter Stats](https://openrouter.ai/minimax/minimax-m3.1-flash) · [HuggingFace Benchmarks](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [Artificial Analysis](https://artificialanalysis.ai/leaderboards/models) |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left" width="22%">Название</th>
+      <th align="left" width="27%">Тип</th>
+      <th align="center" width="10%">Качество</th>
+      <th align="center" width="11%">Нужно&nbsp;нам</th>
+      <th align="center" width="16%">Статус</th>
+      <th align="center" width="14%">Дата</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="reviews/ru/external-apis/minimax-m3-1-flash-api.md"><strong><code>MiniMax M3.1 Flash API</code></strong></a></td>
+      <td>Cloud Multimodal API (<code>MiniMax</code> / <code>OpenRouter</code>)</td>
+      <td align="center"><strong>8.0/10</strong></td>
+      <td align="center"><strong>5.0/10</strong></td>
+      <td align="center"><code>👍&nbsp;Хороший&nbsp;вариант</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000"><strong>Назначение:</strong> Очень дешёвый (<code>$0.15 / $0.60</code>, <code>Cached: $0.015</code>) и быстрый (<code>170+ ток/с</code>, окно <code>1M</code>) мультимодальный API для массовых ботов в бэкенде, переводов, <code>OCR</code>/анализа фото и видео и SaaS-автоматизации. <strong>Работает ли для кодинга?</strong> Работает для простых скриптов и вспомогательной автоматизации, но не для сложной архитектуры проекта (<code>Terminal-Bench 4.0: 38.1%</code>). <em>(Использовать только через платный Zero-Retention API; не отправлять закрытый код в <code>:free</code>).</em> 📊 <a href="https://openrouter.ai/minimax/minimax-m3.1-flash">OpenRouter Stats</a> · <a href="https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash">HuggingFace Benchmarks</a> · <a href="https://artificialanalysis.ai/leaderboards/models">Artificial Analysis</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 🌐 Web
 
-| Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
-|---|---|---|---|---|---|---|
-| [**`taste-skill` v2.5**](reviews/ru/web/taste-skill.md) | Landing Kit + Hook | **8.0/10** | **4.0/10** | `👍 Хороший вариант` | `2026-11-15` | Сильный движок для промо-лендингов с нуля; при установке обязательно вырезать `Stop` хук (600с) и ставить только локально (`-p`). |
-| [**`vercel-labs/ui`**](reviews/ru/web/vercel-ui-sdk.md) | `@ui-sdk/*` Library + Skill (`Beta`) | **8.0/10** | **2.0/10** | `⛔ Отклонено` | `2026-11-16` | Headless UI-библиотека Vercel Labs в стадии Public Beta и скилл `ui-sdk`: заявленное *«управление в 2 раза быстрее без скриншотов»* (`createAgent`) работает только на сайтах, переписанных на `@ui-sdk/*` (не видит обычные `<button>`/`<input>` и `Shadcn`/`Radix`, нет поддержки `Expo`). **Вместо него:** наш текущий UI-стек + [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) + [**`agent-desktop`**](reviews/ru/developer-tools/agent-desktop.md). |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left" width="22%">Название</th>
+      <th align="left" width="27%">Тип</th>
+      <th align="center" width="10%">Качество</th>
+      <th align="center" width="11%">Нужно&nbsp;нам</th>
+      <th align="center" width="16%">Статус</th>
+      <th align="center" width="14%">Дата</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="reviews/ru/web/taste-skill.md"><strong><code>taste-skill</code> v2.5</strong></a></td>
+      <td>Landing Kit + Hook</td>
+      <td align="center"><strong>8.0/10</strong></td>
+      <td align="center"><strong>4.0/10</strong></td>
+      <td align="center"><code>👍&nbsp;Хороший&nbsp;вариант</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;15</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Сильный движок для промо-лендингов с нуля; при установке обязательно вырезать <code>Stop</code> хук (600с) и ставить только локально (<code>-p</code>).</td>
+    </tr>
+    <tr>
+      <td><a href="reviews/ru/web/vercel-ui-sdk.md"><strong><code>vercel-labs/ui</code></strong></a></td>
+      <td><code>@ui-sdk/*</code> Library + Skill (<code>Beta</code>)</td>
+      <td align="center"><strong>8.0/10</strong></td>
+      <td align="center"><strong>2.0/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Headless UI-библиотека Vercel Labs в стадии Public Beta и скилл <code>ui-sdk</code>: заявленное <em>«управление в 2 раза быстрее без скриншотов»</em> (<code>createAgent</code>) работает только на сайтах, переписанных на <code>@ui-sdk/*</code> (не видит обычные <code>&lt;button&gt;</code>/<code>&lt;input&gt;</code> и <code>Shadcn</code>/<code>Radix</code>, нет поддержки <code>Expo</code>). <strong>Вместо него:</strong> наш текущий UI-стек + <a href="reviews/ru/ui-ux/impeccable.md"><strong><code>impeccable</code></strong></a> + <a href="reviews/ru/developer-tools/agent-desktop.md"><strong><code>agent-desktop</code></strong></a>.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 📱 Mobile
 
-| Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
-|---|---|---|---|---|---|---|
-| [**`simslim`**](reviews/ru/mobile/simslim.md) | Standalone Go CLI (`Homebrew`) | **9.0/10** | **7.5/10** | `✅ Активен` | С `2026-11-16` | Отключает `~149–180` лишних фоновых служб симуляторов `iOS`/`tvOS` (`Siri`, `Apple Intelligence`, `Wallpaper`): сжимает живой headless-запуск со `182 -> 78` процессов и **`2.70 GB -> 1.16 GB` RAM (`-57%`)** (`4.0 GB -> 0.9 GB` / `-77.5%` в GUI) и безопасно чистит `1.5 GB+` логов/кэша без сброса приложений (`--except web,photos,search --keep com.apple.apsd` сохраняет `push` и `agent-device`). |
-| [**`avdslim`**](reviews/ru/mobile/avdslim.md) | Standalone Go CLI (`0` завис.) | **9.0/10** | **7.5/10** | `✅ Активен` | С `2026-11-16` | Оптимизатор RAM и GPU для Android Emulator (`AVD`): переключает CPU-рендер `SwiftShader` на **Apple Metal GPU (`host`)** с `-lowram` (`1536 MB`) и Golden Snapshot, снижая память с **`4.41 GB -> 2.64 GB` (`-40.2%`, `-69%` от 8.5 GB Studio AVD)** при 100% работе GPS (`--skip=location --keep=com.google.android.apps.maps`) и `agent-device`. |
-| [**`swiftui-agent-skill`**](reviews/ru/mobile/swiftui-agent-skill.md) | Skill (`twostraws` / `AvdLee` / `apple-design`) | **8.5/10** | **3.0/10** | `👍 Хороший вариант` | `2026-11-16` | Чистый SwiftUI и Apple HIG; так как основной стек у нас Expo / React Native, нужен только локально (`-p`) для нативных SwiftUI-модулей (Widgets / Live Activities). **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`reference/ios.md`) + [**`animate-expo`**](reviews/ru/mobile/animate-expo.md). |
-| [**`ARTEMIS`**](reviews/ru/mobile/artemis.md) | Python CLI / SDK + MCP (`google/artemis`) | **8.5/10** | **2.5/10** | `👍 Хороший вариант` | `2026-11-16` | Автономный Android QA-движок от Google (силён на кастомных `Canvas`/игровых экранах за счёт OCR + пиксельного зрения), но **использование платное** (требуется отдельный платный LLM API-ключ в `.env`), только Android (нет `iOS`/`tvOS`) и `3–40s` на шаг. **Вместо него:** [**`agent-device`**](reviews/ru/mobile/agent-device.md) (`$0` доплат за API, `iOS + Android + TV`, `197–888 ms`). |
-| [**`mobile-mcp`**](reviews/ru/mobile/mobile-mcp.md) | MCP Server (34 tool) | **7.0/10** | **2.0/10** | `⛔ Отклонено` | `2026-11-16` | Протестировано вживую и отклонено: `~7,580` токенов постоянного раздувания MCP-схемы на каждый ход, в `6.5x–37x` медленнее `agent-device` (`7.3s` iOS, `5.8s` Android), телеметрия `Scarf` + `PostHog` и реклама облака `mobilenext.ai`. **Вместо него:** [**`agent-device`**](reviews/ru/mobile/agent-device.md) + [**`adb`**](reviews/ru/mobile/adb.md). |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left" width="22%">Название</th>
+      <th align="left" width="27%">Тип</th>
+      <th align="center" width="10%">Качество</th>
+      <th align="center" width="11%">Нужно&nbsp;нам</th>
+      <th align="center" width="16%">Статус</th>
+      <th align="center" width="14%">Дата</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="reviews/ru/mobile/swiftui-agent-skill.md"><strong><code>swiftui-agent-skill</code></strong></a></td>
+      <td>Skill (<code>twostraws</code> / <code>AvdLee</code> / <code>apple-design</code>)</td>
+      <td align="center"><strong>8.5/10</strong></td>
+      <td align="center"><strong>3.0/10</strong></td>
+      <td align="center"><code>👍&nbsp;Хороший&nbsp;вариант</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Чистый SwiftUI и Apple HIG; так как основной стек у нас Expo / React Native, нужен только локально (<code>-p</code>) для нативных SwiftUI-модулей (Widgets / Live Activities). <strong>Вместо него:</strong> <a href="reviews/ru/ui-ux/impeccable.md"><strong><code>impeccable</code></strong></a> (<code>reference/ios.md</code>) + <a href="reviews/ru/mobile/animate-expo.md"><strong><code>animate-expo</code></strong></a>.</td>
+    </tr>
+    <tr>
+      <td><a href="reviews/ru/mobile/artemis.md"><strong><code>ARTEMIS</code></strong></a></td>
+      <td>Python CLI / SDK + MCP (<code>google/artemis</code>)</td>
+      <td align="center"><strong>8.5/10</strong></td>
+      <td align="center"><strong>2.5/10</strong></td>
+      <td align="center"><code>👍&nbsp;Хороший&nbsp;вариант</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Автономный Android QA-движок от Google (силён на кастомных <code>Canvas</code>/игровых экранах за счёт OCR + пиксельного зрения), но <strong>использование платное</strong> (требуется отдельный платный LLM API-ключ в <code>.env</code>), только Android (нет <code>iOS</code>/<code>tvOS</code>) и <code>3–40s</code> на шаг. <strong>Вместо него:</strong> <a href="reviews/ru/mobile/agent-device.md"><strong><code>agent-device</code></strong></a> (<code>$0</code> доплат за API, <code>iOS + Android + TV</code>, <code>197–888 ms</code>).</td>
+    </tr>
+    <tr>
+      <td><a href="reviews/ru/mobile/mobile-mcp.md"><strong><code>mobile-mcp</code></strong></a></td>
+      <td>MCP Server (34 tool)</td>
+      <td align="center"><strong>7.0/10</strong></td>
+      <td align="center"><strong>2.0/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Протестировано вживую и отклонено: <code>~7,580</code> токенов постоянного раздувания MCP-схемы на каждый ход, в <code>6.5x–37x</code> медленнее <code>agent-device</code> (<code>7.3s</code> iOS, <code>5.8s</code> Android), телеметрия <code>Scarf</code> + <code>PostHog</code> и реклама облака <code>mobilenext.ai</code>. <strong>Вместо него:</strong> <a href="reviews/ru/mobile/agent-device.md"><strong><code>agent-device</code></strong></a> + <a href="reviews/ru/mobile/adb.md"><strong><code>adb</code></strong></a>.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 🎨 UI/UX
 
-| Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
-|---|---|---|---|---|---|---|
-| [**`animate`**](reviews/ru/ui-ux/animate.md) | Skill (2 файла) | **8.5/10** | **3.0/10** | `⛔ Отклонено` | `2026-11-15` | Скилл веб-анимаций от Эмиля Ковальски; конфликтует по auto-trigger и правилам с нашей системой. **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`animate`) + [**`animate-expo`**](reviews/ru/mobile/animate-expo.md). |
-| [**`unslop`**](reviews/ru/ui-ux/unslop.md) | Skill + Playwright скрипты | **8.5/10** | **2.5/10** | `⛔ Отклонено` | `2026-11-16` | 9-проходный скилл очистки AI/vibecoded веб-экранов от `@heydamir` (`CC-BY-4.0`); только для Web и конфликтует по auto-trigger. **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`craft-floor` + `polish` / `quieter` / `clarify`). |
-| [**`break-ui`**](reviews/ru/ui-ux/break-ui.md) | Skill (2 файла) | **8.0/10** | **3.0/10** | `⛔ Отклонено` | `2026-11-15` | Стресс-тест UI экстремальными данными; добавляет временные фикстуры/переключатели в проект и останавливается без фикса. **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`harden`). |
-| [**`make-interfaces-feel-better`**](reviews/ru/ui-ux/make-interfaces-feel-better.md) | Skill (6 файлов) | **7.5/10** | **2.5/10** | `⛔ Отклонено` | `2026-10-31 → 2026-11-15` | Протестировано и удалено (из-за конфликта auto-trigger и громоздких таблиц отчётов). **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) + [**`animate-expo`**](reviews/ru/mobile/animate-expo.md). |
-| [**`ui-ux-pro-max`**](reviews/ru/ui-ux/ui-ux-pro-max.md) | Skill + CSV/Python | **7.0/10** | **3.5/10** | `⛔ Отклонено` | `2026-11-15` | Слабее `impeccable` и конфликтует с ним по auto-trigger. **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md). |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left" width="22%">Название</th>
+      <th align="left" width="27%">Тип</th>
+      <th align="center" width="10%">Качество</th>
+      <th align="center" width="11%">Нужно&nbsp;нам</th>
+      <th align="center" width="16%">Статус</th>
+      <th align="center" width="14%">Дата</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="reviews/ru/ui-ux/animate.md"><strong><code>animate</code></strong></a></td>
+      <td>Skill (2 файла)</td>
+      <td align="center"><strong>8.5/10</strong></td>
+      <td align="center"><strong>3.0/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;15</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Скилл веб-анимаций от Эмиля Ковальски; конфликтует по auto-trigger и правилам с нашей системой. <strong>Вместо него:</strong> <a href="reviews/ru/ui-ux/impeccable.md"><strong><code>impeccable</code></strong></a> (<code>animate</code>) + <a href="reviews/ru/mobile/animate-expo.md"><strong><code>animate-expo</code></strong></a>.</td>
+    </tr>
+    <tr>
+      <td><a href="reviews/ru/ui-ux/unslop.md"><strong><code>unslop</code></strong></a></td>
+      <td>Skill + Playwright скрипты</td>
+      <td align="center"><strong>8.5/10</strong></td>
+      <td align="center"><strong>2.5/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">9-проходный скилл очистки AI/vibecoded веб-экранов от <code>@heydamir</code> (<code>CC-BY-4.0</code>); только для Web и конфликтует по auto-trigger. <strong>Вместо него:</strong> <a href="reviews/ru/ui-ux/impeccable.md"><strong><code>impeccable</code></strong></a> (<code>craft-floor</code> + <code>polish</code> / <code>quieter</code> / <code>clarify</code>).</td>
+    </tr>
+    <tr>
+      <td><a href="reviews/ru/ui-ux/break-ui.md"><strong><code>break-ui</code></strong></a></td>
+      <td>Skill (2 файла)</td>
+      <td align="center"><strong>8.0/10</strong></td>
+      <td align="center"><strong>3.0/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;15</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Стресс-тест UI экстремальными данными; добавляет временные фикстуры/переключатели в проект и останавливается без фикса. <strong>Вместо него:</strong> <a href="reviews/ru/ui-ux/impeccable.md"><strong><code>impeccable</code></strong></a> (<code>harden</code>).</td>
+    </tr>
+    <tr>
+      <td><a href="reviews/ru/ui-ux/make-interfaces-feel-better.md"><strong><code>make-interfaces-feel-better</code></strong></a></td>
+      <td>Skill (6 файлов)</td>
+      <td align="center"><strong>7.5/10</strong></td>
+      <td align="center"><strong>2.5/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;10&#8209;31 → 2026&#8209;11&#8209;15</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Протестировано и удалено (из-за конфликта auto-trigger и громоздких таблиц отчётов). <strong>Вместо него:</strong> <a href="reviews/ru/ui-ux/impeccable.md"><strong><code>impeccable</code></strong></a> + <a href="reviews/ru/mobile/animate-expo.md"><strong><code>animate-expo</code></strong></a>.</td>
+    </tr>
+    <tr>
+      <td><a href="reviews/ru/ui-ux/ui-ux-pro-max.md"><strong><code>ui-ux-pro-max</code></strong></a></td>
+      <td>Skill + CSV/Python</td>
+      <td align="center"><strong>7.0/10</strong></td>
+      <td align="center"><strong>3.5/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;15</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Слабее <code>impeccable</code> и конфликтует с ним по auto-trigger. <strong>Вместо него:</strong> <a href="reviews/ru/ui-ux/impeccable.md"><strong><code>impeccable</code></strong></a>.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 🏗️ Архитектура и Ревью
 
-| Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
-|---|---|---|---|---|---|---|
-| [**`addy-agent-skills`**](reviews/ru/architecture/addy-agent-skills.md) | Плагин (25 скиллов + 9 команд) | **8.0/10** | **2.5/10** | `⛔ Отклонено` | `2026-11-16` | Полный SDLC-конвейер от Эдди Османи (`/spec -> /ship`); обязательный TDD и паузы `doubt-driven` создают лишние циклы. **Вместо него:** [**`grill-me`**](reviews/ru/architecture/grill-me.md) + [**`ponytail`**](reviews/ru/architecture/ponytail.md) + [**`elephant-goldfish-model`**](reviews/ru/architecture/elephant-goldfish-model.md). |
-| [**`agency-agents`**](reviews/ru/architecture/agency-agents.md) | 283 persona-промпта + installer | **6.5/10** | **2.5/10** | `⛔ Отклонено` | `2026-11-16` | 283 ролевых `.md` промпта в 18 отделах (`~18.5K` токенов раздувания frontmatter и чужие остатки copy-paste). **Вместо него:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md), [**`ponytail`**](reviews/ru/architecture/ponytail.md), [**`elephant-goldfish-model`**](reviews/ru/architecture/elephant-goldfish-model.md), [**`cross-platform-qa`**](reviews/ru/mobile/cross-platform-qa.md). |
-| [**`superpowers`**](reviews/ru/architecture/superpowers.md) | Плагин (14 скиллов + хук) | **6.5/10** | **2.0/10** | `⛔ Отклонено` | `2026-04-04 → 2026-09-01` | Протестировано и удалено: лишние размышления (`SessionStart` хук), ненужные вопросы `brainstorming` (альтернатива: `grill-me`), медленные циклы субагентов и принудительный TDD (2x лишней работы для Web/Mobile/Backend). |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left" width="22%">Название</th>
+      <th align="left" width="27%">Тип</th>
+      <th align="center" width="10%">Качество</th>
+      <th align="center" width="11%">Нужно&nbsp;нам</th>
+      <th align="center" width="16%">Статус</th>
+      <th align="center" width="14%">Дата</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="reviews/ru/architecture/addy-agent-skills.md"><strong><code>addy-agent-skills</code></strong></a></td>
+      <td>Плагин (25 скиллов + 9 команд)</td>
+      <td align="center"><strong>8.0/10</strong></td>
+      <td align="center"><strong>2.5/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Полный SDLC-конвейер от Эдди Османи (<code>/spec -&gt; /ship</code>); обязательный TDD и паузы <code>doubt-driven</code> создают лишние циклы. <strong>Вместо него:</strong> <a href="reviews/ru/architecture/grill-me.md"><strong><code>grill-me</code></strong></a> + <a href="reviews/ru/architecture/ponytail.md"><strong><code>ponytail</code></strong></a> + <a href="reviews/ru/architecture/elephant-goldfish-model.md"><strong><code>elephant-goldfish-model</code></strong></a>.</td>
+    </tr>
+    <tr>
+      <td><a href="reviews/ru/architecture/agency-agents.md"><strong><code>agency-agents</code></strong></a></td>
+      <td>283 persona-промпта + installer</td>
+      <td align="center"><strong>6.5/10</strong></td>
+      <td align="center"><strong>2.5/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">283 ролевых <code>.md</code> промпта в 18 отделах (<code>~18.5K</code> токенов раздувания frontmatter и чужие остатки copy-paste). <strong>Вместо него:</strong> <a href="reviews/ru/ui-ux/impeccable.md"><strong><code>impeccable</code></strong></a>, <a href="reviews/ru/architecture/ponytail.md"><strong><code>ponytail</code></strong></a>, <a href="reviews/ru/architecture/elephant-goldfish-model.md"><strong><code>elephant-goldfish-model</code></strong></a>, <a href="reviews/ru/mobile/cross-platform-qa.md"><strong><code>cross-platform-qa</code></strong></a>.</td>
+    </tr>
+    <tr>
+      <td><a href="reviews/ru/architecture/superpowers.md"><strong><code>superpowers</code></strong></a></td>
+      <td>Плагин (14 скиллов + хук)</td>
+      <td align="center"><strong>6.5/10</strong></td>
+      <td align="center"><strong>2.0/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;04&#8209;04 → 2026&#8209;09&#8209;01</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Протестировано и удалено: лишние размышления (<code>SessionStart</code> хук), ненужные вопросы <code>brainstorming</code> (альтернатива: <code>grill-me</code>), медленные циклы субагентов и принудительный TDD (2x лишней работы для Web/Mobile/Backend).</td>
+    </tr>
+  </tbody>
+</table>
 
 ### ⚙️ Backend
 
-| Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
-|---|---|---|---|---|---|---|
-| [**`security-audit`**](reviews/ru/backend/security-audit-skill.md) | Skill (`cloudflare/security-audit-skill`) | **9.0/10** | **7.5/10** | `✅ Активен` | С `2026-11-16` | 6-фазный *adversarial* аудит безопасности исходного кода от Cloudflare (`Hunter` + независимые `Verifier`-субагенты + Node JSON-валидаторы): находит уязвимости в Backend, Web, **Mobile (`deep-link`/`WebView`/`IPC`)**, CLI и CI/CD без Docker (с экономным профилем `quick`/`scoped`). |
-| [**`opentelemetry`**](reviews/ru/backend/opentelemetry.md) | Стандарт + Collector (`SigNoz` / `Grafana`) | **9.0/10** | **4.0/10** | `👍 Хороший вариант` | `2026-11-15` | Отраслевой стандарт межсервисных `Traces + Metrics + Logs` и метрик серверов/БД (требует `Collector + SigNoz/Grafana`). **Вместо него:** [**`sentry`**](reviews/ru/backend/sentry.md) (закрывает ошибки, реплеи и базовые трейсы в одной платформе). |
-| [**`Shannon`**](reviews/ru/backend/shannon.md) | Standalone CLI + [`hacker-test`](skills/hacker-test/SKILL.md) | **8.5/10** | **6.5/10** | `👍 Хороший вариант` | `2026-11-16` | Автономный White-Box AI-пентестер (Auth bypass, IDOR, Injection, XSS, SSRF). Вместо тяжёлого плагина вызывается по запросу через наш лёгкий скилл [`hacker-test`](skills/hacker-test/SKILL.md) и `npx` строго на local/staging (не на production). |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left" width="22%">Название</th>
+      <th align="left" width="27%">Тип</th>
+      <th align="center" width="10%">Качество</th>
+      <th align="center" width="11%">Нужно&nbsp;нам</th>
+      <th align="center" width="16%">Статус</th>
+      <th align="center" width="14%">Дата</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="reviews/ru/backend/opentelemetry.md"><strong><code>opentelemetry</code></strong></a></td>
+      <td>Стандарт + Collector (<code>SigNoz</code> / <code>Grafana</code>)</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><strong>4.0/10</strong></td>
+      <td align="center"><code>👍&nbsp;Хороший&nbsp;вариант</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;15</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Отраслевой стандарт межсервисных <code>Traces + Metrics + Logs</code> и метрик серверов/БД (требует <code>Collector + SigNoz/Grafana</code>). <strong>Вместо него:</strong> <a href="reviews/ru/backend/sentry.md"><strong><code>sentry</code></strong></a> (закрывает ошибки, реплеи и базовые трейсы в одной платформе).</td>
+    </tr>
+    <tr>
+      <td><a href="reviews/ru/backend/shannon.md"><strong><code>Shannon</code></strong></a></td>
+      <td>Standalone CLI + <a href="skills/hacker-test/SKILL.md"><code>hacker-test</code></a></td>
+      <td align="center"><strong>8.5/10</strong></td>
+      <td align="center"><strong>6.5/10</strong></td>
+      <td align="center"><code>👍&nbsp;Хороший&nbsp;вариант</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Автономный White-Box AI-пентестер (Auth bypass, IDOR, Injection, XSS, SSRF). Вместо тяжёлого плагина вызывается по запросу через наш лёгкий скилл <a href="skills/hacker-test/SKILL.md"><code>hacker-test</code></a> и <code>npx</code> строго на local/staging (не на production).</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 🛠️ Developer Tools и Memory
 
-| Название | Тип | Качество | Нужно нам | Статус | Дата | Краткое описание |
-|---|---|---|---|---|---|---|
-| [**`SkillSpector`**](reviews/ru/developer-tools/skillspector.md) | Python CLI + MCP + Skill | **9.0/10** | **3.5/10** | `⛔ Отклонено` | `2026-11-16` | Сканер безопасности AI-скиллов и MCP от NVIDIA (`AST + YARA + OSV + LLM`). Не устанавливали, чтобы не плодить лишний цикл — **Вместо него:** [**`skillshare`**](reviews/ru/developer-tools/skillshare.md) (skill-check `skillshare audit`) + **прямая проверка кода через AI-агента**. |
-| [**`caveman`**](reviews/ru/developer-tools/caveman.md) | Skill *(+ опц. CLI/Proxy)* | **8.0/10** | **3.5/10** | `👍 Хороший вариант` | `2026-11-16` | Режим сверхкратких ответов в терминале на базе `ASD-STE100` (`SKILL.md`); при установке брать только очищенный одиночный `SKILL.md` (`disable-model-invocation: true`) без телеметрии `@caveman-ai/cli` и хуков `plugin.json`. **Вместо него:** [**`ponytail`**](reviews/ru/architecture/ponytail.md) (сжимает и текст ответа, и лишний код/diff). |
-| [**`AssetDiet`**](reviews/ru/developer-tools/assetdiet.md) | Standalone CLI + [`asset-diet`](skills/asset-diet/SKILL.md) | **7.5/10** | **6.5/10** | `✅ Активен` | С `2026-11-16` | 100% локальное сжатие картинок/SVG/видео/3D (`Sharp`, `SVGO`, `FFmpeg`) с откатом. Вместо постоянного 16-tool MCP подключён через наш лёгкий скилл [`asset-diet`](skills/asset-diet/SKILL.md) для разового вызова `npx assetdiet-mcp@0.1.4`. |
-| [**`humanizer` + `stop-slop`**](reviews/ru/developer-tools/humanizer-stop-slop.md) | Skill (`Markdown`) | **7.5/10** | **2.0/10** | `⛔ Отклонено` | `2026-11-16` | Редакторы статей и эссе от штампов ИИ (`humanizer` весит `~32 KB`); не для кода и не для продуктового UI. **Вместо них:** [**`ponytail`**](reviews/ru/architecture/ponytail.md) + [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`clarify`). |
-| [**`claude-code-setup`**](reviews/ru/developer-tools/claude-code-setup.md) | Плагин (Recommender Skill) | **7.5/10** | **2.0/10** | `⛔ Отклонено` | `2026-11-16` | Официальный read-only рекомендатель стартовых секций `CLAUDE.md`, хуков и MCP-серверов под проект. **Вместо него:** [**`skillshare`**](reviews/ru/developer-tools/skillshare.md). |
-| [**`OmniRoute`**](reviews/ru/developer-tools/omniroute.md) | Local Proxy + 44 админ-скилла | **7.5/10** | **2.0/10** | `⛔ Отклонено` | `2026-11-16` | Локальный LLM reverse-proxy (`localhost:20128`); его 44 скилла — лишь мануалы прокси, дефолтный роутинг рвёт длинные сессии (`#7287`) и понижает модель, а TLS-stealth (`wreq-js`) несёт риск бана подписок по ToS. **Вместо него:** [**`T3 Code`**](reviews/ru/developer-tools/t3-code.md) + [**`ponytail`**](reviews/ru/architecture/ponytail.md). |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left" width="22%">Название</th>
+      <th align="left" width="27%">Тип</th>
+      <th align="center" width="10%">Качество</th>
+      <th align="center" width="11%">Нужно&nbsp;нам</th>
+      <th align="center" width="16%">Статус</th>
+      <th align="center" width="14%">Дата</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="reviews/ru/developer-tools/skillspector.md"><strong><code>SkillSpector</code></strong></a></td>
+      <td>Python CLI + MCP + Skill</td>
+      <td align="center"><strong>9.0/10</strong></td>
+      <td align="center"><strong>3.5/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Сканер безопасности AI-скиллов и MCP от NVIDIA (<code>AST + YARA + OSV + LLM</code>). Не устанавливали, чтобы не плодить лишний цикл — <strong>Вместо него:</strong> <a href="reviews/ru/developer-tools/skillshare.md"><strong><code>skillshare</code></strong></a> (skill-check <code>skillshare audit</code>) + <strong>прямая проверка кода через AI-агента</strong>.</td>
+    </tr>
+    <tr>
+      <td><a href="reviews/ru/developer-tools/caveman.md"><strong><code>caveman</code></strong></a></td>
+      <td>Skill <em>(+ опц. CLI/Proxy)</em></td>
+      <td align="center"><strong>8.0/10</strong></td>
+      <td align="center"><strong>3.5/10</strong></td>
+      <td align="center"><code>👍&nbsp;Хороший&nbsp;вариант</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Режим сверхкратких ответов в терминале на базе <code>ASD-STE100</code> (<code>SKILL.md</code>); при установке брать только очищенный одиночный <code>SKILL.md</code> (<code>disable-model-invocation: true</code>) без телеметрии <code>@caveman-ai/cli</code> и хуков <code>plugin.json</code>. <strong>Вместо него:</strong> <a href="reviews/ru/architecture/ponytail.md"><strong><code>ponytail</code></strong></a> (сжимает и текст ответа, и лишний код/diff).</td>
+    </tr>
+    <tr>
+      <td><a href="reviews/ru/developer-tools/humanizer-stop-slop.md"><strong><code>humanizer</code> + <code>stop-slop</code></strong></a></td>
+      <td>Skill (<code>Markdown</code>)</td>
+      <td align="center"><strong>7.5/10</strong></td>
+      <td align="center"><strong>2.0/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Редакторы статей и эссе от штампов ИИ (<code>humanizer</code> весит <code>~32 KB</code>); не для кода и не для продуктового UI. <strong>Вместо них:</strong> <a href="reviews/ru/architecture/ponytail.md"><strong><code>ponytail</code></strong></a> + <a href="reviews/ru/ui-ux/impeccable.md"><strong><code>impeccable</code></strong></a> (<code>clarify</code>).</td>
+    </tr>
+    <tr>
+      <td><a href="reviews/ru/developer-tools/claude-code-setup.md"><strong><code>claude-code-setup</code></strong></a></td>
+      <td>Плагин (Recommender Skill)</td>
+      <td align="center"><strong>7.5/10</strong></td>
+      <td align="center"><strong>2.0/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Официальный read-only рекомендатель стартовых секций <code>CLAUDE.md</code>, хуков и MCP-серверов под проект. <strong>Вместо него:</strong> <a href="reviews/ru/developer-tools/skillshare.md"><strong><code>skillshare</code></strong></a>.</td>
+    </tr>
+    <tr>
+      <td><a href="reviews/ru/developer-tools/omniroute.md"><strong><code>OmniRoute</code></strong></a></td>
+      <td>Local Proxy + 44 админ-скилла</td>
+      <td align="center"><strong>7.5/10</strong></td>
+      <td align="center"><strong>2.0/10</strong></td>
+      <td align="center"><code>⛔&nbsp;Отклонено</code></td>
+      <td align="center"><code>2026&#8209;11&#8209;16</code></td>
+    </tr>
+    <tr>
+      <td colspan="6" width="2000">Локальный LLM reverse-proxy (<code>localhost:20128</code>); его 44 скилла — лишь мануалы прокси, дефолтный роутинг рвёт длинные сессии (<code>#7287</code>) и понижает модель, а TLS-stealth (<code>wreq-js</code>) несёт риск бана подписок по ToS. <strong>Вместо него:</strong> <a href="reviews/ru/developer-tools/t3-code.md"><strong><code>T3 Code</code></strong></a> + <a href="reviews/ru/architecture/ponytail.md"><strong><code>ponytail</code></strong></a>.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
