@@ -16,6 +16,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Mijozda xato chiqqanda "qayerda va nima uchun yiqildi?" deb qidirib yurishni yo'qotadi: aniq kod qatorini, xatodan oldin bosilgan tugmalarni (`Breadcrumbs`), foydalanuvchi ekran yozuvini (`Session Replay`) va sekin SQL/API so'rovlarni bitta joyga yig'ib, AI'ga tayyor holda beradi.
+
 Web (`React`, `Next.js`), Mobile (`iOS`, `Android`, `React Native / Expo`) va Backend (`Nest.js`, `FastAPI`, background worker/queue) loyihalaridagi real vaqtdagi xatolarni, sekin so'rovlarni va foydalanuvchi harakatlarini bitta markazga yig'uvchi platforma:
 - **Aqlli xato guruhlash (`Issue Grouping`):** Minglab bir xil crash yoki exception'ni bitta `Issue` guruhiga yig'adi, qaysi `Release` da boshlangani va nechta foydalanuvchiga ta'sir qilganini ko'rsatadi.
 - **`Stack Trace` + `Breadcrumbs`:** Xatoning aniq kod qatorini (`Source Maps`, iOS `dSYM`, Android `ProGuard/R8`) hamda xatodan oldin foydalanuvchi bosgan tugmalar, konsol loglari va tarmoq so'rovlarini ketma-ket ko'rsatadi.

@@ -16,6 +16,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Faqat veb-brauzer animatsiyalari uchun yozilgan skill; uning qoidalari bizdagi `impeccable` ichida allaqachon bor, o'rnatilsa mobil `animate-expo` skilli bilan trigger to'qnashuvi beradi.
+
 Emil Kowalski'ning veb-animatsiya qurish skilli (`SKILL.md` 209 qator + `RECIPES.md` tayyor komponent shablonlari):
 1. **`Frequency Gate`:** Kuniga 100+ marta ishlatiladigan amallarda (klaviatura shortcut'lari, command palette) animatsiyani taqiqlaydi.
 2. **Vosita tanlash zinapoyasi:** CSS transition → CSS `@starting-style` → CSS animation → WAAPI (`element.animate()`) → `Motion` (`motion.dev`).

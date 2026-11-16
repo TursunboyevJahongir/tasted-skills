@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Inson bir o'qishda tushunadigan oddiy tilda ushbu vosita aynan qaysi amaliy muammoni yechishi va qancha vaqt/token/xotira tejashi (yoki nima sababdan rad etilgani).
+
 Reklama yoki video tavsifidan tashqari, aslida ichida nima borligi va qanday ishlashi (oddiy Markdown qoidami, Python/Node skriptmi, subagentlar tizimimi, MCP yoki lokal servis).
 
 ---

@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Statik CSV fayllardan bir xil rang va shrift shablonlarini tanlab beradi — `impeccable` dan ancha kuchsiz va uning ishiga xalaqit beradi.
+
 Lokal CSV/JSON jadvallar bazasi va Python BM25 qidiruv skripti (`scripts/search.py`) ustiga qurilgan UI/UX ma'lumotnomasi:
 - Ichida 80 ta UI uslub (`styles.csv`), 192 ta mahsulot/soha palitrasi (`products.csv`, `colors.csv`), 74 ta shrift juftligi (`typography.csv`, `google-fonts.csv`), 120 ta UX qoida, 25 ta diagramma turi, 17 ta GSAP animatsiya shabloni va 22 ta freymvork bo'yicha yo'riqnoma bor.
 - Agent yangi sahifa yoki komponent qilayotganda terminal orqali `python search.py "<soha va kalit so'zlar>" --design-system` buyrug'ini chaqiradi, tayyor rang/shrift/sektsiya shablonini oladi va loyiha ichida `design-system/<slug>/MASTER.md` faylini yaratadi.

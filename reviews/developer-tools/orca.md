@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Asosiy ko'p-agentli ish muhitimiz: bitta promptda *"Codex yozsin, Claude rejasini tekshirsin, Argon natijani test qilsin"* deyilsa, asosiy agentning o'zi boshqa AI'larni Chat UI ichida jonli kartalar bilan ishga tushirib, xulosani bitta joyga yig'adi. Kompyuter blokda (`Lock Screen`) tursa ham uxlamaydi (`caffeinate`) va telefondagi **`Orca IDE`** ilovasidan uzilmay ishlaydi (`841 MB` RAM).
+
 **Orca (`stablyai/orca`)** — `Codex`, `Claude Code`, `Antigravity (Gemini / Argon)` va boshqa 25+ CLI coding agentlarni bitta oynada (Chat UI yoki Terminal rejimida), alohida Git worktree'larda hamda telefon orqali boshqaradigan open-source (`MIT`) orkestrator.
 
 **Bizda qanday ishlaydi (2 ta muhim mexanizm):**
@@ -74,3 +77,4 @@
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
 | 2026-11-16 | `stablyai/orca` (`v1.4.261`) o'rnatish, `PostHog` ni o'chirish, `caffeinate` + `Mobile` + `Codex/Claude/Antigravity` ni ulash va jonli multi-agent test (`run_33e8e230b9fe`) | `✅ Ishlatyapman` | `T3 Code` to'liq o'chirildi va uning o'rniga `Orca` asosiy multi-agent orchestrator sifatida qoldi. |
+

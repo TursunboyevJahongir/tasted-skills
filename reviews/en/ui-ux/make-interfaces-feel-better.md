@@ -16,6 +16,9 @@
 
 ## 1. What It Is & How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Tested for 16 days and removed: burns tokens printing bloated 4-table audit reports on minor UI edits and collides with `impeccable`.
+
 19 micro-rules for polishing web interfaces (`SKILL.md`, `typography.md`, `surfaces.md`, `animations.md`, `icons.md`, `performance.md`):
 - Concentric border radius formula (`outerRadius = innerRadius + padding`);
 - `font-variant-numeric: tabular-nums` on dynamic numbers;

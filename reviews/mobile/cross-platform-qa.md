@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Har mayda o'zgarishda telefonga kabeldan build o'rnatib vaqt yo'qotmaslik tartibi: **1-bosqichda** AI hamma tekshiruvni kompyuterning o'zida fonda (`agent-desktop` + `agent-device`) tezda bitiradi, **2-bosqichda** esa ishni yakunlashdan oldin real telefonda 1 marta oxirgi sinovdan o'tkazadi.
+
 Web, iOS/tvOS va Android/Android TV ilovalarda kod yozish hamda tekshirishni **oldindan unit-test (TDD) yozmasdan**, haqiqiy UI'da tez va tartibli o'tkazish uchun yaratilgan 2-bosqichli global skill:
 
 1. **1-Bosqich (Ish jarayoni — 100% lokal kompyuterda):**

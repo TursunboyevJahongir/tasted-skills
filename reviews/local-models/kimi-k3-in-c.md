@@ -16,6 +16,9 @@
 
 ## 1. Nimaga mo'ljallangan va nima ish qila oladi? (Asosiy yo'nalishi)
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** `2.78T` li ulkan `Kimi K3` modelini videokartasiz SSD diskdan o'qish eksperimenti — **amalda kod yozishga mutlaqo yaramaydi**: `1 ta token = ~24–33 soniya`, `500` token javob olish uchun **`~3.5 soat`** va **`~50 TB` SSD o'qish** ketib, disk umrini yeb bitiradi. Haqiqiy lokal coder kerak bo'lsa `32–64 GB` Mac'da `Ollama` / `MLX` (`Qwen3-Coder`, `30–65 tok/s`) ishlating.
+
 - **Modelning o'zi (`Kimi K3`, `2.78T` umumiy / `~104B` aktiv parametr, `1M` kontekst):** Murakkab mantiqiy tahlil (`reasoning`), dasturlash, matematika va katta hujjatlar bilan ishlashga mo'ljallangan ulkan Mixture-of-Experts (`MoE`) til modeli.
 - **`kimi-k3-in-c` dvigatelining vazifasi:** Odatda `2.25 TB` GPU VRAM talab qiladigan ushbu ulkan modelni **umuman GPU ishlatmasdan**, C99 tilida (`~176 KB` binar fayl, `O_DIRECT`) har bir token uchun `896` ta ekspertdan faqat **`16` ta faol ekspertni** va `109 GB` magistral qatlamni bevosita NVMe SSD diskdan oqim (`stream`) qilib o'qish orqali **`8–16 GB RAM`** ichida ishga tushirib ko'rsatishga mo'ljallangan ilmiy-muhandislik eksperimenti.
 

@@ -16,6 +16,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** "Sen marketologsan", "Sen dizaynersan" kabi 283 ta shablon rol-promptlar yig'indisi; to'liq o'rnatilsa amaliy foyda bermasdan **`~18,500` token kontekstni bekorga band qiladi**. Real muhandislik skilllarimiz (`impeccable`, `ponytail`, `elephant-goldfish-model`) ulardan ancha aniq ishlaydi.
+
 O'zini *"to'liq AI mutaxassislar agentligi"* deb tanishtiruvchi repozitoriy bo'lib, ichida hech qanday subagent orkestrator, MCP server yoki tekshiruvchi runtime dvigatel **yo'q**.
 
 Asl tarkibi:

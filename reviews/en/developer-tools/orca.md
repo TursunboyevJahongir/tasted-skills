@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Our primary multi-agent workspace: from a single prompt (*"have Codex implement, Claude check the plan, and Argon verify"*), the main agent spawns live inline worker cards in Chat UI and synthesizes their results. Stays awake on Mac `Lock Screen` (`caffeinate`) with rock-solid **`Orca IDE`** mobile control (`841 MB` RAM).
+
 **Orca (`stablyai/orca`)** is an open-source (`MIT`) multi-agent orchestrator that runs `Codex`, `Claude Code`, `Antigravity (Gemini / Argon)`, and 25+ CLI coding agents in parallel across isolated Git worktrees (in rich Chat UI or raw Terminal mode) with native mobile control.
 
 **How we use it in practice (2 key mechanisms):**
@@ -74,3 +77,4 @@
 | Date | Action | Status | Notes |
 |---|---|---|---|
 | 2026-11-16 | Installed `stablyai/orca` (`v1.4.261`), disabled `PostHog`, configured `caffeinate` + `Mobile` + `Codex/Claude/Antigravity`, and verified live multi-agent run (`run_33e8e230b9fe`) | `✅ Using` | Uninstalled `T3 Code` and adopted `Orca` as our primary multi-agent orchestrator. |
+

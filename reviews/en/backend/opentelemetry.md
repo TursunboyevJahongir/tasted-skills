@@ -16,6 +16,9 @@
 
 ## 1. What It Is & How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** The gold standard when you need deep host CPU/RAM and DB pool metrics across dozens of microservices, but requires maintaining `Collector + Grafana/SigNoz` — whereas `Sentry` covers all our app errors, replays, and traces in one stack.
+
 A vendor-neutral CNCF (Cloud Native Computing Foundation) standard that collects and ships **all three observability signals (`Traces`, `Metrics`, `Logs`) in a single unified protocol (`OTLP`)** across any language or service:
 
 1. **Unified Request Passport (`trace_id` / W3C `traceparent`):** Follows a single user request seamlessly across APIs, auth services, databases (`PostgreSQL`/`Redis`), message queues (`Workers`), and third-party payment/SMS gateways.

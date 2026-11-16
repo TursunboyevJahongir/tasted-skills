@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Audits Backend, Web, and **Mobile (`deep-link`, `WebView`)** source code from an attacker's perspective with zero Docker setup, filtering out false positives through an independent second verifier subagent.
+
 Extracted from Cloudflare's internal vulnerability discovery harness, `security-audit` is a **100% local, agent-neutral White-Box source-code security audit skill** (`MIT`, `0` third-party npm packages, `0` outbound network calls, `0` telemetry, `0` lifecycle hooks).
 
 **6-Phase Adversarial Workflow:**

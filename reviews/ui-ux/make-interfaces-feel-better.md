@@ -16,6 +16,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** 16 kun sinab ko'rilib o'chirildi: oddiy tugma yoki ramka tahririda ham 4 tadan uzun Markdown jadval yozib tokenni bekorga yoqadi va `impeccable` bilan bir joyda uyg'onib xalaqit beradi.
+
 Web interfeyslarni silliqlash bo'yicha 19 ta mikro-qoida (`SKILL.md`, `typography.md`, `surfaces.md`, `animations.md`, `icons.md`, `performance.md`):
 - Ichki va tashqi burchak radiusi formulasi (`outerRadius = innerRadius + padding`);
 - O'zgaruvchan raqamlarda `font-variant-numeric: tabular-nums`;

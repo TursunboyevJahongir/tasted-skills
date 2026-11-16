@@ -16,6 +16,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Our former multi-agent desktop app (`2026-10-23 → 2026-11-16`): retired and uninstalled (`~3.87 GB` freed) because its beta mobile app disconnected frequently, sessions dropped on Mac `Lock Screen`, and Chat UI lacked native worker cards — completely replaced by **`Orca`**.
+
 **T3 Code** is an open-source desktop workspace that orchestrates multiple AI coding agents (**Codex**, **Claude Code**, **Cursor**, and CLI-connected agents) across isolated Git worktrees/branches using your existing subscriptions (**BYOS — Bring Your Own Subscription**).
 
 **How we use it in practice (Multi-AI pipeline):**

@@ -72,7 +72,7 @@ Ushbu qo'llanmada biz jonli sinab ko'rgan va manba kodini audit qilgan barcha sk
 
 | Vosita | Yondashuv | Qaror va Sabab |
 |---|---|---|
-| ✅ [**`grill-me`**](../reviews/architecture/grill-me.md) + [**`graphify`**](../reviews/architecture/graphify.md) + [**`ponytail`**](../reviews/architecture/ponytail.md) + [**`karpathy-guidelines`**](../reviews/architecture/karpathy-guidelines.md) | `0` token AST graf (`graphify`) -> kod yozishdan oldin qarorlar daraxti (`grill-me`) -> minimal YAGNI va `surgical` kod (`ponytail` + `karpathy`). | **✅ Asosiy to'rtlik (`#1–#4`)** — tez, ortiqcha byurokratiyasiz va token tejamkor. |
+| ✅ [**`grill-me`**](../reviews/architecture/grill-me.md) + [**`graphify`**](../reviews/architecture/graphify.md) + [**`ponytail`**](../reviews/architecture/ponytail.md) + [**`karpathy-guidelines`**](../reviews/architecture/karpathy-guidelines.md) | `0` token loyiha qolipi (`graphify`, katta repolarda `~10x–20x` token tejaydi) -> ko'r-ko'rona kod yozishdan oldin oxirigacha o'ylab olish (`grill-me`, 2–3x qayta yozishdan saqlaydi) -> minimal YAGNI va `surgical` kod (`ponytail` + `karpathy`). | **✅ Asosiy to'rtlik (`#1–#4`)** — tez, ortiqcha byurokratiyasiz va token tejamkor. |
 | ❌ [**`superpowers`**](../reviews/architecture/superpowers.md) | 14 ta skill + `SessionStart` hook + har o'zgarishda majburiy TDD va subagent sikllari. | `⛔ Rad etildi` — 5 oy ishlatilib o'chirildi (ishni `2x` sekinlashtiradi va kvotani yeydi). |
 | ❌ [**`addy-agent-skills`**](../reviews/architecture/addy-agent-skills.md) | 25 skill + `/spec -> /ship` og'ir SDLC konveyeri va `doubt-driven` to'xtashlar. | `⛔ Rad etildi` — kundalik vazifalarda ortiqcha sikl. |
 | ❌ [**`agency-agents`**](../reviews/architecture/agency-agents.md) | 283 ta `.md` persona-prompt (`~18.5K` token frontmatter shishishi). | `⛔ Rad etildi` — yuzaki shablon rollar. |
@@ -85,12 +85,13 @@ Ushbu qo'llanmada biz jonli sinab ko'rgan va manba kodini audit qilgan barcha sk
 | 👍 [**`caveman`**](../reviews/developer-tools/caveman.md) | Faqat terminaldagi **matn javobidan** artikl/bog'lovchilarni kesadi (`~65%` output token); kod hajmiga ta'sir qilmaydi. | CLI paketida `fetch` telemetriya va `SessionStart` hook bor (faqat toza `SKILL.md` olinishi shart) | `👍` Zaxira (`ponytail` yetarli) |
 | ❌ [**`humanizer` + `stop-slop`**](../reviews/developer-tools/humanizer-stop-slop.md) | Maqola va esselardagi AI shtamplarini tahrirlaydi. | `~32 KB` (`humanizer`) | `⛔ Rad etildi` (kod uchun emas) |
 
-### C. Multi-Agent Ishlash va Review (`T3 Code` + `EGM` vs `OmniRoute`)
+### C. Multi-Agent Ishlash va Review (`Orca` + `EGM` vs `T3 Code` vs `OmniRoute`)
 
 | Vosita | Vazifasi | Qaror |
 |---|---|---|
-| ✅ [**`T3 Code`**](../reviews/developer-tools/t3-code.md) + `task-context` | **Kontekstli Cross-AI Review:** `Codex`, `Claude Opus`, `Argon` subagentlarga vazifa tarixini berib mustaqil tekshirtirish va kvota tugaganda ishni uzatish. | **✅ Asosiy (`#13`)** |
-| ✅ [**`elephant-goldfish-model`**](../reviews/architecture/elephant-goldfish-model.md) | **Xotirasiz (`Goldfish`) 5-persona Review + Drift + TRIZ:** Oldingi suhbatdan bexabar 5 ta tanqidchi bilan Arxitektura/PR tekshirish, hujjat-kod farqini tutish (`egm-drift-report`) va TRIZ yechim topish. | **✅ Asosiy (`#6`)** |
+| ✅ [**`Orca`**](../reviews/developer-tools/orca.md) + `orchestration` + `task-context` | **Bitta promptdan ko'p-agentli zanjir + Mobil boshqaruv:** Chat UI ichida jonli subagent kartalari (`Codex`, `Claude`, `Argon`), `Lock Screen` (`caffeinate`) rejimida uxlamaslik, uzilmas `Orca IDE` telefon ilovasi va `task-context` orqali estafeta uzatish (`841 MB` RAM). | **✅ Ishlatyapman (`#13`)** |
+| ✅ [**`elephant-goldfish-model`**](../reviews/architecture/elephant-goldfish-model.md) | **Xotirasiz (`Goldfish`) 5-persona Review + Drift + TRIZ:** Oldingi suhbatdan bexabar 5 ta tanqidchi bilan Arxitektura/PR tekshirish, hujjat-kod farqini tutish (`egm-drift-report`) va TRIZ yechim topish. | **✅ Ishlatyapman (`#6`)** |
+| ❌ [**`T3 Code`**](../reviews/developer-tools/t3-code.md) | Eski multi-agent desktop dasturimiz (`2026-10-23 → 2026-11-16`). | `⛔ Rad etildi` — Beta telefon ilovasi tez-tez uziladi, kompyuter bloklanganda (`Lock Screen`) to'xtab qoladi va Chat UI'da jonli subagent kartalari yo'q (`Orca` ga o'tildi). |
 | ❌ [**`OmniRoute`**](../reviews/developer-tools/omniroute.md) | Lokal LLM reverse-proxy (`localhost:20128`) + 44 ta proxy-admin skill. | `⛔ Rad etildi` — uzoq sessiyalarni uzadi (`#7287`), modelni yashirincha pasaytiradi va `wreq-js` TLS-stealth sabab akkaunt ban xavfi bor. |
 
 ---

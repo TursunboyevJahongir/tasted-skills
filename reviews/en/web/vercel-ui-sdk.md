@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works (Video Hype vs. Reality)
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Its advertised *"screenshot-free 2x faster agent control"* cannot see standard `<button>`/`<input>` or `Shadcn` apps unless you rewrite your entire frontend in `@ui-sdk/*` (with no `Expo` support). `agent-desktop` already drives any existing site.
+
 Social-media clips pitch `vercel-labs/ui` as *"an interactive UI library that lets AI agents read pages and operate controls directly without screenshots — over 2x faster at half the cost."*
 
 **What primary-source inspection (`packages/` and `packages/core/skills/ui-sdk/`) actually shows:**

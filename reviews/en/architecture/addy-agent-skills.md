@@ -16,6 +16,9 @@
 
 ## 1. Brief Overview: What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Addy Osmani's 25-skill `/spec -> /ship` pipeline; skipped because its mandatory TDD and escalation pauses slow down daily tasks — our `grill-me` + `ponytail` + `elephant-goldfish-model` trio covers the same ground faster with far less ceremony.
+
 Addy Osmani's pack of 25 lifecycle engineering skills (`interview-me`, `spec-driven-development`, `test-driven-development`, `doubt-driven-development`, `code-review-and-quality`, `frontend-ui-engineering`, `performance-optimization`, etc.) wired to 9 slash commands (`/spec -> /plan -> /build -> /test -> /review -> /ship`).
 
 ---

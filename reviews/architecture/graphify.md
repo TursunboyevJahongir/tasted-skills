@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Asosiy vazifasi — butun loyihaning qolipini (qaysi fayl, modul va funksiya qayerga ulanganini) kompyuterning o'zida **`0` token sarflab** chizib qo'yish. Keyingi ishlarda AI yuzlab fayllarni bittalab o'qib qidirmasdan, tayyor xaritadan kerakli joyni soniyada topadi — bu katta loyihalarda **token sarfini taxminan `10x–20x` gacha (`~85–95%`) tejaydi** va javob aniqligini sezilarli oshiradi (`70.8% -> 82%`).
+
 Istalgan loyiha papkasini (kod, SQL sxemalar, Markdown hujjatlar, PDF, rasm va videolar) vektor bazasiz **doimiy bilim grafigiga (`graphify-out/graph.json`, interaktiv HTML va `GRAPH_REPORT.md`)** aylantiradigan vosita:
 - **Kod fayllari uchun lokal deterministik AST tahlil** ishlatadi — token sarflamaydi va juda tez ishlaydi.
 - **Hujjat / PDF fayllari uchun** parallel subagentlar orqali semantik bog'lanishlarni chiqaradi va har bir aloqani halol darajalaydi (`EXTRACTED`, `INFERRED`, `AMBIGUOUS`).

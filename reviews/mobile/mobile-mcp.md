@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Jonli sinovda rad etildi: ishlatmasangiz ham har bitta yozishmada **`~7,580` tokenni bekorga yeb turadi**, `agent-device` dan **`6.5x–37x` sekin** (`6–7 soniya`) hamda ichida telemetriya va pullik cloud reklamalari bor.
+
 `@mobilenext/mobile-mcp` — AI agentlarga iOS va Android qurilmalarini MCP protokoli (`stdio` yoki Streamable HTTP) orqali boshqarish imkonini beruvchi Node.js serveri (`mobilewright` / WebDriverAgent ustiga qurilgan). U 34 ta `mobile_*` toolni (`mobile_list_elements_on_screen`, `mobile_click_on_screen_at_coordinates`, `mobile_login_to_cloud_provider` va b.) agentga taqdim etadi.
 
 ---

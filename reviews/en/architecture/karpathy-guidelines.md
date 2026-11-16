@@ -15,6 +15,9 @@
 
 ## 1. What It Is & How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Prevents AI from "helpfully cleaning up" neighboring lines and accidentally breaking working features. Forces upfront assumptions instead of silent guesses and restricts edits strictly to the **exact lines your task requires**.
+
 A compact Markdown skill (`SKILL.md`, 2.5 KB) distilling Andrej Karpathy's 4 core principles against common LLM coding pitfalls:
 1. **Think Before Coding:** Surface ambiguities and assumptions explicitly instead of guessing silently.
 2. **Simplicity First:** Avoid unrequested flexibility and speculative abstractions.

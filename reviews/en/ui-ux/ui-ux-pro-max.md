@@ -15,6 +15,9 @@
 
 ## 1. What It Is & How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Picks generic color/font templates from static CSV files — far weaker than `impeccable` and collides with its auto-trigger.
+
 A UI/UX reference system built on top of local CSV/JSON tables and a Python BM25 search script (`scripts/search.py`):
 - Contains 80 UI styles (`styles.csv`), 192 industry/product palettes (`products.csv`, `colors.csv`), 74 font pairings (`typography.csv`, `google-fonts.csv`), 120 UX rules, 25 chart types, 17 GSAP animation templates, and guidelines for 22 frameworks.
 - When building a page or component, the agent runs `python search.py "<industry and keywords>" --design-system` in the terminal, retrieves a preset color/font/section template, and creates `design-system/<slug>/MASTER.md` inside the project.

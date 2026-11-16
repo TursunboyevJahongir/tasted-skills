@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Tests `iOS/tvOS` (`~0.2s`) and `Android/TV` (`~0.9s`, full UTF-8 input) apps invisibly in the background with zero simulator windows on screen. Saves **`~7,500` tokens per message** vs. MCP servers, **cuts screen-read tokens by up to `~27x`**, and runs Maestro `.yaml` E2E tests with no Java install.
+
 An open-source (`MIT`, `0` runtime npm dependencies) mobile and TV automation layer built by Callstack (core React Native maintainers; also powers mobile automation inside `T3 Code`).
 
 Instead of feeding heavy screenshots or 10–40 KB raw XML dumps (`uiautomator dump`) to the model on every step:

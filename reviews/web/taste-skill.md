@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Noldan chiroyli reklama/promo-landing sahifa yig'ishda foydali to'plam, lekin ichidagi 600 soniyalik `Stop` hook olib tashlanib, faqat o'sha landing loyihasining o'ziga (`-p`) ulanishi shart. Kundalik dastur ekranlari uchun `impeccable` ishlatiladi.
+
 Eski v1 versiyasidan farqli o'laroq, `tasteskill 2.5.1` (`design-taste-frontend`) endi oddiy did qoidalari emas, balki **`figma.com` va `x.ai` darajasidagi kompaniya vizitka/landing saytlarini quruvchi og'ir dvigatel**:
 - Ichida tayyor **`system.css`, `system.js`, `starter.html`**, WebGL/shader komponentlar (`fx-globe`, `fx-dither-object`, `fx-feature-card`), litsenziyalangan haqiqiy rasmlar kutubxonasi (`photos.mjs`) va Node 22+ skriptlar to'plami bor.
 - Saytlarni 6 ta biznes turiga (`software`, `tech`, `gaming`, `product`, `service`, `place`) ajratadi: texnik/o'yin saytlariga WebGL shader qo'shadi, kafe/do'kon/servis saytlarida esa shaderlarni taqiqlab haqiqiy fotografiya va tipografiya ishlatadi.

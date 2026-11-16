@@ -16,6 +16,9 @@
 
 ## 1. What It Is & How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Cleans AI-generated web layouts in 9 passes, but ignores mobile apps and collides with `impeccable` — already handled cleanly by `impeccable` (`polish` / `quieter`).
+
 A web UI "unslopping" skill created by Damir Sokolovsky (`@heydamir`) from his X redline series:
 1. **Slop audit (`references/signs.md`):** Flags common AI-generated UI tells — purple-to-blue gradients, gradient text, colored glows/halos, `New ✨` emoji badges, wide-tracked uppercase labels (`NAVIGATION`), arbitrary Tailwind spacing (`mt-[13px]`), and shouty copy (`Welcome back! 👋`, `!!`).
 2. **5-line `Direction` gate:** Writes `Product`, `Character`, `World`, `Moments`, and `Signature` and pauses for user confirmation before editing.

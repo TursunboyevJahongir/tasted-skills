@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** 5 oy ishlatib ko'rib o'chirib tashlaganmiz: har suhbat boshida `SessionStart` hook va oddiy vazifalarda ham majburiy TDD hamda uzun savol-javoblar qo'shib, **ish vaqti va token sarfini `2x` ga ko'paytirib yuboradi**. O'rnini yengil `grill-me` va `ponytail` bosdi.
+
 Claude Code, Codex, Cursor va Antigravity uchun 14 ta jarayon skillidan (`using-superpowers`, `brainstorming`, `writing-plans`, `subagent-driven-development`, `executing-plans`, `test-driven-development`, `systematic-debugging`, `using-git-worktrees`, `verification-before-completion` va h.k.) hamda `hooks/session-start` skriptidan iborat "to'liq dasturlash metodologiyasi" plugini.
 
 Ishlash mexanizmi:

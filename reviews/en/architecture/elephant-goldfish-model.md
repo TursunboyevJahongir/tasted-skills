@@ -15,6 +15,9 @@
 
 ## 1. What It Is & How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** When the same AI writes a plan/code and reviews its own work, it rubber-stamps its own blind spots. This plugin spawns fresh-memory *Goldfish* critic subagents with zero chat history to audit specs, code, and doc-to-code drift (`egm-drift-report`) objectively from scratch.
+
 An open-source (`Apache-2.0`) multi-agent design and review plugin released by Google engineers.
 
 **Core Problem Solved:** When you brainstorm, draft a plan, and review it with the same agent in a single chat thread, the conversation history fills with shared assumptions (*confirmation bias*), causing the model to rubber-stamp its own mistakes. EGM separates roles into two personas:

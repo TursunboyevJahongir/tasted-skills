@@ -15,6 +15,9 @@
 
 ## 1. What It Is & How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Stops AI from turning a 10-line fix into 200 lines of over-engineered "future-proof" abstractions and long essays. Enforces the **smallest complete code change** and replies you understand in one read (**cutting output tokens and diff bloat by `~2–4x`**).
+
 "Lazy senior dev mode" — a pure Markdown skill (`SKILL.md`, 3.5 KB) that trains the agent to make the **smallest change that fully solves the task** (YAGNI) and write a reply a busy human **understands in one read**.
 
 Includes 3 levels (`lite`, `full` default, `ultra`) and clear engineering rules:

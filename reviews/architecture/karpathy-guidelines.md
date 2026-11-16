@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Ishlab turgan loyihada AI "yo'l-yo'lakay qo'shni kodni ham chiroyli qilaman" deb boshqa joylarni buzib ketishining oldini oladi. Noaniq narsani ichida taxmin qilmasdan oldindan so'rashga va jarrohlik aniqligida **faqat vazifaga tegishli qatorlarni** o'zgartirishga majburlaydi.
+
 Andrej Karpathy tomonidan ta'kidlangan LLM kodlash muammolariga qarshi 4 ta asosiy tamoyilni o'z ichiga olgan ixcham Markdown skill (`SKILL.md`, 2.5 KB):
 1. **Kod yozishdan oldin o'ylash (`Think Before Coding`):** Noaniq joylarni jimjit taxmin qilmasdan ochiq aytish.
 2. **Soddalik birinchi o'rinda (`Simplicity First`):** So'ralmagan moslashuvchanlik va spekulyativ abstraksiyalarni yozmaslik.

@@ -16,6 +16,9 @@
 
 ## 1. Qisqacha: Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** NVIDIA'ning kuchli skill-xavfsizlik skaneri, lekin har bitta skill uchun alohida Python/Docker/YARA muhitini ishga tushirish kundalik ishda ortiqcha vaqt oladi — bizda `0.1` soniyalik `skillshare audit` + AI agentimiz orqali kodni bevosita o'qib tekshirish buni tezroq yopadi.
+
 NVIDIA tomonidan ochiq manbaga chiqarilgan (`Python 3.12 + LangGraph`), AI skill'lar va MCP serverlarni o'rnatishdan oldin **2 bosqichda** tekshiradigan korporativ xavfsizlik skaneri:
 1. **Statik tahlil (`--no-llm`):** `17` kategoriya va `71+` qoida bo'yicha Python/JS AST, Taint Tracking (maxfiy ma'lumotni o'qib tarmoqqa uzatish zanjiri), YARA malware signaturalari, `OSV.dev` orqali jonli CVE qidiruvi hamda MCP Tool Poisoning / Registry Diff tekshiruvlarini bajaradi.
 2. **Ixtiyoriy LLM semantik tahlili:** `SKILL.md` dagi va'da bilan ichki kod haqiqatda mos kelish-kelmasligini solishtiradi (API kalit yoki lokal `claude_cli` / `gemini_cli` / `ollama` orqali).

@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Kod yoki reja yozgan AI o'z ishini o'zi tekshirsa, xatosini sezmay maqtab o'tkazib yuboradi. Bu plugin oldingi suhbatni umuman ko'rmagan "xotirasiz" tanqidchi subagentlarni (*Goldfish*) chaqirib, yozilgan reja va kodni noldan xolis tekshirtiradi hamda hujjat bilan real kod bir-biridan uzilib qolgan joylarni (`egm-drift-report`) topib beradi.
+
 Google muhandislari tomonidan chiqarilgan open-source (`Apache-2.0`) ko'p-agentli loyihalash va tekshirish plugini.
 
 **Hal qiladigan asosiy muammosi:** Bitta chat ichida agent bilan g'oyani muhokama qilib, shu agentning o'ziga reja yozdirib va o'ziga tekshirtirilsa — suhbat tarixi taxminlar bilan to'ladi (*confirmation bias*), model o'z xatosini o'zi ma'qullaydi. EGM rollarni ikkiga ajratadi:

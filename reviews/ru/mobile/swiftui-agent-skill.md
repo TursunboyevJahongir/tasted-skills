@@ -16,6 +16,9 @@
 
 ## 1. Кратко: Что это и как работает?
 
+> [!IMPORTANT]
+> **Простыми словами (Главная задача и польза):** Хороший сборник правил чистого SwiftUI для виджетов и Live Activities; так как основной стек у нас `Expo`, глобально не ставим, а подключаем локально (`-p`) только для нативных iOS-виджетов.
+
 Три ключевых открытых репозитория по теме SwiftUI и Apple HIG:
 - **`twostraws/swiftui-agent-skill` (`swiftui-pro` от Пола Хадсона)** и **`AvdLee/SwiftUI-Agent-Skill` (Антуан ван дер Леу):** Защищают от устаревших API (`NavigationStack` вместо `NavigationView`, современный `@Observable`), ошибок вёрстки и проблем с VoiceOver.
 - **`dickwu/apple-design-skill`:** Проверяет интерфейсы по Apple Human Interface Guidelines (HIG).

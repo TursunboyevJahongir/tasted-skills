@@ -16,6 +16,9 @@
 
 ## 1. Qisqacha: Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Maqola, blog va esselardan "sun'iy intellekt yozgani bilinib turadigan" jumlalarni tozalaydi (`humanizer` `~32 KB` kontekst oladi), lekin kod yozish va ilova tugmalari uchun mo'ljallanmagan (`ponytail` va `impeccable clarify` ishlatiladi).
+
 AI yozgan matnlardagi sun'iy ohang va shtamplarni olib tashlashga qaratilgan ikkita mashhur tahrir skilli:
 - **`blader/humanizer` (`MIT`, `~32 KB` `SKILL.md`):** Vikipediyaning *"Signs of AI writing"* qo'llanmasiga asoslanib, 24 xil AI shtampini (*"delve"*, *"tapestry"*, sun'iy xulosalar, ortiqcha tirelar) tozalaydi.
 - **`hardikpandya/stop-slop` (`MIT`, `~2.6 KB` `SKILL.md` + `references/`):** *"Bu X emas — bu Y"* kabi ikkilik qarama-qarshiliklar, uchlik ro'yxatlar va balandparvoz gaplarni kesib, matnga 1–5 baho beradi.

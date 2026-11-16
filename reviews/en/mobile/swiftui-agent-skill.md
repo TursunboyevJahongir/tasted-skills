@@ -16,6 +16,9 @@
 
 ## 1. Brief Overview: What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Clean Apple SwiftUI rules for native Widgets and Live Activities; since our main apps use `Expo`, keep it out of global context and add via `-p` only on targets with native SwiftUI widgets.
+
 The three main open-source skills behind "SwiftUI Expert / Apple Design" recommendations:
 - **`twostraws/swiftui-agent-skill` (`swiftui-pro` by Paul Hudson)** and **`AvdLee/SwiftUI-Agent-Skill` (Antoine van der Lee):** Prevent deprecated SwiftUI APIs (`NavigationStack` over `NavigationView`, `@Observable` state flow), layout pitfalls, and VoiceOver mistakes.
 - **`dickwu/apple-design-skill`:** Reviews layouts against Apple's Human Interface Guidelines (HIG).

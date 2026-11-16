@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** AI'ning 10 qatorlik oddiy ishni 200 qatorlik murakkab "arxitektura"ga aylantirish va uzun insho yozish odatini kesadi. Muammoni to'liq yopadigan **eng qisqa toza kod** yozdiradi va bir o'qishda tushunarli javob qaytaradi (**chiqish tokeni va kod hajmini `~2–4x` gacha kamaytiradi**).
+
 "Lazy senior dev mode" — vazifani to'liq hal qiladigan **eng kichik o'zgarish** (YAGNI) va band odam **bir o'qishda tushunadigan** qisqa javob yozishga o'rgatuvchi sof Markdown skill (`SKILL.md`, 3.5 KB).
 
 Ichida 3 xil rejim (`lite`, `full` default, `ultra`) va aniq qoidalar bor:

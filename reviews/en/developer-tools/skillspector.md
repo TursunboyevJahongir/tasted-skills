@@ -16,6 +16,9 @@
 
 ## 1. Brief Overview: What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** NVIDIA's thorough skill scanner, skipped because running a separate Python/Docker/YARA pipeline for each skill check adds daily friction — `0.1s` `skillshare audit` + direct AI source inspection covers us faster.
+
 An open-source security scanner by NVIDIA (`Python 3.12 + LangGraph`) designed to vet AI agent skills and MCP servers in **two stages** before installation:
 1. **Static analysis (`--no-llm`):** Checks `71+` patterns across `17` categories using Python/JS AST, taint tracking (source-to-sink secret exfiltration chains), YARA malware signatures, live `OSV.dev` CVE lookups, and MCP Tool Poisoning / Registry Diff checks.
 2. **Optional LLM semantic pass:** Compares whether the implementation actually matches what `SKILL.md` claims (via API keys or local `claude_cli` / `gemini_cli` / `ollama`).

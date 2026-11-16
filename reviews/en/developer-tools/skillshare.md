@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Eliminates manually copying skills across `Codex`, `Claude`, and `Antigravity` folders by syncing everything from one central directory, while its built-in **`skillshare audit`** scans new skills in `0.1s` for prompt injection, risky scripts, and token bloat.
+
 A CLI tool that manages and distributes skills, agents, hooks, plugins, and MCP configurations across multiple AI coding agents (**Claude Code**, **Codex**, **Antigravity**, **Cursor**, etc.) from a **single source directory (`~/.config/skillshare/`)**:
 - `skillshare install` / `link` / `sync -g` — installs a skill once and automatically symlinks (or copies) it into every configured agent target directory.
 - **`skillshare audit` (built-in Skill-Check / Security Scanner)** — single Go binary that scans 6 analyzers (`static`, `dataflow`, `tier`, `integrity`, `structure`, `cross-skill`) in `~0.1s` for prompt injection, hidden bidirectional Unicode, data exfiltration, malicious install commands, and cross-skill trigger collisions (`text`, `json`, `sarif`, `markdown` outputs). Crucially, it **runs automatically during `skillshare install`** and blocks `CRITICAL` findings on the spot.

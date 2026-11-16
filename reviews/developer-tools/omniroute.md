@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Pullik AI obunalarini bitta lokal proxy orqali aylantirishga urinadi, lekin amalda uzoq kod yozish sessiyalarini uzib qo'yadi (`#7287`), limit tugaganda yashirincha kuchsiz modelga tushirib kodni buzadi va akkaunt ban (`ToS`) xavfini tug'diradi. O'rniga xavfsiz `Orca` ishlatiladi.
+
 Ko'pchilik `OmniRoute` ni kod yozish sifatini oshiradigan skill deb o'ylaydi, lekin kod bazasini (`v3.8.54`) tekshirganda u ikki qismdan iborat ekani aniqlandi:
 
 1. **Lokal AI Reverse-Proxy (`http://localhost:20128/v1`):** Next.js standalone, SQLite (`better-sqlite3` / `sql.js`) va Electron ustiga qurilgan shlyuz. `Claude Code`, `Codex`, `Cursor` yoki `Cline` dagi `BASE_URL` ni o'ziga ulab oladi, 375+ provayder va bir nechta akkaunt/API kalit o'rtasida so'rovlarni aylantiradi (`auto-fallback`) hamda prompt va terminal javoblarini qisqartiradi (`RTK + Caveman compression`).

@@ -16,6 +16,9 @@
 
 ## 1. Qisqacha: Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Sof Apple SwiftUI (`Widget`, `Live Activity`) yozish qoidalari; bizda asosiy ilovalar `Expo` da bo'lgani uchun global o'rnatmaymiz — faqat iOS Widget yoziladigan loyihaga (`-p`) vaqtincha ulash uchun yaxshi variant.
+
 Ochiq manbadagi yetakchi SwiftUI va Apple HIG skill'lari uchligi:
 - **`twostraws/swiftui-agent-skill` (`swiftui-pro` — Paul Hudson)** va **`AvdLee/SwiftUI-Agent-Skill` (Antoine van der Lee):** Eskirgan API'lar (`NavigationView` o'rniga `NavigationStack`, `@Observable` oqimi), state boshqaruvi, VoiceOver va zamonaviy SwiftUI render xatolarini tuzatadi.
 - **`dickwu/apple-design-skill`:** Apple Human Interface Guidelines (HIG) bo'yicha iOS/macOS interfeyslarini tekshiradi.

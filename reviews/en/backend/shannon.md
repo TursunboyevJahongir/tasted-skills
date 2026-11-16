@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Fires real `Auth bypass`, `IDOR`, `SQLi`, and `XSS` exploit payloads against your local/staging server before major releases to prove vulnerabilities in action (`0` idle token cost via `hacker-test`; never run on production).
+
 `Shannon` (`AGPL-3.0`) is not a static linter or passive code-review prompt — it is an autonomous **White-Box AI Pentester** that attacks a running Web app and HTTP API to prove exploitability:
 
 1. Running `npx @keygraph/shannon@latest start -u <url> -r <repo>` boots **Docker + Temporal (`temporalio/temporal:1.7.0`) + Playwright CLI + the Pi agent harness**.

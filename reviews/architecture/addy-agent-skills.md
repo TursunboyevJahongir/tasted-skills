@@ -16,6 +16,9 @@
 
 ## 1. Qisqacha: Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Addy Osmani'ning 25 ta skilldan iborat tayyor ishlab chiqish konveyeri (`/spec -> /ship`), lekin kundalik vazifalarda majburiy TDD va to'xtash bosqichlari ishni cho'zib yuborgani uchun o'rnatmadik — bizdagi `grill-me` + `ponytail` + `elephant-goldfish-model` uchligi tezroq va tejamkorroq ishlaydi.
+
 Addy Osmani tomonidan yig'ilgan 25 ta muhandislik skilli (`interview-me`, `spec-driven-development`, `test-driven-development`, `doubt-driven-development`, `code-review-and-quality`, `frontend-ui-engineering`, `performance-optimization` va b.) hamda 9 ta lifecycle buyrug'i (`/spec -> /plan -> /build -> /test -> /review -> /ship`).
 
 ---

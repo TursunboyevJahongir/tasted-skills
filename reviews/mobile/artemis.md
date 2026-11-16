@@ -16,6 +16,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Oddiy UI daraxti ko'rinmaydigan o'yin yoki `Canvas` ekranlarini rasm (`OCR`) orqali tekshira oladi, lekin **har bir qadami uchun pullik LLM API kalit (`.env`) yeydi**, `3–40s` sekin ishlaydi va `iOS`/`TV` yo'q. Kundalik ishda bepul va tezkor `agent-device` ishlatiladi.
+
 Google tomonidan ochiq manbaga chiqarilgan (`Apache-2.0`, Python `3.12+`) tabiiy tildagi topshiriqlarni Android telefon yoki emulyatorda avtonom bajaruvchi multi-agent tizim (`AndroidWorld` benchmarkida `99%+` natija ko'rsatgan).
 
 Ichida 2 xil ishlash profili va 4 xil interfeys (`Web UI localhost:8000`, `CLI`, `MCP Server`, `Python SDK`) bor:

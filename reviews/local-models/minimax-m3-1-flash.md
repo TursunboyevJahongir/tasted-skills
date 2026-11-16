@@ -16,6 +16,9 @@
 
 ## 1. Nimaga mo'ljallangan va nima ish qila oladi? (Asosiy yo'nalishi)
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Matn, rasm va videoni tushunadigan tezkor modelning lokal versiyasi, lekin og'irligi **`~250–285 GB`** bo'lgani uchun oddiy kompyuterlarga sig'maydi (`Min: 512 GB Mac Studio` yoki `8× H100`), murakkab kod yozishda ham asosiy model emas (`Terminal-Bench: 38.1%`). Aynan shu model kerak bo'lsa — bulutli API variantini ishlating.
+
 **`MiniMax-M3.1-Flash`** (OpenRouter'da 10 kun **`space-bunny`** nomi bilan `#1` turgan model) — `~428B` umumiy parametrli, lekin har bir tokenda faqat **`~23B` parametri faol ishlovchi** tezkor **multimodal (`matn + rasm + video`, `1,000,000` token kontekst)** Mixture-of-Experts (`MoE`) modelidir.
 
 **Asosiy yo'nalishi va qo'lidan keladigan ishlar:**

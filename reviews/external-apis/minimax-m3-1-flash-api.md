@@ -16,6 +16,9 @@
 
 ## 1. Nimaga mo'ljallangan va nima ish qila oladi? (Asosiy yo'nalishi)
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** O'z mahsulotingiz backendida mijozlar uchun ommaviy chatbot, tarjima, rasm/hujjat o'qish (`OCR`) va video tahlil qilish kerak bo'lganda juda arzon (`$0.15 / $0.60`, keshda `$0.015`) va tez (`170+ tok/s`, `1M` kontekst) ishlaydigan tayyor API *(faqat pullik Zero-Retention kalit ishlating; tekin `:free` ga maxfiy kod bermang)*.
+
 **`MiniMax M3.1 Flash API`** — mahsulotlar ichida (web-app, mobil ilova yoki admin panel backendida) katta oqimli so'rovlarni **juda arzon va yuqori tezlikda** qayta ishlashga mo'ljallangan multimodal (`matn + rasm + video`) bulut API.
 
 **Qo'lidan keladigan asosiy ishlar:**

@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Routes AI subscriptions through a local proxy, but breaks long coding sessions (`#7287`), silently downgrades models when limits hit, and carries account ToS ban risk via TLS-stealth. Replaced safely by `Orca`.
+
 Although often shared as an "AI coding skill", inspecting the `v3.8.54` repository shows it actually consists of two parts:
 
 1. **Local AI Reverse-Proxy (`http://localhost:20128/v1`):** A Next.js standalone + SQLite (`better-sqlite3` / `sql.js`) + Electron gateway that sits between `Claude Code`, `Codex`, `Cursor`, or `Cline` and 375+ upstream providers. It rotates accounts/API keys (`auto-fallback`) and rewrites prompts/tool outputs (`RTK + Caveman compression`).

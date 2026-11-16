@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Prevents animations that look fine on a fast Mac simulator but stutter on real phones by keeping sheets, gestures, press feedback, and haptics strictly on the `Reanimated` `60/120fps` UI thread.
+
 An engineering skill for building 60/120fps animations, gestures, bottom sheets, press feedback, and haptics in React Native and Expo that hold up on real hardware (`SKILL.md` 260 lines + `RECIPES.md` patterns + `LOCAL-COMPATIBILITY.md` guard).
 
 Core decision sequence (executed in strict order):

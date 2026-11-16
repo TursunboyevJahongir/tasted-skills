@@ -16,6 +16,9 @@
 
 ## 1. Qisqacha: Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Yangi foydalanuvchilarga boshlang'ich Claude sozlamalarini tavsiya qiluvchi oddiy maslahatchi plagin; bizda `skillshare` orqali barcha agentlar uchun yagona tizim qurilgani sababli ehtiyoj yo'q.
+
 Anthropic'ning rasmiy `claude-plugins-official` to'plamidagi read-only yordamchi plagin: reponi (`package.json`, CI, freymvorklar) skanerlab, foydalanuvchiga qaysi boshlang'ich `CLAUDE.md` qoidalari, lint hooklar, MCP serverlar (masalan, Playwright) va subagentlarni qo'shish mumkinligini ro'yxat qilib beradi (o'zi fayl o'zgartirmaydi).
 
 ---

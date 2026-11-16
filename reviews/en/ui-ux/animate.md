@@ -16,6 +16,9 @@
 
 ## 1. What It Is & How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Web-only animation skill whose rules are already built into `impeccable` and whose auto-trigger collides with our mobile `animate-expo` skill.
+
 Emil Kowalski's web animation construction skill (`SKILL.md` 209 lines + `RECIPES.md` ready-made component patterns):
 1. **`Frequency Gate`:** Bans animations on high-frequency actions used 100+ times a day (keyboard shortcuts, command palettes).
 2. **Tool selection ladder:** CSS transition → CSS `@starting-style` → CSS animation → WAAPI (`element.animate()`) → `Motion` (`motion.dev`).

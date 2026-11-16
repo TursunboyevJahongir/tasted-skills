@@ -16,6 +16,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** AI yozgan veb-sahifalardagi shablon bezaklarni 9 bosqichda tozalaydi, lekin mobil ilovalarda ishlamaydi va `impeccable` bilan urishadi — buni `impeccable` ning `polish` / `quieter` buyruqlari toza bajaradi.
+
 Damir Sokolovsky (`@heydamir`) tomonidan X'dagi *Unslopping* rukni asosida yozilgan veb-dizayn tozalash skilli:
 1. **AI "slop" belgilarini topish (`references/signs.md`):** Binafsha-ko'k gradientlar, gradient sarlavhalar, neon glow/soyalar, `New ✨` kabi emoji nishonlar, `NAVIGATION` uslubidagi katta harfli keng tracking, tartibsiz `mt-[13px]` oraliqlar va shovqinli copy (`Welcome back! 👋`, `!!`) ro'yxatini tuzadi.
 2. **5 qatorli `Direction` va majburiy to'xtash:** Ish boshlashdan oldin `Product`, `Character`, `World`, `Moments`, `Signature` ni yozib, foydalanuvchi tasdiqlamaguncha tahrirni to'xtatib turadi.

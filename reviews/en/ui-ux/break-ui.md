@@ -16,6 +16,9 @@
 
 ## 1. What It Is & How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Shows where extreme text or empty states break a page, but injects temporary test toggles into your code and stops without fixing the bug — whereas `impeccable` (`harden`) fixes layout edge cases directly.
+
 A skill for stress-testing UI components with realistic worst-case production payloads (`CATALOG.md`) instead of idealized `"Jane Doe"` demo strings:
 - Hyphenated long names (`Aleksandra Wiśniewska-Kowalczyk`), unbreakable long emails and URLs, single-letter names (`J`), Vietnamese/Arabic (`RTL`)/CJK scripts, ZWJ emoji sequences (`👩🏽‍💻`), numbers like `0` / `1` ("1 members") / `1,284` / `0.30000000000000004`, `404` avatars, and `1,000+` row lists;
 - Wires a temporary **`Demo / Worst case / Empty / One / 1,000 rows`** switch pill and fixture file into the project and checks `320px`, `200% zoom`, and `RTL`;

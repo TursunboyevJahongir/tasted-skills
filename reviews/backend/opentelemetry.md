@@ -16,6 +16,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** O'nlab mikroservis va og'ir server infratuzilmasi (`CPU`, `RAM`, `DB pool`) metrikalarini kuzatish uchun eng kuchli standart, lekin alohida `Collector + Grafana/SigNoz` serverlarini saqlashni talab qiladi — hozirgi barcha xato, replay va trace ishlarimizni bitta `Sentry` yopadi.
+
 CNCF (Cloud Native Computing Foundation) tomonidan ishlab chiqilgan, har qanday dasturlash tili va servisdan **3 turdagi telemetriyani (`Traces`, `Metrics`, `Logs`) yagona formatda (`OTLP`) yig'uvchi va uzatuvchi universal standart**:
 
 1. **Yagona so'rov pasporti (`trace_id` / W3C `traceparent`):** Mijozdan kelgan bitta so'rov API, autentifikatsiya servisi, ma'lumotlar bazasi (`PostgreSQL`/`Redis`), navbat (`Queue`/`Worker`) va tashqi to'lov/xabar servislaridan o'tayotganda uzilmay kuzatib boradi.

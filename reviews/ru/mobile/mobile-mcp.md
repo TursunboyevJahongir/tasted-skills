@@ -15,6 +15,9 @@
 
 ## 1. Что это и как работает?
 
+> [!IMPORTANT]
+> **Простыми словами (Главная задача и польза):** Отклонён после живого теста: сжигает **`~7,580` токенов на каждом сообщении** даже в простое, работает в **`6.5x–37x` медленнее** `agent-device` и содержит телеметрию с рекламой платного облака.
+
 `@mobilenext/mobile-mcp` — Node.js MCP-сервер (`stdio` / Streamable HTTP) поверх `mobilewright` и WebDriverAgent, предоставляющий 34 инструмента `mobile_*` (`mobile_list_elements_on_screen`, `mobile_click_on_screen_at_coordinates`, `mobile_login_to_cloud_provider` и др.).
 
 ---

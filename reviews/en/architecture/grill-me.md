@@ -15,6 +15,9 @@
 
 ## 1. What It Is & How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Helps you think a task all the way through before coding — instead of blindly tossing a *"do this task"* prompt at AI, short focused Q&A rounds align both you and the agent on one exact plan. Prevents going down the wrong path and rewriting/re-testing the same feature 2–3 times (**saving `~2–3x` in time and tokens**) while surfacing edge cases you hadn't considered yet.
+
 Created by Matt Pocock, this lightweight yet powerful skill stress-tests a plan or architectural idea through **structured Q&A rounds** before any code is written:
 - Treats the problem as a **design decision tree** and asks only the currently unlocked **frontier** questions in each round, numbered clearly (`❓ Q1 ... ➡️ Recommended answer`).
 - **Golden Rule:** Never asks the user for *facts* that can be discovered in the codebase or filesystem — it dispatches a subagent or reads files itself, asking the user only questions that require a *decision*.

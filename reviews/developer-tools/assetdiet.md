@@ -15,6 +15,9 @@
 
 ## 1. Qisqacha: Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Sayt yoki mobil ilovani og'irlashtirib yuborgan rasm, SVG, video va 3D fayllarni bulutga yuklamasdan, kompyuterning o'zida sifatni buzmay siqib beradi va kerak bo'lsa 1 buyruq bilan asl holiga qaytaradi (`0` doimiy MCP token yuki bilan faqat chaqirilganda ishlaydi).
+
 Loyiha ichidagi og'ir media fayllarni bulutga yubormasdan **100% lokal** siqadigan va tartibga soladigan vosita:
 - **Mahalliy dvigatellari:** `Sharp v0.35` (`libvips` — `WebP` / `AVIF`), `SVGO 3.x` (SVG tozalash), `FFmpeg` (video) va `@gltf-transform` (`GLB`/`GLTF` 3D modellar).
 - **Xavfsiz o'zgartirish va rollback:** SHA-256 orqali dublikat fayllarni topadi, `safe` rejimda formatni buzmasdan lossless siqadi (`balanced` rejimda esa `.png`/`.jpg -> .webp` va kod importlarini yangilaydi) hamda `.assetdiet/backups/<runId>/` + write-ahead jurnal orqali bir buyruq bilan orqaga qaytarish (`restore`) imkonini beradi.

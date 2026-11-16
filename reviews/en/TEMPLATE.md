@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Plain-language explanation a reader understands in one pass — what practical problem it solves and how much time/tokens/RAM it saves (or why it was rejected).
+
 Beyond marketing or video demos, what actually exists in the repository and how it operates at runtime (pure Markdown rules, Python/Node scripts, subagent orchestration, MCP server, or local service).
 
 ---

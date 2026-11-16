@@ -16,6 +16,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Uzun matn va bo'sh ro'yxatlar bilan sahifa qayerda buzilishini ko'rsatadi, lekin loyiha kodiga vaqtinchalik test tugmalar qo'shib ketadi va muammoni tuzatmay to'xtaydi — `impeccable` (`harden`) esa muammoni topiboq darhol kodda tuzatadi.
+
 UI komponentlarni ideal demo ma'lumotlar (`"Jane Doe"`) o'rniga real hayotdagi eng noqulay ma'lumotlar (`CATALOG.md`) bilan sinab ko'rish skilli:
 - Qo'shaloq uzun ismlar (`Aleksandra Wiśniewska-Kowalczyk`), bo'linmaydigan uzun email va URL'lar, 1 harfli ism (`J`), Vetnam/Arab (`RTL`)/CJK yozuvlari, ZWJ emoji (`👩🏽‍💻`), `0` / `1` ("1 members") / `1,284` / `0.30000000000000004` sonlari, `404` avatar va `1,000+` qatorli ro'yxatlar;
 - Loyiha ichiga vaqtinchalik **`Demo / Worst case / Empty / One / 1,000 rows`** switch tugmasini va fixture faylini ulab, `320px`, `200% zoom` va `RTL` da tekshiradi;

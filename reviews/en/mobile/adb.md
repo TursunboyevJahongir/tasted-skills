@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Core low-level bridge for Android port forwarding (`adb reverse`), reading native crash logs (`logcat`), and installing APKs across emulators and physical phones.
+
 Google's official **Android Debug Bridge (`adb`)** command-line utility. It allows AI agents to inspect, tap, and verify mobile apps (React Native, Expo, Kotlin/Java, Flutter) on both local emulators and USB-connected physical Android devices.
 
 **Why it is essential (technical reason):**

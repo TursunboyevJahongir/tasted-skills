@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Ishni boshlashdan oldin oxirigacha o'ylab olishga yordam beradi — vazifani AI'ga *"shu taskni qil"* deb ko'r-ko'rona topshirib yubormaysiz. Qisqa savol-javoblar orqali siz va AI bitta aniq yechimga kelasiz: xato yo'ldan ketib, bitta ishni ikki-uch marta qayta yozish va tekshirishdan saqlaydi (**vaqt va tokenni `~2–3x` tejaydi**) hamda o'zingiz ko'rmay qolgan chekka holatlarni boshidayoq ochib beradi.
+
 Matt Pocock tomonidan yaratilgan, reja yoki arxitektura g'oyasini kod yozishdan oldin **savol-javob bosqichlari (rounds)** orqali oxirigacha aniqlashtirib oladigan yengil va kuchli skill:
 - Vazifani **qarorlar daraxti (design tree)** sifatida ko'radi va har bir bosqichda faqat oldingi shartlari hal bo'lgan savollarni (**frontier**) raqamlab beradi (`❓ Q1 ... ➡️ Tavsiya etilgan javob`).
 - **Muhim qoida:** Kod bazasidan yoki fayl tizimidan topib bo'ladigan *faktlarni* foydalanuvchidan so'ramaydi — subagent yuborib o'zi tekshiradi; foydalanuvchiga faqat *qaror* talab qiladigan savollarni qo'yadi.

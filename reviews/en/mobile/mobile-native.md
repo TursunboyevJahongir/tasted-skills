@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Fixes the 11 classic mobile browser quirks (iOS input auto-zoom, jumping `100vh` bars, notch clipping, sticky hover states) so mobile web apps and Mini Apps feel truly native on a phone.
+
 Authored by **Emil Kowalski** (creator of `Sonner` and `Vaul`, design engineer formerly at Linear and Vercel).
 
 The skill installs no external scripts or libraries. It solves one specific job: eliminating the **11 browser/CSS platform tells that give away a mobile web app, PWA, or Mini App as "just a website in a browser"** using clean CSS declarations and `<meta>` tags:

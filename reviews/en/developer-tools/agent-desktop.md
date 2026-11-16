@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Lets you keep working normally while AI clicks buttons, fills forms, and tests your open `Google Chrome` or macOS desktop apps silently in the background without moving your cursor (**saving `~5–10x` tokens** compared to screenshot loops).
+
 A fast native CLI tool that inspects and drives desktop applications directly through the operating system's **Accessibility (`AX`) tree**. Every command returns structured JSON (`ok`, `data`, `error`).
 
 Core workflow (`observe → act → verify`):

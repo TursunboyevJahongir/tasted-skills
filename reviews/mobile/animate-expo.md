@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Simulyatorda silliq ko'rinib, real Android/iPhone'da qotadigan animatsiyalarning oldini oladi: `bottom-sheet`, `swipe`, tugma bosilishi va `haptics` ni asosiy JS oqimini band qilmasdan to'g'ri `Reanimated` UI oqimida (`60/120fps`) yozdiradi.
+
 React Native va Expo ilovalarda haqiqiy qurilmada (`60/120fps`) qotmasdan ishlaydigan animatsiya, jest (gesture), bottom-sheet, press feedback va haptics yozish bo'yicha amaliy muhandislik skilli (`SKILL.md` 260 qator + `RECIPES.md` tayyor retseptlar + `LOCAL-COMPATIBILITY.md` lokal moslik qoidasi).
 
 Asosiy qaror qabul qilish zanjiri (ketma-ketlikda ishlaydi):

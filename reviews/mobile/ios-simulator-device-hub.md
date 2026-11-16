@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** iOS Simulator'ni ekranni to'smasdan orqa fonda yoqib-yopadi (`simctl boot/shutdown`) va tayyor build'ni kabel/Wi-Fi orqali haqiqiy iPhone'ga o'rnatib beradi (`devicectl`).
+
 macOS'da iOS va Expo / React Native ilovalarini fonda ishga tushirish, boshqarish va tekshirish uchun ishlatiladigan Apple rasmiy vositalari zanjiri:
 
 1. **`xcrun simctl` (Lokal iOS Simulator boshqaruvi):**

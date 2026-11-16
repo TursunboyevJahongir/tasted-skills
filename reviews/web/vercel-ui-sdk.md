@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi? (Video reklamasi vs Asl haqiqat)
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Reklamasidagi *"skrinshotsiz 2x tez boshqaruv"* oddiy `<button>`/`<input>` yoki `Shadcn` saytlarini ko'rmaydi — faqat butun saytni `@ui-sdk/*` da qaytadan yozib chiqsangizgina ishlaydi (`Expo` esa umuman yo'q). Tayyor saytlarning hammasida bizdagi `agent-desktop` muammosiz ishlaydi.
+
 Ijtimoiy tarmoqlardagi videolarda `vercel-labs/ui` *"interaktiv UI qurish kutubxonasi va AI agentlarga sahifani skrinshotsiz 2 baravar tez, 2 baravar arzon boshqarish imkonini beruvchi vosita"* sifatida ko'rsatiladi.
 
 **Birlamchi kod auditi (`packages/` va `packages/core/skills/ui-sdk/`) nimani ko'rsatdi?**

@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Katta reliz oldidan lokal yoki staging serverga haqiqiy xakerdek exploit so'rovlar (`Auth bypass`, `IDOR`, `SQLi`, `XSS`) otib, himoyani amalda sinab beradi (`0` doimiy kontekst yuki bilan faqat `hacker-test` chaqirilganda ishlaydi; production'ga otish taqiqlangan).
+
 `Shannon` (`AGPL-3.0`) — oddiy statik linter yoki kod o'qiydigan prompt emas, balki ishlab turgan Web ilova va HTTP API'ga real hujum uyushtirib zaiflikni isbotlaydigan **White-Box AI Pentester**:
 
 1. `npx @keygraph/shannon@latest start -u <url> -r <repo>` ishga tushganda u **Docker + Temporal (`temporalio/temporal:1.7.0`) + Playwright CLI + Pi agent harness** konteynerlarini ko'taradi.

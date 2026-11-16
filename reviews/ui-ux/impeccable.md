@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** AI chizadigan bir xil shablon ("AI-slop") dizaynlarni taqiqlab, Web, mobil veb va iOS/Android ekranlarni professional darajada chizadi va tekshiradi (`polish`, `clarify`, `harden`). Ichiga biz qo'shgan **`APCA` (`|Lc| ≥ 60`) kontrast qoidasi** esa rangli brend tugmalarda toza oq yozuvni xira qoraga aylanib ketishdan saqlaydi.
+
 Paul Bakaus tomonidan ishlab chiqilgan keng qamrovli *Design Director* skilli. Oddiy tayyor rang shablonlari o'rniga sahifaning vazifasiga qarab 4 xil rejimda ishlaydi:
 - **Persuade:** Landing, marketing va narx sahifalari (kuchli vizual xarakter va konversiya).
 - **Operate:** Dashboard, admin panel, xarita va ishchi web-app'lar (aniqlik, tez o'qilish va qulaylik ustuvor).

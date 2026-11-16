@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Rejected after live benchmarking: wastes **`~7,580` tokens on every message** even when idle, runs **`6.5x–37x` slower** than `agent-device`, and bundles telemetry plus cloud upsells.
+
 `@mobilenext/mobile-mcp` is a Node.js MCP server (`stdio` / Streamable HTTP) built around `mobilewright` and WebDriverAgent that exposes 34 `mobile_*` tools (`mobile_list_elements_on_screen`, `mobile_click_on_screen_at_coordinates`, `mobile_login_to_cloud_provider`, etc.) to MCP clients.
 
 ---

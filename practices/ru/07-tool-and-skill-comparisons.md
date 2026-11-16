@@ -72,7 +72,7 @@
 
 | Инструмент | Подход | Решение и причина |
 |---|---|---|
-| ✅ [**`grill-me`**](../../reviews/ru/architecture/grill-me.md) + [**`graphify`**](../../reviews/ru/architecture/graphify.md) + [**`ponytail`**](../../reviews/ru/architecture/ponytail.md) + [**`karpathy-guidelines`**](../../reviews/ru/architecture/karpathy-guidelines.md) | AST-граф за `0` токенов (`graphify`) -> дерево решений до кода (`grill-me`) -> минимальный YAGNI и `surgical` diff (`ponytail` + `karpathy`). | **✅ Основная четвёрка (`#1–#4`)** — быстро, точно и без лишней бюрократии. |
+| ✅ [**`grill-me`**](../../reviews/ru/architecture/grill-me.md) + [**`graphify`**](../../reviews/ru/architecture/graphify.md) + [**`ponytail`**](../../reviews/ru/architecture/ponytail.md) + [**`karpathy-guidelines`**](../../reviews/ru/architecture/karpathy-guidelines.md) | Каркас проекта за `0` токенов (`graphify`, экономит `~10x–20x` токенов на больших репо) -> продумывание задачи до кода (`grill-me`, спасает от 2–3x переделок) -> минимальный YAGNI и `surgical` diff (`ponytail` + `karpathy`). | **✅ Основная четвёрка (`#1–#4`)** — быстро, точно и без лишней бюрократии. |
 | ❌ [**`superpowers`**](../../reviews/ru/architecture/superpowers.md) | 14 скиллов + хук `SessionStart` + обязательный TDD и циклы субагентов на каждый шаг. | `⛔ Отклонено` — удалён после 5 месяцев теста (замедляет разработку в `2` раза и сжигает квоту). |
 | ❌ [**`addy-agent-skills`**](../../reviews/ru/architecture/addy-agent-skills.md) | 25 скиллов + тяжёлый конвейер `/spec -> /ship` и остановки `doubt-driven`. | `⛔ Отклонено` — лишние циклы в повседневной работе. |
 | ❌ [**`agency-agents`**](../../reviews/ru/architecture/agency-agents.md) | 283 `.md` ролевых промпта (`~18.5K` токенов раздувания frontmatter). | `⛔ Отклонено` — поверхностные шаблонные роли. |
@@ -85,12 +85,13 @@
 | 👍 [**`caveman`**](../../reviews/ru/developer-tools/caveman.md) | Вырезает артикли и связки **только из текстового ответа в терминале** (`~65%` меньше выходных токенов); на объём кода не влияет. | В CLI-пакете есть `fetch`-телеметрия и хуки `SessionStart` (брать только чистый `SKILL.md`) | `👍` Резерв (`ponytail` полностью хватает) |
 | ❌ [**`humanizer` + `stop-slop`**](../../reviews/ru/developer-tools/humanizer-stop-slop.md) | Чистит длинные статьи и эссе от штампов ИИ. | `~32 KB` (`humanizer`) | `⛔ Отклонено` (не для кода и UI) |
 
-### C. Мультиагентная Работа и Ревью (`T3 Code` + `EGM` vs `OmniRoute`)
+### C. Мультиагентная Работа и Ревью (`Orca` + `EGM` vs `T3 Code` vs `OmniRoute`)
 
 | Инструмент | Задача | Решение |
 |---|---|---|
-| ✅ [**`T3 Code`**](../../reviews/ru/developer-tools/t3-code.md) + `task-context` | **Контекстное кросс-ревью:** Передача истории задачи в CLI-субагенты `Codex`, `Claude Opus`, `Argon` для независимой проверки или смены модели при исчерпании квоты. | **✅ Основной (`#13`)** |
-| ✅ [**`elephant-goldfish-model`**](../../reviews/ru/architecture/elephant-goldfish-model.md) | **Ревью без памяти (`Goldfish`, 5 персон) + Drift + ТРИЗ:** Аудит архитектуры/PR без предвзятости, поиск расхождений доков с кодом (`egm-drift-report`) и решение противоречий по ТРИЗ. | **✅ Основной (`#6`)** |
+| ✅ [**`Orca`**](../../reviews/ru/developer-tools/orca.md) + `orchestration` + `task-context` | **Цепочка ИИ из одного промпта + Мобильное управление:** Живые карточки субагентов (`Codex`, `Claude`, `Argon`) прямо в Chat UI, работа при `Lock Screen` (`caffeinate`), стабильное приложение `Orca IDE` и передача эстафеты через `task-context` (`841 MB` RAM). | **✅ Использую (`#13`)** |
+| ✅ [**`elephant-goldfish-model`**](../../reviews/ru/architecture/elephant-goldfish-model.md) | **Ревью без памяти (`Goldfish`, 5 персон) + Drift + ТРИЗ:** Аудит архитектуры/PR без предвзятости, поиск расхождений доков с кодом (`egm-drift-report`) и решение противоречий по ТРИЗ. | **✅ Использую (`#6`)** |
+| ❌ [**`T3 Code`**](../../reviews/ru/developer-tools/t3-code.md) | Наше прежнее мультиагентное приложение (`2026-10-23 → 2026-11-16`). | `⛔ Отклонено` — бета-приложение на телефоне часто отваливалось, сессии прерывались при `Lock Screen`, нет карточек субагентов в чате (заменено на `Orca`). |
 | ❌ [**`OmniRoute`**](../../reviews/ru/developer-tools/omniroute.md) | Локальный LLM reverse-proxy (`localhost:20128`) + 44 админ-скилла. | `⛔ Отклонено` — рвёт длинные сессии (`#7287`), незаметно понижает модель и несёт риск бана аккаунта из-за `wreq-js` TLS-stealth. |
 
 ---

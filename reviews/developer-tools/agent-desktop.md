@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Siz kompyuterda o'z ishingizni qilaverasiz — AI esa sichqonchangizga tegmasdan va oynani oldinga chiqarmasdan, orqa fonda ochiq turgan `Google Chrome` yoki macOS dasturlaridagi tugmalarni bosib, formalarni to'ldirib UI'ni o'zi tekshiradi (**og'ir skrinshotlarga qaraganda tokenni `~5–10x` tejaydi**).
+
 Operatsion tizimning o'z **Accessibility (`AX`) daraxti** orqali desktop dasturlarni o'qiydigan va boshqaradigan tezkor CLI vosita. Har bir buyruq aniq JSON (`ok`, `data`, `error`) qaytaradi.
 
 Asosiy ishlash zanjiri (`observe → act → verify`):

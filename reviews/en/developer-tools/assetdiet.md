@@ -15,6 +15,9 @@
 
 ## 1. Brief Overview: What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Finds and compresses heavy images, SVGs, videos, and 3D assets locally on your machine without uploading anything to the cloud, complete with 1-command rollback (`0` idle MCP token cost).
+
 A **100% local** media audit and compression pipeline with zero cloud uploads:
 - **Native engines:** `Sharp v0.35` (`libvips` for `WebP` / `AVIF`), `SVGO 3.x` (SVG cleanup), `FFmpeg` (video), and `@gltf-transform` (`GLB`/`GLTF` 3D assets).
 - **Safe migration & rollback:** Detects exact duplicates via SHA-256, compresses losslessly in-place under `safe` (or converts `.png`/`.jpg -> .webp` with import rewriting under `balanced`), and stores `.assetdiet/backups/<runId>/` snapshots with a write-ahead journal for instant `restore`.

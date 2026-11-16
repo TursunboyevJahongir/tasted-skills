@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Saves hours of slow USB device rebuilds: **Stage 1** runs all fast UI iterations locally in the background (`agent-desktop` + `agent-device`), and **Stage 2** runs one final verification pass on a real phone right before marking Done.
+
 A custom 2-stage global QA skill designed to verify Web, iOS/tvOS, and Android/Android TV changes rapidly against live UI **without writing upfront unit tests (TDD)**:
 
 1. **Stage 1 (Iterative Development — 100% Local on Mac):**

@@ -16,6 +16,9 @@
 
 ## 1. Brief Overview: What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Starter recommender plugin for brand-new Claude Code setups; unnecessary once all agents are already unified through `skillshare`.
+
 An official read-only plugin inside `anthropics/claude-plugins-official` that inspects a repository (`package.json`, CI configs, frameworks) and suggests starter `CLAUDE.md` rules, lint hooks, subagents, and MCP servers (such as Playwright) without modifying files automatically.
 
 ---

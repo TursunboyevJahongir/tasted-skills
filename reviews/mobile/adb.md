@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Android emulyator va haqiqiy telefonlarda lokal backend portini ulash (`adb reverse`), ilova qulaganda aniq xato qatorini (`logcat`) ko'rish va APK o'rnatish uchun asosiy ko'prik.
+
 Google'ning rasmiy **Android Debug Bridge (`adb`)** buyruq satri vositasi. AI agentlar uchun mobil ilovalarni (React Native, Expo, Kotlin/Java, Flutter) emulyator yoki USB orqali ulangan telefonda ko'rish, bosish va tekshirish imkonini beradi.
 
 **Nega u shart bo'ldi (texnik sabab):**

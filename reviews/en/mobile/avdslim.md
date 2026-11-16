@@ -16,6 +16,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Switches Android Emulator graphics from slow CPU rendering onto **Apple Metal GPU (`host`)** and **cuts RAM from `4.41 GB -> 2.64 GB` (`-69%` vs. Android Studio's `8.5 GB` default)** with `14s` Golden Snapshot boots.
+
 An open-source (`MIT`, `45-byte` `go.mod` — zero third-party packages, zero network calls) Android Virtual Device (`AVD`) optimizer inspired by [**`simslim`**](simslim.md). Fixes the four root causes that make Android emulators consume `4.5 GB – 8.5 GB` of host RAM on Apple Silicon and Linux:
 
 1. **Eliminates the `Lavapipe / SwiftShader` CPU rendering trap (`-gpu host`):** Android Studio AVDs often default to `hw.gpu.mode=auto` / `hw.gpu.enabled=no`, falling back to CPU software rasterization (`SwiftShader LLVM` / `lavapipe`). `avdslim tune-avd` switches rendering to native **Apple Silicon Metal GPU (`host`)**.

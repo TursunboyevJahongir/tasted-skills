@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Telefonda ochilgan veb-sayt yoki Mini App'ni haqiqiy native ilovadek silliq qiladigan 11 ta tayyor yechim (Safari input kattalashib ketishi, `100vh` sakrashi, iPhone `notch` ustiga chiqish va yopishqoq `hover` muammolarini bir zarbada yopadi).
+
 Muallifi — **Emil Kowalski** (`Sonner` va `Vaul` kutubxonalari muallifi, avval Linear va Vercel'da ishlagan design engineer).
 
 Skill hech qanday tashqi skript yoki kutubxona o'rnatmaydi. U bitta aniq vazifani bajaradi: **mobil brauzerda, PWA'da yoki mobil WebView/Mini App'da ochilgan veb-ilovani "oddiy veb-sayt" ekanini sezdirib qo'yadigan 11 ta platforma/CSS kamchiligini** toza CSS va `<meta>` teglar orqali tuzatadi:

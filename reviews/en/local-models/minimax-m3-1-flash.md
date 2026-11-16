@@ -16,6 +16,9 @@
 
 ## 1. What Is It Designed For & What Can It Do? (Primary Direction)
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Local weights for the fast `text + image + video` model, rejected for local hosting because its **`~250–285 GB` checkpoint** cannot fit normal workstations (`Min: 512 GB Mac Studio` or `8× H100`) and it isn't a top repo coder (`Terminal-Bench: 38.1%`). Use its cloud API instead if needed.
+
 **`MiniMax-M3.1-Flash`** (the model that ranked `#1` on OpenRouter for 10 days as **`space-bunny`**) is a `~428B` total-parameter Mixture-of-Experts (`MoE`) model that activates only **`~23B` parameters per token** and natively processes **text, images, and video across a `1,000,000`-token context window**.
 
 **Primary capabilities:**

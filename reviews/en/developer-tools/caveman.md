@@ -16,6 +16,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Trims chat reply prose by `~65%` using caveman-short sentences, but does not stop bloated code diffs (and its CLI ships telemetry). Our active `ponytail` skill shrinks both reply prose and code complexity together.
+
 `JuliusBrussee/caveman` (`v4.1.0`, `Apache-2.0`) contains two distinct layers:
 
 1. **Standalone Response Skill (`skills/caveman/SKILL.md`, `89 lines`, `4.68 KB`):** Pure Markdown output-style rules grounded in `ASD-STE100` controlled English (`<=20` words per sentence, active voice). Strips greetings, hedging, recaps, and optional articles (`a/an/the`) while keeping negations (`not/never/no/only`), code blocks, CLI commands, file paths, and exact error strings verbatim. Automatically drops back to plain prose for security warnings, irreversible confirmations, and confused users. Accompanied by sibling skills `ultracave` (stripped grammar fragments) and `megacave` (Classical Chinese — 文言文).

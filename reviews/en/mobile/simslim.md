@@ -16,6 +16,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Disables `~150+` unneeded background Apple daemons inside iOS Simulators, **cutting headless RAM from `2.70 GB -> 1.16 GB` (`-57%`, or `4.0 GB -> 0.9 GB` in GUI)** and freeing `1.5 GB+` of disk logs/caches per device.
+
 A clean open-source (`MIT`, zero telemetry, zero network calls) Go CLI that trims unneeded background daemons inside Apple Simulators. A stock iOS or tvOS Simulator boots `~180` background services (`Siri`, `Apple Intelligence`, `Wallpaper PosterBoard`, `Spotlight`, `photoanalysisd`, `iCloud`, `HealthKit`, `Weather`, `News`) that waste gigabytes of RAM during app development and QA.
 
 `simslim` never touches macOS itself — it writes persistent `launchctl disable` overrides strictly into the target `<UDID>` simulator's `launchd_sim` store (on `iOS/tvOS 18.5+`, overrides survive reboots permanently with zero background daemon required).

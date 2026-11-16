@@ -16,6 +16,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** AI'ning terminaldagi gaplarini "g'or odami" uslubida qisqartirib **matn tokenini `~65%` gacha tejaydi**, lekin yoziladigan kodning shishib ketishiga ta'sir qilmaydi (CLI paketida telemetriya bor). Bizdagi `ponytail` esa ham gapni, ham ortiqcha kod hajmini baravar qisqartiradi.
+
 `JuliusBrussee/caveman` (`v4.1.0`, `Apache-2.0`) ikki butunlay boshqa qatlamdan iborat:
 
 1. **Yolg'iz javob skilli (`skills/caveman/SKILL.md`, `89 qator`, `4.68 KB`):** Sof Markdown qoidalar. `ASD-STE100` (aviatsiya texnik ingliz tili standarti — har bir gap max `20` so'z, aniq faol nisbat) asosida AI javoblaridan salomlashish, kirish gaplar, takroriy xulosalar va ixtiyoriy artikllarni (`a/an/the`) olib tashlaydi. Inkor so'zlar (`not/never/no/only`), kod bloklari, buyruqlar, fayl yo'llari va xato matnlariga (`payload`) tegmaydi; xavfsizlik ogohlantirishlari va qaytarib bo'lmas amallarda avtomatik ravishda to'liq tushunarli gapga qaytadi. Yonida `ultracave` (grammatikasiz fragmentlar) va `megacave` (klassik xitoy tili — 文言文) rejimlari bor.

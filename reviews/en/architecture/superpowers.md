@@ -15,6 +15,9 @@
 
 ## 1. What It Is & How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Tested for 5 months and removed: its `SessionStart` hook, noisy brainstorming prompts, and mandatory TDD loops **doubled development time and token spend (`2x`)** on routine Web/Mobile/Backend work. Replaced by lightweight `grill-me` and `ponytail`.
+
 A "complete software development methodology" plugin for Claude Code, Codex, Cursor, and Antigravity consisting of 14 process skills (`using-superpowers`, `brainstorming`, `writing-plans`, `subagent-driven-development`, `executing-plans`, `test-driven-development`, `systematic-debugging`, `using-git-worktrees`, `verification-before-completion`, etc.) plus a `hooks/session-start` script.
 
 How it operates:

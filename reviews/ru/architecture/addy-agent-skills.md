@@ -16,6 +16,9 @@
 
 ## 1. Кратко: Что это и как работает?
 
+> [!IMPORTANT]
+> **Простыми словами (Главная задача и польза):** Конвейер из 25 скиллов (`/spec -> /ship`) от Эдди Османи; не используем, так как обязательный TDD и паузы замедляют ежедневные задачи — связка `grill-me` + `ponytail` + `elephant-goldfish-model` решает это быстрее и экономнее.
+
 Набор из 25 инженерных скиллов от Эдди Османи (`interview-me`, `spec-driven-development`, `test-driven-development`, `doubt-driven-development`, `code-review-and-quality`, `frontend-ui-engineering` и др.) и 9 команд жизненного цикла (`/spec -> /plan -> /build -> /test -> /review -> /ship`).
 
 ---

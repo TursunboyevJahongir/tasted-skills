@@ -15,6 +15,9 @@
 
 ## 1. What It Is & How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Eliminates generic "AI-slop" layouts and designs, audits, and polishes Web, mobile web, and native iOS/Android interfaces (`polish`, `clarify`, `harden`). Our local **`APCA` (`|Lc| ≥ 60`) contrast patch** also protects crisp white labels on colored brand buttons from being ruined by outdated `WCAG 2` math.
+
 A comprehensive *Design Director* skill created by Paul Bakaus. Instead of generic preset color palettes, it operates in 4 distinct modes based on the page's purpose:
 - **Persuade:** Landing, marketing, and pricing pages (strong visual character and conversion).
 - **Operate:** Dashboards, admin panels, maps, and working web apps (clarity, scan speed, and ergonomics first).

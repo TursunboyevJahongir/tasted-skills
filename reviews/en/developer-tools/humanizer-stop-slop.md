@@ -16,6 +16,9 @@
 
 ## 1. Brief Overview: What They Are and How They Work
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Strips AI writing clichés from long-form blog posts and essays (`humanizer` weighs `~32 KB`), not built for code or product UI copy (covered by `ponytail` and `impeccable clarify`).
+
 Two popular Markdown skills focused on stripping LLM clichés from long-form prose:
 - **`blader/humanizer` (`MIT`, `~32 KB` `SKILL.md`):** Built from Wikipedia's *"Signs of AI writing"* guide to rewrite 24 common AI tells (*"delve"*, *"tapestry"*, puffery, em-dash overuse, formulaic conclusions).
 - **`hardikpandya/stop-slop` (`MIT`, `~2.6 KB` `SKILL.md` + `references/`):** Bans binary contrasts (*"Not X. It's Y."*), dramatic one-line closers, and passive voice, grading prose across 5 dimensions.

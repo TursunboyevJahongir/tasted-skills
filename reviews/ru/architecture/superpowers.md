@@ -15,6 +15,9 @@
 
 ## 1. Что это и как работает?
 
+> [!IMPORTANT]
+> **Простыми словами (Главная задача и польза):** Использовали 5 месяцев и удалили: хук `SessionStart`, лишние расспросы и принудительный TDD на каждом шаге **удваивали время работы и расход токенов (`2x`)**. Заменён лёгкими `grill-me` и `ponytail`.
+
 Плагин «полной методологии разработки» для Claude Code, Codex, Cursor и Antigravity, состоящий из 14 процессных скиллов (`using-superpowers`, `brainstorming`, `writing-plans`, `subagent-driven-development`, `executing-plans`, `test-driven-development`, `systematic-debugging`, `using-git-worktrees`, `verification-before-completion` и др.) и скрипта `hooks/session-start`.
 
 Механизм работы:

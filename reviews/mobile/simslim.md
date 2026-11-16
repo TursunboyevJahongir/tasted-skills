@@ -16,6 +16,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** iOS Simulator ichida bekorga ishlab yotadigan `~150+` ta keraksiz Apple fon xizmatini (`Siri`, `Apple Intelligence`, `Wallpaper`) o'chirib, **RAM sarfini `2.70 GB -> 1.16 GB` (`-57%`, oynali rejimda `4.0 GB -> 0.9 GB`)** ga tushiradi va `1.5 GB+` disk keshini tozalaydi.
+
 Toza Go tilida yozilgan ochiq manbali (`MIT`, `0` telemetriya, `0` tarmoq chaqiruvi) CLI vosita. Standart iOS yoki tvOS Simulator yoqilganda Xcode faqat sizning ilovangizni emas, balki `~180` ga yaqin fon xizmatlarini (`Siri`, `Apple Intelligence`, `Wallpaper PosterBoard`, `Spotlight`, `photoanalysisd`, `iCloud`, `HealthKit`, `Weather`, `News`) ham qo'shib ko'taradi.
 
 `simslim` Mac operatsion tizimiga tegmasdan, faqat tanlangan `<UDID>` simulyatorning ichki `launchd_sim` bazasiga `disable` override yozadi (`iOS/tvOS 18.5+` da bu holat rebootlardan keyin ham doimiy saqlanib qoladi — fonda hech qanday daemon turishi shart emas).

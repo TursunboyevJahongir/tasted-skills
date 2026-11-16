@@ -16,6 +16,9 @@
 
 ## 1. What Is It Designed For & What Can It Do? (Primary Direction)
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Very fast (`170+ tok/s`, `1M` context) and inexpensive (`$0.15 / $0.60`, `Cached: $0.015`) cloud API when your own product backend needs high-volume customer chat, translation, document `OCR`, or video analysis *(always use paid Zero-Retention keys; never send private code to `:free` endpoints)*.
+
 **`MiniMax M3.1 Flash API`** is a high-speed, low-cost cloud multimodal (`text + image + video`) API built for handling high-volume requests inside product backends (web apps, mobile apps, and admin tools).
 
 **Core capabilities:**

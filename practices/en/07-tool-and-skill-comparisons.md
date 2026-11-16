@@ -72,7 +72,7 @@ This guide compiles our side-by-side comparisons across every skill, CLI tool, M
 
 | Tool / Suite | Approach | Verdict & Reason |
 |---|---|---|
-| ✅ [**`grill-me`**](../../reviews/en/architecture/grill-me.md) + [**`graphify`**](../../reviews/en/architecture/graphify.md) + [**`ponytail`**](../../reviews/en/architecture/ponytail.md) + [**`karpathy-guidelines`**](../../reviews/en/architecture/karpathy-guidelines.md) | `0`-token AST graph (`graphify`) -> pre-code decision tree (`grill-me`) -> minimal YAGNI & surgical diffs (`ponytail` + `karpathy`). | **✅ Using Core Four (`#1–#4`)** — fast, surgical, and zero bureaucratic ceremony. |
+| ✅ [**`grill-me`**](../../reviews/en/architecture/grill-me.md) + [**`graphify`**](../../reviews/en/architecture/graphify.md) + [**`ponytail`**](../../reviews/en/architecture/ponytail.md) + [**`karpathy-guidelines`**](../../reviews/en/architecture/karpathy-guidelines.md) | `0`-token project blueprint (`graphify`, saves `~10x–20x` tokens on large repos) -> think before blindly delegating (`grill-me`, avoids 2–3x rewrite loops) -> minimal YAGNI & surgical diffs (`ponytail` + `karpathy`). | **✅ Using Core Four (`#1–#4`)** — fast, surgical, and zero bureaucratic ceremony. |
 | ❌ [**`superpowers`**](../../reviews/en/architecture/superpowers.md) | 14 skills + `SessionStart` hook + mandatory TDD & subagent loops on every edit. | `⛔ Rejected` — tested for 5 months and removed (`2x` slower workflow & heavy quota drain). |
 | ❌ [**`addy-agent-skills`**](../../reviews/en/architecture/addy-agent-skills.md) | 25 skills + heavy `/spec -> /ship` ceremony and `doubt-driven` pauses. | `⛔ Rejected` — excessive overhead for daily tasks. |
 | ❌ [**`agency-agents`**](../../reviews/en/architecture/agency-agents.md) | 283 `.md` persona prompts (`~18.5K` tokens of frontmatter bloat). | `⛔ Rejected` — shallow copy-pasted role templates. |
@@ -85,12 +85,13 @@ This guide compiles our side-by-side comparisons across every skill, CLI tool, M
 | 👍 [**`caveman`**](../../reviews/en/developer-tools/caveman.md) | Drops articles/conjunctions in **terminal chat prose only** (`~65%` fewer output tokens); does not prevent code bloat. | CLI package contains `fetch` telemetry & `SessionStart` hooks (must take sanitized `SKILL.md` only) | `👍` Optional (`ponytail` already covers us) |
 | ❌ [**`humanizer` + `stop-slop`**](../../reviews/en/developer-tools/humanizer-stop-slop.md) | Edits long-form blog posts/essays to remove AI clichés. | `~32 KB` (`humanizer`) | `⛔ Rejected` (not for code/UI) |
 
-### C. Multi-Agent Orchestration & Review (`T3 Code` + `EGM` vs. `OmniRoute`)
+### C. Multi-Agent Orchestration & Review (`Orca` + `EGM` vs. `T3 Code` vs. `OmniRoute`)
 
 | Tool | Role | Verdict |
 |---|---|---|
-| ✅ [**`T3 Code`**](../../reviews/en/developer-tools/t3-code.md) + `task-context` | **Context-Aware Cross-AI Review:** Passes verified task history to `Codex`, `Claude Opus`, and `Argon` CLI subagents for independent review or quota handoff. | **✅ Using (`#13`)** |
+| ✅ [**`Orca`**](../../reviews/en/developer-tools/orca.md) + `orchestration` + `task-context` | **Single-Prompt Multi-Agent Chaining + Mobile Control:** Spawns live inline worker cards (`Codex`, `Claude`, `Argon`) in Chat UI, stays awake on Mac `Lock Screen` (`caffeinate`), pairs reliably via `Orca IDE`, and hands off verified `task-context` (`841 MB` RAM). | **✅ Using (`#13`)** |
 | ✅ [**`elephant-goldfish-model`**](../../reviews/en/architecture/elephant-goldfish-model.md) | **Stateless (`Goldfish`) 5-Persona Review + Drift + TRIZ:** Audits specs/PRs with zero confirmation bias, catches doc-to-code drift (`egm-drift-report`), and resolves TRIZ contradictions. | **✅ Using (`#6`)** |
+| ❌ [**`T3 Code`**](../../reviews/en/developer-tools/t3-code.md) | Our former multi-agent desktop app (`2026-10-23 → 2026-11-16`). | `⛔ Rejected` — beta mobile client dropped frequently, sessions died on Mac `Lock Screen`, and Chat UI lacked live inline worker cards (replaced by `Orca`). |
 | ❌ [**`OmniRoute`**](../../reviews/en/developer-tools/omniroute.md) | Local LLM reverse-proxy (`localhost:20128`) + 44 proxy-admin skills. | `⛔ Rejected` — breaks long sessions (`#7287`), silently downgrades models, and risks subscription ToS bans via `wreq-js` TLS-stealth. |
 
 ---

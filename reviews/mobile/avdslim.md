@@ -16,6 +16,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Android Emulator kompyuterni qotirmasligi uchun grafikani sekin CPU'dan **Apple Metal GPU**'ga o'tkazadi va **RAM sarfini `4.41 GB -> 2.64 GB` (Studio standart `8.5 GB` idan `-69%`)** gacha tushirib, yoqilishini `14` soniyaga tezlatadi.
+
 [**`simslim`**](simslim.md) (iOS) g'oyasidan ilhomlanib yozilgan Android Virtual Device (`AVD`) optimizatori (`MIT`, `go.mod` atigi `45 bayt` — `0` tashqi kutubxona, `0` tarmoq chaqiruvi). Android emulyatorlar macOS va Linux'da nima uchun `4.5 GB – 8.5 GB` RAM yeyishining 4 ta tub sababini hal qiladi:
 
 1. **`Lavapipe / SwiftShader` tuzog'ini yo'qotadi (`-gpu host`):** Android Studio ko'pincha `hw.gpu.mode=auto` / `hw.gpu.enabled=no` qoldirib, grafikani CPU dasturiy renderiga (`SwiftShader LLVM` / `lavapipe`) tushirib qo'yadi. `avdslim tune-avd` buni native **Apple Silicon Metal GPU (`host`)** rejimiga o'tkazadi.

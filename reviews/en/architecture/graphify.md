@@ -15,6 +15,9 @@
 
 ## 1. What It Is & How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Its main job is drawing your entire project's structural blueprint — how every file, module, and function connects — locally at **`0` LLM token cost**. On every subsequent task, AI queries this map in seconds instead of reading hundreds of files blind, **saving roughly `10x–20x` (`~85–95%`) in tokens** on large repositories while raising answer accuracy (`70.8% -> 82%`).
+
 A tool that turns any project folder (code, SQL schemas, Markdown docs, PDFs, images, and videos) into a **persistent knowledge graph (`graphify-out/graph.json`, interactive HTML, and `GRAPH_REPORT.md`)** without a vector database:
 - **Deterministic local AST parsing for code files:** Consumes zero LLM tokens and runs fast.
 - **Parallel subagent extraction for docs / PDFs:** Extracts semantic relationships and tags every edge honestly (`EXTRACTED`, `INFERRED`, `AMBIGUOUS`).

@@ -16,6 +16,9 @@
 
 ## 1. What Is It Designed For & What Can It Do? (Primary Direction)
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** An experiment streaming the `2.78T` `Kimi K3` model straight off NVMe SSD without a GPU — **completely unusable for real coding**: `1 token = ~24–33s`, so a `500`-token reply takes **`~3.5 hours`** and **`~50 TB` of SSD reads**, destroying drive lifespan. Use `Ollama` / `MLX` (`Qwen3-Coder`, `30–65 tok/s` in RAM) for real local coding.
+
 - **The model itself (`Kimi K3`, `2.78T` total / `~104B` active parameters, `1M` context):** A frontier-scale Mixture-of-Experts (`MoE`) language model designed for deep reasoning, software engineering, math, and long-document analysis.
 - **What `kimi-k3-in-c` does:** A C99 systems experiment (`~176 KB` binary using `O_DIRECT`) designed to prove that a `1.56 TB` `MXFP4` checkpoint normally requiring `2.25 TB` of GPU VRAM can execute **with zero GPU inside `8–16 GB RAM`** by streaming only the **`16` active experts out of `896`** and the `109 GB` dense trunk layer-by-layer directly off an NVMe SSD.
 

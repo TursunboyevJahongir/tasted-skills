@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Reliz yoki PR oldidan hech qanday Docker server ko'tarmasdan Backend, Web va **Mobil (`deep-link`, `WebView`)** kodlarini xaker ko'zi bilan tekshirib chiqadi va yolg'on trevogalarni ikkinchi mustaqil subagent orqali elakdan o'tkazadi.
+
 Cloudflare xavfsizlik jamoasining ichki zaiflik qidirish tizimidan (`vulnerability harness`) ajratib chiqarilgan **100% lokal, agent-neytral White-Box manba kodi xavfsizligi auditi skilli** (`MIT`, `0` tashqi npm paket, `0` tarmoq murojaati, `0` telemetriya, `0` lifecycle hook).
 
 **6 bosqichli *Adversarial* tekshiruv mexanizmi:**

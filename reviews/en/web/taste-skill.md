@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Good kit for building bold marketing/promo landing pages from scratch, provided you strip its 600s `Stop` hook and scope it strictly to `-p`. For daily app UI, `impeccable` is our primary tool.
+
 Unlike its lightweight v1 ruleset, `tasteskill 2.5.1` (`design-taste-frontend`) is a heavy **landing-page engine built to produce `figma.com`- and `x.ai`-grade marketing sites**:
 - Ships with prebuilt **`system.css`, `system.js`, `starter.html`**, WebGL/shader custom elements (`fx-globe`, `fx-dither-object`, `fx-feature-card`), a curated photography fetcher (`photos.mjs`), and Node 22+ scripts.
 - Classifies sites into 6 business archetypes (`software`, `tech`, `gaming`, `product`, `service`, `place`), enabling WebGL shaders for tech/gaming while enforcing real photography and typography for service/place sites.

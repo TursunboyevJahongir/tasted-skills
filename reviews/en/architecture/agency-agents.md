@@ -16,6 +16,9 @@
 
 ## 1. What It Is & How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** A collection of 283 roleplay prompts (*"act as a marketer/designer"*) that **bloats context by `~18,500` tokens** with shallow copy-pasted templates rather than real engineering rules. Replaced by `impeccable`, `ponytail`, and `elephant-goldfish-model`.
+
 Marketed as *"a complete AI agency at your fingertips"*, this repository contains **no subagent orchestrator, MCP server, or verification runtime**.
 
 What actually ships inside:

@@ -16,6 +16,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Can test custom `Canvas` or game screens visually via OCR, but **bills a separate LLM API key on every step**, takes `3–40s`/step, and is Android-only. For daily QA, free `0.2–0.9s` `agent-device` is far better.
+
 Google's open-source (`Apache-2.0`, Python `3.12+`) autonomous multi-agent Android automation and QA framework (reporting `99%+` task completion on Google Research's `AndroidWorld` benchmark).
 
 Provides two execution profiles across four interfaces (`Web Console localhost:8000`, `CLI`, `MCP Server`, and `Python SDK`):

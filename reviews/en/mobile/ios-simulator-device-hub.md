@@ -15,6 +15,9 @@
 
 ## 1. What It Is and How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Boots and shuts down iOS Simulators headlessly in the background (`simctl boot/shutdown`) and installs builds onto physical iPhones (`devicectl`).
+
 Apple's official toolchain for booting, driving, and verifying iOS and Expo / React Native apps in the background on macOS:
 
 1. **`xcrun simctl` (Local iOS Simulator Lifecycle):**

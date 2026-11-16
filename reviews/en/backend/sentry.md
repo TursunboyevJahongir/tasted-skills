@@ -16,6 +16,9 @@
 
 ## 1. What It Is & How It Works
 
+> [!IMPORTANT]
+> **In Plain Words (Main Job & Value):** Ends blind bug hunting in production: captures the exact crashing code line, pre-error user taps (`Breadcrumbs`), video-like `Session Replay`, and slow SQL/API traces in one place for instant AI root-cause diagnosis.
+
 A unified observability platform that captures real-time errors, slow requests, and user context across Web (`React`, `Next.js`), Mobile (`iOS`, `Android`, `React Native / Expo`), and Backend (`Nest.js`, `FastAPI`, background workers/queues):
 - **Smart `Issue Grouping`:** Deduplicates thousands of identical crashes or exceptions into a single `Issue`, tracking user impact and the exact `Release` where it first appeared.
 - **`Stack Trace` + `Breadcrumbs`:** Pinpoints exact source lines (`Source Maps`, iOS `dSYM`, Android `ProGuard/R8`) alongside the chronological trail of UI clicks, console logs, and network requests leading up to the failure.

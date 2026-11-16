@@ -16,6 +16,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Oldin ko'p-agentli ishlash uchun foydalangan dasturimiz (`2026-10-23 → 2026-11-16`): amalda telefon ilovasi (Beta) tez-tez uzilib qolgani, kompyuter bloklanganda (`Lock Screen`) ishlashdan to'xtagani va Chat UI ichida native subagent kartalari yo'qligi sabab to'liq o'chirib tashlandi (`~3.87 GB` disk bo'shadi) va o'rniga **`Orca`** qoldi.
+
 **T3 Code** — bir nechta AI coding agentlarni (**Codex**, **Claude Code**, **Cursor** va CLI orqali ulangan boshqa agentlar) bitta qulay interfeys, alohida Git worktree/branch'lar va mavjud obunalaringiz (**BYOS — Bring Your Own Subscription**) asosida boshqaradigan open-source ish muhiti.
 
 **Bizdagi asosiy ishlatilish usuli (Multi-AI zanjiri):**

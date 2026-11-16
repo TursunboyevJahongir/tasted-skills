@@ -15,6 +15,9 @@
 
 ## 1. Nima va qanday ishlaydi?
 
+> [!IMPORTANT]
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Ekranda bitta ham simulyator oynasini ochmasdan, orqa fonda `iOS/tvOS` (`~0.2s`) va `Android/TV` (`~0.9s`, o'zbekcha/kirillcha UTF-8 yozuv bilan) ilovalarni o'zi bosib tekshiradi. MCP serverlarga nisbatan **har xabarda `~7,500` tokenni bo'shatadi**, ekran o'qishda **tokenni `~27x` gacha tejaydi** va Java'siz Maestro `.yaml` E2E testlarni yurgizadi.
+
 Callstack (React Native asosiy jamoasi) tomonidan yaratilgan open-source (`MIT`, `0` tashqi npm dependency) mobil va TV UI avtomatizatsiya qatlami (`T3 Code` ichida ham rasman shu vosita ishlatiladi).
 
 Har bir qadamda og'ir skrinshot yoki 10–40 KB xom XML (`uiautomator dump`) o'qish o'rniga:
