@@ -249,10 +249,25 @@ Great fit when your own app backend needs high-volume customer chat, translation
 
 ### 🌐 Web
 
-#### [taste-skill v2.5](reviews/en/web/taste-skill.md) — Starter kit for building bold marketing & promo landing pages from scratch
-`👍 Good Option` · **Quality:** `8.0/10` · **How Often Needed:** `4.0/10` · **Type:** Landing Kit + Hook · **Date:** `2026-11-15`
+#### [Hallmark v2](reviews/en/web/hallmark.md) — Top engine for building greenfield Landing Pages & lossless full-page Redesigns
+`👍 Good Option` · **Quality:** `9.0/10` · **How Often Needed:** `4.5/10` · **Type:** Skill + `sloplint` CLI (50 themes) · **Date:** `2026-11-17`
 
-Strong option for greenfield marketing/promo sites (`4.0/10` only because we don't build promo landings every day; for daily product UI, 👉 [**`impeccable`**](reviews/en/ui-ux/impeccable.md) is cleaner). *If used, strip its slow 600s `Stop` hook and scope strictly to `-p`.*
+Standout choice whenever you need to **build a new landing page or promo site from scratch** or fully redesign an existing web page without dropping a single link or form input. Keep it off permanent global auto-trigger (so it doesn't interfere with daily app/mobile work) and use it **specifically when needed** via project scope (`-p`) or explicit `/hallmark` invocation.
+
+<details>
+<summary>📊 Comparison & Stats (`Hallmark v2` vs. `impeccable` vs. `taste-skill v2.5`)</summary>
+
+- **Why `impeccable` cannot replace `Hallmark` on landing pages:** `Hallmark` brings **50 browsable themes** ([usehallmark.com](https://www.usehallmark.com)), **755 licensed real photos**, `capture.mjs` live product screenshotting, lossless redesign link/form verification (`sloplint --before/--kept`), and a `5,700+`-line `sloplint` checker that catches dead forms and invented stats across `8` Chrome viewport widths.
+- **Why `impeccable` stays our daily primary:** `Hallmark` is Web-only (no `Expo` / `iOS` / `Android`), its 7-step pipeline is heavy for everyday dashboards/apps, and its `WCAG 2` contrast check flags crisp white text on blue/orange brand buttons (`impeccable` uses perceptual `APCA`).
+- **vs. `taste-skill v2.5`:** `Hallmark v2` (`9.0/10`) beats `taste-skill` (`8.0/10`) cleanly — no blocking 600s `Stop` hook, plus mechanical browser linting.
+- 📖 [Full review →](reviews/en/web/hallmark.md) · [Summary comparison below ↓](#detailed-comparisons)
+
+</details>
+
+#### [taste-skill v2.5](reviews/en/web/taste-skill.md) — Starter kit for building bold marketing & promo landing pages from scratch
+`👍 Good Option` · **Quality:** `8.0/10` · **How Often Needed:** `3.5/10` · **Type:** Landing Kit + Hook · **Date:** `2026-11-15`
+
+Good option for greenfield promo sites, though 👉 [**`Hallmark v2`**](reviews/en/web/hallmark.md) is now stronger and cleaner for landing pages (while 👉 [**`impeccable`**](reviews/en/ui-ux/impeccable.md) handles daily product UI). *If using `taste-skill`, strip its 600s `Stop` hook and scope strictly to `-p`.*
 
 #### [vercel-labs/ui](reviews/en/web/vercel-ui-sdk.md) — Beta UI library whose agent mode only sees apps rewritten in `@ui-sdk/*`
 `🔄 Better Alternative` · **Quality:** `8.0/10` · **How Often Needed:** `2.0/10` · **Type:** `@ui-sdk/*` Library + Skill (`Beta`) · **Date:** `2026-11-16`
@@ -496,8 +511,9 @@ For the full 7-domain side-by-side benchmark tables, see: 👉 [**Open Full 7-Do
 - **🌐 Web & Desktop UI Automation:**
   - ✅ [**`agent-desktop`**](reviews/en/developer-tools/agent-desktop.md): drives any existing website and macOS app headlessly (`~5–10x` fewer tokens).
   - 🔄 [**`vercel-labs/ui`**](reviews/en/web/vercel-ui-sdk.md): works strictly on sites rewritten in `@ui-sdk/*` (no `Expo` or standard HTML support).
-- **🎨 UI/UX Design & Motion:**
-  - ✅ [**`impeccable`**](reviews/en/ui-ux/impeccable.md) + [**`mobile-native`**](reviews/en/mobile/mobile-native.md) + [**`animate-expo`**](reviews/en/mobile/animate-expo.md): Web + Mobile Web + Native iOS/Android + `APCA` contrast + `60/120fps` UI-thread motion in one stack.
+- **🎨 UI/UX Design, Landing Pages & Motion:**
+  - ✅ Daily App / Web / Mobile UI: [**`impeccable`**](reviews/en/ui-ux/impeccable.md) + [**`mobile-native`**](reviews/en/mobile/mobile-native.md) + [**`animate-expo`**](reviews/en/mobile/animate-expo.md) (`APCA` contrast + `60/120fps` UI-thread motion).
+  - 👍 On-demand Greenfield Landing Pages (`-p` / `/hallmark`): [**`Hallmark v2`**](reviews/en/web/hallmark.md) (`50` browsable themes, `755` real photos, `capture.mjs`, and `sloplint --before/--kept` — capabilities `impeccable` does not bundle; also stronger than [**`taste-skill v2.5`**](reviews/en/web/taste-skill.md)).
   - 🔄 Alternatives: [**`unslop`**](reviews/en/ui-ux/unslop.md) & [**`animate`**](reviews/en/ui-ux/animate.md) (Web-only, trigger collisions) · [**`break-ui`**](reviews/en/ui-ux/break-ui.md) (breaks UI without fixing) · [**`make-interfaces-feel-better`**](reviews/en/ui-ux/make-interfaces-feel-better.md) (verbose 4-table reports).
 - **🏗️ Planning, YAGNI, Terse Output & Multi-Agent Orchestration:**
   - ✅ [**`grill-me`**](reviews/en/architecture/grill-me.md) + [**`graphify`**](reviews/en/architecture/graphify.md) (`10x–20x` token savings) + [**`ponytail`**](reviews/en/architecture/ponytail.md) (`2–4x` smaller prose & diffs) + [**`Orca`**](reviews/en/developer-tools/orca.md) (`841 MB` RAM, `Lock Screen`-safe + mobile app + inline worker cards).

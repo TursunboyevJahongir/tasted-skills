@@ -249,10 +249,25 @@ O'z loyihangiz ichida mijozlar uchun ommaviy AI-chat, hujjat/rasm o'qish (`OCR`)
 
 ### 🌐 Web
 
-#### [taste-skill v2.5](reviews/web/taste-skill.md) — Noldan chiroyli reklama va promo-landing sahifalar qurish to'plami
-`👍 Yaxshi variant` · **Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `4.0/10` · **Turi:** Landing Kit + Hook · **Sana:** `2026-11-15`
+#### [Hallmark v2](reviews/web/hallmark.md) — Noldan yangi Landing Page qurish va veb-sahifalarni yo'qotishsiz Redesign qilish tizimi
+`👍 Yaxshi variant` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `4.5/10` · **Turi:** Skill + `sloplint` CLI (50 ta mavzu) · **Sana:** `2026-11-17`
 
-Yangi mahsulot uchun noldan ko'zni tortadigan promo-sayt (landing) yig'ishda kuchli variant. Har kuni landing qurmaganimiz uchun `4.0/10` (kundalik mahsulot UI'i uchun 👉 [**`impeccable`**](reviews/ui-ux/impeccable.md) qulayroq). *O'rnatilsa ichidagi 600s `Stop` hookni olib tashlab, faqat loyihaning o'ziga (`-p`) ulash shart.*
+Noldan **yangi landing page, mahsulot taqdimot sayti (promo-sayt) qurish** yoki eski saytni bitta ham link/inputni tushirib qoldirmay to'liq yangilash (`redesign`) uchun eng kuchli tanlov. Doimiy avto-yoqib qo'ymasdan (kundalik Web/Mobil dastur ekranlariga xalaqit bermasligi uchun), **aynan landing sayt kerak bo'lganda** loyihaning o'ziga (`-p`) ulab yoki faqat `/hallmark` buyrug'i bilan chaqirib ishlatish tavsiya etiladi.
+
+<details>
+<summary>📊 Solishtiruv va statistika (`Hallmark v2` vs `impeccable` vs `taste-skill v2.5`)</summary>
+
+- **Nima uchun `impeccable` landingda `Hallmark` o'rnini bosa olmaydi:** `Hallmark` ichida [usehallmark.com](https://www.usehallmark.com) dagi **50 ta tayyor ko'rib-tanlanadigan mavzu**, **755 ta qonuniy real fotosurat**, dasturingizdan avto-skrinshot oluvchi `capture.mjs`, redesign'da link/formalar yo'qolmasligini tekshiruvchi `sloplint --before/--kept` hamda soxta formalar va uydirma raqamlarni `8` ekran o'lchamida tutuvchi `sloplint` (`5,700+` qator kod) bor.
+- **Nima uchun kundalik ishda baribir `impeccable` asosiy qoladi:** `Hallmark` faqat Web uchun (`Expo` / `iOS` / `Android` da ishlamaydi), 7 bosqichli sikli kundalik app/admin ishlari uchun og'ir va eski `WCAG 2` kontrast formulasi sabab rangli tugmadagi toza oq yozuvni yiqitadi (`impeccable` da esa `APCA` bor).
+- **`taste-skill v2.5` bilan farqi:** Landing qurishda `Hallmark v2` (`9.0/10`) `taste-skill` (`8.0/10`) dan ancha toza — bloklovchi 600s `Stop` hooki yo'q va mexanik brauzer tekshirgichi bor.
+- 📖 [Batafsil sharh →](reviews/web/hallmark.md) · [Pastdagi solishtiruv ↓](#batafsil-solishtirishlar)
+
+</details>
+
+#### [taste-skill v2.5](reviews/web/taste-skill.md) — Noldan chiroyli reklama va promo-landing sahifalar qurish to'plami
+`👍 Yaxshi variant` · **Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `3.5/10` · **Turi:** Landing Kit + Hook · **Sana:** `2026-11-15`
+
+Promo-landing yig'ish uchun yaxshi variant, lekin hozir landing sahifalar uchun undan ko'ra 👉 [**`Hallmark v2`**](reviews/web/hallmark.md) kuchliroq va xavfsizroq (kundalik mahsulot UI'i uchun esa 👉 [**`impeccable`**](reviews/ui-ux/impeccable.md)). *Agar `taste-skill` olinsa, ichidagi 600s `Stop` hookni olib tashlab faqat `-p` da ishlatish shart.*
 
 #### [vercel-labs/ui](reviews/web/vercel-ui-sdk.md) — Faqat o'zining `@ui-sdk/*` teglarida yozilgan saytlarnigina ko'radigan Beta kutubxona
 `🔄 Alternativi yaxshiroq` · **Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `2.0/10` · **Turi:** `@ui-sdk/*` Library + Skill (`Beta`) · **Sana:** `2026-11-16`
@@ -496,8 +511,9 @@ Yuqoridagi barcha sinovlar va raqamlarning 7 yo'nalish bo'yicha to'liq qiyosiy j
 - **🌐 Web va Desktop UI Boshqaruvi:**
   - ✅ [**`agent-desktop`**](reviews/developer-tools/agent-desktop.md): har qanday veb-sayt va macOS dasturida kodni o'zgartirmasdan fonda ishlaydi (`~5–10x` kam token).
   - 🔄 [**`vercel-labs/ui`**](reviews/web/vercel-ui-sdk.md): faqat `@ui-sdk/*` da qayta yozilgan saytlarnigina ko'radi (`Expo` va oddiy HTML'da ishlamaydi).
-- **🎨 UI/UX Dizayn va Animatsiya:**
-  - ✅ [**`impeccable`**](reviews/ui-ux/impeccable.md) + [**`mobile-native`**](reviews/mobile/mobile-native.md) + [**`animate-expo`**](reviews/mobile/animate-expo.md): Web + Mobile Web + Native iOS/Android + `APCA` kontrast + `60/120fps` UI-thread animatsiya bitta tizimda.
+- **🎨 UI/UX Dizayn, Landing Page va Animatsiya:**
+  - ✅ Kundalik App / Web / Mobil UI: [**`impeccable`**](reviews/ui-ux/impeccable.md) + [**`mobile-native`**](reviews/mobile/mobile-native.md) + [**`animate-expo`**](reviews/mobile/animate-expo.md) (`APCA` kontrast + `60/120fps` UI-thread animatsiya).
+  - 👍 Noldan Landing Page / Promo-sayt kerak bo'lganda (`-p` / `/hallmark`): [**`Hallmark v2`**](reviews/web/hallmark.md) (`50` ta tayyor mavzu, `755` ta real foto, `capture.mjs` va `sloplint --before/--kept` — bu qismlar `impeccable` da yo'q; [**`taste-skill v2.5`**](reviews/web/taste-skill.md) dan ham ustun).
   - 🔄 Muqobillar: [**`unslop`**](reviews/ui-ux/unslop.md) va [**`animate`**](reviews/ui-ux/animate.md) (faqat Web, auto-trigger urishadi) · [**`break-ui`**](reviews/ui-ux/break-ui.md) (buzib ko'rsatib, tuzatmay to'xtaydi) · [**`make-interfaces-feel-better`**](reviews/ui-ux/make-interfaces-feel-better.md) (4 jadval token yeydi).
 - **🏗️ Reja, YAGNI, Qisqa Javob va Multi-Agent Ishlash:**
   - ✅ [**`grill-me`**](reviews/architecture/grill-me.md) + [**`graphify`**](reviews/architecture/graphify.md) (`10x–20x` token tejamkor) + [**`ponytail`**](reviews/architecture/ponytail.md) (ham matn, ham kodni `2–4x` qisqartiradi) + [**`Orca`**](reviews/developer-tools/orca.md) (`841 MB` RAM, `Lock Screen` + mobil ilova + jonli subagentlar).

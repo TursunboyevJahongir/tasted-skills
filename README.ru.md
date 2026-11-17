@@ -249,10 +249,25 @@
 
 ### 🌐 Web
 
-#### [taste-skill v2.5](reviews/ru/web/taste-skill.md) — Набор для создания ярких промо-лендингов с нуля
-`👍 Хороший вариант` · **Качество:** `8.0/10` · **Частота нужды:** `4.0/10` · **Тип:** Landing Kit + Hook · **Дата:** `2026-11-15`
+#### [Hallmark v2](reviews/ru/web/hallmark.md) — Мощная дизайн-система для создания лендингов с нуля и редизайна без потери ссылок/форм
+`👍 Хороший вариант` · **Качество:** `9.0/10` · **Частота нужды:** `4.5/10` · **Тип:** Skill + `sloplint` CLI (50 тем) · **Дата:** `2026-11-17`
 
-Сильный вариант для сборки рекламных промо-лендингов с нуля (`4.0/10` лишь потому, что лендинги нужны не каждый день; для обычного UI удобнее 👉 [**`impeccable`**](reviews/ru/ui-ux/impeccable.md)). *При установке обязательно вырезать тормозящий 600с `Stop`-хук и ставить только локально (`-p`).*
+Лучший выбор, когда нужно **с нуля собрать качественный лендинг (промо-сайт)** или полностью обновить дизайн страницы (`redesign`), не потеряв ни одной ссылки и формы. Не стоит держать его постоянно авто-включённым (чтобы не мешал повседневной разработке продуктов и мобилок) — **используйте именно тогда, когда нужен лендинг**, подключая локально (`-p`) или вызывая через `/hallmark`.
+
+<details>
+<summary>📊 Сравнение и статистика (`Hallmark v2` vs `impeccable` vs `taste-skill v2.5`)</summary>
+
+- **Почему `impeccable` не заменит `Hallmark` на лендингах:** Внутри `Hallmark` есть **50 готовых визуальных тем** ([usehallmark.com](https://www.usehallmark.com)), **755 лицензионных реальных фото**, авто-скриншоты живого продукта (`capture.mjs`), механическая защита ссылок/форм при редизайне (`sloplint --before/--kept`) и линтер `sloplint` (`5,700+` строк кода), ловящий фейковые формы и выдуманную статистику на `8` ширинах экрана.
+- **Почему `impeccable` остаётся основным на каждый день:** `Hallmark` работает только для Web (нет `Expo` / `iOS` / `Android`), его 7-шаговый цикл избыточен для дашбордов и админок, а старая формула `WCAG 2` бракует белый текст на цветных кнопках (в `impeccable` встроен `APCA`).
+- **Отличие от `taste-skill v2.5`:** Для лендингов `Hallmark v2` (`9.0/10`) заметно чище и сильнее `taste-skill` (`8.0/10`) — нет тормозящего 600с `Stop`-хука и есть реальный браузерный линтер.
+- 📖 [Подробный обзор →](reviews/ru/web/hallmark.md) · [Сводное сравнение внизу ↓](#подробные-сравнения)
+
+</details>
+
+#### [taste-skill v2.5](reviews/ru/web/taste-skill.md) — Набор для создания ярких промо-лендингов с нуля
+`👍 Хороший вариант` · **Качество:** `8.0/10` · **Частота нужды:** `3.5/10` · **Тип:** Landing Kit + Hook · **Дата:** `2026-11-15`
+
+Неплохой набор для промо-сайтов, но для новых лендингов теперь сильнее и безопаснее 👉 [**`Hallmark v2`**](reviews/ru/web/hallmark.md) (а для повседневного продуктового UI — 👉 [**`impeccable`**](reviews/ru/ui-ux/impeccable.md)). *При установке `taste-skill` обязательно вырезать 600с `Stop`-хук и ставить только локально (`-p`).*
 
 #### [vercel-labs/ui](reviews/ru/web/vercel-ui-sdk.md) — Beta-библиотека, где управление агентом работает только на `@ui-sdk/*`
 `🔄 Есть альтернатива получше` · **Качество:** `8.0/10` · **Частота нужды:** `2.0/10` · **Тип:** `@ui-sdk/*` Library + Skill (`Beta`) · **Дата:** `2026-11-16`
@@ -496,8 +511,9 @@ MCP-сервер для управления мобильными экранам
 - **🌐 Управление Web и Desktop UI:**
   - ✅ [**`agent-desktop`**](reviews/ru/developer-tools/agent-desktop.md): работает в фоне на любых готовых сайтах и программах macOS (`в ~5–10x` меньше токенов).
   - 🔄 [**`vercel-labs/ui`**](reviews/ru/web/vercel-ui-sdk.md): видит только сайты, переписанные на `@ui-sdk/*` (не поддерживает `Expo` и обычный HTML).
-- **🎨 UI/UX Дизайн и Анимации:**
-  - ✅ [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) + [**`mobile-native`**](reviews/ru/mobile/mobile-native.md) + [**`animate-expo`**](reviews/ru/mobile/animate-expo.md): Web + Mobile Web + Native iOS/Android + `APCA`-контраст + `60/120fps` UI-thread анимации в одной связке.
+- **🎨 UI/UX Дизайн, Лендинги и Анимации:**
+  - ✅ Повседневный App / Web / Mobile UI: [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) + [**`mobile-native`**](reviews/ru/mobile/mobile-native.md) + [**`animate-expo`**](reviews/ru/mobile/animate-expo.md) (`APCA`-контраст + `60/120fps` UI-thread анимации).
+  - 👍 Когда нужен промо-лендинг с нуля (`-p` / `/hallmark`): [**`Hallmark v2`**](reviews/ru/web/hallmark.md) (`50` готовых тем, `755` живых фото, `capture.mjs` и `sloplint --before/--kept` — этого нет в `impeccable`; также сильнее [**`taste-skill v2.5`**](reviews/ru/web/taste-skill.md)).
   - 🔄 Альтернативы: [**`unslop`**](reviews/ru/ui-ux/unslop.md) и [**`animate`**](reviews/ru/ui-ux/animate.md) (только Web, конфликт авто-триггеров) · [**`break-ui`**](reviews/ru/ui-ux/break-ui.md) (ломает без починки) · [**`make-interfaces-feel-better`**](reviews/ru/ui-ux/make-interfaces-feel-better.md) (простыни из 4 таблиц).
 - **🏗️ Планирование, YAGNI, Краткость и Мультиагенты:**
   - ✅ [**`grill-me`**](reviews/ru/architecture/grill-me.md) + [**`graphify`**](reviews/ru/architecture/graphify.md) (`10x–20x` экономии токенов) + [**`ponytail`**](reviews/ru/architecture/ponytail.md) (сжатие текста и кода в `2–4x`) + [**`Orca`**](reviews/ru/developer-tools/orca.md) (`841 MB` RAM, работает на `Lock Screen` + мобильное приложение + карточки субагентов).

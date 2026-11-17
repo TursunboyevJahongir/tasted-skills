@@ -53,6 +53,7 @@ Unlike its lightweight v1 ruleset, `tasteskill 2.5.1` (`design-taste-frontend`) 
 ## 4. Fit & Compatibility with Our Existing Stack
 
 - For daily web applications and product interfaces, our installed [**`impeccable`**](../ui-ux/impeccable.md) (`Operate` and `Persuade` modes) + [**`mobile-native`**](../mobile/mobile-native.md) stack is far safer because it respects each project's own framework and design tokens without injecting foreign `system.css` files.
+- **Cleaner landing-page & redesign alternative:** [**`Hallmark v2`**](hallmark.md) — ships `50` browsable themes, `755` openly licensed real photos, live app screenshot capture (`capture.mjs`), and lossless `--before/--kept` redesign verification in `~7.1 MB` with zero blocking `Stop` hooks and zero npm dependencies. Unless you specifically want `taste-skill`'s WebGL shaders, prefer `Hallmark v2` on demand for landing pages.
 
 ---
 
