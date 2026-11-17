@@ -394,6 +394,23 @@ Fires real `Auth bypass`, `IDOR`, `SQLi`, `XSS`, and `SSRF` exploits against loc
 
 ### 🛠️ Developer Tools & Memory
 
+#### [REA](reviews/en/developer-tools/rea.md) — Reverse engineer closed-source apps, `.asar`s, `.apk`s & native binaries without source code
+`👍 Good Option` · **Quality:** `9.0/10` · **How Often Needed:** `3.5/10` · **Type:** Standalone CLI + [`rea`](skills/rea/SKILL.md) · **Date:** `2026-11-17`
+
+Recovers how a feature works inside shipped third-party desktop/mobile/web apps without source code (`Electron .asar`, JS bundles, Android `.apk`, `.NET`, `Mach-O`/`ELF`/`PE`) with Evidence IDs (`9.0/10`), and checks your own release artifacts for leaked `.map`/`.dSYM` files (`audit-release-exposure`). Triggered on demand via our [`rea`](skills/rea/SKILL.md) skill (`"rea"`), which **checks and installs target-specific prerequisites first (`openjdk`, `jadx`, `apktool`, `ghidra`, `rizin`)** and runs **temporarily at `0` idle token cost**. *(For our own source repositories, use 👉 [**`graphify`**](reviews/en/architecture/graphify.md)).*
+
+> [!WARNING]
+> **Context Bloat Trap:** Never register global MCP via `npx rea-agents setup` — its `200+` MCP tools add **`~300 KB` (`~75,000+` tokens)** of schema overhead per session! Always invoke temporarily through our [`rea`](skills/rea/SKILL.md) wrapper skill.
+
+<details>
+<summary>📊 Comparison & Stats (Global `REA` MCP vs. our `rea` wrapper skill)</summary>
+
+- **With default `npx rea-agents setup`:** `200+` tools (`~75,000+` tokens/session) + `~198 KB` (`~50K` tokens) skill references + `189.6 MB` npm footprint; fails on `Node 24.20.0`.
+- **With our [`rea`](skills/rea/SKILL.md) wrapper skill:** **`0` idle tokens** in daily coding chats; when signaled with `"rea"`, auto-selects compatible `Node 26+`, detects/installs only target-needed decompilers, executes in `/tmp`, and cleans up afterward.
+- 📖 [Full review →](reviews/en/developer-tools/rea.md) · [Summary comparison below ↓](#detailed-comparisons)
+
+</details>
+
 #### [SkillSpector](reviews/en/developer-tools/skillspector.md) — NVIDIA's Python/Docker/YARA security scanner for skills
 `🔄 Better Alternative` · **Quality:** `9.0/10` · **How Often Needed:** `3.5/10` · **Type:** Python CLI + MCP + Skill · **Date:** `2026-11-16`
 
@@ -487,7 +504,7 @@ For the full 7-domain side-by-side benchmark tables, see: 👉 [**Open Full 7-Do
   - ⚖️ Alternatives: [**`T3 Code`**](reviews/en/developer-tools/t3-code.md) (replaced by `Orca` due to `Lock Screen`/mobile drops) · [**`caveman`**](reviews/en/developer-tools/caveman.md) (chat prose only) · ⚠️ [**`superpowers`**](reviews/en/architecture/superpowers.md) (`2x` slower) · ⚠️ [**`OmniRoute`**](reviews/en/developer-tools/omniroute.md) (session drops & ToS ban risk).
 - **🛡️ Security Audit, Pentesting & Observability:**
   - ✅ [**`skillshare audit`**](reviews/en/developer-tools/skillshare.md) (`0.1s` skill check) + [**`security-audit`**](reviews/en/backend/security-audit-skill.md) (Docker-free source audit) + [**`Shannon`**](reviews/en/backend/shannon.md) (live staging exploit pentest) + [**`sentry`**](reviews/en/backend/sentry.md) (errors + Replay + traces).
-  - ⚖️ Alternatives: [**`SkillSpector`**](reviews/en/developer-tools/skillspector.md) (heavy Docker/YARA pipeline) · [**`opentelemetry`**](reviews/en/backend/opentelemetry.md) (`Collector + SigNoz/Grafana` for large clusters).
+  - ⚖️ Alternatives: [**`SkillSpector`**](reviews/en/developer-tools/skillspector.md) (heavy Docker/YARA pipeline) · [**`opentelemetry`**](reviews/en/backend/opentelemetry.md) (`Collector + SigNoz/Grafana` for large clusters) · 👍 [**`REA`**](reviews/en/developer-tools/rea.md) (for inspecting closed-source `.asar`/`.apk`/binaries temporarily via [`rea`](skills/rea/SKILL.md) and `audit-release-exposure`).
 - **🧠 Local Models & 🔌 External APIs:**
   - ✅ Real offline local coder: **`Ollama` / `MLX` (`Qwen3-Coder`)** (`30–65 tok/s` in `32–64 GB` Mac RAM, zero SSD wear) · Budget backend API: [**`MiniMax M3.1 Flash API`**](reviews/en/external-apis/minimax-m3-1-flash-api.md) (`$0.15/$0.60`, `170+ tok/s`).
   - ⚠️ Not recommended on developer laptops: [**`kimi-k3-in-c`**](reviews/en/local-models/kimi-k3-in-c.md) (`1 token = ~30s`, `~50 TB` SSD reads) · [**`MiniMax-M3.1-Flash` *(Local)* **](reviews/en/local-models/minimax-m3-1-flash.md) (`285 GB` weights, needs `640 GB VRAM`).
@@ -495,10 +512,10 @@ For the full 7-domain side-by-side benchmark tables, see: 👉 [**Open Full 7-Do
 ---
 
 <details>
-<summary>Install global <code>tasted-skills</code>, <code>hacker-test</code>, and <code>asset-diet</code> skills</summary>
+<summary>Install global <code>tasted-skills</code>, <code>hacker-test</code>, <code>asset-diet</code>, and <code>rea</code> skills</summary>
 
 ```bash
-skillshare install TursunboyevJahongir/tasted-skills -s tasted-skills -s hacker-test -s asset-diet -g && skillshare sync -g
+skillshare install TursunboyevJahongir/tasted-skills -s tasted-skills -s hacker-test -s asset-diet -s rea -g && skillshare sync -g
 ```
 
 </details>

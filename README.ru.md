@@ -394,6 +394,23 @@ MCP-сервер для управления мобильными экранам
 
 ### 🛠️ Developer Tools и Memory
 
+#### [REA](reviews/ru/developer-tools/rea.md) — Реверс-инжиниринг закрытых программ, `.asar`, `.apk` и бинарников без исходников
+`👍 Хороший вариант` · **Качество:** `9.0/10` · **Частота нужды:** `3.5/10` · **Тип:** Standalone CLI + [`rea`](skills/rea/SKILL.md) · **Дата:** `2026-11-17`
+
+Вскрывает и с доказательствами объясняет работу нужной функции внутри чужих скомпилированных приложений без исходного кода (`Electron .asar`, JS-бандлы, Android `.apk`, `.NET`, `Mach-O`/`ELF`/`PE`, `9.0/10`), а также проверяет собственные релизные бандлы на утечку `.map`/`.dSYM` (`audit-release-exposure`). Через наш скилл [`rea`](skills/rea/SKILL.md) по сигналу `"rea"` **сначала проверяет и доустанавливает нужные утилиты под цель (`openjdk`, `jadx`, `apktool`, `ghidra`, `rizin`)** и запускается **временно с `0` постоянного расхода токенов**. *(Для собственных исходников используется 👉 [**`graphify`**](reviews/ru/architecture/graphify.md)).*
+
+> [!WARNING]
+> **Ловушка контекста:** Никогда не ставьте глобальный MCP через `npx rea-agents setup` — его `200+` инструментов сжигают **`~300 KB` (`~75,000+` токенов)** контекста в каждой сессии! Запускайте только временно через наш скилл [`rea`](skills/rea/SKILL.md).
+
+<details>
+<summary>📊 Сравнение и статистика (Глобальный `REA` MCP vs наш скилл `rea`)</summary>
+
+- **Со штатным `npx rea-agents setup`:** `200+` инструментов (`~75,000+` токенов/сессия) + `~198 KB` (`~50K` токенов) референсов скилла + `189.6 MB` вес npm-пакета; падает на `Node 24.20.0`.
+- **С нашим скиллом-обёрткой [`rea`](skills/rea/SKILL.md):** **`0` токенов** в повседневной разработке; при вызове `"rea"` сам выбирает `Node 26+`, проверяет/ставит нужные декомпиляторы под конкретный файл, работает в `/tmp` и чистит следы по завершении.
+- 📖 [Подробный обзор →](reviews/ru/developer-tools/rea.md) · [Сводное сравнение внизу ↓](#подробные-сравнения)
+
+</details>
+
 #### [SkillSpector](reviews/ru/developer-tools/skillspector.md) — Python/Docker/YARA-сканер безопасности скиллов от NVIDIA
 `🔄 Есть альтернатива получше` · **Качество:** `9.0/10` · **Частота нужды:** `3.5/10` · **Тип:** Python CLI + MCP + Skill · **Дата:** `2026-11-16`
 
@@ -487,7 +504,7 @@ MCP-сервер для управления мобильными экранам
   - ⚖️ Альтернативы: [**`T3 Code`**](reviews/ru/developer-tools/t3-code.md) (заменён на `Orca` из-за обрывов на `Lock Screen` и телефоне) · [**`caveman`**](reviews/ru/developer-tools/caveman.md) (сжимает только слова в чате) · ⚠️ [**`superpowers`**](reviews/ru/architecture/superpowers.md) (`2x` замедление) · ⚠️ [**`OmniRoute`**](reviews/ru/developer-tools/omniroute.md) (обрывы сессий и риск бана по ToS).
 - **🛡️ Аудит Безопасности, Пентест и Мониторинг:**
   - ✅ [**`skillshare audit`**](reviews/ru/developer-tools/skillshare.md) (проверка скиллов за `0.1с`) + [**`security-audit`**](reviews/ru/backend/security-audit-skill.md) (аудит исходников без Docker) + [**`Shannon`**](reviews/ru/backend/shannon.md) (живой пентест на staging) + [**`sentry`**](reviews/ru/backend/sentry.md) (ошибки + Replay + трейсы).
-  - ⚖️ Альтернативы: [**`SkillSpector`**](reviews/ru/developer-tools/skillspector.md) (тяжёлый цикл Docker/YARA) · [**`opentelemetry`**](reviews/ru/backend/opentelemetry.md) (`Collector + SigNoz/Grafana` для больших кластеров).
+  - ⚖️ Альтернативы: [**`SkillSpector`**](reviews/ru/developer-tools/skillspector.md) (тяжёлый цикл Docker/YARA) · [**`opentelemetry`**](reviews/ru/backend/opentelemetry.md) (`Collector + SigNoz/Grafana` для больших кластеров) · 👍 [**`REA`**](reviews/ru/developer-tools/rea.md) (для временного разбора чужих закрытых `.asar`/`.apk`/бинарников через [`rea`](skills/rea/SKILL.md) и `audit-release-exposure`).
 - **🧠 Локальные Модели и 🔌 Внешние API:**
   - ✅ Реальный локальный кодер: **`Ollama` / `MLX` (`Qwen3-Coder`)** (`30–65 ток/с` в `32–64 GB` RAM на Mac без износа SSD) · Дешёвый API для бэкенда: [**`MiniMax M3.1 Flash API`**](reviews/ru/external-apis/minimax-m3-1-flash-api.md) (`$0.15/$0.60`, `170+ ток/с`).
   - ⚠️ Не рекомендуется на рабочих ноутбуках: [**`kimi-k3-in-c`**](reviews/ru/local-models/kimi-k3-in-c.md) (`1 токен = ~30с`, `~50 TB` чтения с SSD) · [**`MiniMax-M3.1-Flash` *(Локально)* **](reviews/ru/local-models/minimax-m3-1-flash.md) (`285 GB` весов, нужно `640 GB VRAM`).
@@ -495,10 +512,10 @@ MCP-сервер для управления мобильными экранам
 ---
 
 <details>
-<summary>Подключить глобальные скиллы <code>tasted-skills</code>, <code>hacker-test</code> и <code>asset-diet</code></summary>
+<summary>Подключить глобальные скиллы <code>tasted-skills</code>, <code>hacker-test</code>, <code>asset-diet</code> и <code>rea</code></summary>
 
 ```bash
-skillshare install TursunboyevJahongir/tasted-skills -s tasted-skills -s hacker-test -s asset-diet -g && skillshare sync -g
+skillshare install TursunboyevJahongir/tasted-skills -s tasted-skills -s hacker-test -s asset-diet -s rea -g && skillshare sync -g
 ```
 
 </details>

@@ -394,6 +394,23 @@ Katta reliz oldidan ko'tarilgan lokal yoki staging serverga real exploit so'rovl
 
 ### 🛠️ Developer Tools va Memory
 
+#### [REA](reviews/developer-tools/rea.md) — Manba kodi yo'q begona dastur, `.asar`, `.apk` va binarlarni ichidan ochib o'rganish
+`👍 Yaxshi variant` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `3.5/10` · **Turi:** Standalone CLI + [`rea`](skills/rea/SKILL.md) · **Sana:** `2026-11-17`
+
+Begona desktop/mobil/veb ilovadagi yoqqan funksiyani manba kodisiz (`Electron .asar`, JS bundle, Android `.apk`, `.NET`, `Mach-O`/`ELF`/`PE`) dalillari bilan tiklab beradi (`9.0/10`), shuningdek o'zimizning reliz paketimizda `.map`/`.dSYM` qolib ketmaganini tekshiradi (`audit-release-exposure`). Bizdagi [`rea`](skills/rea/SKILL.md) skilli orqali `"rea"` deb signal berilganda **avval nishon turiga mos yordamchi dasturlarni (`openjdk`, `jadx`, `apktool`, `ghidra`, `rizin`) tekshirib o'rnatadi** va **`0` doimiy token yuki bilan** vaqtinchalik ishlab beradi. *(O'zimizning manba kodi bor loyihalarimiz uchun 👉 [**`graphify`**](reviews/architecture/graphify.md) ishlatiladi).*
+
+> [!WARNING]
+> **Kontekst tuzog'i:** Hech qachon `npx rea-agents setup` orqali global MCP qilib ulamang — uning `200+` ta MCP tool'i har suhbatda **`~300 KB` (`~75,000+` token)** kontekstni bekorga yeb qo'yadi! Faqat bizdagi vaqtinchalik [`rea`](skills/rea/SKILL.md) skilli orqali ishlating.
+
+<details>
+<summary>📊 Solishtiruv va statistika (Global `REA` MCP vs bizning `rea` skilli)</summary>
+
+- **Standart `npx rea-agents setup` bilan:** `200+` tool (`~75,000+` token har sessiyada) + `~198 KB` (`~50K` token) skill referenslar + `189.6 MB` npm hajm; `Node 24.20.0` da versiya xatosi bilan yiqiladi.
+- **Bizning [`rea`](skills/rea/SKILL.md) wrapper skilli bilan:** Kundalik suhbatlarda **`0` token yuk**; `"rea"` deb chaqirilganda mos `Node 26+` ni o'zi tanlaydi, nishonga qarab yetishmayotgan dekompilyatorlarni aniqlab o'rnatadi va `/tmp` da ishlab, yakunda tozalab ketadi.
+- 📖 [Batafsil sharh →](reviews/developer-tools/rea.md) · [Pastdagi solishtiruv ↓](#batafsil-solishtirishlar)
+
+</details>
+
 #### [SkillSpector](reviews/developer-tools/skillspector.md) — NVIDIA'ning Docker va Python asosidagi skill-xavfsizlik skaneri
 `🔄 Alternativi yaxshiroq` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `3.5/10` · **Turi:** Python CLI + MCP + Skill · **Sana:** `2026-11-16`
 
@@ -487,7 +504,7 @@ Yuqoridagi barcha sinovlar va raqamlarning 7 yo'nalish bo'yicha to'liq qiyosiy j
   - ⚖️ Muqobillar: [**`T3 Code`**](reviews/developer-tools/t3-code.md) (`Lock Screen` va mobil uzilishlar sabab `Orca` ga o'tildi) · [**`caveman`**](reviews/developer-tools/caveman.md) (faqat chat so'zlarini qisqartiradi) · ⚠️ [**`superpowers`**](reviews/architecture/superpowers.md) (`2x` sekinlashtiradi) · ⚠️ [**`OmniRoute`**](reviews/developer-tools/omniroute.md) (sessiya uzilishi va ToS ban xavfi).
 - **🛡️ Xavfsizlik Auditi, Pentest va Monitoring:**
   - ✅ [**`skillshare audit`**](reviews/developer-tools/skillshare.md) (`0.1s` skill tekshiruv) + [**`security-audit`**](reviews/backend/security-audit-skill.md) (Docker'siz manba kodi auditi) + [**`Shannon`**](reviews/backend/shannon.md) (staging'da jonli exploit pentest) + [**`sentry`**](reviews/backend/sentry.md) (xato + Replay + trace).
-  - ⚖️ Muqobillar: [**`SkillSpector`**](reviews/developer-tools/skillspector.md) (og'ir Docker/YARA sikli) · [**`opentelemetry`**](reviews/backend/opentelemetry.md) (`Collector + SigNoz/Grafana` katta klasterlar uchun).
+  - ⚖️ Muqobillar: [**`SkillSpector`**](reviews/developer-tools/skillspector.md) (og'ir Docker/YARA sikli) · [**`opentelemetry`**](reviews/backend/opentelemetry.md) (`Collector + SigNoz/Grafana` katta klasterlar uchun) · 👍 [**`REA`**](reviews/developer-tools/rea.md) (faqat manba kodi yo'q begona `.asar`/`.apk`/binarlarni [`rea`](skills/rea/SKILL.md) orqali vaqtinchalik ochish va `audit-release-exposure` uchun).
 - **🧠 Lokal Modellar va 🔌 Tashqi API'lar:**
   - ✅ Haqiqiy lokal coder kerak bo'lsa: **`Ollama` / `MLX` (`Qwen3-Coder`)** (`32–64 GB` Mac RAM ichida `30–65 tok/s`, SSD'ga zararsiz) · Mahsulot backendi uchun arzon API: [**`MiniMax M3.1 Flash API`**](reviews/external-apis/minimax-m3-1-flash-api.md) (`$0.15/$0.60`, `170+ tok/s`).
   - ⚠️ Lokal ishchi kompyuterda tavsiya etilmaydi: [**`kimi-k3-in-c`**](reviews/local-models/kimi-k3-in-c.md) (`1 token = ~30s`, `~50 TB` SSD o'qish) · [**`MiniMax-M3.1-Flash` *(Lokal)* **](reviews/local-models/minimax-m3-1-flash.md) (`285 GB` vazn, `640 GB VRAM` server kerak).
@@ -495,10 +512,10 @@ Yuqoridagi barcha sinovlar va raqamlarning 7 yo'nalish bo'yicha to'liq qiyosiy j
 ---
 
 <details>
-<summary>Global <code>tasted-skills</code>, <code>hacker-test</code> va <code>asset-diet</code> skillarini ulash</summary>
+<summary>Global <code>tasted-skills</code>, <code>hacker-test</code>, <code>asset-diet</code> va <code>rea</code> skillarini ulash</summary>
 
 ```bash
-skillshare install TursunboyevJahongir/tasted-skills -s tasted-skills -s hacker-test -s asset-diet -g && skillshare sync -g
+skillshare install TursunboyevJahongir/tasted-skills -s tasted-skills -s hacker-test -s asset-diet -s rea -g && skillshare sync -g
 ```
 
 </details>
