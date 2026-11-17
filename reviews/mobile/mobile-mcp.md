@@ -6,10 +6,10 @@
 - **Turkum:** `Mobile` *(iOS va Android uchun MCP server)*
 - **Turi:** `MCP Server (34 ta tool)` + `Plugin / Skill`
 - **Sifat bahosi:** **7.0 / 10**
-- **Bizga kerakliligi:** **2.0 / 10**
+- **Ishda kerak bo'lishi:** **2.0 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(o'rniga [**`agent-device`**](agent-device.md) CLI + [**`adb`**](adb.md))*
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⛔ Rad etildi` *(izolyatsiya qilingan `/tmp` muhitda jonli sinab ko'rildi va tezlik, kontekst shishishi hamda telemetriya sabab rad etildi)*
+- **Joriy holati:** `⚠️ Tavsiya etilmaydi` *(izolyatsiya qilingan `/tmp` muhitda jonli sinab ko'rildi va tezlik, kontekst shishishi hamda telemetriya sabab rad etildi)*
 
 ---
 
@@ -37,6 +37,9 @@ iOS 26.5 Simulator va real Android planshetda [**`agent-device`**](agent-device.
 
 ## 3. Xavfsizlik va Sanitarizatsiya
 
+> [!WARNING]
+> **Kontekst shishishi va telemetriya:** Ishlatmasangiz ham har bitta xabarda **`~7,580` token yeydi** hamda ichida `Scarf` + `PostHog` telemetriyasi va `mobilenext.ai` cloud reklamalari bor.
+
 - **Xavf darajasi:** `O'rta` *(default `PostHog` + `Scarf` telemetriyasi, `.mobilecli` fon jarayoni va autentifikatsiyasiz HTTP rejimi ogohlantirishi)*
 - Agar kimdir vaqtincha sinab ko'rmoqchi bo'lsa: `MOBILEMCP_DISABLE_TELEMETRY=1` va `SCARF_ANALYTICS=false` berishi hamda global MCP ro'yxatiga qo'shmasligi shart.
 
@@ -52,4 +55,4 @@ iOS 26.5 Simulator va real Android planshetda [**`agent-device`**](agent-device.
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kodi (`src/server.ts`, `telemetry-quota.ts`) auditi va vaqtinchalik `/tmp` muhitda iOS + Android jonli benchmark | `⛔ Rad etildi` | `~7 580` tokenlik MCP shishishi, `5.8–7.3s` sekinlik va `PostHog`/`Scarf` telemetriyasi sabab o'chirib tashlandi; o'rniga `agent-device` qabul qilindi. |
+| 2026-11-16 | Manba kodi (`src/server.ts`, `telemetry-quota.ts`) auditi va vaqtinchalik `/tmp` muhitda iOS + Android jonli benchmark | `⚠️ Tavsiya etilmaydi` | `~7 580` tokenlik MCP shishishi, `5.8–7.3s` sekinlik va `PostHog`/`Scarf` telemetriyasi sabab o'chirib tashlandi; o'rniga `agent-device` qabul qilindi. |

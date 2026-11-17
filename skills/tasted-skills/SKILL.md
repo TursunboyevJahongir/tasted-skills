@@ -71,10 +71,11 @@ Keep entries in both sections **simple, direct, and free of bloated filler**:
 When the user asks what skills, plugins, MCPs, or AI tools help with a project or task:
 1. Read `~/Projects/tasted-skills/README.md` and inspect currently active skills/plugins (for example via `skillshare list -g` when available).
 2. Read `reviews/<category>/<slug>.md` only for relevant matches.
-3. Recommend in three buckets:
+3. Recommend in four clear buckets:
    - **Already active** — installed tools/skills (`✅ Ishlatyapman` / `✅ Using` / `✅ Использую`) ready to use now.
    - **Worth adding (`-g` global vs `-p` project-only / CLI)** — vetted `👍 Yaxshi variant` (`👍 Good Option` / `👍 Хороший вариант`) items, noting any required sanitization steps before installation.
-   - **Avoid / skip** — `⛔ Rad etildi` (`⛔ Rejected` / `⛔ Отклонено`) items already reviewed as redundant, conflicting, bloated, or unsafe.
+   - **Superseded by a better alternative** — `🔄 Alternativi yaxshiroq` (`🔄 Better Alternative` / `🔄 Есть альтернатива получше`) items: good tools whose job is already handled faster, more broadly, or without trigger collisions by an active tool in our stack.
+   - **Not recommended / risky** — `⚠️ Tavsiya etilmaydi` (`⚠️ Not Recommended` / `⚠️ Не рекомендуется`) items carrying practical risk or harm (account ToS bans, private code leakage, SSD endurance wear, hidden telemetry, or `2x+` token/time drain), always accompanied by an explicit `> [!WARNING]` callout.
 
 ### 2. Audit a new skill, plugin, tool, URL, or video
 
@@ -91,15 +92,17 @@ When the user shares a GitHub repository, documentation site, package, MCP serve
    - Recommended scope (`Global -g`, `Project -p`, `Plugin`, `Standalone CLI/MCP`, or `Skip`).
 3. **Record when requested:**
    - Create `reviews/<category>/<slug>.md` (Uzbek default), `reviews/en/<category>/<slug>.md` (English), and `reviews/ru/<category>/<slug>.md` (Russian) from their respective templates, always setting the review date (`YYYY-MM-DD`) in both the top metadata block and the history table, and including the flag switcher right under the `#` H1 title.
-   - Keep `README.md`, `README.en.md`, and `README.ru.md` concise (no long prose instructions), using only the 3 short status badges (`✅ Ishlatyapman`, `👍 Yaxshi variant`, `⛔ Rad etildi` / `✅ Using`, `👍 Good Option`, `⛔ Rejected` / `✅ Использую`, `👍 Хороший вариант`, `⛔ Отклонено`):
+   - Keep `README.md`, `README.en.md`, and `README.ru.md` concise and clear, using the **4 status badges** (`✅ Ishlatyapman`, `👍 Yaxshi variant`, `🔄 Alternativi yaxshiroq`, `⚠️ Tavsiya etilmaydi` / `✅ Using`, `👍 Good Option`, `🔄 Better Alternative`, `⚠️ Not Recommended` / `✅ Использую`, `👍 Хороший вариант`, `🔄 Есть альтернатива получше`, `⚠️ Не рекомендуется`):
+     - **Separate `Sifat` (`Quality`) from `Ishda kerak bo'lishi` (`How Often Needed` / `Частота нужды`):** Make clear that `Ishda kerak bo'lishi: 3.0/10` does **not** mean a tool is bad — it measures how frequently that niche arises in daily work or whether our primary stack already covers it.
+     - **Distinguish `🔄 Alternativi yaxshiroq` vs `⚠️ Tavsiya etilmaydi`:** Use `🔄 Alternativi yaxshiroq` for solid tools that are simply superseded by a better alternative (`👉 Yaxshiroq alternativ: ...`), so readers do not mistake good tools for broken ones. Reserve `⚠️ Tavsiya etilmaydi` + a visible `> [!WARNING]` block for tools with real risk or harm (ToS ban risk, code leak, SSD wear, telemetry bloat, or `2x+` time/quota waste). Also add `> [!WARNING]` safety boundaries whenever a `👍 Yaxshi variant` has a critical caveat (e.g. paid `.env` runtime, staging-only pentesting, or `:free` privacy limits).
      - Essential, battle-tested daily items (`✅ Ishlatyapman` / `✅ Using` / `✅ Использую`) go in the top ungrouped **`⭐ Eng keraklilari`** / **`⭐ Top Essentials`** / **`⭐ Самые необходимые`** section.
      - All remaining items go under **`Yo'nalishlar bo'yicha`** / **`By Category`** / **`По направлениям`** in their category section without duplicating rows from the top essentials section.
-     - **Clean pure-Markdown entry blocks (zero `<details>` hiding, zero raw HTML soup, zero wide tables):**
-       - In Top Essentials: `### N. [Name](review-path) — Plain-human benefit tagline`, followed by a single compact metadata line (`` `✅ Ishlatyapman` · **Baho:** `9.5/10` · **Turi:** ... · **Sana:** ... ``) and one visible, plain-language paragraph explaining **what practical job it does and what concrete value/savings (`tokens`, `RAM`, `time`, prevented mistakes) it delivers**.
-       - In Categories: `#### [Name](review-path) — Plain-human tagline`, compact metadata line (`status · Sifat · Keraklilik · Turi · Sana`), and one visible plain-language paragraph stating why it is a good situational option or why it was rejected + what to use instead.
-       - Never wrap the linked entry name in backticks inside headings (`[grill-me](...)`, not `` [`grill-me`](...) ``) so GitHub renders links in clear blue link color. Never hide descriptions inside `<details>` blocks.
+     - **Clean pure-Markdown entry blocks + collapsible `<details>` comparison stats:**
+       - Keep every entry's plain-language summary and better alternative (`👉 Yaxshiroq alternativ:`) **100% visible** (never hide main descriptions).
+       - Whenever we have concrete before/after or head-to-head benchmark numbers ("bu vosita bilan qanday natija vs bizdagi alternativ bilan qanday natija"), place a clean collapsible `<details><summary>📊 Solishtiruv va statistika (...)</summary>...</details>` block right below the paragraph with links to the full review (`reviews/...`) and the bottom comparison summary (`#batafsil-solishtirishlar` / `#detailed-comparisons` / `#подробные-сравнения`).
+       - Never wrap the linked entry name in backticks inside headings (`[grill-me](...)`, not `` [`grill-me`](...) ``) so GitHub renders links in clear blue link color.
      - **Plain-language benefit callout in every review file:** Under `## 1.` in every `reviews/{,en/,ru/}/<category>/<slug>.md`, start with a `> [!IMPORTANT]` callout (`Oddiy tilda (Asosiy vazifasi va foydasi):` / `In Plain Words (Main Job & Value):` / `Простыми словами (Главная задача и польза):`) explaining the tool's main purpose and concrete value/savings in everyday human language before diving into technical internals.
-     - **Ordering rule:** Keep Top Essentials numbered `1..N` in daily workflow priority order (`grill-me` first, `graphify` second, etc.). Keep category entries sorted descending by quality score, breaking ties by need score. Do not duplicate essentials in the categories.
+     - **Ordering rule:** Keep Top Essentials numbered `1..N` in daily workflow priority order (`grill-me` first, `graphify` second, etc.). Keep category entries sorted descending by quality score, breaking ties by `Ishda kerak bo'lishi` score. Do not duplicate essentials in the categories.
 
 ### 3. Sanitize before installing & update usage status
 

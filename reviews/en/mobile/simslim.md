@@ -6,7 +6,7 @@
 - **Category:** `Mobile` *(iOS, tvOS, watchOS & visionOS Simulator RAM and Disk Optimizer)*
 - **Type:** `Standalone Go CLI` (`brew install mobai-app/tap/simslim`)
 - **Quality Score:** **9.0 / 10**
-- **Need for Us:** **7.5 / 10**
+- **How Often Needed:** **7.5 / 10**
 - **Recommended Scope:** `Global CLI (Homebrew)` — applied once per local `iOS 18.5+` / `tvOS` simulator with a safe feature-preserving profile
 - **Works Alongside:** [**`agent-device`**](agent-device.md) + [**`xcrun simctl`**](ios-simulator-device-hub.md) + [**`cross-platform-qa`**](cross-platform-qa.md) *(note: skip the companion closed-source `MobAI Pro` / `mobai-mcp` app — [`agent-device`](agent-device.md) handles all UI driving)*
 - **Active Since:** `2026-11-16`

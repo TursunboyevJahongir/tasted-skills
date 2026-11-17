@@ -6,10 +6,10 @@
 - **Category:** `Local Models` | `External APIs` | `Web` | `Mobile` | `UI/UX` | `Architecture` | `Backend` | `Developer Tools`
 - **Type:** `Skill` | `Plugin` | `MCP` | `CLI / Desktop Tool` | `Memory`
 - **Quality Score:** **X.X / 10**
-- **Need for Us:** **X.X / 10**
+- **How Often Needed:** **X.X / 10**
 - **Recommended Scope:** `Global (-g)` | `Project Only (-p)` | `Plugin` | `Standalone Tool` | `Do Not Install`
 - **Reviewed Date:** `YYYY-MM-DD`
-- **Current Status:** `✅ Using` | `👍 Good Option` | `⛔ Rejected`
+- **Current Status:** `✅ Using` | `👍 Good Option` | `🔄 Better Alternative` | `⚠️ Not Recommended`
 
 ---
 

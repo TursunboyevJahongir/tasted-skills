@@ -6,7 +6,7 @@
 - **Category:** `Mobile` *(React Native, Expo, Reanimated, Gesture Handler & Haptics)*
 - **Type:** `Skill` *(`SKILL.md` + `RECIPES.md` + local `LOCAL-COMPATIBILITY.md` guard)*
 - **Quality Score:** **9.5 / 10**
-- **Need for Us:** **9.0 / 10**
+- **How Often Needed:** **9.0 / 10**
 - **Recommended Scope:** `Global (-g)`
 - **Active Since:** `2026-11-09`
 - **Current Status:** `✅ Using`

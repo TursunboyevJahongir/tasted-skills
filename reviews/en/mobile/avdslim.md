@@ -6,7 +6,7 @@
 - **Category:** `Mobile` *(Android Emulator RAM, Metal GPU & Golden Snapshot Optimizer)*
 - **Type:** `Standalone Go CLI` (`0` external dependencies, `100%` Go stdlib)
 - **Quality Score:** **9.0 / 10**
-- **Need for Us:** **7.5 / 10**
+- **How Often Needed:** **7.5 / 10**
 - **Recommended Scope:** `Global CLI (/opt/homebrew/bin/avdslim)` — applied across local Android AVDs via `tune-avd` + `bake --headless` with GPS-preserving `defaults` (no SDK `install-shim` needed)
 - **Works Alongside:** [**`agent-device`**](agent-device.md) + [**`adb`**](adb.md) + [**`simslim`**](simslim.md) + [**`cross-platform-qa`**](cross-platform-qa.md)
 - **Active Since:** `2026-11-16`

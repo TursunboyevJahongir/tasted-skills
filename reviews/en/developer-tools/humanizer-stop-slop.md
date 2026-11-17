@@ -6,11 +6,11 @@
 - **Category:** `Developer Tools` *(Prose Editing Skills for Removing AI Writing Tells)*
 - **Type:** `Skill` (`Markdown`)
 - **Quality Score:** **7.5 / 10**
-- **Need for Us:** **2.0 / 10** *(built for essays and blog posts, not software engineering or product UI)*
+- **How Often Needed:** **2.0 / 10** *(built for essays and blog posts, not software engineering or product UI)*
 - **Recommended Scope:** `Do Not Install`
 - **Instead Use:** [**`ponytail`**](../architecture/ponytail.md) (concise engineering replies) + [**`impeccable`**](../ui-ux/impeccable.md) (`clarify` for product UX copy)
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⛔ Rejected`
+- **Current Status:** `🔄 Better Alternative`
 
 ---
 
@@ -37,4 +37,4 @@ Two popular Markdown skills focused on stripping LLM clichés from long-form pro
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Primary-source audit | `⛔ Rejected` | Clean prose-editing references (`7.5/10`), skipped because our engineering reply style and UI copy are already handled by `ponytail` + `impeccable`. |
+| 2026-11-16 | Primary-source audit | `🔄 Better Alternative` | Clean prose-editing references (`7.5/10`), skipped because our engineering reply style and UI copy are already handled by `ponytail` + `impeccable`. |

@@ -7,10 +7,10 @@
 - **Turkum:** `Lokal modellar` *(Lokal LLM Inference va Disk-Streaming Eksperimenti)*
 - **Turi:** `Standalone C99 CLI Engine`
 - **Sifat bahosi:** **8.5 / 10** *(tizimli C99 muhandislik eksperimenti sifatida)*
-- **Bizga kerakliligi:** **1.0 / 10** *(amaliy kod yozish va kundalik ish uchun yaroqsiz)*
+- **Ishda kerak bo'lishi:** **1.0 / 10** *(amaliy kod yozish va kundalik ish uchun yaroqsiz)*
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⛔ Rad etildi` *(~1.8 TB NVMe joy, 1 token uchun ~24–33 soniya va ~50 TB SSD o'qish yuklamasi sabab amaliy ishlatib bo'lmaydi)*
+- **Joriy holati:** `⚠️ Tavsiya etilmaydi` *(~1.8 TB NVMe joy, 1 token uchun ~24–33 soniya va ~50 TB SSD o'qish yuklamasi sabab amaliy ishlatib bo'lmaydi)*
 
 ---
 
@@ -35,6 +35,9 @@
 
 ## 3. Kompyuter Resurs Talablari (`Min` vs `Yaxshi ishlashi uchun`)
 
+> [!WARNING]
+> **SSD umrini yeyish va maxfiylik xavfi:** Bitta `500` tokenlik javob NVMe diskdan **`~50+ TB` o'qish** qilib lehimlangan noutbuk SSD umrini (`TBW`) tez tugatadi; tekin `:free` proxy'larga esa yopiq kod ulamang.
+
 | Ko'rsatkich | Minimal (`kimi-k3-in-c` disk-stream rejimida zo'rg'a yoqish) | Yaxshi ishlashi uchun (`vLLM` / `SGLang`, `30–60+ tok/s`) |
 |---|---|---|
 | **GPU / VRAM** | **`0 GB`** *(100% CPU + NVMe disk)* | **`16× NVIDIA H200` (`~2.25 TB VRAM`)** yoki **`8× NVIDIA B300` (`~2.30 TB VRAM`)** |
@@ -58,4 +61,4 @@
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | C99 kodi, tezlik (`~24–33 s/token`), `Min`/`Tavsiya` temir talablari va lokal alternativa tahlili | `⛔ Rad etildi` | `~1.8 TB` NVMe talabi va `1 token = ~30s` tezlik sabab amaliy kod yozish uchun rad etildi; oflayn lokal coder kerak bo'lsa RAM ichida ishlovchi `Ollama`/`MLX` (`Qwen3-Coder`) tavsiya etiladi. |
+| 2026-11-16 | C99 kodi, tezlik (`~24–33 s/token`), `Min`/`Tavsiya` temir talablari va lokal alternativa tahlili | `⚠️ Tavsiya etilmaydi` | `~1.8 TB` NVMe talabi va `1 token = ~30s` tezlik sabab amaliy kod yozish uchun rad etildi; oflayn lokal coder kerak bo'lsa RAM ichida ishlovchi `Ollama`/`MLX` (`Qwen3-Coder`) tavsiya etiladi. |

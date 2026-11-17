@@ -6,7 +6,7 @@
 - **Turkum:** `Architecture` *(Spec-Driven Development, Arxitektura va Kod/Hujjat Auditi)*
 - **Turi:** `Plugin` *(7 ta skill + 10 ta maxsus subagent + hujjat standartlari)*
 - **Sifat bahosi:** **9.5 / 10**
-- **Bizga kerakliligi:** **9.5 / 10**
+- **Ishda kerak bo'lishi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global Plugin (-g / scope: user)` *(barcha skillarida `disable-model-invocation: true` saqlangan holda)*
 - **Tekshirilgan sana:** `2026-11-15`
 - **Joriy holati:** `✅ Ishlatyapman` *(Antigravity, agy CLI, Claude Code va Codex muhitlariga global o'rnatilgan va real ko'p-repoli loyihalarda sinovdan o'tgan)*

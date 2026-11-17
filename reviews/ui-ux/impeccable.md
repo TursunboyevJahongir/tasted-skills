@@ -6,7 +6,7 @@
 - **Turkum:** `UI/UX` *(Web, Mobile Web va Native iOS/Android dizayn tizimi va UX auditi)*
 - **Turi:** `Skill` *(v4.8.1, lokal `mobile-routing-1+apca-contrast-1` moslashtiruvi bilan)*
 - **Sifat bahosi:** **9.5 / 10**
-- **Bizga kerakliligi:** **9.5 / 10**
+- **Ishda kerak bo'lishi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Ishlatilayotgan sana:** `2026-11-09` dan
 - **Joriy holati:** `✅ Ishlatyapman` *(barcha veb va mobil UI/UX ishlarida asosiy dizayn skilli)*

@@ -6,7 +6,7 @@
 - **Turkum:** `Developer Tools` *(Skill, Plugin, Agent va MCP sinxronizatsiyasi hamda xavfsizlik auditi)*
 - **Turi:** `CLI + Global Skill`
 - **Sifat bahosi:** **9.5 / 10**
-- **Bizga kerakliligi:** **10.0 / 10**
+- **Ishda kerak bo'lishi:** **10.0 / 10**
 - **Tavsiya etilgan ko'lam:** `Global CLI + Global Skill (-g)`
 - **Ishlatilayotgan sana:** `2026-05-30` dan
 - **Joriy holati:** `✅ Ishlatyapman` *(barcha AI agentlarimizdagi skillarni boshqaruvchi markaziy vosita)*

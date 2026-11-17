@@ -6,7 +6,7 @@
 - **Turkum:** `Backend` *(Full-Stack Observability: Backend, Web va Mobile xatolari, Trace va Session Replay)*
 - **Turi:** `Self-Hosted Platform + SDK + AI Skill / MCP`
 - **Sifat bahosi:** **9.5 / 10**
-- **Bizga kerakliligi:** **9.5 / 10**
+- **Ishda kerak bo'lishi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)` *(AI navigatsiya skilli / MCP orqali barcha loyihalar uchun)*
 - **Muqobil tizim bilan bog'liqlik:** [**`opentelemetry`**](opentelemetry.md) *(Sentry v8+ SDK kapot ostida OTel ustiga qurilgan)*
 - **Ishlatilayotgan sana:** `2026-07-08` dan

@@ -6,10 +6,10 @@
 - **Category:** `Mobile` *(MCP server for iOS and Android automation)*
 - **Type:** `MCP Server (34 tools)` + `Plugin / Skill`
 - **Quality Score:** **7.0 / 10**
-- **Need for Us:** **2.0 / 10**
+- **How Often Needed:** **2.0 / 10**
 - **Recommended Scope:** `Do Not Install` *(use [**`agent-device`**](agent-device.md) CLI + [**`adb`**](adb.md) instead)*
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⛔ Rejected` *(benchmarked live in an isolated `/tmp` harness and rejected due to slow latency, heavy MCP context bloat, and built-in telemetry)*
+- **Current Status:** `⚠️ Not Recommended` *(benchmarked live in an isolated `/tmp` harness and rejected due to slow latency, heavy MCP context bloat, and built-in telemetry)*
 
 ---
 
@@ -37,6 +37,9 @@ Tested head-to-head against [**`agent-device`**](agent-device.md) on an iOS 26.5
 
 ## 3. Security & Sanitization
 
+> [!WARNING]
+> **Context Bloat & Telemetry:** Burns **`~7,580` tokens on every message** even when idle and ships default `Scarf` + `PostHog` telemetry plus `mobilenext.ai` cloud upsell tools.
+
 - **Risk Level:** `Medium` *(default `PostHog` + `Scarf` telemetry, persistent `~/.mobilecli` state, and commercial cloud tools)*
 - If ever tested in isolation: set `MOBILEMCP_DISABLE_TELEMETRY=1` and `SCARF_ANALYTICS=false`, and do not register it in global MCP configs.
 
@@ -52,4 +55,4 @@ Tested head-to-head against [**`agent-device`**](agent-device.md) on an iOS 26.5
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Source audit (`src/server.ts`, `telemetry-quota.ts`) + isolated `/tmp` live benchmark on iOS & Android | `⛔ Rejected` | Removed after benchmark due to `~7,580`-token MCP schema bloat, `5.8–7.3s` latency, and `PostHog`/`Scarf` telemetry; adopted `agent-device` instead. |
+| 2026-11-16 | Source audit (`src/server.ts`, `telemetry-quota.ts`) + isolated `/tmp` live benchmark on iOS & Android | `⚠️ Not Recommended` | Removed after benchmark due to `~7,580`-token MCP schema bloat, `5.8–7.3s` latency, and `PostHog`/`Scarf` telemetry; adopted `agent-device` instead. |

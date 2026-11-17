@@ -7,10 +7,10 @@
 - **Category:** `Local Models` *(Open-Weight Multimodal MoE — local self-hosting audit)*
 - **Type:** `Open-Weight LLM` *(`~428B` total / `~23B` active parameters, `1M` context, `MXFP8 + NVFP4`)*
 - **Quality Score:** **8.0 / 10** *(as a fast multimodal `Flash`-tier model)*
-- **Need for Us (Local):** **1.0 / 10** *(does not fit normal developer machines; as a cloud API — [`👍 Good Option`](../external-apis/minimax-m3-1-flash-api.md))*
+- **How Often Needed (Local):** **1.0 / 10** *(does not fit normal developer machines; as a cloud API — [`👍 Good Option`](../external-apis/minimax-m3-1-flash-api.md))*
 - **Recommended Scope:** `Do Not Install (Locally)` *(use via [🔌 External APIs](../external-apis/minimax-m3-1-flash-api.md) when needed)*
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⛔ Rejected` *(requires `~250–285 GB` disk space and an `8× H100 / 640 GB VRAM` cluster for smooth local serving)*
+- **Current Status:** `⚠️ Not Recommended` *(requires `~250–285 GB` disk space and an `8× H100 / 640 GB VRAM` cluster for smooth local serving)*
 
 ---
 
@@ -39,6 +39,9 @@
 
 ## 3. Hardware Requirements (`Minimum` vs. `Recommended`)
 
+> [!WARNING]
+> **Local & Privacy Risk:** Disk-offload/swap on `32–64 GB` laptops wears out SSDs, community quants require `trust_remote_code=True` (`RCE` risk), and free credits/`:free` endpoints may log private code for training.
+
 | Component | Minimum (Barely boots locally) | Recommended for Smooth Use (`vLLM` / `SGLang`, `100–170+ tok/s`) |
 |---|---|---|
 | **GPU / VRAM** | **`Mac Studio Ultra 512 GB Unified RAM`** *(or `0–24 GB` GPU with SSD offload)* | **`8× NVIDIA H100` (`640 GB VRAM`)** or **`4× NVIDIA B200` (`720 GB VRAM`)** |
@@ -64,4 +67,4 @@
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Audited model purpose, coding benchmarks (`Terminal-Bench 38.1%`), hardware sizing, and local/API alternatives | `⛔ Rejected` | Rejected for local installation (`~250–285 GB` weights, `640 GB VRAM` cluster); use [External APIs](../external-apis/minimax-m3-1-flash-api.md) for cloud access or `Ollama`/`MLX` (`Qwen3-Coder`) for offline local coding. |
+| 2026-11-16 | Audited model purpose, coding benchmarks (`Terminal-Bench 38.1%`), hardware sizing, and local/API alternatives | `⚠️ Not Recommended` | Rejected for local installation (`~250–285 GB` weights, `640 GB VRAM` cluster); use [External APIs](../external-apis/minimax-m3-1-flash-api.md) for cloud access or `Ollama`/`MLX` (`Qwen3-Coder`) for offline local coding. |

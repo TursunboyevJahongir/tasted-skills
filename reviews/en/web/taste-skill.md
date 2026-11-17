@@ -6,7 +6,7 @@
 - **Category:** `Web` *(Marketing Websites & Company Landing Pages)*
 - **Type:** `Skill + Landing Kit + Headless Chrome Gate + Stop Hook`
 - **Quality Score:** **8.0 / 10** *(strong for promo/landing sites)*
-- **Need for Us:** **4.0 / 10** *(low for global setup; useful only when building greenfield promo landing pages)*
+- **How Often Needed:** **4.0 / 10** *(low for global setup; useful only when building greenfield promo landing pages)*
 - **Recommended Scope:** `Project Only (-p)` *(sanitized; never install globally)*
 - **Reviewed Date:** `2026-11-15`
 - **Current Status:** `👍 Good Option`

@@ -6,7 +6,7 @@
 - **Turkum:** `Architecture` *(Kod bazasi va hujjatlardan bilim grafigi — Knowledge Graph)*
 - **Turi:** `Skill + Python CLI (graphifyy)`
 - **Sifat bahosi:** **9.5 / 10**
-- **Bizga kerakliligi:** **9.5 / 10**
+- **Ishda kerak bo'lishi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Ishlatilayotgan sana:** `2026-07-28` dan
 - **Joriy holati:** `✅ Ishlatyapman` *(katta kod bazalari arxitekturasini tez tushunish va qidirish uchun ishlatiladi)*

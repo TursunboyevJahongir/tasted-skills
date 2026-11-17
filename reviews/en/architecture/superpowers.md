@@ -9,7 +9,7 @@
 - **Relevance to Us:** **2.0 / 10**
 - **Recommended Scope:** `Do Not Install` *(previously tested in practice and uninstalled)*
 - **Used Period:** `2026-04-04 → 2026-09-01` *(tested and removed)*
-- **Current Status:** `⛔ Rejected` *(🧪 Tested and removed because it slowed down real work)*
+- **Current Status:** `⚠️ Not Recommended` *(🧪 Tested and removed because it slowed down real work)*
 
 ---
 
@@ -51,6 +51,9 @@ When installed and tested on real tasks, it caused more friction and slowdown th
 
 ## 3. Security & Sanitization Analysis
 
+> [!WARNING]
+> **Time & Quota Drain:** Its `SessionStart` hook and mandatory TDD ceremony across UI work **double both task duration and token usage (`2x`)**.
+
 - **Risk Level:** `Medium` *(no malware, but uses a `SessionStart` hook and aggressive prompt injection)*
 - **Audited Points:**
   1. `hooks/hooks.json` and `hooks/session-start` run automatically on every session start to override default agent behavior (`using-superpowers`).
@@ -82,5 +85,5 @@ Instead of `superpowers`, we use focused, low-overhead tools for each stage:
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-04-04 | Installed globally and tested in daily engineering | `⛔ Rejected` | Over months of real tasks, `SessionStart` overthinking and uninvited `brainstorming` slowed delivery (`test-driven-development` disabled on `2026-08-14`). |
-| 2026-09-01 | Removed from active workflow | `⛔ Rejected` | Replaced cleanly by [`grill-me`](grill-me.md), [`ponytail`](ponytail.md), [`karpathy-guidelines`](karpathy-guidelines.md), and `cross-platform-qa`. |
+| 2026-04-04 | Installed globally and tested in daily engineering | `⚠️ Not Recommended` | Over months of real tasks, `SessionStart` overthinking and uninvited `brainstorming` slowed delivery (`test-driven-development` disabled on `2026-08-14`). |
+| 2026-09-01 | Removed from active workflow | `⚠️ Not Recommended` | Replaced cleanly by [`grill-me`](grill-me.md), [`ponytail`](ponytail.md), [`karpathy-guidelines`](karpathy-guidelines.md), and `cross-platform-qa`. |

@@ -6,7 +6,7 @@
 - **Turkum:** `Mobile` *(React Native, Expo, Reanimated, Gesture Handler va Haptics)*
 - **Turi:** `Skill` *(`SKILL.md` + `RECIPES.md` + lokal `LOCAL-COMPATIBILITY.md` himoyasi)*
 - **Sifat bahosi:** **9.5 / 10**
-- **Bizga kerakliligi:** **9.0 / 10**
+- **Ishda kerak bo'lishi:** **9.0 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Ishlatilayotgan sana:** `2026-11-09` dan
 - **Joriy holati:** `✅ Ishlatyapman`

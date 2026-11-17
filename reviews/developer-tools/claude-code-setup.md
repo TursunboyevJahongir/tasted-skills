@@ -6,11 +6,11 @@
 - **Turkum:** `Developer Tools` *(Yangi loyiha uchun boshlang'ich Claude Code sozlamalarini tavsiya qilish)*
 - **Turi:** `Plugin (Read-Only Recommender Skill)`
 - **Sifat bahosi:** **7.5 / 10**
-- **Bizga kerakliligi:** **2.0 / 10** *(boshlovchilar uchun mo'ljallangan; bizning 5-agentli tayyor tizimimizda ortiqcha)*
+- **Ishda kerak bo'lishi:** **2.0 / 10** *(boshlovchilar uchun mo'ljallangan; bizning 5-agentli tayyor tizimimizda ortiqcha)*
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
 - **O'rniga ishlatiladigan tizim:** [**`skillshare`**](skillshare.md) + ushbu **`tasted-skills`** katalogi
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⛔ Rad etildi`
+- **Joriy holati:** `🔄 Alternativi yaxshiroq`
 
 ---
 
@@ -34,4 +34,4 @@ Anthropic'ning rasmiy `claude-plugins-official` to'plamidagi read-only yordamchi
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kod auditi | `⛔ Rad etildi` | Xavfsiz read-only onboarding plagini (`7.5/10`), ammo `skillshare` asosidagi ko'p-agentli tizimimizda ehtiyoj yo'q. |
+| 2026-11-16 | Manba kod auditi | `🔄 Alternativi yaxshiroq` | Xavfsiz read-only onboarding plagini (`7.5/10`), ammo `skillshare` asosidagi ko'p-agentli tizimimizda ehtiyoj yo'q. |

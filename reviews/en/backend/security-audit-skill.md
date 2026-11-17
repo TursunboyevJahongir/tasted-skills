@@ -6,7 +6,7 @@
 - **Category:** `Backend` *(Source-first security auditing across Backend, Web, Mobile, CLI, and Cloud/CI)*
 - **Type:** `Skill` *(`SKILL.md` + 12 domain attack-class guides + 2 zero-dependency Node JSON validators)*
 - **Quality Score:** **9.0 / 10**
-- **Need for Us:** **7.5 / 10**
+- **How Often Needed:** **7.5 / 10**
 - **Recommended Scope:** `Global (-g)` *(with narrowed explicit trigger and `quick`-profile quota guard)*
 - **Active Since:** `2026-11-16`
 - **Current Status:** `✅ Using` *(primary source-level vulnerability audit skill across Backend, Web, and Mobile repos without spinning up Docker)*

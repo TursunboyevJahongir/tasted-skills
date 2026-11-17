@@ -18,7 +18,7 @@
 | **Доплата за API** | **`$0` (100% бесплатно)** | `$0` (локальный CLI; Cloud платный) | **Платно** (нужен платный LLM API-ключ в `.env`) | `$0` *(встроена реклама облака `mobilenext.ai`)* |
 | **Зависимости** | **`0` (готовый бинарник, без Java)** | **Требует Java (`JDK 17+`)** | Python `3.12+` + LLM SDK | Node + телеметрия `Scarf`/`PostHog` |
 | **Maestro `.yaml` E2E** | **Встроено (`replay/test --maestro`)** | Родной `.yaml` движок | Нет | Нет |
-| **Итог** | **✅ Основной инструмент (`#8`)** | Отдельно ставить не нужно (`agent-device --maestro` достаточно) | `👍` Только для кастомных `Canvas`/игровых экранов | `⛔ Отклонено` (в `6.5x–37x` медленнее и раздут) |
+| **Итог** | **✅ Основной инструмент (`#8`)** | Отдельно ставить не нужно (`agent-device --maestro` достаточно) | `👍` Только для кастомных `Canvas`/игровых экранов | `⚠️ Не рекомендуется` (в `6.5x–37x` медленнее и раздут) |
 
 ---
 
@@ -40,7 +40,7 @@
 | **На каких сайтах и программах работает?** | **Любые сайты (`React`, `Next.js`, `Shadcn`, `Radix`, обычный HTML) + любые программы macOS** (`Chrome`, `Telegram`, `Postman`, `Docker`, `Finder`) | **Работает только на сайтах, переписанных с нуля на `@ui-sdk/*`** (не видит обычные `<button>`/`<input>`) |
 | **Поддержка Mobile / Expo** | Web и Desktop (включая резерв для `iOS Device Hub`) | Не работает в `React Native / Expo` |
 | **Доп. возможности** | Прямой вызов C-ABI (`libagent_desktop_ffi.dylib`) из Python/Swift/Go | Public Beta (`0.1.0-beta`), частые breaking changes |
-| **Итог** | **✅ Основной инструмент (`#7`)** | `⛔ Отклонено` (переписывать рабочие проекты под `@ui-sdk/*` бессмысленно) |
+| **Итог** | **✅ Основной инструмент (`#7`)** | `🔄 Есть альтернатива получше` (переписывать рабочие проекты под `@ui-sdk/*` бессмысленно) |
 
 ---
 
@@ -51,17 +51,17 @@
 | Скилл | Охват | Что делает? | Почему выбрали / отклонили? |
 |---|---|---|---|
 | ✅ [**`impeccable`**](../../reviews/ru/ui-ux/impeccable.md) + [**`mobile-native`**](../../reviews/ru/mobile/mobile-native.md) | **Web + Mobile Web/PWA + Native iOS/Android** | Защита от AI-штампов (`craft-floor`) + 20 команд (`polish`, `clarify`, `harden`, `quieter`, `bolder`) + **APCA-контраст (`\|Lc\| ≥ 60`)** + 11 фиксов мобильного веба (`dvh`, `safe-area`, `16px`). | **✅ Основная связка (`#5` и `#19`)** — закрывает все платформы в единой системе. |
-| ❌ [**`unslop`**](../../reviews/ru/ui-ux/unslop.md) | Только Web | 9-шаговая очистка AI/vibecoded веб-страниц (`Playwright`). | `⛔ Отклонено` — конфликтует по auto-trigger с `impeccable`, не работает на мобилках (`impeccable polish/quieter` уже умеет это). |
-| ❌ [**`break-ui`**](../../reviews/ru/ui-ux/break-ui.md) | Только Web | Стресс-тест UI экстремальными/пустыми данными. | `⛔ Отклонено` — добавляет временные фикстуры в проект и **останавливается без починки** (`impeccable harden` сразу чинит). |
-| ❌ [**`make-interfaces-feel-better`**](../../reviews/ru/ui-ux/make-interfaces-feel-better.md) | Web | Проверка рамок, скруглений и теней. | `⛔ Отклонено` — удалён после 16 дней использования из-за громоздких отчётов на 4 таблицы. |
-| ❌ [**`ui-ux-pro-max`**](../../reviews/ru/ui-ux/ui-ux-pro-max.md) | Web | Подбор палитр и шрифтов через CSV/Python. | `⛔ Отклонено` — слабее `impeccable` и конфликтует с его auto-trigger. |
+| ❌ [**`unslop`**](../../reviews/ru/ui-ux/unslop.md) | Только Web | 9-шаговая очистка AI/vibecoded веб-страниц (`Playwright`). | `🔄 Есть альтернатива получше` — конфликтует по auto-trigger с `impeccable`, не работает на мобилках (`impeccable polish/quieter` уже умеет это). |
+| ❌ [**`break-ui`**](../../reviews/ru/ui-ux/break-ui.md) | Только Web | Стресс-тест UI экстремальными/пустыми данными. | `🔄 Есть альтернатива получше` — добавляет временные фикстуры в проект и **останавливается без починки** (`impeccable harden` сразу чинит). |
+| ❌ [**`make-interfaces-feel-better`**](../../reviews/ru/ui-ux/make-interfaces-feel-better.md) | Web | Проверка рамок, скруглений и теней. | `🔄 Есть альтернатива получше` — удалён после 16 дней использования из-за громоздких отчётов на 4 таблицы. |
+| ❌ [**`ui-ux-pro-max`**](../../reviews/ru/ui-ux/ui-ux-pro-max.md) | Web | Подбор палитр и шрифтов через CSV/Python. | `🔄 Есть альтернатива получше` — слабее `impeccable` и конфликтует с его auto-trigger. |
 
 ### B. Анимации и SwiftUI (`animate-expo` + `impeccable` vs `animate` vs `swiftui-agent-skill`)
 
 | Скилл | Направление | Решение и причина |
 |---|---|---|
 | ✅ [**`animate-expo`**](../../reviews/ru/mobile/animate-expo.md) + [**`impeccable` (`animate`)**](../../reviews/ru/ui-ux/impeccable.md) | **Expo / React Native (`Reanimated` UI-thread `60/120fps` + haptics)** и **Web CSS/WAAPI анимации** | **✅ Основные (`#12` и `#5`)** — плавные анимации и в мобильных приложениях, и в вебе. |
-| ❌ [**`animate`** *(Эмиль Ковальски)*](../../reviews/ru/ui-ux/animate.md) | Только веб-анимации CSS/JS | `⛔ Отклонено` — правила уже есть в `impeccable`, а auto-trigger конфликтует с `animate-expo`. |
+| ❌ [**`animate`** *(Эмиль Ковальски)*](../../reviews/ru/ui-ux/animate.md) | Только веб-анимации CSS/JS | `🔄 Есть альтернатива получше` — правила уже есть в `impeccable`, а auto-trigger конфликтует с `animate-expo`. |
 | 👍 [**`swiftui-agent-skill`**](../../reviews/ru/mobile/swiftui-agent-skill.md) | Чистый нативный SwiftUI (`iOS 26+ Liquid Glass`, `WidgetKit`, `ActivityKit`) | `👍 Хороший вариант` — так как основной стек Expo, ставится только локально (`-p`) для iOS Widgets / Live Activities. |
 
 ---
@@ -73,9 +73,9 @@
 | Инструмент | Подход | Решение и причина |
 |---|---|---|
 | ✅ [**`grill-me`**](../../reviews/ru/architecture/grill-me.md) + [**`graphify`**](../../reviews/ru/architecture/graphify.md) + [**`ponytail`**](../../reviews/ru/architecture/ponytail.md) + [**`karpathy-guidelines`**](../../reviews/ru/architecture/karpathy-guidelines.md) | Каркас проекта за `0` токенов (`graphify`, экономит `~10x–20x` токенов на больших репо) -> продумывание задачи до кода (`grill-me`, спасает от 2–3x переделок) -> минимальный YAGNI и `surgical` diff (`ponytail` + `karpathy`). | **✅ Основная четвёрка (`#1–#4`)** — быстро, точно и без лишней бюрократии. |
-| ❌ [**`superpowers`**](../../reviews/ru/architecture/superpowers.md) | 14 скиллов + хук `SessionStart` + обязательный TDD и циклы субагентов на каждый шаг. | `⛔ Отклонено` — удалён после 5 месяцев теста (замедляет разработку в `2` раза и сжигает квоту). |
-| ❌ [**`addy-agent-skills`**](../../reviews/ru/architecture/addy-agent-skills.md) | 25 скиллов + тяжёлый конвейер `/spec -> /ship` и остановки `doubt-driven`. | `⛔ Отклонено` — лишние циклы в повседневной работе. |
-| ❌ [**`agency-agents`**](../../reviews/ru/architecture/agency-agents.md) | 283 `.md` ролевых промпта (`~18.5K` токенов раздувания frontmatter). | `⛔ Отклонено` — поверхностные шаблонные роли. |
+| ❌ [**`superpowers`**](../../reviews/ru/architecture/superpowers.md) | 14 скиллов + хук `SessionStart` + обязательный TDD и циклы субагентов на каждый шаг. | `⚠️ Не рекомендуется` — удалён после 5 месяцев теста (замедляет разработку в `2` раза и сжигает квоту). |
+| ❌ [**`addy-agent-skills`**](../../reviews/ru/architecture/addy-agent-skills.md) | 25 скиллов + тяжёлый конвейер `/spec -> /ship` и остановки `doubt-driven`. | `🔄 Есть альтернатива получше` — лишние циклы в повседневной работе. |
+| ❌ [**`agency-agents`**](../../reviews/ru/architecture/agency-agents.md) | 283 `.md` ролевых промпта (`~18.5K` токенов раздувания frontmatter). | `⚠️ Не рекомендуется` — `~18.5K` токенов раздувания и поверхностные шаблонные роли. |
 
 ### B. Краткие Ответы и Стиль Текста (`ponytail` vs `caveman` vs `humanizer`)
 
@@ -83,7 +83,7 @@
 |---|---|---|---|
 | ✅ [**`ponytail`**](../../reviews/ru/architecture/ponytail.md) | **Сокращает и текст ответа ИИ, и объём/сложность самого кода и diff'а** (YAGNI, 0 лишних абстракций). | **`0` телеметрии**, лёгкий `SKILL.md` | **✅ Основной (`#3`)** |
 | 👍 [**`caveman`**](../../reviews/ru/developer-tools/caveman.md) | Вырезает артикли и связки **только из текстового ответа в терминале** (`~65%` меньше выходных токенов); на объём кода не влияет. | В CLI-пакете есть `fetch`-телеметрия и хуки `SessionStart` (брать только чистый `SKILL.md`) | `👍` Резерв (`ponytail` полностью хватает) |
-| ❌ [**`humanizer` + `stop-slop`**](../../reviews/ru/developer-tools/humanizer-stop-slop.md) | Чистит длинные статьи и эссе от штампов ИИ. | `~32 KB` (`humanizer`) | `⛔ Отклонено` (не для кода и UI) |
+| ❌ [**`humanizer` + `stop-slop`**](../../reviews/ru/developer-tools/humanizer-stop-slop.md) | Чистит длинные статьи и эссе от штампов ИИ. | `~32 KB` (`humanizer`) | `🔄 Есть альтернатива получше` (не для кода и UI) |
 
 ### C. Мультиагентная Работа и Ревью (`Orca` + `EGM` vs `T3 Code` vs `OmniRoute`)
 
@@ -91,8 +91,8 @@
 |---|---|---|
 | ✅ [**`Orca`**](../../reviews/ru/developer-tools/orca.md) + `orchestration` + `task-context` | **Цепочка ИИ из одного промпта + Мобильное управление:** Живые карточки субагентов (`Codex`, `Claude`, `Argon`) прямо в Chat UI, работа при `Lock Screen` (`caffeinate`), стабильное приложение `Orca IDE` и передача эстафеты через `task-context` (`841 MB` RAM). | **✅ Использую (`#13`)** |
 | ✅ [**`elephant-goldfish-model`**](../../reviews/ru/architecture/elephant-goldfish-model.md) | **Ревью без памяти (`Goldfish`, 5 персон) + Drift + ТРИЗ:** Аудит архитектуры/PR без предвзятости, поиск расхождений доков с кодом (`egm-drift-report`) и решение противоречий по ТРИЗ. | **✅ Использую (`#6`)** |
-| ❌ [**`T3 Code`**](../../reviews/ru/developer-tools/t3-code.md) | Наше прежнее мультиагентное приложение (`2026-10-23 → 2026-11-16`). | `⛔ Отклонено` — бета-приложение на телефоне часто отваливалось, сессии прерывались при `Lock Screen`, нет карточек субагентов в чате (заменено на `Orca`). |
-| ❌ [**`OmniRoute`**](../../reviews/ru/developer-tools/omniroute.md) | Локальный LLM reverse-proxy (`localhost:20128`) + 44 админ-скилла. | `⛔ Отклонено` — рвёт длинные сессии (`#7287`), незаметно понижает модель и несёт риск бана аккаунта из-за `wreq-js` TLS-stealth. |
+| ❌ [**`T3 Code`**](../../reviews/ru/developer-tools/t3-code.md) | Наше прежнее мультиагентное приложение (`2026-10-23 → 2026-11-16`). | `🔄 Есть альтернатива получше` — бета-приложение на телефоне часто отваливалось, сессии прерывались при `Lock Screen`, нет карточек субагентов в чате (заменено на `Orca`). |
+| ❌ [**`OmniRoute`**](../../reviews/ru/developer-tools/omniroute.md) | Локальный LLM reverse-proxy (`localhost:20128`) + 44 админ-скилла. | `⚠️ Не рекомендуется` — рвёт длинные сессии (`#7287`), незаметно понижает модель и несёт риск бана аккаунта из-за `wreq-js` TLS-stealth. |
 
 ---
 
@@ -111,6 +111,6 @@
 | Модель / Вариант | Основное назначение | Работает ли для кодинга? | Железо / Тариф | Итог |
 |---|---|---|---|---|
 | **Локально `Ollama` / `MLX` (`Qwen3-Coder` / `Qwen2.5-Coder`)** | 100% офлайн написание и анализ кода на `32–64 GB` Mac | **Да (`30–65 ток/с` целиком в RAM)** | `~9–20 GB` Unified RAM · `$0` | **Лучший выбор, если действительно нужен локальный офлайн-кодер.** |
-| ❌ [**`kimi-k3-in-c`**](../../reviews/ru/local-models/kimi-k3-in-c.md) | C99-эксперимент потокового чтения весов `2.78T` MoE с NVMe без GPU | **Нет (`1 токен = ~24–33 сек`, `500` токенов = `~3.5 ч` + `~50 TB` чтения с SSD)** | Мин.: `1.8 TB` NVMe; Для работы: `16× H200 (~2.25 TB VRAM)` | `⛔ Отклонено` (убивает ресурс SSD, непригодно для работы). |
-| ❌ [**`MiniMax-M3.1-Flash` *(Локально)* **](../../reviews/ru/local-models/minimax-m3-1-flash.md) | Локальный запуск быстрой мультимодальной (`текст + фото + видео`, `1M`) модели | Подходит для простых скриптов, но не основной кодер (`Terminal-Bench: 38.1%`) | Веса `~250–285 GB`; `512 GB` Mac Studio или `8× H100 (640 GB VRAM)` | `⛔ Отклонено` (не помещается на рабочие компьютеры). |
+| ❌ [**`kimi-k3-in-c`**](../../reviews/ru/local-models/kimi-k3-in-c.md) | C99-эксперимент потокового чтения весов `2.78T` MoE с NVMe без GPU | **Нет (`1 токен = ~24–33 сек`, `500` токенов = `~3.5 ч` + `~50 TB` чтения с SSD)** | Мин.: `1.8 TB` NVMe; Для работы: `16× H200 (~2.25 TB VRAM)` | `⚠️ Не рекомендуется` (убивает ресурс SSD, непригодно для работы). |
+| ❌ [**`MiniMax-M3.1-Flash` *(Локально)* **](../../reviews/ru/local-models/minimax-m3-1-flash.md) | Локальный запуск быстрой мультимодальной (`текст + фото + видео`, `1M`) модели | Подходит для простых скриптов, но не основной кодер (`Terminal-Bench: 38.1%`) | Веса `~250–285 GB`; `512 GB` Mac Studio или `8× H100 (640 GB VRAM)` | `⚠️ Не рекомендуется` (не помещается на рабочие компьютеры). |
 | 👍 [**`MiniMax M3.1 Flash API`**](../../reviews/ru/external-apis/minimax-m3-1-flash-api.md) | Массовые боты в бэкенде, переводы, `OCR`/фото/видео и SaaS-автоматизация | Работает для простых скриптов и автоматизации (не основной IDE-кодер) | **`$0.15 / $0.60`** (`Cached: $0.015`), **`170+ ток/с`**, окно `1M` | `👍 Хороший вариант` (для бэкенда продуктов через платный Zero-Retention API). |

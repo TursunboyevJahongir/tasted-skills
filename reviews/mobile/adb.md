@@ -6,7 +6,7 @@
 - **Turkum:** `Mobile` *(Android Emulator va haqiqiy Android qurilmalarni boshqarish)*
 - **Turi:** `CLI / Runtime Tool` *(rasmiy Android SDK vositasi)*
 - **Sifat bahosi:** **9.5 / 10**
-- **Bizga kerakliligi:** **10.0 / 10**
+- **Ishda kerak bo'lishi:** **10.0 / 10**
 - **Tavsiya etilgan ko'lam:** `Standalone Tool` *(global CLI sifatida o'rnatilgan + QA skillar orqali boshqariladi)*
 - **Ishlatilayotgan sana:** `2026-09-07` dan
 - **Joriy holati:** `✅ Ishlatyapman` *(Android emulyator va jismoniy qurilma testlarida asosiy vosita)*

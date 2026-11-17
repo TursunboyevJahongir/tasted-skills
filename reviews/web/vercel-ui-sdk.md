@@ -6,10 +6,10 @@
 - **Turkum:** `Web` *(Headless UI Behavior Primitives + `WebMCP` Agent Bridge — Public Beta)*
 - **Turi:** `NPM Framework Library` (`@ui-sdk/*`) + `Skill` (`packages/core/skills/ui-sdk`)
 - **Sifat bahosi:** **8.0 / 10** *(arxitektura va ko'p-freymvorkli headless dizayn sifatida)*
-- **Bizga kerakliligi:** **2.0 / 10** *(mavjud React/Shadcn/Radix veb va Expo mobil stekimizga mos emas)*
+- **Ishda kerak bo'lishi:** **2.0 / 10** *(mavjud React/Shadcn/Radix veb va Expo mobil stekimizga mos emas)*
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(faqat kelajakda noldan maxsus `@ui-sdk/*` da veb-loyiha boshlansagina lokal `-p` da olinadi)*
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⛔ Rad etildi` *(o'rniga: mavjud UI stekimiz + [**`impeccable`**](../ui-ux/impeccable.md) + [**`agent-desktop`**](../developer-tools/agent-desktop.md))*
+- **Joriy holati:** `🔄 Alternativi yaxshiroq` *(o'rniga: mavjud UI stekimiz + [**`impeccable`**](../ui-ux/impeccable.md) + [**`agent-desktop`**](../developer-tools/agent-desktop.md))*
 
 ---
 
@@ -73,5 +73,5 @@ Bizga bu kutubxona ham, uning skilli ham kerak emas — chunki uning ikkala vazi
 
 | Sana | Amal | Holat | Izoh (ishlatildimi, qayerda sinab ko'rildi, nima tozalandi) |
 |---|---|---|---|
-| 2026-11-16 | Video demo (`@githubradar`), `vercel-labs/ui` manba kodi (`SKILL.md`, `agent-ready.md`) va `skillshare audit` tekshiruvi | `⛔ Rad etildi` | Faqat `@ui-sdk/*` da yozilgan Beta veb-ilovalar uchungina ishlashi (oddiy HTML/Shadcn'ni ko'rmasligi) sabab rad etildi. O'rniga: mavjud UI stekimiz + `impeccable` + `agent-desktop`. |
+| 2026-11-16 | Video demo (`@githubradar`), `vercel-labs/ui` manba kodi (`SKILL.md`, `agent-ready.md`) va `skillshare audit` tekshiruvi | `🔄 Alternativi yaxshiroq` | Faqat `@ui-sdk/*` da yozilgan Beta veb-ilovalar uchungina ishlashi (oddiy HTML/Shadcn'ni ko'rmasligi) sabab rad etildi. O'rniga: mavjud UI stekimiz + `impeccable` + `agent-desktop`. |
 

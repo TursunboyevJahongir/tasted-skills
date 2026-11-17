@@ -6,10 +6,10 @@
 - **Turkum:** `Developer Tools` *(Lokal LLM Reverse-Proxy, API Kalitlar Rotatsiyasi va Prompt Kompressiyasi)*
 - **Turi:** `Local Proxy Server + MCP + 44 Generated Skills`
 - **Sifat bahosi:** **7.5 / 10**
-- **Bizga kerakliligi:** **2.0 / 10**
+- **Ishda kerak bo'lishi:** **2.0 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⛔ Rad etildi` *(rasmiy muhitlar, `Orca` va `ponytail` ishlatilgani hamda ToS/sessiya xavflari sabab o'rnatilmadi)*
+- **Joriy holati:** `⚠️ Tavsiya etilmaydi` *(rasmiy muhitlar, `Orca` va `ponytail` ishlatilgani hamda ToS/sessiya xavflari sabab o'rnatilmadi)*
 
 ---
 
@@ -40,6 +40,9 @@ Ko'pchilik `OmniRoute` ni kod yozish sifatini oshiradigan skill deb o'ylaydi, le
 ---
 
 ## 3. Xavfsizlik va O'rnatishdan oldin tozalash (Sanitarizatsiya)
+
+> [!WARNING]
+> **Akkaunt ban (`ToS`) va sessiya uzilishi xavfi:** Pullik `Claude` / `ChatGPT` / `Google` obunalarini `wreq-js` TLS-stealth orqali ulash **akkaunt bloklanishiga (`ban`)** olib kelishi mumkin, uzoq sessiyalarni uzib qo'yadi (`#7287`) va limitda kuchsiz modelga tushiradi.
 
 - **Xavf darajasi:** `O'rta–Yuqori` *(akkaunt ToS bloklanishi va tizim darajasidagi postinstall o'zgarishlari sabab)*
 - **Tekshirilgan nuqtalar:**
@@ -72,4 +75,4 @@ Ko'pchilik `OmniRoute` ni kod yozish sifatini oshiradigan skill deb o'ylaydi, le
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kodi (`v3.8.54`), `postinstall.mjs` va 44 ta `SKILL.md` auditi | `⛔ Rad etildi` | Ichidagi skillar kodlash skilli emasligi (faqat proxy sozlamalari), uzoq sessiyalarni uzishi (`#7287`), yashirin model pasayishi va `wreq-js` TLS-stealth orqali pullik obunalarda ToS bloklanish xavfi borligi sabab o'rnatmaslikka qaror qilindi. |
+| 2026-11-16 | Manba kodi (`v3.8.54`), `postinstall.mjs` va 44 ta `SKILL.md` auditi | `⚠️ Tavsiya etilmaydi` | Ichidagi skillar kodlash skilli emasligi (faqat proxy sozlamalari), uzoq sessiyalarni uzishi (`#7287`), yashirin model pasayishi va `wreq-js` TLS-stealth orqali pullik obunalarda ToS bloklanish xavfi borligi sabab o'rnatmaslikka qaror qilindi. |

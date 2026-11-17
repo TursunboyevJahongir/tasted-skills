@@ -6,10 +6,10 @@
 - **Category:** `Web` *(Headless UI Behavior Primitives + `WebMCP` Agent Bridge — Public Beta)*
 - **Type:** `NPM Framework Library` (`@ui-sdk/*`) + `Skill` (`packages/core/skills/ui-sdk`)
 - **Quality Score:** **8.0 / 10** *(clean multi-framework headless behavior architecture)*
-- **Need for Us:** **2.0 / 10** *(does not fit our existing React/Shadcn/Radix web and Expo mobile stacks)*
+- **How Often Needed:** **2.0 / 10** *(does not fit our existing React/Shadcn/Radix web and Expo mobile stacks)*
 - **Recommended Scope:** `Do Not Install` *(install locally `-p` only if starting a dedicated greenfield `@ui-sdk/*` web app)*
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⛔ Rejected` *(instead use: our existing UI stack + [**`impeccable`**](../ui-ux/impeccable.md) + [**`agent-desktop`**](../developer-tools/agent-desktop.md))*
+- **Current Status:** `🔄 Better Alternative` *(instead use: our existing UI stack + [**`impeccable`**](../ui-ux/impeccable.md) + [**`agent-desktop`**](../developer-tools/agent-desktop.md))*
 
 ---
 
@@ -73,5 +73,5 @@ We do not need either the library or its global skill because both jobs are alre
 
 | Date | Action | Status | Notes (where tested, what was sanitized, outcome) |
 |---|---|---|---|
-| 2026-11-16 | Audited `@githubradar` video claim, `vercel-labs/ui` source (`SKILL.md`, `agent-ready.md`), and `skillshare audit` | `⛔ Rejected` | Rejected because `createAgent` works only on apps rewritten in beta `@ui-sdk/*` parts (blind to standard HTML/Shadcn). Instead use our existing UI stack + `impeccable` + `agent-desktop`. |
+| 2026-11-16 | Audited `@githubradar` video claim, `vercel-labs/ui` source (`SKILL.md`, `agent-ready.md`), and `skillshare audit` | `🔄 Better Alternative` | Rejected because `createAgent` works only on apps rewritten in beta `@ui-sdk/*` parts (blind to standard HTML/Shadcn). Instead use our existing UI stack + `impeccable` + `agent-desktop`. |
 

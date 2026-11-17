@@ -6,7 +6,7 @@
 - **Turkum:** `Mobile` *(iOS Simulator va haqiqiy iPhone/iPad ilovalarini boshqarish)*
 - **Turi:** `CLI + macOS App Bridge` (`Xcode.app` tarkibida)
 - **Sifat bahosi:** **9.0 / 10**
-- **Bizga kerakliligi:** **9.5 / 10**
+- **Ishda kerak bo'lishi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Standalone Tool` *(Xcode bilan o'rnatilgan + `agent-desktop` bilan birga ishlaydi)*
 - **Ishlatilayotgan sana:** `2026-10-20` dan
 - **Joriy holati:** `✅ Ishlatyapman` *(iOS ilovalarni simulyator va qurilmada tekshirish uchun asosiy vosita)*

@@ -6,7 +6,7 @@
 - **Turkum:** `Mobile` *(iOS, Android, tvOS va Android TV ilovalarni fonda UI daraxti orqali boshqarish)*
 - **Turi:** `CLI + Skill` *(MCP serversiz toza CLI rejimida o'rnatilgan)*
 - **Sifat bahosi:** **9.5 / 10**
-- **Bizga kerakliligi:** **9.5 / 10**
+- **Ishda kerak bo'lishi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global CLI (npm i -g agent-device) + Sanitarizatsiya qilingan Global Skill (-g)`
 - **Tekshirilgan sana:** `2026-11-16`
 - **Joriy holati:** `✅ Ishlatyapman` *(mobil va TV UI avtomatizatsiyasida asosiy vosita)*

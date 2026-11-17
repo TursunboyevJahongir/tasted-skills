@@ -10,7 +10,7 @@
 - **Recommended Scope:** `Do Not Install` *(previously tested and uninstalled)*
 - **Used Instead:** [**`impeccable`**](impeccable.md) ([pbakaus/impeccable](https://github.com/pbakaus/impeccable)) + [**`animate-expo`**](../mobile/animate-expo.md) ([emilkowalski/skills](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo))
 - **Used Period:** `2026-10-31 → 2026-11-15` *(tested and removed)*
-- **Current Status:** `⛔ Rejected` *(🧪 Tested and removed because `impeccable` + `animate-expo` completely supersede it)*
+- **Current Status:** `🔄 Better Alternative` *(🧪 Tested and removed because `impeccable` + `animate-expo` completely supersede it)*
 
 ---
 
@@ -67,5 +67,5 @@
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-10-31 | Synced globally via `skillshare` and tested in practice | `⛔ Rejected` | Tested for Web CSS micro-polish (collided on auto-triggers once `impeccable` was adopted on `2026-11-09`). |
-| 2026-11-15 | Uninstalled globally via `skillshare uninstall make-interfaces-feel-better -g` | `⛔ Rejected` | Removed because [`impeccable`](impeccable.md) and [`animate-expo`](../mobile/animate-expo.md) cover all its useful rules without 4-table report bloat. |
+| 2026-10-31 | Synced globally via `skillshare` and tested in practice | `🔄 Better Alternative` | Tested for Web CSS micro-polish (collided on auto-triggers once `impeccable` was adopted on `2026-11-09`). |
+| 2026-11-15 | Uninstalled globally via `skillshare uninstall make-interfaces-feel-better -g` | `🔄 Better Alternative` | Removed because [`impeccable`](impeccable.md) and [`animate-expo`](../mobile/animate-expo.md) cover all its useful rules without 4-table report bloat. |

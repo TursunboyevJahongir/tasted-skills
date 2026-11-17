@@ -6,7 +6,7 @@
 - **Turkum:** `Developer Tools` *(Lokal rasm, SVG, video va 3D fayllarni siqish hamda kod importlarini yangilash)*
 - **Turi:** `Standalone CLI` + biz yozgan yengil [`asset-diet`](../../skills/asset-diet/SKILL.md) on-demand skilli
 - **Sifat bahosi:** **7.5 / 10**
-- **Bizga kerakliligi:** **6.5 / 10** *(doimiy 16-tool MCP sifatida emas, [`asset-diet`](../../skills/asset-diet/SKILL.md) skilli orqali faqat kerak paytda `npx` CLI rejimida)*
+- **Ishda kerak bo'lishi:** **6.5 / 10** *(doimiy 16-tool MCP sifatida emas, [`asset-diet`](../../skills/asset-diet/SKILL.md) skilli orqali faqat kerak paytda `npx` CLI rejimida)*
 - **Tavsiya etilgan ko'lam:** `On-Demand npx CLI + Global yengil asset-diet skilli (-g)`
 - **Tekshirilgan sana:** `2026-11-16`
 - **Joriy holati:** `👍 Yaxshi variant` *(doimiy MCP ulamasdan, ushbu repodagi [`skills/asset-diet`](../../skills/asset-diet/SKILL.md) skilli barcha 5 ta agent muhitiga ulandi va real repoda sinab ko'rildi)*

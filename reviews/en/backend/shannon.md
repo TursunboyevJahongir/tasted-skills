@@ -6,7 +6,7 @@
 - **Category:** `Backend` *(White-Box Web & HTTP API Security Auditing and Autonomous Pentesting)*
 - **Type:** `Standalone CLI (Docker + Temporal)` + custom lightweight [`hacker-test`](../../../skills/hacker-test/SKILL.md) trigger skill
 - **Quality Score:** **8.5 / 10**
-- **Need for Us:** **6.5 / 10**
+- **How Often Needed:** **6.5 / 10**
 - **Recommended Scope:** `On-Demand npx CLI + Global lightweight hacker-test skill` — *skip its heavy upstream plugin and trigger via our [`skills/hacker-test`](../../../skills/hacker-test/SKILL.md) wrapper strictly on local/staging*
 - **Reviewed Date:** `2026-11-16`
 - **Current Status:** `👍 Good Option` *(source audited; packaged [`skills/hacker-test`](../../../skills/hacker-test/SKILL.md) in this repo and synced globally so pre-release pentests are always one phrase away)*

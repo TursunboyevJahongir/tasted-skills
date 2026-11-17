@@ -6,7 +6,7 @@
 - **Category:** `Mobile` *(Idiomatic SwiftUI & Apple HIG Guidance)*
 - **Type:** `Skill`
 - **Quality Score:** **8.5 / 10**
-- **Need for Us:** **3.0 / 10** *(our primary mobile apps use React Native / Expo; useful only locally `-p` for pure SwiftUI targets)*
+- **How Often Needed:** **3.0 / 10** *(our primary mobile apps use React Native / Expo; useful only locally `-p` for pure SwiftUI targets)*
 - **Recommended Scope:** `Local Only (-p)` *(strictly inside native Swift/SwiftUI repos or targets)*
 - **Instead Use:** [**`impeccable`**](../ui-ux/impeccable.md) (`reference/ios.md` for Apple HIG) + [**`animate-expo`**](animate-expo.md) (for Expo / RN)
 - **Reviewed Date:** `2026-11-16`

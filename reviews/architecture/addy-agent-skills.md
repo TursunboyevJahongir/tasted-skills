@@ -6,11 +6,11 @@
 - **Turkum:** `Architecture` *(To'liq SDLC konveyeri: `/spec`, `/plan`, `/build`, `/test`, `/review`, `/ship`)*
 - **Turi:** `Plugin (25 ta skill + 9 command + 4 persona)`
 - **Sifat bahosi:** **8.0 / 10**
-- **Bizga kerakliligi:** **2.5 / 10**
+- **Ishda kerak bo'lishi:** **2.5 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
 - **O'rniga ishlatiladigan muqobillar:** [**`grill-me`**](grill-me.md) + [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) + [**`elephant-goldfish-model`**](elephant-goldfish-model.md) + [**`T3 Code`**](../developer-tools/t3-code.md)
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⛔ Rad etildi`
+- **Joriy holati:** `🔄 Alternativi yaxshiroq`
 
 ---
 
@@ -39,4 +39,4 @@ Addy Osmani tomonidan yig'ilgan 25 ta muhandislik skilli (`interview-me`, `spec-
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kod auditi | `⛔ Rad etildi` | Sifatli yozilgan (`8.0/10`), ammo 25 ta skilldan iborat og'ir SDLC konveyeri mavjud yengil va kuchli stekimizni dublikat qilgani uchun o'rnatilmadi. |
+| 2026-11-16 | Manba kod auditi | `🔄 Alternativi yaxshiroq` | Sifatli yozilgan (`8.0/10`), ammo 25 ta skilldan iborat og'ir SDLC konveyeri mavjud yengil va kuchli stekimizni dublikat qilgani uchun o'rnatilmadi. |

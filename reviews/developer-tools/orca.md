@@ -6,7 +6,7 @@
 - **Turkum:** `Developer Tools` *(Multi-Agent Orkestratsiya, Mobil Boshqaruv va Cross-AI Code Review)*
 - **Turi:** `Desktop App + CLI (orca orchestration) + Mobile App (iOS / Android)`
 - **Sifat bahosi:** **9.5 / 10**
-- **Bizga kerakliligi:** **9.5 / 10**
+- **Ishda kerak bo'lishi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Standalone Desktop App (/Applications/Orca.app) + Global orchestration Skill`
 - **Ishlatilayotgan sana:** `2026-11-16` dan
 - **Joriy holati:** `✅ Ishlatyapman` *(T3 Code o'rniga asosiy multi-agent ish muhiti sifatida o'tdik)*

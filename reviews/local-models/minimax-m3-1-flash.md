@@ -7,10 +7,10 @@
 - **Turkum:** `Lokal modellar` *(Ochiq vaznli Multimodal MoE — lokal kompyuter/serverda yoqish tahlili)*
 - **Turi:** `Open-Weight LLM` *(`~428B` umumiy / `~23B` aktiv parametr, `1M` kontekst, `MXFP8 + NVFP4`)*
 - **Sifat bahosi:** **8.0 / 10** *(tezkor multimodal `Flash` sinfidagi model sifatida)*
-- **Bizga kerakliligi (Lokalda):** **1.0 / 10** *(oddiy kompyuterlarga sig'maydi; bulut API sifatida esa — [`👍 Yaxshi variant`](../external-apis/minimax-m3-1-flash-api.md))*
+- **Ishda kerak bo'lishi (Lokalda):** **1.0 / 10** *(oddiy kompyuterlarga sig'maydi; bulut API sifatida esa — [`👍 Yaxshi variant`](../external-apis/minimax-m3-1-flash-api.md))*
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik (Lokalda)` *(kerak bo'lsa [🔌 Tashqi API](../external-apis/minimax-m3-1-flash-api.md) orqali ishlatish)*
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⛔ Rad etildi` *(lokalda `~250–285 GB` joy va normal ishlashi uchun `8× H100 / 640 GB VRAM` server klasteri talab qiladi)*
+- **Joriy holati:** `⚠️ Tavsiya etilmaydi` *(lokalda `~250–285 GB` joy va normal ishlashi uchun `8× H100 / 640 GB VRAM` server klasteri talab qiladi)*
 
 ---
 
@@ -39,6 +39,9 @@
 
 ## 3. Kompyuter Resurs Talablari (`Min` vs `Yaxshi ishlashi uchun`)
 
+> [!WARNING]
+> **Lokal va maxfiylik xavfi:** `32–64 GB` kompyuterda disk-offload/swap SSD'ni yemiradi, begona kvantlarda `trust_remote_code=True` (`RCE`) xavfi bor, tekin kredit/`:free` endpointlarda esa yopiq kod o'qitishga ketadi.
+
 | Ko'rsatkich | Minimal (Zo'rg'a lokalda ishga tushirish) | Yaxshi ishlashi uchun (`vLLM` / `SGLang`, `100–170+ tok/s`) |
 |---|---|---|
 | **GPU / VRAM** | **`Mac Studio Ultra 512 GB Unified RAM`** *(yoki `0–24 GB` GPU bilan SSD offload)* | **`8× NVIDIA H100` (`640 GB VRAM`)** yoki **`4× NVIDIA B200` (`720 GB VRAM`)** |
@@ -64,4 +67,4 @@
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Model yo'nalishi, coding benchmarklari (`Terminal-Bench 38.1%`), temir talablari va lokal/API alternativalar tahlili | `⛔ Rad etildi` | Lokalda `~250–285 GB` vazn va `640 GB VRAM` talabi sabab rad etildi; bu model kerak bo'lsa [Tashqi API](../external-apis/minimax-m3-1-flash-api.md) orqali, lokal coder kerak bo'lsa `Ollama`/`MLX` (`Qwen3-Coder`) orqali ishlatiladi. |
+| 2026-11-16 | Model yo'nalishi, coding benchmarklari (`Terminal-Bench 38.1%`), temir talablari va lokal/API alternativalar tahlili | `⚠️ Tavsiya etilmaydi` | Lokalda `~250–285 GB` vazn va `640 GB VRAM` talabi sabab rad etildi; bu model kerak bo'lsa [Tashqi API](../external-apis/minimax-m3-1-flash-api.md) orqali, lokal coder kerak bo'lsa `Ollama`/`MLX` (`Qwen3-Coder`) orqali ishlatiladi. |

@@ -6,7 +6,7 @@
 - **Turkum:** `Developer Tools` *(Desktop GUI, Web brauzer va iOS Simulator avtomatlashtirish)*
 - **Turi:** `CLI + Global Skilllar` (`agent-desktop`, `agent-desktop-macos`, `agent-desktop-ffi`)
 - **Sifat bahosi:** **9.5 / 10**
-- **Bizga kerakliligi:** **10.0 / 10**
+- **Ishda kerak bo'lishi:** **10.0 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g) + Standalone CLI`
 - **Tekshirilgan sana:** `2026-11-15`
 - **Joriy holati:** `✅ Ishlatyapman` *(macOS'da desktop, Chrome va iOS Simulator testlarida asosiy vosita)*

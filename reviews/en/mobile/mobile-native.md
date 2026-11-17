@@ -6,7 +6,7 @@
 - **Category:** `Mobile` *(Mobile Web, PWA & Mini App)*
 - **Type:** `Skill` *(`SKILL.md` + local `LOCAL-COMPATIBILITY.md` guard)*
 - **Quality Score:** **8.5 / 10**
-- **Need for Us:** **7.5 / 10**
+- **How Often Needed:** **7.5 / 10**
 - **Recommended Scope:** `Global (-g)` *(sanitized and scoped)*
 - **Reviewed Date:** `2026-11-15`
 - **Current Status:** `✅ Using`

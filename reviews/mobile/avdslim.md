@@ -6,7 +6,7 @@
 - **Turkum:** `Mobile` *(Android Emulator RAM, Metal GPU va Golden Snapshot optimizatori)*
 - **Turi:** `Standalone Go CLI` (`0` tashqi bog'liqlik, `100%` Go stdlib)
 - **Sifat bahosi:** **9.0 / 10**
-- **Bizga kerakliligi:** **7.5 / 10**
+- **Ishda kerak bo'lishi:** **7.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global CLI (/opt/homebrew/bin/avdslim)` — barcha lokal Android AVD'larga `tune-avd` + `bake --headless` va GPS himoyalangan `defaults` bilan qo'llanadi (`install-shim` shart emas)
 - **Birga ishlaydigan tizimlar:** [**`agent-device`**](agent-device.md) + [**`adb`**](adb.md) + [**`simslim`**](simslim.md) + [**`cross-platform-qa`**](cross-platform-qa.md)
 - **Ishlatilayotgan sana:** `2026-11-16` dan

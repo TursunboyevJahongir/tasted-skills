@@ -6,7 +6,7 @@
 - **Category:** `Mobile` *(Headless accessibility-tree UI automation for iOS, Android, tvOS, and Android TV)*
 - **Type:** `CLI + Skill` *(installed in pure CLI mode without MCP schema overhead)*
 - **Quality Score:** **9.5 / 10**
-- **Need for Us:** **9.5 / 10**
+- **How Often Needed:** **9.5 / 10**
 - **Recommended Scope:** `Global CLI (npm i -g agent-device) + Sanitized Global Skill (-g)`
 - **Reviewed Date:** `2026-11-16`
 - **Current Status:** `✅ Using` *(primary driver for mobile and TV UI verification)*

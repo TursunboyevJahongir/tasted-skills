@@ -7,7 +7,7 @@
 - **Turkum:** `Tashqi API'lar` *(Mahsulot backendi, botlar va multimodal avtomatizatsiya uchun arzon bulut LLM API)*
 - **Turi:** `External Cloud API` *(`1M` kontekst, `matn + rasm + video`, OpenAI/Anthropic-mos REST API)*
 - **Sifat bahosi:** **8.0 / 10** *(narx / tezlik / multimodal sifat nisbati bo'yicha)*
-- **Bizga kerakliligi:** **5.0 / 10** *(mahsulot backendidagi ommaviy AI funksiyalar uchun tejamkor API)*
+- **Ishda kerak bo'lishi:** **5.0 / 10** *(mahsulot backendidagi ommaviy AI funksiyalar uchun tejamkor API)*
 - **Tavsiya etilgan ko'lam:** `Mahsulot backendida Pullik API (Zero-Data-Retention) sifatida`
 - **Tekshirilgan sana:** `2026-11-16`
 - **Joriy holati:** `👍 Yaxshi variant` *(`$0.15 / $0.60` narx va `170+ tok/s` tezlik bilan ommaviy bot, OCR/rasm/video tahlili va SaaS avtomatizatsiyasi uchun qulay)*

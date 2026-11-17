@@ -6,7 +6,7 @@
 - **Category:** `Mobile` *(Web + iOS/tvOS + Android/Android TV 2-Stage Verification Rule)*
 - **Type:** `Skill`
 - **Quality Score:** **9.5 / 10**
-- **Need for Us:** **9.5 / 10**
+- **How Often Needed:** **9.5 / 10**
 - **Recommended Scope:** `Global (-g)`
 - **Reviewed Date:** `2026-11-16`
 - **Current Status:** `✅ Using`

@@ -6,7 +6,7 @@
 - **Category:** `Mobile` *(Autonomous Android UI Testing Framework, CLI/SDK & MCP Server)*
 - **Type:** `Standalone Python CLI / SDK + MCP Server`
 - **Quality Score:** **8.5 / 10**
-- **Need for Us:** **2.5 / 10** *(Android-only, slow per step, and requires separate paid LLM API keys)*
+- **How Often Needed:** **2.5 / 10** *(Android-only, slow per step, and requires separate paid LLM API keys)*
 - **Recommended Scope:** `Standalone CLI/SDK only (uv run artemis)` — do not install as a global MCP server
 - **Instead Use (Alternative):** [**`agent-device`**](agent-device.md) *(`$0` extra API cost, `iOS + Android + tvOS + Android TV`, `197–888 ms` per action)* + [**`adb`**](adb.md)
 - **Reviewed Date:** `2026-11-16`

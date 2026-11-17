@@ -6,10 +6,10 @@
 - **Turkum:** `Architecture` *(Ish jarayoni, Brainstorming, Rejalashtirish va Majburiy TDD)*
 - **Turi:** `Plugin` *(14 ta skill + `SessionStart` hook + subagent skriptlari)*
 - **Sifat bahosi:** **6.5 / 10**
-- **Bizga kerakliligi:** **2.0 / 10**
+- **Ishda kerak bo'lishi:** **2.0 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(avval o'rnatib sinab ko'rildi va olib tashlandi)*
 - **Ishlatilgan davr:** `2026-04-04 → 2026-09-01` *(sinab ko'rilib o'chirilgan)*
-- **Joriy holati:** `⛔ Rad etildi` *(🧪 Sinab ko'rilib, ishni sekinlashtirgani sabab o'chirib tashlangan)*
+- **Joriy holati:** `⚠️ Tavsiya etilmaydi` *(🧪 Sinab ko'rilib, ishni sekinlashtirgani sabab o'chirib tashlangan)*
 
 ---
 
@@ -51,6 +51,9 @@ Oldin o'rnatib real vazifalarda ishlatib ko'rilganda, foydadan ko'ra ko'proq zar
 
 ## 3. Xavfsizlik va Sanitarizatsiya tahlili
 
+> [!WARNING]
+> **Vaqt va kvota zarari:** Har sessiyada `SessionStart` hook va Web/Mobil UI'da ham majburiy TDD talab qilishi sabab **ish vaqti va token sarfini `2x` oshirib yuboradi**.
+
 - **Xavf darajasi:** `O'rta` *(zararli kod yo'q, lekin `SessionStart` hook va tajovuzkor prompt-injeksiya mavjud)*
 - **Tekshirilgan nuqtalar:**
   1. `hooks/hooks.json` va `hooks/session-start` har bir sessiyada avtomatik ishga tushib, modelning standart xulq-atvorini (`using-superpowers`) ustidan bosib oladi.
@@ -82,5 +85,5 @@ Oldin o'rnatib real vazifalarda ishlatib ko'rilganda, foydadan ko'ra ko'proq zar
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-04-04 | Global o'rnatib amaliyotda sinashni boshlash | `⛔ Rad etildi` | 14 ta jarayon skilli ulandi; ko'p oylik real ishda `SessionStart` overthinking va `brainstorming` shovqini ishni sekinlashtirdi (`2026-08-14` da majburiy `test-driven-development` o'chirib qo'yildi). |
-| 2026-09-01 | Asosiy oqimdan butunlay olib tashlash | `⛔ Rad etildi` | O'rniga `grill-me`, `ponytail`, `karpathy-guidelines` va `cross-platform-qa` qoldirildi. |
+| 2026-04-04 | Global o'rnatib amaliyotda sinashni boshlash | `⚠️ Tavsiya etilmaydi` | 14 ta jarayon skilli ulandi; ko'p oylik real ishda `SessionStart` overthinking va `brainstorming` shovqini ishni sekinlashtirdi (`2026-08-14` da majburiy `test-driven-development` o'chirib qo'yildi). |
+| 2026-09-01 | Asosiy oqimdan butunlay olib tashlash | `⚠️ Tavsiya etilmaydi` | O'rniga `grill-me`, `ponytail`, `karpathy-guidelines` va `cross-platform-qa` qoldirildi. |

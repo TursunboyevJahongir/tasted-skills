@@ -6,7 +6,7 @@
 - **Category:** `Developer Tools` *(Terse Output Mode & Token Compression)*
 - **Type:** `Skill` *(repo also bundles an optional `CLI / Local Proxy / Cloud Router`)*
 - **Quality Score:** **8.0 / 10**
-- **Need for Us:** **3.5 / 10** *(both concise replies and minimal code diffs are already covered by our active `ponytail` skill)*
+- **How Often Needed:** **3.5 / 10** *(both concise replies and minimal code diffs are already covered by our active `ponytail` skill)*
 - **Recommended Scope:** `Sanitized standalone SKILL.md only (-p or manual /caveman)` — skip the full plugin/CLI
 - **Instead Use (Alternative):** [**`ponytail`**](../architecture/ponytail.md) *(cuts both prose bloat and over-engineered code/diffs)* + [**`karpathy-guidelines`**](../architecture/karpathy-guidelines.md) + [**`Orca`**](orca.md)
 - **Reviewed Date:** `2026-11-16`

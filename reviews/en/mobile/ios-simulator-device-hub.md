@@ -6,7 +6,7 @@
 - **Category:** `Mobile` *(iOS Simulator & Physical iPhone/iPad App Control)*
 - **Type:** `CLI + macOS App Bridge` *(bundled with `Xcode.app`)*
 - **Quality Score:** **9.0 / 10**
-- **Need for Us:** **9.5 / 10**
+- **How Often Needed:** **9.5 / 10**
 - **Recommended Scope:** `Standalone Tool` *(bundled with Xcode + paired with `agent-desktop`)*
 - **Active Since:** `2026-10-20`
 - **Current Status:** `✅ Using` *(core toolchain for iOS simulator and physical device verification)*

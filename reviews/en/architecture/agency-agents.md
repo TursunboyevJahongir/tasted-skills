@@ -10,7 +10,7 @@
 - **Recommended Scope:** `Do Not Install` *(global install severely bloats context)*
 - **Used Instead:** [**`impeccable`**](../ui-ux/impeccable.md) + [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) + [**`elephant-goldfish-model`**](elephant-goldfish-model.md) + [**`cross-platform-qa`**](../mobile/cross-platform-qa.md)
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⛔ Rejected` *(not needed — our existing focused skills are much cleaner and stronger)*
+- **Current Status:** `⚠️ Not Recommended` *(not needed — our existing focused skills are much cleaner and stronger)*
 
 ---
 
@@ -50,6 +50,9 @@ What actually ships inside:
 
 ## 3. Security & Sanitization
 
+> [!WARNING]
+> **Context Bloat:** Installing all 283 persona templates globally burns **`~18,500` permanent frontmatter tokens**, diluting agent attention.
+
 - **Risk Level:** `Low` *(no malicious scripts, network calls, or `Stop` hooks, though context bloat and auto-trigger noise are high)*
 - Even if adapting a single niche checklist in the future, never run `install.sh` globally — strip the persona roleplay (`Identity & Memory`) and report templates, add `disable-model-invocation: true`, and manage via [`skillshare`](../developer-tools/skillshare.md).
 
@@ -79,4 +82,4 @@ Every core domain in `agency-agents` is already covered much more cleanly by our
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Audited all 283 agent files, `convert.sh` / `install.sh`, and context footprint | `⛔ Rejected` | Skipped due to `~18.5K`-token frontmatter bloat, generic roleplay/copy-paste artifacts, and full coverage by our stronger existing skills (`impeccable`, `ponytail`, `elephant-goldfish-model`, `cross-platform-qa`). |
+| 2026-11-16 | Audited all 283 agent files, `convert.sh` / `install.sh`, and context footprint | `⚠️ Not Recommended` | Skipped due to `~18.5K`-token frontmatter bloat, generic roleplay/copy-paste artifacts, and full coverage by our stronger existing skills (`impeccable`, `ponytail`, `elephant-goldfish-model`, `cross-platform-qa`). |

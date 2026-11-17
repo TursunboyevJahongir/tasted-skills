@@ -6,7 +6,7 @@
 - **Turkum:** `Architecture` *(Rejalashtirish, Qarorlar daraxti va Talablarni charxlash)*
 - **Turi:** `Skilllar to'plami` (`grill-me`, `grilling`, `grill-with-docs`, `domain-modeling`, `diagnosing-bugs`, `improve-codebase-architecture`)
 - **Sifat bahosi:** **9.5 / 10**
-- **Bizga kerakliligi:** **9.5 / 10**
+- **Ishda kerak bo'lishi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Ishlatilayotgan sana:** `2026-05-23` dan *(oxirgi yangilanish: `2026-11-16`)*
 - **Joriy holati:** `✅ Ishlatyapman` *(kod yozishdan oldin g'oya va rejani pishitish uchun asosiy vosita)*

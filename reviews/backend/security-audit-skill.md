@@ -6,7 +6,7 @@
 - **Turkum:** `Backend` *(Backend, Web, Mobil, CLI va Cloud manba kodi xavfsizligi auditi)*
 - **Turi:** `Skill` *(`SKILL.md` + 12 ta hujum yo'riqnomasi + 2 ta 0-dependency Node JSON tekshirgichi)*
 - **Sifat bahosi:** **9.0 / 10**
-- **Bizga kerakliligi:** **7.5 / 10**
+- **Ishda kerak bo'lishi:** **7.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)` *(toraytirilgan explicit trigger va `quick` profil himoyasi bilan)*
 - **Ishlatilayotgan sana:** `2026-11-16` dan
 - **Joriy holati:** `✅ Ishlatyapman` *(Docker ko'tarmasdan Backend, Web va Mobil manba kodidan zaiflik topish uchun asosiy audit skilli)*

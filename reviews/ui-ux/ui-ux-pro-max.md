@@ -6,10 +6,10 @@
 - **Turkum:** `UI/UX` *(Dizayn shablonlari, palitra va shrift qidiruvi)*
 - **Turi:** `Skill + Python CLI / CSV baza`
 - **Sifat bahosi:** **7.0 / 10**
-- **Bizga kerakliligi:** **3.5 / 10**
+- **Ishda kerak bo'lishi:** **3.5 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(asosiy UI skilli sifatida kerak emas)*
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `⛔ Rad etildi`
+- **Joriy holati:** `🔄 Alternativi yaxshiroq`
 
 ---
 
@@ -69,4 +69,4 @@ Global muhitimizda allaqachon undan **ancha kuchli UI tizim (`impeccable` + `mak
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | `SKILL.md`, `pro-rules.md` va CSV/BM25 arxitekturasi auditi | `⛔ Rad etildi` | Mavjud `impeccable` + `make-interfaces-feel-better` juftligidan kuchsizroq va ular bilan ziddiyatga kirishgani sababli o'rnatmaslikka qaror qilindi. |
+| 2026-11-15 | `SKILL.md`, `pro-rules.md` va CSV/BM25 arxitekturasi auditi | `🔄 Alternativi yaxshiroq` | Mavjud `impeccable` + `make-interfaces-feel-better` juftligidan kuchsizroq va ular bilan ziddiyatga kirishgani sababli o'rnatmaslikka qaror qilindi. |

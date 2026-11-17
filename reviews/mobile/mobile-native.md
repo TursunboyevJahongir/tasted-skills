@@ -6,7 +6,7 @@
 - **Turkum:** `Mobile` *(Mobile Web, PWA & Mini App)*
 - **Turi:** `Skill` *(`SKILL.md` + lokal `LOCAL-COMPATIBILITY.md` moslik himoyasi)*
 - **Sifat bahosi:** **8.5 / 10**
-- **Bizga kerakliligi:** **7.5 / 10**
+- **Ishda kerak bo'lishi:** **7.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)` *(tozalangan va moslashtirilgan holda)*
 - **Tekshirilgan sana:** `2026-11-15`
 - **Joriy holati:** `✅ Ishlatyapman`

@@ -6,7 +6,7 @@
 - **Категория:** `Mobile` *(Оптимизатор RAM, Metal GPU и Golden Snapshot для Android Emulator)*
 - **Тип:** `Standalone Go CLI` (`0` внешних зависимостей, `100%` Go stdlib)
 - **Оценка качества:** **9.0 / 10**
-- **Насколько нужно нам:** **7.5 / 10**
+- **Частота нужды в работе:** **7.5 / 10**
 - **Рекомендуемый масштаб:** `Global CLI (/opt/homebrew/bin/avdslim)` — применяется ко всем локальным Android AVD через `tune-avd` + `bake --headless` с защитой GPS в `defaults` (без `install-shim`)
 - **Работает в связке с:** [**`agent-device`**](agent-device.md) + [**`adb`**](adb.md) + [**`simslim`**](simslim.md) + [**`cross-platform-qa`**](cross-platform-qa.md)
 - **Используется с:** `2026-11-16`

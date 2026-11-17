@@ -6,7 +6,7 @@
 - **Category:** `Mobile` *(Android Emulator & Physical Android Device Control)*
 - **Type:** `CLI / Runtime Tool` *(official Android SDK utility)*
 - **Quality Score:** **9.5 / 10**
-- **Need for Us:** **10.0 / 10**
+- **How Often Needed:** **10.0 / 10**
 - **Recommended Scope:** `Standalone Tool` *(installed globally in PATH + governed by QA skills)*
 - **Active Since:** `2026-09-07`
 - **Current Status:** `✅ Using` *(core tool for Android emulator and physical device testing)*

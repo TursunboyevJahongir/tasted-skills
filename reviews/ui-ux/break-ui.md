@@ -6,11 +6,11 @@
 - **Turkum:** `UI/UX` *(UI chekka holatlari / Edge-case data sinovi)*
 - **Turi:** `Skill` *(`SKILL.md` + `CATALOG.md`, ~312 qator)*
 - **Sifat bahosi:** **8.0 / 10**
-- **Bizga kerakliligi:** **3.0 / 10**
+- **Ishda kerak bo'lishi:** **3.0 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
 - **O'rniga ishlatiladigan muqobil:** [**`impeccable`**](impeccable.md) (`harden` bo'limi — `reference/harden.md`)
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `⛔ Rad etildi`
+- **Joriy holati:** `🔄 Alternativi yaxshiroq`
 
 ---
 
@@ -62,4 +62,4 @@ UI komponentlarni ideal demo ma'lumotlar (`"Jane Doe"`) o'rniga real hayotdagi e
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | GitHub `SKILL.md` + `CATALOG.md` va konflikt auditi | `⛔ Rad etildi` | [`impeccable`](impeccable.md) (`harden`) bu vazifani toza bajarishi va `break-ui` repoga ortiqcha fixture/toggle qo'shishi sababli o'tkazib yuborildi. |
+| 2026-11-15 | GitHub `SKILL.md` + `CATALOG.md` va konflikt auditi | `🔄 Alternativi yaxshiroq` | [`impeccable`](impeccable.md) (`harden`) bu vazifani toza bajarishi va `break-ui` repoga ortiqcha fixture/toggle qo'shishi sababli o'tkazib yuborildi. |

@@ -6,11 +6,11 @@
 - **Turkum:** `Developer Tools` *(AI Agent Skill va MCP Server xavfsizlik skaneri)*
 - **Turi:** `Python CLI + MCP Server + Skill (skill-inspector)`
 - **Sifat bahosi:** **9.0 / 10**
-- **Bizga kerakliligi:** **3.5 / 10** *(kundalik ishda ortiqcha sikl — `skillshare audit` + AI agent orqali kod tekshiruvi yetarli)*
+- **Ishda kerak bo'lishi:** **3.5 / 10** *(kundalik ishda ortiqcha sikl — `skillshare audit` + AI agent orqali kod tekshiruvi yetarli)*
 - **Tavsiya etilgan ko'lam:** `Doimiy o'rnatmaslik` *(faqat juda shubhali katta MCP/paket uchraganda `uvx` orqali bir martalik `--no-llm` skan)*
 - **O'rniga ishlatiladigan tizim:** [**`skillshare`**](skillshare.md) (`skillshare audit`) + **AI agentga manba kodni tekshirtirish**
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⛔ Rad etildi` *(kodi o'rganildi; mavjud yengil alternativamiz yetarli bo'lgani uchun o'rnatilmadi)*
+- **Joriy holati:** `🔄 Alternativi yaxshiroq` *(kodi o'rganildi; mavjud yengil alternativamiz yetarli bo'lgani uchun o'rnatilmadi)*
 
 ---
 
@@ -51,4 +51,4 @@ uvx --python 3.12 --from git+https://github.com/NVIDIA/skillspector.git skillspe
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kod auditi | `⛔ Rad etildi` | Kuchli skaner (`9.0/10`), lekin [`skillshare`](skillshare.md) (`audit`) + AI agent orqali birlamchi kod tekshiruvi mavjudligi sababli ortiqcha sikl qo'shmaslik uchun o'rnatilmadi. |
+| 2026-11-16 | Manba kod auditi | `🔄 Alternativi yaxshiroq` | Kuchli skaner (`9.0/10`), lekin [`skillshare`](skillshare.md) (`audit`) + AI agent orqali birlamchi kod tekshiruvi mavjudligi sababli ortiqcha sikl qo'shmaslik uchun o'rnatilmadi. |

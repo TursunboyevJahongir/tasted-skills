@@ -6,7 +6,7 @@
 - **Turkum:** `Backend` *(Distributed Tracing, Server/DB Metrics va Markazlashgan Logs standarti)*
 - **Turi:** `Observability Standard + SDK + Collector` *(Vizual panel sifatida `SigNoz` yoki `Grafana Tempo/Loki/Prometheus` bilan)*
 - **Sifat bahosi:** **9.0 / 10**
-- **Bizga kerakliligi:** **4.0 / 10** *(alohida stek sifatida — chunki asosiy ehtiyojni `Sentry` yopadi)*
+- **Ishda kerak bo'lishi:** **4.0 / 10** *(alohida stek sifatida — chunki asosiy ehtiyojni `Sentry` yopadi)*
 - **Tavsiya etilgan ko'lam:** `Hozircha alohida ko'tarmaslik` *(kerak bo'lganda faqat ko'p-servisli Backend + Infra monitoringi uchun)*
 - **O'rniga ishlatiladigan tizim:** [**`sentry`**](sentry.md) *(Self-Hosted Sentry + v8+ OTel SDK + AI Skill)*
 - **Tekshirilgan sana:** `2026-11-15`

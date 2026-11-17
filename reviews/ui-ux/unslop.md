@@ -6,11 +6,11 @@
 - **Turkum:** `UI/UX` *(AI/vibecoded veb-ekranlarni dizayn redline tartibida tozalash)*
 - **Turi:** `Skill + Node/Playwright Skriptlar` *(`SKILL.md`, 6 ta reference `.md` fayl, `snapshot.mjs`, `story.mjs`, `CC-BY-4.0`)*
 - **Sifat bahosi:** **8.5 / 10**
-- **Bizga kerakliligi:** **2.5 / 10**
+- **Ishda kerak bo'lishi:** **2.5 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
 - **O'rniga ishlatiladigan muqobillar:** [**`impeccable`**](impeccable.md) (`craft-floor` + `polish` / `quieter` / `clarify` / `harden` — Web va Native Mobile uchun) + [**`animate-expo`**](../mobile/animate-expo.md)
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⛔ Rad etildi`
+- **Joriy holati:** `🔄 Alternativi yaxshiroq`
 
 ---
 
@@ -44,4 +44,4 @@ Damir Sokolovsky (`@heydamir`) tomonidan X'dagi *Unslopping* rukni asosida yozil
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kod va `skillshare audit` tekshiruvi | `⛔ Rad etildi` | Didli anti-slop skill (`8.5/10`), biroq barcha asosiy imkoniyatlari bizdagi [`impeccable`](impeccable.md) da kengroq (Web + Native Mobile) borligi va `auto-trigger` to'qnashuvi oldini olish uchun o'rnatilmadi. |
+| 2026-11-16 | Manba kod va `skillshare audit` tekshiruvi | `🔄 Alternativi yaxshiroq` | Didli anti-slop skill (`8.5/10`), biroq barcha asosiy imkoniyatlari bizdagi [`impeccable`](impeccable.md) da kengroq (Web + Native Mobile) borligi va `auto-trigger` to'qnashuvi oldini olish uchun o'rnatilmadi. |

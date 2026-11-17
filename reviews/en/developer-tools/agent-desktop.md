@@ -6,7 +6,7 @@
 - **Category:** `Developer Tools` *(Desktop GUI, Web Browser & iOS Simulator Automation)*
 - **Type:** `CLI + Global Skills` (`agent-desktop`, `agent-desktop-macos`, `agent-desktop-ffi`)
 - **Quality Score:** **9.5 / 10**
-- **Need for Us:** **10.0 / 10**
+- **How Often Needed:** **10.0 / 10**
 - **Recommended Scope:** `Global (-g) + Standalone CLI`
 - **Reviewed Date:** `2026-11-15`
 - **Current Status:** `✅ Using` *(primary background driver for macOS desktop apps, Chrome, and iOS Simulator)*

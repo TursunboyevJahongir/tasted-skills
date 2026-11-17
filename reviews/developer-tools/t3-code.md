@@ -6,11 +6,11 @@
 - **Turkum:** `Developer Tools` *(Multi-Agent Orkestratsiya va Cross-AI Code Review)*
 - **Turi:** `Desktop App + CLI Subagent Workflow`
 - **Sifat bahosi:** **8.5 / 10**
-- **Bizga kerakliligi:** **2.5 / 10**
+- **Ishda kerak bo'lishi:** **2.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Skip (O'chirib tashlandi)`
 - **O'rniga ishlatiladigan tizim (Alternativa):** [**`Orca` (`stablyai/orca`)**](orca.md)
 - **Ishlatilgan sana:** `2026-10-23 → 2026-11-16`
-- **Joriy holati:** `⛔ Rad etildi` *(mobil ulanish uzilishlari, Lock Screen'da to'xtab qolishi va `Orca` ning ustun ichki multi-agent orkestratsiyasi sabab `Orca` ga o'tildi va o'chirildi)*
+- **Joriy holati:** `🔄 Alternativi yaxshiroq` *(mobil ulanish uzilishlari, Lock Screen'da to'xtab qolishi va `Orca` ning ustun ichki multi-agent orkestratsiyasi sabab `Orca` ga o'tildi va o'chirildi)*
 
 ---
 
@@ -71,5 +71,5 @@ Global muhitimizdagi `task-context`, `antigravity-claude`, `antigravity-consult`
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
 | 2026-10-23 | `T3 Code` desktop muhitini o'rnatish + CLI subagent review skillarini ulash (`2026-10-31`) | `✅ Ishlatyapman` | Desktop ilova hamda CLI subagent ko'prigi (Codex ↔ Claude ↔ Antigravity) faol qo'llanildi. |
-| 2026-11-16 | [**`Orca` (`stablyai/orca`)**](orca.md) bilan jonli solishtirish va `T3 Code` ni to'liq o'chirish (`~3.87 GB` bo'shatildi) | `⛔ Rad etildi` | Mobil barqarorlik, Lock Screen (`caffeinate`) va bitta promptdan ichki multi-agent orkestratsiya sabab to'liq `Orca` ga o'tildi. |
+| 2026-11-16 | [**`Orca` (`stablyai/orca`)**](orca.md) bilan jonli solishtirish va `T3 Code` ni to'liq o'chirish (`~3.87 GB` bo'shatildi) | `🔄 Alternativi yaxshiroq` | Mobil barqarorlik, Lock Screen (`caffeinate`) va bitta promptdan ichki multi-agent orkestratsiya sabab to'liq `Orca` ga o'tildi. |
 

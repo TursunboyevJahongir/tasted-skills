@@ -6,10 +6,10 @@
 - **Turkum:** `Lokal modellar` | `Tashqi API'lar` | `Web` | `Mobile` | `UI/UX` | `Architecture` | `Backend` | `Developer Tools`
 - **Turi:** `Skill` | `Plugin` | `MCP` | `CLI / Desktop Tool` | `Memory`
 - **Sifat bahosi:** **X.X / 10**
-- **Bizga kerakliligi:** **X.X / 10**
+- **Ishda kerak bo'lishi:** **X.X / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)` | `Faqat alohida loyihaga (-p)` | `Plugin` | `Standalone Tool` | `O'rnatmaslik`
 - **Tekshirilgan sana:** `YYYY-MM-DD`
-- **Joriy holati:** `✅ Ishlatyapman` | `👍 Yaxshi variant` | `⛔ Rad etildi`
+- **Joriy holati:** `✅ Ishlatyapman` | `👍 Yaxshi variant` | `🔄 Alternativi yaxshiroq` | `⚠️ Tavsiya etilmaydi`
 
 ---
 

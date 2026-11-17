@@ -6,7 +6,7 @@
 - **Turkum:** `Mobile` *(Avtonom Android UI testlash freymvorki, CLI/SDK va MCP server)*
 - **Turi:** `Standalone Python CLI / SDK + MCP Server`
 - **Sifat bahosi:** **8.5 / 10**
-- **Bizga kerakliligi:** **2.5 / 10** *(faqat Android uchun, sekin va alohida pullik LLM API kalit talab qiladi)*
+- **Ishda kerak bo'lishi:** **2.5 / 10** *(faqat Android uchun, sekin va alohida pullik LLM API kalit talab qiladi)*
 - **Tavsiya etilgan ko'lam:** `Faqat alohida CLI/SDK (uv run artemis)` — global MCP qilib o'rnatilmasin
 - **O'rniga ishlatiladigan tizim (Alternativa):** [**`agent-device`**](agent-device.md) *(`$0` qo'shimcha API xarajati, `iOS + Android + tvOS + Android TV`, `197–888 ms` tezlik)* + [**`adb`**](adb.md)
 - **Tekshirilgan sana:** `2026-11-16`

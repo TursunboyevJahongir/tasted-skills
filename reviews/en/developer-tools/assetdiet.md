@@ -6,7 +6,7 @@
 - **Category:** `Developer Tools` *(Local Image, SVG, Video & 3D Asset Optimizer with Import Rewriting)*
 - **Type:** `Standalone CLI` + custom lightweight [`asset-diet`](../../../skills/asset-diet/SKILL.md) on-demand skill
 - **Quality Score:** **7.5 / 10**
-- **Need for Us:** **6.5 / 10** *(via our on-demand [`asset-diet`](../../../skills/asset-diet/SKILL.md) `npx` CLI wrapper, with zero permanent 16-tool MCP overhead)*
+- **How Often Needed:** **6.5 / 10** *(via our on-demand [`asset-diet`](../../../skills/asset-diet/SKILL.md) `npx` CLI wrapper, with zero permanent 16-tool MCP overhead)*
 - **Recommended Scope:** `On-Demand npx CLI + Global lightweight asset-diet skill (-g)`
 - **Reviewed Date:** `2026-11-16`
 - **Current Status:** `👍 Good Option` *(packaged [`skills/asset-diet`](../../../skills/asset-diet/SKILL.md), verified live on a real 214-asset repo, and synced globally across all 5 agent targets without MCP bloat)*

@@ -6,11 +6,11 @@
 - **Turkum:** `Developer Tools` *(Maqola va matnlardagi AI uslubi belgilarini tozalash)*
 - **Turi:** `Skill` (`Markdown`)
 - **Sifat bahosi:** **7.5 / 10**
-- **Bizga kerakliligi:** **2.0 / 10** *(kod yoki mahsulot UI'i uchun emas — faqat uzun maqola/post tahriri uchun)*
+- **Ishda kerak bo'lishi:** **2.0 / 10** *(kod yoki mahsulot UI'i uchun emas — faqat uzun maqola/post tahriri uchun)*
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
 - **O'rniga ishlatiladigan tizim:** [**`ponytail`**](../architecture/ponytail.md) (qisqa va aniq texnik javoblar) + [**`impeccable`**](../ui-ux/impeccable.md) (`clarify` — UI matnlari uchun)
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `⛔ Rad etildi`
+- **Joriy holati:** `🔄 Alternativi yaxshiroq`
 
 ---
 
@@ -37,4 +37,4 @@ AI yozgan matnlardagi sun'iy ohang va shtamplarni olib tashlashga qaratilgan ikk
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kod auditi | `⛔ Rad etildi` | Uzun maqolalar uchun foydali (`7.5/10`), lekin kod va UI ish oqimimizda keraksiz yuk bo'lgani uchun o'rnatilmadi. |
+| 2026-11-16 | Manba kod auditi | `🔄 Alternativi yaxshiroq` | Uzun maqolalar uchun foydali (`7.5/10`), lekin kod va UI ish oqimimizda keraksiz yuk bo'lgani uchun o'rnatilmadi. |

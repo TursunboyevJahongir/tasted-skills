@@ -6,7 +6,7 @@
 - **Turkum:** `Developer Tools` *(Qisqa javob rejimi va token tejamkorligi)*
 - **Turi:** `Skill` *(repo ichida ixtiyoriy `CLI / Local Proxy / Cloud Router` ham bor)*
 - **Sifat bahosi:** **8.0 / 10**
-- **Bizga kerakliligi:** **3.5 / 10** *(qisqa javob va minimal kod vazifasini bizda faol `ponytail` allaqachon yopadi)*
+- **Ishda kerak bo'lishi:** **3.5 / 10** *(qisqa javob va minimal kod vazifasini bizda faol `ponytail` allaqachon yopadi)*
 - **Tavsiya etilgan ko'lam:** `Faqat yakka SKILL.md (-p yoki on-demand /caveman)` — to'liq plugin/CLI o'rnatilmasin
 - **O'rniga ishlatiladigan tizim (Alternativa):** [**`ponytail`**](../architecture/ponytail.md) *(ham qisqa javob beradi, ham ortiqcha yoziladigan kod/diff hajmini kesadi)* + [**`karpathy-guidelines`**](../architecture/karpathy-guidelines.md) + [**`Orca`**](orca.md)
 - **Tekshirilgan sana:** `2026-11-16`

@@ -6,7 +6,7 @@
 - **Category:** `Developer Tools` *(Multi-Agent Orchestration, Mobile Control & Cross-AI Code Review)*
 - **Type:** `Desktop App + CLI (orca orchestration) + Mobile App (iOS / Android)`
 - **Quality Score:** **9.5 / 10**
-- **Need for Us:** **9.5 / 10**
+- **How Often Needed:** **9.5 / 10**
 - **Recommended Scope:** `Standalone Desktop App (/Applications/Orca.app) + Global orchestration Skill`
 - **Active Since:** `2026-11-16`
 - **Current Status:** `✅ Using` *(replaced T3 Code as our primary multi-agent workspace)*

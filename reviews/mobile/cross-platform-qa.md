@@ -6,7 +6,7 @@
 - **Turkum:** `Mobile` *(Web + iOS/tvOS + Android/Android TV 2-bosqichli tekshiruv qoidasi)*
 - **Turi:** `Skill`
 - **Sifat bahosi:** **9.5 / 10**
-- **Bizga kerakliligi:** **9.5 / 10**
+- **Ishda kerak bo'lishi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)`
 - **Tekshirilgan sana:** `2026-11-16`
 - **Joriy holati:** `✅ Ishlatyapman`

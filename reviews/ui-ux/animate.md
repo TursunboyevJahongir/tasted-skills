@@ -6,11 +6,11 @@
 - **Turkum:** `UI/UX` *(Web CSS, WAAPI va Motion kutubxonasi animatsiyalari)*
 - **Turi:** `Skill` *(`SKILL.md` + `RECIPES.md`, ~410 qator)*
 - **Sifat bahosi:** **8.5 / 10**
-- **Bizga kerakliligi:** **3.0 / 10**
+- **Ishda kerak bo'lishi:** **3.0 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
 - **O'rniga ishlatiladigan muqobillar:** [**`impeccable`**](impeccable.md) (`animate` bo'limi — Web uchun) + [**`animate-expo`**](../mobile/animate-expo.md) (React Native / Expo uchun)
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `⛔ Rad etildi`
+- **Joriy holati:** `🔄 Alternativi yaxshiroq`
 
 ---
 
@@ -67,4 +67,4 @@ Global o'rnatish shart emas, chunki mavjud ikki skillimiz bu yo'nalishni to'liq 
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | GitHub `SKILL.md` + `RECIPES.md` va konflikt auditi | `⛔ Rad etildi` | Sifati baland (`8.5/10`), lekin [`impeccable`](impeccable.md) bilan `auto-trigger` va qoida to'qnashuvi berishi sababli o'tkazib yuborildi. |
+| 2026-11-15 | GitHub `SKILL.md` + `RECIPES.md` va konflikt auditi | `🔄 Alternativi yaxshiroq` | Sifati baland (`8.5/10`), lekin [`impeccable`](impeccable.md) bilan `auto-trigger` va qoida to'qnashuvi berishi sababli o'tkazib yuborildi. |

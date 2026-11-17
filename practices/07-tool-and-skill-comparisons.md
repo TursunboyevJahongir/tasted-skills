@@ -18,7 +18,7 @@ Ushbu qo'llanmada biz jonli sinab ko'rgan va manba kodini audit qilgan barcha sk
 | **Qo'shimcha API narxi** | **`$0` (100% bepul)** | `$0` (lokal CLI, Cloud pullik) | **Pullik** (`.env` da alohida LLM API kalit shart) | `$0` *(lekin `mobilenext.ai` cloud reklamasi bor)* |
 | **Bog'liqlik (`Deps`)** | **`0` (tayyor binar, Java kerakmas)** | **Java (`JDK 17+`) shart** | Python `3.12+` + LLM SDK | Node + `Scarf`/`PostHog` telemetriya |
 | **Maestro `.yaml` E2E** | **Ichida tayyor (`replay/test --maestro`)** | Asl `.yaml` dvijogi | Yo'q | Yo'q |
-| **Xulosa** | **✅ Asosiy vosita (`#8`)** | Alohida o'rnatilmaydi (`agent-device --maestro` yetarli) | `👍` Faqat `Canvas`/o'yin ekranlarida kerak bo'lsa | `⛔ Rad etildi` (`6.5x–37x` sekin va shishgan) |
+| **Xulosa** | **✅ Asosiy vosita (`#8`)** | Alohida o'rnatilmaydi (`agent-device --maestro` yetarli) | `👍` Faqat `Canvas`/o'yin ekranlarida kerak bo'lsa | `⚠️ Tavsiya etilmaydi` (`6.5x–37x` sekin va shishgan) |
 
 ---
 
@@ -40,7 +40,7 @@ Ushbu qo'llanmada biz jonli sinab ko'rgan va manba kodini audit qilgan barcha sk
 | **Qaysi sayt va dasturlarda ishlaydi?** | **Har qanday veb-sayt (`React`, `Next.js`, `Shadcn`, `Radix`, oddiy HTML) + barcha macOS dasturlari** (`Chrome`, `Telegram`, `Postman`, `Docker`, `Finder`) | **Faqat `@ui-sdk/*` komponentlarida noldan qayta yozilgan saytlardagina** ishlaydi (oddiy `<button>`/`<input>` ni ko'rmaydi) |
 | **Mobil / Expo mosligi** | Web va Desktop uchun (`iOS Device Hub` fallback bilan) | `React Native / Expo` da umuman ishlamaydi |
 | **Qo'shimcha imkoniyati** | C-ABI (`libagent_desktop_ffi.dylib`) orqali Python/Swift/Go'dan CLI'siz chaqirish | Public Beta (`0.1.0-beta`), har versiyada breaking change |
-| **Xulosa** | **✅ Asosiy vosita (`#7`)** | `⛔ Rad etildi` (mavjud loyihalarni `@ui-sdk/*` ga qayta yozish mantiqsiz) |
+| **Xulosa** | **✅ Asosiy vosita (`#7`)** | `🔄 Alternativi yaxshiroq` (mavjud loyihalarni `@ui-sdk/*` ga qayta yozish mantiqsiz) |
 
 ---
 
@@ -51,17 +51,17 @@ Ushbu qo'llanmada biz jonli sinab ko'rgan va manba kodini audit qilgan barcha sk
 | Skill | Qamrovi | Nima qiladi? | Nima uchun tanladik / rad etdik? |
 |---|---|---|---|
 | ✅ [**`impeccable`**](../reviews/ui-ux/impeccable.md) + [**`mobile-native`**](../reviews/mobile/mobile-native.md) | **Web + Mobile Web/PWA + Native iOS/Android** | `craft-floor` (AI-slop taqiqi) + 20 buyruq (`polish`, `clarify`, `harden`, `quieter`, `bolder`) + **APCA kontrast (`\|Lc\| ≥ 60`)** + 11 ta mobil veb CSS/meta fix (`dvh`, `safe-area`, `16px`). | **✅ Asosiy juftlik (`#5` va `#19`)** — barcha platformani bitta tizimda to'liq yopadi. |
-| ❌ [**`unslop`**](../reviews/ui-ux/unslop.md) | Faqat Web | AI/vibecoded veb-ekranlarni 9 bosqichda tozalaydi (`Playwright` bilan). | `⛔ Rad etildi` — `auto-trigger`i `impeccable` bilan urishadi, mobilda ishlamaydi (`impeccable polish/quieter` buni qiladi). |
-| ❌ [**`break-ui`**](../reviews/ui-ux/break-ui.md) | Faqat Web | Ekstremal uzun/bo'sh ma'lumot bilan UI'ni buzib ko'rsatadi. | `⛔ Rad etildi` — repoga vaqtinchalik fixture/toggle qo'shib, **xatoni tuzatmay to'xtaydi** (`impeccable harden` esa darhol tuzatadi). |
-| ❌ [**`make-interfaces-feel-better`**](../reviews/ui-ux/make-interfaces-feel-better.md) | Web | Chegara, radius va soyalarni tekshiradi. | `⛔ Rad etildi` — 16 kun ishlatilib o'chirildi (4 ta uzun markdown jadval chiqarib token yeydi). |
-| ❌ [**`ui-ux-pro-max`**](../reviews/ui-ux/ui-ux-pro-max.md) | Web | CSV/Python orqali rang va shrift tanlaydi. | `⛔ Rad etildi` — `impeccable` dan kuchsiz va auto-trigger'i to'qnashadi. |
+| ❌ [**`unslop`**](../reviews/ui-ux/unslop.md) | Faqat Web | AI/vibecoded veb-ekranlarni 9 bosqichda tozalaydi (`Playwright` bilan). | `🔄 Alternativi yaxshiroq` — `auto-trigger`i `impeccable` bilan urishadi, mobilda ishlamaydi (`impeccable polish/quieter` buni qiladi). |
+| ❌ [**`break-ui`**](../reviews/ui-ux/break-ui.md) | Faqat Web | Ekstremal uzun/bo'sh ma'lumot bilan UI'ni buzib ko'rsatadi. | `🔄 Alternativi yaxshiroq` — repoga vaqtinchalik fixture/toggle qo'shib, **xatoni tuzatmay to'xtaydi** (`impeccable harden` esa darhol tuzatadi). |
+| ❌ [**`make-interfaces-feel-better`**](../reviews/ui-ux/make-interfaces-feel-better.md) | Web | Chegara, radius va soyalarni tekshiradi. | `🔄 Alternativi yaxshiroq` — 16 kun ishlatilib o'chirildi (4 ta uzun markdown jadval chiqarib token yeydi). |
+| ❌ [**`ui-ux-pro-max`**](../reviews/ui-ux/ui-ux-pro-max.md) | Web | CSV/Python orqali rang va shrift tanlaydi. | `🔄 Alternativi yaxshiroq` — `impeccable` dan kuchsiz va auto-trigger'i to'qnashadi. |
 
 ### B. Animatsiya va SwiftUI (`animate-expo` + `impeccable` vs `animate` vs `swiftui-agent-skill`)
 
 | Skill | Yo'nalishi | Qaror va Sabab |
 |---|---|---|
 | ✅ [**`animate-expo`**](../reviews/mobile/animate-expo.md) + [**`impeccable` (`animate`)**](../reviews/ui-ux/impeccable.md) | **Expo / React Native (`Reanimated` UI-thread `60/120fps` + haptics)** va **Web CSS/WAAPI motion** | **✅ Asosiy (`#12` va `#5`)** — ham mobil ilovada, ham vebda qotmaydigan animatsiya beradi. |
-| ❌ [**`animate`** *(Emil Kowalski)*](../reviews/ui-ux/animate.md) | Faqat Web CSS/JS animatsiya | `⛔ Rad etildi` — qoidalari `impeccable` ichida bor, auto-trigger'i esa `animate-expo` bilan urishadi. |
+| ❌ [**`animate`** *(Emil Kowalski)*](../reviews/ui-ux/animate.md) | Faqat Web CSS/JS animatsiya | `🔄 Alternativi yaxshiroq` — qoidalari `impeccable` ichida bor, auto-trigger'i esa `animate-expo` bilan urishadi. |
 | 👍 [**`swiftui-agent-skill`**](../reviews/mobile/swiftui-agent-skill.md) | Sof native SwiftUI (`iOS 26+ Liquid Glass`, `WidgetKit`, `ActivityKit`) | `👍 Yaxshi variant` — asosiy stekimiz Expo bo'lgani uchun global o'rnatilmaydi, faqat iOS Widget / Live Activity yozilganda `-p` da olinadi. |
 
 ---
@@ -73,9 +73,9 @@ Ushbu qo'llanmada biz jonli sinab ko'rgan va manba kodini audit qilgan barcha sk
 | Vosita | Yondashuv | Qaror va Sabab |
 |---|---|---|
 | ✅ [**`grill-me`**](../reviews/architecture/grill-me.md) + [**`graphify`**](../reviews/architecture/graphify.md) + [**`ponytail`**](../reviews/architecture/ponytail.md) + [**`karpathy-guidelines`**](../reviews/architecture/karpathy-guidelines.md) | `0` token loyiha qolipi (`graphify`, katta repolarda `~10x–20x` token tejaydi) -> ko'r-ko'rona kod yozishdan oldin oxirigacha o'ylab olish (`grill-me`, 2–3x qayta yozishdan saqlaydi) -> minimal YAGNI va `surgical` kod (`ponytail` + `karpathy`). | **✅ Asosiy to'rtlik (`#1–#4`)** — tez, ortiqcha byurokratiyasiz va token tejamkor. |
-| ❌ [**`superpowers`**](../reviews/architecture/superpowers.md) | 14 ta skill + `SessionStart` hook + har o'zgarishda majburiy TDD va subagent sikllari. | `⛔ Rad etildi` — 5 oy ishlatilib o'chirildi (ishni `2x` sekinlashtiradi va kvotani yeydi). |
-| ❌ [**`addy-agent-skills`**](../reviews/architecture/addy-agent-skills.md) | 25 skill + `/spec -> /ship` og'ir SDLC konveyeri va `doubt-driven` to'xtashlar. | `⛔ Rad etildi` — kundalik vazifalarda ortiqcha sikl. |
-| ❌ [**`agency-agents`**](../reviews/architecture/agency-agents.md) | 283 ta `.md` persona-prompt (`~18.5K` token frontmatter shishishi). | `⛔ Rad etildi` — yuzaki shablon rollar. |
+| ❌ [**`superpowers`**](../reviews/architecture/superpowers.md) | 14 ta skill + `SessionStart` hook + har o'zgarishda majburiy TDD va subagent sikllari. | `⚠️ Tavsiya etilmaydi` — 5 oy ishlatilib o'chirildi (ishni `2x` sekinlashtiradi va kvotani yeydi). |
+| ❌ [**`addy-agent-skills`**](../reviews/architecture/addy-agent-skills.md) | 25 skill + `/spec -> /ship` og'ir SDLC konveyeri va `doubt-driven` to'xtashlar. | `🔄 Alternativi yaxshiroq` — kundalik vazifalarda ortiqcha sikl. |
+| ❌ [**`agency-agents`**](../reviews/architecture/agency-agents.md) | 283 ta `.md` persona-prompt (`~18.5K` token frontmatter shishishi). | `⚠️ Tavsiya etilmaydi` — `~18.5K` token shishishi va yuzaki shablon rollar. |
 
 ### B. Qisqa Javob va Yozuv Usuli (`ponytail` vs `caveman` vs `humanizer`)
 
@@ -83,7 +83,7 @@ Ushbu qo'llanmada biz jonli sinab ko'rgan va manba kodini audit qilgan barcha sk
 |---|---|---|---|
 | ✅ [**`ponytail`**](../reviews/architecture/ponytail.md) | **Ham AI javobini, ham yoziladigan kod/diff hajmini** (YAGNI, 0 ortiqcha abstraksiya). | **`0` telemetriya**, yengil `SKILL.md` | **✅ Asosiy (`#3`)** |
 | 👍 [**`caveman`**](../reviews/developer-tools/caveman.md) | Faqat terminaldagi **matn javobidan** artikl/bog'lovchilarni kesadi (`~65%` output token); kod hajmiga ta'sir qilmaydi. | CLI paketida `fetch` telemetriya va `SessionStart` hook bor (faqat toza `SKILL.md` olinishi shart) | `👍` Zaxira (`ponytail` yetarli) |
-| ❌ [**`humanizer` + `stop-slop`**](../reviews/developer-tools/humanizer-stop-slop.md) | Maqola va esselardagi AI shtamplarini tahrirlaydi. | `~32 KB` (`humanizer`) | `⛔ Rad etildi` (kod uchun emas) |
+| ❌ [**`humanizer` + `stop-slop`**](../reviews/developer-tools/humanizer-stop-slop.md) | Maqola va esselardagi AI shtamplarini tahrirlaydi. | `~32 KB` (`humanizer`) | `🔄 Alternativi yaxshiroq` (kod uchun emas) |
 
 ### C. Multi-Agent Ishlash va Review (`Orca` + `EGM` vs `T3 Code` vs `OmniRoute`)
 
@@ -91,8 +91,8 @@ Ushbu qo'llanmada biz jonli sinab ko'rgan va manba kodini audit qilgan barcha sk
 |---|---|---|
 | ✅ [**`Orca`**](../reviews/developer-tools/orca.md) + `orchestration` + `task-context` | **Bitta promptdan ko'p-agentli zanjir + Mobil boshqaruv:** Chat UI ichida jonli subagent kartalari (`Codex`, `Claude`, `Argon`), `Lock Screen` (`caffeinate`) rejimida uxlamaslik, uzilmas `Orca IDE` telefon ilovasi va `task-context` orqali estafeta uzatish (`841 MB` RAM). | **✅ Ishlatyapman (`#13`)** |
 | ✅ [**`elephant-goldfish-model`**](../reviews/architecture/elephant-goldfish-model.md) | **Xotirasiz (`Goldfish`) 5-persona Review + Drift + TRIZ:** Oldingi suhbatdan bexabar 5 ta tanqidchi bilan Arxitektura/PR tekshirish, hujjat-kod farqini tutish (`egm-drift-report`) va TRIZ yechim topish. | **✅ Ishlatyapman (`#6`)** |
-| ❌ [**`T3 Code`**](../reviews/developer-tools/t3-code.md) | Eski multi-agent desktop dasturimiz (`2026-10-23 → 2026-11-16`). | `⛔ Rad etildi` — Beta telefon ilovasi tez-tez uziladi, kompyuter bloklanganda (`Lock Screen`) to'xtab qoladi va Chat UI'da jonli subagent kartalari yo'q (`Orca` ga o'tildi). |
-| ❌ [**`OmniRoute`**](../reviews/developer-tools/omniroute.md) | Lokal LLM reverse-proxy (`localhost:20128`) + 44 ta proxy-admin skill. | `⛔ Rad etildi` — uzoq sessiyalarni uzadi (`#7287`), modelni yashirincha pasaytiradi va `wreq-js` TLS-stealth sabab akkaunt ban xavfi bor. |
+| ❌ [**`T3 Code`**](../reviews/developer-tools/t3-code.md) | Eski multi-agent desktop dasturimiz (`2026-10-23 → 2026-11-16`). | `🔄 Alternativi yaxshiroq` — Beta telefon ilovasi tez-tez uziladi, kompyuter bloklanganda (`Lock Screen`) to'xtab qoladi va Chat UI'da jonli subagent kartalari yo'q (`Orca` ga o'tildi). |
+| ❌ [**`OmniRoute`**](../reviews/developer-tools/omniroute.md) | Lokal LLM reverse-proxy (`localhost:20128`) + 44 ta proxy-admin skill. | `⚠️ Tavsiya etilmaydi` — uzoq sessiyalarni uzadi (`#7287`), modelni yashirincha pasaytiradi va `wreq-js` TLS-stealth sabab akkaunt ban xavfi bor. |
 
 ---
 
@@ -111,6 +111,6 @@ Ushbu qo'llanmada biz jonli sinab ko'rgan va manba kodini audit qilgan barcha sk
 | Model / Variant | Asosiy yo'nalishi | Kod yozishga ishlaydimi? | Temir talabi / Narxi | Xulosa |
 |---|---|---|---|---|
 | **Lokal `Ollama` / `MLX` (`Qwen3-Coder` / `Qwen2.5-Coder`)** | `32–64 GB` Mac'da 100% oflayn kod yozish va tahlil | **Ha (`30–65 tok/s`, RAM ichida)** | `~9–20 GB` Unified RAM · `$0` | **Haqiqiy lokal coder kerak bo'lsa eng to'g'ri tanlov.** |
-| ❌ [**`kimi-k3-in-c`**](../reviews/local-models/kimi-k3-in-c.md) | `2.78T` MoE modelni GPU'siz NVMe diskdan stream qilish eksperimenti | **Yo'q (`1 token = ~24–33s`, `500` token = `~3.5 soat` + `~50 TB` SSD o'qish)** | Min: `1.8 TB` NVMe; Yaxshi ishlashi uchun: `16× H200 (~2.25 TB VRAM)` | `⛔ Rad etildi` (SSD umrini yeydi, amaliy ishlab bo'lmaydi). |
-| ❌ [**`MiniMax-M3.1-Flash` *(Lokal)* **](../reviews/local-models/minimax-m3-1-flash.md) | Tezkor multimodal (`matn + rasm + video`, `1M` kontekst) modelni lokalda yoqish | Oddiy skriptga ishlaydi, murakkab repoda asosiy coder emas (`Terminal-Bench: 38.1%`) | `~250–285 GB` vazn; `512 GB` Mac Studio yoki `8× H100 (640 GB VRAM)` | `⛔ Rad etildi` (oddiy kompyuterga sig'maydi). |
+| ❌ [**`kimi-k3-in-c`**](../reviews/local-models/kimi-k3-in-c.md) | `2.78T` MoE modelni GPU'siz NVMe diskdan stream qilish eksperimenti | **Yo'q (`1 token = ~24–33s`, `500` token = `~3.5 soat` + `~50 TB` SSD o'qish)** | Min: `1.8 TB` NVMe; Yaxshi ishlashi uchun: `16× H200 (~2.25 TB VRAM)` | `⚠️ Tavsiya etilmaydi` (SSD umrini yeydi, amaliy ishlab bo'lmaydi). |
+| ❌ [**`MiniMax-M3.1-Flash` *(Lokal)* **](../reviews/local-models/minimax-m3-1-flash.md) | Tezkor multimodal (`matn + rasm + video`, `1M` kontekst) modelni lokalda yoqish | Oddiy skriptga ishlaydi, murakkab repoda asosiy coder emas (`Terminal-Bench: 38.1%`) | `~250–285 GB` vazn; `512 GB` Mac Studio yoki `8× H100 (640 GB VRAM)` | `⚠️ Tavsiya etilmaydi` (oddiy kompyuterga sig'maydi). |
 | 👍 [**`MiniMax M3.1 Flash API`**](../reviews/external-apis/minimax-m3-1-flash-api.md) | Mahsulot backendidagi ommaviy chatbot, tarjima, `OCR`/rasm/video va SaaS avtomatizatsiyasi | Oddiy skript/avtomatizatsiyaga ishlaydi (asosiy IDE coder emas) | **`$0.15 / $0.60`** (`Cached: $0.015`), **`170+ tok/s`**, `1M` kontekst | `👍 Yaxshi variant` (mahsulot backendi uchun pullik Zero-Retention API sifatida). |

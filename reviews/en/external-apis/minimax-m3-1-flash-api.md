@@ -7,7 +7,7 @@
 - **Category:** `External APIs` *(Low-cost cloud multimodal LLM API for product backends, bots, and automation)*
 - **Type:** `External Cloud API` *(`1M` context, `text + image + video`, OpenAI/Anthropic-compatible REST API)*
 - **Quality Score:** **8.0 / 10** *(price / speed / multimodal capability ratio)*
-- **Need for Us:** **5.0 / 10** *(cost-effective API option for high-volume AI features inside product backends)*
+- **How Often Needed:** **5.0 / 10** *(cost-effective API option for high-volume AI features inside product backends)*
 - **Recommended Scope:** `Product Backend Paid API (Zero-Data-Retention)`
 - **Reviewed Date:** `2026-11-16`
 - **Current Status:** `👍 Good Option` *(`$0.15 / $0.60` pricing and `170+ tok/s` speed make it practical for bots, OCR/vision/video tasks, and SaaS automation)*

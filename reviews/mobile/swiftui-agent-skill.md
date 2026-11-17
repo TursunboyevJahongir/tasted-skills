@@ -6,7 +6,7 @@
 - **Turkum:** `Mobile` *(Sof SwiftUI kodlash va Apple HIG qoidalari)*
 - **Turi:** `Skill`
 - **Sifat bahosi:** **8.5 / 10**
-- **Bizga kerakliligi:** **3.0 / 10** *(asosiy mobil ilovalarimiz React Native / Expo da; faqat sof SwiftUI moduli bo'lganda local `-p` da kerak)*
+- **Ishda kerak bo'lishi:** **3.0 / 10** *(asosiy mobil ilovalarimiz React Native / Expo da; faqat sof SwiftUI moduli bo'lganda local `-p` da kerak)*
 - **Tavsiya etilgan ko'lam:** `Faqat local (-p)` *(faqat native Swift/SwiftUI loyihalarda)*
 - **O'rniga ishlatiladigan tizim:** [**`impeccable`**](../ui-ux/impeccable.md) (`reference/ios.md` — Apple HIG uchun) + [**`animate-expo`**](animate-expo.md) (Expo / RN uchun)
 - **Tekshirilgan sana:** `2026-11-16`

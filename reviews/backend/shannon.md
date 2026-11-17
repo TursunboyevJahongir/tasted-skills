@@ -6,7 +6,7 @@
 - **Turkum:** `Backend` *(Web va HTTP API White-Box Xavfsizlik Auditi va Avtonom Pentest)*
 - **Turi:** `Standalone CLI (Docker + Temporal)` + biz yozgan yengil [`hacker-test`](../../skills/hacker-test/SKILL.md) trigger skilli
 - **Sifat bahosi:** **8.5 / 10**
-- **Bizga kerakliligi:** **6.5 / 10**
+- **Ishda kerak bo'lishi:** **6.5 / 10**
 - **Tavsiya etilgan ko'lam:** `On-Demand npx CLI + Global yengil hacker-test skilli` — *rasmiy og'ir pluginini global o'rnatmasdan, o'zimizning [`skills/hacker-test`](../../skills/hacker-test/SKILL.md) eslatma-skilli orqali faqat lokal/staging'da chaqirish*
 - **Tekshirilgan sana:** `2026-11-16`
 - **Joriy holati:** `👍 Yaxshi variant` *(kodi tekshirildi; esdan chiqmasligi va xavfsiz ishlashi uchun ushbu repoga [`skills/hacker-test`](../../skills/hacker-test/SKILL.md) qo'shilib global ulandi)*

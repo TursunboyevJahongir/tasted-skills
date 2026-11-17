@@ -6,7 +6,7 @@
 - **Category:** `Developer Tools` *(Skill, Plugin, Agent & MCP Synchronization and Security Auditing)*
 - **Type:** `CLI + Global Skill`
 - **Quality Score:** **9.5 / 10**
-- **Need for Us:** **10.0 / 10**
+- **How Often Needed:** **10.0 / 10**
 - **Recommended Scope:** `Global CLI + Global Skill (-g)`
 - **Active Since:** `2026-05-30`
 - **Current Status:** `✅ Using` *(central manager for skills across all our AI coding agents)*

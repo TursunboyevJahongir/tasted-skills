@@ -6,11 +6,11 @@
 - **Category:** `Developer Tools` *(Starter Claude Code Configuration Recommender)*
 - **Type:** `Plugin (Read-Only Recommender Skill)`
 - **Quality Score:** **7.5 / 10**
-- **Need for Us:** **2.0 / 10** *(built for newcomers starting from zero; redundant in our curated multi-agent setup)*
+- **How Often Needed:** **2.0 / 10** *(built for newcomers starting from zero; redundant in our curated multi-agent setup)*
 - **Recommended Scope:** `Do Not Install`
 - **Instead Use:** [**`skillshare`**](skillshare.md) + this **`tasted-skills`** registry
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⛔ Rejected`
+- **Current Status:** `🔄 Better Alternative`
 
 ---
 
@@ -34,4 +34,4 @@ An official read-only plugin inside `anthropics/claude-plugins-official` that in
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Primary-source audit | `⛔ Rejected` | Safe read-only onboarding recommender (`7.5/10`), skipped because `skillshare` + `tasted-skills` already govern our multi-agent stack. |
+| 2026-11-16 | Primary-source audit | `🔄 Better Alternative` | Safe read-only onboarding recommender (`7.5/10`), skipped because `skillshare` + `tasted-skills` already govern our multi-agent stack. |

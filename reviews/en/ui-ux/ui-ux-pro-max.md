@@ -9,7 +9,7 @@
 - **Relevance to Us:** **3.5 / 10**
 - **Recommended Scope:** `Do Not Install` *(not needed as a primary UI skill)*
 - **Reviewed Date:** `2026-11-15`
-- **Current Status:** `⛔ Rejected`
+- **Current Status:** `🔄 Better Alternative`
 
 ---
 
@@ -69,4 +69,4 @@ Our global environment already runs a **much stronger UI system ([`impeccable`](
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Audited `SKILL.md`, `pro-rules.md`, and CSV/BM25 architecture | `⛔ Rejected` | Skipped because it is weaker than and directly conflicts with [`impeccable`](impeccable.md). |
+| 2026-11-15 | Audited `SKILL.md`, `pro-rules.md`, and CSV/BM25 architecture | `🔄 Better Alternative` | Skipped because it is weaker than and directly conflicts with [`impeccable`](impeccable.md). |

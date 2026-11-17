@@ -6,10 +6,10 @@
 - **Category:** `Developer Tools` *(Local LLM Reverse-Proxy, API Key Rotation & Prompt Compression)*
 - **Type:** `Local Proxy Server + MCP + 44 Generated Skills`
 - **Quality Score:** **7.5 / 10**
-- **Need for Us:** **2.0 / 10**
+- **How Often Needed:** **2.0 / 10**
 - **Recommended Scope:** `Do Not Install`
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⛔ Rejected` *(skipped because native official harnesses + `Orca` + `ponytail` already cover our workflow without ToS or session-affinity risks)*
+- **Current Status:** `⚠️ Not Recommended` *(skipped because native official harnesses + `Orca` + `ponytail` already cover our workflow without ToS or session-affinity risks)*
 
 ---
 
@@ -40,6 +40,9 @@ Although often shared as an "AI coding skill", inspecting the `v3.8.54` reposito
 ---
 
 ## 3. Security & Pre-Install Sanitization
+
+> [!WARNING]
+> **Account Ban (`ToS`) & Session-Drop Risk:** Routing paid `Claude` / `ChatGPT` / `Google` subscriptions via `wreq-js` TLS-stealth **risks account suspension (`ToS ban`)**, breaks long sessions (`#7287`), and silently downgrades models.
 
 - **Risk Level:** `Medium–High` *(subscription ToS ban risk and host-level `postinstall` mutations)*
 - **Inspected Surface:**
@@ -72,4 +75,4 @@ Although often shared as an "AI coding skill", inspecting the `v3.8.54` reposito
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Source code (`v3.8.54`), `postinstall.mjs`, and 44 `SKILL.md` audit | `⛔ Rejected` | Skipped without installing: bundled skills are only proxy admin manuals, default routing breaks long Codex/Claude sessions (`#7287`) and silently downgrades models, and `wreq-js` TLS-stealth proxying carries subscription ToS ban risk. |
+| 2026-11-16 | Source code (`v3.8.54`), `postinstall.mjs`, and 44 `SKILL.md` audit | `⚠️ Not Recommended` | Skipped without installing: bundled skills are only proxy admin manuals, default routing breaks long Codex/Claude sessions (`#7287`) and silently downgrades models, and `wreq-js` TLS-stealth proxying carries subscription ToS ban risk. |

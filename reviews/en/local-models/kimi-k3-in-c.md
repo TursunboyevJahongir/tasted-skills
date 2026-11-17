@@ -7,10 +7,10 @@
 - **Category:** `Local Models` *(Local LLM Inference & Disk-Streaming Experiment)*
 - **Type:** `Standalone C99 CLI Engine`
 - **Quality Score:** **8.5 / 10** *(as a pure C99 systems engineering experiment)*
-- **Need for Us:** **1.0 / 10** *(unusable for practical coding and daily work)*
+- **How Often Needed:** **1.0 / 10** *(unusable for practical coding and daily work)*
 - **Recommended Scope:** `Do Not Install`
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `⛔ Rejected` *(requires ~1.8 TB NVMe storage, runs at ~24–33 s/token, and causes ~50 TB of SSD reads per 500-token reply)*
+- **Current Status:** `⚠️ Not Recommended` *(requires ~1.8 TB NVMe storage, runs at ~24–33 s/token, and causes ~50 TB of SSD reads per 500-token reply)*
 
 ---
 
@@ -35,6 +35,9 @@
 
 ## 3. Hardware Requirements (`Minimum` vs. `Recommended`)
 
+> [!WARNING]
+> **SSD Endurance & Privacy Risk:** A single `500`-token reply reads **`~50+ TB` off NVMe**, rapidly wearing out soldered laptop SSDs (`TBW`); never send private code to `:free` community proxies.
+
 | Component | Minimum (`kimi-k3-in-c` disk-streaming mode) | Recommended for Smooth Use (`vLLM` / `SGLang`, `30–60+ tok/s`) |
 |---|---|---|
 | **GPU / VRAM** | **`0 GB`** *(100% CPU + NVMe disk)* | **`16× NVIDIA H200` (`~2.25 TB VRAM`)** or **`8× NVIDIA B300` (`~2.30 TB VRAM`)** |
@@ -58,4 +61,4 @@
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Audited C99 engine, speed (`~24–33 s/token`), hardware specs, and local coder alternatives | `⛔ Rejected` | Rejected for practical coding due to `~1.8 TB` NVMe requirement and `~30s/token` speed; for offline local coding, use RAM-resident `Ollama`/`MLX` (`Qwen3-Coder`). |
+| 2026-11-16 | Audited C99 engine, speed (`~24–33 s/token`), hardware specs, and local coder alternatives | `⚠️ Not Recommended` | Rejected for practical coding due to `~1.8 TB` NVMe requirement and `~30s/token` speed; for offline local coding, use RAM-resident `Ollama`/`MLX` (`Qwen3-Coder`). |
