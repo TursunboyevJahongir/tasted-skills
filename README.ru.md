@@ -5,7 +5,7 @@
 **Статусы (что означает каждый значок):**
 - `✅ Использую` — постоянно использую каждый день.
 - `👍 Хороший вариант` — качественный инструмент, стоит взять под подходящую задачу.
-- `🔄 Есть альтернатива получше` — сам по себе хороший, просто у нас есть более удобная замена.
+- 🔄 **Есть альтернатива получше:** `[ссылка]` — сам по себе хороший, просто у нас есть более удобная замена (выносится отдельной строкой со ссылкой).
 - `⚠️ Не рекомендуется` — есть риск или вред на практике (причина указана внутри).
 
 **Оценки (два разных показателя):**
@@ -13,7 +13,7 @@
 - **`Частота нужды` (`1–10`)** — как часто он нужен в работе *(`3/10` — не значит плохой, просто нужен редко)*.
 
 > [!TIP]
-> **🛡️ Наше правило безопасности (рекомендуем и вам):** Никогда не устанавливайте чужие скиллы, плагины или MCP-серверы только по красивому `README` или звёздам на GitHub. Перед установкой каждого кандидата **мы обязательно поручаем нашему AI-агенту прочитать исходный код напрямую** (`SKILL.md`, скрипты, хуки, доступ к сети и env) и прогоняем встроенную проверку `skillshare audit` в [**`skillshare`**](reviews/ru/developer-tools/skillshare.md).
+> **🛡️ Наше правило безопасности (рекомендуем и вам):** Никогда не устанавливайте чужие скиллы, плагины или MCP-серверы только по красивому `README` или звёздам на GitHub. Перед установкой каждого кандидата **мы обязательно поручаем нашему AI-агенту прочитать исходный код напрямую** (`SKILL.md`, скрипты, хуки, доступ к сети и env) и прогоняем встроенную проверку `skillshare audit` в [**skillshare**](reviews/ru/developer-tools/skillshare.md).
 
 📖 [Готовые связки скиллов и доп. возможности →](practices/ru/README.md) · [⚖️ Перейти к подробным сравнениям и замерам внизу ↓](#подробные-сравнения)
 
@@ -163,7 +163,7 @@
 Убирает 11 типичных болей мобильных сайтов и Mini App (авто-зум инпутов в Safari, скачки `100vh`, наезд на «чёлку» iPhone, залипающий `hover`) + помогает упростить сложные веб-экраны при переносе в мобильное приложение (`ui-message-punctuation` в комплекте).
 
 ### 20. [AssetDiet](reviews/ru/developer-tools/assetdiet.md) — 100% локальное сжатие картинок, SVG, видео и 3D с мгновенным откатом
-`✅ Использую` · **Качество:** `7.5/10` · **Частота нужды:** `6.5/10` · **Тип:** CLI + [`asset-diet`](skills/asset-diet/SKILL.md) · **Дата:** С `2026-11-16`
+`✅ Использую` · **Качество:** `7.5/10` · **Частота нужды:** `6.5/10` · **Тип:** CLI + [asset-diet](skills/asset-diet/SKILL.md) · **Дата:** С `2026-11-16`
 
 Находит и сжимает тяжёлые изображения, SVG, видео и 3D-модели прямо на компьютере (без загрузки в облако) с возможностью отката одной командой. Вызывается только по запросу (`0` постоянного расхода токенов на MCP).
 
@@ -212,9 +212,10 @@
 ### 🧠 Локальные модели
 
 #### [kimi-k3-in-c](reviews/ru/local-models/kimi-k3-in-c.md) — Эксперимент запуска гигантской `2.78T`-модели с SSD-диска без видеокарты
-`⚠️ Не рекомендуется` · **Качество:** `8.5/10` *(как C99-эксперимент)* · **Частота нужды:** `1.0/10` · **Тип:** C99 CLI Engine (`2.78T` MoE) · **Дата:** `2026-11-16`
+`⚠️ Не рекомендуется` · **Качество:** `8.5/10` *(как C99-эксперимент)* · **Частота нужды:** `1.0/10` · **Тип:** C99 CLI Engine (`2.78T` MoE) · **Дата:** `2026-11-16`<br>
+🔄 **Есть альтернатива получше:** [Ollama](https://ollama.com/library/qwen3-coder) / `MLX` (`Qwen3-Coder`)
 
-Интересный C99-эксперимент чтения модели `Kimi K3` прямо с NVMe-диска без GPU, но **писать с этим код невозможно**. 👉 **Лучшая локальная альтернатива:** **`Ollama` / `MLX` (`Qwen3-Coder`)** в памяти `32–64 GB` Mac. 📊 [GitHub](https://github.com/FareedKhan-dev/kimi-k3-in-c) · [Artificial Analysis](https://artificialanalysis.ai/leaderboards/models)
+Интересный C99-эксперимент чтения модели `Kimi K3` прямо с NVMe-диска без GPU, но **писать с этим код невозможно** (`Ollama / MLX Qwen3-Coder` помещается в `32–64 GB` RAM на Mac). 📊 [GitHub](https://github.com/FareedKhan-dev/kimi-k3-in-c) · [Artificial Analysis](https://artificialanalysis.ai/leaderboards/models)
 
 > [!WARNING]
 > **Риск для SSD и утечки кода:** Один ответ на `500` токенов вычитывает **`~50 TB` с NVMe SSD**, сжигая ресурс распаянного диска ноутбука (`TBW`); также не подключайте закрытый код к бесплатным `:free` прокси.
@@ -229,9 +230,10 @@
 </details>
 
 #### [MiniMax-M3.1-Flash *(Локально)*](reviews/ru/local-models/minimax-m3-1-flash.md) — Попытка локального запуска мультимодальной модели на `428B` параметров
-`⚠️ Не рекомендуется` · **Качество:** `8.0/10` · **Частота нужды:** `1.0/10` · **Тип:** Open-Weight `428B` MoE (`~23B` актив.) · **Дата:** `2026-11-16`
+`⚠️ Не рекомендуется` · **Качество:** `8.0/10` · **Частота нужды:** `1.0/10` · **Тип:** Open-Weight `428B` MoE (`~23B` актив.) · **Дата:** `2026-11-16`<br>
+🔄 **Есть альтернатива получше:** [Ollama (Qwen3-Coder)](https://ollama.com/library/qwen3-coder) *(локально)* · [MiniMax M3.1 Flash API](reviews/ru/external-apis/minimax-m3-1-flash-api.md) *(облачный API)*
 
-Быстрая модель для текста, фото и видео (`1M` контекст), но её веса **`~250–285 GB`** не помещаются на рабочие машины и она не является флагманом сложного кодинга (`Terminal-Bench 4.0: 38.1%`). 👉 **Лучшие альтернативы:** локально **`Ollama` / `MLX` (`Qwen3-Coder`)**, либо облачный [🔌 **`MiniMax M3.1 Flash API`**](reviews/ru/external-apis/minimax-m3-1-flash-api.md). 📊 [HuggingFace](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [OpenRouter](https://openrouter.ai/minimax/minimax-m3.1-flash)
+Быстрая модель для текста, фото и видео (`1M` контекст), но её веса **`~250–285 GB`** не помещаются на рабочие машины и она не является флагманом сложного кодинга (`Terminal-Bench 4.0: 38.1%`). 📊 [HuggingFace](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [OpenRouter](https://openrouter.ai/minimax/minimax-m3.1-flash)
 
 > [!WARNING]
 > **Риск:** Запуск через disk-offload/swap на ноутбуках с `32–64 GB` изнашивает SSD, сторонние кванты требуют `trust_remote_code=True` (риск `RCE`), а в бесплатных кредитах и `:free`-эндпоинтах закрытый код может уйти в дообучение.
@@ -285,14 +287,16 @@
 </details>
 
 #### [taste-skill v2.5](reviews/ru/web/taste-skill.md) — Набор для создания ярких промо-лендингов с нуля
-`👍 Хороший вариант` · **Качество:** `8.0/10` · **Частота нужды:** `3.5/10` · **Тип:** Landing Kit + Hook · **Дата:** `2026-11-15`
+`👍 Хороший вариант` · **Качество:** `8.0/10` · **Частота нужды:** `3.5/10` · **Тип:** Landing Kit + Hook · **Дата:** `2026-11-15`<br>
+🔄 **Есть альтернатива получше:** [Hallmark v2](reviews/ru/web/hallmark.md) *(для лендингов)* · [impeccable](reviews/ru/ui-ux/impeccable.md) *(для повседневного UI)*
 
-Неплохой набор для промо-сайтов, но для новых лендингов теперь сильнее и безопаснее 👉 [**`Hallmark v2`**](reviews/ru/web/hallmark.md) (а для повседневного продуктового UI — 👉 [**`impeccable`**](reviews/ru/ui-ux/impeccable.md)). *При установке `taste-skill` обязательно вырезать 600с `Stop`-хук и ставить только локально (`-p`).*
+Неплохой набор для промо-сайтов с WebGL-шейдерами, но для обычных новых лендингов сильнее и безопаснее `Hallmark v2`. *При установке `taste-skill` обязательно вырезать 600с `Stop`-хук и ставить только локально (`-p`).*
 
 #### [vercel-labs/ui](reviews/ru/web/vercel-ui-sdk.md) — Beta-библиотека, где управление агентом работает только на `@ui-sdk/*`
-`🔄 Есть альтернатива получше` · **Качество:** `8.0/10` · **Частота нужды:** `2.0/10` · **Тип:** `@ui-sdk/*` Library + Skill (`Beta`) · **Дата:** `2026-11-16`
+🔄 **Есть альтернатива получше:** [agent-desktop](reviews/ru/developer-tools/agent-desktop.md) + [impeccable](reviews/ru/ui-ux/impeccable.md)<br>
+**Качество:** `8.0/10` · **Частота нужды:** `2.0/10` · **Тип:** `@ui-sdk/*` Library + Skill (`Beta`) · **Дата:** `2026-11-16`
 
-Интересный концепт Vercel Labs (`8.0/10`), но *«управление в 2 раза быстрее без скриншотов»* работает только после переписывания сайта на `@ui-sdk/*` (не видит обычные `<button>`, `<input>`, `Shadcn`/`Radix` и `Expo`). 👉 **Лучшая альтернатива:** работающий на любых готовых сайтах без переписывания кода [**`agent-desktop`**](reviews/ru/developer-tools/agent-desktop.md) + [**`impeccable`**](reviews/ru/ui-ux/impeccable.md).
+Интересный концепт Vercel Labs (`8.0/10`), но *«управление в 2 раза быстрее без скриншотов»* работает только после переписывания сайта на `@ui-sdk/*` (не видит обычные `<button>`, `<input>`, `Shadcn`/`Radix` и `Expo`).
 
 <details>
 <summary>📊 Сравнение и статистика (`vercel-labs/ui` vs `agent-desktop`)</summary>
@@ -306,14 +310,16 @@
 ### 📱 Mobile
 
 #### [swiftui-agent-skill](reviews/ru/mobile/swiftui-agent-skill.md) — Правила чистого Apple SwiftUI для нативных виджетов и Live Activities
-`👍 Хороший вариант` · **Качество:** `8.5/10` · **Частота нужды:** `3.0/10` · **Тип:** Skill · **Дата:** `2026-11-16`
+`👍 Хороший вариант` · **Качество:** `8.5/10` · **Частота нужды:** `3.0/10` · **Тип:** Skill · **Дата:** `2026-11-16`<br>
+🔄 **Есть альтернатива получше *(для Expo)*:** [impeccable](reviews/ru/ui-ux/impeccable.md) + [animate-expo](reviews/ru/mobile/animate-expo.md)
 
-Отличная выжимка по SwiftUI и Apple HIG (`8.5/10`). Оценка частоты `3.0/10` связана только с тем, что наш основной стек — `Expo / React Native`; когда пишем нативные iOS-виджеты или Live Activities, ставим его локально (`-p`). 👉 **Для ежедневной работы на Expo:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) + [**`animate-expo`**](reviews/ru/mobile/animate-expo.md).
+Отличная выжимка по SwiftUI и Apple HIG (`8.5/10`). Оценка частоты `3.0/10` связана только с тем, что наш основной стек — `Expo / React Native`; когда пишем нативные iOS-виджеты или Live Activities, ставим его локально (`-p`).
 
 #### [ARTEMIS](reviews/ru/mobile/artemis.md) — Автономный Android QA-агент от Google со зрением/OCR
-`👍 Хороший вариант` · **Качество:** `8.5/10` · **Частота нужды:** `2.5/10` · **Тип:** Python CLI / SDK + MCP · **Дата:** `2026-11-16`
+`👍 Хороший вариант` · **Качество:** `8.5/10` · **Частота нужды:** `2.5/10` · **Тип:** Python CLI / SDK + MCP · **Дата:** `2026-11-16`<br>
+🔄 **Есть альтернатива получше *(ежедневный QA)*:** [agent-device](reviews/ru/mobile/agent-device.md)
 
-Сильная система компьютерного зрения (`AndroidWorld: 99%+`) для игровых и кастомных `Canvas`-экранов без дерева доступности, нужная лишь в редких случаях (`2.5/10`). 👉 **Быстрая бесплатная альтернатива на каждый день:** [**`agent-device`**](reviews/ru/mobile/agent-device.md).
+Сильная система компьютерного зрения (`AndroidWorld: 99%+`) для игровых и кастомных `Canvas`-экранов без дерева доступности, нужная лишь в редких случаях (`2.5/10`).
 
 > [!WARNING]
 > **Скрытые расходы:** Несмотря на открытый код, запуск **платный** — требует отдельный платный LLM API-ключ в `.env`; не ставьте его глобально через `artemis mcp --install all`.
@@ -328,9 +334,10 @@
 </details>
 
 #### [mobile-mcp](reviews/ru/mobile/mobile-mcp.md) — Мобильный MCP-сервер (`~7,580` токенов на ход и в `6.5x–37x` медленнее)
-`⚠️ Не рекомендуется` · **Качество:** `7.0/10` · **Частота нужды:** `2.0/10` · **Тип:** MCP Server (34 тула) · **Дата:** `2026-11-16`
+`⚠️ Не рекомендуется` · **Качество:** `7.0/10` · **Частота нужды:** `2.0/10` · **Тип:** MCP Server (34 тула) · **Дата:** `2026-11-16`<br>
+🔄 **Есть альтернатива получше:** [agent-device](reviews/ru/mobile/agent-device.md) + [adb](reviews/ru/mobile/adb.md)
 
-MCP-сервер для управления мобильными экранами, серьёзно уступивший на живых замерах. 👉 **Лучшая альтернатива:** [**`agent-device`**](reviews/ru/mobile/agent-device.md) + [**`adb`**](reviews/ru/mobile/adb.md).
+MCP-сервер для управления мобильными экранами, серьёзно уступивший на живых замерах.
 
 > [!WARNING]
 > **Почему не рекомендуется:** Сжигает **`~7,580` токенов на каждом сообщении** даже в простое и содержит телеметрию `Scarf` + `PostHog` и рекламу облака `mobilenext.ai`.
@@ -347,19 +354,22 @@ MCP-сервер для управления мобильными экранам
 ### 🎨 UI/UX
 
 #### [animate](reviews/ru/ui-ux/animate.md) — Скилл веб-анимаций от Эмиля Ковальски
-`🔄 Есть альтернатива получше` · **Качество:** `8.5/10` · **Частота нужды:** `3.0/10` · **Тип:** Skill (2 файла) · **Дата:** `2026-11-15`
+🔄 **Есть альтернатива получше:** [impeccable](reviews/ru/ui-ux/impeccable.md) (`animate`) + [animate-expo](reviews/ru/mobile/animate-expo.md)<br>
+**Качество:** `8.5/10` · **Частота нужды:** `3.0/10` · **Тип:** Skill (2 файла) · **Дата:** `2026-11-15`
 
-Качественные правила веб-анимации (`8.5/10`), но работают только для Web и конфликтуют по авто-триггеру с мобильным `animate-expo`. 👉 **Лучшая альтернатива:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`animate`) + [**`animate-expo`**](reviews/ru/mobile/animate-expo.md), закрывающие и Web, и Mobile без конфликтов.
+Качественные правила веб-анимации (`8.5/10`), но работают только для Web и конфликтуют по авто-триггеру с мобильным `animate-expo`.
 
 #### [unslop](reviews/ru/ui-ux/unslop.md) — 9-шаговый чистильщик ИИ-штампов для веб-страниц
-`🔄 Есть альтернатива получше` · **Качество:** `8.5/10` · **Частота нужды:** `2.5/10` · **Тип:** Skill + Playwright скрипты · **Дата:** `2026-11-16`
+🔄 **Есть альтернатива получше:** [impeccable](reviews/ru/ui-ux/impeccable.md) (`polish` / `quieter` / `clarify`)<br>
+**Качество:** `8.5/10` · **Частота нужды:** `2.5/10` · **Тип:** Skill + Playwright скрипты · **Дата:** `2026-11-16`
 
-Хорошо чистит шаблонные веб-страницы (`8.5/10`), но не поддерживает мобильные приложения и пересекается с `impeccable`. 👉 **Лучшая альтернатива:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`polish` / `quieter` / `clarify`).
+Хорошо чистит шаблонные веб-страницы (`8.5/10`), но не поддерживает мобильные приложения и пересекается с `impeccable`.
 
 #### [break-ui](reviews/ru/ui-ux/break-ui.md) — Стресс-тест UI длинными и пустыми данными
-`🔄 Есть альтернатива получше` · **Качество:** `8.0/10` · **Частота нужды:** `3.0/10` · **Тип:** Skill (2 файла) · **Дата:** `2026-11-15`
+🔄 **Есть альтернатива получше:** [impeccable](reviews/ru/ui-ux/impeccable.md) (`harden`)<br>
+**Качество:** `8.0/10` · **Частота нужды:** `3.0/10` · **Тип:** Skill (2 файла) · **Дата:** `2026-11-15`
 
-Полезная идея проверки вёрстки экстремальными данными (`8.0/10`), но оставляет временные переключатели в коде и останавливается без починки. 👉 **Лучшая альтернатива:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`harden`), который сразу чинит проблемные места.
+Полезная идея проверки вёрстки экстремальными данными (`8.0/10`), но оставляет временные переключатели в коде и останавливается без починки.
 
 <details>
 <summary>📊 Сравнение (`break-ui` vs `impeccable harden`)</summary>
@@ -371,34 +381,39 @@ MCP-сервер для управления мобильными экранам
 </details>
 
 #### [make-interfaces-feel-better](reviews/ru/ui-ux/make-interfaces-feel-better.md) — Скилл проверки мелких визуальных деталей веб-интерфейса
-`🔄 Есть альтернатива получше` · **Качество:** `7.5/10` · **Частота нужды:** `2.5/10` · **Тип:** Skill (6 файлов) · **Дата:** `2026-10-31 → 2026-11-15`
+🔄 **Есть альтернатива получше:** [impeccable](reviews/ru/ui-ux/impeccable.md) + [animate-expo](reviews/ru/mobile/animate-expo.md)<br>
+**Качество:** `7.5/10` · **Частота нужды:** `2.5/10` · **Тип:** Skill (6 файлов) · **Дата:** `2026-10-31 → 2026-11-15`
 
-Неплохие советы по рамкам, скруглениям и теням, но после 16 дней теста удалён из-за простыней отчётов из 4 таблиц на каждую мелкую правку. 👉 **Лучшая альтернатива:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) + [**`animate-expo`**](reviews/ru/mobile/animate-expo.md).
+Неплохие советы по рамкам, скруглениям и теням, но после 16 дней теста удалён из-за простыней отчётов из 4 таблиц на каждую мелкую правку.
 
 #### [ui-ux-pro-max](reviews/ru/ui-ux/ui-ux-pro-max.md) — Подбор палитр и шрифтов по статическим CSV-таблицам
-`🔄 Есть альтернатива получше` · **Качество:** `7.0/10` · **Частота нужды:** `3.5/10` · **Тип:** Skill + CSV/Python · **Дата:** `2026-11-15`
+🔄 **Есть альтернатива получше:** [impeccable](reviews/ru/ui-ux/impeccable.md) (с `APCA`-контрастом)<br>
+**Качество:** `7.0/10` · **Частота нужды:** `3.5/10` · **Тип:** Skill + CSV/Python · **Дата:** `2026-11-15`
 
-Выдаёт однотипные цвета и шрифты из CSV-списков и мешает авто-запуску `impeccable`. 👉 **Лучшая альтернатива:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (с `APCA`-контрастом).
+Выдаёт однотипные цвета и шрифты из CSV-списков и мешает авто-запуску `impeccable`.
 
 ### 🏗️ Архитектура и Ревью
 
 #### [addy-agent-skills](reviews/ru/architecture/addy-agent-skills.md) — Конвейер из 25 скиллов `/spec -> /ship` от Эдди Османи
-`🔄 Есть альтернатива получше` · **Качество:** `8.0/10` · **Частота нужды:** `2.5/10` · **Тип:** Плагин (25 скиллов + 9 команд) · **Дата:** `2026-11-16`
+🔄 **Есть альтернатива получше:** [grill-me](reviews/ru/architecture/grill-me.md) + [ponytail](reviews/ru/architecture/ponytail.md) + [elephant-goldfish-model](reviews/ru/architecture/elephant-goldfish-model.md)<br>
+**Качество:** `8.0/10` · **Частота нужды:** `2.5/10` · **Тип:** Плагин (25 скиллов + 9 команд) · **Дата:** `2026-11-16`
 
-Грамотная инженерная дисциплина (`8.0/10`), но принудительный TDD и паузы перегружают обычные повседневные задачи. 👉 **Лучшая альтернатива:** быстрые [**`grill-me`**](reviews/ru/architecture/grill-me.md) + [**`ponytail`**](reviews/ru/architecture/ponytail.md) + [**`elephant-goldfish-model`**](reviews/ru/architecture/elephant-goldfish-model.md).
+Грамотная инженерная дисциплина (`8.0/10`), но принудительный TDD и паузы перегружают обычные повседневные задачи.
 
 #### [agency-agents](reviews/ru/architecture/agency-agents.md) — Набор из 283 ролевых промптов («Ты маркетолог / дизайнер»)
-`⚠️ Не рекомендуется` · **Качество:** `6.5/10` · **Частота нужды:** `2.5/10` · **Тип:** 283 persona-промпта + installer · **Дата:** `2026-11-16`
+`⚠️ Не рекомендуется` · **Качество:** `6.5/10` · **Частота нужды:** `2.5/10` · **Тип:** 283 persona-промпта + installer · **Дата:** `2026-11-16`<br>
+🔄 **Есть альтернатива получше:** [impeccable](reviews/ru/ui-ux/impeccable.md) + [ponytail](reviews/ru/architecture/ponytail.md) + [elephant-goldfish-model](reviews/ru/architecture/elephant-goldfish-model.md)
 
-Сборник из 283 шаблонных ролей по 18 отделам. 👉 **Лучшая альтернатива:** [**`impeccable`**](reviews/ru/ui-ux/impeccable.md), [**`ponytail`**](reviews/ru/architecture/ponytail.md), [**`elephant-goldfish-model`**](reviews/ru/architecture/elephant-goldfish-model.md).
+Сборник из 283 шаблонных ролей по 18 отделам.
 
 > [!WARNING]
 > **Риск раздувания контекста:** Полная глобальная установка съедает **`~18,500` токенов постоянного контекста** на поверхностные шаблоны, размывая внимание агента.
 
 #### [superpowers](reviews/ru/architecture/superpowers.md) — Плагин из 14 скиллов с принудительным TDD и хуком `SessionStart`
-`⚠️ Не рекомендуется` · **Качество:** `6.5/10` · **Частота нужды:** `2.0/10` · **Тип:** Плагин (14 скиллов + хук) · **Дата:** `2026-04-04 → 2026-09-01`
+`⚠️ Не рекомендуется` · **Качество:** `6.5/10` · **Частота нужды:** `2.0/10` · **Тип:** Плагин (14 скиллов + хук) · **Дата:** `2026-04-04 → 2026-09-01`<br>
+🔄 **Есть альтернатива получше:** [grill-me](reviews/ru/architecture/grill-me.md) + [ponytail](reviews/ru/architecture/ponytail.md) + [cross-platform-qa](reviews/ru/mobile/cross-platform-qa.md)
 
-Использовали 5 месяцев и удалили. 👉 **Лучшая альтернатива:** [**`grill-me`**](reviews/ru/architecture/grill-me.md) + [**`ponytail`**](reviews/ru/architecture/ponytail.md) + [**`cross-platform-qa`**](reviews/ru/mobile/cross-platform-qa.md).
+Использовали 5 месяцев и удалили.
 
 > [!WARNING]
 > **Потеря времени и квоты:** Хук `SessionStart`, лишние вопросы `brainstorming` и обязательный TDD даже на вёрстке **удваивают расход времени и токенов (`2x`)**.
@@ -415,14 +430,15 @@ MCP-сервер для управления мобильными экранам
 ### ⚙️ Backend
 
 #### [opentelemetry](reviews/ru/backend/opentelemetry.md) — Стандарт мониторинга серверов, БД и десятков микросервисов
-`👍 Хороший вариант` · **Качество:** `9.0/10` · **Частота нужды:** `4.0/10` · **Тип:** Стандарт + Collector (`SigNoz` / `Grafana`) · **Дата:** `2026-11-15`
+`👍 Хороший вариант` · **Качество:** `9.0/10` · **Частота нужды:** `4.0/10` · **Тип:** Стандарт + Collector (`SigNoz` / `Grafana`) · **Дата:** `2026-11-15`<br>
+🔄 **Есть альтернатива получше *(на нашем масштабе)*:** [sentry](reviews/ru/backend/sentry.md)
 
-Мощнейший отраслевой стандарт (`9.0/10`) для глубокого мониторинга CPU/RAM серверов, пулов БД и крупных распределённых систем, требующий отдельного стека `Collector + SigNoz/Grafana`. Все текущие задачи по ошибкам, реплеям и базовым трейсам у нас закрывает один 👉 [**`sentry`**](reviews/ru/backend/sentry.md).
+Мощнейший отраслевой стандарт (`9.0/10`) для глубокого мониторинга CPU/RAM серверов, пулов БД и крупных распределённых систем, требующий отдельного стека `Collector + SigNoz/Grafana`. Все текущие задачи по ошибкам, реплеям и базовым трейсам у нас закрывает один `sentry`.
 
 #### [Shannon](reviews/ru/backend/shannon.md) — Автономный AI-пентестер локальных и staging API
-`👍 Хороший вариант` · **Качество:** `8.5/10` · **Частота нужды:** `6.5/10` · **Тип:** Standalone CLI + [`hacker-test`](skills/hacker-test/SKILL.md) · **Дата:** `2026-11-16`
+`👍 Хороший вариант` · **Качество:** `8.5/10` · **Частота нужды:** `6.5/10` · **Тип:** Standalone CLI + [hacker-test](skills/hacker-test/SKILL.md) · **Дата:** `2026-11-16`
 
-Перед крупным релизом атакует local/staging сервер настоящими эксплойтами (`Auth bypass`, `IDOR`, `SQLi`, `XSS`, `SSRF`), доказывая дыры на практике (`0` токенов в простое через [`hacker-test`](skills/hacker-test/SKILL.md)). Для повседневной проверки PR без Docker работает 👉 [**`security-audit`**](reviews/ru/backend/security-audit-skill.md).
+Перед крупным релизом атакует local/staging сервер настоящими эксплойтами (`Auth bypass`, `IDOR`, `SQLi`, `XSS`, `SSRF`), доказывая дыры на практике (`0` токенов в простое через [hacker-test](skills/hacker-test/SKILL.md)). Для повседневной проверки PR без Docker работает 👉 [security-audit](reviews/ru/backend/security-audit-skill.md).
 
 > [!WARNING]
 > **Строгое ограничение:** Отправляет боевые мутирующие эксплойты — **категорически запрещено запускать на production**, используйте только на local или staging!
@@ -430,26 +446,27 @@ MCP-сервер для управления мобильными экранам
 ### 🛠️ Developer Tools и Memory
 
 #### [REA](reviews/ru/developer-tools/rea.md) — Реверс-инжиниринг закрытых программ, `.asar`, `.apk` и бинарников без исходников
-`👍 Хороший вариант` · **Качество:** `9.0/10` · **Частота нужды:** `3.5/10` · **Тип:** Standalone CLI + [`rea`](skills/rea/SKILL.md) · **Дата:** `2026-11-17`
+`👍 Хороший вариант` · **Качество:** `9.0/10` · **Частота нужды:** `3.5/10` · **Тип:** Standalone CLI + [rea](skills/rea/SKILL.md) · **Дата:** `2026-11-17`
 
-Вскрывает и с доказательствами объясняет работу нужной функции внутри чужих скомпилированных приложений без исходного кода (`Electron .asar`, JS-бандлы, Android `.apk`, `.NET`, `Mach-O`/`ELF`/`PE`, `9.0/10`), а также проверяет собственные релизные бандлы на утечку `.map`/`.dSYM` (`audit-release-exposure`). Через наш скилл [`rea`](skills/rea/SKILL.md) по сигналу `"rea"` **сначала проверяет версию Node.js (и при необходимости обновляет до нужной), доустанавливает утилиты под цель (`openjdk`, `jadx`, `apktool`, `ghidra`, `rizin`)** и запускается **временно с `0` постоянного расхода токенов**. *(Для собственных исходников используется 👉 [**`graphify`**](reviews/ru/architecture/graphify.md)).*
+Вскрывает и с доказательствами объясняет работу нужной функции внутри чужих скомпилированных приложений без исходного кода (`Electron .asar`, JS-бандлы, Android `.apk`, `.NET`, `Mach-O`/`ELF`/`PE`, `9.0/10`), а также проверяет собственные релизные бандлы на утечку `.map`/`.dSYM` (`audit-release-exposure`). Через наш скилл [rea](skills/rea/SKILL.md) по сигналу `"rea"` **сначала проверяет версию Node.js (и при необходимости обновляет до нужной), доустанавливает утилиты под цель (`openjdk`, `jadx`, `apktool`, `ghidra`, `rizin`)** и запускается **временно с `0` постоянного расхода токенов**. *(Для собственных исходников используется 👉 [graphify](reviews/ru/architecture/graphify.md)).*
 
 > [!WARNING]
-> **Ловушка контекста:** Никогда не ставьте глобальный MCP через `npx rea-agents setup` — его `200+` инструментов сжигают **`~300 KB` (`~75,000+` токенов)** контекста в каждой сессии! Запускайте только временно через наш скилл [`rea`](skills/rea/SKILL.md).
+> **Ловушка контекста:** Никогда не ставьте глобальный MCP через `npx rea-agents setup` — его `200+` инструментов сжигают **`~300 KB` (`~75,000+` токенов)** контекста в каждой сессии! Запускайте только временно через наш скилл [rea](skills/rea/SKILL.md).
 
 <details>
 <summary>📊 Сравнение и статистика (Глобальный `REA` MCP vs наш скилл `rea`)</summary>
 
 - **Со штатным `npx rea-agents setup`:** `200+` инструментов (`~75,000+` токенов/сессия) + `~198 KB` (`~50K` токенов) референсов скилла + `189.6 MB` вес npm-пакета; падает на `Node 24.20.0`.
-- **С нашим скиллом-обёрткой [`rea`](skills/rea/SKILL.md):** **`0` токенов** в повседневной разработке; при вызове `"rea"` сам выбирает или обновляет `Node 26+`/`24.22+`, проверяет/ставит нужные декомпиляторы под конкретный файл, работает в `/tmp` и чистит следы по завершении.
+- **С нашим скиллом-обёрткой [rea](skills/rea/SKILL.md):** **`0` токенов** в повседневной разработке; при вызове `"rea"` сам выбирает или обновляет `Node 26+`/`24.22+`, проверяет/ставит нужные декомпиляторы под конкретный файл, работает в `/tmp` и чистит следы по завершении.
 - 📖 [Подробный обзор →](reviews/ru/developer-tools/rea.md) · [Сводное сравнение внизу ↓](#подробные-сравнения)
 
 </details>
 
 #### [SkillSpector](reviews/ru/developer-tools/skillspector.md) — Python/Docker/YARA-сканер безопасности скиллов от NVIDIA
-`🔄 Есть альтернатива получше` · **Качество:** `9.0/10` · **Частота нужды:** `3.5/10` · **Тип:** Python CLI + MCP + Skill · **Дата:** `2026-11-16`
+🔄 **Есть альтернатива получше:** [skillshare](reviews/ru/developer-tools/skillshare.md) (`skillshare audit`) + AI-разбор исходников<br>
+**Качество:** `9.0/10` · **Частота нужды:** `3.5/10` · **Тип:** Python CLI + MCP + Skill · **Дата:** `2026-11-16`
 
-Отличный технический сканер от NVIDIA (`9.0/10`), но запуск отдельного конвейера Python/Docker/YARA на каждый скилл занимает лишнее время. 👉 **Более быстрая альтернатива:** проверка за `0.1с` в [**`skillshare`**](reviews/ru/developer-tools/skillshare.md) (`skillshare audit`) + **прямой разбор кода нашим AI-агентом**.
+Отличный технический сканер от NVIDIA (`9.0/10`), но запуск отдельного конвейера Python/Docker/YARA на каждый скилл занимает лишнее время.
 
 <details>
 <summary>📊 Сравнение и статистика (`SkillSpector` vs `skillshare audit + AI-разбор`)</summary>
@@ -461,9 +478,10 @@ MCP-сервер для управления мобильными экранам
 </details>
 
 #### [T3 Code](reviews/ru/developer-tools/t3-code.md) — Наше прежнее мультиагентное окружение (заменено на `Orca`)
-`🔄 Есть альтернатива получше` · **Качество:** `8.5/10` · **Частота нужды:** `2.5/10` · **Тип:** Desktop App + CLI · **Дата:** `2026-10-23 → 2026-11-16`
+🔄 **Есть альтернатива получше:** [Orca](reviews/ru/developer-tools/orca.md)<br>
+**Качество:** `8.5/10` · **Частота нужды:** `2.5/10` · **Тип:** Desktop App + CLI · **Дата:** `2026-10-23 → 2026-11-16`
 
-Добротное десктопное приложение (`8.5/10`), которым мы пользовались несколько недель и затем удалили (освободив `~3.87 GB`) из-за обрывов бета-приложения на телефоне, остановки на `Lock Screen` и отсутствия карточек субагентов в чате. 👉 **Лучшая альтернатива:** [**`Orca`**](reviews/ru/developer-tools/orca.md), решивший все три вопроса.
+Добротное десктопное приложение (`8.5/10`), которым мы пользовались несколько недель и затем удалили (освободив `~3.87 GB`) из-за обрывов бета-приложения на телефоне, остановки на `Lock Screen` и отсутствия карточек субагентов в чате.
 
 <details>
 <summary>📊 Сравнение и статистика (`T3 Code` vs `Orca`)</summary>
@@ -475,9 +493,10 @@ MCP-сервер для управления мобильными экранам
 </details>
 
 #### [caveman](reviews/ru/developer-tools/caveman.md) — Сокращает текстовые ответы ИИ на `~65%` за счёт кратких фраз
-`👍 Хороший вариант` · **Качество:** `8.0/10` · **Частота нужды:** `3.5/10` · **Тип:** Skill *(+ опц. CLI)* · **Дата:** `2026-11-16`
+`👍 Хороший вариант` · **Качество:** `8.0/10` · **Частота нужды:** `3.5/10` · **Тип:** Skill *(+ опц. CLI)* · **Дата:** `2026-11-16`<br>
+🔄 **Есть альтернатива получше:** [ponytail](reviews/ru/architecture/ponytail.md)
 
-Хорошо ужимает болтовню в терминале (`~65%` меньше слов), но не мешает ИИ раздувать сам код. 👉 **Лучшая основная альтернатива:** [**`ponytail`**](reviews/ru/architecture/ponytail.md), который сжимает и текст ответа, и лишний код. *(Если берёте `caveman`, копируйте только чистый `SKILL.md` без телеметрии `@caveman-ai/cli`).*
+Хорошо ужимает болтовню в терминале (`~65%` меньше слов), но не мешает ИИ раздувать сам код. *(Если берёте `caveman`, копируйте только чистый `SKILL.md` без телеметрии `@caveman-ai/cli`).*
 
 <details>
 <summary>📊 Сравнение и статистика (`caveman` vs `ponytail`)</summary>
@@ -489,19 +508,22 @@ MCP-сервер для управления мобильными экранам
 </details>
 
 #### [humanizer + stop-slop](reviews/ru/developer-tools/humanizer-stop-slop.md) — Редакторы статей и постов для удаления штампов ИИ
-`🔄 Есть альтернатива получше` · **Качество:** `7.5/10` · **Частота нужды:** `2.0/10` · **Тип:** Skill (`Markdown`) · **Дата:** `2026-11-16`
+🔄 **Есть альтернатива получше:** [ponytail](reviews/ru/architecture/ponytail.md) + [impeccable](reviews/ru/ui-ux/impeccable.md) (`clarify`)<br>
+**Качество:** `7.5/10` · **Частота нужды:** `2.0/10` · **Тип:** Skill (`Markdown`) · **Дата:** `2026-11-16`
 
-Полезны авторам статей и эссе (`humanizer` весит `~32 KB`), просто не предназначены для кода и продуктового UI. 👉 **Альтернатива для кода и UI:** [**`ponytail`**](reviews/ru/architecture/ponytail.md) + [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) (`clarify`).
+Полезны авторам статей и эссе (`humanizer` весит `~32 KB`), просто не предназначены для кода и продуктового UI.
 
 #### [claude-code-setup](reviews/ru/developer-tools/claude-code-setup.md) — Стартовый рекомендатель настроек для новичков в Claude Code
-`🔄 Есть альтернатива получше` · **Качество:** `7.5/10` · **Частота нужды:** `2.0/10` · **Тип:** Плагин · **Дата:** `2026-11-16`
+🔄 **Есть альтернатива получше:** [skillshare](reviews/ru/developer-tools/skillshare.md)<br>
+**Качество:** `7.5/10` · **Частота нужды:** `2.0/10` · **Тип:** Плагин · **Дата:** `2026-11-16`
 
-Подсказывает стартовые секции `CLAUDE.md` и хуки новичкам; при готовой единой системе не нужен. 👉 **Лучшая альтернатива:** [**`skillshare`**](reviews/ru/developer-tools/skillshare.md).
+Подсказывает стартовые секции `CLAUDE.md` и хуки новичкам; при готовой единой системе не нужен.
 
 #### [OmniRoute](reviews/ru/developer-tools/omniroute.md) — Локальный LLM reverse-proxy (`localhost:20128`) для ротации подписок
-`⚠️ Не рекомендуется` · **Качество:** `7.5/10` · **Частота нужды:** `2.0/10` · **Тип:** Local Proxy + 44 Admin Skills · **Дата:** `2026-11-16`
+`⚠️ Не рекомендуется` · **Качество:** `7.5/10` · **Частота нужды:** `2.0/10` · **Тип:** Local Proxy + 44 Admin Skills · **Дата:** `2026-11-16`<br>
+🔄 **Есть альтернатива получше:** [Orca](reviews/ru/developer-tools/orca.md) + [ponytail](reviews/ru/architecture/ponytail.md)
 
-Локальный прокси-шлюз для пула дешёвых API-ключей (его 44 скилла — мануалы настройки самого прокси, а не кодинга). 👉 **Безопасная и стабильная альтернатива:** [**`Orca`**](reviews/ru/developer-tools/orca.md) + [**`ponytail`**](reviews/ru/architecture/ponytail.md).
+Локальный прокси-шлюз для пула дешёвых API-ключей (его 44 скилла — мануалы настройки самого прокси, а не кодинга).
 
 > [!WARNING]
 > **Риск бана аккаунта (`ToS`) и обрывов сессий:** Подключение платных подписок `Claude` / `ChatGPT` / `Google` через TLS-маскировку `wreq-js` **грозит блокировкой аккаунта (`ToS ban`)**, обрывает долгие сессии разработки (`#7287`) и незаметно подменяет модель на слабую при лимитах.
@@ -520,30 +542,30 @@ MCP-сервер для управления мобильными экранам
 <a id="подробные-сравнения"></a>
 ## ⚖️ Подробные Сравнения и Результаты (Почему Выбран Каждый Основной Инструмент)
 
-Полные таблицы сравнения по всем 7 направлениям вынесены также в отдельное руководство: 👉 [**Открыть полную матрицу сравнения по 7 направлениям (`practices/ru/07-tool-and-skill-comparisons.md`) →**](practices/ru/07-tool-and-skill-comparisons.md)
+Полные таблицы сравнения по всем 7 направлениям вынесены также в отдельное руководство: 👉 [**Открыть полную матрицу сравнения по 7 направлениям (practices/ru/07-tool-and-skill-comparisons.md) →**](practices/ru/07-tool-and-skill-comparisons.md)
 
 - **📱 Автоматизация Мобильного и TV UI:**
-  - ✅ [**`agent-device`**](reviews/ru/mobile/agent-device.md): `iOS + Android + tvOS + Android TV`, **`197–888 мс`**, `0` MCP-нагрузки, **`$0` за API**, без Java, встроенный `--maestro`.
-  - ⚖️ Альтернативы: `Maestro CLI` (`1.5–4с`, нужна Java `JDK 17+`) · [**`ARTEMIS`**](reviews/ru/mobile/artemis.md) (только Android, `3–40с`, платный LLM API-ключ в `.env`) · ⚠️ [**`mobile-mcp`**](reviews/ru/mobile/mobile-mcp.md) (`~7,580` токенов/ход, `6–7с` медленно, телеметрия/реклама).
+  - ✅ [**agent-device**](reviews/ru/mobile/agent-device.md): `iOS + Android + tvOS + Android TV`, **`197–888 мс`**, `0` MCP-нагрузки, **`$0` за API**, без Java, встроенный `--maestro`.
+  - ⚖️ Альтернативы: `Maestro CLI` (`1.5–4с`, нужна Java `JDK 17+`) · [**ARTEMIS**](reviews/ru/mobile/artemis.md) (только Android, `3–40с`, платный LLM API-ключ в `.env`) · ⚠️ [**mobile-mcp**](reviews/ru/mobile/mobile-mcp.md) (`~7,580` токенов/ход, `6–7с` медленно, телеметрия/реклама).
 - **📱 Оптимизация RAM и GPU Мобильных Эмуляторов (`БЕЗ НИХ vs С НИМИ`):**
-  - ✅ [**`simslim`**](reviews/ru/mobile/simslim.md) (iOS 26.5): фоновый RAM **`2.70 GB -> 1.16 GB` (`-57%`)**, GUI **`4.0 GB -> 0.9 GB` (`-77.5%`)**, процессы `182 -> 78`, очистка **`+1.51 GB`** диска без сброса приложений.
-  - ✅ [**`avdslim`**](reviews/ru/mobile/avdslim.md) (Android API 35): RAM **`4.41 GB -> 2.64 GB` (`-40.2%`, `-69%` от Studio 8.5 GB)**, нативный **Apple Metal GPU (`host`)** вместо CPU `SwiftShader`, старт из Golden Snapshot `22.8с -> 13.8с`.
+  - ✅ [**simslim**](reviews/ru/mobile/simslim.md) (iOS 26.5): фоновый RAM **`2.70 GB -> 1.16 GB` (`-57%`)**, GUI **`4.0 GB -> 0.9 GB` (`-77.5%`)**, процессы `182 -> 78`, очистка **`+1.51 GB`** диска без сброса приложений.
+  - ✅ [**avdslim**](reviews/ru/mobile/avdslim.md) (Android API 35): RAM **`4.41 GB -> 2.64 GB` (`-40.2%`, `-69%` от Studio 8.5 GB)**, нативный **Apple Metal GPU (`host`)** вместо CPU `SwiftShader`, старт из Golden Snapshot `22.8с -> 13.8с`.
 - **🌐 Управление Web и Desktop UI:**
-  - ✅ [**`agent-desktop`**](reviews/ru/developer-tools/agent-desktop.md): работает в фоне на любых готовых сайтах и программах macOS (`в ~5–10x` меньше токенов).
-  - 🔄 [**`vercel-labs/ui`**](reviews/ru/web/vercel-ui-sdk.md): видит только сайты, переписанные на `@ui-sdk/*` (не поддерживает `Expo` и обычный HTML).
+  - ✅ [**agent-desktop**](reviews/ru/developer-tools/agent-desktop.md): работает в фоне на любых готовых сайтах и программах macOS (`в ~5–10x` меньше токенов).
+  - 🔄 [**vercel-labs/ui**](reviews/ru/web/vercel-ui-sdk.md): видит только сайты, переписанные на `@ui-sdk/*` (не поддерживает `Expo` и обычный HTML).
 - **🎨 UI/UX Дизайн, Лендинги и Анимации:**
-  - ✅ Повседневный App / Web / Mobile UI: [**`impeccable`**](reviews/ru/ui-ux/impeccable.md) + [**`mobile-native`**](reviews/ru/mobile/mobile-native.md) + [**`animate-expo`**](reviews/ru/mobile/animate-expo.md) (`APCA`-контраст + `60/120fps` UI-thread анимации).
-  - 👍 Когда нужен промо-лендинг с нуля (`-p` / `/hallmark`): [**`Hallmark v2`**](reviews/ru/web/hallmark.md) (`50` готовых тем, `755` живых фото, `capture.mjs` и `sloplint --before/--kept` — этого нет в `impeccable`; также сильнее [**`taste-skill v2.5`**](reviews/ru/web/taste-skill.md)).
-  - 🔄 Альтернативы: [**`unslop`**](reviews/ru/ui-ux/unslop.md) и [**`animate`**](reviews/ru/ui-ux/animate.md) (только Web, конфликт авто-триггеров) · [**`break-ui`**](reviews/ru/ui-ux/break-ui.md) (ломает без починки) · [**`make-interfaces-feel-better`**](reviews/ru/ui-ux/make-interfaces-feel-better.md) (простыни из 4 таблиц).
+  - ✅ Повседневный App / Web / Mobile UI: [**impeccable**](reviews/ru/ui-ux/impeccable.md) + [**mobile-native**](reviews/ru/mobile/mobile-native.md) + [**animate-expo**](reviews/ru/mobile/animate-expo.md) (`APCA`-контраст + `60/120fps` UI-thread анимации).
+  - 👍 Когда нужен промо-лендинг с нуля (`-p` / `/hallmark`): [**Hallmark v2**](reviews/ru/web/hallmark.md) (`50` готовых тем, `755` живых фото, `capture.mjs` и `sloplint --before/--kept` — этого нет в `impeccable`; также сильнее [**taste-skill v2.5**](reviews/ru/web/taste-skill.md)).
+  - 🔄 Альтернативы: [**unslop**](reviews/ru/ui-ux/unslop.md) и [**animate**](reviews/ru/ui-ux/animate.md) (только Web, конфликт авто-триггеров) · [**break-ui**](reviews/ru/ui-ux/break-ui.md) (ломает без починки) · [**make-interfaces-feel-better**](reviews/ru/ui-ux/make-interfaces-feel-better.md) (простыни из 4 таблиц).
 - **🏗️ Планирование, YAGNI, Краткость и Мультиагенты:**
-  - ✅ [**`grill-me`**](reviews/ru/architecture/grill-me.md) + [**`graphify`**](reviews/ru/architecture/graphify.md) (`10x–20x` экономии токенов) + [**`ponytail`**](reviews/ru/architecture/ponytail.md) (сжатие текста и кода в `2–4x`) + [**`Orca`**](reviews/ru/developer-tools/orca.md) (`841 MB` RAM, работает на `Lock Screen` + мобильное приложение + карточки субагентов).
-  - ⚖️ Альтернативы: [**`T3 Code`**](reviews/ru/developer-tools/t3-code.md) (заменён на `Orca` из-за обрывов на `Lock Screen` и телефоне) · [**`caveman`**](reviews/ru/developer-tools/caveman.md) (сжимает только слова в чате) · ⚠️ [**`superpowers`**](reviews/ru/architecture/superpowers.md) (`2x` замедление) · ⚠️ [**`OmniRoute`**](reviews/ru/developer-tools/omniroute.md) (обрывы сессий и риск бана по ToS).
+  - ✅ [**grill-me**](reviews/ru/architecture/grill-me.md) + [**graphify**](reviews/ru/architecture/graphify.md) (`10x–20x` экономии токенов) + [**ponytail**](reviews/ru/architecture/ponytail.md) (сжатие текста и кода в `2–4x`) + [**Orca**](reviews/ru/developer-tools/orca.md) (`841 MB` RAM, работает на `Lock Screen` + мобильное приложение + карточки субагентов).
+  - ⚖️ Альтернативы: [**T3 Code**](reviews/ru/developer-tools/t3-code.md) (заменён на `Orca` из-за обрывов на `Lock Screen` и телефоне) · [**caveman**](reviews/ru/developer-tools/caveman.md) (сжимает только слова в чате) · ⚠️ [**superpowers**](reviews/ru/architecture/superpowers.md) (`2x` замедление) · ⚠️ [**OmniRoute**](reviews/ru/developer-tools/omniroute.md) (обрывы сессий и риск бана по ToS).
 - **🛡️ Аудит Безопасности, Пентест и Мониторинг:**
-  - ✅ [**`skillshare audit`**](reviews/ru/developer-tools/skillshare.md) (проверка скиллов за `0.1с`) + [**`security-audit`**](reviews/ru/backend/security-audit-skill.md) (аудит исходников без Docker) + [**`Shannon`**](reviews/ru/backend/shannon.md) (живой пентест на staging) + [**`sentry`**](reviews/ru/backend/sentry.md) (ошибки + Replay + трейсы).
-  - ⚖️ Альтернативы: [**`SkillSpector`**](reviews/ru/developer-tools/skillspector.md) (тяжёлый цикл Docker/YARA) · [**`opentelemetry`**](reviews/ru/backend/opentelemetry.md) (`Collector + SigNoz/Grafana` для больших кластеров) · 👍 [**`REA`**](reviews/ru/developer-tools/rea.md) (для временного разбора чужих закрытых `.asar`/`.apk`/бинарников через [`rea`](skills/rea/SKILL.md) и `audit-release-exposure`).
+  - ✅ [**skillshare audit**](reviews/ru/developer-tools/skillshare.md) (проверка скиллов за `0.1с`) + [**security-audit**](reviews/ru/backend/security-audit-skill.md) (аудит исходников без Docker) + [**Shannon**](reviews/ru/backend/shannon.md) (живой пентест на staging) + [**sentry**](reviews/ru/backend/sentry.md) (ошибки + Replay + трейсы).
+  - ⚖️ Альтернативы: [**SkillSpector**](reviews/ru/developer-tools/skillspector.md) (тяжёлый цикл Docker/YARA) · [**opentelemetry**](reviews/ru/backend/opentelemetry.md) (`Collector + SigNoz/Grafana` для больших кластеров) · 👍 [**REA**](reviews/ru/developer-tools/rea.md) (для временного разбора чужих закрытых `.asar`/`.apk`/бинарников через [rea](skills/rea/SKILL.md) и `audit-release-exposure`).
 - **🧠 Локальные Модели и 🔌 Внешние API:**
-  - ✅ Мгновенные решения на сервере (`true/false` и `select`): [**`Jev (TypeSafe AI)`**](reviews/ru/external-apis/jev.md) (`~0.3с`, `$0.042/$0` со страховкой `<80%` и `timeout` — убирает `~9–12с` ожидания на `GPT-6 Luna Medium`) · Генерация текста/чат/OCR на бэкенде: [**`MiniMax M3.1 Flash API`**](reviews/ru/external-apis/minimax-m3-1-flash-api.md) (`$0.15/$0.60`, `170+ ток/с`) · Локальный кодер: **`Ollama` / `MLX` (`Qwen3-Coder`)** (`30–65 ток/с` в `32–64 GB` RAM на Mac).
-  - ⚠️ Не рекомендуется на рабочих ноутбуках: [**`kimi-k3-in-c`**](reviews/ru/local-models/kimi-k3-in-c.md) (`1 токен = ~30с`, `~50 TB` чтения с SSD) · [**`MiniMax-M3.1-Flash` *(Локально)* **](reviews/ru/local-models/minimax-m3-1-flash.md) (`285 GB` весов, нужно `640 GB VRAM`).
+  - ✅ Мгновенные решения на сервере (`true/false` и `select`): [**Jev (TypeSafe AI)**](reviews/ru/external-apis/jev.md) (`~0.3с`, `$0.042/$0` со страховкой `<80%` и `timeout` — убирает `~9–12с` ожидания на `GPT-6 Luna Medium`) · Генерация текста/чат/OCR на бэкенде: [**MiniMax M3.1 Flash API**](reviews/ru/external-apis/minimax-m3-1-flash-api.md) (`$0.15/$0.60`, `170+ ток/с`) · Локальный кодер: **`Ollama` / `MLX` (`Qwen3-Coder`)** (`30–65 ток/с` в `32–64 GB` RAM на Mac).
+  - ⚠️ Не рекомендуется на рабочих ноутбуках: [**kimi-k3-in-c**](reviews/ru/local-models/kimi-k3-in-c.md) (`1 токен = ~30с`, `~50 TB` чтения с SSD) · [**MiniMax-M3.1-Flash *(Локально)* **](reviews/ru/local-models/minimax-m3-1-flash.md) (`285 GB` весов, нужно `640 GB VRAM`).
 
 ---
 

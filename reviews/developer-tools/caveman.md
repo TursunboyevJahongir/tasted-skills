@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **8.0 / 10**
 - **Ishda kerak bo'lishi:** **3.5 / 10** *(qisqa javob va minimal kod vazifasini bizda faol `ponytail` allaqachon yopadi)*
 - **Tavsiya etilgan ko'lam:** `Faqat yakka SKILL.md (-p yoki on-demand /caveman)` — to'liq plugin/CLI o'rnatilmasin
-- **O'rniga ishlatiladigan tizim (Alternativa):** [**`ponytail`**](../architecture/ponytail.md) *(ham qisqa javob beradi, ham ortiqcha yoziladigan kod/diff hajmini kesadi)* + [**`karpathy-guidelines`**](../architecture/karpathy-guidelines.md) + [**`Orca`**](orca.md)
+- **O'rniga ishlatiladigan tizim (Alternativa):** [**ponytail**](../architecture/ponytail.md) *(ham qisqa javob beradi, ham ortiqcha yoziladigan kod/diff hajmini kesadi)* + [**karpathy-guidelines**](../architecture/karpathy-guidelines.md) + [**Orca**](orca.md)
 - **Tekshirilgan sana:** `2026-11-16`
 - **Joriy holati:** `👍 Yaxshi variant`
 
@@ -57,10 +57,10 @@
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi (Alternativa)
 
-- **Bizdagi asosiy alternativa — [**`ponytail`**](../architecture/ponytail.md) (`9.5/10`, `#3` faol global skill):**
+- **Bizdagi asosiy alternativa — [**ponytail**](../architecture/ponytail.md) (`9.5/10`, `#3` faol global skill):**
   - `caveman` faqat chatdagi gaplarni qisqartiradi, yozilayotgan kod hajmiga tegmaydi.
-  - [**`ponytail`**](../architecture/ponytail.md) esa bir vaqtning o'zida **ikki muammoni** hal qiladi: javobni band odam bir o'qishda tushunadigan qisqa shaklda ushlaydi **va** eng ko'p token yeydigan joyni — ortiqcha abstraksiya, wrapper va keraksiz kod yozilishini (YAGNI) kesadi.
-- Repo ichidagi qo'shimcha skillar (`surgical-patch`, `lean-build`, `cavecrew`) va `Auto` router esa bizda faol ishlayotgan [**`karpathy-guidelines`**](../architecture/karpathy-guidelines.md), [**`elephant-goldfish-model`**](../architecture/elephant-goldfish-model.md) hamda [**`Orca`**](orca.md) bilan to'liq qoplanadi.
+  - [**ponytail**](../architecture/ponytail.md) esa bir vaqtning o'zida **ikki muammoni** hal qiladi: javobni band odam bir o'qishda tushunadigan qisqa shaklda ushlaydi **va** eng ko'p token yeydigan joyni — ortiqcha abstraksiya, wrapper va keraksiz kod yozilishini (YAGNI) kesadi.
+- Repo ichidagi qo'shimcha skillar (`surgical-patch`, `lean-build`, `cavecrew`) va `Auto` router esa bizda faol ishlayotgan [**karpathy-guidelines**](../architecture/karpathy-guidelines.md), [**elephant-goldfish-model**](../architecture/elephant-goldfish-model.md) hamda [**Orca**](orca.md) bilan to'liq qoplanadi.
 
 ---
 
@@ -75,4 +75,4 @@
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | `v4.1.0` manba kodi (`SKILL.md`, `plugin.json`, `HONEST-NUMBERS.md`, `SECURITY.md`) va `skillshare audit` tekshiruvi | `👍 Yaxshi variant` | Yolg'iz `SKILL.md` sifatli (`8.0/10`), lekin CLI/proxy telemetriyasi keraksiz va kundalik ishimizda asosiy alternativa sifatida [**`ponytail`**](../architecture/ponytail.md) kuchliroq bo'lgani uchun global o'rnatilmadi. |
+| 2026-11-16 | `v4.1.0` manba kodi (`SKILL.md`, `plugin.json`, `HONEST-NUMBERS.md`, `SECURITY.md`) va `skillshare audit` tekshiruvi | `👍 Yaxshi variant` | Yolg'iz `SKILL.md` sifatli (`8.0/10`), lekin CLI/proxy telemetriyasi keraksiz va kundalik ishimizda asosiy alternativa sifatida [**ponytail**](../architecture/ponytail.md) kuchliroq bo'lgani uchun global o'rnatilmadi. |

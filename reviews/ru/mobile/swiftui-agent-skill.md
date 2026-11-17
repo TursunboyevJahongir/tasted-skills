@@ -8,7 +8,7 @@
 - **Оценка качества:** **8.5 / 10**
 - **Частота нужды в работе:** **3.0 / 10** *(наши основные мобильные приложения на React Native / Expo; нужен только локально `-p` для чистых SwiftUI-модулей)*
 - **Рекомендуемый масштаб:** `Только локально (-p)` *(строго в нативных Swift/SwiftUI-проектах)*
-- **Альтернатива у нас:** [**`impeccable`**](../ui-ux/impeccable.md) (`reference/ios.md` — для Apple HIG) + [**`animate-expo`**](animate-expo.md) (для Expo / RN)
+- **Альтернатива у нас:** [**impeccable**](../ui-ux/impeccable.md) (`reference/ios.md` — для Apple HIG) + [**animate-expo**](animate-expo.md) (для Expo / RN)
 - **Дата проверки:** `2026-11-16`
 - **Текущий статус:** `👍 Хороший вариант`
 
@@ -28,7 +28,7 @@
 ## 2. Почему не ставим глобально?
 
 - Наш основной мобильный стек — **Expo / React Native**, поэтому глобальный SwiftUI-скилл будет лишним грузом.
-- Правила Apple HIG уже встроены в наш [**`impeccable`**](../ui-ux/impeccable.md) (`reference/ios.md` и `audit.native.md`).
+- Правила Apple HIG уже встроены в наш [**impeccable**](../ui-ux/impeccable.md) (`reference/ios.md` и `audit.native.md`).
 - **Когда пригодится:** Подключать `twostraws/swiftui-agent-skill` локально (`-p`) только при разработке нативных SwiftUI-модулей (iOS Widgets, Live Activities / Dynamic Island или watchOS).
 
 ---

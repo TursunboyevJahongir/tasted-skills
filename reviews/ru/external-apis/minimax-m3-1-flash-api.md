@@ -2,7 +2,7 @@
 
 [🇺🇿 O'zbekcha](../../external-apis/minimax-m3-1-flash-api.md) | [🇬🇧 English](../../en/external-apis/minimax-m3-1-flash-api.md) | **🇷🇺 Русский**
 
-- **Источник:** [MiniMax Platform](https://www.minimax.io/) · [OpenRouter (`minimax/minimax-m3.1-flash`)](https://openrouter.ai/minimax/minimax-m3.1-flash)
+- **Источник:** [MiniMax Platform](https://www.minimax.io/) · [OpenRouter (minimax/minimax-m3.1-flash)](https://openrouter.ai/minimax/minimax-m3.1-flash)
 - **Статистика и бенчмарки:** [OpenRouter Live Stats & Throughput](https://openrouter.ai/minimax/minimax-m3.1-flash) · [Hugging Face Benchmarks](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [Artificial Analysis Leaderboard](https://artificialanalysis.ai/leaderboards/models)
 - **Категория:** `Внешние API` *(Дешёвый облачный мультимодальный LLM API для бэкенда продуктов, ботов и автоматизации)*
 - **Тип:** `External Cloud API` *(`1M` контекст, `текст + фото + видео`, OpenAI/Anthropic-совместимый REST API)*

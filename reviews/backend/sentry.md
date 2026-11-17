@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **9.5 / 10**
 - **Ishda kerak bo'lishi:** **9.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)` *(AI navigatsiya skilli / MCP orqali barcha loyihalar uchun)*
-- **Muqobil tizim bilan bog'liqlik:** [**`opentelemetry`**](opentelemetry.md) *(Sentry v8+ SDK kapot ostida OTel ustiga qurilgan)*
+- **Muqobil tizim bilan bog'liqlik:** [**opentelemetry**](opentelemetry.md) *(Sentry v8+ SDK kapot ostida OTel ustiga qurilgan)*
 - **Ishlatilayotgan sana:** `2026-07-08` dan
 - **Joriy holati:** `✅ Ishlatyapman` *(Backend, Web va iOS/Android ilovalarda asosiy xato, trace va replay tahlil tizimi)*
 
@@ -31,12 +31,12 @@ Web (`React`, `Next.js`), Mobile (`iOS`, `Android`, `React Native / Expo`) va Ba
 ## 2. Qanchalik yaxshi va qanchalik yomon? (`OpenTelemetry` bilan solishtiruv)
 
 ### Kuchli tomonlari (Sentry nimada ustun?)
-- **Kod va foydalanuvchi markazli tashxis (`Application-centric`):** Crash va exception'larni deduplikatsiya qilish, `Release` regressiyasini ushlash, mobil `dSYM`/`ProGuard` o'qish va `Breadcrumbs` berishda toza [`opentelemetry`](opentelemetry.md) stekidan ancha ustun.
+- **Kod va foydalanuvchi markazli tashxis (`Application-centric`):** Crash va exception'larni deduplikatsiya qilish, `Release` regressiyasini ushlash, mobil `dSYM`/`ProGuard` o'qish va `Breadcrumbs` berishda toza [opentelemetry](opentelemetry.md) stekidan ancha ustun.
 - **`Session Replay` bitta qutida:** Alohida uchinchi tomon replay servisi ko'tarmasdan, xato bilan foydalanuvchi ekran harakatini bitta sahifada bog'laydi (OpenTelemetry'da Session Replay umuman yo'q).
 - **Qo'shimcha stek ko'tarish shart emas:** Xatolar, bazaviy trace'lar va web replay uchun bitta self-hosted platformaning o'zi yetarli.
 
 ### Zaif tomonlari va cheklovlari
-- **Server va infratuzilma monitoringi emas:** Server CPU/RAM/Disk holati, konteyner resurslari, DB connection pool to'lishi va katta hajmdagi xom server loglarini (`stdout`) tahlil qilishda [`opentelemetry`](opentelemetry.md) (+ `Grafana` / `SigNoz`) kuchliroq.
+- **Server va infratuzilma monitoringi emas:** Server CPU/RAM/Disk holati, konteyner resurslari, DB connection pool to'lishi va katta hajmdagi xom server loglarini (`stdout`) tahlil qilishda [opentelemetry](opentelemetry.md) (+ `Grafana` / `SigNoz`) kuchliroq.
 - Agar `Session Replay` va `Tracing` (`1.0` / `100%`) barcha sessiyalar uchun cheklovsiz yoqib yuborilsa, self-hosted server diskini tez to'ldiradi.
 
 ---
@@ -55,10 +55,10 @@ Web (`React`, `Next.js`), Mobile (`iOS`, `Android`, `React Native / Expo`) va Ba
 
 ---
 
-## 4. Bizga qanchalik kerak va [`opentelemetry`](opentelemetry.md) bilan nisbati
+## 4. Bizga qanchalik kerak va [opentelemetry](opentelemetry.md) bilan nisbati
 
 - Bizda Web, Mobile (`iOS` / `Android`) va Backend servislar yonma-yon ishlagani uchun **ikkisidan bittasi sifatida `Sentry` asosiy platforma qilib tanlangan**: u xato guruhlash, mobil crash tahlili, `Breadcrumbs`, `Session Replay` va `v8+` OTel-trace'larni bitta joyda yopadi.
-- Shu sababli alohida [`opentelemetry`](opentelemetry.md) (`Collector + Grafana/SigNoz`) stekini parallel ko'tarishga hozir ehtiyoj yo'q (u faqat chuqur server/DB infratuzilma metrikalari va markazlashgan log bazasi kerak bo'lgandagina qo'shiladi).
+- Shu sababli alohida [opentelemetry](opentelemetry.md) (`Collector + Grafana/SigNoz`) stekini parallel ko'tarishga hozir ehtiyoj yo'q (u faqat chuqur server/DB infratuzilma metrikalari va markazlashgan log bazasi kerak bo'lgandagina qo'shiladi).
 
 ---
 

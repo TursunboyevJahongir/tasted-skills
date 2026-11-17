@@ -4,7 +4,7 @@
 
 ⬅️ [Practices Mundarijasiga qaytish](README.md)
 
-- **Birlashtiriladigan vositalar:** [**`Orca`**](../reviews/developer-tools/orca.md) + `task-context` + CLI Subagentlar (`antigravity-claude`, `argon`, `claude-opus`, `antigravity-consult`) + [**`elephant-goldfish-model`**](../reviews/architecture/elephant-goldfish-model.md)
+- **Birlashtiriladigan vositalar:** [**Orca**](../reviews/developer-tools/orca.md) + `task-context` + CLI Subagentlar (`antigravity-claude`, `argon`, `claude-opus`, `antigravity-consult`) + [**elephant-goldfish-model**](../reviews/architecture/elephant-goldfish-model.md)
 - **Qo'llaniladigan vazifalar:** Katta fiychalar, parallel branch/worktree ishlari, bir model kvotasi tugaganda ishni boshqa modelga uzatish va chuqur kod/arxitektura tekshiruvi.
 
 ---
@@ -27,7 +27,7 @@ Ikki xil tekshiruvni adashtirmaslik kerak — har birining o'z o'rni bor:
 | Vaziyat | Qaysi bog'lama ishlatiladi? | Nima uchun? |
 |---|---|---|
 | **Yozilgan kod/diff'ni va biznes-talabga moslikni tekshirish** | `task-context` + **`argon` / `antigravity-claude` / `claude-opus`** (`Orca` CLI subagent) | Reviewer foydalanuvchi aslida nima so'raganini va nima uchun shu yo'l tanlanganini (`task-context`) bilishi, lekin kodni boshqa model ko'zi bilan tekshirishi kerak (*"Codex yozdi -> Argon/Claude tekshirdi"*). |
-| **Arxitektura rejasi, yangi dizayn hujjati yoki Hujjat-Kod uzilishini tekshirish** | [**`elephant-goldfish-model`**](../reviews/architecture/elephant-goldfish-model.md) (`egm-review`, `egm-drift-report`) | Bu yerda suhbat tarixi **zarar beradi** — xotirasiz *Goldfish* subagentlar oldingi bahslarni ko'rmasdan, hujjat yoki kodni noldan o'qib, yashirin taxmin va xatolarni ayovsiz topadi. |
+| **Arxitektura rejasi, yangi dizayn hujjati yoki Hujjat-Kod uzilishini tekshirish** | [**elephant-goldfish-model**](../reviews/architecture/elephant-goldfish-model.md) (`egm-review`, `egm-drift-report`) | Bu yerda suhbat tarixi **zarar beradi** — xotirasiz *Goldfish* subagentlar oldingi bahslarni ko'rmasdan, hujjat yoki kodni noldan o'qib, yashirin taxmin va xatolarni ayovsiz topadi. |
 
 ---
 
@@ -39,7 +39,7 @@ Agar tizimda *"tezlikni oshirsak ma'lumot aniqligi tushadi, aniqlikni oshirsak t
 
 ### 2) Notanish yoki hujjatsiz reponi 10 daqiqada xaritaga tushirish (`graphify` + `egm-bootstrap`)
 Yangi yoki eski hujjatsiz loyihaga kirganda:
-1. Avval [**`graphify`**](../reviews/architecture/graphify.md) bilan lokal AST-graf (`graph.json`) quriladi;
+1. Avval [**graphify**](../reviews/architecture/graphify.md) bilan lokal AST-graf (`graph.json`) quriladi;
 2. Ketidan `egm-bootstrap` ishga tushirilib, har bir modul va papka uchun haqiqiy kodga asoslangan aniq `README.md` / arxitektura shartnomalari avtomatik yozdiriladi.
 
 ### 3) Kvota tugaganda yoki model tiqilib qolganda "Estafeta" uzatish (`task-context`)
@@ -47,4 +47,4 @@ Agar bitta model murakkab bug'da aylanib qolsa yoki sessiya limiti tugasa:
 - Yangi agentga shunchaki *"task-context papkasini o'qi va qolgan joyidan davom et"* deyish kifoya — u barcha oldingi qarorlar va o'zgargan fayllarni 5 soniyada tushunib oladi.
 
 ### 4) Parallel Git Worktree'larda 2–3 ta fiycha ustida baravar ishlash (`Orca` + `agent-device`)
-- `Orca` har bir vazifani alohida git worktree'da ochadi, [**`agent-device`**](../reviews/mobile/agent-device.md) va [**`simslim`**](../reviews/mobile/simslim.md) esa worktree'lar o'rtasida simulyator sessiyalari urishib ketmasligini ta'minlaydi.
+- `Orca` har bir vazifani alohida git worktree'da ochadi, [**agent-device**](../reviews/mobile/agent-device.md) va [**simslim**](../reviews/mobile/simslim.md) esa worktree'lar o'rtasida simulyator sessiyalari urishib ketmasligini ta'minlaydi.

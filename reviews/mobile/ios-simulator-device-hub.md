@@ -2,7 +2,7 @@
 
 **🇺🇿 O'zbekcha** | [🇬🇧 English](../en/mobile/ios-simulator-device-hub.md) | [🇷🇺 Русский](../ru/mobile/ios-simulator-device-hub.md)
 
-- **Manba:** [Apple Xcode Command Line & Simulator Tools (`simctl` / `devicectl`)](https://developer.apple.com/documentation/xcode/interacting-with-simulator-from-the-command-line)
+- **Manba:** [Apple Xcode Command Line & Simulator Tools (simctl / devicectl)](https://developer.apple.com/documentation/xcode/interacting-with-simulator-from-the-command-line)
 - **Turkum:** `Mobile` *(iOS Simulator va haqiqiy iPhone/iPad ilovalarini boshqarish)*
 - **Turi:** `CLI + macOS App Bridge` (`Xcode.app` tarkibida)
 - **Sifat bahosi:** **9.0 / 10**
@@ -56,15 +56,15 @@ macOS'da iOS va Expo / React Native ilovalarini fonda ishga tushirish, boshqaris
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
-- **`xcrun simctl` va `devicectl`:** [`agent-device`](agent-device.md) hamda [`cross-platform-qa`](cross-platform-qa.md) uchun asosiy iOS/tvOS poydevor (simulyatorni oynasiz `boot`/`shutdown` qilish, `privacy` ruxsatlari va real iPhone'da ilova o'rnatish).
-- **Xcode `Device Hub` + `agent-desktop`:** endi **zaxira (`fallback`)** vazifasini bajaradi — chunki u ekranda GUI oyna ochiq turishini talab qiladi, [`agent-device`](agent-device.md) esa oynasiz fonda `~197ms` da ishlaydi.
+- **`xcrun simctl` va `devicectl`:** [agent-device](agent-device.md) hamda [cross-platform-qa](cross-platform-qa.md) uchun asosiy iOS/tvOS poydevor (simulyatorni oynasiz `boot`/`shutdown` qilish, `privacy` ruxsatlari va real iPhone'da ilova o'rnatish).
+- **Xcode `Device Hub` + `agent-desktop`:** endi **zaxira (`fallback`)** vazifasini bajaradi — chunki u ekranda GUI oyna ochiq turishini talab qiladi, [agent-device](agent-device.md) esa oynasiz fonda `~197ms` da ishlaydi.
 
 ---
 
 ## 5. Qaysi yo'nalish va vazifalarda foydali?
 
 - **Qachon ishlatish kerak:** `xcrun simctl` orqali simulyatorni oynasiz yoqish/yopish, deep-link/ruxsatlarni boshqarish, `devicectl` orqali real iPhone/iPad'ga build uzatish hamda `agent-device` ishlamagan paytda `Device Hub` zaxirasi sifatida.
-- **Qachon ishlatmaslik kerak:** Odatiy kundalik iOS/tvOS UI elementlarini bosish va tekshirishda (u yerda [`agent-device`](agent-device.md) asosiy vosita).
+- **Qachon ishlatmaslik kerak:** Odatiy kundalik iOS/tvOS UI elementlarini bosish va tekshirishda (u yerda [agent-device](agent-device.md) asosiy vosita).
 
 ---
 

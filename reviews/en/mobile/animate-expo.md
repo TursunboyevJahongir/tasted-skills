@@ -2,7 +2,7 @@
 
 [🇺🇿 O'zbekcha](../../mobile/animate-expo.md) | **🇬🇧 English** | [🇷🇺 Русский](../../ru/mobile/animate-expo.md)
 
-- **Source:** [emilkowalski/skills (`skills/animate-expo`)](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo)
+- **Source:** [emilkowalski/skills (skills/animate-expo)](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo)
 - **Category:** `Mobile` *(React Native, Expo, Reanimated, Gesture Handler & Haptics)*
 - **Type:** `Skill` *(`SKILL.md` + `RECIPES.md` + local `LOCAL-COMPATIBILITY.md` guard)*
 - **Quality Score:** **9.5 / 10**
@@ -34,7 +34,7 @@ Core decision sequence (executed in strict order):
 ### Strengths
 - Eliminates the classic mobile failure mode where an animation looks smooth in the simulator but drops to 20fps on a mid-range Android phone (`Yoga layout pass`, per-frame `runOnJS/scheduleOnRN`, animated `BlurView`).
 - `RECIPES.md` provides solid patterns for press-scale, drag-to-dismiss sheets, swipe-to-delete, collapsing headers, and keyboard-synced views.
-- Paired with `LOCAL-COMPATIBILITY.md` so [`impeccable`](../ui-ux/impeccable.md) owns overall visual hierarchy/layout while `animate-expo` implements specific React Native motion and gestures.
+- Paired with `LOCAL-COMPATIBILITY.md` so [impeccable](../ui-ux/impeccable.md) owns overall visual hierarchy/layout while `animate-expo` implements specific React Native motion and gestures.
 
 ### Weaknesses and Cost
 - Upstream recipes assume Expo Router and Reanimated 4 everywhere — mitigated by our `LOCAL-COMPATIBILITY.md` guard, which forbids unrequested framework migrations or dependency upgrades.
@@ -46,7 +46,7 @@ Core decision sequence (executed in strict order):
 - **Risk Level:** `Low`
 - **Applied sanitization & compatibility fixes:**
   1. **Stripped `## Initial Response` greeting block:** Removed the forced *"I'm ready to build animations..."* reply.
-  2. **Updated web animation pointer:** Pointed web motion references in `SKILL.md` to [`impeccable`](../ui-ux/impeccable.md) instead of the uninstalled `animate` skill.
+  2. **Updated web animation pointer:** Pointed web motion references in `SKILL.md` to [impeccable](../ui-ux/impeccable.md) instead of the uninstalled `animate` skill.
   3. **Preserved `LOCAL-COMPATIBILITY.md` guard:** Enforces `reduced-motion` handling and prevents unrequested `package.json` architecture changes.
 
 ---
@@ -55,7 +55,7 @@ Core decision sequence (executed in strict order):
 
 - **`impeccable` + `animate-expo` + `web-to-native-mobile`** form our clean native mobile triad:
   - `web-to-native-mobile` decides how web workflows adapt to native iOS/Android;
-  - [`impeccable`](../ui-ux/impeccable.md) owns visual design, typography, and layout hierarchy;
+  - [impeccable](../ui-ux/impeccable.md) owns visual design, typography, and layout hierarchy;
   - `animate-expo` writes the Reanimated worklets, gestures, sheets, and haptics.
 
 ---
@@ -63,7 +63,7 @@ Core decision sequence (executed in strict order):
 ## 5. When to Use (and When Not To)
 
 - **When to use:** Bottom sheets, floating map panels, swipeable cards, button press-in/press-out feedback, haptics, and 60/120fps frame-budget fixes in Expo / React Native apps.
-- **When not to use:** Web CSS animations (use [`impeccable`](../ui-ux/impeccable.md)'s `animate` playbook instead).
+- **When not to use:** Web CSS animations (use [impeccable](../ui-ux/impeccable.md)'s `animate` playbook instead).
 
 ---
 

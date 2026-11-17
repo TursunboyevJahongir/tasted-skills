@@ -34,7 +34,7 @@ Created by Matt Pocock, this lightweight yet powerful skill stress-tests a plan 
 - Prevents wasted hours coding against half-baked requirements.
 
 ### Weaknesses & Limitations
-- Operates as a 1-on-1 interview within a single session (when a large technical spec needs stateless multi-agent critique, pair it with [`elephant-goldfish-model`](elephant-goldfish-model.md)).
+- Operates as a 1-on-1 interview within a single session (when a large technical spec needs stateless multi-agent critique, pair it with [elephant-goldfish-model](elephant-goldfish-model.md)).
 
 ---
 
@@ -47,7 +47,7 @@ Created by Matt Pocock, this lightweight yet powerful skill stress-tests a plan 
 
 ## 4. Relevance & Compatibility with Our Existing Tools
 
-- Serves as the interactive, deep-dive counterpart to [`karpathy-guidelines`](karpathy-guidelines.md) (*Think Before Coding*).
+- Serves as the interactive, deep-dive counterpart to [karpathy-guidelines](karpathy-guidelines.md) (*Think Before Coding*).
 - Works seamlessly with `domain-modeling` and `task-context`: `grill-me` resolves design decisions, and `task-context` persists them for implementer and reviewer subagents.
 
 ### Additional Skills Adopted from `mattpocock/skills` (`2026-11-16`)

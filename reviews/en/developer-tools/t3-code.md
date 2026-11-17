@@ -8,9 +8,8 @@
 - **Quality Score:** **8.5 / 10**
 - **How Often Needed:** **2.5 / 10**
 - **Recommended Scope:** `Skip (Uninstalled)`
-- **Instead Use (Alternative):** [**`Orca` (`stablyai/orca`)**](orca.md)
 - **Used Dates:** `2026-10-23 → 2026-11-16`
-- **Current Status:** `🔄 Better Alternative` *(retired and uninstalled in favor of `Orca` due to mobile beta disconnects, lock-screen sleep drops, and `Orca`'s built-in multi-agent orchestration)*
+- 🔄 **Better Alternative:** [Orca](orca.md) *(retired in favor of `Orca` due to mobile beta disconnects & Lock Screen drops)*
 
 ---
 
@@ -38,8 +37,8 @@ It enables combining multiple independent AI models on a single task. For exampl
 
 ### Weaknesses and Why We Switched to `Orca`
 - **Mobile app instability (Beta):** Frequently disconnects when the phone screen locks or switches networks, requiring manual re-pairing.
-- **Fails when Mac is on Lock Screen:** Drops sessions when the workstation screen locks (whereas [**`Orca`**](orca.md) includes built-in `caffeinate -i -s` and a background PTY daemon).
-- **No native inline multi-agent worker cards:** [**`Orca`**](orca.md) spawns and tracks `Claude`, `Codex`, and `Antigravity` workers directly inside Chat UI from a single prompt via `orca orchestration worker-start` (`841 MB` RAM vs `T3 Code`'s `~1.1–1.4 GB` RAM + `~3.87 GB` `~/.t3` cache).
+- **Fails when Mac is on Lock Screen:** Drops sessions when the workstation screen locks (whereas [**Orca**](orca.md) includes built-in `caffeinate -i -s` and a background PTY daemon).
+- **No native inline multi-agent worker cards:** [**Orca**](orca.md) spawns and tracks `Claude`, `Codex`, and `Antigravity` workers directly inside Chat UI from a single prompt via `orca orchestration worker-start` (`841 MB` RAM vs `T3 Code`'s `~1.1–1.4 GB` RAM + `~3.87 GB` `~/.t3` cache).
 
 ---
 
@@ -71,4 +70,4 @@ Works seamlessly alongside our global `task-context`, `antigravity-claude`, `ant
 | Date | Action | Status | Notes |
 |---|---|---|---|
 | 2026-10-23 | Installed `T3 Code` desktop app + unified CLI subagent review skills (`2026-10-31`) | `✅ Using` | Desktop app and CLI subagent bridge (Codex ↔ Claude ↔ Antigravity) used daily. |
-| 2026-11-16 | Benchmarked live against [**`Orca` (`stablyai/orca`)**](orca.md) and uninstalled `T3 Code` (`~3.87 GB` reclaimed) | `🔄 Better Alternative` | Switched completely to `Orca` for stable mobile pairing, Lock-Screen (`caffeinate`) support, and native single-prompt multi-agent orchestration. |
+| 2026-11-16 | Benchmarked live against [**Orca (stablyai/orca)**](orca.md) and uninstalled `T3 Code` (`~3.87 GB` reclaimed) | 🔄 **Better Alternative:** [Orca](orca.md) | Switched completely to `Orca` for stable mobile pairing, Lock-Screen (`caffeinate`) support, and native single-prompt multi-agent orchestration. |

@@ -9,7 +9,7 @@
 - **Ishda kerak bo'lishi:** **X.X / 10**
 - **Tavsiya etilgan ko'lam:** `Global (-g)` | `Faqat alohida loyihaga (-p)` | `Plugin` | `Standalone Tool` | `O'rnatmaslik`
 - **Tekshirilgan sana:** `YYYY-MM-DD`
-- **Joriy holati:** `✅ Ishlatyapman` | `👍 Yaxshi variant` | `🔄 Alternativi yaxshiroq` | `⚠️ Tavsiya etilmaydi`
+- **Joriy holati:** `✅ Ishlatyapman` | `👍 Yaxshi variant` | 🔄 **Alternativi yaxshiroq:** [nomi](...) | `⚠️ Tavsiya etilmaydi`
 
 ---
 

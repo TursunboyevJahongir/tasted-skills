@@ -29,7 +29,7 @@ A CLI tool that manages and distributes skills, agents, hooks, plugins, and MCP 
 
 ### Strengths
 - Eliminates manual copy-pasting and version drift across `~/.claude`, `~/.codex`, `~/.agents`, and `~/.gemini`.
-- **Built-in Skill-Check (`audit`) + backup/trash recovery:** Combining `skillshare audit` with direct AI-agent source-code inspection covers daily security vetting cleanly without needing heavy standalone Python/LLM scanners like [`SkillSpector`](skillspector.md).
+- **Built-in Skill-Check (`audit`) + backup/trash recovery:** Combining `skillshare audit` with direct AI-agent source-code inspection covers daily security vetting cleanly without needing heavy standalone Python/LLM scanners like [SkillSpector](skillspector.md).
 
 ### Weaknesses and Limitations
 - Interactive commands must be invoked with `--no-tui` or `--json` when called from non-interactive agent shells so they do not hang waiting for TUI input.

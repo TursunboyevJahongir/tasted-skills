@@ -8,7 +8,7 @@
 - **Оценка качества:** **9.0 / 10**
 - **Частота нужды в работе:** **7.5 / 10**
 - **Рекомендуемый масштаб:** `Global CLI (Homebrew)` — разово применяется ко всем локальным симуляторам `iOS 18.5+` / `tvOS` с безопасным профилем
-- **Работает в связке с:** [**`agent-device`**](agent-device.md) + [**`xcrun simctl`**](ios-simulator-device-hub.md) + [**`cross-platform-qa`**](cross-platform-qa.md) *(примечание: закрытое приложение `MobAI Pro` / `mobai-mcp` не нужно — управление UI полностью закрывает `agent-device`)*
+- **Работает в связке с:** [**agent-device**](agent-device.md) + [**xcrun simctl**](ios-simulator-device-hub.md) + [**cross-platform-qa**](cross-platform-qa.md) *(примечание: закрытое приложение `MobAI Pro` / `mobai-mcp` не нужно — управление UI полностью закрывает `agent-device`)*
 - **Используется с:** `2026-11-16`
 - **Текущий статус:** `✅ Использую`
 
@@ -29,7 +29,7 @@
 
 ### A. Влияние на AI и QA-инструменты — `0%` помех
 - Нет MCP-сервера, авто-скилла или фонового процесса — расход контекста в чате **`0 токенов`**.
-- Аудит `profiles.go` подтвердил, что `com.apple.gamed` (`DTServiceHub`) и `com.apple.sharingd` жёстко защищены в списке `AlwaysEnabled` (*`"Required for timely XCUITest app launches"`*) — фоновый XCUITest-раннер [**`agent-device`**](agent-device.md) (`~197 ms`) работает без единого сбоя.
+- Аудит `profiles.go` подтвердил, что `com.apple.gamed` (`DTServiceHub`) и `com.apple.sharingd` жёстко защищены в списке `AlwaysEnabled` (*`"Required for timely XCUITest app launches"`*) — фоновый XCUITest-раннер [**agent-device**](agent-device.md) (`~197 ms`) работает без единого сбоя.
 
 ### B. Влияние на мобильные и TV-приложения (Что работает сразу и что важно оставить)
 - **Службы, которые никогда не отключаются (работают на 100%):**
@@ -75,7 +75,7 @@ simslim doctor <UDID> --requires push,universal-links,photos,spotlight
 - **Проверенные точки (`go.mod`, `profiles.go`, `slim.go`):**
   - Всего 4 TUI/CLI-зависимости (`bubbletea`, `lipgloss`, `go-isatty`, `urfave/cli`), полное отсутствие `net/http` и телеметрии.
   - После `simctl erase` или создания нового симулятора настройки сбрасываются к `stock` — достаточно проверить `simslim verify <UDID>` или повторить `simslim on`.
-  - Устанавливать проприетарный **`MobAI Pro` (`mobai-mcp`)** из демо-роликов не нужно — бесплатный [**`agent-device`**](agent-device.md) закрывает всё управление UI.
+  - Устанавливать проприетарный **`MobAI Pro` (`mobai-mcp`)** из демо-роликов не нужно — бесплатный [**agent-device**](agent-device.md) закрывает всё управление UI.
 
 ---
 

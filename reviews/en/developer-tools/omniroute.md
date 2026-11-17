@@ -59,8 +59,8 @@ Although often shared as an "AI coding skill", inspecting the `v3.8.54` reposito
 ## 4. Fit & Compatibility with Our Existing Stack
 
 - **Redundant and counterproductive for our setup:**
-  - Multi-agent collaboration and cross-model verification are already handled cleanly by [**`Orca`**](orca.md) across native `Antigravity`, `Codex`, and `Claude` harnesses with full prompt caching and zero TLS-proxy ban risk (`Antigravity` does not route through external `OPENAI_BASE_URL` proxies anyway).
-  - Token efficiency is already handled safely without mutating compiler/test logs via [**`ponytail`**](../architecture/ponytail.md) and [**`graphify`**](../architecture/graphify.md).
+  - Multi-agent collaboration and cross-model verification are already handled cleanly by [**Orca**](orca.md) across native `Antigravity`, `Codex`, and `Claude` harnesses with full prompt caching and zero TLS-proxy ban risk (`Antigravity` does not route through external `OPENAI_BASE_URL` proxies anyway).
+  - Token efficiency is already handled safely without mutating compiler/test logs via [**ponytail**](../architecture/ponytail.md) and [**graphify**](../architecture/graphify.md).
 
 ---
 

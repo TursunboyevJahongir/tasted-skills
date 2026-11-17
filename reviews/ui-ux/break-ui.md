@@ -2,15 +2,14 @@
 
 **🇺🇿 O'zbekcha** | [🇬🇧 English](../en/ui-ux/break-ui.md) | [🇷🇺 Русский](../ru/ui-ux/break-ui.md)
 
-- **Manba:** [emilkowalski/skills — `skills/break-ui`](https://github.com/emilkowalski/skills/tree/main/skills/break-ui)
+- **Manba:** [emilkowalski/skills — skills/break-ui](https://github.com/emilkowalski/skills/tree/main/skills/break-ui)
 - **Turkum:** `UI/UX` *(UI chekka holatlari / Edge-case data sinovi)*
 - **Turi:** `Skill` *(`SKILL.md` + `CATALOG.md`, ~312 qator)*
 - **Sifat bahosi:** **8.0 / 10**
 - **Ishda kerak bo'lishi:** **3.0 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
-- **O'rniga ishlatiladigan muqobil:** [**`impeccable`**](impeccable.md) (`harden` bo'limi — `reference/harden.md`)
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `🔄 Alternativi yaxshiroq`
+- 🔄 **Alternativi yaxshiroq:** [impeccable](impeccable.md) (`harden` — `reference/harden.md`)
 
 ---
 
@@ -33,8 +32,8 @@ UI komponentlarni ideal demo ma'lumotlar (`"Jane Doe"`) o'rniga real hayotdagi e
 - `min-width: 0`, `flex-shrink: 0`, `overflow-wrap: anywhere`, `tabular-nums`, `Intl.Segmenter` va `Intl.PluralRules` bo'yicha aniq CSS/JS yechimlari bor.
 
 ### Zaif tomonlari va konflikt sabablari
-1. **[`impeccable`](impeccable.md) (`harden`) bilan to'qnashuv:** `impeccable` ning `reference/harden.md` bo'limi allaqachon uzun/qisqa matnlar, `min-width: 0`, `line-clamp`, `RTL`, tarjima kengayishi (+30–40%), `Intl` formatlash, bo'sh holatlar va ustiga-ustak **tarmoq/API xatolik holatlarini** ham tekshirib, to'g'ridan-to'g'ri tuzatib beradi.
-2. **Loyiha kodiga keraksiz fixture va toggle qo'shishi:** Skill kod bazasiga yangi worst-case fixture fayli va ekran ostiga `Demo / Worst case` tugmasini qo'shib, fixture'ni repoda qoldirishni buyuradi. Bu yangi test fixture qo'shish taqiqlangan frontend loyihalarimiz qoidasiga hamda [`ponytail`](../architecture/ponytail.md) / [`karpathy-guidelines`](../architecture/karpathy-guidelines.md) tamoyillariga zid.
+1. **[impeccable](impeccable.md) (`harden`) bilan to'qnashuv:** `impeccable` ning `reference/harden.md` bo'limi allaqachon uzun/qisqa matnlar, `min-width: 0`, `line-clamp`, `RTL`, tarjima kengayishi (+30–40%), `Intl` formatlash, bo'sh holatlar va ustiga-ustak **tarmoq/API xatolik holatlarini** ham tekshirib, to'g'ridan-to'g'ri tuzatib beradi.
+2. **Loyiha kodiga keraksiz fixture va toggle qo'shishi:** Skill kod bazasiga yangi worst-case fixture fayli va ekran ostiga `Demo / Worst case` tugmasini qo'shib, fixture'ni repoda qoldirishni buyuradi. Bu yangi test fixture qo'shish taqiqlangan frontend loyihalarimiz qoidasiga hamda [ponytail](../architecture/ponytail.md) / [karpathy-guidelines](../architecture/karpathy-guidelines.md) tamoyillariga zid.
 3. **Ikki bosqichli to'xtab qolish va uzun hisobot:** Muammoni ko'rib turib darhol tuzatish o'rniga 3 qismli hisobot yozib `fix all` buyrug'ini kutib o'tiradi.
 
 ---
@@ -48,13 +47,13 @@ UI komponentlarni ideal demo ma'lumotlar (`"Jane Doe"`) o'rniga real hayotdagi e
 
 ## 4. O'rniga nima ishlatiladi?
 
-- **O'rniga:** [**`impeccable`**](impeccable.md) (`harden [target]` buyrug'i / `reference/harden.md`) — ortiqcha demo-toggle yoki fixture fayl yaratmasdan, komponentning CSS overflow, i18n, pluralization va API/offline xatolik holatlarini birdaniga mustahkamlaydi.
+- **O'rniga:** [**impeccable**](impeccable.md) (`harden [target]` buyrug'i / `reference/harden.md`) — ortiqcha demo-toggle yoki fixture fayl yaratmasdan, komponentning CSS overflow, i18n, pluralization va API/offline xatolik holatlarini birdaniga mustahkamlaydi.
 
 ---
 
 ## 5. Qaysi yo'nalish va vazifalarda foydali?
 
-- **Qachon ishlatish kerak:** Global o'rnatmaslik — o'rniga [`impeccable`](impeccable.md) (`harden`) ishlatiladi.
+- **Qachon ishlatish kerak:** Global o'rnatmaslik — o'rniga [impeccable](impeccable.md) (`harden`) ishlatiladi.
 
 ---
 
@@ -62,4 +61,4 @@ UI komponentlarni ideal demo ma'lumotlar (`"Jane Doe"`) o'rniga real hayotdagi e
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | GitHub `SKILL.md` + `CATALOG.md` va konflikt auditi | `🔄 Alternativi yaxshiroq` | [`impeccable`](impeccable.md) (`harden`) bu vazifani toza bajarishi va `break-ui` repoga ortiqcha fixture/toggle qo'shishi sababli o'tkazib yuborildi. |
+| 2026-11-15 | GitHub `SKILL.md` + `CATALOG.md` va konflikt auditi | 🔄 **Alternativi yaxshiroq:** [impeccable](impeccable.md) | [impeccable](impeccable.md) (`harden`) bu vazifani toza bajarishi va `break-ui` repoga ortiqcha fixture/toggle qo'shishi sababli o'tkazib yuborildi. |

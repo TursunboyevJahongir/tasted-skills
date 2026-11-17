@@ -8,7 +8,7 @@
 - **Quality Score:** **8.5 / 10**
 - **How Often Needed:** **2.5 / 10** *(Android-only, slow per step, and requires separate paid LLM API keys)*
 - **Recommended Scope:** `Standalone CLI/SDK only (uv run artemis)` — do not install as a global MCP server
-- **Instead Use (Alternative):** [**`agent-device`**](agent-device.md) *(`$0` extra API cost, `iOS + Android + tvOS + Android TV`, `197–888 ms` per action)* + [**`adb`**](adb.md)
+- **Instead Use (Alternative):** [**agent-device**](agent-device.md) *(`$0` extra API cost, `iOS + Android + tvOS + Android TV`, `197–888 ms` per action)* + [**adb**](adb.md)
 - **Reviewed Date:** `2026-11-16`
 - **Current Status:** `👍 Good Option`
 
@@ -37,9 +37,9 @@ Provides two execution profiles across four interfaces (`Web Console localhost:8
 - **💸 PAID at runtime ("Free & open-source" social demos are misleading):**
   - While the `Apache-2.0` repository code is free, **running ARTEMIS is paid**.
   - It cannot piggyback on your existing `Claude Pro/Max`, `ChatGPT`, or `Antigravity` IDE subscription: `.env` **requires a separate billed per-token LLM API key** (`GEMINI_API_KEY`, `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `OPEN_ROUTER_API_KEY`, or `XAI_API_KEY`, plus an optional paid Google Cloud Vision `OCR_API_KEY`).
-  - Because it runs an "agent-inside-an-agent" loop (`Planner`, `Operator`, `Explorer`, `Checker`, `Video Analyzer`) that sends device screenshots (multimodal image tokens) and XML trees on every step, multi-step `Pro` runs burn substantial API credits (whereas our active [**`agent-device`**](agent-device.md) costs **`$0` extra API fees** and ~100 text tokens per snapshot inside your existing coding agent).
+  - Because it runs an "agent-inside-an-agent" loop (`Planner`, `Operator`, `Explorer`, `Checker`, `Video Analyzer`) that sends device screenshots (multimodal image tokens) and XML trees on every step, multi-step `Pro` runs burn substantial API credits (whereas our active [**agent-device**](agent-device.md) costs **`$0` extra API fees** and ~100 text tokens per snapshot inside your existing coding agent).
 - **Android-only (`no iOS` or `tvOS`):** `iOS Platform Expansion` remains an unchecked `[ ]` roadmap item in `README.md` — zero support for iPhone, iPad, or Apple TV.
-- **`4x–45x` slower for interactive dev loops:** `3,000–5,000 ms` per step in `Flash` and `15,000–40,000 ms` per step in `Pro` (vs **`888 ms`** on Android and **`197 ms`** on iOS with [`agent-device`](agent-device.md)).
+- **`4x–45x` slower for interactive dev loops:** `3,000–5,000 ms` per step in `Flash` and `15,000–40,000 ms` per step in `Pro` (vs **`888 ms`** on Android and **`197 ms`** on iOS with [agent-device](agent-device.md)).
 - **Context & environment weight:** Global MCP setup mounts `5` eager tools (`mobile_run_task`, etc.) plus a recommended `13.6 KB` (`~3,400 token`) `mcp_server/rules.md`, while `LangGraph + LangChain + OpenCV + FastAPI` pulls a `~1 GB+` Python `.venv`.
 
 ---
@@ -60,7 +60,7 @@ Provides two execution profiles across four interfaces (`Web Console localhost:8
 
 ## 4. Fit & Compatibility with Our Existing Stack (Alternative)
 
-- **Our primary zero-extra-cost alternative — [**`agent-device`**](agent-device.md) (`9.5/10`, `#8` active global essential):**
+- **Our primary zero-extra-cost alternative — [**agent-device**](agent-device.md) (`9.5/10`, `#8` active global essential):**
   - **Cost:** `$0` extra API keys — your active coding agent drives `@e1` accessibility refs directly in `~100 tokens`.
   - **Coverage & speed:** Covers `iOS`, `Android`, `tvOS`, and `Android TV` headlessly in `197–888 ms` with `0` MCP schema bloat and `0` telemetry.
 
@@ -77,4 +77,4 @@ Provides two execution profiles across four interfaces (`Web Console localhost:8
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Video demo (`DehEdBbgQFZ`) and primary-source audit of `google/artemis` (`pyproject.toml`, `.env.example`, `mcp_server/`) | `👍 Good Option` | Capable autonomous Android QA engine (`8.5/10`), but requires **separate paid LLM API keys**, lacks iOS/tvOS support, and runs at `3–40s/step`; our daily stack uses free, cross-platform [**`agent-device`**](agent-device.md). |
+| 2026-11-16 | Video demo (`DehEdBbgQFZ`) and primary-source audit of `google/artemis` (`pyproject.toml`, `.env.example`, `mcp_server/`) | `👍 Good Option` | Capable autonomous Android QA engine (`8.5/10`), but requires **separate paid LLM API keys**, lacks iOS/tvOS support, and runs at `3–40s/step`; our daily stack uses free, cross-platform [**agent-device**](agent-device.md). |

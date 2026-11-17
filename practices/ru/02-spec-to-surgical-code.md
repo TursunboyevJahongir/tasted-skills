@@ -4,7 +4,7 @@
 
 ⬅️ [Вернуться к оглавлению практик](README.md)
 
-- **Связка инструментов:** [**`graphify`**](../../reviews/ru/architecture/graphify.md) + [**`grill-me`**](../../reviews/ru/architecture/grill-me.md) + [**`ponytail`**](../../reviews/ru/architecture/ponytail.md) + [**`karpathy-guidelines`**](../../reviews/ru/architecture/karpathy-guidelines.md) + [**`Orca`**](../../reviews/ru/developer-tools/orca.md) + [**`elephant-goldfish-model`**](../../reviews/ru/architecture/elephant-goldfish-model.md)
+- **Связка инструментов:** [**graphify**](../../reviews/ru/architecture/graphify.md) + [**grill-me**](../../reviews/ru/architecture/grill-me.md) + [**ponytail**](../../reviews/ru/architecture/ponytail.md) + [**karpathy-guidelines**](../../reviews/ru/architecture/karpathy-guidelines.md) + [**Orca**](../../reviews/ru/developer-tools/orca.md) + [**elephant-goldfish-model**](../../reviews/ru/architecture/elephant-goldfish-model.md)
 - **Проекты:** Любые задачи Backend, Web, Mobile и Архитектуры.
 
 ---

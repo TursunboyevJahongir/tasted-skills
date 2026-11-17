@@ -51,7 +51,7 @@ iOS 26.5 Simulator va jonli vektor xarita ishlab turgan real Android planshetda 
 - **Xavf darajasi:** `Past` *(toza `MIT` kod, telemetriya va tashqi npm bog'liqliklarsiz)*
 - **Qo'llangan sanitarizatsiya va himoya qoidalari:**
   1. **MCP server sifatida EMAS, faqat CLI + Skill sifatida o'rnatish:** Doimiy MCP tool sxemasi kontekstni band qilmasligi uchun global CLI (`npm i -g agent-device`) va `PATH`-xavfsiz `/opt/homebrew/bin/agent-device` wrapper ishlatildi.
-  2. **`agent-desktop` bilan to'qnashuvni kesish:** Asl `SKILL.md` tavsifidagi `macOS`, `HarmonyOS`, `Vega OS` va `Limrun` qismlari olib tashlandi — **Web (`Google Chrome`) va macOS desktop** to'liq [**`agent-desktop`**](../developer-tools/agent-desktop.md) da qoldi, `agent-device` esa faqat **Mobil va TV (`iOS`, `Android`, `tvOS`, `Android TV`)** uchun cheklandi.
+  2. **`agent-desktop` bilan to'qnashuvni kesish:** Asl `SKILL.md` tavsifidagi `macOS`, `HarmonyOS`, `Vega OS` va `Limrun` qismlari olib tashlandi — **Web (`Google Chrome`) va macOS desktop** to'liq [**agent-desktop**](../developer-tools/agent-desktop.md) da qoldi, `agent-device` esa faqat **Mobil va TV (`iOS`, `Android`, `tvOS`, `Android TV`)** uchun cheklandi.
   3. **Majburiy `--udid` / `--serial` intizomi:** USB ulangan real telefon/planshetga adashib tegib ketmaslik uchun 1-bosqichda faqat lokal simulyator/emulyator ko'rsatiladi.
 
 ---
@@ -62,10 +62,10 @@ Oldindan ishlatib kelayotgan vositalarimizning **birortasi ham o'chirilmadi** �
 
 | Oldingi vosita | Hozirgi holati | Vazifasi qanday o'zgardi? |
 |---|---|---|
-| [**`agent-desktop`**](../developer-tools/agent-desktop.md) | `✅ Qoldi (Asosiy — Web/Desktop)` | **Google Chrome (Web)** va **macOS desktop** oynalarida 100% asosiy vosita bo'lib qoldi. Mobil va TV UI ishlari `agent-device` ga o'tdi. |
-| [**`adb`**](adb.md) | `✅ Qoldi (Transport + Port/Log)` | `agent-device` Android'da ichidan baribir `adb` ni chaqiradi. Bundan tashqari **`adb reverse`** (Metro/lokal backend port ulash), **`adb logcat`** (crash loglar), APK o'rnatish va **`emu kill`** `adb` ning o'zida qoldi — faqat sekin `uiautomator dump` + koordinatali `input tap` o'rnini `agent-device` oldi. |
-| [**`xcrun simctl` + `devicectl`**](ios-simulator-device-hub.md) | `✅ Qoldi (Boot + Real iPhone)` | Simulyatorni oynasiz fonda yoqish/yopish (`simctl boot/shutdown`) va real iPhone'ga build o'rnatish (`devicectl`) uchun kerak. **`Device Hub` oynasi** esa endi har safar ochilmaydi — faqat zaxira (`fallback`) bo'lib turadi. |
-| [**`cross-platform-qa`**](cross-platform-qa.md) | `✅ Yangilandi` | 2-bosqichli qoida saqlanib qoldi va ichidagi mobil/TV UI qismi `agent-device` ga ulandi. |
+| [**agent-desktop**](../developer-tools/agent-desktop.md) | `✅ Qoldi (Asosiy — Web/Desktop)` | **Google Chrome (Web)** va **macOS desktop** oynalarida 100% asosiy vosita bo'lib qoldi. Mobil va TV UI ishlari `agent-device` ga o'tdi. |
+| [**adb**](adb.md) | `✅ Qoldi (Transport + Port/Log)` | `agent-device` Android'da ichidan baribir `adb` ni chaqiradi. Bundan tashqari **`adb reverse`** (Metro/lokal backend port ulash), **`adb logcat`** (crash loglar), APK o'rnatish va **`emu kill`** `adb` ning o'zida qoldi — faqat sekin `uiautomator dump` + koordinatali `input tap` o'rnini `agent-device` oldi. |
+| [**xcrun simctl + devicectl**](ios-simulator-device-hub.md) | `✅ Qoldi (Boot + Real iPhone)` | Simulyatorni oynasiz fonda yoqish/yopish (`simctl boot/shutdown`) va real iPhone'ga build o'rnatish (`devicectl`) uchun kerak. **`Device Hub` oynasi** esa endi har safar ochilmaydi — faqat zaxira (`fallback`) bo'lib turadi. |
+| [**cross-platform-qa**](cross-platform-qa.md) | `✅ Yangilandi` | 2-bosqichli qoida saqlanib qoldi va ichidagi mobil/TV UI qismi `agent-device` ga ulandi. |
 
 ---
 

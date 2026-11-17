@@ -8,9 +8,8 @@
 - **Sifat bahosi:** **9.0 / 10**
 - **Ishda kerak bo'lishi:** **3.5 / 10** *(kundalik ishda ortiqcha sikl — `skillshare audit` + AI agent orqali kod tekshiruvi yetarli)*
 - **Tavsiya etilgan ko'lam:** `Doimiy o'rnatmaslik` *(faqat juda shubhali katta MCP/paket uchraganda `uvx` orqali bir martalik `--no-llm` skan)*
-- **O'rniga ishlatiladigan tizim:** [**`skillshare`**](skillshare.md) (`skillshare audit`) + **AI agentga manba kodni tekshirtirish**
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `🔄 Alternativi yaxshiroq` *(kodi o'rganildi; mavjud yengil alternativamiz yetarli bo'lgani uchun o'rnatilmadi)*
+- 🔄 **Alternativi yaxshiroq:** [skillshare](skillshare.md) (`skillshare audit`) + AI agent manba kodi tekshiruvi
 
 ---
 
@@ -29,7 +28,7 @@ NVIDIA tomonidan ochiq manbaga chiqarilgan (`Python 3.12 + LangGraph`), AI skill
 
 `SkillSpector` minglab begona skill yig'ilgan katta marketplace va CI konveyerlarni avtomat filtrlash uchun kuchli yozilgan, ammo kundalik dasturchi oqimida **ortiqcha sikl** hosil qiladi:
 
-- **Tayyor va tez muqobilimiz bor — [`skillshare`](skillshare.md) (`skillshare audit`):** Bitta yengil Go binari `~0.1` soniyada `static`, `dataflow`, `tier`, `integrity`, `structure` va `cross-skill` xavfsizlik tekshiruvlarini bajaradi hamda **`skillshare install` vaqtida avtomatik ishlaydi** (`Python 3.12 + LangGraph + YARA + boto3` kabi og'ir bog'liqliklarni saqlash shart emas).
+- **Tayyor va tez muqobilimiz bor — [skillshare](skillshare.md) (`skillshare audit`):** Bitta yengil Go binari `~0.1` soniyada `static`, `dataflow`, `tier`, `integrity`, `structure` va `cross-skill` xavfsizlik tekshiruvlarini bajaradi hamda **`skillshare install` vaqtida avtomatik ishlaydi** (`Python 3.12 + LangGraph + YARA + boto3` kabi og'ir bog'liqliklarni saqlash shart emas).
 - **AI agent orqali kodni bevosita tekshirtirish aniqroq:** Biz har bir yangi skill/MCP'ni o'rnatishdan oldin AI coding agentning o'ziga birlamchi kodini (`SKILL.md`, skriptlar, hooklar, tarmoq/env murojaatlari) o'qitib olamiz. Agent ichidan yana Python/LangGraph ko'tarib ikkinchi LLM sessiya chaqirish — aynan bir xil ishni ikki marta qilishdir.
 - **False-positive (yolg'on xavf) shovqini:** Skanerning statik ball formulasida oddiy `subprocess` chaqiruvi va muhit o'zgaruvchisini o'qish darrov `DO NOT INSTALL` ballini beradi — foydali CLI skill'larda skaner vahiymasini saralashga bekorga vaqt ketadi.
 
@@ -51,4 +50,4 @@ uvx --python 3.12 --from git+https://github.com/NVIDIA/skillspector.git skillspe
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kod auditi | `🔄 Alternativi yaxshiroq` | Kuchli skaner (`9.0/10`), lekin [`skillshare`](skillshare.md) (`audit`) + AI agent orqali birlamchi kod tekshiruvi mavjudligi sababli ortiqcha sikl qo'shmaslik uchun o'rnatilmadi. |
+| 2026-11-16 | Manba kod auditi | 🔄 **Alternativi yaxshiroq:** [skillshare](skillshare.md) | Kuchli skaner (`9.0/10`), lekin [skillshare](skillshare.md) (`audit`) + AI agent orqali birlamchi kod tekshiruvi mavjudligi sababli ortiqcha sikl qo'shmaslik uchun o'rnatilmadi. |

@@ -13,7 +13,7 @@
 - **`Ishda kerak bo'lishi` (`1–10`)** — kundalik ishda qanchalik tez-tez kerak bo'lishi *(`3/10` — yomon degani emas, shunchaki kam kerak bo'ladi)*.
 
 > [!TIP]
-> **🛡️ Xavfsizlik qoidamiz (sizga ham tavsiya):** Hech qachon begona skill, plugin yoki MCP serverni faqat chiroyli `README` yoki yulduzlariga qarab o'rnatmang. Biz har bitta nomzodni o'rnatishdan oldin **o'zimizning AI coding agentga uning ichki kodini (`SKILL.md`, skriptlar, hooklar, tarmoq/env murojaatlari) o'qitib tekshirtiramiz** hamda [**`skillshare`**](reviews/developer-tools/skillshare.md) ichidagi tayyor `skillshare audit` tekshiruvidan o'tkazamiz.
+> **🛡️ Xavfsizlik qoidamiz (sizga ham tavsiya):** Hech qachon begona skill, plugin yoki MCP serverni faqat chiroyli `README` yoki yulduzlariga qarab o'rnatmang. Biz har bitta nomzodni o'rnatishdan oldin **o'zimizning AI coding agentga uning ichki kodini (`SKILL.md`, skriptlar, hooklar, tarmoq/env murojaatlari) o'qitib tekshirtiramiz** hamda [**skillshare**](reviews/developer-tools/skillshare.md) ichidagi tayyor `skillshare audit` tekshiruvidan o'tkazamiz.
 
 📖 [Qaysi skill va tool'larni bir-biri bilan birga ishlatish bo'yicha amaliy qo'llanmalar →](practices/README.md) · [⚖️ Pastdagi batafsil solishtirishlar jadvaliga tushish ↓](#batafsil-solishtirishlar)
 
@@ -163,7 +163,7 @@ PR yoki reliz oldidan Docker yoqmasdan Backend, Web va **Mobil (`deep-link`, `We
 Telefonda ochilgan veb-sayt yoki Mini App'dagi noqulayliklarni (input bosganda ekran kattalashib ketishi, `100vh` sakrashi, iPhone `notch` ustiga chiqib ketish, yopishqoq `hover`) 11 ta tayyor CSS/meta qoida bilan tuzatadi + veb funksiyani mobil ilovaga ko'chirishda nimalarni soddalashtirish kerakligini hal qiladi (`ui-message-punctuation` bilan birga).
 
 ### 20. [AssetDiet](reviews/developer-tools/assetdiet.md) — Loyihadagi og'ir rasm, SVG, video va 3D fayllarni sifatni buzmay siqish
-`✅ Ishlatyapman` · **Sifat:** `7.5/10` · **Ishda kerak bo'lishi:** `6.5/10` · **Turi:** CLI + [`asset-diet`](skills/asset-diet/SKILL.md) · **Sana:** `2026-11-16` dan
+`✅ Ishlatyapman` · **Sifat:** `7.5/10` · **Ishda kerak bo'lishi:** `6.5/10` · **Turi:** CLI + [asset-diet](skills/asset-diet/SKILL.md) · **Sana:** `2026-11-16` dan
 
 Sayt yoki mobil ilova hajmini shishirib yuborgan rasm, SVG va videolarni kompyuterning o'zida (bulutga yuklamasdan) topib siqib beradi va yoqmasa 1 buyruq bilan asl holiga qaytaradi (`rollback`). Kontekstni band qilmasligi uchun doimiy MCP o'rniga faqat chaqirilganda (`0` token yuk) ishlaydi.
 
@@ -542,30 +542,30 @@ O'nlab arzon API kalitlarni bitta shlyuzga yig'ish uchun yozilgan lokal proxy se
 <a id="batafsil-solishtirishlar"></a>
 ## ⚖️ Batafsil Solishtirishlar va Natijalar (Nima Uchun Qaysi Vosita Tanlangan?)
 
-Yuqoridagi barcha sinovlar va raqamlarning 7 yo'nalish bo'yicha to'liq qiyosiy jadvali alohida qo'llanmada ham berilgan: 👉 [**To'liq 7 yo'nalishli solishtiruv matritsasini ochish (`practices/07-tool-and-skill-comparisons.md`) →**](practices/07-tool-and-skill-comparisons.md)
+Yuqoridagi barcha sinovlar va raqamlarning 7 yo'nalish bo'yicha to'liq qiyosiy jadvali alohida qo'llanmada ham berilgan: 👉 [**To'liq 7 yo'nalishli solishtiruv matritsasini ochish (practices/07-tool-and-skill-comparisons.md) →**](practices/07-tool-and-skill-comparisons.md)
 
 - **📱 Mobil va TV UI Avtomatizatsiyasi:**
-  - ✅ [**`agent-device`**](reviews/mobile/agent-device.md): `iOS + Android + tvOS + Android TV`, **`197–888 ms`**, `0` MCP yuki, **`$0` API xarajati**, Java kerakmas, ichida tayyor `--maestro` bor.
-  - ⚖️ Muqobillar: `Maestro CLI` (`1.5–4s`, Java `JDK 17+` shart) · [**`ARTEMIS`**](reviews/mobile/artemis.md) (faqat Android, `3–40s`, `.env` da pullik LLM API kalit yeydi) · ⚠️ [**`mobile-mcp`**](reviews/mobile/mobile-mcp.md) (har xabarda `~7,580` token yeydi, `6–7s` sekin, telemetriya/reklama bor).
+  - ✅ [**agent-device**](reviews/mobile/agent-device.md): `iOS + Android + tvOS + Android TV`, **`197–888 ms`**, `0` MCP yuki, **`$0` API xarajati**, Java kerakmas, ichida tayyor `--maestro` bor.
+  - ⚖️ Muqobillar: `Maestro CLI` (`1.5–4s`, Java `JDK 17+` shart) · [**ARTEMIS**](reviews/mobile/artemis.md) (faqat Android, `3–40s`, `.env` da pullik LLM API kalit yeydi) · ⚠️ [**mobile-mcp**](reviews/mobile/mobile-mcp.md) (har xabarda `~7,580` token yeydi, `6–7s` sekin, telemetriya/reklama bor).
 - **📱 Mobil Emulyator RAM va GPU Optimizatsiyasi (`USIZ vs U BILAN`):**
-  - ✅ [**`simslim`**](reviews/mobile/simslim.md) (iOS 26.5): oynasiz RAM **`2.70 GB -> 1.16 GB` (`-57%`)**, GUI **`4.0 GB -> 0.9 GB` (`-77.5%`)**, jarayonlar `182 -> 78`, ilovalarni o'chirmasdan **`+1.51 GB`** disk tozalash.
-  - ✅ [**`avdslim`**](reviews/mobile/avdslim.md) (Android API 35): RAM **`4.41 GB -> 2.64 GB` (`-40.2%`, Studio 8.5 GB'dan `-69%`)**, CPU `SwiftShader` o'rniga **Apple Metal GPU (`host`)**, Golden Snapshot bilan yonish `22.8s -> 13.8s`.
+  - ✅ [**simslim**](reviews/mobile/simslim.md) (iOS 26.5): oynasiz RAM **`2.70 GB -> 1.16 GB` (`-57%`)**, GUI **`4.0 GB -> 0.9 GB` (`-77.5%`)**, jarayonlar `182 -> 78`, ilovalarni o'chirmasdan **`+1.51 GB`** disk tozalash.
+  - ✅ [**avdslim**](reviews/mobile/avdslim.md) (Android API 35): RAM **`4.41 GB -> 2.64 GB` (`-40.2%`, Studio 8.5 GB'dan `-69%`)**, CPU `SwiftShader` o'rniga **Apple Metal GPU (`host`)**, Golden Snapshot bilan yonish `22.8s -> 13.8s`.
 - **🌐 Web va Desktop UI Boshqaruvi:**
-  - ✅ [**`agent-desktop`**](reviews/developer-tools/agent-desktop.md): har qanday veb-sayt va macOS dasturida kodni o'zgartirmasdan fonda ishlaydi (`~5–10x` kam token).
-  - 🔄 [**`vercel-labs/ui`**](reviews/web/vercel-ui-sdk.md): faqat `@ui-sdk/*` da qayta yozilgan saytlarnigina ko'radi (`Expo` va oddiy HTML'da ishlamaydi).
+  - ✅ [**agent-desktop**](reviews/developer-tools/agent-desktop.md): har qanday veb-sayt va macOS dasturida kodni o'zgartirmasdan fonda ishlaydi (`~5–10x` kam token).
+  - 🔄 [**vercel-labs/ui**](reviews/web/vercel-ui-sdk.md): faqat `@ui-sdk/*` da qayta yozilgan saytlarnigina ko'radi (`Expo` va oddiy HTML'da ishlamaydi).
 - **🎨 UI/UX Dizayn, Landing Page va Animatsiya:**
-  - ✅ Kundalik App / Web / Mobil UI: [**`impeccable`**](reviews/ui-ux/impeccable.md) + [**`mobile-native`**](reviews/mobile/mobile-native.md) + [**`animate-expo`**](reviews/mobile/animate-expo.md) (`APCA` kontrast + `60/120fps` UI-thread animatsiya).
-  - 👍 Noldan Landing Page / Promo-sayt kerak bo'lganda (`-p` / `/hallmark`): [**`Hallmark v2`**](reviews/web/hallmark.md) (`50` ta tayyor mavzu, `755` ta real foto, `capture.mjs` va `sloplint --before/--kept` — bu qismlar `impeccable` da yo'q; [**`taste-skill v2.5`**](reviews/web/taste-skill.md) dan ham ustun).
-  - 🔄 Muqobillar: [**`unslop`**](reviews/ui-ux/unslop.md) va [**`animate`**](reviews/ui-ux/animate.md) (faqat Web, auto-trigger urishadi) · [**`break-ui`**](reviews/ui-ux/break-ui.md) (buzib ko'rsatib, tuzatmay to'xtaydi) · [**`make-interfaces-feel-better`**](reviews/ui-ux/make-interfaces-feel-better.md) (4 jadval token yeydi).
+  - ✅ Kundalik App / Web / Mobil UI: [**impeccable**](reviews/ui-ux/impeccable.md) + [**mobile-native**](reviews/mobile/mobile-native.md) + [**animate-expo**](reviews/mobile/animate-expo.md) (`APCA` kontrast + `60/120fps` UI-thread animatsiya).
+  - 👍 Noldan Landing Page / Promo-sayt kerak bo'lganda (`-p` / `/hallmark`): [**Hallmark v2**](reviews/web/hallmark.md) (`50` ta tayyor mavzu, `755` ta real foto, `capture.mjs` va `sloplint --before/--kept` — bu qismlar `impeccable` da yo'q; [**taste-skill v2.5**](reviews/web/taste-skill.md) dan ham ustun).
+  - 🔄 Muqobillar: [**unslop**](reviews/ui-ux/unslop.md) va [**animate**](reviews/ui-ux/animate.md) (faqat Web, auto-trigger urishadi) · [**break-ui**](reviews/ui-ux/break-ui.md) (buzib ko'rsatib, tuzatmay to'xtaydi) · [**make-interfaces-feel-better**](reviews/ui-ux/make-interfaces-feel-better.md) (4 jadval token yeydi).
 - **🏗️ Reja, YAGNI, Qisqa Javob va Multi-Agent Ishlash:**
-  - ✅ [**`grill-me`**](reviews/architecture/grill-me.md) + [**`graphify`**](reviews/architecture/graphify.md) (`10x–20x` token tejamkor) + [**`ponytail`**](reviews/architecture/ponytail.md) (ham matn, ham kodni `2–4x` qisqartiradi) + [**`Orca`**](reviews/developer-tools/orca.md) (`841 MB` RAM, `Lock Screen` + mobil ilova + jonli subagentlar).
-  - ⚖️ Muqobillar: [**`T3 Code`**](reviews/developer-tools/t3-code.md) (`Lock Screen` va mobil uzilishlar sabab `Orca` ga o'tildi) · [**`caveman`**](reviews/developer-tools/caveman.md) (faqat chat so'zlarini qisqartiradi) · ⚠️ [**`superpowers`**](reviews/architecture/superpowers.md) (`2x` sekinlashtiradi) · ⚠️ [**`OmniRoute`**](reviews/developer-tools/omniroute.md) (sessiya uzilishi va ToS ban xavfi).
+  - ✅ [**grill-me**](reviews/architecture/grill-me.md) + [**graphify**](reviews/architecture/graphify.md) (`10x–20x` token tejamkor) + [**ponytail**](reviews/architecture/ponytail.md) (ham matn, ham kodni `2–4x` qisqartiradi) + [**Orca**](reviews/developer-tools/orca.md) (`841 MB` RAM, `Lock Screen` + mobil ilova + jonli subagentlar).
+  - ⚖️ Muqobillar: [**T3 Code**](reviews/developer-tools/t3-code.md) (`Lock Screen` va mobil uzilishlar sabab `Orca` ga o'tildi) · [**caveman**](reviews/developer-tools/caveman.md) (faqat chat so'zlarini qisqartiradi) · ⚠️ [**superpowers**](reviews/architecture/superpowers.md) (`2x` sekinlashtiradi) · ⚠️ [**OmniRoute**](reviews/developer-tools/omniroute.md) (sessiya uzilishi va ToS ban xavfi).
 - **🛡️ Xavfsizlik Auditi, Pentest va Monitoring:**
-  - ✅ [**`skillshare audit`**](reviews/developer-tools/skillshare.md) (`0.1s` skill tekshiruv) + [**`security-audit`**](reviews/backend/security-audit-skill.md) (Docker'siz manba kodi auditi) + [**`Shannon`**](reviews/backend/shannon.md) (staging'da jonli exploit pentest) + [**`sentry`**](reviews/backend/sentry.md) (xato + Replay + trace).
-  - ⚖️ Muqobillar: [**`SkillSpector`**](reviews/developer-tools/skillspector.md) (og'ir Docker/YARA sikli) · [**`opentelemetry`**](reviews/backend/opentelemetry.md) (`Collector + SigNoz/Grafana` katta klasterlar uchun) · 👍 [**`REA`**](reviews/developer-tools/rea.md) (faqat manba kodi yo'q begona `.asar`/`.apk`/binarlarni [`rea`](skills/rea/SKILL.md) orqali vaqtinchalik ochish va `audit-release-exposure` uchun).
+  - ✅ [**skillshare audit**](reviews/developer-tools/skillshare.md) (`0.1s` skill tekshiruv) + [**security-audit**](reviews/backend/security-audit-skill.md) (Docker'siz manba kodi auditi) + [**Shannon**](reviews/backend/shannon.md) (staging'da jonli exploit pentest) + [**sentry**](reviews/backend/sentry.md) (xato + Replay + trace).
+  - ⚖️ Muqobillar: [**SkillSpector**](reviews/developer-tools/skillspector.md) (og'ir Docker/YARA sikli) · [**opentelemetry**](reviews/backend/opentelemetry.md) (`Collector + SigNoz/Grafana` katta klasterlar uchun) · 👍 [**REA**](reviews/developer-tools/rea.md) (faqat manba kodi yo'q begona `.asar`/`.apk`/binarlarni [rea](skills/rea/SKILL.md) orqali vaqtinchalik ochish va `audit-release-exposure` uchun).
 - **🧠 Lokal Modellar va 🔌 Tashqi API'lar:**
-  - ✅ Serverda tezkor qaror (`true/false` va `select`): [**`Jev (TypeSafe AI)`**](reviews/external-apis/jev.md) (`~0.3s`, `$0.042/$0`, `<80%` va `timeout` fallback bilan — `GPT-6 Luna Medium` `~9–12s` kutishini yo'qotadi) · Mahsulot backendida matn/chat/OCR generatsiya kerak bo'lsa: [**`MiniMax M3.1 Flash API`**](reviews/external-apis/minimax-m3-1-flash-api.md) (`$0.15/$0.60`, `170+ tok/s`) · Oflayn lokal coder: **`Ollama` / `MLX` (`Qwen3-Coder`)** (`32–64 GB` Mac RAM ichida `30–65 tok/s`).
-  - ⚠️ Lokal ishchi kompyuterda tavsiya etilmaydi: [**`kimi-k3-in-c`**](reviews/local-models/kimi-k3-in-c.md) (`1 token = ~30s`, `~50 TB` SSD o'qish) · [**`MiniMax-M3.1-Flash` *(Lokal)* **](reviews/local-models/minimax-m3-1-flash.md) (`285 GB` vazn, `640 GB VRAM` server kerak).
+  - ✅ Serverda tezkor qaror (`true/false` va `select`): [**Jev (TypeSafe AI)**](reviews/external-apis/jev.md) (`~0.3s`, `$0.042/$0`, `<80%` va `timeout` fallback bilan — `GPT-6 Luna Medium` `~9–12s` kutishini yo'qotadi) · Mahsulot backendida matn/chat/OCR generatsiya kerak bo'lsa: [**MiniMax M3.1 Flash API**](reviews/external-apis/minimax-m3-1-flash-api.md) (`$0.15/$0.60`, `170+ tok/s`) · Oflayn lokal coder: **`Ollama` / `MLX` (`Qwen3-Coder`)** (`32–64 GB` Mac RAM ichida `30–65 tok/s`).
+  - ⚠️ Lokal ishchi kompyuterda tavsiya etilmaydi: [**kimi-k3-in-c**](reviews/local-models/kimi-k3-in-c.md) (`1 token = ~30s`, `~50 TB` SSD o'qish) · [**MiniMax-M3.1-Flash *(Lokal)* **](reviews/local-models/minimax-m3-1-flash.md) (`285 GB` vazn, `640 GB VRAM` server kerak).
 
 ---
 

@@ -4,7 +4,7 @@
 
 ⬅️ [Вернуться к оглавлению практик](README.md)
 
-- **Связка инструментов:** [**`tasted-skills`**](../../skills/tasted-skills/SKILL.md) + [**`skillshare`**](../../reviews/ru/developer-tools/skillshare.md) + [**`security-audit`**](../../reviews/ru/backend/security-audit-skill.md) + [**`Shannon` (`hacker-test`)**](../../reviews/ru/backend/shannon.md) + [**`sentry`**](../../reviews/ru/backend/sentry.md)
+- **Связка инструментов:** [**tasted-skills**](../../skills/tasted-skills/SKILL.md) + [**skillshare**](../../reviews/ru/developer-tools/skillshare.md) + [**security-audit**](../../reviews/ru/backend/security-audit-skill.md) + [**Shannon (hacker-test)**](../../reviews/ru/backend/shannon.md) + [**sentry**](../../reviews/ru/backend/sentry.md)
 - **Проекты:** Безопасность AI-среды разработки, Backend API и Full-Stack production-системы.
 
 ---

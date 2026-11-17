@@ -2,7 +2,7 @@
 
 [🇺🇿 O'zbekcha](../../mobile/ios-simulator-device-hub.md) | **🇬🇧 English** | [🇷🇺 Русский](../../ru/mobile/ios-simulator-device-hub.md)
 
-- **Source:** [Apple Xcode Command Line & Simulator Tools (`simctl` / `devicectl`)](https://developer.apple.com/documentation/xcode/interacting-with-simulator-from-the-command-line)
+- **Source:** [Apple Xcode Command Line & Simulator Tools (simctl / devicectl)](https://developer.apple.com/documentation/xcode/interacting-with-simulator-from-the-command-line)
 - **Category:** `Mobile` *(iOS Simulator & Physical iPhone/iPad App Control)*
 - **Type:** `CLI + macOS App Bridge` *(bundled with `Xcode.app`)*
 - **Quality Score:** **9.0 / 10**
@@ -56,15 +56,15 @@ Apple's official toolchain for booting, driving, and verifying iOS and Expo / Re
 
 ## 4. Fit & Compatibility with Our Existing Stack
 
-- **`xcrun simctl` & `devicectl`:** Core iOS/tvOS lifecycle foundation underneath [`agent-device`](agent-device.md) and [`cross-platform-qa`](cross-platform-qa.md) (windowless simulator `boot`/`shutdown`, `privacy` grants, and physical iPhone build installs).
-- **Xcode `Device Hub` + `agent-desktop`:** Now serves as a **fallback** — `Device Hub` requires a GUI window open on screen, whereas [`agent-device`](agent-device.md) drives booted simulators completely windowlessly in `~197ms`.
+- **`xcrun simctl` & `devicectl`:** Core iOS/tvOS lifecycle foundation underneath [agent-device](agent-device.md) and [cross-platform-qa](cross-platform-qa.md) (windowless simulator `boot`/`shutdown`, `privacy` grants, and physical iPhone build installs).
+- **Xcode `Device Hub` + `agent-desktop`:** Now serves as a **fallback** — `Device Hub` requires a GUI window open on screen, whereas [agent-device](agent-device.md) drives booted simulators completely windowlessly in `~197ms`.
 
 ---
 
 ## 5. When to Use (and When Not To)
 
 - **When to use:** Booting/shutting down headless simulators via `xcrun simctl`, granting permissions/deep-links, installing builds onto physical iPhones via `devicectl`, or falling back to `Device Hub` when needed.
-- **When not to use:** Routine iOS/tvOS UI snapshot and tap flows (use [`agent-device`](agent-device.md) as the primary driver).
+- **When not to use:** Routine iOS/tvOS UI snapshot and tap flows (use [agent-device](agent-device.md) as the primary driver).
 
 ---
 

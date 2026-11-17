@@ -8,7 +8,7 @@
 - **Оценка качества:** **6.5 / 10**
 - **Полезность для нас:** **2.5 / 10**
 - **Рекомендуемый охват:** `Не устанавливать` *(глобальная установка сильно раздувает контекст)*
-- **Используемая замена:** [**`impeccable`**](../ui-ux/impeccable.md) + [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) + [**`elephant-goldfish-model`**](elephant-goldfish-model.md) + [**`cross-platform-qa`**](../mobile/cross-platform-qa.md)
+- **Используемая замена:** [**impeccable**](../ui-ux/impeccable.md) + [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) + [**elephant-goldfish-model**](elephant-goldfish-model.md) + [**cross-platform-qa**](../mobile/cross-platform-qa.md)
 - **Дата проверки:** `2026-11-16`
 - **Текущий статус:** `⚠️ Не рекомендуется` *(нам не нужен — существующие профильные скиллы намного чище и сильнее)*
 
@@ -44,7 +44,7 @@
      - `Senior Developer` жестко привязан к стеку `Laravel/Livewire`;
      - `Reality Checker` требует запускать несуществующий скрипт `./qa-playwright-capture.sh http://localhost:8000` и проверять `*.blade.php` со статусом `"NEVER SKIP"`.
 3. **Конфликт auto-trigger и обход `skillshare`:**
-   - `convert.sh` не выставляет `disable-model-invocation: true` и пишет напрямую в `~/.gemini/config/skills/` в обход [`skillshare`](../developer-tools/skillshare.md), из-за чего агенты сталкиваются с нашими основными UI и инженерными скиллами на каждом запросе.
+   - `convert.sh` не выставляет `disable-model-invocation: true` и пишет напрямую в `~/.gemini/config/skills/` в обход [skillshare](../developer-tools/skillshare.md), из-за чего агенты сталкиваются с нашими основными UI и инженерными скиллами на каждом запросе.
 
 ---
 
@@ -54,7 +54,7 @@
 > **Раздувание контекста:** Глобальная установка всех 283 шаблонов съедает **`~18,500` постоянных токенов**, размывая внимание агента.
 
 - **Уровень риска:** `Низкий` *(вредоносных скриптов, сетевых вызовов или `Stop`-хуков нет, но высок вред от засорения контекста и `auto-trigger`)*
-- Даже если понадобится взять идеи из одного узкого файла, не запускать `install.sh` — нужно удалить ролевое вступление (`Identity & Memory`) и шаблоны отчетов, добавить `disable-model-invocation: true` и управлять только через [`skillshare`](../developer-tools/skillshare.md).
+- Даже если понадобится взять идеи из одного узкого файла, не запускать `install.sh` — нужно удалить ролевое вступление (`Identity & Memory`) и шаблоны отчетов, добавить `disable-model-invocation: true` и управлять только через [skillshare](../developer-tools/skillshare.md).
 
 ---
 
@@ -64,10 +64,10 @@
 
 | Раздел в `agency-agents` | Наша чистая и сильная замена |
 |---|---|
-| `Frontend Developer`, `UI Designer`, `UX Architect` | [**`impeccable`**](../ui-ux/impeccable.md) + [**`mobile-native`**](../mobile/mobile-native.md) + [**`animate-expo`**](../mobile/animate-expo.md) |
-| `Minimal Change Engineer` (207 строк + длинный отчет) | [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) (`2.5–3.5 KB`, без лишних отчетов) |
-| `Software Architect`, `Code Reviewer` | [**`elephant-goldfish-model`**](elephant-goldfish-model.md) (реальные `fresh-context` субагенты Goldfish) + [**`grill-me`**](grill-me.md) |
-| `Reality Checker`, `Evidence Collector` | [**`cross-platform-qa`**](../mobile/cross-platform-qa.md) ([`agent-desktop`](../developer-tools/agent-desktop.md) + [`Device Hub`](../mobile/ios-simulator-device-hub.md) + [`adb`](../mobile/adb.md)) |
+| `Frontend Developer`, `UI Designer`, `UX Architect` | [**impeccable**](../ui-ux/impeccable.md) + [**mobile-native**](../mobile/mobile-native.md) + [**animate-expo**](../mobile/animate-expo.md) |
+| `Minimal Change Engineer` (207 строк + длинный отчет) | [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) (`2.5–3.5 KB`, без лишних отчетов) |
+| `Software Architect`, `Code Reviewer` | [**elephant-goldfish-model**](elephant-goldfish-model.md) (реальные `fresh-context` субагенты Goldfish) + [**grill-me**](grill-me.md) |
+| `Reality Checker`, `Evidence Collector` | [**cross-platform-qa**](../mobile/cross-platform-qa.md) ([agent-desktop](../developer-tools/agent-desktop.md) + [Device Hub](../mobile/ios-simulator-device-hub.md) + [adb](../mobile/adb.md)) |
 
 ---
 

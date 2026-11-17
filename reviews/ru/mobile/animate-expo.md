@@ -2,7 +2,7 @@
 
 [🇺🇿 O'zbekcha](../../mobile/animate-expo.md) | [🇬🇧 English](../../en/mobile/animate-expo.md) | **🇷🇺 Русский**
 
-- **Источник:** [emilkowalski/skills (`skills/animate-expo`)](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo)
+- **Источник:** [emilkowalski/skills (skills/animate-expo)](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo)
 - **Категория:** `Mobile` *(React Native, Expo, Reanimated, Gesture Handler и Haptics)*
 - **Тип:** `Skill` *(`SKILL.md` + `RECIPES.md` + локальная защита `LOCAL-COMPATIBILITY.md`)*
 - **Оценка качества:** **9.5 / 10**
@@ -34,7 +34,7 @@
 ### Сильные стороны
 - Устраняет главную проблему мобильной разработки, когда в симуляторе всё плавно, а на среднем Android-телефоне FPS падает до 20 (`Yoga layout pass`, вызов `runOnJS/scheduleOnRN` на каждый кадр, `BlurView`).
 - В `RECIPES.md` есть готовые шаблоны для press-scale, drag-to-dismiss шторки, swipe-to-delete, сворачивающегося хедера и привязки к клавиатуре.
-- Дополнен `LOCAL-COMPATIBILITY.md` для работы в паре с [`impeccable`](../ui-ux/impeccable.md): визуальную иерархию и раскладку ведёт `impeccable`, а конкретные жесты и анимации в RN пишет `animate-expo`.
+- Дополнен `LOCAL-COMPATIBILITY.md` для работы в паре с [impeccable](../ui-ux/impeccable.md): визуальную иерархию и раскладку ведёт `impeccable`, а конкретные жесты и анимации в RN пишет `animate-expo`.
 
 ### Слабые стороны и накладные расходы
 - В исходнике предполагается повсеместное использование Reanimated 4 и Expo Router — поэтому через `LOCAL-COMPATIBILITY.md` добавлен запрет на самовольное обновление пакетов и архитектуры существующего проекта.
@@ -46,7 +46,7 @@
 - **Уровень риска:** `Низкий`
 - **Выполненная очистка и адаптация:**
   1. **Удалён приветственный блок `## Initial Response`:** Убрано требование отвечать шаблонной фразой при первом вызове.
-  2. **Обновлена ссылка на веб-анимации:** В `SKILL.md` ссылка на неустановленный скилл `animate` заменена на [`impeccable`](../ui-ux/impeccable.md).
+  2. **Обновлена ссылка на веб-анимации:** В `SKILL.md` ссылка на неустановленный скилл `animate` заменена на [impeccable](../ui-ux/impeccable.md).
   3. **Сохранена защита `LOCAL-COMPATIBILITY.md`:** Приоритет существующих зависимостей `package.json` и обязательная поддержка `reduced-motion`.
 
 ---
@@ -55,7 +55,7 @@
 
 - **`impeccable` + `animate-expo` + `web-to-native-mobile`** образуют единую тройку для мобильных приложений:
   - `web-to-native-mobile` определяет, как перенести веб-функцию на нативный экран телефона;
-  - [`impeccable`](../ui-ux/impeccable.md) отвечает за визуальный дизайн, типографику и композицию;
+  - [impeccable](../ui-ux/impeccable.md) отвечает за визуальный дизайн, типографику и композицию;
   - `animate-expo` реализует жесты, шторки, press-отклик и ворклеты Reanimated.
 
 ---
@@ -63,7 +63,7 @@
 ## 5. В каких задачах полезно?
 
 - **Когда использовать:** Bottom-sheet панели, плавающие карточки поверх карты, свайпы, нажатия кнопок (`press-in` / `press-out`), haptics и оптимизация 60/120fps в приложениях Expo / React Native.
-- **Когда не использовать:** В веб-анимациях CSS (там используется раздел `animate` внутри [`impeccable`](../ui-ux/impeccable.md)).
+- **Когда не использовать:** В веб-анимациях CSS (там используется раздел `animate` внутри [impeccable](../ui-ux/impeccable.md)).
 
 ---
 

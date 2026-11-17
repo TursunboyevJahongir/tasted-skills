@@ -48,8 +48,8 @@ Includes 3 levels (`lite`, `full` default, `ultra`) and clear engineering rules:
 
 ## 4. Relevance & Compatibility with Our Existing Tools
 
-- Complements [`karpathy-guidelines`](karpathy-guidelines.md): while `karpathy-guidelines` enforces surfacing assumptions and making surgical edits, `ponytail` keeps both diff size and reply length minimal.
-- The direct antithesis of heavy process plugins like [`superpowers`](superpowers.md).
+- Complements [karpathy-guidelines](karpathy-guidelines.md): while `karpathy-guidelines` enforces surfacing assumptions and making surgical edits, `ponytail` keeps both diff size and reply length minimal.
+- The direct antithesis of heavy process plugins like [superpowers](superpowers.md).
 
 ---
 

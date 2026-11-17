@@ -22,9 +22,9 @@ Web, iOS/tvOS va Android/Android TV ilovalarda kod yozish hamda tekshirishni **o
 
 1. **1-Bosqich (Ish jarayoni — 100% lokal kompyuterda):**
    - Ish davomida fizikiy telefon/planshetga qayta-qayta build o'rnatilmaydi.
-   - **Web (`Google Chrome`):** [`agent-desktop`](../developer-tools/agent-desktop.md) orqali ochiq va login qilingan brauzerda fonda (`AXPress`, `~0.2–0.3s`) tekshiriladi.
-   - **iOS / tvOS (Headless Simulator):** [`simslim`](simslim.md) bilan yengillashtirilgan (`~1.16 GB` RAM) simulyator `xcrun simctl boot <UDID>` orqali oynasiz fonda yoqilib, [`agent-device`](agent-device.md) (`--platform ios --udid <UDID>`, `@ref`, `diff snapshot -i --settle`, `~0.2s`) orqali tekshiriladi (`Device Hub` fallback sifatida qoladi).
-   - **Android / Android TV (Headless Emulator):** [`avdslim`](avdslim.md) (`avdslim start ... --headless --no-slim`, `1536 MB` + Apple Metal `host` GPU Golden Snapshot, `~2.64 GB` RAM) bilan fonda yoqilib, UI oqimi [`agent-device`](agent-device.md) (`--platform android --serial emulator-5554`, `~0.9s`, o'zbekcha UTF-8 input bilan) hamda past darajadagi port/log ishlari [`adb`](adb.md) (`reverse`, `logcat`) orqali tekshiriladi.
+   - **Web (`Google Chrome`):** [agent-desktop](../developer-tools/agent-desktop.md) orqali ochiq va login qilingan brauzerda fonda (`AXPress`, `~0.2–0.3s`) tekshiriladi.
+   - **iOS / tvOS (Headless Simulator):** [simslim](simslim.md) bilan yengillashtirilgan (`~1.16 GB` RAM) simulyator `xcrun simctl boot <UDID>` orqali oynasiz fonda yoqilib, [agent-device](agent-device.md) (`--platform ios --udid <UDID>`, `@ref`, `diff snapshot -i --settle`, `~0.2s`) orqali tekshiriladi (`Device Hub` fallback sifatida qoladi).
+   - **Android / Android TV (Headless Emulator):** [avdslim](avdslim.md) (`avdslim start ... --headless --no-slim`, `1536 MB` + Apple Metal `host` GPU Golden Snapshot, `~2.64 GB` RAM) bilan fonda yoqilib, UI oqimi [agent-device](agent-device.md) (`--platform android --serial emulator-5554`, `~0.9s`, o'zbekcha UTF-8 input bilan) hamda past darajadagi port/log ishlari [adb](adb.md) (`reverse`, `logcat`) orqali tekshiriladi.
 2. **2-Bosqich (Yakuniy "Done" qoidasi — Real qurilmada 1 marta tekshirish):**
    - Barcha lokal tekshiruvlar bitib, vazifa **Done** bo'lishidan oldin kompyuterga ulangan real telefon/planshetda (`agent-device` + `adb` / `devicectl`) **1 marta yakuniy sinov** o'tkazilib tasdiqlanadi.
 
@@ -50,7 +50,7 @@ Web, iOS/tvOS va Android/Android TV ilovalarda kod yozish hamda tekshirishni **o
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
-- [`agent-desktop`](../developer-tools/agent-desktop.md) (Web), [`agent-device`](agent-device.md) (iOS/Android/TV UI + `--maestro` E2E), [`simslim`](simslim.md) (iOS Simulator `1.16 GB` RAM), [`avdslim`](avdslim.md) (Android AVD `2.64 GB` RAM + Apple Metal GPU), [`adb`](adb.md) va [`xcrun simctl` + `Device Hub`](ios-simulator-device-hub.md) vositalarini yagona 2-bosqichli intizomga birlashtiradi.
+- [agent-desktop](../developer-tools/agent-desktop.md) (Web), [agent-device](agent-device.md) (iOS/Android/TV UI + `--maestro` E2E), [simslim](simslim.md) (iOS Simulator `1.16 GB` RAM), [avdslim](avdslim.md) (Android AVD `2.64 GB` RAM + Apple Metal GPU), [adb](adb.md) va [xcrun simctl + Device Hub](ios-simulator-device-hub.md) vositalarini yagona 2-bosqichli intizomga birlashtiradi.
 
 ---
 

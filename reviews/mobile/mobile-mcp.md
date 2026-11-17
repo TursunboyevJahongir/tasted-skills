@@ -7,7 +7,7 @@
 - **Turi:** `MCP Server (34 ta tool)` + `Plugin / Skill`
 - **Sifat bahosi:** **7.0 / 10**
 - **Ishda kerak bo'lishi:** **2.0 / 10**
-- **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(o'rniga [**`agent-device`**](agent-device.md) CLI + [**`adb`**](adb.md))*
+- **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(o'rniga [**agent-device**](agent-device.md) CLI + [**adb**](adb.md))*
 - **Tekshirilgan sana:** `2026-11-16`
 - **Joriy holati:** `⚠️ Tavsiya etilmaydi` *(izolyatsiya qilingan `/tmp` muhitda jonli sinab ko'rildi va tezlik, kontekst shishishi hamda telemetriya sabab rad etildi)*
 
@@ -24,7 +24,7 @@
 
 ## 2. Jonli Sinov Natijalari: Nega rad etildi?
 
-iOS 26.5 Simulator va real Android planshetda [**`agent-device`**](agent-device.md) bilan yonma-yon sinab ko'rilganda 4 ta jiddiy kamchilik tasdiqlandi:
+iOS 26.5 Simulator va real Android planshetda [**agent-device**](agent-device.md) bilan yonma-yon sinab ko'rilganda 4 ta jiddiy kamchilik tasdiqlandi:
 
 1. **Har bitta chatda `~7 580 token` doimiy kontekst yuki:** `tools/list` javobi **34 ta tool (`30 321 bayt`)** qaytaradi. MCP ulangan bo'lsa, siz oddiy SQL yoki backend kod yozayotganingizda ham shu `~7.6K token` har bir turnda osilib turadi.
 2. **Juda sekin ishlaydi (`6.5x – 37x` sekin):**
@@ -47,7 +47,7 @@ iOS 26.5 Simulator va real Android planshetda [**`agent-device`**](agent-device.
 
 ## 4. Mavjud vositalarimiz bilan solishtiruv (Muqobili)
 
-- **To'liq muqobili:** [**`agent-device`**](agent-device.md) (CLI rejimida `0` MCP yuki, iOS'da `37x` tez, Android'da `6.5x` tez, telemetriyasiz `MIT`, ustiga-ustak `tvOS` va `Android TV` ni ham qo'llaydi).
+- **To'liq muqobili:** [**agent-device**](agent-device.md) (CLI rejimida `0` MCP yuki, iOS'da `37x` tez, Android'da `6.5x` tez, telemetriyasiz `MIT`, ustiga-ustak `tvOS` va `Android TV` ni ham qo'llaydi).
 
 ---
 

@@ -39,7 +39,7 @@ Cloudflare xavfsizlik jamoasining ichki zaiflik qidirish tizimidan (`vulnerabili
 
 ### Zaif tomonlari va xarajati
 - **Subagent kvotasi sarfi:** To'liq `standard` yoki `deep` rejimi katta repoda `10–30+` subagent chaqirishi mumkin — shu sababli biz sukut bo'yicha yengil **`quick` / `scoped`** rejimiga o'tkazdik.
-- **Jonli HTTP hujum qilmaydi:** Kodni o'qib tahlil qiladi; ishlab turgan serverga real brauzer va HTTP payload bilan hujum qilib sinash uchun [`Shannon` (`hacker-test`)](shannon.md) ishlatiladi.
+- **Jonli HTTP hujum qilmaydi:** Kodni o'qib tahlil qiladi; ishlab turgan serverga real brauzer va HTTP payload bilan hujum qilib sinash uchun [Shannon (hacker-test)](shannon.md) ishlatiladi.
 
 ---
 
@@ -48,16 +48,16 @@ Cloudflare xavfsizlik jamoasining ichki zaiflik qidirish tizimidan (`vulnerabili
 - **Xavf darajasi:** `Past` *(`0` tashqi bog'liqlik, `65/65` lokal Node testdan o'tgan, `CRITICAL = 0`)*
 - **Tekshirilgan nuqtalar:** `SKILL.md`, barcha 14 ta `.md` yo'riqnoma, `validate-findings.cjs`, `validate-coverage-ledger.cjs` va `skillshare audit` (`HIGH` ogohlantirishlari faqat `ATTACK-CLASSES.md` ichidagi `"eval(), exec() bormi?"` degan matn namunasi tufayli chiqqan xavfsiz false-positive).
 - **Amalga oshirilgan lokal sanitarizatsiya (`explicit-trigger-and-quick-default-1`):**
-  1. **`SKILL.md` frontmatter `description` toraytirildi:** Asl tavsif oddiy JWT/auth kod yozishda ham `22 KB` `SKILL.md` ni yuklab yubormasligi uchun faqat aniq **`"security audit"`**, **`"xavfsizlik auditi"`**, **`"kod xavfsizligini tekshir"`**, **`"zaifliklarni top"`** deyilganda uyg'onadigan qilindi (jonli `"hacker test"` esa [`hacker-test`](shannon.md) da qoladi).
+  1. **`SKILL.md` frontmatter `description` toraytirildi:** Asl tavsif oddiy JWT/auth kod yozishda ham `22 KB` `SKILL.md` ni yuklab yubormasligi uchun faqat aniq **`"security audit"`**, **`"xavfsizlik auditi"`**, **`"kod xavfsizligini tekshir"`**, **`"zaifliklarni top"`** deyilganda uyg'onadigan qilindi (jonli `"hacker test"` esa [hacker-test](shannon.md) da qoladi).
   2. **Sukut bo'yicha profil `standard` -> `quick` / `scoped` qilindi (`SKILL.md` 120-qator):** Foydalanuvchi ataylab `standard` yoki `deep` so'ramaguncha tejamkor `quick` (yoki ko'rsatilgan papka/diff bo'yicha `scoped`) rejimda ishlaydi.
 
 ---
 
-## 4. Bizga qanchalik kerak va [`Shannon` (`hacker-test`)](shannon.md) bilan farqi
+## 4. Bizga qanchalik kerak va [Shannon (hacker-test)](shannon.md) bilan farqi
 
 Ikkalasi bir-birining o'rnini bosmaydi, balki **2 bosqichli xavfsizlik zanjirini** hosil qiladi:
 
-| Mezon | **`security-audit`** *(Cloudflare — `✅ Ishlatyapman`)* | [**`Shannon` (`hacker-test`)**](shannon.md) *(`👍 Yaxshi variant`)* |
+| Mezon | **`security-audit`** *(Cloudflare — `✅ Ishlatyapman`)* | [**Shannon (hacker-test)**](shannon.md) *(`👍 Yaxshi variant`)* |
 |---|---|---|
 | **Qanday ishlaydi?** | Manba kodini 6 bosqichda (`Hunter` + `Verifier` subagentlar) tahlil qiladi | Docker + Temporal + Playwright ko'tarib jonli URL'ga real hujum qiladi |
 | **Qamrovi** | Backend, Web, **Mobil (`iOS`/`Android`/`Expo`)**, CLI, Cloud/CI, LLM | Faqat ishlab turgan Web ilova va HTTP API |

@@ -4,7 +4,7 @@
 
 ⬅️ [Practices Mundarijasiga qaytish](README.md)
 
-- **Birlashtiriladigan vositalar:** [**`graphify`**](../reviews/architecture/graphify.md) + [**`grill-me`**](../reviews/architecture/grill-me.md) + [**`ponytail`**](../reviews/architecture/ponytail.md) + [**`karpathy-guidelines`**](../reviews/architecture/karpathy-guidelines.md) + [**`Orca`**](../reviews/developer-tools/orca.md) + [**`elephant-goldfish-model`**](../reviews/architecture/elephant-goldfish-model.md)
+- **Birlashtiriladigan vositalar:** [**graphify**](../reviews/architecture/graphify.md) + [**grill-me**](../reviews/architecture/grill-me.md) + [**ponytail**](../reviews/architecture/ponytail.md) + [**karpathy-guidelines**](../reviews/architecture/karpathy-guidelines.md) + [**Orca**](../reviews/developer-tools/orca.md) + [**elephant-goldfish-model**](../reviews/architecture/elephant-goldfish-model.md)
 - **Qo'llaniladigan loyihalar:** Barcha Backend, Web, Mobile va Arxitektura vazifalari.
 
 ---

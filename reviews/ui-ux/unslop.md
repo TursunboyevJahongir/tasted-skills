@@ -8,9 +8,8 @@
 - **Sifat bahosi:** **8.5 / 10**
 - **Ishda kerak bo'lishi:** **2.5 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
-- **O'rniga ishlatiladigan muqobillar:** [**`impeccable`**](impeccable.md) (`craft-floor` + `polish` / `quieter` / `clarify` / `harden` — Web va Native Mobile uchun) + [**`animate-expo`**](../mobile/animate-expo.md)
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `🔄 Alternativi yaxshiroq`
+- 🔄 **Alternativi yaxshiroq:** [impeccable](impeccable.md) (`polish` / `quieter` / `clarify` / `harden` — Web va Mobil uchun) + [animate-expo](../mobile/animate-expo.md)
 
 ---
 
@@ -34,7 +33,7 @@ Damir Sokolovsky (`@heydamir`) tomonidan X'dagi *Unslopping* rukni asosida yozil
 - `skillshare audit` natijasi toza (`0 CRITICAL/HIGH` — faqat `CC-BY-4.0` mualliflik havolalari va `1.3 MB` `.webp` namunalar bor).
 
 ### Zaif tomonlari va bizga kerak emasligi sabablari
-- **Bizdagi [`impeccable`](impeccable.md) buni allaqachon va kengroq qamrab oladi:** `impeccable` ning `craft-floor.md` + `polish`, `quieter`, `distill`, `clarify`, `typeset`, `layout`, `harden` bo'limlarida aynan shu anti-slop qoidalari (gradient text, glow, emoji ikonka, soxta sparkline, bir xil kartochkalar va kontrast nazorati) allaqachon mavjud. Ustiga-ustak, `impeccable` faqat Web emas, **native iOS va Android** ekranlarini ham qo'llab-quvvatlaydi (`unslop` esa faqat HTML/CSS/Web uchun).
+- **Bizdagi [impeccable](impeccable.md) buni allaqachon va kengroq qamrab oladi:** `impeccable` ning `craft-floor.md` + `polish`, `quieter`, `distill`, `clarify`, `typeset`, `layout`, `harden` bo'limlarida aynan shu anti-slop qoidalari (gradient text, glow, emoji ikonka, soxta sparkline, bir xil kartochkalar va kontrast nazorati) allaqachon mavjud. Ustiga-ustak, `impeccable` faqat Web emas, **native iOS va Android** ekranlarini ham qo'llab-quvvatlaydi (`unslop` esa faqat HTML/CSS/Web uchun).
 - **To'g'ridan-to'g'ri `auto-trigger` va qoida to'qnashuvi:** `description` qismi *"polish, clean up or redesign a screen... dashboards, apps and landing pages"* so'zlarida avtomatik uyg'onib, `impeccable` bilan urishadi. Bundan tashqari, `unslop` ba'zi keskin cheklovlarni (masalan, `700–900` shrift qalinligini butunlay taqiqlash, faqat `transform/opacity` animatsiyasi, har safar 4-qadamda to'xtab savol so'rash) majburlaydi — bu mavjud brend va dizayn tizimiga ega real loyihalarda `impeccable` ning moslashuvchan tartibiga xalaqit beradi.
 - **Tashqi pullik MCP taklifi:** Rasm generatsiyasi kerak bo'lsa `fal`, `Replicate`, `OpenAI` yoki `Higgsfield` MCP serverlarini ulashni taklif qiladi; `story.mjs` redline-video generatori esa kundalik mahsulot dasturlashda kerak emas.
 
@@ -44,4 +43,4 @@ Damir Sokolovsky (`@heydamir`) tomonidan X'dagi *Unslopping* rukni asosida yozil
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kod va `skillshare audit` tekshiruvi | `🔄 Alternativi yaxshiroq` | Didli anti-slop skill (`8.5/10`), biroq barcha asosiy imkoniyatlari bizdagi [`impeccable`](impeccable.md) da kengroq (Web + Native Mobile) borligi va `auto-trigger` to'qnashuvi oldini olish uchun o'rnatilmadi. |
+| 2026-11-16 | Manba kod va `skillshare audit` tekshiruvi | 🔄 **Alternativi yaxshiroq:** [impeccable](impeccable.md) | Didli anti-slop skill (`8.5/10`), biroq barcha asosiy imkoniyatlari bizdagi [impeccable](impeccable.md) da kengroq (Web + Native Mobile) borligi va `auto-trigger` to'qnashuvi oldini olish uchun o'rnatilmadi. |

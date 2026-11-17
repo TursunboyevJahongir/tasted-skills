@@ -4,7 +4,7 @@
 
 ⬅️ [Вернуться к оглавлению практик](README.md)
 
-- **Связка инструментов:** `watch` (`video-analyzer`) + `figma` (`figma-implement-design`, `figma-generate-design`, `figma-use`) + [**`agent-desktop`**](../../reviews/ru/developer-tools/agent-desktop.md) (`agent-desktop-ffi`) + [**`graphify`**](../../reviews/ru/architecture/graphify.md) + `drizzle-relations-v2`
+- **Связка инструментов:** `watch` (`video-analyzer`) + `figma` (`figma-implement-design`, `figma-generate-design`, `figma-use`) + [**agent-desktop**](../../reviews/ru/developer-tools/agent-desktop.md) (`agent-desktop-ffi`) + [**graphify**](../../reviews/ru/architecture/graphify.md) + `drizzle-relations-v2`
 - **Задачи:** Разбор видео-багрепортов, клонирование анимаций и UI-потоков с видео, двусторонняя синхронизация Код <-> Figma и быстрая десктоп-автоматизация.
 
 ---
@@ -20,10 +20,10 @@
 ### 2) Покадровое клонирование анимаций и переходов из референс-приложений (`watch` + `impeccable` + `animate-expo`)
 Чтобы повторить плавный переход или онбординг из другого приложения:
 - Запустите `watch` с частой нарезкой кадров (`5fps`);
-- Передайте раскадровку в [**`impeccable`**](../../reviews/ru/ui-ux/impeccable.md) и [**`animate-expo`**](../../reviews/ru/mobile/animate-expo.md), чтобы перевести физику движения (`spring`, `stiffness`, `damping`) в код `Reanimated`.
+- Передайте раскадровку в [**impeccable**](../../reviews/ru/ui-ux/impeccable.md) и [**animate-expo**](../../reviews/ru/mobile/animate-expo.md), чтобы перевести физику движения (`spring`, `stiffness`, `damping`) в код `Reanimated`.
 
 ### 3) Разоблачение рекламных Reels и демо-роликов (`watch` + `tasted-skills`)
-При проверке вирусных роликов про «бесплатные AI-инструменты» через [`tasted-skills`](../../skills/tasted-skills/SKILL.md):
+При проверке вирусных роликов про «бесплатные AI-инструменты» через [tasted-skills](../../skills/tasted-skills/SKILL.md):
 - `watch` ловит мелькающие на долю секунды плашки (`SELF-REPORTED`), платные ключи в `.env` и склейки ускоренного терминала.
 
 ---

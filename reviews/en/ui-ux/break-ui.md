@@ -2,15 +2,14 @@
 
 [🇺🇿 O'zbekcha](../../ui-ux/break-ui.md) | **🇬🇧 English** | [🇷🇺 Русский](../../ru/ui-ux/break-ui.md)
 
-- **Source:** [emilkowalski/skills — `skills/break-ui`](https://github.com/emilkowalski/skills/tree/main/skills/break-ui)
+- **Source:** [emilkowalski/skills — skills/break-ui](https://github.com/emilkowalski/skills/tree/main/skills/break-ui)
 - **Category:** `UI/UX` *(UI edge-case data stress testing)*
 - **Type:** `Skill` *(`SKILL.md` + `CATALOG.md`, ~312 lines)*
 - **Quality Score:** **8.0 / 10**
 - **Relevance to Us:** **3.0 / 10**
 - **Recommended Scope:** `Do Not Install`
-- **Used Instead:** [**`impeccable`**](impeccable.md) (`harden` playbook — `reference/harden.md`)
 - **Reviewed Date:** `2026-11-15`
-- **Current Status:** `🔄 Better Alternative`
+- 🔄 **Better Alternative:** [impeccable](impeccable.md) (`harden` — `reference/harden.md`)
 
 ---
 
@@ -33,8 +32,8 @@ A skill for stress-testing UI components with realistic worst-case production pa
 - Provides concrete CSS/JS fixes (`min-width: 0`, `flex-shrink: 0`, `overflow-wrap: anywhere`, `tabular-nums`, `Intl.Segmenter`, and `Intl.PluralRules`).
 
 ### Weaknesses & Conflict Reasons
-1. **Overlap with [`impeccable`](impeccable.md) (`harden`):** `impeccable`'s `reference/harden.md` playbook already audits and directly fixes long/short strings, `min-width: 0`, `line-clamp`, `RTL`, translation expansion (+30–40%), `Intl` formatting, empty states, and **network/API error states**.
-2. **Injects unwanted fixtures and toggle UI into project code:** The skill instructs the agent to create a worst-case fixture file, mount a `Demo / Worst case` toggle pill on screen, and leave the fixture in the repository. This violates our frontend rules against adding ad-hoc test fixtures as well as [`ponytail`](../architecture/ponytail.md) / [`karpathy-guidelines`](../architecture/karpathy-guidelines.md).
+1. **Overlap with [impeccable](impeccable.md) (`harden`):** `impeccable`'s `reference/harden.md` playbook already audits and directly fixes long/short strings, `min-width: 0`, `line-clamp`, `RTL`, translation expansion (+30–40%), `Intl` formatting, empty states, and **network/API error states**.
+2. **Injects unwanted fixtures and toggle UI into project code:** The skill instructs the agent to create a worst-case fixture file, mount a `Demo / Worst case` toggle pill on screen, and leave the fixture in the repository. This violates our frontend rules against adding ad-hoc test fixtures as well as [ponytail](../architecture/ponytail.md) / [karpathy-guidelines](../architecture/karpathy-guidelines.md).
 3. **Two-step halt and verbose report:** Instead of fixing obvious CSS overflow issues immediately, it outputs a 3-section report and waits for `fix all`.
 
 ---
@@ -48,13 +47,13 @@ A skill for stress-testing UI components with realistic worst-case production pa
 
 ## 4. What We Use Instead
 
-- **Used Instead:** [**`impeccable`**](impeccable.md) (`harden [target]` command / `reference/harden.md`) — hardens CSS overflow, i18n, pluralization, and API/offline error states directly without polluting the repo with demo toggles or fixture files.
+- **Used Instead:** [**impeccable**](impeccable.md) (`harden [target]` command / `reference/harden.md`) — hardens CSS overflow, i18n, pluralization, and API/offline error states directly without polluting the repo with demo toggles or fixture files.
 
 ---
 
 ## 5. Best Use Cases
 
-- **When to use:** Do not install globally — use [`impeccable`](impeccable.md) (`harden`) instead.
+- **When to use:** Do not install globally — use [impeccable](impeccable.md) (`harden`) instead.
 
 ---
 
@@ -62,4 +61,4 @@ A skill for stress-testing UI components with realistic worst-case production pa
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Audited GitHub `SKILL.md` + `CATALOG.md` and conflicts | `🔄 Better Alternative` | Skipped because [`impeccable`](impeccable.md) (`harden`) handles this cleanly without injecting fixture files or toggle pills into the repo. |
+| 2026-11-15 | Audited GitHub `SKILL.md` + `CATALOG.md` and conflicts | 🔄 **Better Alternative:** [impeccable](impeccable.md) | Skipped because [impeccable](impeccable.md) (`harden`) handles this cleanly without injecting fixture files or toggle pills into the repo. |

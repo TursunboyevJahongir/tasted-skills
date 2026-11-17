@@ -2,7 +2,7 @@
 
 [🇺🇿 O'zbekcha](../../mobile/mobile-native.md) | **🇬🇧 English** | [🇷🇺 Русский](../../ru/mobile/mobile-native.md)
 
-- **Source:** [emilkowalski/skills — `skills/mobile-native`](https://github.com/emilkowalski/skills/tree/main/skills/mobile-native)
+- **Source:** [emilkowalski/skills — skills/mobile-native](https://github.com/emilkowalski/skills/tree/main/skills/mobile-native)
 - **Category:** `Mobile` *(Mobile Web, PWA & Mini App)*
 - **Type:** `Skill` *(`SKILL.md` + local `LOCAL-COMPATIBILITY.md` guard)*
 - **Quality Score:** **8.5 / 10**
@@ -42,11 +42,11 @@ The skill installs no external scripts or libraries. It solves one specific job:
 
 ### Strengths
 - **Zero JS device-sniffing:** Strictly forbids broken `useIsTouchDevice()` hooks or `navigator.userAgent` checks in favor of CSS capability media queries.
-- **Compact & actionable:** ~315 lines, zero scripts, includes a crisp `Never Ship` checklist, and outputs concise summaries aligned with [`ponytail`](../architecture/ponytail.md).
+- **Compact & actionable:** ~315 lines, zero scripts, includes a crisp `Never Ship` checklist, and outputs concise summaries aligned with [ponytail](../architecture/ponytail.md).
 - **Preserves accessibility:** Fixes input auto-zoom via `16px` font size instead of disabling pinch-to-zoom.
 
 ### Weaknesses and Cost
-- Does not restructure multi-column desktop layouts into mobile UX (use [`impeccable`](../ui-ux/impeccable.md)'s `adapt` playbook for responsive layout redesign).
+- Does not restructure multi-column desktop layouts into mobile UX (use [impeccable](../ui-ux/impeccable.md)'s `adapt` playbook for responsive layout redesign).
 - Global `html { overscroll-behavior: none; }` disables pull-to-refresh on standard content/catalog pages — constrained via `LOCAL-COMPATIBILITY.md` to app-shell / map / PWA surfaces only.
 
 ---
@@ -57,7 +57,7 @@ The skill installs no external scripts or libraries. It solves one specific job:
 - **Applied sanitization & conflict guards:**
   1. **Stripped `## Initial Response` block:** Removed the forced *"I'm ready to make your web app feel native on mobile..."* greeting.
   2. **Narrowed `description` (auto-trigger guard):** Scoped strictly to end-user mobile web apps, PWAs, and mobile WebViews/Mini Apps; explicitly excluded desktop-only **admin panels**, Smart TV surfaces, and native **React Native / Expo** apps.
-  3. **Replaced uninstalled sibling skill references:** Pointed `animate` and `review-animations` mentions to [`impeccable`](../ui-ux/impeccable.md) and added `@media (prefers-reduced-motion: reduce)` protection to the `:active` press recipe.
+  3. **Replaced uninstalled sibling skill references:** Pointed `animate` and `review-animations` mentions to [impeccable](../ui-ux/impeccable.md) and added `@media (prefers-reduced-motion: reduce)` protection to the `:active` press recipe.
   4. **Added `LOCAL-COMPATIBILITY.md`:** Established clear boundaries with `impeccable`, `animate-expo`, `cross-platform-qa`, and `ponytail`.
 
 ---
@@ -65,10 +65,10 @@ The skill installs no external scripts or libraries. It solves one specific job:
 ## 4. Fit & Compatibility with Our Existing Stack
 
 Fills the exact mobile-browser platform gap without colliding with our existing skills:
-- **[`impeccable`](../ui-ux/impeccable.md)** — owns overall UI/UX hierarchy, typography, responsive layout adaptation (`adapt`), and web motion (`animate`), while `mobile-native` handles low-level mobile browser platform rules (`dvh/svh`, `interactive-widget`, `overscroll-behavior`, `pointer: coarse`, `safe-area-inset-*`).
-- **[`animate-expo`](animate-expo.md)** — dedicated to native React Native / Expo UI-thread animations and gestures.
+- **[impeccable](../ui-ux/impeccable.md)** — owns overall UI/UX hierarchy, typography, responsive layout adaptation (`adapt`), and web motion (`animate`), while `mobile-native` handles low-level mobile browser platform rules (`dvh/svh`, `interactive-widget`, `overscroll-behavior`, `pointer: coarse`, `safe-area-inset-*`).
+- **[animate-expo](animate-expo.md)** — dedicated to native React Native / Expo UI-thread animations and gestures.
 - **`web-to-native-mobile`** — covers porting web workflows to native iOS/Android apps.
-- **[`cross-platform-qa`](cross-platform-qa.md)** — aligns 100% with `mobile-native`'s real-hardware verification rule (Stage 1 local, Stage 2 physical phone).
+- **[cross-platform-qa](cross-platform-qa.md)** — aligns 100% with `mobile-native`'s real-hardware verification rule (Stage 1 local, Stage 2 physical phone).
 
 ---
 

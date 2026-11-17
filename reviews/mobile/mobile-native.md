@@ -2,7 +2,7 @@
 
 **🇺🇿 O'zbekcha** | [🇬🇧 English](../en/mobile/mobile-native.md) | [🇷🇺 Русский](../ru/mobile/mobile-native.md)
 
-- **Manba:** [emilkowalski/skills — `skills/mobile-native`](https://github.com/emilkowalski/skills/tree/main/skills/mobile-native)
+- **Manba:** [emilkowalski/skills — skills/mobile-native](https://github.com/emilkowalski/skills/tree/main/skills/mobile-native)
 - **Turkum:** `Mobile` *(Mobile Web, PWA & Mini App)*
 - **Turi:** `Skill` *(`SKILL.md` + lokal `LOCAL-COMPATIBILITY.md` moslik himoyasi)*
 - **Sifat bahosi:** **8.5 / 10**
@@ -42,11 +42,11 @@ Skill hech qanday tashqi skript yoki kutubxona o'rnatmaydi. U bitta aniq vazifan
 
 ### Kuchli tomonlari
 - **Ortiqcha JS yozdirmaydi:** `useIsTouchDevice()` yoki `navigator.userAgent` kabi noto'g'ri yechimlarni qat'iy taqiqlab, CSS media query va platforma imkoniyatlaridan foydalanadi.
-- **Ixcham va aniq:** ~315 qator, kontekstni shishirmaydi (`0` ta skript), oxirida aniq `Never Ship` tekshiruv jadvali bor va [`ponytail`](../architecture/ponytail.md) kabi qisqa javob qaytaradi.
+- **Ixcham va aniq:** ~315 qator, kontekstni shishirmaydi (`0` ta skript), oxirida aniq `Never Ship` tekshiruv jadvali bor va [ponytail](../architecture/ponytail.md) kabi qisqa javob qaytaradi.
 - **Accessibility'ni buzmaydi:** Zoom'ni o'chirib qo'yish o'rniga ildiz sababni (`16px` input shrifti) to'g'rilaydi.
 
 ### Zaif tomonlari va xarajati
-- Buzilgan ko'p ustunli desktop sahifani o'zi mobil UX'ga qayta loyihalab bermaydi (buning uchun [`impeccable`](../ui-ux/impeccable.md) ning `adapt` bo'limi ishlatiladi).
+- Buzilgan ko'p ustunli desktop sahifani o'zi mobil UX'ga qayta loyihalab bermaydi (buning uchun [impeccable](../ui-ux/impeccable.md) ning `adapt` bo'limi ishlatiladi).
 - `html { overscroll-behavior: none; }` qoidasi oddiy maqola/katalog saytlarda pull-to-refresh'ni o'chirib qo'yishi mumkin — shu sababli `LOCAL-COMPATIBILITY.md` orqali faqat app-shell / xarita / PWA sahifalarida qo'llash chegaralandi.
 
 ---
@@ -57,18 +57,18 @@ Skill hech qanday tashqi skript yoki kutubxona o'rnatmaydi. U bitta aniq vazifan
 - **Qo'llanilgan sanitarizatsiya va konflikt himoyasi:**
   1. **`## Initial Response` bloki olib tashlandi:** Savolsiz chaqirilganda faqat *"I'm ready to make your web app feel native on mobile..."* qaytarish talabi kesib tashlandi.
   2. **`description` aniq chegaralandi (Auto-trigger himoyasi):** Faqat foydalanuvchi mobil veb-ilovalari, PWA va mobil WebView/Mini App'larda ishga tushadigan qilindi; faqat kompyuterda ishlatiladigan ichki **admin panellar**, TV interfeyslar va toza **native React Native / Expo** ilovalar istisno qilindi.
-  3. **O'rnatilmagan skill havolalari almashtirildi:** Asl matndagi `animate` va `review-animations` havolalari bizda ishlatilayotgan [`impeccable`](../ui-ux/impeccable.md) ga yo'naltirildi, `:active` bosish misoliga `@media (prefers-reduced-motion: reduce)` himoyasi qo'shildi.
-  4. **`LOCAL-COMPATIBILITY.md` qo'shildi:** [`animate-expo`](animate-expo.md) dagi kabi lokal moslik fayli yaratilib, `impeccable`, `animate-expo`, `cross-platform-qa` va `ponytail` bilan aniq vazifa taqsimoti belgilandi.
+  3. **O'rnatilmagan skill havolalari almashtirildi:** Asl matndagi `animate` va `review-animations` havolalari bizda ishlatilayotgan [impeccable](../ui-ux/impeccable.md) ga yo'naltirildi, `:active` bosish misoliga `@media (prefers-reduced-motion: reduce)` himoyasi qo'shildi.
+  4. **`LOCAL-COMPATIBILITY.md` qo'shildi:** [animate-expo](animate-expo.md) dagi kabi lokal moslik fayli yaratilib, `impeccable`, `animate-expo`, `cross-platform-qa` va `ponytail` bilan aniq vazifa taqsimoti belgilandi.
 
 ---
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
 Tozalangandan keyin mavjud global skillar bilan **umuman to'qnashmaydi**, aksincha ochiq qolgan mobil brauzer qatlamini yopadi:
-- **[`impeccable`](../ui-ux/impeccable.md)** — umumiy UI/UX, ierarxiya, tipografiya, responsive qayta joylashtirish (`adapt`) va veb animatsiyani (`animate`) boshqaradi; `mobile-native` esa faqat mobil brauzerning pastki platforma qoidalarini (`dvh/svh`, `interactive-widget`, `overscroll-behavior`, `pointer: coarse`, `safe-area-inset-*`) to'g'rilaydi.
-- **[`animate-expo`](animate-expo.md)** — faqat React Native / Expo native ilovalardagi UI-thread harakatlar uchun.
+- **[impeccable](../ui-ux/impeccable.md)** — umumiy UI/UX, ierarxiya, tipografiya, responsive qayta joylashtirish (`adapt`) va veb animatsiyani (`animate`) boshqaradi; `mobile-native` esa faqat mobil brauzerning pastki platforma qoidalarini (`dvh/svh`, `interactive-widget`, `overscroll-behavior`, `pointer: coarse`, `safe-area-inset-*`) to'g'rilaydi.
+- **[animate-expo](animate-expo.md)** — faqat React Native / Expo native ilovalardagi UI-thread harakatlar uchun.
 - **`web-to-native-mobile`** — veb funksiyani native iOS/Android ilovaga ko'chirish uchun (mobil vebni qamrab olmaydi).
-- **[`cross-platform-qa`](cross-platform-qa.md)** — `mobile-native` ning "oxirida haqiqiy telefonda tekshir" qoidasi 2-bosqichli QA jarayonimiz (1-bosqich lokal, 2-bosqich real telefon) bilan 100% mos tushadi.
+- **[cross-platform-qa](cross-platform-qa.md)** — `mobile-native` ning "oxirida haqiqiy telefonda tekshir" qoidasi 2-bosqichli QA jarayonimiz (1-bosqich lokal, 2-bosqich real telefon) bilan 100% mos tushadi.
 
 ---
 

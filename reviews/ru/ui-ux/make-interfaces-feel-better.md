@@ -8,9 +8,8 @@
 - **Оценка качества:** **7.5 / 10**
 - **Полезность для нас:** **2.5 / 10**
 - **Рекомендуемый охват:** `Не устанавливать` *(ранее был протестирован и удален)*
-- **Используемая замена:** [**`impeccable`**](impeccable.md) ([pbakaus/impeccable](https://github.com/pbakaus/impeccable)) + [**`animate-expo`**](../mobile/animate-expo.md) ([emilkowalski/skills](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo))
 - **Период использования:** `2026-10-31 → 2026-11-15` *(протестирован и удалён)*
-- **Текущий статус:** `🔄 Есть альтернатива получше` *(🧪 Протестирован и удален, так как `impeccable` + `animate-expo` полностью его заменяют)*
+- 🔄 **Есть альтернатива получше:** [impeccable](impeccable.md) + [animate-expo](../mobile/animate-expo.md) *(протестирован 16 дней и удалён)*
 
 ---
 
@@ -31,11 +30,11 @@
 
 ## 2. Почему был удален? (Слабые стороны и издержки)
 
-1. **Прямое пересечение с [`impeccable`](impeccable.md) (`Auto-trigger overlap`):**
+1. **Прямое пересечение с [impeccable](impeccable.md) (`Auto-trigger overlap`):**
    - Описание `description` перехватывает практически любую фронтенд/UI-задачу — в результате агент одновременно загружает и `impeccable`, и `make-interfaces-feel-better`, вдвое расходуя контекст и получая противоречивые правила.
 2. **Жестко зашитые (rigid) шаблонные значения:**
    - Требование обязательно ставить `scale(0.96)` на каждую кнопку и `scale(0.25) + blur(4px)` на каждую иконку далеко не всегда подходит под дизайн-систему конкретного проекта.
-3. **Длинный табличный отчет, противоречащий [`ponytail`](../architecture/ponytail.md):**
+3. **Длинный табличный отчет, противоречащий [ponytail](../architecture/ponytail.md):**
    - Значительная часть скилла (строки `120–187`) заставляет агента выдумывать отклоненных кандидатов (`Considered but Rejected`) и длинные таблицы `Before/After`.
 
 ---
@@ -50,16 +49,16 @@
 
 `make-interfaces-feel-better` был удален, а вместо него используются 2 более сильных скилла:
 
-1. **Взамен (Web + iOS + Android UI/UX и Polish):** [**`impeccable`**](impeccable.md) — [pbakaus/impeccable](https://github.com/pbakaus/impeccable)
+1. **Взамен (Web + iOS + Android UI/UX и Polish):** [**impeccable**](impeccable.md) — [pbakaus/impeccable](https://github.com/pbakaus/impeccable)
    - В его разделах `craft-floor.md`, `polish.md`, `animate.md` и `typeset.md` уже есть `tabular-nums`, `text-wrap: balance`, оптическое выравнивание, тени, зона нажатия `44×44px` и ограничения `will-change`, причем они охватывают не только Web, но и нативные iOS и Android.
-2. **Взамен (Мобильные анимации React Native / Expo):** [**`animate-expo`**](../mobile/animate-expo.md) — [emilkowalski/skills (`animate-expo`)](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo)
+2. **Взамен (Мобильные анимации React Native / Expo):** [**animate-expo**](../mobile/animate-expo.md) — [emilkowalski/skills (animate-expo)](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo)
    - В мобильных приложениях решает отклик нажатия (`press feedback`), bottom-sheet, пружины и тактильный отклик (`haptics`) в UI-потоке `Reanimated` (`60/120fps`).
 
 ---
 
 ## 5. В каких направлениях и задачах полезен?
 
-- **Когда использовать:** Не устанавливать — вместо него используются [`impeccable`](impeccable.md) и [`animate-expo`](../mobile/animate-expo.md).
+- **Когда использовать:** Не устанавливать — вместо него используются [impeccable](impeccable.md) и [animate-expo](../mobile/animate-expo.md).
 
 ---
 
@@ -67,5 +66,5 @@
 
 | Дата | Действие | Статус | Примечание |
 |---|---|---|---|
-| 2026-10-31 | Глобальное подключение через `skillshare` и проверка в работе | `🔄 Есть альтернатива получше` | Проверялся на микро-полировке Web CSS (начал конфликтовать по auto-trigger после установки `impeccable` `2026-11-09`). |
-| 2026-11-15 | Удаление из глобального окружения через `skillshare uninstall make-interfaces-feel-better -g` | `🔄 Есть альтернатива получше` | Удалён, так как [`impeccable`](impeccable.md) и [`animate-expo`](../mobile/animate-expo.md) полностью покрывают все его полезные правила без громоздких отчётов. |
+| 2026-10-31 | Глобальное подключение через `skillshare` и проверка в работе | 🔄 **Есть альтернатива получше:** [impeccable](impeccable.md) + [animate-expo](../mobile/animate-expo.md) | Проверялся на микро-полировке Web CSS (начал конфликтовать по auto-trigger после установки `impeccable` `2026-11-09`). |
+| 2026-11-15 | Удаление из глобального окружения через `skillshare uninstall make-interfaces-feel-better -g` | 🔄 **Есть альтернатива получше:** [impeccable](impeccable.md) + [animate-expo](../mobile/animate-expo.md) | Удалён, так как [impeccable](impeccable.md) и [animate-expo](../mobile/animate-expo.md) полностью покрывают все его полезные правила без громоздких отчётов. |

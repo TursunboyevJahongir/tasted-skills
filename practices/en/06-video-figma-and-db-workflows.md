@@ -4,7 +4,7 @@
 
 ⬅️ [Back to Practices Table of Contents](README.md)
 
-- **Combined Tools:** `watch` (`video-analyzer`) + `figma` (`figma-implement-design`, `figma-generate-design`, `figma-use`) + [**`agent-desktop`**](../../reviews/en/developer-tools/agent-desktop.md) (`agent-desktop-ffi`) + [**`graphify`**](../../reviews/en/architecture/graphify.md) + `drizzle-relations-v2`
+- **Combined Tools:** `watch` (`video-analyzer`) + `figma` (`figma-implement-design`, `figma-generate-design`, `figma-use`) + [**agent-desktop**](../../reviews/en/developer-tools/agent-desktop.md) (`agent-desktop-ffi`) + [**graphify**](../../reviews/en/architecture/graphify.md) + `drizzle-relations-v2`
 - **Target Tasks:** Video bug-report triage, motion/UI cloning from screen recordings, two-way Code <-> Figma sync, and high-speed desktop automation.
 
 ---
@@ -20,10 +20,10 @@ When a tester or user sends a screen recording saying *"the app broke here"*:
 ### 2) Clone Reference App Animations & Flows 1:1 (`watch` + `impeccable` + `animate-expo`)
 To recreate a polished transition or onboarding flow from a reference recording:
 - Run `watch` at a dense frame rate (`5fps`) to extract the motion sequence;
-- Feed the extracted frames into [**`impeccable`**](../../reviews/en/ui-ux/impeccable.md) and [**`animate-expo`**](../../reviews/en/mobile/animate-expo.md) to translate the timing/spring physics directly into `Reanimated` UI-thread code.
+- Feed the extracted frames into [**impeccable**](../../reviews/en/ui-ux/impeccable.md) and [**animate-expo**](../../reviews/en/mobile/animate-expo.md) to translate the timing/spring physics directly into `Reanimated` UI-thread code.
 
 ### 3) Fact-Check Hype Demo Videos (`watch` + `tasted-skills`)
-When auditing viral tool reels or tutorials with [`tasted-skills`](../../skills/tasted-skills/SKILL.md):
+When auditing viral tool reels or tutorials with [tasted-skills](../../skills/tasted-skills/SKILL.md):
 - `watch` catches split-second on-screen disclaimers (`SELF-REPORTED`), paid `.env` API keys, and sped-up terminal cuts that the voiceover never mentions.
 
 ---

@@ -2,15 +2,14 @@
 
 **🇺🇿 O'zbekcha** | [🇬🇧 English](../en/developer-tools/claude-code-setup.md) | [🇷🇺 Русский](../ru/developer-tools/claude-code-setup.md)
 
-- **Manba:** [anthropics/claude-plugins-official (`claude-code-setup`)](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup)
+- **Manba:** [anthropics/claude-plugins-official (claude-code-setup)](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup)
 - **Turkum:** `Developer Tools` *(Yangi loyiha uchun boshlang'ich Claude Code sozlamalarini tavsiya qilish)*
 - **Turi:** `Plugin (Read-Only Recommender Skill)`
 - **Sifat bahosi:** **7.5 / 10**
 - **Ishda kerak bo'lishi:** **2.0 / 10** *(boshlovchilar uchun mo'ljallangan; bizning 5-agentli tayyor tizimimizda ortiqcha)*
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
-- **O'rniga ishlatiladigan tizim:** [**`skillshare`**](skillshare.md) + ushbu **`tasted-skills`** katalogi
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `🔄 Alternativi yaxshiroq`
+- 🔄 **Alternativi yaxshiroq:** [skillshare](skillshare.md)
 
 ---
 
@@ -26,7 +25,7 @@ Anthropic'ning rasmiy `claude-plugins-official` to'plamidagi read-only yordamchi
 ## 2. Nega o'rnatmadik?
 
 - **Noldan boshlayotganlar uchun:** Hali o'z skill/agent tizimini qurmagan yangi Claude Code foydalanuvchilari uchun qulay onboarding vositasi, lekin saralangan stekda yangi qiymat bermaydi.
-- **Faqat bitta muhit (`Claude Code`) va umumiy tavsiyalar:** U ko'pincha biz kontekstni shishirmaslik uchun ataylab rad etgan og'ir MCP serverlarni (masalan, brauzer/mobil MCP'lar) qayta tavsiya qiladi. Bizda esa barcha 5 ta AI muhitni bitta markazdan boshqaradigan [**`skillshare`**](skillshare.md) ishlab turibdi.
+- **Faqat bitta muhit (`Claude Code`) va umumiy tavsiyalar:** U ko'pincha biz kontekstni shishirmaslik uchun ataylab rad etgan og'ir MCP serverlarni (masalan, brauzer/mobil MCP'lar) qayta tavsiya qiladi. Bizda esa barcha 5 ta AI muhitni bitta markazdan boshqaradigan [**skillshare**](skillshare.md) ishlab turibdi.
 
 ---
 
@@ -34,4 +33,4 @@ Anthropic'ning rasmiy `claude-plugins-official` to'plamidagi read-only yordamchi
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kod auditi | `🔄 Alternativi yaxshiroq` | Xavfsiz read-only onboarding plagini (`7.5/10`), ammo `skillshare` asosidagi ko'p-agentli tizimimizda ehtiyoj yo'q. |
+| 2026-11-16 | Manba kod auditi | 🔄 **Alternativi yaxshiroq:** [skillshare](skillshare.md) | Xavfsiz read-only onboarding plagini (`7.5/10`), ammo `skillshare` asosidagi ko'p-agentli tizimimizda ehtiyoj yo'q. |

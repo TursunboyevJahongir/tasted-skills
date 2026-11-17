@@ -49,7 +49,7 @@ A tool that turns any project folder (code, SQL schemas, Markdown docs, PDFs, im
 
 ## 4. Relevance & Compatibility with Our Existing Tools
 
-- Pairs naturally with [`grill-me`](grill-me.md) (planning) and `domain-modeling` (`CONTEXT.md`) as an architectural map for large multi-service codebases.
+- Pairs naturally with [grill-me](grill-me.md) (planning) and `domain-modeling` (`CONTEXT.md`) as an architectural map for large multi-service codebases.
 
 ---
 

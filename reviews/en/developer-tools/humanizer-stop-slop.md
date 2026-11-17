@@ -8,9 +8,8 @@
 - **Quality Score:** **7.5 / 10**
 - **How Often Needed:** **2.0 / 10** *(built for essays and blog posts, not software engineering or product UI)*
 - **Recommended Scope:** `Do Not Install`
-- **Instead Use:** [**`ponytail`**](../architecture/ponytail.md) (concise engineering replies) + [**`impeccable`**](../ui-ux/impeccable.md) (`clarify` for product UX copy)
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `🔄 Better Alternative`
+- 🔄 **Better Alternative:** [ponytail](../architecture/ponytail.md) + [impeccable](../ui-ux/impeccable.md) (`clarify`)
 
 ---
 
@@ -29,7 +28,7 @@ Two popular Markdown skills focused on stripping LLM clichés from long-form pro
 
 - **Not built for code or UI:** Both target essays, newsletters, and marketing copy rather than codebases or app interfaces.
 - **Context weight:** `humanizer` alone injects `~32 KB` of prose rules whenever triggered.
-- **Already covered where it matters:** [**`ponytail`**](../architecture/ponytail.md) keeps agent technical responses crisp, and [**`impeccable`**](../ui-ux/impeccable.md) (`clarify`) handles in-product UI microcopy.
+- **Already covered where it matters:** [**ponytail**](../architecture/ponytail.md) keeps agent technical responses crisp, and [**impeccable**](../ui-ux/impeccable.md) (`clarify`) handles in-product UI microcopy.
 
 ---
 
@@ -37,4 +36,4 @@ Two popular Markdown skills focused on stripping LLM clichés from long-form pro
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Primary-source audit | `🔄 Better Alternative` | Clean prose-editing references (`7.5/10`), skipped because our engineering reply style and UI copy are already handled by `ponytail` + `impeccable`. |
+| 2026-11-16 | Primary-source audit | 🔄 **Better Alternative:** [ponytail](../architecture/ponytail.md) + [impeccable](../ui-ux/impeccable.md) | Clean prose-editing references (`7.5/10`), skipped because our engineering reply style and UI copy are already handled by `ponytail` + `impeccable`. |

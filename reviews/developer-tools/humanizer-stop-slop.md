@@ -8,9 +8,8 @@
 - **Sifat bahosi:** **7.5 / 10**
 - **Ishda kerak bo'lishi:** **2.0 / 10** *(kod yoki mahsulot UI'i uchun emas — faqat uzun maqola/post tahriri uchun)*
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
-- **O'rniga ishlatiladigan tizim:** [**`ponytail`**](../architecture/ponytail.md) (qisqa va aniq texnik javoblar) + [**`impeccable`**](../ui-ux/impeccable.md) (`clarify` — UI matnlari uchun)
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `🔄 Alternativi yaxshiroq`
+- 🔄 **Alternativi yaxshiroq:** [ponytail](../architecture/ponytail.md) + [impeccable](../ui-ux/impeccable.md) (`clarify`)
 
 ---
 
@@ -29,7 +28,7 @@ AI yozgan matnlardagi sun'iy ohang va shtamplarni olib tashlashga qaratilgan ikk
 
 - **Kodlash va UI uchun mo'ljallanmagan:** Ikkalasi ham blogpost, esse va marketing matnlari uchun yozilgan; kundalik dasturlashda amaliy ustunlik bermaydi.
 - **Kontekst hajmi:** Birgina `humanizer` ishga tushganda `~32 KB` matn qoidalarini kontekstga yuklaydi.
-- **Bizda o'z vazifasiga aniq mos muqobillar bor:** Agentning javoblari qisqa va lo'nda bo'lishini [**`ponytail`**](../architecture/ponytail.md), ilova ichidagi tugma/xabar matnlari tozaligini esa [**`impeccable`**](../ui-ux/impeccable.md) (`clarify`) boshqaradi.
+- **Bizda o'z vazifasiga aniq mos muqobillar bor:** Agentning javoblari qisqa va lo'nda bo'lishini [**ponytail**](../architecture/ponytail.md), ilova ichidagi tugma/xabar matnlari tozaligini esa [**impeccable**](../ui-ux/impeccable.md) (`clarify`) boshqaradi.
 
 ---
 
@@ -37,4 +36,4 @@ AI yozgan matnlardagi sun'iy ohang va shtamplarni olib tashlashga qaratilgan ikk
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kod auditi | `🔄 Alternativi yaxshiroq` | Uzun maqolalar uchun foydali (`7.5/10`), lekin kod va UI ish oqimimizda keraksiz yuk bo'lgani uchun o'rnatilmadi. |
+| 2026-11-16 | Manba kod auditi | 🔄 **Alternativi yaxshiroq:** [ponytail](../architecture/ponytail.md) + [impeccable](../ui-ux/impeccable.md) | Uzun maqolalar uchun foydali (`7.5/10`), lekin kod va UI ish oqimimizda keraksiz yuk bo'lgani uchun o'rnatilmadi. |

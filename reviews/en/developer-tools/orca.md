@@ -33,7 +33,7 @@
 
 ## 2. Strengths & Weaknesses (Live Comparison vs `T3 Code`)
 
-| Criterion | **`Orca` (`stablyai/orca` v1.4.261)** | [**`T3 Code`**](t3-code.md) *(uninstalled)* |
+| Criterion | **`Orca` (`stablyai/orca` v1.4.261)** | [**T3 Code**](t3-code.md) *(uninstalled)* |
 |---|---|---|
 | **Single-prompt multi-AI chaining** | ✅ **Native `orca orchestration` DAG:** live inline worker cards (`Claude`, `Codex`, `Antigravity`) in Chat UI, automatic wakeups (`worker_done`), and instant quota/error escalations | ⚠️ External CLI subagent scripts only (no inline worker cards in UI) |
 | **Mobile app reliability** | ✅ Official App Store / Play Store app (`LAN` + `E2EE Relay` + Push notifications) | ❌ Beta — disconnects frequently when the phone locks or switches networks |
@@ -61,7 +61,7 @@
 ## 4. Fit & Compatibility with Our Existing Stack
 
 - `Codex`, `Claude Code`, and `Antigravity` status hooks (`orca agent hooks on`) and the `orchestration` skill integrate cleanly with `task-context`, `grill-me`, `ponytail`, `agent-desktop`, and `agent-device`.
-- Uninstalled [**`T3 Code`**](t3-code.md) completely (freeing `~3.87 GB` of disk space) and migrated all 12 active repositories into `Orca`.
+- Uninstalled [**T3 Code**](t3-code.md) completely (freeing `~3.87 GB` of disk space) and migrated all 12 active repositories into `Orca`.
 
 ---
 

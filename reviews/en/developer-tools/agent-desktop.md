@@ -55,7 +55,7 @@ Core workflow (`observe → act → verify`):
 ## 4. Fit & Compatibility with Our Existing Stack
 
 - **Web (`Google Chrome`) & macOS desktop apps:** `agent-desktop` remains our **100% primary** background UI verification tool.
-- **Mobile & TV (`iOS`, `Android`, `tvOS`, `Android TV`):** Driven primarily via [`agent-device`](../mobile/agent-device.md) (`agent-desktop` + `Device Hub` remains a fallback for iOS).
+- **Mobile & TV (`iOS`, `Android`, `tvOS`, `Android TV`):** Driven primarily via [agent-device](../mobile/agent-device.md) (`agent-desktop` + `Device Hub` remains a fallback for iOS).
 - Includes the companion `agent-desktop-ffi` skill for direct C-ABI bindings from Python, Swift, Node, or Rust when needed.
 
 ---
@@ -63,7 +63,7 @@ Core workflow (`observe → act → verify`):
 ## 5. When to Use (and When Not To)
 
 - **When to use:** Testing local web apps in `Google Chrome` and automating macOS desktop GUI applications in the background.
-- **When not to use:** Mobile and TV simulators/emulators (use [`agent-device`](../mobile/agent-device.md)) or low-level network waterfall / 6x CPU throttling benchmarks (use Chrome DevTools).
+- **When not to use:** Mobile and TV simulators/emulators (use [agent-device](../mobile/agent-device.md)) or low-level network waterfall / 6x CPU throttling benchmarks (use Chrome DevTools).
 
 ---
 

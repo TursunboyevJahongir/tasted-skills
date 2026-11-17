@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **9.0 / 10**
 - **Ishda kerak bo'lishi:** **7.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global CLI (/opt/homebrew/bin/avdslim)` — barcha lokal Android AVD'larga `tune-avd` + `bake --headless` va GPS himoyalangan `defaults` bilan qo'llanadi (`install-shim` shart emas)
-- **Birga ishlaydigan tizimlar:** [**`agent-device`**](agent-device.md) + [**`adb`**](adb.md) + [**`simslim`**](simslim.md) + [**`cross-platform-qa`**](cross-platform-qa.md)
+- **Birga ishlaydigan tizimlar:** [**agent-device**](agent-device.md) + [**adb**](adb.md) + [**simslim**](simslim.md) + [**cross-platform-qa**](cross-platform-qa.md)
 - **Ishlatilayotgan sana:** `2026-11-16` dan
 - **Joriy holati:** `✅ Ishlatyapman`
 
@@ -19,7 +19,7 @@
 > [!IMPORTANT]
 > **Oddiy tilda (Asosiy vazifasi va foydasi):** Android Emulator kompyuterni qotirmasligi uchun grafikani sekin CPU'dan **Apple Metal GPU**'ga o'tkazadi va **RAM sarfini `4.41 GB -> 2.64 GB` (Studio standart `8.5 GB` idan `-69%`)** gacha tushirib, yoqilishini `14` soniyaga tezlatadi.
 
-[**`simslim`**](simslim.md) (iOS) g'oyasidan ilhomlanib yozilgan Android Virtual Device (`AVD`) optimizatori (`MIT`, `go.mod` atigi `45 bayt` — `0` tashqi kutubxona, `0` tarmoq chaqiruvi). Android emulyatorlar macOS va Linux'da nima uchun `4.5 GB – 8.5 GB` RAM yeyishining 4 ta tub sababini hal qiladi:
+[**simslim**](simslim.md) (iOS) g'oyasidan ilhomlanib yozilgan Android Virtual Device (`AVD`) optimizatori (`MIT`, `go.mod` atigi `45 bayt` — `0` tashqi kutubxona, `0` tarmoq chaqiruvi). Android emulyatorlar macOS va Linux'da nima uchun `4.5 GB – 8.5 GB` RAM yeyishining 4 ta tub sababini hal qiladi:
 
 1. **`Lavapipe / SwiftShader` tuzog'ini yo'qotadi (`-gpu host`):** Android Studio ko'pincha `hw.gpu.mode=auto` / `hw.gpu.enabled=no` qoldirib, grafikani CPU dasturiy renderiga (`SwiftShader LLVM` / `lavapipe`) tushirib qo'yadi. `avdslim tune-avd` buni native **Apple Silicon Metal GPU (`host`)** rejimiga o'tkazadi.
 2. **QEMU `-lowram` va `1536 MB` chegarasi:** QEMU'ning yashirin 4 GB minimal chegarasini chetlab o'tib, Android yadrosini yengil `-lowram` rejimida ishga tushiradi (`config.ini.bak` zaxirasi saqlanadi).

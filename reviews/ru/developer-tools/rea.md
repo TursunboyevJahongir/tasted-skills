@@ -2,9 +2,9 @@
 
 [🇺🇿 O'zbekcha](../../developer-tools/rea.md) | [🇬🇧 English](../../en/developer-tools/rea.md) | **🇷🇺 Русский**
 
-- **Источник:** [morluto/rea](https://github.com/morluto/rea) · [rea.tools](https://rea.tools/) · [`rea-agents` (npm)](https://www.npmjs.com/package/rea-agents)
+- **Источник:** [morluto/rea](https://github.com/morluto/rea) · [rea.tools](https://rea.tools/) · [rea-agents (npm)](https://www.npmjs.com/package/rea-agents)
 - **Категория:** `Developer Tools` *(Реверс-инжиниринг закрытых приложений, APK, Electron `.asar` и нативных бинарников)*
-- **Тип:** `Standalone CLI + On-Demand Skill` ([`skills/rea`](../../../skills/rea/SKILL.md)) *(MCP-сервер отключён)*
+- **Тип:** `Standalone CLI + On-Demand Skill` ([skills/rea](../../../skills/rea/SKILL.md)) *(MCP-сервер отключён)*
 - **Оценка качества:** **9.0 / 10**
 - **Насколько нужно нам:** **3.5 / 10**
 - **Рекомендуемый масштаб:** `On-Demand CLI + лёгкий глобальный скилл-обёртка rea` *(никогда не ставить как глобальный MCP)*
@@ -16,7 +16,7 @@
 ## 1. Что это и как работает?
 
 > [!IMPORTANT]
-> **Простыми словами (Главная задача и польза):** Вскрывает и анализирует **чужие готовые программы без исходного кода** (Electron `.asar`, сжатые веб-бандлы, Android `.apk`, нативные бинарники), показывая с доказательствами, как внутри устроена нужная фича. Поскольку штатный MCP-сервер сжигает `~75,000+` токенов контекста на схемы инструментов, мы не подключаем его постоянно — вместо этого наш лёгкий скилл [`rea`](../../../skills/rea/SKILL.md) запускает его **временно с `0` постоянного расхода токенов** только по сигналу `"rea"`.
+> **Простыми словами (Главная задача и польза):** Вскрывает и анализирует **чужие готовые программы без исходного кода** (Electron `.asar`, сжатые веб-бандлы, Android `.apk`, нативные бинарники), показывая с доказательствами, как внутри устроена нужная фича. Поскольку штатный MCP-сервер сжигает `~75,000+` токенов контекста на схемы инструментов, мы не подключаем его постоянно — вместо этого наш лёгкий скилл [rea](../../../skills/rea/SKILL.md) запускает его **временно с `0` постоянного расхода токенов** только по сигналу `"rea"`.
 
 `morluto/rea` (`npm: rea-agents@6.9.0`, `MIT`) — мощная локальная система реверс-инжиниринга (CLI + MCP) на TypeScript:
 - **Встроенный статический анализ (0 внешних программ):** восстановление модулей, IPC и роутов из Electron `.asar` и JS-бандлов (`analyze-javascript-application`), проверка релизных сборок на забытые `.map`/`.dSYM` (`audit-release-exposure`), чтение `.NET` CIL (`inspect-managed-members`), бинарников `Go`/`Rust`, подписей `APK`, `Flutter` / `Unity IL2CPP` (`global-metadata.dat`), `Godot .pck`, защитных флагов `Mach-O`/`ELF`/`PE` (`inspect-binary-hardening`), `SQLite` и `GGUF`/`safetensors`.
@@ -39,12 +39,12 @@
 
 ---
 
-## 3. Безопасность и Наша Обёртка ([`skills/rea`](../../../skills/rea/SKILL.md))
+## 3. Безопасность и Наша Обёртка ([skills/rea](../../../skills/rea/SKILL.md))
 
 - **Уровень риска:** `Низкий–Средний` *(статические парсеры не исполняют код цели; динамические режимы `capture-*`/`Frida` запускают цель с правами пользователя)*
 - **Как мы очистили и автоматизировали запуск:**
   1. **Отказались от глобального MCP и `200 KB` скилла:** `npx rea-agents setup` не используется -> **`0` токенов** нагрузки в обычной разработке.
-  2. **Создали [`skills/rea`](../../../skills/rea/SKILL.md) + [`rea-session.sh`](../../../skills/rea/scripts/rea-session.sh):**
+  2. **Создали [skills/rea](../../../skills/rea/SKILL.md) + [rea-session.sh](../../../skills/rea/scripts/rea-session.sh):**
      - Активируется **только** по явному сигналу (`"rea"`, `"/rea"`).
      - **Шаг `preflight` и `ensure-node`:** Ищет подходящий Node (`v26.12.1+` / `v24.22.1+`) — **а если установленный Node устарел, автоматически обновляет/доустанавливает нужную версию (`fnm install 24` или `brew upgrade node`)**, подключает Homebrew `openjdk` (`JAVA_HOME`) и `GHIDRA_INSTALL_DIR`, определяет тип цели (`Electron .asar`, `Web URL`, `Android .apk`, `Native Mach-O/ELF/PE`, `.wasm`, `.pcap`) и показывает точные недостающие пакеты (`brew install openjdk jadx apktool` или `brew install --cask ghidra` / `rizin`) для установки перед глубоким разбором.
      - **Изолированный `run` и `cleanup`:** Выполняет команды во временной папке `/tmp/rea-ephemeral` и очищает временные файлы по завершении.
@@ -55,8 +55,8 @@
 
 | Задача | Какой инструмент используем |
 |---|---|
-| **Архитектура и навигация по нашим собственным исходникам** | [**`graphify`**](../architecture/graphify.md) (AST-каркас за `0` токенов, экономия `~10x–20x`) — `REA` не нужен |
-| **Аудит безопасности собственного кода и staging-сервера** | [**`security-audit`**](../backend/security-audit-skill.md) + [**`Shannon` (`hacker-test`)**](../backend/shannon.md) |
+| **Архитектура и навигация по нашим собственным исходникам** | [**graphify**](../architecture/graphify.md) (AST-каркас за `0` токенов, экономия `~10x–20x`) — `REA` не нужен |
+| **Аудит безопасности собственного кода и staging-сервера** | [**security-audit**](../backend/security-audit-skill.md) + [**Shannon (hacker-test)**](../backend/shannon.md) |
 | **Разбор чужих закрытых `.asar` / `.apk` / бинарников без исходников** | **`REA` (временно через наш скилл `rea`)** |
 
 ---

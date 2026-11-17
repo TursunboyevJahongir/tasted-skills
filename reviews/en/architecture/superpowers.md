@@ -36,7 +36,7 @@ When installed and tested on real tasks, it caused more friction and slowdown th
 ### 2. Unwanted `brainstorming` Auto-Triggers and Excessive Questions
 - The frontmatter in `brainstorming/SKILL.md` (`"You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior..."`) is so broad that it auto-triggers on routine UI or feature additions.
 - Even when given a clear specification, it halts execution to enforce a 4-step gate (`propose options → write design doc → get approval → writing-plans`) and asks unnecessary questions.
-- **Our clean replacement:** [**`grill-me` / `grilling` / `grill-with-docs`**](grill-me.md) — never hijacks routine prompts uninvited; only runs when we explicitly want deep requirement questioning.
+- **Our clean replacement:** [**grill-me / grilling / grill-with-docs**](grill-me.md) — never hijacks routine prompts uninvited; only runs when we explicitly want deep requirement questioning.
 
 ### 3. Bureaucratic Loops (`subagent-driven-development`) and Severe Slowdowns
 - During plan execution, every small step spawns a separate git worktree, `.superpowers/sdd/` directory, `implementer` subagent, `task-reviewer` subagent, and `fix-loop`.
@@ -44,7 +44,7 @@ When installed and tested on real tasks, it caused more friction and slowdown th
 
 ### 4. Mandatory TDD (`test-driven-development`) Conflicts with Our Web, Mobile, and Backend Workflow
 - `test-driven-development/SKILL.md` enforces `"The Iron Law: NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST. Write code before the test? Delete it. Start over."`
-- **On Web and Mobile (iOS / Android):** Writing failing unit tests before building UI and interactive screens is counterproductive — verifying live in the browser and simulator/emulator via [`cross-platform-qa`](../mobile/cross-platform-qa.md) ([`agent-desktop`](../developer-tools/agent-desktop.md) + [`Device Hub`](../mobile/ios-simulator-device-hub.md) + [`adb`](../mobile/adb.md)) is much faster and tests the actual rendered experience.
+- **On Web and Mobile (iOS / Android):** Writing failing unit tests before building UI and interactive screens is counterproductive — verifying live in the browser and simulator/emulator via [cross-platform-qa](../mobile/cross-platform-qa.md) ([agent-desktop](../developer-tools/agent-desktop.md) + [Device Hub](../mobile/ios-simulator-device-hub.md) + [adb](../mobile/adb.md)) is much faster and tests the actual rendered experience.
 - **On Backend:** Writing tests upfront and then fitting implementation to them **doubles the workload (`2x` time cost)**.
 
 ---
@@ -67,10 +67,10 @@ Instead of `superpowers`, we use focused, low-overhead tools for each stage:
 
 | Stage | Heavy Mechanism in `superpowers` | Our Fast, Clean Solution |
 |---|---|---|
-| **Idea & Plan Q&A** | `brainstorming` (auto-triggers on every task) | [**`grill-me` / `grilling`**](grill-me.md) (invoked only when needed) |
-| **Coding Discipline (Simplicity)** | `writing-plans` + `subagent-driven-development` loops | [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) (minimal, surgical changes) |
-| **Web / iOS / Android Verification** | `test-driven-development` (mandatory upfront unit tests) | [**`cross-platform-qa`**](../mobile/cross-platform-qa.md) (`agent-desktop` + `Device Hub` + `adb` emulator + 1 final physical device pass) |
-| **Independent Code Review** | `task-reviewer` loop after every micro-task | [**`T3 Code`**](../developer-tools/t3-code.md) / `argon` / `antigravity-claude` (one focused independent review when work is complete) |
+| **Idea & Plan Q&A** | `brainstorming` (auto-triggers on every task) | [**grill-me / grilling**](grill-me.md) (invoked only when needed) |
+| **Coding Discipline (Simplicity)** | `writing-plans` + `subagent-driven-development` loops | [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) (minimal, surgical changes) |
+| **Web / iOS / Android Verification** | `test-driven-development` (mandatory upfront unit tests) | [**cross-platform-qa**](../mobile/cross-platform-qa.md) (`agent-desktop` + `Device Hub` + `adb` emulator + 1 final physical device pass) |
+| **Independent Code Review** | `task-reviewer` loop after every micro-task | [**T3 Code**](../developer-tools/t3-code.md) / `argon` / `antigravity-claude` (one focused independent review when work is complete) |
 
 ---
 
@@ -86,4 +86,4 @@ Instead of `superpowers`, we use focused, low-overhead tools for each stage:
 | Date | Action | Status | Notes |
 |---|---|---|---|
 | 2026-04-04 | Installed globally and tested in daily engineering | `⚠️ Not Recommended` | Over months of real tasks, `SessionStart` overthinking and uninvited `brainstorming` slowed delivery (`test-driven-development` disabled on `2026-08-14`). |
-| 2026-09-01 | Removed from active workflow | `⚠️ Not Recommended` | Replaced cleanly by [`grill-me`](grill-me.md), [`ponytail`](ponytail.md), [`karpathy-guidelines`](karpathy-guidelines.md), and `cross-platform-qa`. |
+| 2026-09-01 | Removed from active workflow | `⚠️ Not Recommended` | Replaced cleanly by [grill-me](grill-me.md), [ponytail](ponytail.md), [karpathy-guidelines](karpathy-guidelines.md), and `cross-platform-qa`. |

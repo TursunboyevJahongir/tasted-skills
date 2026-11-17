@@ -5,7 +5,7 @@
 **Statuses (what each badge means):**
 - `✅ Using` — used daily in our workflow.
 - `👍 Good Option` — good tool, worth using when the right task comes up.
-- `🔄 Better Alternative` — good tool, we simply have a more convenient option for its job.
+- 🔄 **Better Alternative:** `[link]` — good tool, we simply have a more convenient option for its job (shown on its own line with a direct link).
 - `⚠️ Not Recommended` — carries risk or practical harm (reason noted on each entry).
 
 **Scores (two separate things):**
@@ -13,7 +13,7 @@
 - **`How Often Needed` (`1–10`)** — how often it is needed in daily work *(`3/10` does NOT mean bad — just rarely needed)*.
 
 > [!TIP]
-> **🛡️ Our Security Rule (Recommended for You Too):** Never install third-party skills, plugins, or MCP servers based solely on their `README` or GitHub stars. Before installing anything, **we always have our AI coding agent inspect the primary source code directly** (`SKILL.md`, scripts, hooks, network/env access) and run [**`skillshare`**](reviews/en/developer-tools/skillshare.md)'s built-in `skillshare audit` check.
+> **🛡️ Our Security Rule (Recommended for You Too):** Never install third-party skills, plugins, or MCP servers based solely on their `README` or GitHub stars. Before installing anything, **we always have our AI coding agent inspect the primary source code directly** (`SKILL.md`, scripts, hooks, network/env access) and run [**skillshare**](reviews/en/developer-tools/skillshare.md)'s built-in `skillshare audit` check.
 
 📖 [Combined workflow guides & additional capabilities →](practices/en/README.md) · [⚖️ Jump to Detailed Comparisons & Benchmarks below ↓](#detailed-comparisons)
 
@@ -163,7 +163,7 @@ Audits Backend, Web, and **Mobile (`deep-link`, `WebView`)** source code like an
 Fixes the 11 classic mobile browser annoyances (iOS input auto-zoom, jumping `100vh` bars, notch clipping, sticky hover states, pull-to-refresh clashes) + helps decide what to keep, simplify, or redesign when porting desktop web features into native iOS/Android apps (`ui-message-punctuation` included).
 
 ### 20. [AssetDiet](reviews/en/developer-tools/assetdiet.md) — 100% local image, SVG, video & 3D compression with instant rollback
-`✅ Using` · **Quality:** `7.5/10` · **How Often Needed:** `6.5/10` · **Type:** CLI + [`asset-diet`](skills/asset-diet/SKILL.md) · **Date:** Since `2026-11-16`
+`✅ Using` · **Quality:** `7.5/10` · **How Often Needed:** `6.5/10` · **Type:** CLI + [asset-diet](skills/asset-diet/SKILL.md) · **Date:** Since `2026-11-16`
 
 Finds and shrinks bloated PNG/JPG/WebP, SVG, video, and 3D files locally on your machine (nothing uploaded to the cloud) with 1-command rollback. Runs strictly on demand (`0` permanent MCP token overhead).
 
@@ -212,9 +212,10 @@ Models trained on older code often emit deprecated Drizzle `v1 relations()` synt
 ### 🧠 Local Models
 
 #### [kimi-k3-in-c](reviews/en/local-models/kimi-k3-in-c.md) — C99 experiment streaming a `2.78T` model off NVMe SSD without a GPU
-`⚠️ Not Recommended` · **Quality:** `8.5/10` *(as C99 experiment)* · **How Often Needed:** `1.0/10` · **Type:** C99 CLI Engine (`2.78T` MoE) · **Date:** `2026-11-16`
+`⚠️ Not Recommended` · **Quality:** `8.5/10` *(as C99 experiment)* · **How Often Needed:** `1.0/10` · **Type:** C99 CLI Engine (`2.78T` MoE) · **Date:** `2026-11-16`<br>
+🔄 **Better Alternative:** [Ollama](https://ollama.com/library/qwen3-coder) / `MLX` (`Qwen3-Coder`)
 
-Clever systems experiment streaming `Kimi K3` weights straight from disk without VRAM, but **unusable for practical coding**. 👉 **Better local alternative:** **`Ollama` / `MLX` (`Qwen3-Coder`)**, which runs completely inside `32–64 GB` Mac RAM. 📊 [GitHub](https://github.com/FareedKhan-dev/kimi-k3-in-c) · [Artificial Analysis](https://artificialanalysis.ai/leaderboards/models)
+Clever systems experiment streaming `Kimi K3` weights straight from disk without VRAM, but **unusable for practical coding** (`Ollama / MLX Qwen3-Coder` fits completely inside `32–64 GB` Mac RAM). 📊 [GitHub](https://github.com/FareedKhan-dev/kimi-k3-in-c) · [Artificial Analysis](https://artificialanalysis.ai/leaderboards/models)
 
 > [!WARNING]
 > **Hardware & Privacy Risk:** A single `500`-token reply triggers **`~50 TB` of NVMe SSD reads**, rapidly burning out soldered laptop SSD endurance (`TBW`); never connect private code to `:free` community proxies either.
@@ -229,9 +230,10 @@ Clever systems experiment streaming `Kimi K3` weights straight from disk without
 </details>
 
 #### [MiniMax-M3.1-Flash *(Local)*](reviews/en/local-models/minimax-m3-1-flash.md) — Self-hosting the `428B` multimodal model on local hardware
-`⚠️ Not Recommended` · **Quality:** `8.0/10` · **How Often Needed:** `1.0/10` · **Type:** Open-Weight `428B` MoE (`~23B` active) · **Date:** `2026-11-16`
+`⚠️ Not Recommended` · **Quality:** `8.0/10` · **How Often Needed:** `1.0/10` · **Type:** Open-Weight `428B` MoE (`~23B` active) · **Date:** `2026-11-16`<br>
+🔄 **Better Alternative:** [Ollama (Qwen3-Coder)](https://ollama.com/library/qwen3-coder) *(local coding)* · [MiniMax M3.1 Flash API](reviews/en/external-apis/minimax-m3-1-flash-api.md) *(cloud API)*
 
-Capable multimodal (`text + image + video`, `1M` context) model, but its **`~250–285 GB` weights** cannot fit developer workstations and it is not a primary frontier repo coder (`Terminal-Bench 4.0: 38.1%`). 👉 **Better alternatives:** local **`Ollama` / `MLX` (`Qwen3-Coder`)** for offline coding, or [🔌 **`MiniMax M3.1 Flash API`**](reviews/en/external-apis/minimax-m3-1-flash-api.md) for cloud access. 📊 [HuggingFace](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [OpenRouter](https://openrouter.ai/minimax/minimax-m3.1-flash)
+Capable multimodal (`text + image + video`, `1M` context) model, but its **`~250–285 GB` weights** cannot fit developer workstations and it is not a primary frontier repo coder (`Terminal-Bench 4.0: 38.1%`). 📊 [HuggingFace](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [OpenRouter](https://openrouter.ai/minimax/minimax-m3.1-flash)
 
 > [!WARNING]
 > **Risk:** Forcing disk-offload/swap on `32–64 GB` laptops degrades SSD health, unverified community quants require `trust_remote_code=True` (`RCE` risk), and free web credits / `:free` endpoints may log proprietary code for training.
@@ -285,14 +287,16 @@ Standout choice whenever you need to **build a new landing page or promo site fr
 </details>
 
 #### [taste-skill v2.5](reviews/en/web/taste-skill.md) — Starter kit for building bold marketing & promo landing pages from scratch
-`👍 Good Option` · **Quality:** `8.0/10` · **How Often Needed:** `3.5/10` · **Type:** Landing Kit + Hook · **Date:** `2026-11-15`
+`👍 Good Option` · **Quality:** `8.0/10` · **How Often Needed:** `3.5/10` · **Type:** Landing Kit + Hook · **Date:** `2026-11-15`<br>
+🔄 **Better Alternative:** [Hallmark v2](reviews/en/web/hallmark.md) *(landing pages)* · [impeccable](reviews/en/ui-ux/impeccable.md) *(daily product UI)*
 
-Good option for greenfield promo sites, though 👉 [**`Hallmark v2`**](reviews/en/web/hallmark.md) is now stronger and cleaner for landing pages (while 👉 [**`impeccable`**](reviews/en/ui-ux/impeccable.md) handles daily product UI). *If using `taste-skill`, strip its 600s `Stop` hook and scope strictly to `-p`.*
+Good option for WebGL-heavy promo sites, though `Hallmark v2` is stronger and cleaner for most landing pages. *If using `taste-skill`, strip its 600s `Stop` hook and scope strictly to `-p`.*
 
 #### [vercel-labs/ui](reviews/en/web/vercel-ui-sdk.md) — Beta UI library whose agent mode only sees apps rewritten in `@ui-sdk/*`
-`🔄 Better Alternative` · **Quality:** `8.0/10` · **How Often Needed:** `2.0/10` · **Type:** `@ui-sdk/*` Library + Skill (`Beta`) · **Date:** `2026-11-16`
+🔄 **Better Alternative:** [agent-desktop](reviews/en/developer-tools/agent-desktop.md) + [impeccable](reviews/en/ui-ux/impeccable.md)<br>
+**Quality:** `8.0/10` · **How Often Needed:** `2.0/10` · **Type:** `@ui-sdk/*` Library + Skill (`Beta`) · **Date:** `2026-11-16`
 
-Interesting Vercel Labs concept (`8.0/10`), but its *"screenshot-free 2x faster agent control"* works strictly on apps rewritten in `@ui-sdk/*` (blind to standard `<button>`, `<input>`, `Shadcn`/`Radix`, and `Expo`). 👉 **Better alternative:** [**`agent-desktop`**](reviews/en/developer-tools/agent-desktop.md) + [**`impeccable`**](reviews/en/ui-ux/impeccable.md), which work on any existing app with zero rewrites.
+Interesting Vercel Labs concept (`8.0/10`), but its *"screenshot-free 2x faster agent control"* works strictly on apps rewritten in `@ui-sdk/*` (blind to standard `<button>`, `<input>`, `Shadcn`/`Radix`, and `Expo`).
 
 <details>
 <summary>📊 Comparison & Stats (`vercel-labs/ui` vs. `agent-desktop`)</summary>
@@ -306,14 +310,16 @@ Interesting Vercel Labs concept (`8.0/10`), but its *"screenshot-free 2x faster 
 ### 📱 Mobile
 
 #### [swiftui-agent-skill](reviews/en/mobile/swiftui-agent-skill.md) — Idiomatic Apple SwiftUI rules for native Widgets & Live Activities
-`👍 Good Option` · **Quality:** `8.5/10` · **How Often Needed:** `3.0/10` · **Type:** Skill · **Date:** `2026-11-16`
+`👍 Good Option` · **Quality:** `8.5/10` · **How Often Needed:** `3.0/10` · **Type:** Skill · **Date:** `2026-11-16`<br>
+🔄 **Better Alternative *(for daily Expo)*:** [impeccable](reviews/en/ui-ux/impeccable.md) + [animate-expo](reviews/en/mobile/animate-expo.md)
 
-High-quality SwiftUI & Apple HIG guidance (`8.5/10`). Rated `3.0/10` on frequency solely because our main mobile stack is `Expo / React Native` — reach for it via `-p` whenever building native iOS Widgets or Live Activities. 👉 **Daily Expo stack:** [**`impeccable`**](reviews/en/ui-ux/impeccable.md) + [**`animate-expo`**](reviews/en/mobile/animate-expo.md).
+High-quality SwiftUI & Apple HIG guidance (`8.5/10`). Rated `3.0/10` on frequency solely because our main mobile stack is `Expo / React Native` — reach for it via `-p` whenever building native iOS Widgets or Live Activities.
 
 #### [ARTEMIS](reviews/en/mobile/artemis.md) — Google's vision/OCR autonomous Android QA agent
-`👍 Good Option` · **Quality:** `8.5/10` · **How Often Needed:** `2.5/10` · **Type:** Python CLI / SDK + MCP · **Date:** `2026-11-16`
+`👍 Good Option` · **Quality:** `8.5/10` · **How Often Needed:** `2.5/10` · **Type:** Python CLI / SDK + MCP · **Date:** `2026-11-16`<br>
+🔄 **Better Alternative *(daily QA)*:** [agent-device](reviews/en/mobile/agent-device.md)
 
-Strong pixel/OCR vision (`AndroidWorld: 99%+`) for custom `Canvas` or game screens that lack accessibility nodes, needed only in rare Android vision-QA cases (`2.5/10`). 👉 **Faster, free daily alternative:** cross-platform [**`agent-device`**](reviews/en/mobile/agent-device.md).
+Strong pixel/OCR vision (`AndroidWorld: 99%+`) for custom `Canvas` or game screens that lack accessibility nodes, needed only in rare Android vision-QA cases (`2.5/10`).
 
 > [!WARNING]
 > **Hidden Runtime Cost:** Although the code is open-source, running it is **paid** — requires a separate billed per-token LLM API key in `.env`, and `artemis mcp --install all` should never be installed globally.
@@ -328,9 +334,10 @@ Strong pixel/OCR vision (`AndroidWorld: 99%+`) for custom `Canvas` or game scree
 </details>
 
 #### [mobile-mcp](reviews/en/mobile/mobile-mcp.md) — Mobile MCP server (`~7,580` tokens/turn & `6.5x–37x` slower)
-`⚠️ Not Recommended` · **Quality:** `7.0/10` · **How Often Needed:** `2.0/10` · **Type:** MCP Server (34 tools) · **Date:** `2026-11-16`
+`⚠️ Not Recommended` · **Quality:** `7.0/10` · **How Often Needed:** `2.0/10` · **Type:** MCP Server (34 tools) · **Date:** `2026-11-16`<br>
+🔄 **Better Alternative:** [agent-device](reviews/en/mobile/agent-device.md) + [adb](reviews/en/mobile/adb.md)
 
-MCP server for mobile UI control that lost heavily in live speed and token benchmarks. 👉 **Better alternative:** [**`agent-device`**](reviews/en/mobile/agent-device.md) + [**`adb`**](reviews/en/mobile/adb.md).
+MCP server for mobile UI control that lost heavily in live speed and token benchmarks.
 
 > [!WARNING]
 > **Why Not Recommended:** Burns **`~7,580` tokens on every message** even when idle and bundles `Scarf` + `PostHog` telemetry alongside `mobilenext.ai` cloud upsell tools.
@@ -347,19 +354,22 @@ MCP server for mobile UI control that lost heavily in live speed and token bench
 ### 🎨 UI/UX
 
 #### [animate](reviews/en/ui-ux/animate.md) — Emil Kowalski's Web animation skill
-`🔄 Better Alternative` · **Quality:** `8.5/10` · **How Often Needed:** `3.0/10` · **Type:** Skill (2 files) · **Date:** `2026-11-15`
+🔄 **Better Alternative:** [impeccable](reviews/en/ui-ux/impeccable.md) (`animate`) + [animate-expo](reviews/en/mobile/animate-expo.md)<br>
+**Quality:** `8.5/10` · **How Often Needed:** `3.0/10` · **Type:** Skill (2 files) · **Date:** `2026-11-15`
 
-Well-crafted web motion rules (`8.5/10`), but Web-only and its auto-trigger collides with mobile `animate-expo`. 👉 **Better alternative:** [**`impeccable`**](reviews/en/ui-ux/impeccable.md) (`animate`) + [**`animate-expo`**](reviews/en/mobile/animate-expo.md), covering both Web and Mobile cleanly.
+Well-crafted web motion rules (`8.5/10`), but Web-only and its auto-trigger collides with mobile `animate-expo`.
 
 #### [unslop](reviews/en/ui-ux/unslop.md) — Web-only 9-pass cleanup skill for AI-generated pages
-`🔄 Better Alternative` · **Quality:** `8.5/10` · **How Often Needed:** `2.5/10` · **Type:** Skill + Playwright scripts · **Date:** `2026-11-16`
+🔄 **Better Alternative:** [impeccable](reviews/en/ui-ux/impeccable.md) (`polish` / `quieter` / `clarify`)<br>
+**Quality:** `8.5/10` · **How Often Needed:** `2.5/10` · **Type:** Skill + Playwright scripts · **Date:** `2026-11-16`
 
-Solid cleanup pass for generic AI web pages (`8.5/10`), but ignores mobile apps and collides with `impeccable`'s auto-triggers. 👉 **Better alternative:** [**`impeccable`**](reviews/en/ui-ux/impeccable.md) (`polish` / `quieter` / `clarify`).
+Solid cleanup pass for generic AI web pages (`8.5/10`), but ignores mobile apps and collides with `impeccable`'s auto-triggers.
 
 #### [break-ui](reviews/en/ui-ux/break-ui.md) — Stress-tests UI layouts with extreme/empty text
-`🔄 Better Alternative` · **Quality:** `8.0/10` · **How Often Needed:** `3.0/10` · **Type:** Skill (2 files) · **Date:** `2026-11-15`
+🔄 **Better Alternative:** [impeccable](reviews/en/ui-ux/impeccable.md) (`harden`)<br>
+**Quality:** `8.0/10` · **How Often Needed:** `3.0/10` · **Type:** Skill (2 files) · **Date:** `2026-11-15`
 
-Good concept (`8.0/10`) for surfacing long-string or empty-state layout bugs, but leaves temporary fixture toggles inside your repo without fixing the CSS/code. 👉 **Better alternative:** [**`impeccable`**](reviews/en/ui-ux/impeccable.md) (`harden`), which finds and fixes edge cases directly.
+Good concept (`8.0/10`) for surfacing long-string or empty-state layout bugs, but leaves temporary fixture toggles inside your repo without fixing the CSS/code.
 
 <details>
 <summary>📊 Comparison (`break-ui` vs. `impeccable harden`)</summary>
@@ -371,34 +381,39 @@ Good concept (`8.0/10`) for surfacing long-string or empty-state layout bugs, bu
 </details>
 
 #### [make-interfaces-feel-better](reviews/en/ui-ux/make-interfaces-feel-better.md) — Detail-oriented Web UI polish checker
-`🔄 Better Alternative` · **Quality:** `7.5/10` · **How Often Needed:** `2.5/10` · **Type:** Skill (6 files) · **Date:** `2026-10-31 → 2026-11-15`
+🔄 **Better Alternative:** [impeccable](reviews/en/ui-ux/impeccable.md) + [animate-expo](reviews/en/mobile/animate-expo.md)<br>
+**Quality:** `7.5/10` · **How Often Needed:** `2.5/10` · **Type:** Skill (6 files) · **Date:** `2026-10-31 → 2026-11-15`
 
-Decent border/radius/shadow tips, but removed after 16 days because it dumps verbose 4-table Markdown reports on minor UI edits. 👉 **Better alternative:** [**`impeccable`**](reviews/en/ui-ux/impeccable.md) + [**`animate-expo`**](reviews/en/mobile/animate-expo.md).
+Decent border/radius/shadow tips, but removed after 16 days because it dumps verbose 4-table Markdown reports on minor UI edits.
 
 #### [ui-ux-pro-max](reviews/en/ui-ux/ui-ux-pro-max.md) — CSV-based color palette & font picker
-`🔄 Better Alternative` · **Quality:** `7.0/10` · **How Often Needed:** `3.5/10` · **Type:** Skill + CSV/Python · **Date:** `2026-11-15`
+🔄 **Better Alternative:** [impeccable](reviews/en/ui-ux/impeccable.md) (with `APCA` contrast)<br>
+**Quality:** `7.0/10` · **How Often Needed:** `3.5/10` · **Type:** Skill + CSV/Python · **Date:** `2026-11-15`
 
-Suggests starter palettes from static CSV tables, producing cookie-cutter themes while colliding with `impeccable`. 👉 **Better alternative:** [**`impeccable`**](reviews/en/ui-ux/impeccable.md) (with `APCA` contrast).
+Suggests starter palettes from static CSV tables, producing cookie-cutter themes while colliding with `impeccable`.
 
 ### 🏗️ Architecture & Review
 
 #### [addy-agent-skills](reviews/en/architecture/addy-agent-skills.md) — Addy Osmani's 25-skill `/spec -> /ship` engineering suite
-`🔄 Better Alternative` · **Quality:** `8.0/10` · **How Often Needed:** `2.5/10` · **Type:** Plugin (25 skills + 9 commands) · **Date:** `2026-11-16`
+🔄 **Better Alternative:** [grill-me](reviews/en/architecture/grill-me.md) + [ponytail](reviews/en/architecture/ponytail.md) + [elephant-goldfish-model](reviews/en/architecture/elephant-goldfish-model.md)<br>
+**Quality:** `8.0/10` · **How Often Needed:** `2.5/10` · **Type:** Plugin (25 skills + 9 commands) · **Date:** `2026-11-16`
 
-Thoughtful engineering discipline (`8.0/10`), but enforces mandatory TDD and multi-gate pauses on routine tasks. 👉 **Better alternative:** [**`grill-me`**](reviews/en/architecture/grill-me.md) + [**`ponytail`**](reviews/en/architecture/ponytail.md) + [**`elephant-goldfish-model`**](reviews/en/architecture/elephant-goldfish-model.md).
+Thoughtful engineering discipline (`8.0/10`), but enforces mandatory TDD and multi-gate pauses on routine tasks.
 
 #### [agency-agents](reviews/en/architecture/agency-agents.md) — Collection of 283 roleplay persona prompts
-`⚠️ Not Recommended` · **Quality:** `6.5/10` · **How Often Needed:** `2.5/10` · **Type:** 283 persona prompts + installer · **Date:** `2026-11-16`
+`⚠️ Not Recommended` · **Quality:** `6.5/10` · **How Often Needed:** `2.5/10` · **Type:** 283 persona prompts + installer · **Date:** `2026-11-16`<br>
+🔄 **Better Alternative:** [impeccable](reviews/en/ui-ux/impeccable.md) + [ponytail](reviews/en/architecture/ponytail.md) + [elephant-goldfish-model](reviews/en/architecture/elephant-goldfish-model.md)
 
-283 *"act as a marketer/designer"* persona files across 18 divisions. 👉 **Better alternative:** [**`impeccable`**](reviews/en/ui-ux/impeccable.md), [**`ponytail`**](reviews/en/architecture/ponytail.md), [**`elephant-goldfish-model`**](reviews/en/architecture/elephant-goldfish-model.md).
+283 *"act as a marketer/designer"* persona files across 18 divisions.
 
 > [!WARNING]
 > **Context Bloat Risk:** Installing all personas globally adds **`~18,500` tokens of permanent frontmatter noise**, diluting agent focus on real engineering rules.
 
 #### [superpowers](reviews/en/architecture/superpowers.md) — 14-skill workflow plugin with mandatory TDD & `SessionStart` hooks
-`⚠️ Not Recommended` · **Quality:** `6.5/10` · **How Often Needed:** `2.0/10` · **Type:** Plugin (14 skills + hook) · **Date:** `2026-04-04 → 2026-09-01`
+`⚠️ Not Recommended` · **Quality:** `6.5/10` · **How Often Needed:** `2.0/10` · **Type:** Plugin (14 skills + hook) · **Date:** `2026-04-04 → 2026-09-01`<br>
+🔄 **Better Alternative:** [grill-me](reviews/en/architecture/grill-me.md) + [ponytail](reviews/en/architecture/ponytail.md) + [cross-platform-qa](reviews/en/mobile/cross-platform-qa.md)
 
-Tested for 5 months and removed. 👉 **Better alternative:** [**`grill-me`**](reviews/en/architecture/grill-me.md) + [**`ponytail`**](reviews/en/architecture/ponytail.md) + [**`cross-platform-qa`**](reviews/en/mobile/cross-platform-qa.md).
+Tested for 5 months and removed.
 
 > [!WARNING]
 > **Time & Quota Drain:** Its `SessionStart` hook, noisy brainstorming prompts, and mandatory TDD loops on UI work **double both task duration and token spend (`2x`)**.
@@ -415,14 +430,15 @@ Tested for 5 months and removed. 👉 **Better alternative:** [**`grill-me`**](r
 ### ⚙️ Backend
 
 #### [opentelemetry](reviews/en/backend/opentelemetry.md) — Infrastructure metrics, logs & traces standard for large microservice fleets
-`👍 Good Option` · **Quality:** `9.0/10` · **How Often Needed:** `4.0/10` · **Type:** Standard + Collector (`SigNoz` / `Grafana`) · **Date:** `2026-11-15`
+`👍 Good Option` · **Quality:** `9.0/10` · **How Often Needed:** `4.0/10` · **Type:** Standard + Collector (`SigNoz` / `Grafana`) · **Date:** `2026-11-15`<br>
+🔄 **Better Alternative *(at our current scale)*:** [sentry](reviews/en/backend/sentry.md)
 
-Top-tier standard (`9.0/10`) when scaling to deep host CPU/RAM, DB pool metrics, and dozens of microservices, though it requires operating `Collector + SigNoz/Grafana`. All our current error, replay, and baseline trace needs are covered in one place by 👉 [**`sentry`**](reviews/en/backend/sentry.md).
+Top-tier standard (`9.0/10`) when scaling to deep host CPU/RAM, DB pool metrics, and dozens of microservices, though it requires operating `Collector + SigNoz/Grafana`. All our current error, replay, and baseline trace needs are covered in one place by `sentry`.
 
 #### [Shannon](reviews/en/backend/shannon.md) — Autonomous White-Box AI pentester for local/staging APIs
-`👍 Good Option` · **Quality:** `8.5/10` · **How Often Needed:** `6.5/10` · **Type:** Standalone CLI + [`hacker-test`](skills/hacker-test/SKILL.md) · **Date:** `2026-11-16`
+`👍 Good Option` · **Quality:** `8.5/10` · **How Often Needed:** `6.5/10` · **Type:** Standalone CLI + [hacker-test](skills/hacker-test/SKILL.md) · **Date:** `2026-11-16`
 
-Fires real `Auth bypass`, `IDOR`, `SQLi`, `XSS`, and `SSRF` exploits against local/staging servers before major releases to prove exploitability (`0` idle bloat via [`hacker-test`](skills/hacker-test/SKILL.md)). Pair with Docker-free 👉 [**`security-audit`**](reviews/en/backend/security-audit-skill.md) on everyday PRs.
+Fires real `Auth bypass`, `IDOR`, `SQLi`, `XSS`, and `SSRF` exploits against local/staging servers before major releases to prove exploitability (`0` idle bloat via [hacker-test](skills/hacker-test/SKILL.md)). Pair with Docker-free 👉 [security-audit](reviews/en/backend/security-audit-skill.md) on everyday PRs.
 
 > [!WARNING]
 > **Strict Safety Boundary:** Sends live mutating exploit payloads — **never run against production**; target local or disposable staging environments only!
@@ -430,26 +446,27 @@ Fires real `Auth bypass`, `IDOR`, `SQLi`, `XSS`, and `SSRF` exploits against loc
 ### 🛠️ Developer Tools & Memory
 
 #### [REA](reviews/en/developer-tools/rea.md) — Reverse engineer closed-source apps, `.asar`s, `.apk`s & native binaries without source code
-`👍 Good Option` · **Quality:** `9.0/10` · **How Often Needed:** `3.5/10` · **Type:** Standalone CLI + [`rea`](skills/rea/SKILL.md) · **Date:** `2026-11-17`
+`👍 Good Option` · **Quality:** `9.0/10` · **How Often Needed:** `3.5/10` · **Type:** Standalone CLI + [rea](skills/rea/SKILL.md) · **Date:** `2026-11-17`
 
-Recovers how a feature works inside shipped third-party desktop/mobile/web apps without source code (`Electron .asar`, JS bundles, Android `.apk`, `.NET`, `Mach-O`/`ELF`/`PE`) with Evidence IDs (`9.0/10`), and checks your own release artifacts for leaked `.map`/`.dSYM` files (`audit-release-exposure`). Triggered on demand via our [`rea`](skills/rea/SKILL.md) skill (`"rea"`), which **checks/auto-upgrades Node.js to a compatible release if needed, installs target-specific prerequisites (`openjdk`, `jadx`, `apktool`, `ghidra`, `rizin`)**, and runs **temporarily at `0` idle token cost**. *(For our own source repositories, use 👉 [**`graphify`**](reviews/en/architecture/graphify.md)).*
+Recovers how a feature works inside shipped third-party desktop/mobile/web apps without source code (`Electron .asar`, JS bundles, Android `.apk`, `.NET`, `Mach-O`/`ELF`/`PE`) with Evidence IDs (`9.0/10`), and checks your own release artifacts for leaked `.map`/`.dSYM` files (`audit-release-exposure`). Triggered on demand via our [rea](skills/rea/SKILL.md) skill (`"rea"`), which **checks/auto-upgrades Node.js to a compatible release if needed, installs target-specific prerequisites (`openjdk`, `jadx`, `apktool`, `ghidra`, `rizin`)**, and runs **temporarily at `0` idle token cost**. *(For our own source repositories, use 👉 [graphify](reviews/en/architecture/graphify.md)).*
 
 > [!WARNING]
-> **Context Bloat Trap:** Never register global MCP via `npx rea-agents setup` — its `200+` MCP tools add **`~300 KB` (`~75,000+` tokens)** of schema overhead per session! Always invoke temporarily through our [`rea`](skills/rea/SKILL.md) wrapper skill.
+> **Context Bloat Trap:** Never register global MCP via `npx rea-agents setup` — its `200+` MCP tools add **`~300 KB` (`~75,000+` tokens)** of schema overhead per session! Always invoke temporarily through our [rea](skills/rea/SKILL.md) wrapper skill.
 
 <details>
 <summary>📊 Comparison & Stats (Global `REA` MCP vs. our `rea` wrapper skill)</summary>
 
 - **With default `npx rea-agents setup`:** `200+` tools (`~75,000+` tokens/session) + `~198 KB` (`~50K` tokens) skill references + `189.6 MB` npm footprint; fails on `Node 24.20.0`.
-- **With our [`rea`](skills/rea/SKILL.md) wrapper skill:** **`0` idle tokens** in daily coding chats; when signaled with `"rea"`, auto-selects or upgrades to compatible `Node 26+`/`24.22+`, detects/installs only target-needed decompilers, executes in `/tmp`, and cleans up afterward.
+- **With our [rea](skills/rea/SKILL.md) wrapper skill:** **`0` idle tokens** in daily coding chats; when signaled with `"rea"`, auto-selects or upgrades to compatible `Node 26+`/`24.22+`, detects/installs only target-needed decompilers, executes in `/tmp`, and cleans up afterward.
 - 📖 [Full review →](reviews/en/developer-tools/rea.md) · [Summary comparison below ↓](#detailed-comparisons)
 
 </details>
 
 #### [SkillSpector](reviews/en/developer-tools/skillspector.md) — NVIDIA's Python/Docker/YARA security scanner for skills
-`🔄 Better Alternative` · **Quality:** `9.0/10` · **How Often Needed:** `3.5/10` · **Type:** Python CLI + MCP + Skill · **Date:** `2026-11-16`
+🔄 **Better Alternative:** [skillshare](reviews/en/developer-tools/skillshare.md) (`skillshare audit`) + direct AI source inspection<br>
+**Quality:** `9.0/10` · **How Often Needed:** `3.5/10` · **Type:** Python CLI + MCP + Skill · **Date:** `2026-11-16`
 
-Very well-engineered scanner from NVIDIA (`9.0/10`), just heavier than needed for everyday skill checks due to its Python/Docker/YARA pipeline. 👉 **Faster alternative:** `0.1s` [**`skillshare`**](reviews/en/developer-tools/skillshare.md) (`skillshare audit`) + **direct AI source-code inspection**.
+Very well-engineered scanner from NVIDIA (`9.0/10`), just heavier than needed for everyday skill checks due to its Python/Docker/YARA pipeline.
 
 <details>
 <summary>📊 Comparison & Stats (`SkillSpector` vs. `skillshare audit + AI inspection`)</summary>
@@ -461,9 +478,10 @@ Very well-engineered scanner from NVIDIA (`9.0/10`), just heavier than needed fo
 </details>
 
 #### [T3 Code](reviews/en/developer-tools/t3-code.md) — Our former multi-agent desktop app (replaced by `Orca`)
-`🔄 Better Alternative` · **Quality:** `8.5/10` · **How Often Needed:** `2.5/10` · **Type:** Desktop App + CLI · **Date:** `2026-10-23 → 2026-11-16`
+🔄 **Better Alternative:** [Orca](reviews/en/developer-tools/orca.md)<br>
+**Quality:** `8.5/10` · **How Often Needed:** `2.5/10` · **Type:** Desktop App + CLI · **Date:** `2026-10-23 → 2026-11-16`
 
-Solid multi-agent desktop app (`8.5/10`) that we used daily for weeks before uninstalling (`~3.87 GB` freed) due to beta mobile disconnects, Mac `Lock Screen` drops, and missing inline subagent cards. 👉 **Better alternative:** [**`Orca`**](reviews/en/developer-tools/orca.md), which solves all three.
+Solid multi-agent desktop app (`8.5/10`) that we used daily for weeks before uninstalling (`~3.87 GB` freed) due to beta mobile disconnects, Mac `Lock Screen` drops, and missing inline subagent cards.
 
 <details>
 <summary>📊 Comparison & Stats (`T3 Code` vs. `Orca`)</summary>
@@ -475,9 +493,10 @@ Solid multi-agent desktop app (`8.5/10`) that we used daily for weeks before uni
 </details>
 
 #### [caveman](reviews/en/developer-tools/caveman.md) — Cuts chat reply prose by `~65%` using terse phrasing
-`👍 Good Option` · **Quality:** `8.0/10` · **How Often Needed:** `3.5/10` · **Type:** Skill *(+ optional CLI)* · **Date:** `2026-11-16`
+`👍 Good Option` · **Quality:** `8.0/10` · **How Often Needed:** `3.5/10` · **Type:** Skill *(+ optional CLI)* · **Date:** `2026-11-16`<br>
+🔄 **Better Alternative:** [ponytail](reviews/en/architecture/ponytail.md)
 
-Shrinks terminal chat chatter (`~65%` fewer output words), though it doesn't stop bloated code diffs. 👉 **Better daily alternative:** [**`ponytail`**](reviews/en/architecture/ponytail.md), which cuts both reply prose and code bloat. *(If using `caveman`, copy only the standalone `SKILL.md` without `@caveman-ai/cli` telemetry).*
+Shrinks terminal chat chatter (`~65%` fewer output words), though it doesn't stop bloated code diffs. *(If using `caveman`, copy only the standalone `SKILL.md` without `@caveman-ai/cli` telemetry).*
 
 <details>
 <summary>📊 Comparison & Stats (`caveman` vs. `ponytail`)</summary>
@@ -489,19 +508,22 @@ Shrinks terminal chat chatter (`~65%` fewer output words), though it doesn't sto
 </details>
 
 #### [humanizer + stop-slop](reviews/en/developer-tools/humanizer-stop-slop.md) — Prose editors that strip AI clichés from blog posts & essays
-`🔄 Better Alternative` · **Quality:** `7.5/10` · **How Often Needed:** `2.0/10` · **Type:** Skill (`Markdown`) · **Date:** `2026-11-16`
+🔄 **Better Alternative:** [ponytail](reviews/en/architecture/ponytail.md) + [impeccable](reviews/en/ui-ux/impeccable.md) (`clarify`)<br>
+**Quality:** `7.5/10` · **How Often Needed:** `2.0/10` · **Type:** Skill (`Markdown`) · **Date:** `2026-11-16`
 
-Good for long-form essay writers (`humanizer` weighs `~32 KB`), simply not designed for software code or product UI copy. 👉 **Better alternative for code & UI:** [**`ponytail`**](reviews/en/architecture/ponytail.md) + [**`impeccable`**](reviews/en/ui-ux/impeccable.md) (`clarify`).
+Good for long-form essay writers (`humanizer` weighs `~32 KB`), simply not designed for software code or product UI copy.
 
 #### [claude-code-setup](reviews/en/developer-tools/claude-code-setup.md) — Starter onboarding recommender for new Claude Code users
-`🔄 Better Alternative` · **Quality:** `7.5/10` · **How Often Needed:** `2.0/10` · **Type:** Plugin · **Date:** `2026-11-16`
+🔄 **Better Alternative:** [skillshare](reviews/en/developer-tools/skillshare.md)<br>
+**Quality:** `7.5/10` · **How Often Needed:** `2.0/10` · **Type:** Plugin · **Date:** `2026-11-16`
 
-Suggests starter `CLAUDE.md` sections and hooks for beginners; unnecessary once you run a unified cross-agent setup. 👉 **Better alternative:** [**`skillshare`**](reviews/en/developer-tools/skillshare.md).
+Suggests starter `CLAUDE.md` sections and hooks for beginners; unnecessary once you run a unified cross-agent setup.
 
 #### [OmniRoute](reviews/en/developer-tools/omniroute.md) — Local LLM reverse-proxy (`localhost:20128`) for rotating subscriptions
-`⚠️ Not Recommended` · **Quality:** `7.5/10` · **How Often Needed:** `2.0/10` · **Type:** Local Proxy + 44 Admin Skills · **Date:** `2026-11-16`
+`⚠️ Not Recommended` · **Quality:** `7.5/10` · **How Often Needed:** `2.0/10` · **Type:** Local Proxy + 44 Admin Skills · **Date:** `2026-11-16`<br>
+🔄 **Better Alternative:** [Orca](reviews/en/developer-tools/orca.md) + [ponytail](reviews/en/architecture/ponytail.md)
 
-Local reverse-proxy aimed at pooling cheap API keys (its 44 bundled skills are proxy config manuals, not coding skills). 👉 **Safer, stable alternative:** [**`Orca`**](reviews/en/developer-tools/orca.md) + [**`ponytail`**](reviews/en/architecture/ponytail.md).
+Local reverse-proxy aimed at pooling cheap API keys (its 44 bundled skills are proxy config manuals, not coding skills).
 
 > [!WARNING]
 > **Account Ban (`ToS`) & Session-Drop Risk:** Routing paid `Claude` / `ChatGPT` / `Google` subscriptions through `wreq-js` TLS-stealth **risks account suspension (`ToS ban`)**, breaks long coding sessions (`#7287`), and silently downgrades models mid-task.
@@ -520,30 +542,30 @@ Local reverse-proxy aimed at pooling cheap API keys (its 44 bundled skills are p
 <a id="detailed-comparisons"></a>
 ## ⚖️ Detailed Comparisons & Benchmarks (Why We Picked Each Primary Tool)
 
-For the full 7-domain side-by-side benchmark tables, see: 👉 [**Open Full 7-Domain Comparison Matrix (`practices/en/07-tool-and-skill-comparisons.md`) →**](practices/en/07-tool-and-skill-comparisons.md)
+For the full 7-domain side-by-side benchmark tables, see: 👉 [**Open Full 7-Domain Comparison Matrix (practices/en/07-tool-and-skill-comparisons.md) →**](practices/en/07-tool-and-skill-comparisons.md)
 
 - **📱 Mobile & TV UI Automation:**
-  - ✅ [**`agent-device`**](reviews/en/mobile/agent-device.md): `iOS + Android + tvOS + Android TV`, **`197–888 ms`**, `0` MCP bloat, **`$0` API cost**, no Java needed, built-in `--maestro`.
-  - ⚖️ Alternatives: `Maestro CLI` (`1.5–4s`, requires Java `JDK 17+`) · [**`ARTEMIS`**](reviews/en/mobile/artemis.md) (Android-only, `3–40s`, requires billed `.env` LLM API keys) · ⚠️ [**`mobile-mcp`**](reviews/en/mobile/mobile-mcp.md) (`~7,580` tokens/turn, `6–7s` slow, telemetry/ads).
+  - ✅ [**agent-device**](reviews/en/mobile/agent-device.md): `iOS + Android + tvOS + Android TV`, **`197–888 ms`**, `0` MCP bloat, **`$0` API cost**, no Java needed, built-in `--maestro`.
+  - ⚖️ Alternatives: `Maestro CLI` (`1.5–4s`, requires Java `JDK 17+`) · [**ARTEMIS**](reviews/en/mobile/artemis.md) (Android-only, `3–40s`, requires billed `.env` LLM API keys) · ⚠️ [**mobile-mcp**](reviews/en/mobile/mobile-mcp.md) (`~7,580` tokens/turn, `6–7s` slow, telemetry/ads).
 - **📱 Mobile Emulator RAM & GPU Optimizers (`WITHOUT vs. WITH`):**
-  - ✅ [**`simslim`**](reviews/en/mobile/simslim.md) (iOS 26.5): headless RAM **`2.70 GB -> 1.16 GB` (`-57%`)**, GUI **`4.0 GB -> 0.9 GB` (`-77.5%`)**, processes `182 -> 78`, **`+1.51 GB`** disk reclaimed without wiping apps.
-  - ✅ [**`avdslim`**](reviews/en/mobile/avdslim.md) (Android API 35): RAM **`4.41 GB -> 2.64 GB` (`-40.2%`, `-69%` vs. Studio 8.5 GB)**, native **Apple Metal GPU (`host`)** instead of CPU `SwiftShader`, Golden Snapshot boot `22.8s -> 13.8s`.
+  - ✅ [**simslim**](reviews/en/mobile/simslim.md) (iOS 26.5): headless RAM **`2.70 GB -> 1.16 GB` (`-57%`)**, GUI **`4.0 GB -> 0.9 GB` (`-77.5%`)**, processes `182 -> 78`, **`+1.51 GB`** disk reclaimed without wiping apps.
+  - ✅ [**avdslim**](reviews/en/mobile/avdslim.md) (Android API 35): RAM **`4.41 GB -> 2.64 GB` (`-40.2%`, `-69%` vs. Studio 8.5 GB)**, native **Apple Metal GPU (`host`)** instead of CPU `SwiftShader`, Golden Snapshot boot `22.8s -> 13.8s`.
 - **🌐 Web & Desktop UI Automation:**
-  - ✅ [**`agent-desktop`**](reviews/en/developer-tools/agent-desktop.md): drives any existing website and macOS app headlessly (`~5–10x` fewer tokens).
-  - 🔄 [**`vercel-labs/ui`**](reviews/en/web/vercel-ui-sdk.md): works strictly on sites rewritten in `@ui-sdk/*` (no `Expo` or standard HTML support).
+  - ✅ [**agent-desktop**](reviews/en/developer-tools/agent-desktop.md): drives any existing website and macOS app headlessly (`~5–10x` fewer tokens).
+  - 🔄 [**vercel-labs/ui**](reviews/en/web/vercel-ui-sdk.md): works strictly on sites rewritten in `@ui-sdk/*` (no `Expo` or standard HTML support).
 - **🎨 UI/UX Design, Landing Pages & Motion:**
-  - ✅ Daily App / Web / Mobile UI: [**`impeccable`**](reviews/en/ui-ux/impeccable.md) + [**`mobile-native`**](reviews/en/mobile/mobile-native.md) + [**`animate-expo`**](reviews/en/mobile/animate-expo.md) (`APCA` contrast + `60/120fps` UI-thread motion).
-  - 👍 On-demand Greenfield Landing Pages (`-p` / `/hallmark`): [**`Hallmark v2`**](reviews/en/web/hallmark.md) (`50` browsable themes, `755` real photos, `capture.mjs`, and `sloplint --before/--kept` — capabilities `impeccable` does not bundle; also stronger than [**`taste-skill v2.5`**](reviews/en/web/taste-skill.md)).
-  - 🔄 Alternatives: [**`unslop`**](reviews/en/ui-ux/unslop.md) & [**`animate`**](reviews/en/ui-ux/animate.md) (Web-only, trigger collisions) · [**`break-ui`**](reviews/en/ui-ux/break-ui.md) (breaks UI without fixing) · [**`make-interfaces-feel-better`**](reviews/en/ui-ux/make-interfaces-feel-better.md) (verbose 4-table reports).
+  - ✅ Daily App / Web / Mobile UI: [**impeccable**](reviews/en/ui-ux/impeccable.md) + [**mobile-native**](reviews/en/mobile/mobile-native.md) + [**animate-expo**](reviews/en/mobile/animate-expo.md) (`APCA` contrast + `60/120fps` UI-thread motion).
+  - 👍 On-demand Greenfield Landing Pages (`-p` / `/hallmark`): [**Hallmark v2**](reviews/en/web/hallmark.md) (`50` browsable themes, `755` real photos, `capture.mjs`, and `sloplint --before/--kept` — capabilities `impeccable` does not bundle; also stronger than [**taste-skill v2.5**](reviews/en/web/taste-skill.md)).
+  - 🔄 Alternatives: [**unslop**](reviews/en/ui-ux/unslop.md) & [**animate**](reviews/en/ui-ux/animate.md) (Web-only, trigger collisions) · [**break-ui**](reviews/en/ui-ux/break-ui.md) (breaks UI without fixing) · [**make-interfaces-feel-better**](reviews/en/ui-ux/make-interfaces-feel-better.md) (verbose 4-table reports).
 - **🏗️ Planning, YAGNI, Terse Output & Multi-Agent Orchestration:**
-  - ✅ [**`grill-me`**](reviews/en/architecture/grill-me.md) + [**`graphify`**](reviews/en/architecture/graphify.md) (`10x–20x` token savings) + [**`ponytail`**](reviews/en/architecture/ponytail.md) (`2–4x` smaller prose & diffs) + [**`Orca`**](reviews/en/developer-tools/orca.md) (`841 MB` RAM, `Lock Screen`-safe + mobile app + inline worker cards).
-  - ⚖️ Alternatives: [**`T3 Code`**](reviews/en/developer-tools/t3-code.md) (replaced by `Orca` due to `Lock Screen`/mobile drops) · [**`caveman`**](reviews/en/developer-tools/caveman.md) (chat prose only) · ⚠️ [**`superpowers`**](reviews/en/architecture/superpowers.md) (`2x` slower) · ⚠️ [**`OmniRoute`**](reviews/en/developer-tools/omniroute.md) (session drops & ToS ban risk).
+  - ✅ [**grill-me**](reviews/en/architecture/grill-me.md) + [**graphify**](reviews/en/architecture/graphify.md) (`10x–20x` token savings) + [**ponytail**](reviews/en/architecture/ponytail.md) (`2–4x` smaller prose & diffs) + [**Orca**](reviews/en/developer-tools/orca.md) (`841 MB` RAM, `Lock Screen`-safe + mobile app + inline worker cards).
+  - ⚖️ Alternatives: [**T3 Code**](reviews/en/developer-tools/t3-code.md) (replaced by `Orca` due to `Lock Screen`/mobile drops) · [**caveman**](reviews/en/developer-tools/caveman.md) (chat prose only) · ⚠️ [**superpowers**](reviews/en/architecture/superpowers.md) (`2x` slower) · ⚠️ [**OmniRoute**](reviews/en/developer-tools/omniroute.md) (session drops & ToS ban risk).
 - **🛡️ Security Audit, Pentesting & Observability:**
-  - ✅ [**`skillshare audit`**](reviews/en/developer-tools/skillshare.md) (`0.1s` skill check) + [**`security-audit`**](reviews/en/backend/security-audit-skill.md) (Docker-free source audit) + [**`Shannon`**](reviews/en/backend/shannon.md) (live staging exploit pentest) + [**`sentry`**](reviews/en/backend/sentry.md) (errors + Replay + traces).
-  - ⚖️ Alternatives: [**`SkillSpector`**](reviews/en/developer-tools/skillspector.md) (heavy Docker/YARA pipeline) · [**`opentelemetry`**](reviews/en/backend/opentelemetry.md) (`Collector + SigNoz/Grafana` for large clusters) · 👍 [**`REA`**](reviews/en/developer-tools/rea.md) (for inspecting closed-source `.asar`/`.apk`/binaries temporarily via [`rea`](skills/rea/SKILL.md) and `audit-release-exposure`).
+  - ✅ [**skillshare audit**](reviews/en/developer-tools/skillshare.md) (`0.1s` skill check) + [**security-audit**](reviews/en/backend/security-audit-skill.md) (Docker-free source audit) + [**Shannon**](reviews/en/backend/shannon.md) (live staging exploit pentest) + [**sentry**](reviews/en/backend/sentry.md) (errors + Replay + traces).
+  - ⚖️ Alternatives: [**SkillSpector**](reviews/en/developer-tools/skillspector.md) (heavy Docker/YARA pipeline) · [**opentelemetry**](reviews/en/backend/opentelemetry.md) (`Collector + SigNoz/Grafana` for large clusters) · 👍 [**REA**](reviews/en/developer-tools/rea.md) (for inspecting closed-source `.asar`/`.apk`/binaries temporarily via [rea](skills/rea/SKILL.md) and `audit-release-exposure`).
 - **🧠 Local Models & 🔌 External APIs:**
-  - ✅ Sub-second server decisions (`true/false` & `select`): [**`Jev (TypeSafe AI)`**](reviews/en/external-apis/jev.md) (`~0.3s`, `$0.042/$0` with `<80%` & timeout fallback — eliminates `GPT-6 Luna Medium`'s `~9–12s` wait) · Generative backend chat/OCR: [**`MiniMax M3.1 Flash API`**](reviews/en/external-apis/minimax-m3-1-flash-api.md) (`$0.15/$0.60`, `170+ tok/s`) · Offline local coder: **`Ollama` / `MLX` (`Qwen3-Coder`)** (`30–65 tok/s` in `32–64 GB` Mac RAM).
-  - ⚠️ Not recommended on developer laptops: [**`kimi-k3-in-c`**](reviews/en/local-models/kimi-k3-in-c.md) (`1 token = ~30s`, `~50 TB` SSD reads) · [**`MiniMax-M3.1-Flash` *(Local)* **](reviews/en/local-models/minimax-m3-1-flash.md) (`285 GB` weights, needs `640 GB VRAM`).
+  - ✅ Sub-second server decisions (`true/false` & `select`): [**Jev (TypeSafe AI)**](reviews/en/external-apis/jev.md) (`~0.3s`, `$0.042/$0` with `<80%` & timeout fallback — eliminates `GPT-6 Luna Medium`'s `~9–12s` wait) · Generative backend chat/OCR: [**MiniMax M3.1 Flash API**](reviews/en/external-apis/minimax-m3-1-flash-api.md) (`$0.15/$0.60`, `170+ tok/s`) · Offline local coder: **`Ollama` / `MLX` (`Qwen3-Coder`)** (`30–65 tok/s` in `32–64 GB` Mac RAM).
+  - ⚠️ Not recommended on developer laptops: [**kimi-k3-in-c**](reviews/en/local-models/kimi-k3-in-c.md) (`1 token = ~30s`, `~50 TB` SSD reads) · [**MiniMax-M3.1-Flash *(Local)* **](reviews/en/local-models/minimax-m3-1-flash.md) (`285 GB` weights, needs `640 GB VRAM`).
 
 ---
 

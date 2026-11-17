@@ -2,7 +2,7 @@
 
 **🇺🇿 O'zbekcha** | [🇬🇧 English](../en/mobile/animate-expo.md) | [🇷🇺 Русский](../ru/mobile/animate-expo.md)
 
-- **Manba:** [emilkowalski/skills (`skills/animate-expo`)](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo)
+- **Manba:** [emilkowalski/skills (skills/animate-expo)](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo)
 - **Turkum:** `Mobile` *(React Native, Expo, Reanimated, Gesture Handler va Haptics)*
 - **Turi:** `Skill` *(`SKILL.md` + `RECIPES.md` + lokal `LOCAL-COMPATIBILITY.md` himoyasi)*
 - **Sifat bahosi:** **9.5 / 10**

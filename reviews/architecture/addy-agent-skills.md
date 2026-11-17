@@ -8,9 +8,8 @@
 - **Sifat bahosi:** **8.0 / 10**
 - **Ishda kerak bo'lishi:** **2.5 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik`
-- **O'rniga ishlatiladigan muqobillar:** [**`grill-me`**](grill-me.md) + [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) + [**`elephant-goldfish-model`**](elephant-goldfish-model.md) + [**`T3 Code`**](../developer-tools/t3-code.md)
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `🔄 Alternativi yaxshiroq`
+- 🔄 **Alternativi yaxshiroq:** [grill-me](grill-me.md) + [ponytail](ponytail.md) + [karpathy-guidelines](karpathy-guidelines.md) + [elephant-goldfish-model](elephant-goldfish-model.md) + [Orca](../developer-tools/orca.md)
 
 ---
 
@@ -28,10 +27,10 @@ Addy Osmani tomonidan yig'ilgan 25 ta muhandislik skilli (`interview-me`, `spec-
 `superpowers` ga qaraganda ancha tartibli va toza yozilgan bo'lsa ham, kundalik ishimizda **ortiqcha sikl va dublikat** yaratadi:
 - **Og'ir jarayon va to'xtashlar:** Majburiy TDD (`Red-Green-Refactor`), ~100 qatorlik PR cheklovlari hamda `doubt-driven-development` ichidagi har bitta qarordan keyin to'xtab *"boshqa modeldan (`Gemini`/`Codex`) ham so'raymi?"* deb so'rash talabi ish tezligini tushiradi.
 - **Barcha kuchli nuqtalari bizda allaqachon aniqroq vositalar bilan yopilgan:**
-  - `interview-me` → [**`grill-me`**](grill-me.md) (`9.5/10`)
-  - `doubt-driven` / `code-review` → [**`elephant-goldfish-model`**](elephant-goldfish-model.md) + [**`T3 Code`**](../developer-tools/t3-code.md)
-  - `code-simplification` → [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md)
-  - `frontend-ui-engineering` → [**`impeccable`**](../ui-ux/impeccable.md)
+  - `interview-me` → [**grill-me**](grill-me.md) (`9.5/10`)
+  - `doubt-driven` / `code-review` → [**elephant-goldfish-model**](elephant-goldfish-model.md) + [**T3 Code**](../developer-tools/t3-code.md)
+  - `code-simplification` → [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md)
+  - `frontend-ui-engineering` → [**impeccable**](../ui-ux/impeccable.md)
 
 ---
 
@@ -39,4 +38,4 @@ Addy Osmani tomonidan yig'ilgan 25 ta muhandislik skilli (`interview-me`, `spec-
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kod auditi | `🔄 Alternativi yaxshiroq` | Sifatli yozilgan (`8.0/10`), ammo 25 ta skilldan iborat og'ir SDLC konveyeri mavjud yengil va kuchli stekimizni dublikat qilgani uchun o'rnatilmadi. |
+| 2026-11-16 | Manba kod auditi | 🔄 **Alternativi yaxshiroq:** [grill-me](grill-me.md) + [ponytail](ponytail.md) | Sifatli yozilgan (`8.0/10`), ammo 25 ta skilldan iborat og'ir SDLC konveyeri mavjud yengil va kuchli stekimizni dublikat qilgani uchun o'rnatilmadi. |

@@ -8,7 +8,7 @@
 - **Quality Score:** **9.0 / 10**
 - **How Often Needed:** **7.5 / 10**
 - **Recommended Scope:** `Global CLI (/opt/homebrew/bin/avdslim)` — applied across local Android AVDs via `tune-avd` + `bake --headless` with GPS-preserving `defaults` (no SDK `install-shim` needed)
-- **Works Alongside:** [**`agent-device`**](agent-device.md) + [**`adb`**](adb.md) + [**`simslim`**](simslim.md) + [**`cross-platform-qa`**](cross-platform-qa.md)
+- **Works Alongside:** [**agent-device**](agent-device.md) + [**adb**](adb.md) + [**simslim**](simslim.md) + [**cross-platform-qa**](cross-platform-qa.md)
 - **Active Since:** `2026-11-16`
 - **Current Status:** `✅ Using`
 
@@ -19,7 +19,7 @@
 > [!IMPORTANT]
 > **In Plain Words (Main Job & Value):** Switches Android Emulator graphics from slow CPU rendering onto **Apple Metal GPU (`host`)** and **cuts RAM from `4.41 GB -> 2.64 GB` (`-69%` vs. Android Studio's `8.5 GB` default)** with `14s` Golden Snapshot boots.
 
-An open-source (`MIT`, `45-byte` `go.mod` — zero third-party packages, zero network calls) Android Virtual Device (`AVD`) optimizer inspired by [**`simslim`**](simslim.md). Fixes the four root causes that make Android emulators consume `4.5 GB – 8.5 GB` of host RAM on Apple Silicon and Linux:
+An open-source (`MIT`, `45-byte` `go.mod` — zero third-party packages, zero network calls) Android Virtual Device (`AVD`) optimizer inspired by [**simslim**](simslim.md). Fixes the four root causes that make Android emulators consume `4.5 GB – 8.5 GB` of host RAM on Apple Silicon and Linux:
 
 1. **Eliminates the `Lavapipe / SwiftShader` CPU rendering trap (`-gpu host`):** Android Studio AVDs often default to `hw.gpu.mode=auto` / `hw.gpu.enabled=no`, falling back to CPU software rasterization (`SwiftShader LLVM` / `lavapipe`). `avdslim tune-avd` switches rendering to native **Apple Silicon Metal GPU (`host`)**.
 2. **QEMU `-lowram` & `1536 MB` allocation:** Bypasses QEMU's default 4 GB floor and boots the Android guest in low-RAM mode (automatically saving `config.ini.bak`).

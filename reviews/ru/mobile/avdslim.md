@@ -8,7 +8,7 @@
 - **Оценка качества:** **9.0 / 10**
 - **Частота нужды в работе:** **7.5 / 10**
 - **Рекомендуемый масштаб:** `Global CLI (/opt/homebrew/bin/avdslim)` — применяется ко всем локальным Android AVD через `tune-avd` + `bake --headless` с защитой GPS в `defaults` (без `install-shim`)
-- **Работает в связке с:** [**`agent-device`**](agent-device.md) + [**`adb`**](adb.md) + [**`simslim`**](simslim.md) + [**`cross-platform-qa`**](cross-platform-qa.md)
+- **Работает в связке с:** [**agent-device**](agent-device.md) + [**adb**](adb.md) + [**simslim**](simslim.md) + [**cross-platform-qa**](cross-platform-qa.md)
 - **Используется с:** `2026-11-16`
 - **Текущий статус:** `✅ Использую`
 
@@ -19,7 +19,7 @@
 > [!IMPORTANT]
 > **Простыми словами (Главная задача и польза):** Переключает графику Android-эмулятора с медленного CPU на **Apple Metal GPU (`host`)** и **снижает расход RAM с `4.41 GB -> 2.64 GB` (`-69%` от стандартных `8.5 GB` в Studio)** с запуском за `14` секунд.
 
-Открытый оптимизатор Android Virtual Device (`AVD`) под лицензией `MIT` (`go.mod` всего `45 байт` — `0` сторонних пакетов, `0` сетевых вызовов), созданный по образцу [**`simslim`**](simslim.md). Устраняет 4 главные причины, из-за которых эмулятор Android съедает `4.5 GB – 8.5 GB` памяти на Apple Silicon и Linux:
+Открытый оптимизатор Android Virtual Device (`AVD`) под лицензией `MIT` (`go.mod` всего `45 байт` — `0` сторонних пакетов, `0` сетевых вызовов), созданный по образцу [**simslim**](simslim.md). Устраняет 4 главные причины, из-за которых эмулятор Android съедает `4.5 GB – 8.5 GB` памяти на Apple Silicon и Linux:
 
 1. **Убирает ловушку программного рендера `Lavapipe / SwiftShader` (`-gpu host`):** В AVD часто остаётся `hw.gpu.mode=auto` / `hw.gpu.enabled=no`, из-за чего графика рендерится на CPU (`SwiftShader LLVM` / `lavapipe`). Команда `avdslim tune-avd` переключает эмулятор на нативное ускорение **Apple Silicon Metal GPU (`host`)**.
 2. **Флаг QEMU `-lowram` и лимит `1536 MB`:** Обходит внутренний порог QEMU в 4 GB и запускает ядро Android в режиме низкой памяти (автоматически сохраняя бэкап `config.ini.bak`).

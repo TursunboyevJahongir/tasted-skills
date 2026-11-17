@@ -8,9 +8,8 @@
 - **Оценка качества:** **8.0 / 10**
 - **Полезность для нас:** **2.5 / 10**
 - **Рекомендуемый охват:** `Не устанавливать`
-- **Используемая замена:** [**`grill-me`**](grill-me.md) + [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) + [**`elephant-goldfish-model`**](elephant-goldfish-model.md) + [**`T3 Code`**](../developer-tools/t3-code.md)
 - **Дата проверки:** `2026-11-16`
-- **Текущий статус:** `🔄 Есть альтернатива получше`
+- 🔄 **Есть альтернатива получше:** [grill-me](grill-me.md) + [ponytail](ponytail.md) + [karpathy-guidelines](karpathy-guidelines.md) + [elephant-goldfish-model](elephant-goldfish-model.md) + [Orca](../developer-tools/orca.md)
 
 ---
 
@@ -28,10 +27,10 @@
 Написан аккуратнее, чем `superpowers`, но в реальной работе создаёт **лишние циклы и дублирование**:
 - **Тяжёлый процесс и паузы:** Обязательный TDD (`Red-Green-Refactor`), лимиты правок по ~100 строк и обязательные остановки в `doubt-driven-development` с вопросом *«запросить ли второе мнение у другой CLI-модели?»* на каждом шаге замедляют разработку.
 - **Все сильные части пакета у нас уже закрыты более точными инструментами:**
-  - `interview-me` → [**`grill-me`**](grill-me.md) (`9.5/10`)
-  - `doubt-driven` / `code-review` → [**`elephant-goldfish-model`**](elephant-goldfish-model.md) + [**`T3 Code`**](../developer-tools/t3-code.md)
-  - `code-simplification` → [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md)
-  - `frontend-ui-engineering` → [**`impeccable`**](../ui-ux/impeccable.md)
+  - `interview-me` → [**grill-me**](grill-me.md) (`9.5/10`)
+  - `doubt-driven` / `code-review` → [**elephant-goldfish-model**](elephant-goldfish-model.md) + [**T3 Code**](../developer-tools/t3-code.md)
+  - `code-simplification` → [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md)
+  - `frontend-ui-engineering` → [**impeccable**](../ui-ux/impeccable.md)
 
 ---
 
@@ -39,4 +38,4 @@
 
 | Дата | Действие | Статус | Примечание |
 |---|---|---|---|
-| 2026-11-16 | Аудит исходного кода | `🔄 Есть альтернатива получше` | Качественный пакет (`8.0/10`), но пропущен из-за громоздкости 25 скиллов и дублирования нашего текущего стека. |
+| 2026-11-16 | Аудит исходного кода | 🔄 **Есть альтернатива получше:** [grill-me](grill-me.md) + [ponytail](ponytail.md) | Качественный пакет (`8.0/10`), но пропущен из-за громоздкости 25 скиллов и дублирования нашего текущего стека. |

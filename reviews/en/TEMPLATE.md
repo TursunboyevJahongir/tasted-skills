@@ -9,7 +9,7 @@
 - **How Often Needed:** **X.X / 10**
 - **Recommended Scope:** `Global (-g)` | `Project Only (-p)` | `Plugin` | `Standalone Tool` | `Do Not Install`
 - **Reviewed Date:** `YYYY-MM-DD`
-- **Current Status:** `✅ Using` | `👍 Good Option` | `🔄 Better Alternative` | `⚠️ Not Recommended`
+- **Current Status:** `✅ Using` | `👍 Good Option` | 🔄 **Better Alternative:** [name](...) | `⚠️ Not Recommended`
 
 ---
 

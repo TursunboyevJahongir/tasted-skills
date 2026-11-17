@@ -4,12 +4,12 @@
 
 - **Manba:** [092Abdullah/AssetDiet](https://github.com/092Abdullah/AssetDiet) · [npm: assetdiet-mcp](https://www.npmjs.com/package/assetdiet-mcp)
 - **Turkum:** `Developer Tools` *(Lokal rasm, SVG, video va 3D fayllarni siqish hamda kod importlarini yangilash)*
-- **Turi:** `Standalone CLI` + biz yozgan yengil [`asset-diet`](../../skills/asset-diet/SKILL.md) on-demand skilli
+- **Turi:** `Standalone CLI` + biz yozgan yengil [asset-diet](../../skills/asset-diet/SKILL.md) on-demand skilli
 - **Sifat bahosi:** **7.5 / 10**
-- **Ishda kerak bo'lishi:** **6.5 / 10** *(doimiy 16-tool MCP sifatida emas, [`asset-diet`](../../skills/asset-diet/SKILL.md) skilli orqali faqat kerak paytda `npx` CLI rejimida)*
+- **Ishda kerak bo'lishi:** **6.5 / 10** *(doimiy 16-tool MCP sifatida emas, [asset-diet](../../skills/asset-diet/SKILL.md) skilli orqali faqat kerak paytda `npx` CLI rejimida)*
 - **Tavsiya etilgan ko'lam:** `On-Demand npx CLI + Global yengil asset-diet skilli (-g)`
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `👍 Yaxshi variant` *(doimiy MCP ulamasdan, ushbu repodagi [`skills/asset-diet`](../../skills/asset-diet/SKILL.md) skilli barcha 5 ta agent muhitiga ulandi va real repoda sinab ko'rildi)*
+- **Joriy holati:** `👍 Yaxshi variant` *(doimiy MCP ulamasdan, ushbu repodagi [skills/asset-diet](../../skills/asset-diet/SKILL.md) skilli barcha 5 ta agent muhitiga ulandi va real repoda sinab ko'rildi)*
 
 ---
 
@@ -27,7 +27,7 @@ Loyiha ichidagi og'ir media fayllarni bulutga yubormasdan **100% lokal** siqadig
 
 ## 2. Nega doimiy MCP emas, `asset-diet` skilli orqali?
 
-- **0 MCP kontekst shishishi:** Doimiy 16-tool MCP server ulansa, rasmga aloqasi yo'q har bitta chatda kontekstni yeydi; [`skills/asset-diet`](../../skills/asset-diet/SKILL.md) esa faqat *"rasmlarni siqib ber"* / *"asset-diet"* deyilganda ishga tushadi (`setup` va `mcp` buyruqlari taqiqlangan).
+- **0 MCP kontekst shishishi:** Doimiy 16-tool MCP server ulansa, rasmga aloqasi yo'q har bitta chatda kontekstni yeydi; [skills/asset-diet](../../skills/asset-diet/SKILL.md) esa faqat *"rasmlarni siqib ber"* / *"asset-diet"* deyilganda ishga tushadi (`setup` va `mcp` buyruqlari taqiqlangan).
 - **Expo / React Native himoyasi:** Mobil ilovalarda `app.json` ikonkalar va `.png` statik `require()` yo'llari buzilmasligi uchun skill sukut bo'yicha `--policy safe` rejimini ushlaydi hamda `.assetdiet/` zaxira papkasini Git'ga qo'shib yubormaslikni nazorat qiladi.
 
 ---
@@ -51,4 +51,4 @@ npx assetdiet-mcp@0.1.4 restore --run <runId>
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kod auditi, jonli `audit`/`doctor` sinovi va global `asset-diet` skillini ulash | `👍 Yaxshi variant` | `v0.1.4` barcha 5 ta lokal dvigatel (`Sharp`, `SVGO`, `FFmpeg`, `glTF-Transform`, `Font`) bilan tekshirildi; 16-tool MCP o'rniga yengil [`skills/asset-diet`](../../skills/asset-diet/SKILL.md) barcha 5 ta AI agentga sinxronlandi. |
+| 2026-11-16 | Manba kod auditi, jonli `audit`/`doctor` sinovi va global `asset-diet` skillini ulash | `👍 Yaxshi variant` | `v0.1.4` barcha 5 ta lokal dvigatel (`Sharp`, `SVGO`, `FFmpeg`, `glTF-Transform`, `Font`) bilan tekshirildi; 16-tool MCP o'rniga yengil [skills/asset-diet](../../skills/asset-diet/SKILL.md) barcha 5 ta AI agentga sinxronlandi. |

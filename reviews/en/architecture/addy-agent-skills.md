@@ -8,9 +8,8 @@
 - **Quality Score:** **8.0 / 10**
 - **Relevance to Us:** **2.5 / 10**
 - **Recommended Scope:** `Do Not Install`
-- **Used Instead:** [**`grill-me`**](grill-me.md) + [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) + [**`elephant-goldfish-model`**](elephant-goldfish-model.md) + [**`T3 Code`**](../developer-tools/t3-code.md)
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `🔄 Better Alternative`
+- 🔄 **Better Alternative:** [grill-me](grill-me.md) + [ponytail](ponytail.md) + [karpathy-guidelines](karpathy-guidelines.md) + [elephant-goldfish-model](elephant-goldfish-model.md) + [Orca](../developer-tools/orca.md)
 
 ---
 
@@ -28,10 +27,10 @@ Addy Osmani's pack of 25 lifecycle engineering skills (`interview-me`, `spec-dri
 Cleaner and better structured than `superpowers`, but still introduces **ceremony and overlap** across our daily stack:
 - **Process friction:** Enforces strict Red-Green-Refactor TDD, ~100-line change caps, and mandatory interactive pauses in `doubt-driven-development` asking whether to escalate every decision to another CLI model.
 - **Every strong idea in the pack is already covered by sharper focused tools in our stack:**
-  - `interview-me` → [**`grill-me`**](grill-me.md) (`9.5/10`)
-  - `doubt-driven` / `code-review` → [**`elephant-goldfish-model`**](elephant-goldfish-model.md) + [**`T3 Code`**](../developer-tools/t3-code.md)
-  - `code-simplification` → [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md)
-  - `frontend-ui-engineering` → [**`impeccable`**](../ui-ux/impeccable.md)
+  - `interview-me` → [**grill-me**](grill-me.md) (`9.5/10`)
+  - `doubt-driven` / `code-review` → [**elephant-goldfish-model**](elephant-goldfish-model.md) + [**T3 Code**](../developer-tools/t3-code.md)
+  - `code-simplification` → [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md)
+  - `frontend-ui-engineering` → [**impeccable**](../ui-ux/impeccable.md)
 
 ---
 
@@ -39,4 +38,4 @@ Cleaner and better structured than `superpowers`, but still introduces **ceremon
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Primary-source audit | `🔄 Better Alternative` | Well-written (`8.0/10`), skipped to avoid 25-skill SDLC ceremony and auto-trigger overlap with our leaner active stack. |
+| 2026-11-16 | Primary-source audit | 🔄 **Better Alternative:** [grill-me](grill-me.md) + [ponytail](ponytail.md) | Well-written (`8.0/10`), skipped to avoid 25-skill SDLC ceremony and auto-trigger overlap with our leaner active stack. |

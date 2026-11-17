@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **8.5 / 10**
 - **Ishda kerak bo'lishi:** **2.5 / 10** *(faqat Android uchun, sekin va alohida pullik LLM API kalit talab qiladi)*
 - **Tavsiya etilgan ko'lam:** `Faqat alohida CLI/SDK (uv run artemis)` — global MCP qilib o'rnatilmasin
-- **O'rniga ishlatiladigan tizim (Alternativa):** [**`agent-device`**](agent-device.md) *(`$0` qo'shimcha API xarajati, `iOS + Android + tvOS + Android TV`, `197–888 ms` tezlik)* + [**`adb`**](adb.md)
+- **O'rniga ishlatiladigan tizim (Alternativa):** [**agent-device**](agent-device.md) *(`$0` qo'shimcha API xarajati, `iOS + Android + tvOS + Android TV`, `197–888 ms` tezlik)* + [**adb**](adb.md)
 - **Tekshirilgan sana:** `2026-11-16`
 - **Joriy holati:** `👍 Yaxshi variant`
 
@@ -39,7 +39,7 @@ Ichida 2 xil ishlash profili va 4 xil interfeys (`Web UI localhost:8000`, `CLI`,
   - Mavjud `Claude Pro/Max`, `ChatGPT` yoki `Antigravity` obunasi bilan o'z-o'zidan ishlamaydi: `.env` fayliga **alohida per-token hisoblanadigan pullik API kalit** (`GEMINI_API_KEY`, `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `OPEN_ROUTER_API_KEY` yoki `XAI_API_KEY`, kengaytirilgan OCR uchun esa pullik Google Cloud Vision `OCR_API_KEY`) ulash shart.
   - Har bir qadamda telefon ekranidan skrinshot (qimmat multimodal tasvir tokenlari) va UI daraxtini olib, ichki agentlar (`Planner`, `Operator`, `Explorer`, `Checker`, `Video Analyzer`) orqali tashqi LLM API'ga o'nlab pullik so'rov yuboradi — uzun `Pro` testlar API balansini tez yeydi.
 - **Faqat Android (`iOS` va `tvOS` yo'q):** `README.md` roadmap'ida `iOS Platform Expansion` hali bajarilmagan `[ ]` reja holatida turibdi — iPhone, iPad va Apple TV ilovalarini test qila olmaydi.
-- **Kundalik kodlash uchun `4x–45x` sekin:** Har bitta bosish `Flash` da `3 000–5 000 ms`, `Pro` da `15 000–40 000 ms` oladi ([`agent-device`](agent-device.md) da Android **`888 ms`**, iOS **`197 ms`**).
+- **Kundalik kodlash uchun `4x–45x` sekin:** Har bitta bosish `Flash` da `3 000–5 000 ms`, `Pro` da `15 000–40 000 ms` oladi ([agent-device](agent-device.md) da Android **`888 ms`**, iOS **`197 ms`**).
 - **Kontekst va muhit og'irligi:** MCP sifatida ulansa `5` ta eager tool (`mobile_run_task` va b.) + tavsiya etilgan `mcp_server/rules.md` (`13.6 KB` / `~3 400 token`) kontekstni band qiladi; `LangGraph + LangChain + OpenCV + FastAPI` to'plami esa `~1 GB+` Python `.venv` hosil qiladi.
 
 ---
@@ -60,7 +60,7 @@ Ichida 2 xil ishlash profili va 4 xil interfeys (`Web UI localhost:8000`, `CLI`,
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi (Alternativa)
 
-- **Kundalik ishda to'liq va bepul alternativamiz — [**`agent-device`**](agent-device.md) (`9.5/10`, `#8` faol global vosita):**
+- **Kundalik ishda to'liq va bepul alternativamiz — [**agent-device**](agent-device.md) (`9.5/10`, `#8` faol global vosita):**
   - **Narx:** `agent-device` **`$0` qo'shimcha API kalit** so'raydi — o'zingiz ishlatib turgan AI coding agent `@e1` reflarni `~100 token` ichida to'g'ridan-to'g'ri o'qiydi va bosadi.
   - **Qamrov va tezlik:** Ham `iOS`, ham `Android`, ham `tvOS` / `Android TV` da oynasiz fonda `197–888 ms` da ishlaydi (`0` MCP shishishi, `0` telemetriya).
 
@@ -77,4 +77,4 @@ Ichida 2 xil ishlash profili va 4 xil interfeys (`Web UI localhost:8000`, `CLI`,
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Instagram Reel (`DehEdBbgQFZ`) hamda `google/artemis` (`pyproject.toml`, `.env.example`, `mcp_server/`) birlamchi kod auditi | `👍 Yaxshi variant` | Kuchli avtonom Android QA tizimi (`8.5/10`), biroq ishlashi uchun **alohida pullik LLM API kalit** talab qilishi, iOS yo'qligi va sekinligi (`3–40s`) sabab o'rnatilmadi; kundalik asosiy vositamiz — bepul va tezkor [**`agent-device`**](agent-device.md). |
+| 2026-11-16 | Instagram Reel (`DehEdBbgQFZ`) hamda `google/artemis` (`pyproject.toml`, `.env.example`, `mcp_server/`) birlamchi kod auditi | `👍 Yaxshi variant` | Kuchli avtonom Android QA tizimi (`8.5/10`), biroq ishlashi uchun **alohida pullik LLM API kalit** talab qilishi, iOS yo'qligi va sekinligi (`3–40s`) sabab o'rnatilmadi; kundalik asosiy vositamiz — bepul va tezkor [**agent-device**](agent-device.md). |

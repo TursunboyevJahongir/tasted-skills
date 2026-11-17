@@ -51,7 +51,7 @@ Measured live on macOS against an iOS 26.5 Simulator and a connected Android tab
 - **Risk Level:** `Low` *(clean `MIT` codebase, zero telemetry, zero external npm dependencies)*
 - **Applied sanitization & guardrails:**
   1. **Installed as CLI + Skill, NOT as an MCP server:** Keeps always-loaded MCP tool schema overhead at `0` tokens, with a `PATH`-safe `/opt/homebrew/bin/agent-device` wrapper so non-login CLI subagents always resolve `node` and `adb`.
-  2. **Scoped away from `agent-desktop`:** Stripped `macOS`, `HarmonyOS`, `Vega OS`, and `Limrun` from the upstream `SKILL.md` trigger description so **Web (`Google Chrome`) and macOS desktop apps** remain exclusively handled by [**`agent-desktop`**](../developer-tools/agent-desktop.md), while `agent-device` handles **Mobile & TV (`iOS`, `Android`, `tvOS`, `Android TV`)**.
+  2. **Scoped away from `agent-desktop`:** Stripped `macOS`, `HarmonyOS`, `Vega OS`, and `Limrun` from the upstream `SKILL.md` trigger description so **Web (`Google Chrome`) and macOS desktop apps** remain exclusively handled by [**agent-desktop**](../developer-tools/agent-desktop.md), while `agent-device` handles **Mobile & TV (`iOS`, `Android`, `tvOS`, `Android TV`)**.
   3. **Explicit `--udid` / `--serial` safety rule:** Prevents accidental interaction with plugged-in physical phones during Stage 1 local development.
 
 ---
@@ -62,10 +62,10 @@ Measured live on macOS against an iOS 26.5 Simulator and a connected Android tab
 
 | Existing Tool | Current State | How Its Role Changed |
 |---|---|---|
-| [**`agent-desktop`**](../developer-tools/agent-desktop.md) | `✅ Kept (Primary — Web/Desktop)` | Remains **100% primary** for **Google Chrome (Web)** and **macOS desktop** GUI windows. Mobile & TV UI flows moved to `agent-device`. |
-| [**`adb`**](adb.md) | `✅ Kept (Transport + Port/Logs)` | `agent-device` still invokes `adb` underneath on Android. In addition, **`adb reverse`** (Metro/local backend port forwarding), **`adb logcat`** (crash logs), APK installs, and **`emu kill`** stay directly on `adb` — only slow `uiautomator dump` + coordinate `input tap` loops were replaced by `agent-device`. |
-| [**`xcrun simctl` + `devicectl`**](ios-simulator-device-hub.md) | `✅ Kept (Boot + Physical iPhone)` | Still required for windowless simulator `boot`/`shutdown` (`simctl`) and physical iPhone build installs (`devicectl`). **`Device Hub`** is no longer opened routinely and serves strictly as a fallback. |
-| [**`cross-platform-qa`**](cross-platform-qa.md) | `✅ Upgraded` | Preserves our 2-stage QA discipline with mobile/TV UI verification upgraded to `agent-device`. |
+| [**agent-desktop**](../developer-tools/agent-desktop.md) | `✅ Kept (Primary — Web/Desktop)` | Remains **100% primary** for **Google Chrome (Web)** and **macOS desktop** GUI windows. Mobile & TV UI flows moved to `agent-device`. |
+| [**adb**](adb.md) | `✅ Kept (Transport + Port/Logs)` | `agent-device` still invokes `adb` underneath on Android. In addition, **`adb reverse`** (Metro/local backend port forwarding), **`adb logcat`** (crash logs), APK installs, and **`emu kill`** stay directly on `adb` — only slow `uiautomator dump` + coordinate `input tap` loops were replaced by `agent-device`. |
+| [**xcrun simctl + devicectl**](ios-simulator-device-hub.md) | `✅ Kept (Boot + Physical iPhone)` | Still required for windowless simulator `boot`/`shutdown` (`simctl`) and physical iPhone build installs (`devicectl`). **`Device Hub`** is no longer opened routinely and serves strictly as a fallback. |
+| [**cross-platform-qa**](cross-platform-qa.md) | `✅ Upgraded` | Preserves our 2-stage QA discipline with mobile/TV UI verification upgraded to `agent-device`. |
 
 ---
 

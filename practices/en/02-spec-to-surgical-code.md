@@ -4,7 +4,7 @@
 
 ⬅️ [Back to Practices Table of Contents](README.md)
 
-- **Combined Tools:** [**`graphify`**](../../reviews/en/architecture/graphify.md) + [**`grill-me`**](../../reviews/en/architecture/grill-me.md) + [**`ponytail`**](../../reviews/en/architecture/ponytail.md) + [**`karpathy-guidelines`**](../../reviews/en/architecture/karpathy-guidelines.md) + [**`Orca`**](../../reviews/en/developer-tools/orca.md) + [**`elephant-goldfish-model`**](../../reviews/en/architecture/elephant-goldfish-model.md)
+- **Combined Tools:** [**graphify**](../../reviews/en/architecture/graphify.md) + [**grill-me**](../../reviews/en/architecture/grill-me.md) + [**ponytail**](../../reviews/en/architecture/ponytail.md) + [**karpathy-guidelines**](../../reviews/en/architecture/karpathy-guidelines.md) + [**Orca**](../../reviews/en/developer-tools/orca.md) + [**elephant-goldfish-model**](../../reviews/en/architecture/elephant-goldfish-model.md)
 - **Target Projects:** All Backend, Web, Mobile, and Architecture tasks.
 
 ---

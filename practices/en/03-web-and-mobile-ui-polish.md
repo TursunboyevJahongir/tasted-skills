@@ -4,7 +4,7 @@
 
 ⬅️ [Back to Practices Table of Contents](README.md)
 
-- **Combined Tools:** [**`impeccable`**](../../reviews/en/ui-ux/impeccable.md) + [**`mobile-native`**](../../reviews/en/mobile/mobile-native.md) + [**`animate-expo`**](../../reviews/en/mobile/animate-expo.md) + [**`asset-diet`**](../../reviews/en/developer-tools/assetdiet.md) + [**`agent-desktop`**](../../reviews/en/developer-tools/agent-desktop.md)
+- **Combined Tools:** [**impeccable**](../../reviews/en/ui-ux/impeccable.md) + [**mobile-native**](../../reviews/en/mobile/mobile-native.md) + [**animate-expo**](../../reviews/en/mobile/animate-expo.md) + [**asset-diet**](../../reviews/en/developer-tools/assetdiet.md) + [**agent-desktop**](../../reviews/en/developer-tools/agent-desktop.md)
 - **Target Projects:** Functional web apps, admin panels, Telegram Mini Apps / PWAs, and Expo / React Native screens.
 
 ---
@@ -47,6 +47,6 @@ agent-desktop click @<snapshot_id>:e12
 
 ## 3. Extra Power Practices
 
-- **Greenfield marketing landing pages & lossless full-page web redesigns ([`Hallmark v2`](../../reviews/en/web/hallmark.md) — on demand via `-p` / `/hallmark`):** Keep `impeccable` as the daily driver for web/mobile product screens, and pull in `Hallmark v2` specifically when building a new promo/landing site or redesigning an existing page without losing a single link or form (`50` browsable themes + `755` licensed real photos + `capture.mjs` + `sloplint --before/--kept`).
+- **Greenfield marketing landing pages & lossless full-page web redesigns ([Hallmark v2](../../reviews/en/web/hallmark.md) — on demand via `-p` / `/hallmark`):** Keep `impeccable` as the daily driver for web/mobile product screens, and pull in `Hallmark v2` specifically when building a new promo/landing site or redesigning an existing page without losing a single link or form (`50` browsable themes + `755` licensed real photos + `capture.mjs` + `sloplint --before/--kept`).
 - **Porting desktop web workflows to mobile apps (`web-to-native-mobile` + `impeccable`):** Before squeezing a wide web table or filter bar onto a phone screen, use `web-to-native-mobile` to decide what stays visible (`Keep visible`), what becomes a touch sheet (`Redesign` / `Relocate`), and what gets omitted.
 - **Pre-release adaptive & FPS gate (`client-performance-gate`):** On end-user web/mobile-web/WebOS apps (excluding admin panels), verify adaptive visuals and recovery under throttled CPU/network profiles.

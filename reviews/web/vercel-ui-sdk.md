@@ -9,7 +9,7 @@
 - **Ishda kerak bo'lishi:** **2.0 / 10** *(mavjud React/Shadcn/Radix veb va Expo mobil stekimizga mos emas)*
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(faqat kelajakda noldan maxsus `@ui-sdk/*` da veb-loyiha boshlansagina lokal `-p` da olinadi)*
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `🔄 Alternativi yaxshiroq` *(o'rniga: mavjud UI stekimiz + [**`impeccable`**](../ui-ux/impeccable.md) + [**`agent-desktop`**](../developer-tools/agent-desktop.md))*
+- 🔄 **Alternativi yaxshiroq:** [agent-desktop](../developer-tools/agent-desktop.md) + [impeccable](../ui-ux/impeccable.md)
 
 ---
 
@@ -57,8 +57,8 @@ Ijtimoiy tarmoqlardagi videolarda `vercel-labs/ui` *"interaktiv UI qurish kutubx
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
 Bizga bu kutubxona ham, uning skilli ham kerak emas — chunki uning ikkala vazifasi mavjud stekimizda ancha universal hal qilingan:
-1. **UI komponentlar va dizayn/a11y sifati:** Mavjud veb loyihalarimizdagi pishiq `React` (`Radix` / `Shadcn`) va mobil `Expo` stekimiz + [**`impeccable`**](../ui-ux/impeccable.md) (`craft-floor` + `APCA` kontrast + klaviatura/fokus auditi) Beta kutubxonaga o'tmasdan barqaror ishlaydi.
-2. **Sahifani skrinshotsiz 2x tez boshqarish:** Bizdagi [**`agent-desktop`**](../developer-tools/agent-desktop.md) macOS Accessibility (`AX`) daraxti orqali **har qanday** veb-saytni (`<button>`, `<input>`, `Radix`, `Shadcn` yoki begona saytlarni ham — bitta qator `@ui-sdk` kodi yozmasdan!) fonda va skrinshotsiz millisekundlarda boshqaradi.
+1. **UI komponentlar va dizayn/a11y sifati:** Mavjud veb loyihalarimizdagi pishiq `React` (`Radix` / `Shadcn`) va mobil `Expo` stekimiz + [**impeccable**](../ui-ux/impeccable.md) (`craft-floor` + `APCA` kontrast + klaviatura/fokus auditi) Beta kutubxonaga o'tmasdan barqaror ishlaydi.
+2. **Sahifani skrinshotsiz 2x tez boshqarish:** Bizdagi [**agent-desktop**](../developer-tools/agent-desktop.md) macOS Accessibility (`AX`) daraxti orqali **har qanday** veb-saytni (`<button>`, `<input>`, `Radix`, `Shadcn` yoki begona saytlarni ham — bitta qator `@ui-sdk` kodi yozmasdan!) fonda va skrinshotsiz millisekundlarda boshqaradi.
 
 ---
 
@@ -73,5 +73,5 @@ Bizga bu kutubxona ham, uning skilli ham kerak emas — chunki uning ikkala vazi
 
 | Sana | Amal | Holat | Izoh (ishlatildimi, qayerda sinab ko'rildi, nima tozalandi) |
 |---|---|---|---|
-| 2026-11-16 | Video demo (`@githubradar`), `vercel-labs/ui` manba kodi (`SKILL.md`, `agent-ready.md`) va `skillshare audit` tekshiruvi | `🔄 Alternativi yaxshiroq` | Faqat `@ui-sdk/*` da yozilgan Beta veb-ilovalar uchungina ishlashi (oddiy HTML/Shadcn'ni ko'rmasligi) sabab rad etildi. O'rniga: mavjud UI stekimiz + `impeccable` + `agent-desktop`. |
+| 2026-11-16 | Video demo (`@githubradar`), `vercel-labs/ui` manba kodi (`SKILL.md`, `agent-ready.md`) va `skillshare audit` tekshiruvi | 🔄 **Alternativi yaxshiroq:** [agent-desktop](../developer-tools/agent-desktop.md) | Faqat `@ui-sdk/*` da yozilgan Beta veb-ilovalar uchungina ishlashi (oddiy HTML/Shadcn'ni ko'rmasligi) sabab rad etildi. O'rniga: mavjud UI stekimiz + `impeccable` + `agent-desktop`. |
 

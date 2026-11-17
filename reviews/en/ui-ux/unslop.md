@@ -8,9 +8,8 @@
 - **Quality Score:** **8.5 / 10**
 - **Relevance to Us:** **2.5 / 10**
 - **Recommended Scope:** `Do Not Install`
-- **Used Instead:** [**`impeccable`**](impeccable.md) (`craft-floor` + `polish` / `quieter` / `clarify` / `harden` — across Web and Native Mobile) + [**`animate-expo`**](../mobile/animate-expo.md)
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `🔄 Better Alternative`
+- 🔄 **Better Alternative:** [impeccable](impeccable.md) (`polish` / `quieter` / `clarify` / `harden` — Web & Mobile) + [animate-expo](../mobile/animate-expo.md)
 
 ---
 
@@ -34,7 +33,7 @@ A web UI "unslopping" skill created by Damir Sokolovsky (`@heydamir`) from his X
 - Clean `skillshare audit` result (`0 CRITICAL/HIGH` — only `LOW` `CC-BY-4.0` attribution links and `1.3 MB` of `.webp` reference frames).
 
 ### Weaknesses & Why We Already Have It Covered
-- **Already covered — and exceeded — by [`impeccable`](impeccable.md):** `impeccable`'s `craft-floor.md` alongside `polish`, `quieter`, `distill`, `clarify`, `typeset`, `layout`, and `harden` already enforces the same anti-slop craft rules (banning gradient text, colored halos, emoji icons, fake sparklines, uniform icon-card grids, and low contrast) while also supporting **4 surface modes**, durable `PRODUCT.md`/`DESIGN.md` context, and **native iOS & Android** (`unslop` is Web/HTML/CSS-only).
+- **Already covered — and exceeded — by [impeccable](impeccable.md):** `impeccable`'s `craft-floor.md` alongside `polish`, `quieter`, `distill`, `clarify`, `typeset`, `layout`, and `harden` already enforces the same anti-slop craft rules (banning gradient text, colored halos, emoji icons, fake sparklines, uniform icon-card grids, and low contrast) while also supporting **4 surface modes**, durable `PRODUCT.md`/`DESIGN.md` context, and **native iOS & Android** (`unslop` is Web/HTML/CSS-only).
 - **Direct `auto-trigger` and rule collision:** Its frontmatter triggers on *"polish, clean up or redesign a screen... dashboards, apps and landing pages"*, colliding directly with `impeccable`. Worse, rigid rules in `unslop` (banning `700–900` weights across the board, restricting motion strictly to `transform/opacity`, and forcing a mandatory approval stop on Step 4) conflict with `impeccable`'s brand-preserving refinement rules on real production apps.
 - **Unneeded extras:** Offers to connect external paid image MCP servers (`fal`, `Replicate`, `OpenAI`, `Higgsfield`), and we don't need social-media redline `.mp4` showcase rendering in product engineering.
 
@@ -44,4 +43,4 @@ A web UI "unslopping" skill created by Damir Sokolovsky (`@heydamir`) from his X
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Primary-source & `skillshare audit` review | `🔄 Better Alternative` | Tasteful anti-slop skill (`8.5/10`), skipped because [`impeccable`](impeccable.md) already covers and extends its scope across Web + Native Mobile without trigger conflicts. |
+| 2026-11-16 | Primary-source & `skillshare audit` review | 🔄 **Better Alternative:** [impeccable](impeccable.md) | Tasteful anti-slop skill (`8.5/10`), skipped because [impeccable](impeccable.md) already covers and extends its scope across Web + Native Mobile without trigger conflicts. |

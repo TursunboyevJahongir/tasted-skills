@@ -55,7 +55,7 @@
 ## 4. Совместимость с нашими текущими инструментами
 
 - **Web (`Google Chrome`) и десктопные приложения macOS:** `agent-desktop` остаётся **на 100% основным** фоновым инструментом проверки.
-- **Mobile и TV (`iOS`, `Android`, `tvOS`, `Android TV`):** Управляются через [`agent-device`](../mobile/agent-device.md) (`agent-desktop` + `Device Hub` остаётся резервом для iOS).
+- **Mobile и TV (`iOS`, `Android`, `tvOS`, `Android TV`):** Управляются через [agent-device](../mobile/agent-device.md) (`agent-desktop` + `Device Hub` остаётся резервом для iOS).
 - Для прямого вызова из C/Python/Node/Swift без запуска CLI рядом установлен скилл `agent-desktop-ffi`.
 
 ---
@@ -63,7 +63,7 @@
 ## 5. В каких задачах полезно?
 
 - **Когда использовать:** Проверка локальных веб-приложений в `Google Chrome` и фоновая автоматизация десктопных GUI-программ на macOS.
-- **Когда не использовать:** В мобильных и TV-симуляторах/эмуляторах (используется [`agent-device`](../mobile/agent-device.md)) или при глубоком профилировании сети и CPU-троттлинга (нужен Chrome DevTools).
+- **Когда не использовать:** В мобильных и TV-симуляторах/эмуляторах (используется [agent-device](../mobile/agent-device.md)) или при глубоком профилировании сети и CPU-троттлинга (нужен Chrome DevTools).
 
 ---
 

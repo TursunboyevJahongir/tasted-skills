@@ -8,7 +8,7 @@
 - **Quality Score:** **9.5 / 10**
 - **Relevance to Us:** **9.5 / 10**
 - **Recommended Scope:** `Global (-g)` *(across all projects via AI navigation skill / MCP)*
-- **Related Alternative:** [**`opentelemetry`**](opentelemetry.md) *(Sentry v8+ SDKs run on OpenTelemetry under the hood)*
+- **Related Alternative:** [**opentelemetry**](opentelemetry.md) *(Sentry v8+ SDKs run on OpenTelemetry under the hood)*
 - **Active Since:** `2026-07-08`
 - **Current Status:** `✅ Using` *(primary error, trace, and replay investigation platform across Backend, Web, and iOS/Android)*
 
@@ -31,12 +31,12 @@ A unified observability platform that captures real-time errors, slow requests, 
 ## 2. Strengths & Weaknesses (Compared to `OpenTelemetry`)
 
 ### Strengths (Where Sentry Wins)
-- **Developer & User-Centric Diagnostics (`Application-centric`):** Far stronger out of the box than a raw [`opentelemetry`](opentelemetry.md) stack at exception deduplication, `Release` regression tracking, mobile `dSYM`/`ProGuard` symbolication, and UI `Breadcrumbs`.
+- **Developer & User-Centric Diagnostics (`Application-centric`):** Far stronger out of the box than a raw [opentelemetry](opentelemetry.md) stack at exception deduplication, `Release` regression tracking, mobile `dSYM`/`ProGuard` symbolication, and UI `Breadcrumbs`.
 - **Built-in `Session Replay`:** Connects browser user interactions directly to the error event without maintaining a separate replay tool (OpenTelemetry has no Session Replay specification at all).
 - **Single-Stack Simplicity:** Covers errors, baseline distributed traces, and web replays in one self-hosted deployment.
 
 ### Weaknesses & Limitations
-- **Not an Infrastructure Monitor:** For host CPU/RAM/disk telemetry, container metrics, DB connection-pool saturation, and high-volume raw `stdout` log indexing, [`opentelemetry`](opentelemetry.md) (+ `Grafana` / `SigNoz`) is stronger.
+- **Not an Infrastructure Monitor:** For host CPU/RAM/disk telemetry, container metrics, DB connection-pool saturation, and high-volume raw `stdout` log indexing, [opentelemetry](opentelemetry.md) (+ `Grafana` / `SigNoz`) is stronger.
 - Setting `100%` (`1.0`) sampling on `Session Replay` and `Tracing` for all traffic will quickly fill self-hosted disk storage.
 
 ---
@@ -55,10 +55,10 @@ A unified observability platform that captures real-time errors, slow requests, 
 
 ---
 
-## 4. Relevance & Relationship to [`opentelemetry`](opentelemetry.md)
+## 4. Relevance & Relationship to [opentelemetry](opentelemetry.md)
 
 - Because we build across Web, Mobile (`iOS` / `Android`), and Backend services simultaneously, **we chose `Sentry` as our primary observability platform instead of running a separate OpenTelemetry backend**: it unifies error grouping, mobile crash symbolication, `Breadcrumbs`, `Session Replay`, and `v8+` OTel-based traces in one place.
-- Maintaining a separate [`opentelemetry`](opentelemetry.md) (`Collector + Grafana/SigNoz`) cluster is only needed if deep host/DB infrastructure metrics and centralized high-volume log storage become necessary later.
+- Maintaining a separate [opentelemetry](opentelemetry.md) (`Collector + Grafana/SigNoz`) cluster is only needed if deep host/DB infrastructure metrics and centralized high-volume log storage become necessary later.
 
 ---
 

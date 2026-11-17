@@ -4,7 +4,7 @@
 
 ⬅️ [Practices Mundarijasiga qaytish](README.md)
 
-- **Birlashtiriladigan vositalar:** [**`tasted-skills`**](../skills/tasted-skills/SKILL.md) + [**`skillshare`**](../reviews/developer-tools/skillshare.md) + [**`security-audit`**](../reviews/backend/security-audit-skill.md) + [**`Shannon` (`hacker-test`)**](../reviews/backend/shannon.md) + [**`sentry`**](../reviews/backend/sentry.md)
+- **Birlashtiriladigan vositalar:** [**tasted-skills**](../skills/tasted-skills/SKILL.md) + [**skillshare**](../reviews/developer-tools/skillshare.md) + [**security-audit**](../reviews/backend/security-audit-skill.md) + [**Shannon (hacker-test)**](../reviews/backend/shannon.md) + [**sentry**](../reviews/backend/sentry.md)
 - **Qo'llaniladigan loyihalar:** AI ish muhiti xavfsizligi, Backend API'lar va Full-Stack production tizimlar.
 
 ---

@@ -29,7 +29,7 @@ Bir nechta AI coding agentlar (**Claude Code**, **Codex**, **Antigravity**, **Cu
 
 ### Kuchli tomonlari
 - Har bir agent (`~/.claude`, `~/.codex`, `~/.agents`, `~/.gemini`) uchun qo'lda alohida nusxa ko'chirish va versiya chalkashligini butunlay yo'qotadi.
-- **Tayyor Skill-Check (`audit`) va backup/trash tizimi bor:** `skillshare audit` + AI agentga birlamchi kodni o'qitib tekshirtirish kombinatsiyasi kundalik xavfsizlikni to'liq yopgani uchun [`SkillSpector`](skillspector.md) kabi og'ir alohida skanerlarni o'rnatishga hojat qolmaydi.
+- **Tayyor Skill-Check (`audit`) va backup/trash tizimi bor:** `skillshare audit` + AI agentga birlamchi kodni o'qitib tekshirtirish kombinatsiyasi kundalik xavfsizlikni to'liq yopgani uchun [SkillSpector](skillspector.md) kabi og'ir alohida skanerlarni o'rnatishga hojat qolmaydi.
 
 ### Zaif tomonlari va cheklovlari
 - Interaktiv buyruqlar skript yoki agent ichidan chaqirilganda osilib qolmasligi uchun doim `--no-tui` yoki `--json` flaglarini berish talab etiladi.

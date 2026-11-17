@@ -39,7 +39,7 @@
 
 ### Слабые стороны и накладные расходы
 - **Расход квоты субагентов на полных профилях:** Режимы `standard` и `deep` на крупном репозитории могут вызвать `10–30+` субагентов — поэтому локально по умолчанию выставлен экономный профиль **`quick` / `scoped`**.
-- **Не атакует живой сервер по HTTP:** Анализирует исходный код; для реального динамического взлома локального/staging стенда через браузер используется [`Shannon` (`hacker-test`)](shannon.md).
+- **Не атакует живой сервер по HTTP:** Анализирует исходный код; для реального динамического взлома локального/staging стенда через браузер используется [Shannon (hacker-test)](shannon.md).
 
 ---
 
@@ -48,16 +48,16 @@
 - **Уровень риска:** `Низкий` *(`0` зависимостей, `65/65` локальных Node-тестов пройдено, `CRITICAL = 0`)*
 - **Проверенные точки:** `SKILL.md`, все 14 `.md`-файлов, `validate-findings.cjs`, `validate-coverage-ledger.cjs` и `skillshare audit` (предупреждения `HIGH` вызваны лишь проверочным текстом `"Are there any eval(), exec()..."` внутри `ATTACK-CLASSES.md`).
 - **Выполненная локальная санитаризация (`explicit-trigger-and-quick-default-1`):**
-  1. **Сужен `description` во frontmatter `SKILL.md`:** Чтобы скилл (`22 KB`) не подгружался на обычных задачах по JWT/авторизации, авто-триггер ограничен явными запросами на аудит кода (`"security audit"`, `"xavfsizlik auditi"`, `"kod xavfsizligini tekshir"`, `"zaifliklarni top"`), а живой пентест оставлен за [`hacker-test`](shannon.md).
+  1. **Сужен `description` во frontmatter `SKILL.md`:** Чтобы скилл (`22 KB`) не подгружался на обычных задачах по JWT/авторизации, авто-триггер ограничен явными запросами на аудит кода (`"security audit"`, `"xavfsizlik auditi"`, `"kod xavfsizligini tekshir"`, `"zaifliklarni top"`), а живой пентест оставлен за [hacker-test](shannon.md).
   2. **Профиль по умолчанию изменён со `standard` на `quick` / `scoped` (строка 120 `SKILL.md`):** Бережёт квоту субагентов, пока пользователь явно не запросит полный прогон `standard` или `deep`.
 
 ---
 
-## 4. Совместимость и связка с [`Shannon` (`hacker-test`)](shannon.md)
+## 4. Совместимость и связка с [Shannon (hacker-test)](shannon.md)
 
 Оба инструмента дополняют друг друга как **двухступенчатая проверка безопасности**:
 
-| Критерий | **`security-audit`** *(Cloudflare — `✅ Использую`)* | [**`Shannon` (`hacker-test`)**](shannon.md) *(`👍 Хороший вариант`)* |
+| Критерий | **`security-audit`** *(Cloudflare — `✅ Использую`)* | [**Shannon (hacker-test)**](shannon.md) *(`👍 Хороший вариант`)* |
 |---|---|---|
 | **Механизм** | 6-фазный аудит исходного кода (`Hunter` + независимый `Verifier`) | Живая динамическая эксплуатация через Docker + Temporal + Playwright |
 | **Охват** | Backend, Web, **Mobile (`iOS`/`Android`/`Expo`)**, CLI, Cloud/CI, LLM | Только запущенные Web-приложения и HTTP API |

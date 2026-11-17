@@ -8,9 +8,8 @@
 - **Sifat bahosi:** **8.5 / 10**
 - **Ishda kerak bo'lishi:** **2.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Skip (O'chirib tashlandi)`
-- **O'rniga ishlatiladigan tizim (Alternativa):** [**`Orca` (`stablyai/orca`)**](orca.md)
 - **Ishlatilgan sana:** `2026-10-23 → 2026-11-16`
-- **Joriy holati:** `🔄 Alternativi yaxshiroq` *(mobil ulanish uzilishlari, Lock Screen'da to'xtab qolishi va `Orca` ning ustun ichki multi-agent orkestratsiyasi sabab `Orca` ga o'tildi va o'chirildi)*
+- 🔄 **Alternativi yaxshiroq:** [Orca](orca.md) *(mobil Beta uzilishlari va Lock Screen to'xtashi sabab `Orca` ga o'tildi)*
 
 ---
 
@@ -38,8 +37,8 @@ Bitta vazifada bir nechta mustaqil AI modellarini birga ishlatish imkonini berad
 
 ### Zaif tomonlari va nima uchun `Orca` ga o'tdik?
 - **Mobil ilova xomligi (Beta):** Telefon ekrani o'chganda yoki tarmoq almashganda aloqa tez-tez uzilib qoladi va har safar qayta ulashni talab qiladi.
-- **Kompyuter blokda (`Lock Screen`) ishlamasligi:** Kompyuter bloklanganda sessiyalar uzilib qoladi ([**`Orca`**](orca.md) da esa ichki `caffeinate -i -s` va fon daemoni bor).
-- **UI ichida native multi-agent subagent kartalari yo'q:** [**`Orca`**](orca.md) bitta promptdan `orca orchestration worker-start` orqali `Claude`, `Codex` va `Antigravity` workerlarini Chat UI ichida jonli kartalar bilan boshqaradi (`841 MB` RAM vs `T3 Code` ning `~1.1–1.4 GB` RAM + `~3.87 GB` `~/.t3` keshi).
+- **Kompyuter blokda (`Lock Screen`) ishlamasligi:** Kompyuter bloklanganda sessiyalar uzilib qoladi ([**Orca**](orca.md) da esa ichki `caffeinate -i -s` va fon daemoni bor).
+- **UI ichida native multi-agent subagent kartalari yo'q:** [**Orca**](orca.md) bitta promptdan `orca orchestration worker-start` orqali `Claude`, `Codex` va `Antigravity` workerlarini Chat UI ichida jonli kartalar bilan boshqaradi (`841 MB` RAM vs `T3 Code` ning `~1.1–1.4 GB` RAM + `~3.87 GB` `~/.t3` keshi).
 
 ---
 
@@ -71,5 +70,5 @@ Global muhitimizdagi `task-context`, `antigravity-claude`, `antigravity-consult`
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
 | 2026-10-23 | `T3 Code` desktop muhitini o'rnatish + CLI subagent review skillarini ulash (`2026-10-31`) | `✅ Ishlatyapman` | Desktop ilova hamda CLI subagent ko'prigi (Codex ↔ Claude ↔ Antigravity) faol qo'llanildi. |
-| 2026-11-16 | [**`Orca` (`stablyai/orca`)**](orca.md) bilan jonli solishtirish va `T3 Code` ni to'liq o'chirish (`~3.87 GB` bo'shatildi) | `🔄 Alternativi yaxshiroq` | Mobil barqarorlik, Lock Screen (`caffeinate`) va bitta promptdan ichki multi-agent orkestratsiya sabab to'liq `Orca` ga o'tildi. |
+| 2026-11-16 | [**Orca (stablyai/orca)**](orca.md) bilan jonli solishtirish va `T3 Code` ni to'liq o'chirish (`~3.87 GB` bo'shatildi) | 🔄 **Alternativi yaxshiroq:** [Orca](orca.md) | Mobil barqarorlik, Lock Screen (`caffeinate`) va bitta promptdan ichki multi-agent orkestratsiya sabab to'liq `Orca` ga o'tildi. |
 

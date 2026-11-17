@@ -9,7 +9,7 @@
 - **Relevance to Us:** **3.5 / 10**
 - **Recommended Scope:** `Do Not Install` *(not needed as a primary UI skill)*
 - **Reviewed Date:** `2026-11-15`
-- **Current Status:** `🔄 Better Alternative`
+- 🔄 **Better Alternative:** [impeccable](impeccable.md) (with `APCA` contrast)
 
 ---
 
@@ -51,7 +51,7 @@ A UI/UX reference system built on top of local CSV/JSON tables and a Python BM25
 
 ## 4. Relevance & Compatibility with Our Existing Tools
 
-Our global environment already runs a **much stronger UI system ([`impeccable`](impeccable.md))**, and enabling both causes a **direct head-on collision**:
+Our global environment already runs a **much stronger UI system ([impeccable](impeccable.md))**, and enabling both causes a **direct head-on collision**:
 - `impeccable` stores product context in `PRODUCT.md` and `DESIGN.md` and explicitly bans *"picking template colors/themes by industry category"*.
 - `ui-ux-pro-max` does the exact opposite — picking CSV templates by industry category and creating a competing `design-system/<slug>/MASTER.md` file.
 - Because both have nearly identical trigger conditions, the agent would receive contradictory instructions on every frontend request.
@@ -69,4 +69,4 @@ Our global environment already runs a **much stronger UI system ([`impeccable`](
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Audited `SKILL.md`, `pro-rules.md`, and CSV/BM25 architecture | `🔄 Better Alternative` | Skipped because it is weaker than and directly conflicts with [`impeccable`](impeccable.md). |
+| 2026-11-15 | Audited `SKILL.md`, `pro-rules.md`, and CSV/BM25 architecture | 🔄 **Better Alternative:** [impeccable](impeccable.md) | Skipped because it is weaker than and directly conflicts with [impeccable](impeccable.md). |

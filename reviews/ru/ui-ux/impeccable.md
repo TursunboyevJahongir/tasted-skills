@@ -116,8 +116,8 @@
 
 ## 4. Полезность для нас и совместимость с существующими инструментами
 
-- Взаимно дополняет [`animate-expo`](../mobile/animate-expo.md) для анимаций в React Native / Expo и [`mobile-native`](../mobile/mobile-native.md) для тач- и viewport-правил в мобильных браузерах/PWA.
-- Благодаря наличию этого скилла нет необходимости глобально устанавливать конкурирующие UI-скиллы вроде [`ui-ux-pro-max`](ui-ux-pro-max.md), [`make-interfaces-feel-better`](make-interfaces-feel-better.md) и глобального [`taste-skill`](../web/taste-skill.md) (они конфликтуют с `impeccable`).
+- Взаимно дополняет [animate-expo](../mobile/animate-expo.md) для анимаций в React Native / Expo и [mobile-native](../mobile/mobile-native.md) для тач- и viewport-правил в мобильных браузерах/PWA.
+- Благодаря наличию этого скилла нет необходимости глобально устанавливать конкурирующие UI-скиллы вроде [ui-ux-pro-max](ui-ux-pro-max.md), [make-interfaces-feel-better](make-interfaces-feel-better.md) и глобального [taste-skill](../web/taste-skill.md) (они конфликтуют с `impeccable`).
 
 ---
 

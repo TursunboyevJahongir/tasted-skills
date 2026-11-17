@@ -8,7 +8,7 @@
 - **Quality Score:** **9.0 / 10**
 - **How Often Needed:** **7.5 / 10**
 - **Recommended Scope:** `Global CLI (Homebrew)` — applied once per local `iOS 18.5+` / `tvOS` simulator with a safe feature-preserving profile
-- **Works Alongside:** [**`agent-device`**](agent-device.md) + [**`xcrun simctl`**](ios-simulator-device-hub.md) + [**`cross-platform-qa`**](cross-platform-qa.md) *(note: skip the companion closed-source `MobAI Pro` / `mobai-mcp` app — [`agent-device`](agent-device.md) handles all UI driving)*
+- **Works Alongside:** [**agent-device**](agent-device.md) + [**xcrun simctl**](ios-simulator-device-hub.md) + [**cross-platform-qa**](cross-platform-qa.md) *(note: skip the companion closed-source `MobAI Pro` / `mobai-mcp` app — [agent-device](agent-device.md) handles all UI driving)*
 - **Active Since:** `2026-11-16`
 - **Current Status:** `✅ Using`
 
@@ -29,7 +29,7 @@ A clean open-source (`MIT`, zero telemetry, zero network calls) Go CLI that trim
 
 ### A. Impact on AI & QA Tooling — `0%` Interference
 - Ships no MCP server, no auto-triggered skill, and no background process — consumes **`0 tokens`** of chat context.
-- Source inspection of `profiles.go` confirms `com.apple.gamed` (`DTServiceHub`) and `com.apple.sharingd` are explicitly protected in `AlwaysEnabled` (*`"Required for timely XCUITest app launches"`*), so [**`agent-device`**](agent-device.md)'s headless XCUITest runner (`~197 ms`) works with zero regressions.
+- Source inspection of `profiles.go` confirms `com.apple.gamed` (`DTServiceHub`) and `com.apple.sharingd` are explicitly protected in `AlwaysEnabled` (*`"Required for timely XCUITest app launches"`*), so [**agent-device**](agent-device.md)'s headless XCUITest runner (`~197 ms`) works with zero regressions.
 
 ### B. Impact on Mobile & TV Apps (What Stayed On vs What Needs Flags)
 - **Untouched services (work 100% out of the box):**
@@ -75,7 +75,7 @@ Measured live on an `Apple M1 Max (32 GB RAM)` booting `iPhone 17 Pro (iOS 26.5)
 - **Inspected Surface (`go.mod`, `profiles.go`, `slim.go`):**
   - Depends only on 4 terminal UI/CLI libraries (`bubbletea`, `lipgloss`, `go-isatty`, `urfave/cli`) with zero `net/http` or analytics code.
   - Newly created or `simctl erase`d simulators revert to stock overrides — re-verify with `simslim verify <UDID>` or re-run `simslim on`.
-  - Skip the commercial **`MobAI Pro` (`mobai-mcp`)** desktop app shown in social demos — [`agent-device`](agent-device.md) already covers headless UI automation for free.
+  - Skip the commercial **`MobAI Pro` (`mobai-mcp`)** desktop app shown in social demos — [agent-device](agent-device.md) already covers headless UI automation for free.
 
 ---
 

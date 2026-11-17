@@ -4,12 +4,12 @@
 
 - **Источник:** [092Abdullah/AssetDiet](https://github.com/092Abdullah/AssetDiet) · [npm: assetdiet-mcp](https://www.npmjs.com/package/assetdiet-mcp)
 - **Категория:** `Developer Tools` *(Локальное сжатие изображений, SVG, видео и 3D-моделей с обновлением импортов)*
-- **Тип:** `Standalone CLI` + наш лёгкий on-demand скилл [`asset-diet`](../../../skills/asset-diet/SKILL.md)
+- **Тип:** `Standalone CLI` + наш лёгкий on-demand скилл [asset-diet](../../../skills/asset-diet/SKILL.md)
 - **Оценка качества:** **7.5 / 10**
-- **Частота нужды в работе:** **6.5 / 10** *(не как постоянный 16-tool MCP, а по запросу через `npx` CLI и скилл [`asset-diet`](../../../skills/asset-diet/SKILL.md))*
+- **Частота нужды в работе:** **6.5 / 10** *(не как постоянный 16-tool MCP, а по запросу через `npx` CLI и скилл [asset-diet](../../../skills/asset-diet/SKILL.md))*
 - **Рекомендуемый масштаб:** `On-Demand npx CLI + глобальный лёгкий скилл asset-diet (-g)`
 - **Дата проверки:** `2026-11-16`
-- **Текущий статус:** `👍 Хороший вариант` *(протестирован на реальном репозитории из 214 медиафайлов; лёгкий скилл [`skills/asset-diet`](../../../skills/asset-diet/SKILL.md) синхронизирован во все 5 агентных сред без MCP-раздувания)*
+- **Текущий статус:** `👍 Хороший вариант` *(протестирован на реальном репозитории из 214 медиафайлов; лёгкий скилл [skills/asset-diet](../../../skills/asset-diet/SKILL.md) синхронизирован во все 5 агентных сред без MCP-раздувания)*
 
 ---
 
@@ -27,7 +27,7 @@
 
 ## 2. Почему через скилл `asset-diet`, а не постоянный MCP?
 
-- **0 лишних токенов MCP:** Постоянный MCP-сервер из 16 тулов загружал бы схему в каждый чат; [`skills/asset-diet`](../../../skills/asset-diet/SKILL.md) включается строго по запросу и запрещает `assetdiet setup` / `mcp`.
+- **0 лишних токенов MCP:** Постоянный MCP-сервер из 16 тулов загружал бы схему в каждый чат; [skills/asset-diet](../../../skills/asset-diet/SKILL.md) включается строго по запросу и запрещает `assetdiet setup` / `mcp`.
 - **Защита Expo / React Native и Git:** По умолчанию удерживает `--policy safe`, чтобы не сломать нативные иконки `app.json` и статические `.png` `require()`, а также следит, чтобы бэкапы `.assetdiet/` не попали в коммит.
 
 ---
@@ -51,4 +51,4 @@ npx assetdiet-mcp@0.1.4 restore --run <runId>
 
 | Дата | Действие | Статус | Примечание |
 |---|---|---|---|
-| 2026-11-16 | Аудит кода, живой тест `doctor`/`audit` и глобальное подключение `asset-diet` | `👍 Хороший вариант` | Проверена версия `v0.1.4` со всеми 5 локальными движками (`Sharp`, `SVGO`, `FFmpeg`, `glTF-Transform`, `Font`); вместо 16-tool MCP во все 5 AI-агентов подключён лёгкий [`skills/asset-diet`](../../../skills/asset-diet/SKILL.md). |
+| 2026-11-16 | Аудит кода, живой тест `doctor`/`audit` и глобальное подключение `asset-diet` | `👍 Хороший вариант` | Проверена версия `v0.1.4` со всеми 5 локальными движками (`Sharp`, `SVGO`, `FFmpeg`, `glTF-Transform`, `Font`); вместо 16-tool MCP во все 5 AI-агентов подключён лёгкий [skills/asset-diet](../../../skills/asset-diet/SKILL.md). |

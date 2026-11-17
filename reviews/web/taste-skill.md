@@ -52,8 +52,8 @@ Eski v1 versiyasidan farqli o'laroq, `tasteskill 2.5.1` (`design-taste-frontend`
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
-- Kundalik veb-ilovalar va mahsulot interfeyslari uchun mavjud [**`impeccable`**](../ui-ux/impeccable.md) (`Operate` va `Persuade` rejimlari) + [**`mobile-native`**](../mobile/mobile-native.md) ancha xavfsiz, chunki ular loyihaning o'z stekini buzmaydi va begona `system.css` kiritmaydi.
-- **Yangi landing sahifalar va to'liq veb-redizayn uchun yanada toza muqobil:** [**`Hallmark v2`**](hallmark.md) — `600` soniyalik bloklovchi `Stop` hook'siz (`~7.1 MB` va `0` npm qaramlik bilan), `50` ta tayyor shablon, `755` ta litsenziyalangan haqiqiy rasm va eskidan link/forma yo'qolmaganini solishtiruvchi `--before/--kept` tekshiruviga ega. WebGL shaderlar shart bo'lmagan ko'p landing loyihalarda `taste-skill` o'rniga aynan `Hallmark v2` tavsiya etiladi.
+- Kundalik veb-ilovalar va mahsulot interfeyslari uchun mavjud [**impeccable**](../ui-ux/impeccable.md) (`Operate` va `Persuade` rejimlari) + [**mobile-native**](../mobile/mobile-native.md) ancha xavfsiz, chunki ular loyihaning o'z stekini buzmaydi va begona `system.css` kiritmaydi.
+- **Yangi landing sahifalar va to'liq veb-redizayn uchun yanada toza muqobil:** [**Hallmark v2**](hallmark.md) — `600` soniyalik bloklovchi `Stop` hook'siz (`~7.1 MB` va `0` npm qaramlik bilan), `50` ta tayyor shablon, `755` ta litsenziyalangan haqiqiy rasm va eskidan link/forma yo'qolmaganini solishtiruvchi `--before/--kept` tekshiruviga ega. WebGL shaderlar shart bo'lmagan ko'p landing loyihalarda `taste-skill` o'rniga aynan `Hallmark v2` tavsiya etiladi.
 - Shu sababli global bazaga qo'shilmaydi; faqat WebGL shaderli mustaqil marketing/vizitka sayti quriladigan vaziyat uchun katalogda zaxira qurol sifatida eslab qolinadi.
 
 ---

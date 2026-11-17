@@ -116,8 +116,8 @@ Alohida yangi skill o'rnatish (`auto-trigger` to'qnashuvi va ortiqcha kontekst) 
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
-- Expo va React Native animatsiyalari uchun [`animate-expo`](../mobile/animate-expo.md), mobil brauzer/PWA moslashtiruvi uchun esa [`mobile-native`](../mobile/mobile-native.md) bilan bir-birini to'ldiradi.
-- Shu skill borligi sababli [`ui-ux-pro-max`](ui-ux-pro-max.md), [`make-interfaces-feel-better`](make-interfaces-feel-better.md) va global [`taste-skill`](../web/taste-skill.md) kabi raqobatchi UI skillarni global o'rnatishga ehtiyoj yo'q (ular `impeccable` bilan to'qnashadi).
+- Expo va React Native animatsiyalari uchun [animate-expo](../mobile/animate-expo.md), mobil brauzer/PWA moslashtiruvi uchun esa [mobile-native](../mobile/mobile-native.md) bilan bir-birini to'ldiradi.
+- Shu skill borligi sababli [ui-ux-pro-max](ui-ux-pro-max.md), [make-interfaces-feel-better](make-interfaces-feel-better.md) va global [taste-skill](../web/taste-skill.md) kabi raqobatchi UI skillarni global o'rnatishga ehtiyoj yo'q (ular `impeccable` bilan to'qnashadi).
 
 ---
 

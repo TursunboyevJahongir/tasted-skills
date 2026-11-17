@@ -2,7 +2,7 @@
 
 **🇺🇿 O'zbekcha** | [🇬🇧 English](../en/external-apis/minimax-m3-1-flash-api.md) | [🇷🇺 Русский](../ru/external-apis/minimax-m3-1-flash-api.md)
 
-- **Manba:** [MiniMax Platform](https://www.minimax.io/) · [OpenRouter (`minimax/minimax-m3.1-flash`)](https://openrouter.ai/minimax/minimax-m3.1-flash)
+- **Manba:** [MiniMax Platform](https://www.minimax.io/) · [OpenRouter (minimax/minimax-m3.1-flash)](https://openrouter.ai/minimax/minimax-m3.1-flash)
 - **Statistika va Benchmarklar:** [OpenRouter Live Stats & Throughput](https://openrouter.ai/minimax/minimax-m3.1-flash) · [Hugging Face Benchmarks](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [Artificial Analysis Leaderboard](https://artificialanalysis.ai/leaderboards/models)
 - **Turkum:** `Tashqi API'lar` *(Mahsulot backendi, botlar va multimodal avtomatizatsiya uchun arzon bulut LLM API)*
 - **Turi:** `External Cloud API` *(`1M` kontekst, `matn + rasm + video`, OpenAI/Anthropic-mos REST API)*

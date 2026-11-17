@@ -2,7 +2,7 @@
 
 **🇺🇿 O'zbekcha** | [🇬🇧 English](../en/mobile/adb.md) | [🇷🇺 Русский](../ru/mobile/adb.md)
 
-- **Manba:** [Android SDK Platform-Tools (`adb`)](https://developer.android.com/tools/adb)
+- **Manba:** [Android SDK Platform-Tools (adb)](https://developer.android.com/tools/adb)
 - **Turkum:** `Mobile` *(Android Emulator va haqiqiy Android qurilmalarni boshqarish)*
 - **Turi:** `CLI / Runtime Tool` *(rasmiy Android SDK vositasi)*
 - **Sifat bahosi:** **9.5 / 10**
@@ -57,17 +57,17 @@ macOS'da iOS Simulator (`Device Hub` + `xcrun simctl`) ichki UI elementlarini Ac
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
-[`agent-device`](agent-device.md) va [`agent-desktop`](../developer-tools/agent-desktop.md) bilan bir-birini to'ldiradi:
-- **Android va TV ichki UI oqimi (`snapshot`, `@ref`, `press`, UTF-8 `fill`):** endi [`agent-device`](agent-device.md) asosiy vosita (kapot ostida baribir `adb` ustida ishlaydi, lekin `uiautomator dump` dan `4.5x` tez va `27x` kam token sarflaydi);
+[agent-device](agent-device.md) va [agent-desktop](../developer-tools/agent-desktop.md) bilan bir-birini to'ldiradi:
+- **Android va TV ichki UI oqimi (`snapshot`, `@ref`, `press`, UTF-8 `fill`):** endi [agent-device](agent-device.md) asosiy vosita (kapot ostida baribir `adb` ustida ishlaydi, lekin `uiautomator dump` dan `4.5x` tez va `27x` kam token sarflaydi);
 - **Past darajadagi Android boshqaruvi (`adb reverse`, `adb logcat`, `emu kill`, APK install, fallback `screencap`):** aynan **`adb`** ning o'zi bajaradi;
-- Ushbu juftlik [`cross-platform-qa`](cross-platform-qa.md) ning Android qanotini tashkil qiladi.
+- Ushbu juftlik [cross-platform-qa](cross-platform-qa.md) ning Android qanotini tashkil qiladi.
 
 ---
 
 ## 5. Qaysi yo'nalish va vazifalarda foydali?
 
 - **Qachon ishlatish kerak:** Port ulash (`adb reverse`), crash loglarni ko'rish (`adb logcat`), APK o'rnatish, `-no-window` emulyatorni boshqarish (`emu kill`) hamda `agent-device` ga poydevor/zaxira sifatida.
-- **Qachon ishlatmaslik kerak:** Oddiy UI tugma bosish va formalarni to'ldirishda (u yerda [`agent-device`](agent-device.md) ancha tez va toza ishlaydi) yoki sof Web/iOS vazifalarida.
+- **Qachon ishlatmaslik kerak:** Oddiy UI tugma bosish va formalarni to'ldirishda (u yerda [agent-device](agent-device.md) ancha tez va toza ishlaydi) yoki sof Web/iOS vazifalarida.
 
 ---
 

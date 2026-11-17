@@ -7,7 +7,7 @@
 - **Type:** `MCP Server (34 tools)` + `Plugin / Skill`
 - **Quality Score:** **7.0 / 10**
 - **How Often Needed:** **2.0 / 10**
-- **Recommended Scope:** `Do Not Install` *(use [**`agent-device`**](agent-device.md) CLI + [**`adb`**](adb.md) instead)*
+- **Recommended Scope:** `Do Not Install` *(use [**agent-device**](agent-device.md) CLI + [**adb**](adb.md) instead)*
 - **Reviewed Date:** `2026-11-16`
 - **Current Status:** `⚠️ Not Recommended` *(benchmarked live in an isolated `/tmp` harness and rejected due to slow latency, heavy MCP context bloat, and built-in telemetry)*
 
@@ -24,7 +24,7 @@
 
 ## 2. Live Benchmark Findings: Why It Was Rejected
 
-Tested head-to-head against [**`agent-device`**](agent-device.md) on an iOS 26.5 Simulator and a physical Android tablet:
+Tested head-to-head against [**agent-device**](agent-device.md) on an iOS 26.5 Simulator and a physical Android tablet:
 
 1. **`~7,580 tokens` of permanent context bloat on every chat:** `tools/list` injects **34 tool schemas (`30,321 bytes`)** into every conversation — even when working on pure backend, SQL, or CSS tasks.
 2. **Significantly slower (`6.5x – 37x` slower):**
@@ -47,7 +47,7 @@ Tested head-to-head against [**`agent-device`**](agent-device.md) on an iOS 26.5
 
 ## 4. Superior Alternative in Our Stack
 
-- **Replaced completely by:** [**`agent-device`**](agent-device.md) (`0` MCP token overhead in CLI mode, `37x` faster on iOS, `6.5x` faster on Android, clean `MIT` with zero telemetry, plus native `tvOS` and `Android TV` support).
+- **Replaced completely by:** [**agent-device**](agent-device.md) (`0` MCP token overhead in CLI mode, `37x` faster on iOS, `6.5x` faster on Android, clean `MIT` with zero telemetry, plus native `tvOS` and `Android TV` support).
 
 ---
 

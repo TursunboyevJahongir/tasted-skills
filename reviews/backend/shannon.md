@@ -4,12 +4,12 @@
 
 - **Manba:** [KeygraphHQ/shannon](https://github.com/KeygraphHQ/shannon)
 - **Turkum:** `Backend` *(Web va HTTP API White-Box Xavfsizlik Auditi va Avtonom Pentest)*
-- **Turi:** `Standalone CLI (Docker + Temporal)` + biz yozgan yengil [`hacker-test`](../../skills/hacker-test/SKILL.md) trigger skilli
+- **Turi:** `Standalone CLI (Docker + Temporal)` + biz yozgan yengil [hacker-test](../../skills/hacker-test/SKILL.md) trigger skilli
 - **Sifat bahosi:** **8.5 / 10**
 - **Ishda kerak bo'lishi:** **6.5 / 10**
-- **Tavsiya etilgan ko'lam:** `On-Demand npx CLI + Global yengil hacker-test skilli` — *rasmiy og'ir pluginini global o'rnatmasdan, o'zimizning [`skills/hacker-test`](../../skills/hacker-test/SKILL.md) eslatma-skilli orqali faqat lokal/staging'da chaqirish*
+- **Tavsiya etilgan ko'lam:** `On-Demand npx CLI + Global yengil hacker-test skilli` — *rasmiy og'ir pluginini global o'rnatmasdan, o'zimizning [skills/hacker-test](../../skills/hacker-test/SKILL.md) eslatma-skilli orqali faqat lokal/staging'da chaqirish*
 - **Tekshirilgan sana:** `2026-11-16`
-- **Joriy holati:** `👍 Yaxshi variant` *(kodi tekshirildi; esdan chiqmasligi va xavfsiz ishlashi uchun ushbu repoga [`skills/hacker-test`](../../skills/hacker-test/SKILL.md) qo'shilib global ulandi)*
+- **Joriy holati:** `👍 Yaxshi variant` *(kodi tekshirildi; esdan chiqmasligi va xavfsiz ishlashi uchun ushbu repoga [skills/hacker-test](../../skills/hacker-test/SKILL.md) qo'shilib global ulandi)*
 
 ---
 
@@ -56,13 +56,13 @@
 
 ---
 
-## 4. Biz tanlagan yo'l: Nega rasmiy plugini o'rniga o'zimizning [`hacker-test`](../../skills/hacker-test/SKILL.md) skillimizni yozdik?
+## 4. Biz tanlagan yo'l: Nega rasmiy plugini o'rniga o'zimizning [hacker-test](../../skills/hacker-test/SKILL.md) skillimizni yozdik?
 
 Pentest har kuni qilinmaydi — faqat katta reliz oldidan kerak bo'ladi. Shuning uchun ikki muammo chiqadi: **1)** rasmiy `plugins/shannon` paketini global o'rnatsangiz, katta `llms-full.txt` yuki doimiy turadi; **2)** umuman hech narsa o'rnatmasangiz, oradan bir oy o'tgach vositaning nomi ham, `host.docker.internal` / `--validate-model` / `pi` sozlamalari ham esdan chiqib ketadi.
 
 **Biz tutgan amaliy yechim:**
 1. `Shannon` ning o'zini doimiy o'rnatmadik (`0` fon jarayon, `0` ortiqcha paket).
-2. Ushbu repozitoriyning o'zida ~45 tokenli yengil [**`skills/hacker-test/SKILL.md`**](../../skills/hacker-test/SKILL.md) wrapper-skill yaratdik va barcha agentlarga (`Antigravity`, `Claude Code`, `Codex`) sinxronladik:
+2. Ushbu repozitoriyning o'zida ~45 tokenli yengil [**skills/hacker-test/SKILL.md**](../../skills/hacker-test/SKILL.md) wrapper-skill yaratdik va barcha agentlarga (`Antigravity`, `Claude Code`, `Codex`) sinxronladik:
    ```bash
    skillshare install TursunboyevJahongir/tasted-skills -s hacker-test -g && skillshare sync -g
    ```

@@ -8,9 +8,8 @@
 - **Quality Score:** **7.5 / 10**
 - **Relevance to Us:** **2.5 / 10**
 - **Recommended Scope:** `Do Not Install` *(previously tested and uninstalled)*
-- **Used Instead:** [**`impeccable`**](impeccable.md) ([pbakaus/impeccable](https://github.com/pbakaus/impeccable)) + [**`animate-expo`**](../mobile/animate-expo.md) ([emilkowalski/skills](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo))
 - **Used Period:** `2026-10-31 → 2026-11-15` *(tested and removed)*
-- **Current Status:** `🔄 Better Alternative` *(🧪 Tested and removed because `impeccable` + `animate-expo` completely supersede it)*
+- 🔄 **Better Alternative:** [impeccable](impeccable.md) + [animate-expo](../mobile/animate-expo.md) *(tested for 16 days and removed)*
 
 ---
 
@@ -31,11 +30,11 @@
 
 ## 2. Why It Was Removed (Weaknesses & Cost)
 
-1. **Direct `Auto-trigger overlap` with [`impeccable`](impeccable.md):**
+1. **Direct `Auto-trigger overlap` with [impeccable](impeccable.md):**
    - Its broad `description` matches almost any frontend/UI prompt, causing the agent to load both `impeccable` and `make-interfaces-feel-better` simultaneously — doubling context consumption and feeding conflicting instructions.
 2. **Rigid hardcoded numbers:**
    - Forcing `scale(0.96)` on every button and `scale(0.25) + blur(4px)` on every icon swap does not always fit a project's existing design system.
-3. **Verbose 4-table report that contradicts [`ponytail`](../architecture/ponytail.md):**
+3. **Verbose 4-table report that contradicts [ponytail](../architecture/ponytail.md):**
    - Lines `120–187` force the agent to fabricate artificial `Considered but Rejected` candidates and lengthy `Before/After` tables on every UI tweak.
 
 ---
@@ -50,16 +49,16 @@
 
 `make-interfaces-feel-better` was uninstalled and replaced by two stronger skills:
 
-1. **Instead (Web + iOS + Android UI/UX & Polish):** [**`impeccable`**](impeccable.md) — [pbakaus/impeccable](https://github.com/pbakaus/impeccable)
+1. **Instead (Web + iOS + Android UI/UX & Polish):** [**impeccable**](impeccable.md) — [pbakaus/impeccable](https://github.com/pbakaus/impeccable)
    - Its `craft-floor.md`, `polish.md`, `animate.md`, and `typeset.md` references already include `tabular-nums`, `text-wrap: balance`, optical alignment, shadows, `44×44px` hit targets, and `will-change` discipline — covering not just Web, but native iOS and Android too.
-2. **Instead (Mobile React Native / Expo animations):** [**`animate-expo`**](../mobile/animate-expo.md) — [emilkowalski/skills (`animate-expo`)](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo)
+2. **Instead (Mobile React Native / Expo animations):** [**animate-expo**](../mobile/animate-expo.md) — [emilkowalski/skills (animate-expo)](https://github.com/emilkowalski/skills/tree/main/skills/animate-expo)
    - Handles mobile press feedback, bottom sheets, springs, and haptics on the `Reanimated` UI thread (`60/120fps`).
 
 ---
 
 ## 5. Best Use Cases
 
-- **When to use:** Do not install — use [`impeccable`](impeccable.md) and [`animate-expo`](../mobile/animate-expo.md) instead.
+- **When to use:** Do not install — use [impeccable](impeccable.md) and [animate-expo](../mobile/animate-expo.md) instead.
 
 ---
 
@@ -67,5 +66,5 @@
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-10-31 | Synced globally via `skillshare` and tested in practice | `🔄 Better Alternative` | Tested for Web CSS micro-polish (collided on auto-triggers once `impeccable` was adopted on `2026-11-09`). |
-| 2026-11-15 | Uninstalled globally via `skillshare uninstall make-interfaces-feel-better -g` | `🔄 Better Alternative` | Removed because [`impeccable`](impeccable.md) and [`animate-expo`](../mobile/animate-expo.md) cover all its useful rules without 4-table report bloat. |
+| 2026-10-31 | Synced globally via `skillshare` and tested in practice | 🔄 **Better Alternative:** [impeccable](impeccable.md) + [animate-expo](../mobile/animate-expo.md) | Tested for Web CSS micro-polish (collided on auto-triggers once `impeccable` was adopted on `2026-11-09`). |
+| 2026-11-15 | Uninstalled globally via `skillshare uninstall make-interfaces-feel-better -g` | 🔄 **Better Alternative:** [impeccable](impeccable.md) + [animate-expo](../mobile/animate-expo.md) | Removed because [impeccable](impeccable.md) and [animate-expo](../mobile/animate-expo.md) cover all its useful rules without 4-table report bloat. |

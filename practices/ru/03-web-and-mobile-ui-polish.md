@@ -4,7 +4,7 @@
 
 ⬅️ [Вернуться к оглавлению практик](README.md)
 
-- **Связка инструментов:** [**`impeccable`**](../../reviews/ru/ui-ux/impeccable.md) + [**`mobile-native`**](../../reviews/ru/mobile/mobile-native.md) + [**`animate-expo`**](../../reviews/ru/mobile/animate-expo.md) + [**`asset-diet`**](../../reviews/ru/developer-tools/assetdiet.md) + [**`agent-desktop`**](../../reviews/ru/developer-tools/agent-desktop.md)
+- **Связка инструментов:** [**impeccable**](../../reviews/ru/ui-ux/impeccable.md) + [**mobile-native**](../../reviews/ru/mobile/mobile-native.md) + [**animate-expo**](../../reviews/ru/mobile/animate-expo.md) + [**asset-diet**](../../reviews/ru/developer-tools/assetdiet.md) + [**agent-desktop**](../../reviews/ru/developer-tools/agent-desktop.md)
 - **Проекты:** Функциональные веб-приложения, админ-панели, Telegram Mini Apps / PWA и экраны Expo / React Native.
 
 ---
@@ -47,6 +47,6 @@ agent-desktop click @<snapshot_id>:e12
 
 ## 3. Дополнительные возможности
 
-- **Сборка промо-лендингов с нуля и полный веб-редизайн без потерь ([`Hallmark v2`](../../reviews/ru/web/hallmark.md) — по необходимости через `-p` / `/hallmark`):** Для ежедневных продуктовых и мобильных экранов основным остается `impeccable`, а когда нужно собрать новый лендинг или обновить старую веб-страницу без потери ссылок и форм (`sloplint --before/--kept`), точечно подключается `Hallmark v2` (`50` готовых тем + `755` лицензированных фото + `capture.mjs`).
+- **Сборка промо-лендингов с нуля и полный веб-редизайн без потерь ([Hallmark v2](../../reviews/ru/web/hallmark.md) — по необходимости через `-p` / `/hallmark`):** Для ежедневных продуктовых и мобильных экранов основным остается `impeccable`, а когда нужно собрать новый лендинг или обновить старую веб-страницу без потери ссылок и форм (`sloplint --before/--kept`), точечно подключается `Hallmark v2` (`50` готовых тем + `755` лицензированных фото + `capture.mjs`).
 - **Перенос веб-функций в мобильное приложение (`web-to-native-mobile` + `impeccable`):** Перед переносом широкой десктопной таблицы или фильтра на телефон помогает решить, что оставить на виду (`Keep visible`), что переделать в шторку (`Redesign` / `Relocate`), а что убрать.
 - **Предрелизный контроль FPS и адаптивности (`client-performance-gate`):** Для клиентских веб/мобильных/WebOS приложений (кроме админ-панелей) проверяет плавность и деградацию при замедлении CPU/сети.

@@ -2,15 +2,14 @@
 
 [🇺🇿 O'zbekcha](../../ui-ux/animate.md) | **🇬🇧 English** | [🇷🇺 Русский](../../ru/ui-ux/animate.md)
 
-- **Source:** [emilkowalski/skills — `skills/animate`](https://github.com/emilkowalski/skills/tree/main/skills/animate)
+- **Source:** [emilkowalski/skills — skills/animate](https://github.com/emilkowalski/skills/tree/main/skills/animate)
 - **Category:** `UI/UX` *(Web CSS, WAAPI, and Motion library animations)*
 - **Type:** `Skill` *(`SKILL.md` + `RECIPES.md`, ~410 lines)*
 - **Quality Score:** **8.5 / 10**
 - **Relevance to Us:** **3.0 / 10**
 - **Recommended Scope:** `Do Not Install`
-- **Used Instead:** [**`impeccable`**](impeccable.md) (`animate` playbook — for Web) + [**`animate-expo`**](../mobile/animate-expo.md) (for React Native / Expo)
 - **Reviewed Date:** `2026-11-15`
-- **Current Status:** `🔄 Better Alternative`
+- 🔄 **Better Alternative:** [impeccable](impeccable.md) (`animate` — for Web) + [animate-expo](../mobile/animate-expo.md) (for Expo / React Native)
 
 ---
 
@@ -34,7 +33,7 @@ Emil Kowalski's web animation construction skill (`SKILL.md` 209 lines + `RECIPE
 - Strong restraint principle ("zero lines of code is a success" when motion isn't needed).
 
 ### Weaknesses & Conflict Reasons
-- **Direct `auto-trigger` collision with [`impeccable`](impeccable.md):** Its `description` (*"Use when asked to animate something, add motion, make a component feel alive, or build a transition"*) triggers simultaneously with `impeccable`'s main description and `reference/animate.md`, doubling context usage.
+- **Direct `auto-trigger` collision with [impeccable](impeccable.md):** Its `description` (*"Use when asked to animate something, add motion, make a component feel alive, or build a transition"*) triggers simultaneously with `impeccable`'s main description and `reference/animate.md`, doubling context usage.
 - **Rule contradiction:** `animate` strictly restricts animations to *"only `transform` and `opacity`"*, whereas `impeccable` (`craft-floor.md` and `animate.md`) allows tasteful use of `backdrop-filter`, `mask`, `clip-path`, and `View Transitions` where smooth.
 - **External cross-references:** References sibling skills we don't have installed (`pick-ui-library`, `review-animations`, `improve-animations`) and includes a `## Initial Response` banner block.
 
@@ -50,8 +49,8 @@ Emil Kowalski's web animation construction skill (`SKILL.md` 209 lines + `RECIPE
 ## 4. What We Use Instead
 
 Global installation is unnecessary because two of our active skills cover this domain cleanly without conflicts:
-1. **For Web and Mobile Web animations:** [**`impeccable`**](impeccable.md) (`animate` command / `reference/animate.md`) — works in harmony with the project's overall design mode (`Operate` vs `Persuade`).
-2. **For React Native and Expo animations:** [**`animate-expo`**](../mobile/animate-expo.md) — by the same author, purpose-built for `Reanimated` worklets and native gestures.
+1. **For Web and Mobile Web animations:** [**impeccable**](impeccable.md) (`animate` command / `reference/animate.md`) — works in harmony with the project's overall design mode (`Operate` vs `Persuade`).
+2. **For React Native and Expo animations:** [**animate-expo**](../mobile/animate-expo.md) — by the same author, purpose-built for `Reanimated` worklets and native gestures.
 
 *(Sibling skills in the same repo — `animation-performance`, `improve-animations`, `remove-animations`, `review-animations`, `choreograph`, and `gestures` — were also skipped globally for the same reason, as `impeccable`'s `animate`, `quieter`, and `optimize` playbooks plus `animate-expo` cover them.)*
 
@@ -59,7 +58,7 @@ Global installation is unnecessary because two of our active skills cover this d
 
 ## 5. Best Use Cases
 
-- **When to use:** Do not install globally — use [`impeccable`](impeccable.md) and [`animate-expo`](../mobile/animate-expo.md) instead.
+- **When to use:** Do not install globally — use [impeccable](impeccable.md) and [animate-expo](../mobile/animate-expo.md) instead.
 
 ---
 
@@ -67,4 +66,4 @@ Global installation is unnecessary because two of our active skills cover this d
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Audited GitHub `SKILL.md` + `RECIPES.md` and conflicts | `🔄 Better Alternative` | High quality (`8.5/10`), but skipped due to `auto-trigger` and rule collisions with [`impeccable`](impeccable.md). |
+| 2026-11-15 | Audited GitHub `SKILL.md` + `RECIPES.md` and conflicts | 🔄 **Better Alternative:** [impeccable](impeccable.md) + [animate-expo](../mobile/animate-expo.md) | High quality (`8.5/10`), but skipped due to `auto-trigger` and rule collisions with [impeccable](impeccable.md). |

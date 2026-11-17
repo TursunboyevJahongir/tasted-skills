@@ -2,7 +2,7 @@
 
 [🇺🇿 O'zbekcha](../../mobile/adb.md) | [🇬🇧 English](../../en/mobile/adb.md) | **🇷🇺 Русский**
 
-- **Источник:** [Android SDK Platform-Tools (`adb`)](https://developer.android.com/tools/adb)
+- **Источник:** [Android SDK Platform-Tools (adb)](https://developer.android.com/tools/adb)
 - **Категория:** `Mobile` *(Управление Android-эмулятором и реальными Android-устройствами)*
 - **Тип:** `CLI / Runtime Tool` *(официальный инструмент Android SDK)*
 - **Оценка качества:** **9.5 / 10**
@@ -57,17 +57,17 @@
 
 ## 4. Совместимость с нашими текущими инструментами
 
-Дополняет [`agent-device`](agent-device.md) и [`agent-desktop`](../developer-tools/agent-desktop.md):
-- **Интерактивный UI Android и Android TV (`snapshot`, `@ref`, `press`, UTF-8 `fill`):** теперь ведётся через [`agent-device`](agent-device.md) (который под капотом использует `adb`, работая в `4.5x` быстрее и тратя в `27x` меньше токенов, чем сырой `uiautomator dump`);
+Дополняет [agent-device](agent-device.md) и [agent-desktop](../developer-tools/agent-desktop.md):
+- **Интерактивный UI Android и Android TV (`snapshot`, `@ref`, `press`, UTF-8 `fill`):** теперь ведётся через [agent-device](agent-device.md) (который под капотом использует `adb`, работая в `4.5x` быстрее и тратя в `27x` меньше токенов, чем сырой `uiautomator dump`);
 - **Низкоуровневое управление Android (`adb reverse`, `adb logcat`, `emu kill`, установка APK, резервный `screencap`):** выполняется напрямую через **`adb`**;
-- Вместе они образуют Android-крыло процесса [`cross-platform-qa`](cross-platform-qa.md).
+- Вместе они образуют Android-крыло процесса [cross-platform-qa](cross-platform-qa.md).
 
 ---
 
 ## 5. В каких задачах полезно?
 
 - **Когда использовать:** Проброс портов (`adb reverse`), чтение crash-логов (`adb logcat`), установка APK, закрытие фоновых `-no-window` эмуляторов (`emu kill`), а также как транспорт и резерв для `agent-device`.
-- **Когда не использовать:** При обычном прокликивании экранов и вводе текста в формы (для этого быстрее и чище работает [`agent-device`](agent-device.md)), а также в чисто Web/iOS задачах.
+- **Когда не использовать:** При обычном прокликивании экранов и вводе текста в формы (для этого быстрее и чище работает [agent-device](agent-device.md)), а также в чисто Web/iOS задачах.
 
 ---
 

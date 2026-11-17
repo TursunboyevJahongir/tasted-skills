@@ -9,7 +9,7 @@
 - **How Often Needed:** **2.0 / 10** *(does not fit our existing React/Shadcn/Radix web and Expo mobile stacks)*
 - **Recommended Scope:** `Do Not Install` *(install locally `-p` only if starting a dedicated greenfield `@ui-sdk/*` web app)*
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `🔄 Better Alternative` *(instead use: our existing UI stack + [**`impeccable`**](../ui-ux/impeccable.md) + [**`agent-desktop`**](../developer-tools/agent-desktop.md))*
+- 🔄 **Better Alternative:** [agent-desktop](../developer-tools/agent-desktop.md) + [impeccable](../ui-ux/impeccable.md)
 
 ---
 
@@ -57,8 +57,8 @@ Social-media clips pitch `vercel-labs/ui` as *"an interactive UI library that le
 ## 4. Fit & Compatibility with Our Existing Stack
 
 We do not need either the library or its global skill because both jobs are already covered more broadly in our active stack:
-1. **UI components, accessibility & visual craft:** Our established `React` (`Radix` / `Shadcn`) web stack and `Expo` mobile stack paired with [**`impeccable`**](../ui-ux/impeccable.md) (`craft-floor` + `APCA` contrast + keyboard/focus auditing) are production-stable without migrating to a beta SDK.
-2. **Fast screenshot-free browser control:** [**`agent-desktop`**](../developer-tools/agent-desktop.md) already drives **any** web app (`<button>`, `<input>`, `Radix`, `Shadcn`, or third-party sites — with zero `@ui-sdk` code changes!) headlessly and without screenshots via macOS Accessibility (`AX`).
+1. **UI components, accessibility & visual craft:** Our established `React` (`Radix` / `Shadcn`) web stack and `Expo` mobile stack paired with [**impeccable**](../ui-ux/impeccable.md) (`craft-floor` + `APCA` contrast + keyboard/focus auditing) are production-stable without migrating to a beta SDK.
+2. **Fast screenshot-free browser control:** [**agent-desktop**](../developer-tools/agent-desktop.md) already drives **any** web app (`<button>`, `<input>`, `Radix`, `Shadcn`, or third-party sites — with zero `@ui-sdk` code changes!) headlessly and without screenshots via macOS Accessibility (`AX`).
 
 ---
 
@@ -73,5 +73,5 @@ We do not need either the library or its global skill because both jobs are alre
 
 | Date | Action | Status | Notes (where tested, what was sanitized, outcome) |
 |---|---|---|---|
-| 2026-11-16 | Audited `@githubradar` video claim, `vercel-labs/ui` source (`SKILL.md`, `agent-ready.md`), and `skillshare audit` | `🔄 Better Alternative` | Rejected because `createAgent` works only on apps rewritten in beta `@ui-sdk/*` parts (blind to standard HTML/Shadcn). Instead use our existing UI stack + `impeccable` + `agent-desktop`. |
+| 2026-11-16 | Audited `@githubradar` video claim, `vercel-labs/ui` source (`SKILL.md`, `agent-ready.md`), and `skillshare audit` | 🔄 **Better Alternative:** [agent-desktop](../developer-tools/agent-desktop.md) | Rejected because `createAgent` works only on apps rewritten in beta `@ui-sdk/*` parts (blind to standard HTML/Shadcn). Instead use our existing UI stack + `impeccable` + `agent-desktop`. |
 

@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **6.5 / 10**
 - **Ishda kerak bo'lishi:** **2.5 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(global o'rnatish kontekstni shishirib yuboradi)*
-- **O'rniga ishlatiladigan muqobillar:** [**`impeccable`**](../ui-ux/impeccable.md) + [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) + [**`elephant-goldfish-model`**](elephant-goldfish-model.md) + [**`cross-platform-qa`**](../mobile/cross-platform-qa.md)
+- **O'rniga ishlatiladigan muqobillar:** [**impeccable**](../ui-ux/impeccable.md) + [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) + [**elephant-goldfish-model**](elephant-goldfish-model.md) + [**cross-platform-qa**](../mobile/cross-platform-qa.md)
 - **Tekshirilgan sana:** `2026-11-16`
 - **Joriy holati:** `⚠️ Tavsiya etilmaydi` *(bizga kerak emas — mavjud ixtisoslashgan skillarimiz ancha toza va kuchli)*
 
@@ -44,7 +44,7 @@ Asl tarkibi:
      - `Senior Developer` faqat `Laravel/Livewire` stekiga bog'lab qo'yilgan;
      - `Reality Checker` esa mavjud bo'lmagan `./qa-playwright-capture.sh http://localhost:8000` skriptini va `*.blade.php` fayllarini `"NEVER SKIP"` deb majburlaydi.
 3. **Auto-trigger va `skillshare` ziddiyati:**
-   - `convert.sh` Antigravity va boshqa muhitlar uchun `disable-model-invocation: true` qo'ymaydi hamda fayllarni [`skillshare`](../developer-tools/skillshare.md) ni chetlab o'tib to'g'ridan-to'g'ri global papkaga yozadi — natijada har bir UI va kod vazifasida asosiy skillarimiz bilan urishib qoladi.
+   - `convert.sh` Antigravity va boshqa muhitlar uchun `disable-model-invocation: true` qo'ymaydi hamda fayllarni [skillshare](../developer-tools/skillshare.md) ni chetlab o'tib to'g'ridan-to'g'ri global papkaga yozadi — natijada har bir UI va kod vazifasida asosiy skillarimiz bilan urishib qoladi.
 
 ---
 
@@ -54,7 +54,7 @@ Asl tarkibi:
 > **Kontekst shishishi:** Barcha 283 ta shablon rolni global o'rnatish **`~18,500` token kontekstni doimiy band qilib**, agent diqqatini chalg'itadi.
 
 - **Xavf darajasi:** `Past` *(zararli skript, tarmoq chaqiruvi yoki `Stop` hook yo'q, ammo kontekst va `auto-trigger` zarari yuqori)*
-- Agar kimdir ichidan bitta tor faylni olishni xohlasa ham, `install.sh` ni ishlatmasdan, rol-o'yini (`Identity & Memory`) va uzun hisobot jadvallarini kesib tashlab, faqat [`skillshare`](../developer-tools/skillshare.md) orqali `disable-model-invocation: true` bilan olishi kerak.
+- Agar kimdir ichidan bitta tor faylni olishni xohlasa ham, `install.sh` ni ishlatmasdan, rol-o'yini (`Identity & Memory`) va uzun hisobot jadvallarini kesib tashlab, faqat [skillshare](../developer-tools/skillshare.md) orqali `disable-model-invocation: true` bilan olishi kerak.
 
 ---
 
@@ -64,10 +64,10 @@ Bu repodagi barcha asosiy yo'nalishlar bizda allaqachon ancha ixcham va amalda s
 
 | `agency-agents` dagi bo'lim | Bizdagi kuchli va toza muqobili |
 |---|---|
-| `Frontend Developer`, `UI Designer`, `UX Architect` | [**`impeccable`**](../ui-ux/impeccable.md) + [**`mobile-native`**](../mobile/mobile-native.md) + [**`animate-expo`**](../mobile/animate-expo.md) |
-| `Minimal Change Engineer` (207 qator + uzun hisobot) | [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) (`2.5–3.5 KB`, ortiqcha hisobotsiz) |
-| `Software Architect`, `Code Reviewer` | [**`elephant-goldfish-model`**](elephant-goldfish-model.md) (haqiqiy `fresh-context` Goldfish subagentlar) + [**`grill-me`**](grill-me.md) |
-| `Reality Checker`, `Evidence Collector` | [**`cross-platform-qa`**](../mobile/cross-platform-qa.md) ([`agent-desktop`](../developer-tools/agent-desktop.md) + [`Device Hub`](../mobile/ios-simulator-device-hub.md) + [`adb`](../mobile/adb.md)) |
+| `Frontend Developer`, `UI Designer`, `UX Architect` | [**impeccable**](../ui-ux/impeccable.md) + [**mobile-native**](../mobile/mobile-native.md) + [**animate-expo**](../mobile/animate-expo.md) |
+| `Minimal Change Engineer` (207 qator + uzun hisobot) | [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) (`2.5–3.5 KB`, ortiqcha hisobotsiz) |
+| `Software Architect`, `Code Reviewer` | [**elephant-goldfish-model**](elephant-goldfish-model.md) (haqiqiy `fresh-context` Goldfish subagentlar) + [**grill-me**](grill-me.md) |
+| `Reality Checker`, `Evidence Collector` | [**cross-platform-qa**](../mobile/cross-platform-qa.md) ([agent-desktop](../developer-tools/agent-desktop.md) + [Device Hub](../mobile/ios-simulator-device-hub.md) + [adb](../mobile/adb.md)) |
 
 ---
 

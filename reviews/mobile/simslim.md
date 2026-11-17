@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **9.0 / 10**
 - **Ishda kerak bo'lishi:** **7.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global CLI (Homebrew)` — barcha lokal `iOS 18.5+` / `tvOS` simulyatorlarga xavfsiz profil bilan bir marta qo'llanadi
-- **Birga ishlaydigan tizimlar:** [**`agent-device`**](agent-device.md) + [**`xcrun simctl`**](ios-simulator-device-hub.md) + [**`cross-platform-qa`**](cross-platform-qa.md) *(eslatma: ushbu jamoaning yopiq `MobAI Pro` / `mobai-mcp` qismi kerak emas — UI boshqaruv to'liq `agent-device` da)*
+- **Birga ishlaydigan tizimlar:** [**agent-device**](agent-device.md) + [**xcrun simctl**](ios-simulator-device-hub.md) + [**cross-platform-qa**](cross-platform-qa.md) *(eslatma: ushbu jamoaning yopiq `MobAI Pro` / `mobai-mcp` qismi kerak emas — UI boshqaruv to'liq `agent-device` da)*
 - **Ishlatilayotgan sana:** `2026-11-16` dan
 - **Joriy holati:** `✅ Ishlatyapman`
 
@@ -29,7 +29,7 @@ Toza Go tilida yozilgan ochiq manbali (`MIT`, `0` telemetriya, `0` tarmoq chaqir
 
 ### A. AI va QA asboblarimizga ta'siri — `0%` xalaqit
 - MCP serveri, avto-ishga tushuvchi skill yoki fon jarayoni yo'q — chat kontekstidan **`0 token`** oladi.
-- Manba kodidagi `profiles.go` da `com.apple.gamed` (`DTServiceHub`) va `com.apple.sharingd` majburiy yoqiq (`AlwaysEnabled`) qoldirilgan (*`"Required for timely XCUITest app launches"`*) — shu sababli [**`agent-device`**](agent-device.md) ning ko'rinmas XCUITest runner'i (`~197 ms`) hech qanday uzilishsiz ishlaydi.
+- Manba kodidagi `profiles.go` da `com.apple.gamed` (`DTServiceHub`) va `com.apple.sharingd` majburiy yoqiq (`AlwaysEnabled`) qoldirilgan (*`"Required for timely XCUITest app launches"`*) — shu sababli [**agent-device**](agent-device.md) ning ko'rinmas XCUITest runner'i (`~197 ms`) hech qanday uzilishsiz ishlaydi.
 
 ### B. Mobil va TV ilovalarga ta'siri (Nima ishlaydi va nimani saqlab qolish kerak?)
 - **Hech qachon o'chirilmaydigan (100% ishlaydigan) xizmatlar:**
@@ -75,7 +75,7 @@ simslim doctor <UDID> --requires push,universal-links,photos,spotlight
 - **Tekshirilgan nuqtalar (`go.mod`, `profiles.go`, `slim.go`):**
   - Faqat 4 ta UI/CLI paketi (`bubbletea`, `lipgloss`, `go-isatty`, `urfave/cli`), `net/http` yoki tashqi telemetriya umuman yo'q.
   - Xotiradagi yangi simulyator yaratilganda yoki `simctl erase` qilinganda override zavod holatiga qaytadi — shu payt `simslim verify <UDID>` yoki `simslim on <UDID>` qayta beriladi.
-  - Videolarda yonma-yon ko'rsatiladigan pullik/yopiq **`MobAI Pro` (`mobai-mcp`)** dasturini o'rnatish shart emas va tavsiya etilmaydi — UI avtomatizatsiyani bepul [**`agent-device`**](agent-device.md) bajaradi.
+  - Videolarda yonma-yon ko'rsatiladigan pullik/yopiq **`MobAI Pro` (`mobai-mcp`)** dasturini o'rnatish shart emas va tavsiya etilmaydi — UI avtomatizatsiyani bepul [**agent-device**](agent-device.md) bajaradi.
 
 ---
 

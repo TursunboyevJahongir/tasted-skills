@@ -3,11 +3,11 @@
 [🇺🇿 O'zbekcha](../../local-models/minimax-m3-1-flash.md) | [🇬🇧 English](../../en/local-models/minimax-m3-1-flash.md) | **🇷🇺 Русский**
 
 - **Источник:** [MiniMaxAI/MiniMax-M3.1-Flash (Hugging Face)](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash)
-- **Статистика и бенчмарки:** [Hugging Face Model Card & Benchmarks](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [OpenRouter Live Stats (`minimax/minimax-m3.1-flash`)](https://openrouter.ai/minimax/minimax-m3.1-flash) · [Artificial Analysis Leaderboard](https://artificialanalysis.ai/leaderboards/models)
+- **Статистика и бенчмарки:** [Hugging Face Model Card & Benchmarks](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [OpenRouter Live Stats (minimax/minimax-m3.1-flash)](https://openrouter.ai/minimax/minimax-m3.1-flash) · [Artificial Analysis Leaderboard](https://artificialanalysis.ai/leaderboards/models)
 - **Категория:** `Локальные модели` *(Открытая мультимодальная MoE — оценка локального запуска)*
 - **Тип:** `Open-Weight LLM` *(`~428B` всего / `~23B` активных параметров, `1M` контекст, `MXFP8 + NVFP4`)*
 - **Оценка качества:** **8.0 / 10** *(как быстрая мультимодальная модель класса `Flash`)*
-- **Частота нужды в работе (Локально):** **1.0 / 10** *(не помещается на рабочие компьютеры; как облачный API — [`👍 Хороший вариант`](../external-apis/minimax-m3-1-flash-api.md))*
+- **Частота нужды в работе (Локально):** **1.0 / 10** *(не помещается на рабочие компьютеры; как облачный API — [👍 Хороший вариант](../external-apis/minimax-m3-1-flash-api.md))*
 - **Рекомендуемый масштаб:** `Не устанавливать (Локально)` *(при необходимости использовать через [🔌 Внешние API](../external-apis/minimax-m3-1-flash-api.md))*
 - **Дата проверки:** `2026-11-16`
 - **Текущий статус:** `⚠️ Не рекомендуется` *(требует `~250–285 GB` на диске и кластер `8× H100 / 640 GB VRAM` для нормальной локальной работы)*
@@ -58,7 +58,7 @@
 
 - **Держать эту модель локально нам не нужно (`1.0/10`):** Покупать `512 GB` Mac Studio за `$9,000+` или сервер `8× H100` ради весов на `285 GB` не имеет смысла.
 - **Две правильные альтернативы:**
-  1. **Если нужна именно `MiniMax M3.1 Flash`:** Используйте её через готовый облачный API (`$0.15 / $0.60`, `170+ ток/с`) без нагрузки на свой компьютер — 👉 [**`MiniMax M3.1 Flash API`**](../external-apis/minimax-m3-1-flash-api.md).
+  1. **Если нужна именно `MiniMax M3.1 Flash`:** Используйте её через готовый облачный API (`$0.15 / $0.60`, `170+ ток/с`) без нагрузки на свой компьютер — 👉 [**MiniMax M3.1 Flash API**](../external-apis/minimax-m3-1-flash-api.md).
   2. **Если нужна 100% локальная (офлайн) модель для написания кода:** Запускайте **`Qwen3-Coder` или `Qwen2.5-Coder-14B/32B` через `Ollama` / `MLX`** (`~9–20 GB`, `30–65 ток/с`, Apache-2.0), которые полностью помещаются в `32–64 GB` RAM на Mac.
 
 ---

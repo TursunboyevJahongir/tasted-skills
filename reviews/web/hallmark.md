@@ -35,7 +35,7 @@ Together AI (Hassan El Mghari / `Nutlope`) tomonidan yaratilgan open-source (`MI
 
 `impeccable` va `Hallmark v2` bir-birini almashtirmaydi — ular **ikki xil vazifada** kuchli:
 
-| Mezon | 🏆 **`Hallmark v2`** *(Landing va Promo-saytda ustun)* | 🏆 [**`impeccable`**](../ui-ux/impeccable.md) *(Kundalik App va Mobilda ustun)* | [**`taste-skill v2.5`**](taste-skill.md) |
+| Mezon | 🏆 **`Hallmark v2`** *(Landing va Promo-saytda ustun)* | 🏆 [**impeccable**](../ui-ux/impeccable.md) *(Kundalik App va Mobilda ustun)* | [**taste-skill v2.5**](taste-skill.md) |
 |---|---|---|---|
 | **Ko'rib tanlanadigan tayyor mavzular** | ✅ **50 ta tayyor mavzu** (`usehallmark.com` + `tokens.css` scaffold) | ❌ Tayyor mavzu katalogi yo'q (har safar noldan g'oya o'ylaydi) | ⚠️ Faqat dial parametrlar (`1–10`) |
 | **Tayyor real fotosuratlar bazasi** | ✅ **755 ta litsenziyali real foto** (`Wikimedia Commons`) | ❌ Yo'q (placeholder yoki AI rasm generatsiya) | ❌ Yo'q |
@@ -67,7 +67,7 @@ Together AI (Hassan El Mghari / `Nutlope`) tomonidan yaratilgan open-source (`MI
 ## 4. Qaysi yo'nalish va vazifalarda foydali?
 
 - **Qachon ishlatish kerak:** Noldan yangi **Landing Page, SaaS promo-sayt, portfolio, mahsulot taqdimot sahifasi** qurishda yoki mavjud marketing saytni barcha link/formalarni saqlagan holda to'liq **Redesign** qilishda.
-- **Qachon ishlatmaslik kerak:** Kundalik ichki web-app, admin panel, murakkab dashboard va native `iOS`/`Android`/`Expo` mobil ilova ekranlarida (ularda [**`impeccable`**](../ui-ux/impeccable.md) + [**`mobile-native`**](../mobile/mobile-native.md) + [**`animate-expo`**](../mobile/animate-expo.md) ishlatiladi).
+- **Qachon ishlatmaslik kerak:** Kundalik ichki web-app, admin panel, murakkab dashboard va native `iOS`/`Android`/`Expo` mobil ilova ekranlarida (ularda [**impeccable**](../ui-ux/impeccable.md) + [**mobile-native**](../mobile/mobile-native.md) + [**animate-expo**](../mobile/animate-expo.md) ishlatiladi).
 
 ---
 

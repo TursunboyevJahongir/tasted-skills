@@ -55,7 +55,7 @@ Asosiy ishlash zanjiri (`observe → act → verify`):
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
 - **Web (`Google Chrome`) va macOS desktop dasturlar:** `agent-desktop` **100% asosiy** fonda tekshiruvchi vosita.
-- **Mobil va TV (`iOS`, `Android`, `tvOS`, `Android TV`):** [`agent-device`](../mobile/agent-device.md) asosiy vosita (`agent-desktop` + `Device Hub` faqat iOS uchun zaxira bo'lib turadi).
+- **Mobil va TV (`iOS`, `Android`, `tvOS`, `Android TV`):** [agent-device](../mobile/agent-device.md) asosiy vosita (`agent-desktop` + `Device Hub` faqat iOS uchun zaxira bo'lib turadi).
 - C/Python/Node/Swift dasturlar ichidan CLI chaqirmasdan to'g'ridan-to'g'ri ulash uchun yonida `agent-desktop-ffi` skilli ham o'rnatilgan.
 
 ---
@@ -63,7 +63,7 @@ Asosiy ishlash zanjiri (`observe → act → verify`):
 ## 5. Qaysi yo'nalish va vazifalarda foydali?
 
 - **Qachon ishlatish kerak:** Lokal veb-ilovalarni `Google Chrome` da tekshirish va macOS desktop GUI dasturlarni fonda avtomatlashtirishda.
-- **Qachon ishlatmaslik kerak:** Mobil va TV emulyator/simulyatorlarda ([`agent-device`](../mobile/agent-device.md) ishlatiladi) yoki chuqur HTTP/WebSocket trafik va CPU throttling o'lchovlarida (Chrome DevTools kerak).
+- **Qachon ishlatmaslik kerak:** Mobil va TV emulyator/simulyatorlarda ([agent-device](../mobile/agent-device.md) ishlatiladi) yoki chuqur HTTP/WebSocket trafik va CPU throttling o'lchovlarida (Chrome DevTools kerak).
 
 ---
 

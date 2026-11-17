@@ -116,8 +116,8 @@ Instead of installing a separate contrast skill (which would collide on auto-tri
 
 ## 4. Relevance & Compatibility with Our Existing Tools
 
-- Complements [`animate-expo`](../mobile/animate-expo.md) for React Native/Expo motion and [`mobile-native`](../mobile/mobile-native.md) for mobile browser/PWA touch and viewport ergonomics.
-- Because `impeccable` is installed globally, competing UI skills such as [`ui-ux-pro-max`](ui-ux-pro-max.md), [`make-interfaces-feel-better`](make-interfaces-feel-better.md), and global [`taste-skill`](../web/taste-skill.md) are unnecessary and would conflict with it.
+- Complements [animate-expo](../mobile/animate-expo.md) for React Native/Expo motion and [mobile-native](../mobile/mobile-native.md) for mobile browser/PWA touch and viewport ergonomics.
+- Because `impeccable` is installed globally, competing UI skills such as [ui-ux-pro-max](ui-ux-pro-max.md), [make-interfaces-feel-better](make-interfaces-feel-better.md), and global [taste-skill](../web/taste-skill.md) are unnecessary and would conflict with it.
 
 ---
 

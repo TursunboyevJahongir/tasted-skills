@@ -8,7 +8,7 @@
 - **Quality Score:** **8.0 / 10**
 - **How Often Needed:** **3.5 / 10** *(both concise replies and minimal code diffs are already covered by our active `ponytail` skill)*
 - **Recommended Scope:** `Sanitized standalone SKILL.md only (-p or manual /caveman)` — skip the full plugin/CLI
-- **Instead Use (Alternative):** [**`ponytail`**](../architecture/ponytail.md) *(cuts both prose bloat and over-engineered code/diffs)* + [**`karpathy-guidelines`**](../architecture/karpathy-guidelines.md) + [**`Orca`**](orca.md)
+- **Instead Use (Alternative):** [**ponytail**](../architecture/ponytail.md) *(cuts both prose bloat and over-engineered code/diffs)* + [**karpathy-guidelines**](../architecture/karpathy-guidelines.md) + [**Orca**](orca.md)
 - **Reviewed Date:** `2026-11-16`
 - **Current Status:** `👍 Good Option`
 
@@ -57,10 +57,10 @@
 
 ## 4. Fit & Compatibility with Our Existing Stack (Alternative)
 
-- **Our primary alternative — [**`ponytail`**](../architecture/ponytail.md) (`9.5/10`, `#3` active global essential):**
+- **Our primary alternative — [**ponytail**](../architecture/ponytail.md) (`9.5/10`, `#3` active global essential):**
   - `caveman` only compresses chat prose while leaving generated code untouched.
-  - [**`ponytail`**](../architecture/ponytail.md) solves **both halves** at once: concise replies a developer reads in one pass **plus** the smallest working code change (YAGNI), cutting the actual source of token bloat in engineering sessions.
-- The repo's extra workflow skills (`surgical-patch`, `lean-build`, `cavecrew`) and `Auto` router are already covered more cleanly by [**`karpathy-guidelines`**](../architecture/karpathy-guidelines.md), [**`elephant-goldfish-model`**](../architecture/elephant-goldfish-model.md), and [**`Orca`**](orca.md).
+  - [**ponytail**](../architecture/ponytail.md) solves **both halves** at once: concise replies a developer reads in one pass **plus** the smallest working code change (YAGNI), cutting the actual source of token bloat in engineering sessions.
+- The repo's extra workflow skills (`surgical-patch`, `lean-build`, `cavecrew`) and `Auto` router are already covered more cleanly by [**karpathy-guidelines**](../architecture/karpathy-guidelines.md), [**elephant-goldfish-model**](../architecture/elephant-goldfish-model.md), and [**Orca**](orca.md).
 
 ---
 
@@ -75,4 +75,4 @@
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Primary-source audit of `v4.1.0` (`SKILL.md`, `plugin.json`, `HONEST-NUMBERS.md`, `SECURITY.md`) + `skillshare audit` | `👍 Good Option` | Standalone `SKILL.md` is well-crafted (`8.0/10`), but CLI/proxy telemetry is undesirable and our active [**`ponytail`**](../architecture/ponytail.md) is a stronger daily alternative; kept as a vetted on-demand option. |
+| 2026-11-16 | Primary-source audit of `v4.1.0` (`SKILL.md`, `plugin.json`, `HONEST-NUMBERS.md`, `SECURITY.md`) + `skillshare audit` | `👍 Good Option` | Standalone `SKILL.md` is well-crafted (`8.0/10`), but CLI/proxy telemetry is undesirable and our active [**ponytail**](../architecture/ponytail.md) is a stronger daily alternative; kept as a vetted on-demand option. |

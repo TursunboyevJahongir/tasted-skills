@@ -8,9 +8,8 @@
 - **Quality Score:** **9.0 / 10**
 - **How Often Needed:** **3.5 / 10** *(adds an extra cycle in daily work — `skillshare audit` + direct AI agent code review already cover this)*
 - **Recommended Scope:** `Do not install permanently` *(optional one-off `uvx ... --no-llm` scan only for large, untrusted MCP servers)*
-- **Instead Use:** [**`skillshare`**](skillshare.md) (`skillshare audit`) + **AI agent primary-source code inspection**
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `🔄 Better Alternative` *(source code audited; not installed because our lighter built-in workflow already covers daily skill vetting)*
+- 🔄 **Better Alternative:** [skillshare](skillshare.md) (`skillshare audit`) + direct AI source-code inspection
 
 ---
 
@@ -29,7 +28,7 @@ An open-source security scanner by NVIDIA (`Python 3.12 + LangGraph`) designed t
 
 `SkillSpector` is well-engineered for automated marketplace pipelines scanning thousands of untrusted skills at scale, but in a curated developer workflow it introduces an **unnecessary extra loop**:
 
-- **We already have a fast, zero-friction alternative — [`skillshare`](skillshare.md) (`skillshare audit`):** A single lightweight Go binary runs `static`, `dataflow`, `tier`, `integrity`, `structure`, and `cross-skill` security checks in `~0.1s` and **executes automatically during `skillshare install`** (no heavy `Python 3.12 + LangGraph + YARA + boto3` stack to maintain).
+- **We already have a fast, zero-friction alternative — [skillshare](skillshare.md) (`skillshare audit`):** A single lightweight Go binary runs `static`, `dataflow`, `tier`, `integrity`, `structure`, and `cross-skill` security checks in `~0.1s` and **executes automatically during `skillshare install`** (no heavy `Python 3.12 + LangGraph + YARA + boto3` stack to maintain).
 - **Direct AI agent code review is sharper and avoids double work:** Before installing any skill or MCP server, we already have our AI coding agent read the primary source files (`SKILL.md`, scripts, hooks, network/env calls) directly. Spawning Python/LangGraph from inside an agent just to open *another* LLM session to ask *"does the code match SKILL.md?"* duplicates both latency and quota.
 - **Static score false-positive noise:** Legitimate CLI skills that invoke `subprocess` and read config/env variables quickly cross `SkillSpector`'s `DO NOT INSTALL` score multiplier, creating manual triage work on clean tools.
 
@@ -51,4 +50,4 @@ uvx --python 3.12 --from git+https://github.com/NVIDIA/skillspector.git skillspe
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Primary-source audit | `🔄 Better Alternative` | Strong scanner (`9.0/10`), skipped to avoid redundant workflow cycles since [`skillshare`](skillshare.md) (`audit`) + direct AI agent code review already handle our vetting. |
+| 2026-11-16 | Primary-source audit | 🔄 **Better Alternative:** [skillshare](skillshare.md) | Strong scanner (`9.0/10`), skipped to avoid redundant workflow cycles since [skillshare](skillshare.md) (`audit`) + direct AI agent code review already handle our vetting. |

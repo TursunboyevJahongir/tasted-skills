@@ -51,7 +51,7 @@ Open-source (`MIT`, `0` внешних npm-зависимостей) инстр�
 - **Уровень риска:** `Низкий` *(чистый `MIT`-код без телеметрии и внешних npm-зависимостей)*
 - **Выполненная санитаризация и правила защиты:**
   1. **Установка как CLI + Skill, а НЕ как MCP-сервер:** Нулевой постоянный расход контекста на MCP-схемы + обёртка `/opt/homebrew/bin/agent-device` с явным `PATH` для стабильной работы всех CLI-субагентов.
-  2. **Разделение зон с `agent-desktop`:** Из описания `SKILL.md` вырезаны `macOS`, `HarmonyOS`, `Vega OS` и `Limrun` — **Web (`Google Chrome`) и десктопные окна macOS** полностью остаются за [**`agent-desktop`**](../developer-tools/agent-desktop.md), а `agent-device` отвечает строго за **Mobile и TV (`iOS`, `Android`, `tvOS`, `Android TV`)**.
+  2. **Разделение зон с `agent-desktop`:** Из описания `SKILL.md` вырезаны `macOS`, `HarmonyOS`, `Vega OS` и `Limrun` — **Web (`Google Chrome`) и десктопные окна macOS** полностью остаются за [**agent-desktop**](../developer-tools/agent-desktop.md), а `agent-device` отвечает строго за **Mobile и TV (`iOS`, `Android`, `tvOS`, `Android TV`)**.
   3. **Обязательные `--udid` / `--serial`:** Защита от случайных нажатий на подключённый по USB реальный телефон во время локальной разработки (этап 1).
 
 ---
@@ -62,10 +62,10 @@ Open-source (`MIT`, `0` внешних npm-зависимостей) инстр�
 
 | Прежний инструмент | Текущий статус | Что изменилось? |
 |---|---|---|
-| [**`agent-desktop`**](../developer-tools/agent-desktop.md) | `✅ Оставлен (Основной — Web/Desktop)` | Остаётся **на 100% основным** для **Google Chrome (Web)** и **десктопных окон macOS**. Мобильный и TV UI переведён на `agent-device`. |
-| [**`adb`**](adb.md) | `✅ Оставлен (Транспорт + Порты/Логи)` | На Android `agent-device` внутри всё равно вызывает `adb`. Кроме того, **`adb reverse`** (проброс портов Metro/бэкенда), **`adb logcat`** (crash-логи), установка APK и **`emu kill`** остаются на самом `adb` — `agent-device` заменил только медленный `uiautomator dump` + `input tap` по координатам. |
-| [**`xcrun simctl` + `devicectl`**](ios-simulator-device-hub.md) | `✅ Оставлен (Boot + Реальный iPhone)` | По-прежнему нужен для фонового запуска/остановки симулятора без окон (`simctl boot/shutdown`) и установки сборок на реальный iPhone (`devicectl`). Окно **`Device Hub`** больше не открывается каждый раз и оставлено как резерв (`fallback`). |
-| [**`cross-platform-qa`**](cross-platform-qa.md) | `✅ Обновлён` | Двухэтапное правило сохранено, а мобильная и TV UI-проверка внутри переведена на `agent-device`. |
+| [**agent-desktop**](../developer-tools/agent-desktop.md) | `✅ Оставлен (Основной — Web/Desktop)` | Остаётся **на 100% основным** для **Google Chrome (Web)** и **десктопных окон macOS**. Мобильный и TV UI переведён на `agent-device`. |
+| [**adb**](adb.md) | `✅ Оставлен (Транспорт + Порты/Логи)` | На Android `agent-device` внутри всё равно вызывает `adb`. Кроме того, **`adb reverse`** (проброс портов Metro/бэкенда), **`adb logcat`** (crash-логи), установка APK и **`emu kill`** остаются на самом `adb` — `agent-device` заменил только медленный `uiautomator dump` + `input tap` по координатам. |
+| [**xcrun simctl + devicectl**](ios-simulator-device-hub.md) | `✅ Оставлен (Boot + Реальный iPhone)` | По-прежнему нужен для фонового запуска/остановки симулятора без окон (`simctl boot/shutdown`) и установки сборок на реальный iPhone (`devicectl`). Окно **`Device Hub`** больше не открывается каждый раз и оставлено как резерв (`fallback`). |
+| [**cross-platform-qa**](cross-platform-qa.md) | `✅ Обновлён` | Двухэтапное правило сохранено, а мобильная и TV UI-проверка внутри переведена на `agent-device`. |
 
 ---
 

@@ -4,7 +4,7 @@
 
 ⬅️ [Back to Practices Table of Contents](README.md)
 
-- **Combined Tools:** [**`tasted-skills`**](../../skills/tasted-skills/SKILL.md) + [**`skillshare`**](../../reviews/en/developer-tools/skillshare.md) + [**`security-audit`**](../../reviews/en/backend/security-audit-skill.md) + [**`Shannon` (`hacker-test`)**](../../reviews/en/backend/shannon.md) + [**`sentry`**](../../reviews/en/backend/sentry.md)
+- **Combined Tools:** [**tasted-skills**](../../skills/tasted-skills/SKILL.md) + [**skillshare**](../../reviews/en/developer-tools/skillshare.md) + [**security-audit**](../../reviews/en/backend/security-audit-skill.md) + [**Shannon (hacker-test)**](../../reviews/en/backend/shannon.md) + [**sentry**](../../reviews/en/backend/sentry.md)
 - **Target Projects:** AI developer environment security, Backend APIs, and Full-Stack production systems.
 
 ---

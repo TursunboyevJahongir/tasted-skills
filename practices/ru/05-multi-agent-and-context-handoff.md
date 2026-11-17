@@ -4,7 +4,7 @@
 
 ⬅️ [Вернуться к оглавлению практик](README.md)
 
-- **Связка инструментов:** [**`Orca`**](../../reviews/ru/developer-tools/orca.md) + `task-context` + CLI-субагенты (`antigravity-claude`, `argon`, `claude-opus`, `antigravity-consult`) + [**`elephant-goldfish-model`**](../../reviews/ru/architecture/elephant-goldfish-model.md)
+- **Связка инструментов:** [**Orca**](../../reviews/ru/developer-tools/orca.md) + `task-context` + CLI-субагенты (`antigravity-claude`, `argon`, `claude-opus`, `antigravity-consult`) + [**elephant-goldfish-model**](../../reviews/ru/architecture/elephant-goldfish-model.md)
 - **Задачи:** Крупные фичи, параллельная разработка в нескольких ветках/worktree, передача задачи при исчерпании квоты модели и глубокое ревью кода и архитектуры.
 
 ---
@@ -27,7 +27,7 @@
 | Ситуация | Какая связка используется | Почему именно так |
 |---|---|---|
 | **Проверка написанного кода/diff'а и соответствия требованиям** | `task-context` + **`argon` / `antigravity-claude` / `claude-opus`** (CLI-субагент `Orca`) | Ревьюеру важно знать, *что именно* просил пользователь и *почему* выбрано такое решение (`task-context`), но смотреть на код глазами другой модели (*«Codex написал -> Argon/Claude проверил»*). |
-| **Проверка архитектурного плана, дизайн-дока или расхождения Документация-Код** | [**`elephant-goldfish-model`**](../../reviews/ru/architecture/elephant-goldfish-model.md) (`egm-review`, `egm-drift-report`) | Здесь история переписки **вредит** — субагенты без памяти (*Goldfish*) читают документ и код с нуля, сразу вскрывая неявные допущения и лишнюю сложность (YAGNI). |
+| **Проверка архитектурного плана, дизайн-дока или расхождения Документация-Код** | [**elephant-goldfish-model**](../../reviews/ru/architecture/elephant-goldfish-model.md) (`egm-review`, `egm-drift-report`) | Здесь история переписки **вредит** — субагенты без памяти (*Goldfish*) читают документ и код с нуля, сразу вскрывая неявные допущения и лишнюю сложность (YAGNI). |
 
 ---
 
@@ -39,7 +39,7 @@
 
 ### 2) Карта и авто-документирование незнакомого репозитория за 10 минут (`graphify` + `egm-bootstrap`)
 При входе в большой проект без документации:
-1. Строим локальный AST-граф (`0` токенов) через [**`graphify`**](../../reviews/ru/architecture/graphify.md);
+1. Строим локальный AST-граф (`0` токенов) через [**graphify**](../../reviews/ru/architecture/graphify.md);
 2. Запускаем `egm-bootstrap`, который распределяет поддеревья папок между воркерами и создаёт точные модульные `README.md` по реальному коду.
 
 ### 3) Мгновенная передача эстафеты при лимите квоты или зависании модели (`task-context`)
@@ -47,4 +47,4 @@
 - Достаточно сказать другому агенту прочитать папку `task-context` — он за 5 секунд подхватывает цель, список затронутых файлов и открытые замечания ревью.
 
 ### 4) Параллельная работа в нескольких Git Worktree без конфликта симуляторов (`Orca` + `agent-device`)
-- `Orca` разводит задачи по отдельным git worktree, а [**`agent-device`**](../../reviews/ru/mobile/agent-device.md) и [**`simslim`**](../../reviews/ru/mobile/simslim.md) изолируют сессии симуляторов между ветками.
+- `Orca` разводит задачи по отдельным git worktree, а [**agent-device**](../../reviews/ru/mobile/agent-device.md) и [**simslim**](../../reviews/ru/mobile/simslim.md) изолируют сессии симуляторов между ветками.

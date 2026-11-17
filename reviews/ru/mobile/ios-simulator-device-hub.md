@@ -2,7 +2,7 @@
 
 [🇺🇿 O'zbekcha](../../mobile/ios-simulator-device-hub.md) | [🇬🇧 English](../../en/mobile/ios-simulator-device-hub.md) | **🇷🇺 Русский**
 
-- **Источник:** [Apple Xcode Command Line & Simulator Tools (`simctl` / `devicectl`)](https://developer.apple.com/documentation/xcode/interacting-with-simulator-from-the-command-line)
+- **Источник:** [Apple Xcode Command Line & Simulator Tools (simctl / devicectl)](https://developer.apple.com/documentation/xcode/interacting-with-simulator-from-the-command-line)
 - **Категория:** `Mobile` *(Управление iOS Simulator и реальными iPhone/iPad)*
 - **Тип:** `CLI + macOS App Bridge` *(в составе `Xcode.app`)*
 - **Оценка качества:** **9.0 / 10**
@@ -56,15 +56,15 @@
 
 ## 4. Совместимость с нашими текущими инструментами
 
-- **`xcrun simctl` и `devicectl`:** Базовый фундамент жизненного цикла iOS/tvOS для [`agent-device`](agent-device.md) и [`cross-platform-qa`](cross-platform-qa.md) (фоновый `boot`/`shutdown` симулятора без окна, выдача разрешений `privacy` и установка сборок на физический iPhone).
-- **Xcode `Device Hub` + `agent-desktop`:** Переведены в роль **резерва (`fallback`)** — `Device Hub` требует открытого окна на экране, тогда как [`agent-device`](agent-device.md) работает полностью без окна за `~197ms`.
+- **`xcrun simctl` и `devicectl`:** Базовый фундамент жизненного цикла iOS/tvOS для [agent-device](agent-device.md) и [cross-platform-qa](cross-platform-qa.md) (фоновый `boot`/`shutdown` симулятора без окна, выдача разрешений `privacy` и установка сборок на физический iPhone).
+- **Xcode `Device Hub` + `agent-desktop`:** Переведены в роль **резерва (`fallback`)** — `Device Hub` требует открытого окна на экране, тогда как [agent-device](agent-device.md) работает полностью без окна за `~197ms`.
 
 ---
 
 ## 5. В каких задачах полезно?
 
 - **Когда использовать:** Фоновый запуск/остановка симуляторов через `xcrun simctl`, выдача разрешений, установка сборок на реальные iPhone/iPad через `devicectl` и резервный доступ через `Device Hub`.
-- **Когда не использовать:** Для повседневного прокликивания UI iOS/tvOS (основной инструмент теперь [`agent-device`](agent-device.md)).
+- **Когда не использовать:** Для повседневного прокликивания UI iOS/tvOS (основной инструмент теперь [agent-device](agent-device.md)).
 
 ---
 

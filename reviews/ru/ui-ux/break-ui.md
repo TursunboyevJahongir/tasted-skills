@@ -2,15 +2,14 @@
 
 [🇺🇿 O'zbekcha](../../ui-ux/break-ui.md) | [🇬🇧 English](../../en/ui-ux/break-ui.md) | **🇷🇺 Русский**
 
-- **Источник:** [emilkowalski/skills — `skills/break-ui`](https://github.com/emilkowalski/skills/tree/main/skills/break-ui)
+- **Источник:** [emilkowalski/skills — skills/break-ui](https://github.com/emilkowalski/skills/tree/main/skills/break-ui)
 - **Категория:** `UI/UX` *(Стресс-тестирование краевых случаев / Edge-case данных в UI)*
 - **Тип:** `Skill` *(`SKILL.md` + `CATALOG.md`, ~312 строк)*
 - **Оценка качества:** **8.0 / 10**
 - **Полезность для нас:** **3.0 / 10**
 - **Рекомендуемый охват:** `Не устанавливать`
-- **Используемая замена:** [**`impeccable`**](impeccable.md) (раздел `harden` — `reference/harden.md`)
 - **Дата проверки:** `2026-11-15`
-- **Текущий статус:** `🔄 Есть альтернатива получше`
+- 🔄 **Есть альтернатива получше:** [impeccable](impeccable.md) (`harden` — `reference/harden.md`)
 
 ---
 
@@ -33,8 +32,8 @@
 - Содержит точные CSS/JS-решения по `min-width: 0`, `flex-shrink: 0`, `overflow-wrap: anywhere`, `tabular-nums`, `Intl.Segmenter` и `Intl.PluralRules`.
 
 ### Слабые стороны и причины конфликта
-1. **Пересечение с [`impeccable`](impeccable.md) (`harden`):** Раздел `reference/harden.md` в `impeccable` уже проверяет и сразу исправляет длинные/короткие тексты, `min-width: 0`, `line-clamp`, `RTL`, расширение текста при переводе (+30–40%), `Intl`-форматирование, пустые состояния, а вдобавок — **состояния сетевых/API-ошибок**.
-2. **Добавляет в код проекта лишние фикстуры и переключатели:** Скилл требует создать в кодовой базе новый fixture-файл с worst-case данными, добавить кнопку `Demo / Worst case` на экран и оставить фикстуру в репозитории. Это противоречит как правилам наших фронтенд-проектов, так и принципам [`ponytail`](../architecture/ponytail.md) / [`karpathy-guidelines`](../architecture/karpathy-guidelines.md).
+1. **Пересечение с [impeccable](impeccable.md) (`harden`):** Раздел `reference/harden.md` в `impeccable` уже проверяет и сразу исправляет длинные/короткие тексты, `min-width: 0`, `line-clamp`, `RTL`, расширение текста при переводе (+30–40%), `Intl`-форматирование, пустые состояния, а вдобавок — **состояния сетевых/API-ошибок**.
+2. **Добавляет в код проекта лишние фикстуры и переключатели:** Скилл требует создать в кодовой базе новый fixture-файл с worst-case данными, добавить кнопку `Demo / Worst case` на экран и оставить фикстуру в репозитории. Это противоречит как правилам наших фронтенд-проектов, так и принципам [ponytail](../architecture/ponytail.md) / [karpathy-guidelines](../architecture/karpathy-guidelines.md).
 3. **Двухэтапная остановка и длинный отчет:** Вместо того чтобы сразу починить найденную проблему, пишет отчет из 3 частей и ждет команды `fix all`.
 
 ---
@@ -48,13 +47,13 @@
 
 ## 4. Что используется взамен?
 
-- **Взамен:** [**`impeccable`**](impeccable.md) (команда `harden [target]` / `reference/harden.md`) — без создания лишних демо-переключателей и fixture-файлов сразу укрепляет CSS overflow, i18n, плюрализацию и состояния API/офлайн-ошибок компонента.
+- **Взамен:** [**impeccable**](impeccable.md) (команда `harden [target]` / `reference/harden.md`) — без создания лишних демо-переключателей и fixture-файлов сразу укрепляет CSS overflow, i18n, плюрализацию и состояния API/офлайн-ошибок компонента.
 
 ---
 
 ## 5. В каких направлениях и задачах полезен?
 
-- **Когда использовать:** Не устанавливать глобально — вместо него используется [`impeccable`](impeccable.md) (`harden`).
+- **Когда использовать:** Не устанавливать глобально — вместо него используется [impeccable](impeccable.md) (`harden`).
 
 ---
 
@@ -62,4 +61,4 @@
 
 | Дата | Действие | Статус | Примечание |
 |---|---|---|---|
-| 2026-11-15 | Аудит GitHub `SKILL.md` + `CATALOG.md` и конфликтов | `🔄 Есть альтернатива получше` | Пропущен, так как [`impeccable`](impeccable.md) (`harden`) решает эту задачу чисто, а `break-ui` засоряет репозиторий лишними фикстурами и переключателями. |
+| 2026-11-15 | Аудит GitHub `SKILL.md` + `CATALOG.md` и конфликтов | 🔄 **Есть альтернатива получше:** [impeccable](impeccable.md) | Пропущен, так как [impeccable](impeccable.md) (`harden`) решает эту задачу чисто, а `break-ui` засоряет репозиторий лишними фикстурами и переключателями. |

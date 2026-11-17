@@ -39,7 +39,7 @@ Extracted from Cloudflare's internal vulnerability discovery harness, `security-
 
 ### Weaknesses and Cost
 - **Subagent quota spend on full runs:** Upstream `standard` and `deep` profiles can spawn `10–30+` subagents on large repos — mitigated by our local `quick` / `scoped` default below.
-- **Static/bounded-local only:** Does not fire live browser/HTTP exploit payloads at a running staging app (use [`Shannon` (`hacker-test`)](shannon.md) for live dynamic exploitation).
+- **Static/bounded-local only:** Does not fire live browser/HTTP exploit payloads at a running staging app (use [Shannon (hacker-test)](shannon.md) for live dynamic exploitation).
 
 ---
 
@@ -48,16 +48,16 @@ Extracted from Cloudflare's internal vulnerability discovery harness, `security-
 - **Risk Level:** `Low` *(`0` external dependencies, `65/65` local Node self-tests pass, `CRITICAL = 0`)*
 - **Inspected Surface:** `SKILL.md`, all 14 `.md` guides, `validate-findings.cjs`, `validate-coverage-ledger.cjs`, and `skillshare audit` (`HIGH` static flags are benign false positives from checklist strings like `"Are there any eval(), exec()..."` inside `ATTACK-CLASSES.md`).
 - **Applied Local Sanitization (`explicit-trigger-and-quick-default-1`):**
-  1. **Narrowed `SKILL.md` `description` frontmatter:** Upstream's broad *"Use for security questions..."* trigger could load `22 KB` during ordinary JWT/auth coding. We restricted it to explicit audit requests (`"security audit"`, `"security-audit"`, `"xavfsizlik auditi"`, `"kod xavfsizligini tekshir"`, `"zaifliklarni top"`) and kept live pentests routed to [`hacker-test`](shannon.md).
+  1. **Narrowed `SKILL.md` `description` frontmatter:** Upstream's broad *"Use for security questions..."* trigger could load `22 KB` during ordinary JWT/auth coding. We restricted it to explicit audit requests (`"security audit"`, `"security-audit"`, `"xavfsizlik auditi"`, `"kod xavfsizligini tekshir"`, `"zaifliklarni top"`) and kept live pentests routed to [hacker-test](shannon.md).
   2. **Changed default profile from `standard` -> `quick` / `scoped` (`SKILL.md` line 120):** Conserves subagent quota unless the user explicitly asks for a `standard` or `deep` full-repo pass.
 
 ---
 
-## 4. Fit & How It Pairs with [`Shannon` (`hacker-test`)](shannon.md)
+## 4. Fit & How It Pairs with [Shannon (hacker-test)](shannon.md)
 
 Together they form a **2-tier pre-release security workflow**:
 
-| Dimension | **`security-audit`** *(Cloudflare — `✅ Using`)* | [**`Shannon` (`hacker-test`)**](shannon.md) *(`👍 Good Option`)* |
+| Dimension | **`security-audit`** *(Cloudflare — `✅ Using`)* | [**Shannon (hacker-test)**](shannon.md) *(`👍 Good Option`)* |
 |---|---|---|
 | **Mechanism** | 6-phase source-first adversarial audit (`Hunter` + `Verifier` subagents) | Live Docker + Temporal + Playwright dynamic exploitation |
 | **Targets** | Backend, Web, **Mobile (`iOS`/`Android`/`Expo`)**, CLI, Cloud/CI, LLM | Running local/staging Web apps & HTTP APIs only |

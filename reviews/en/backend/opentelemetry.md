@@ -8,9 +8,9 @@
 - **Quality Score:** **9.0 / 10**
 - **Relevance to Us:** **4.0 / 10** *(as a separate standalone stack — since `Sentry` already covers our primary needs)*
 - **Recommended Scope:** `Skip Standalone Deployment for Now` *(adopt only when multi-service Backend + Infra metrics/logs outgrow Sentry)*
-- **Used Instead:** [**`sentry`**](sentry.md) *(Self-Hosted Sentry + v8+ OTel SDK + AI Skill)*
+- **Used Instead:** [**sentry**](sentry.md) *(Self-Hosted Sentry + v8+ OTel SDK + AI Skill)*
 - **Reviewed Date:** `2026-11-15`
-- **Current Status:** `👍 Good Option` *(we run [`sentry`](sentry.md) instead of maintaining a second observability stack)*
+- **Current Status:** `👍 Good Option` *(we run [sentry](sentry.md) instead of maintaining a second observability stack)*
 
 ---
 
@@ -30,7 +30,7 @@ A vendor-neutral CNCF (Cloud Native Computing Foundation) standard that collects
 
 ---
 
-## 2. What Problems It Solves & How It Compares to [`sentry`](sentry.md)
+## 2. What Problems It Solves & How It Compares to [sentry](sentry.md)
 
 ### Core Problems Solved (Strengths)
 - **"No `500` Error, Yet the App Feels Slow":** Catches endpoints that return `200 OK` without throwing exceptions while silently suffering from `N+1` SQL queries, missing indexes, lock contention, or slow external API calls.
@@ -38,7 +38,7 @@ A vendor-neutral CNCF (Cloud Native Computing Foundation) standard that collects
 - **Correlating Code Latency with Server/DB Saturation:** Answers *"Why did API latency spike at 21:00?"* by overlaying trace duration directly against DB connection-pool exhaustion or memory pressure.
 - **Zero Vendor Lock-in:** Instrument your code once with OTel SDKs and route telemetry to `SigNoz`, `Grafana`, `Datadog`, or `Sentry` without rewriting application code.
 
-### Weaknesses & Where [`sentry`](sentry.md) Wins
+### Weaknesses & Where [sentry](sentry.md) Wins
 - **Weak Exception Grouping & Mobile Crash Diagnostics:** If the same bug fires 10,000 times, raw OTel logs/traces record 10,000 separate entries; Sentry deduplicates them into 1 `Issue`, tracks `Release` regressions, and natively symbolicates iOS `dSYM` and Android `ProGuard` crashes.
 - **No `Session Replay`:** OpenTelemetry has no concept of browser DOM session recording or rage/dead-click replay.
 - **Extra Operational Overhead:** Requires deploying and maintaining an `otel-collector`, storage engine (`ClickHouse` or `Tempo`/`Loki`/`Prometheus`), visualization UI, and disk retention policies.
@@ -63,7 +63,7 @@ A complete, production-safe OpenTelemetry deployment requires 4 building blocks:
 
 ## 4. Why We Skip a Separate Stack Right Now (`Sentry` vs `OpenTelemetry` Decision)
 
-- Because our daily engineering spans Web, Mobile (`iOS` / `Android`), and Backend services, **we chose [`sentry`](sentry.md) instead of operating a standalone OpenTelemetry stack**: Sentry gives us smart crash/exception grouping, `Breadcrumbs`, `Session Replay`, and `v8+` OpenTelemetry-powered distributed traces in a single platform.
+- Because our daily engineering spans Web, Mobile (`iOS` / `Android`), and Backend services, **we chose [sentry](sentry.md) instead of operating a standalone OpenTelemetry stack**: Sentry gives us smart crash/exception grouping, `Breadcrumbs`, `Session Replay`, and `v8+` OpenTelemetry-powered distributed traces in a single platform.
 - Deploying a separate OpenTelemetry backend (`SigNoz` or `Grafana`) only makes sense when **deep server/DB infrastructure metrics and centralized high-volume backend log search** outgrow Sentry — and even then, OTel Collector can dual-ship errors to Sentry and metrics/logs to the OTel backend without instrumenting code twice.
 
 ---
@@ -71,7 +71,7 @@ A complete, production-safe OpenTelemetry deployment requires 4 building blocks:
 ## 5. Best Use Cases
 
 - **When to use:** Multi-microservice backend architectures that need unified `p95`/`p99` cross-service latency waterfalls, host/DB resource metrics, and centralized trace-linked logs.
-- **When not to use:** When your primary goal is catching Web/Mobile crashes, `Session Replay`, and code-level exceptions and [`sentry`](sentry.md) is already in place.
+- **When not to use:** When your primary goal is catching Web/Mobile crashes, `Session Replay`, and code-level exceptions and [sentry](sentry.md) is already in place.
 
 ---
 
@@ -79,4 +79,4 @@ A complete, production-safe OpenTelemetry deployment requires 4 building blocks:
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-15 | Architectural review, required stack blueprint, and comparison against [`sentry`](sentry.md) | `👍 Good Option` | Excellent industry standard (`9.0/10`), but skipped as a separate deployment because [`sentry`](sentry.md) already covers our errors, replays, and baseline traces. |
+| 2026-11-15 | Architectural review, required stack blueprint, and comparison against [sentry](sentry.md) | `👍 Good Option` | Excellent industry standard (`9.0/10`), but skipped as a separate deployment because [sentry](sentry.md) already covers our errors, replays, and baseline traces. |

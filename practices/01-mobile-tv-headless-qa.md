@@ -4,7 +4,7 @@
 
 ⬅️ [Practices Mundarijasiga qaytish](README.md)
 
-- **Birlashtiriladigan vositalar:** [**`simslim`**](../reviews/mobile/simslim.md) + [**`avdslim`**](../reviews/mobile/avdslim.md) + [**`agent-device`**](../reviews/mobile/agent-device.md) + [**`adb`**](../reviews/mobile/adb.md) + [**`xcrun simctl`**](../reviews/mobile/ios-simulator-device-hub.md) + [**`cross-platform-qa`**](../reviews/mobile/cross-platform-qa.md)
+- **Birlashtiriladigan vositalar:** [**simslim**](../reviews/mobile/simslim.md) + [**avdslim**](../reviews/mobile/avdslim.md) + [**agent-device**](../reviews/mobile/agent-device.md) + [**adb**](../reviews/mobile/adb.md) + [**xcrun simctl**](../reviews/mobile/ios-simulator-device-hub.md) + [**cross-platform-qa**](../reviews/mobile/cross-platform-qa.md)
 - **Qo'llaniladigan loyihalar:** `iOS`, `Android`, `tvOS (Apple TV)`, `Android TV`, `Expo / React Native`, `Swift / Kotlin`.
 
 ---

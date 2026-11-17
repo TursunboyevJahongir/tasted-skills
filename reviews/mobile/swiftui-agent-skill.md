@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **8.5 / 10**
 - **Ishda kerak bo'lishi:** **3.0 / 10** *(asosiy mobil ilovalarimiz React Native / Expo da; faqat sof SwiftUI moduli bo'lganda local `-p` da kerak)*
 - **Tavsiya etilgan ko'lam:** `Faqat local (-p)` *(faqat native Swift/SwiftUI loyihalarda)*
-- **O'rniga ishlatiladigan tizim:** [**`impeccable`**](../ui-ux/impeccable.md) (`reference/ios.md` — Apple HIG uchun) + [**`animate-expo`**](animate-expo.md) (Expo / RN uchun)
+- **O'rniga ishlatiladigan tizim:** [**impeccable**](../ui-ux/impeccable.md) (`reference/ios.md` — Apple HIG uchun) + [**animate-expo**](animate-expo.md) (Expo / RN uchun)
 - **Tekshirilgan sana:** `2026-11-16`
 - **Joriy holati:** `👍 Yaxshi variant`
 
@@ -28,7 +28,7 @@ Ochiq manbadagi yetakchi SwiftUI va Apple HIG skill'lari uchligi:
 ## 2. Nega global o'rnatmadik?
 
 - Asosiy mobil ilovalarimiz **Expo / React Native** stekida yozilgan — global SwiftUI skilli kundalik sessiyalarda keraksiz.
-- Apple HIG dizayn qoidalari bizdagi [**`impeccable`**](../ui-ux/impeccable.md) ning `reference/ios.md` va `audit.native.md` fayllarida allaqachon qamrab olingan.
+- Apple HIG dizayn qoidalari bizdagi [**impeccable**](../ui-ux/impeccable.md) ning `reference/ios.md` va `audit.native.md` fayllarida allaqachon qamrab olingan.
 - **Qachon kerak bo'ladi:** Faqat sof SwiftUI yoziladigan joylarda (masalan, iOS Home Screen Widget, Live Activity / Dynamic Island yoki WatchOS ilovasi) `twostraws/swiftui-agent-skill` ni o'sha repoga local (`-p`) ulash maqsadga muvofiq.
 
 ---

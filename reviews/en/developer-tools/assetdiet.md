@@ -4,12 +4,12 @@
 
 - **Source:** [092Abdullah/AssetDiet](https://github.com/092Abdullah/AssetDiet) · [npm: assetdiet-mcp](https://www.npmjs.com/package/assetdiet-mcp)
 - **Category:** `Developer Tools` *(Local Image, SVG, Video & 3D Asset Optimizer with Import Rewriting)*
-- **Type:** `Standalone CLI` + custom lightweight [`asset-diet`](../../../skills/asset-diet/SKILL.md) on-demand skill
+- **Type:** `Standalone CLI` + custom lightweight [asset-diet](../../../skills/asset-diet/SKILL.md) on-demand skill
 - **Quality Score:** **7.5 / 10**
-- **How Often Needed:** **6.5 / 10** *(via our on-demand [`asset-diet`](../../../skills/asset-diet/SKILL.md) `npx` CLI wrapper, with zero permanent 16-tool MCP overhead)*
+- **How Often Needed:** **6.5 / 10** *(via our on-demand [asset-diet](../../../skills/asset-diet/SKILL.md) `npx` CLI wrapper, with zero permanent 16-tool MCP overhead)*
 - **Recommended Scope:** `On-Demand npx CLI + Global lightweight asset-diet skill (-g)`
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `👍 Good Option` *(packaged [`skills/asset-diet`](../../../skills/asset-diet/SKILL.md), verified live on a real 214-asset repo, and synced globally across all 5 agent targets without MCP bloat)*
+- **Current Status:** `👍 Good Option` *(packaged [skills/asset-diet](../../../skills/asset-diet/SKILL.md), verified live on a real 214-asset repo, and synced globally across all 5 agent targets without MCP bloat)*
 
 ---
 
@@ -27,7 +27,7 @@ A **100% local** media audit and compression pipeline with zero cloud uploads:
 
 ## 2. Why Via Our `asset-diet` Skill Instead of Permanent MCP
 
-- **Zero MCP context bloat:** Registering its 16 MCP tools globally wastes context in 99% of non-media coding sessions; [`skills/asset-diet`](../../../skills/asset-diet/SKILL.md) activates strictly when requested and forbids `assetdiet setup` / `mcp`.
+- **Zero MCP context bloat:** Registering its 16 MCP tools globally wastes context in 99% of non-media coding sessions; [skills/asset-diet](../../../skills/asset-diet/SKILL.md) activates strictly when requested and forbids `assetdiet setup` / `mcp`.
 - **Expo / React Native & Git guardrails:** Defaults to `--policy safe` so native app icons (`app.json`) and static `.png` `require()` calls are never broken by blind `.webp` conversion, and ensures `.assetdiet/` backup folders are never committed to Git.
 
 ---
@@ -51,4 +51,4 @@ npx assetdiet-mcp@0.1.4 restore --run <runId>
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Primary-source audit, live `doctor`/`audit` verification, and global `asset-diet` skill sync | `👍 Good Option` | Verified `v0.1.4` with all 5 local engines (`Sharp`, `SVGO`, `FFmpeg`, `glTF-Transform`, `Font`); synced [`skills/asset-diet`](../../../skills/asset-diet/SKILL.md) across all 5 agent environments instead of attaching a 16-tool MCP server. |
+| 2026-11-16 | Primary-source audit, live `doctor`/`audit` verification, and global `asset-diet` skill sync | `👍 Good Option` | Verified `v0.1.4` with all 5 local engines (`Sharp`, `SVGO`, `FFmpeg`, `glTF-Transform`, `Font`); synced [skills/asset-diet](../../../skills/asset-diet/SKILL.md) across all 5 agent environments instead of attaching a 16-tool MCP server. |

@@ -35,7 +35,7 @@ An open-source (`MIT`) web design and mechanical verification system created by 
 
 `impeccable` and `Hallmark v2` shine in **two different jobs**:
 
-| Dimension | 🏆 **`Hallmark v2`** *(Wins on Landing & Promo Sites)* | 🏆 [**`impeccable`**](../ui-ux/impeccable.md) *(Wins on Daily App & Mobile UI)* | [**`taste-skill v2.5`**](taste-skill.md) |
+| Dimension | 🏆 **`Hallmark v2`** *(Wins on Landing & Promo Sites)* | 🏆 [**impeccable**](../ui-ux/impeccable.md) *(Wins on Daily App & Mobile UI)* | [**taste-skill v2.5**](taste-skill.md) |
 |---|---|---|---|
 | **Pre-built browsable theme catalog** | ✅ **50 ready themes** (`usehallmark.com` + instant `tokens.css` scaffold) | ❌ No browse-and-pick theme catalog (derives abstract concepts each run) | ⚠️ Dial numbers (`1–10`) only |
 | **Curated real photo library** | ✅ **755 licensed real photos** (`Wikimedia Commons`) | ❌ None (placeholders or AI image generation) | ❌ None |
@@ -67,7 +67,7 @@ An open-source (`MIT`) web design and mechanical verification system created by 
 ## 4. When to Use (and When Not To)
 
 - **When to use:** Building a new **Landing Page, SaaS marketing site, product launch page, or portfolio** from scratch, or running a full **Redesign** of an existing web page with `--before / --kept` safety.
-- **When not to use:** Everyday product dashboards, admin panels, internal web-app tweaks, or native `iOS`/`Android`/`Expo` mobile apps (use [**`impeccable`**](../ui-ux/impeccable.md) + [**`mobile-native`**](../mobile/mobile-native.md) + [**`animate-expo`**](../mobile/animate-expo.md)).
+- **When not to use:** Everyday product dashboards, admin panels, internal web-app tweaks, or native `iOS`/`Android`/`Expo` mobile apps (use [**impeccable**](../ui-ux/impeccable.md) + [**mobile-native**](../mobile/mobile-native.md) + [**animate-expo**](../mobile/animate-expo.md)).
 
 ---
 

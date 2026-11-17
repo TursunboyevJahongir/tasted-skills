@@ -2,7 +2,7 @@
 
 [🇺🇿 O'zbekcha](../../mobile/mobile-native.md) | [🇬🇧 English](../../en/mobile/mobile-native.md) | **🇷🇺 Русский**
 
-- **Источник:** [emilkowalski/skills — `skills/mobile-native`](https://github.com/emilkowalski/skills/tree/main/skills/mobile-native)
+- **Источник:** [emilkowalski/skills — skills/mobile-native](https://github.com/emilkowalski/skills/tree/main/skills/mobile-native)
 - **Категория:** `Mobile` *(Mobile Web, PWA и Mini App)*
 - **Тип:** `Skill` *(`SKILL.md` + локальная защита совместимости `LOCAL-COMPATIBILITY.md`)*
 - **Оценка качества:** **8.5 / 10**
@@ -42,11 +42,11 @@
 
 ### Сильные стороны
 - **Не заставляет писать лишний JS:** Жёстко запрещает кривые хуки вроде `useIsTouchDevice()` или проверки `navigator.userAgent`, используя CSS media queries и возможности платформы.
-- **Компактный и точный:** ~315 строк, `0` скриптов, проверочная таблица `Never Ship` в конце и краткий формат ответа в духе [`ponytail`](../architecture/ponytail.md).
+- **Компактный и точный:** ~315 строк, `0` скриптов, проверочная таблица `Never Ship` в конце и краткий формат ответа в духе [ponytail](../architecture/ponytail.md).
 - **Не ломает доступность (Accessibility):** Лечит причину авто-зума (`16px` шрифт в инпутах), а не отключает зум страницы.
 
 ### Слабые стороны и накладные расходы
-- Не перестраивает многоколоночный десктопный макет в мобильный UX (для этого используется раздел `adapt` в [`impeccable`](../ui-ux/impeccable.md)).
+- Не перестраивает многоколоночный десктопный макет в мобильный UX (для этого используется раздел `adapt` в [impeccable](../ui-ux/impeccable.md)).
 - Правило `html { overscroll-behavior: none; }` может отключить pull-to-refresh на обычных статейных/каталожных сайтах — поэтому через `LOCAL-COMPATIBILITY.md` его применение ограничено только app-shell / картами / PWA.
 
 ---
@@ -57,7 +57,7 @@
 - **Выполненная санитаризация и защита от конфликтов:**
   1. **Вырезан блок `## Initial Response`:** Удалено требование отвечать шаблонным приветствием при вызове без вопроса.
   2. **Сужено поле `description` (защита auto-trigger):** Срабатывает только на пользовательских мобильных веб-приложениях, PWA и мобильных WebView/Mini App; исключены десктопные **админ-панели**, ТВ-интерфейсы и нативные приложения **React Native / Expo**.
-  3. **Заменены ссылки на неустановленные скиллы:** Упоминания `animate` и `review-animations` перенаправлены на [`impeccable`](../ui-ux/impeccable.md), а в пример `:active` добавлена защита `@media (prefers-reduced-motion: reduce)`.
+  3. **Заменены ссылки на неустановленные скиллы:** Упоминания `animate` и `review-animations` перенаправлены на [impeccable](../ui-ux/impeccable.md), а в пример `:active` добавлена защита `@media (prefers-reduced-motion: reduce)`.
   4. **Добавлен `LOCAL-COMPATIBILITY.md`:** Прописаны чёткие границы ответственности с `impeccable`, `animate-expo`, `cross-platform-qa` и `ponytail`.
 
 ---
@@ -65,10 +65,10 @@
 ## 4. Совместимость с нашими текущими инструментами
 
 После очистки **не конфликтует** с существующими глобальными скиллами, а закрывает пустующий слой мобильного браузера:
-- **[`impeccable`](../ui-ux/impeccable.md)** — отвечает за общую иерархию UI/UX, типографику, адаптивную перестройку макета (`adapt`) и веб-анимацию (`animate`); `mobile-native` правит только низкоуровневые правила мобильного браузера (`dvh/svh`, `interactive-widget`, `overscroll-behavior`, `pointer: coarse`, `safe-area-inset-*`).
-- **[`animate-expo`](animate-expo.md)** — только для нативных анимаций в UI-потоке React Native / Expo.
+- **[impeccable](../ui-ux/impeccable.md)** — отвечает за общую иерархию UI/UX, типографику, адаптивную перестройку макета (`adapt`) и веб-анимацию (`animate`); `mobile-native` правит только низкоуровневые правила мобильного браузера (`dvh/svh`, `interactive-widget`, `overscroll-behavior`, `pointer: coarse`, `safe-area-inset-*`).
+- **[animate-expo](animate-expo.md)** — только для нативных анимаций в UI-потоке React Native / Expo.
 - **`web-to-native-mobile`** — для переноса веб-функций в нативные приложения iOS/Android.
-- **[`cross-platform-qa`](cross-platform-qa.md)** — требование проверять результат на реальном телефоне на 100% совпадает с нашим 2-этапным QA-процессом.
+- **[cross-platform-qa](cross-platform-qa.md)** — требование проверять результат на реальном телефоне на 100% совпадает с нашим 2-этапным QA-процессом.
 
 ---
 

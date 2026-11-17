@@ -3,11 +3,11 @@
 [🇺🇿 O'zbekcha](../../local-models/minimax-m3-1-flash.md) | **🇬🇧 English** | [🇷🇺 Русский](../../ru/local-models/minimax-m3-1-flash.md)
 
 - **Source:** [MiniMaxAI/MiniMax-M3.1-Flash (Hugging Face)](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash)
-- **Statistics & Benchmarks:** [Hugging Face Model Card & Benchmarks](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [OpenRouter Live Stats (`minimax/minimax-m3.1-flash`)](https://openrouter.ai/minimax/minimax-m3.1-flash) · [Artificial Analysis Leaderboard](https://artificialanalysis.ai/leaderboards/models)
+- **Statistics & Benchmarks:** [Hugging Face Model Card & Benchmarks](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [OpenRouter Live Stats (minimax/minimax-m3.1-flash)](https://openrouter.ai/minimax/minimax-m3.1-flash) · [Artificial Analysis Leaderboard](https://artificialanalysis.ai/leaderboards/models)
 - **Category:** `Local Models` *(Open-Weight Multimodal MoE — local self-hosting audit)*
 - **Type:** `Open-Weight LLM` *(`~428B` total / `~23B` active parameters, `1M` context, `MXFP8 + NVFP4`)*
 - **Quality Score:** **8.0 / 10** *(as a fast multimodal `Flash`-tier model)*
-- **How Often Needed (Local):** **1.0 / 10** *(does not fit normal developer machines; as a cloud API — [`👍 Good Option`](../external-apis/minimax-m3-1-flash-api.md))*
+- **How Often Needed (Local):** **1.0 / 10** *(does not fit normal developer machines; as a cloud API — [👍 Good Option](../external-apis/minimax-m3-1-flash-api.md))*
 - **Recommended Scope:** `Do Not Install (Locally)` *(use via [🔌 External APIs](../external-apis/minimax-m3-1-flash-api.md) when needed)*
 - **Reviewed Date:** `2026-11-16`
 - **Current Status:** `⚠️ Not Recommended` *(requires `~250–285 GB` disk space and an `8× H100 / 640 GB VRAM` cluster for smooth local serving)*
@@ -58,7 +58,7 @@
 
 - **We do not need to self-host this model locally (`1.0/10`):** Maintaining a `$9,000+` `512 GB` Mac Studio or `8× H100` cluster for a `285 GB` Flash model makes no sense for our team.
 - **Two practical alternatives:**
-  1. **If you want `MiniMax M3.1 Flash` itself:** Call it via cloud API (`$0.15 / $0.60`, `170+ tok/s`) with zero local hardware overhead — 👉 [**`MiniMax M3.1 Flash API`**](../external-apis/minimax-m3-1-flash-api.md).
+  1. **If you want `MiniMax M3.1 Flash` itself:** Call it via cloud API (`$0.15 / $0.60`, `170+ tok/s`) with zero local hardware overhead — 👉 [**MiniMax M3.1 Flash API**](../external-apis/minimax-m3-1-flash-api.md).
   2. **If you want a 100% offline local coding model:** Run **`Qwen3-Coder` or `Qwen2.5-Coder-14B/32B` via `Ollama` / `MLX`** (`~9–20 GB`, `30–65 tok/s`, Apache-2.0), which fits cleanly inside `32–64 GB` Mac RAM.
 
 ---

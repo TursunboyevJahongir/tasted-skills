@@ -46,7 +46,7 @@ A compact Markdown skill (`SKILL.md`, 2.5 KB) distilling Andrej Karpathy's 4 cor
 
 ## 4. Relevance & Compatibility with Our Existing Tools
 
-- Pairs with [`ponytail`](ponytail.md) to enforce baseline coding hygiene across all agents (`Codex`, `Claude`, `Antigravity`).
+- Pairs with [ponytail](ponytail.md) to enforce baseline coding hygiene across all agents (`Codex`, `Claude`, `Antigravity`).
 
 ---
 

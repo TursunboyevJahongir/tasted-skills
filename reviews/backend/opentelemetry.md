@@ -8,9 +8,9 @@
 - **Sifat bahosi:** **9.0 / 10**
 - **Ishda kerak bo'lishi:** **4.0 / 10** *(alohida stek sifatida — chunki asosiy ehtiyojni `Sentry` yopadi)*
 - **Tavsiya etilgan ko'lam:** `Hozircha alohida ko'tarmaslik` *(kerak bo'lganda faqat ko'p-servisli Backend + Infra monitoringi uchun)*
-- **O'rniga ishlatiladigan tizim:** [**`sentry`**](sentry.md) *(Self-Hosted Sentry + v8+ OTel SDK + AI Skill)*
+- **O'rniga ishlatiladigan tizim:** [**sentry**](sentry.md) *(Self-Hosted Sentry + v8+ OTel SDK + AI Skill)*
 - **Tekshirilgan sana:** `2026-11-15`
-- **Joriy holati:** `👍 Yaxshi variant` *(asosiy tizim sifatida [`sentry`](sentry.md) ishlatilayotgani uchun alohida OTel backend ko'tarilmagan)*
+- **Joriy holati:** `👍 Yaxshi variant` *(asosiy tizim sifatida [sentry](sentry.md) ishlatilayotgani uchun alohida OTel backend ko'tarilmagan)*
 
 ---
 
@@ -30,7 +30,7 @@ CNCF (Cloud Native Computing Foundation) tomonidan ishlab chiqilgan, har qanday 
 
 ---
 
-## 2. Qanday muammolarni hal qiladi va [`sentry`](sentry.md) dan farqi nimada?
+## 2. Qanday muammolarni hal qiladi va [sentry](sentry.md) dan farqi nimada?
 
 ### Hal qiladigan asosiy muammolari (Kuchli tomonlari)
 - **"Xato (`500`) yo'q, lekin tizim sekin ishlayapti" muammosi:** Crash bermasdan `200 OK` qaytaradigan, ammo `N+1` SQL so'rov, indeks yetishmasligi yoki tashqi API kutishi sababli sekin ishlaydigan joylarni darhol topadi.
@@ -38,7 +38,7 @@ CNCF (Cloud Native Computing Foundation) tomonidan ishlab chiqilgan, har qanday 
 - **Kod sekinlashishini Server/Baza holati bilan bog'lash:** *"API javob vaqti oshib ketdi, chunki aynan shu daqiqada DB connection pool 100% to'lgan yoki xotira tugagan"* degan savolga bitta grafikda javob beradi.
 - **Vendor-neutral (Mustaqil):** Kod bir marta OTel SDK bilan yozilsa, keyinchalik ma'lumotni kodga tegmasdan istalgan tizimga (`SigNoz`, `Grafana`, `Datadog` yoki `Sentry`) yo'naltirish mumkin.
 
-### Zaif tomonlari va [`sentry`](sentry.md) ustun bo'lgan joylar
+### Zaif tomonlari va [sentry](sentry.md) ustun bo'lgan joylar
 - **Xatolarni guruhlash (`Issue Grouping`) va Mobil Crash tahlili kuchsiz:** Bir xil exception ming marta tushsa, OTel log/trace'larida u mingta alohida yozuv bo'lib ko'rinadi; Sentry esa uni bitta `Issue` qilib yig'adi, `Release` bilan bog'laydi hamda iOS `dSYM` / Android `ProGuard` crash'larini tayyor o'qiydi.
 - **`Session Replay` yo'q:** Foydalanuvchi ekranida nima bosganini videodek qayta ko'rsatish OTel standartida mavjud emas.
 - **Alohida infratuzilma xarajati:** Ishlatish uchun alohida Collector, baza (`ClickHouse` yoki `Tempo`/`Loki`/`Prometheus`) va UI ko'tarib, disk retention'ni nazorat qilish kerak.
@@ -63,7 +63,7 @@ To'liq va xavfsiz OpenTelemetry steki uchun 4 ta qism kerak bo'ladi:
 
 ## 4. Nega hozir alohida ishlatmayapmiz? (`Sentry` vs `OpenTelemetry` qarori)
 
-- Bizning kundalik ishimizda ham Web, ham Mobile (`iOS` / `Android`), ham Backend borligi sababli **ikkisidan bittasi sifatida [`sentry`](sentry.md) tanlangan**: u crash/exception guruhlash, `Breadcrumbs`, `Session Replay` va zamonaviy `v8+` SDK orqali bazaviy OpenTelemetry trace'larini bitta tayyor platformada beradi.
+- Bizning kundalik ishimizda ham Web, ham Mobile (`iOS` / `Android`), ham Backend borligi sababli **ikkisidan bittasi sifatida [sentry](sentry.md) tanlangan**: u crash/exception guruhlash, `Breadcrumbs`, `Session Replay` va zamonaviy `v8+` SDK orqali bazaviy OpenTelemetry trace'larini bitta tayyor platformada beradi.
 - Alohida OpenTelemetry stekini (`SigNoz` yoki `Grafana`) ko'tarishga faqat kelajakda **chuqur server/DB infratuzilma metrikalari va markazlashgan backend log qidiruvi** Sentry doirasidan tashqariga chiqqandagina ehtiyoj tug'iladi (shunda ham kodni ikki marta yozmasdan, OTel Collector orqali xatolarni Sentry'ga, metrika/loglarni esa OTel paneliga uzatish mumkin).
 
 ---
@@ -71,7 +71,7 @@ To'liq va xavfsiz OpenTelemetry steki uchun 4 ta qism kerak bo'ladi:
 ## 5. Qaysi yo'nalish va vazifalarda foydali?
 
 - **Qachon ishlatish kerak:** Ko'p mikroservisli backend tizimlarda servislararo kechikishlarni (`p95`/`p99`), server/DB resurs yuklamasini va markazlashgan loglarni bitta oynada kuzatish zarur bo'lganda.
-- **Qachon ishlatmaslik kerak:** Asosiy maqsad Web/Mobile ilovalardagi crash'lar, `Session Replay` va kod xatolarini tutish bo'lib, allaqachon [`sentry`](sentry.md) ishlab turgan bo'lsa.
+- **Qachon ishlatmaslik kerak:** Asosiy maqsad Web/Mobile ilovalardagi crash'lar, `Session Replay` va kod xatolarini tutish bo'lib, allaqachon [sentry](sentry.md) ishlab turgan bo'lsa.
 
 ---
 
@@ -79,4 +79,4 @@ To'liq va xavfsiz OpenTelemetry steki uchun 4 ta qism kerak bo'ladi:
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-15 | Arxitektura, kerakli komponentlar va [`sentry`](sentry.md) bilan solishtirma tahlil | `👍 Yaxshi variant` | Kuchli sanoat standarti (`9.0/10`), biroq bizda xatolar, replay va bazaviy trace'lar uchun [`sentry`](sentry.md) ishlatilayotgani sababli ikkinchi parallel stek sifatida ko'tarilmadi. |
+| 2026-11-15 | Arxitektura, kerakli komponentlar va [sentry](sentry.md) bilan solishtirma tahlil | `👍 Yaxshi variant` | Kuchli sanoat standarti (`9.0/10`), biroq bizda xatolar, replay va bazaviy trace'lar uchun [sentry](sentry.md) ishlatilayotgani sababli ikkinchi parallel stek sifatida ko'tarilmadi. |

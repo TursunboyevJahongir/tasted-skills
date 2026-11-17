@@ -4,12 +4,12 @@
 
 - **Source:** [KeygraphHQ/shannon](https://github.com/KeygraphHQ/shannon)
 - **Category:** `Backend` *(White-Box Web & HTTP API Security Auditing and Autonomous Pentesting)*
-- **Type:** `Standalone CLI (Docker + Temporal)` + custom lightweight [`hacker-test`](../../../skills/hacker-test/SKILL.md) trigger skill
+- **Type:** `Standalone CLI (Docker + Temporal)` + custom lightweight [hacker-test](../../../skills/hacker-test/SKILL.md) trigger skill
 - **Quality Score:** **8.5 / 10**
 - **How Often Needed:** **6.5 / 10**
-- **Recommended Scope:** `On-Demand npx CLI + Global lightweight hacker-test skill` — *skip its heavy upstream plugin and trigger via our [`skills/hacker-test`](../../../skills/hacker-test/SKILL.md) wrapper strictly on local/staging*
+- **Recommended Scope:** `On-Demand npx CLI + Global lightweight hacker-test skill` — *skip its heavy upstream plugin and trigger via our [skills/hacker-test](../../../skills/hacker-test/SKILL.md) wrapper strictly on local/staging*
 - **Reviewed Date:** `2026-11-16`
-- **Current Status:** `👍 Good Option` *(source audited; packaged [`skills/hacker-test`](../../../skills/hacker-test/SKILL.md) in this repo and synced globally so pre-release pentests are always one phrase away)*
+- **Current Status:** `👍 Good Option` *(source audited; packaged [skills/hacker-test](../../../skills/hacker-test/SKILL.md) in this repo and synced globally so pre-release pentests are always one phrase away)*
 
 ---
 
@@ -56,13 +56,13 @@
 
 ---
 
-## 4. Our Approach: Why We Built [`hacker-test`](../../../skills/hacker-test/SKILL.md) Instead of Installing Upstream's Plugin
+## 4. Our Approach: Why We Built [hacker-test](../../../skills/hacker-test/SKILL.md) Instead of Installing Upstream's Plugin
 
 Pentesting is a pre-release event, not an everyday coding action. That creates two opposite traps: **1)** installing upstream `plugins/shannon` globally carries its large `llms-full.txt` bundle everywhere; **2)** installing nothing at all means a month later you forget the tool's name, Docker `host.docker.internal` mapping, `pi` auth variables, and `--validate-model` preflight check.
 
 **How we solved both:**
 1. We did **not** install `Shannon` or its upstream plugin permanently (`0` background daemons, `0` bloat).
-2. Instead, we authored a ~45-token wrapper skill inside this repository — [**`skills/hacker-test/SKILL.md`**](../../../skills/hacker-test/SKILL.md) — and synced it across `Antigravity`, `Claude Code`, and `Codex`:
+2. Instead, we authored a ~45-token wrapper skill inside this repository — [**skills/hacker-test/SKILL.md**](../../../skills/hacker-test/SKILL.md) — and synced it across `Antigravity`, `Claude Code`, and `Codex`:
    ```bash
    skillshare install TursunboyevJahongir/tasted-skills -s hacker-test -g && skillshare sync -g
    ```

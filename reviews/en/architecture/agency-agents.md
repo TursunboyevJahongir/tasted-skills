@@ -8,7 +8,7 @@
 - **Quality Score:** **6.5 / 10**
 - **Relevance to Us:** **2.5 / 10**
 - **Recommended Scope:** `Do Not Install` *(global install severely bloats context)*
-- **Used Instead:** [**`impeccable`**](../ui-ux/impeccable.md) + [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) + [**`elephant-goldfish-model`**](elephant-goldfish-model.md) + [**`cross-platform-qa`**](../mobile/cross-platform-qa.md)
+- **Used Instead:** [**impeccable**](../ui-ux/impeccable.md) + [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) + [**elephant-goldfish-model**](elephant-goldfish-model.md) + [**cross-platform-qa**](../mobile/cross-platform-qa.md)
 - **Reviewed Date:** `2026-11-16`
 - **Current Status:** `⚠️ Not Recommended` *(not needed — our existing focused skills are much cleaner and stronger)*
 
@@ -44,7 +44,7 @@ What actually ships inside:
      - `Senior Developer` is hardcoded around `Laravel/Livewire`;
      - `Reality Checker` mandates running a nonexistent `./qa-playwright-capture.sh http://localhost:8000` script and checking `*.blade.php` views (`"NEVER SKIP"`).
 3. **Auto-Trigger Collisions & Bypassing `skillshare`:**
-   - `convert.sh` omits `disable-model-invocation: true` and writes directly into `~/.gemini/config/skills/`, bypassing [`skillshare`](../developer-tools/skillshare.md) and colliding head-on with our core UI and engineering skills on every prompt.
+   - `convert.sh` omits `disable-model-invocation: true` and writes directly into `~/.gemini/config/skills/`, bypassing [skillshare](../developer-tools/skillshare.md) and colliding head-on with our core UI and engineering skills on every prompt.
 
 ---
 
@@ -54,7 +54,7 @@ What actually ships inside:
 > **Context Bloat:** Installing all 283 persona templates globally burns **`~18,500` permanent frontmatter tokens**, diluting agent attention.
 
 - **Risk Level:** `Low` *(no malicious scripts, network calls, or `Stop` hooks, though context bloat and auto-trigger noise are high)*
-- Even if adapting a single niche checklist in the future, never run `install.sh` globally — strip the persona roleplay (`Identity & Memory`) and report templates, add `disable-model-invocation: true`, and manage via [`skillshare`](../developer-tools/skillshare.md).
+- Even if adapting a single niche checklist in the future, never run `install.sh` globally — strip the persona roleplay (`Identity & Memory`) and report templates, add `disable-model-invocation: true`, and manage via [skillshare](../developer-tools/skillshare.md).
 
 ---
 
@@ -64,10 +64,10 @@ Every core domain in `agency-agents` is already covered much more cleanly by our
 
 | Division in `agency-agents` | Our Cleaner, Stronger Replacement |
 |---|---|
-| `Frontend Developer`, `UI Designer`, `UX Architect` | [**`impeccable`**](../ui-ux/impeccable.md) + [**`mobile-native`**](../mobile/mobile-native.md) + [**`animate-expo`**](../mobile/animate-expo.md) |
-| `Minimal Change Engineer` (207 lines + verbose report) | [**`ponytail`**](ponytail.md) + [**`karpathy-guidelines`**](karpathy-guidelines.md) (`2.5–3.5 KB`, zero report bloat) |
-| `Software Architect`, `Code Reviewer` | [**`elephant-goldfish-model`**](elephant-goldfish-model.md) (true `fresh-context` Goldfish subagents) + [**`grill-me`**](grill-me.md) |
-| `Reality Checker`, `Evidence Collector` | [**`cross-platform-qa`**](../mobile/cross-platform-qa.md) ([`agent-desktop`](../developer-tools/agent-desktop.md) + [`Device Hub`](../mobile/ios-simulator-device-hub.md) + [`adb`](../mobile/adb.md)) |
+| `Frontend Developer`, `UI Designer`, `UX Architect` | [**impeccable**](../ui-ux/impeccable.md) + [**mobile-native**](../mobile/mobile-native.md) + [**animate-expo**](../mobile/animate-expo.md) |
+| `Minimal Change Engineer` (207 lines + verbose report) | [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) (`2.5–3.5 KB`, zero report bloat) |
+| `Software Architect`, `Code Reviewer` | [**elephant-goldfish-model**](elephant-goldfish-model.md) (true `fresh-context` Goldfish subagents) + [**grill-me**](grill-me.md) |
+| `Reality Checker`, `Evidence Collector` | [**cross-platform-qa**](../mobile/cross-platform-qa.md) ([agent-desktop](../developer-tools/agent-desktop.md) + [Device Hub](../mobile/ios-simulator-device-hub.md) + [adb](../mobile/adb.md)) |
 
 ---
 

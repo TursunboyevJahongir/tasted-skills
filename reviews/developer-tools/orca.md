@@ -33,7 +33,7 @@
 
 ## 2. Qanchalik yaxshi va qanchalik yomon? (`T3 Code` bilan jonli solishtirish)
 
-| Mezon | **`Orca` (`stablyai/orca` v1.4.261)** | [**`T3 Code`**](t3-code.md) *(olib tashlandi)* |
+| Mezon | **`Orca` (`stablyai/orca` v1.4.261)** | [**T3 Code**](t3-code.md) *(olib tashlandi)* |
 |---|---|---|
 | **Bitta promptdan boshqa AI'larni chaqirish** | ✅ **Ichki `orca orchestration` DAG:** Chat UI ichida jonli subagent kartalari (`Claude`, `Codex`, `Antigravity`), avtomatik uyg'otish (`worker_done`) va xato/limitni (`escalation`) ushlash | ⚠️ Faqat tashqi CLI subagent skriptlari orqali (UI'da ichki subagent kartalari yo'q) |
 | **Telefon ilovasi barqarorligi** | ✅ Rasmiy App Store / Play Store ilovasi (`LAN` + `E2EE Relay` + Push notifications) | ❌ Beta — ekran o'chganda yoki tarmoq almashganda tez-tez uzilib qoladi |
@@ -61,7 +61,7 @@
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
 - `Codex`, `Claude Code` va `Antigravity` status hooklari (`orca agent hooks on`) hamda `orchestration` skilli mavjud `task-context`, `grill-me`, `ponytail`, `agent-desktop` va `agent-device` oqimimiz bilan 100% mos ishlaydi.
-- Oldin ishlatilgan [**`T3 Code`**](t3-code.md) to'liq o'chirilib (`~3.87 GB` disk joyi bo'shatildi), barcha 12 ta asosiy repozitoriy `Orca` ga ko'chirildi.
+- Oldin ishlatilgan [**T3 Code**](t3-code.md) to'liq o'chirilib (`~3.87 GB` disk joyi bo'shatildi), barcha 12 ta asosiy repozitoriy `Orca` ga ko'chirildi.
 
 ---
 

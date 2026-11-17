@@ -2,7 +2,7 @@
 
 [🇺🇿 O'zbekcha](../../mobile/adb.md) | **🇬🇧 English** | [🇷🇺 Русский](../../ru/mobile/adb.md)
 
-- **Source:** [Android SDK Platform-Tools (`adb`)](https://developer.android.com/tools/adb)
+- **Source:** [Android SDK Platform-Tools (adb)](https://developer.android.com/tools/adb)
 - **Category:** `Mobile` *(Android Emulator & Physical Android Device Control)*
 - **Type:** `CLI / Runtime Tool` *(official Android SDK utility)*
 - **Quality Score:** **9.5 / 10**
@@ -57,17 +57,17 @@ On macOS, iOS Simulator (`Device Hub` + `xcrun simctl`) exposes internal UI elem
 
 ## 4. Fit & Compatibility with Our Existing Stack
 
-Complements [`agent-device`](agent-device.md) and [`agent-desktop`](../developer-tools/agent-desktop.md):
-- **Interactive Android & Android TV UI flows (`snapshot`, `@ref`, `press`, UTF-8 `fill`):** now driven primarily via [`agent-device`](agent-device.md) (which uses `adb` under the hood, running `4.5x` faster with `27x` fewer tokens than raw `uiautomator dump`);
+Complements [agent-device](agent-device.md) and [agent-desktop](../developer-tools/agent-desktop.md):
+- **Interactive Android & Android TV UI flows (`snapshot`, `@ref`, `press`, UTF-8 `fill`):** now driven primarily via [agent-device](agent-device.md) (which uses `adb` under the hood, running `4.5x` faster with `27x` fewer tokens than raw `uiautomator dump`);
 - **Low-level Android operations (`adb reverse`, `adb logcat`, `emu kill`, APK installs, fallback `screencap`):** handled directly by **`adb`**;
-- Together they power the Android wing of [`cross-platform-qa`](cross-platform-qa.md).
+- Together they power the Android wing of [cross-platform-qa](cross-platform-qa.md).
 
 ---
 
 ## 5. When to Use (and When Not To)
 
 - **When to use:** Forwarding ports (`adb reverse`), inspecting crash logs (`adb logcat`), installing APKs, managing `-no-window` emulators (`emu kill`), and serving as the underlying transport/fallback for `agent-device`.
-- **When not to use:** Routine interactive UI tapping and form filling (use [`agent-device`](agent-device.md) instead) or pure Web/iOS tasks.
+- **When not to use:** Routine interactive UI tapping and form filling (use [agent-device](agent-device.md) instead) or pure Web/iOS tasks.
 
 ---
 

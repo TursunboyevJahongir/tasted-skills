@@ -43,7 +43,7 @@ Unlike its lightweight v1 ruleset, `tasteskill 2.5.1` (`design-taste-frontend`) 
 - **Inspected surface:**
   1. **`Stop` lifecycle hook:** `SKILL.md` frontmatter defines a `hooks: Stop:` command with a **`timeout: 600` seconds** that runs `node scripts/gate.mjs --hook claude` whenever the agent finishes a turn.
   2. **Network & filesystem writes:** `photos.mjs` and `icons.mjs` fetch external assets and create `.taste-skill/` in the project root.
-  3. **Overbroad auto-trigger:** Claims any React/Next.js/Vue/Tailwind page design request, colliding directly with [`impeccable`](../ui-ux/impeccable.md).
+  3. **Overbroad auto-trigger:** Claims any React/Next.js/Vue/Tailwind page design request, colliding directly with [impeccable](../ui-ux/impeccable.md).
 - **Mandatory sanitization if ever installed into an isolated landing project (`-p`):**
   1. **Strip the entire `hooks: Stop:` block** from `SKILL.md` frontmatter (run `consistency.mjs` and `gate.mjs` manually when needed).
   2. Never install globally (`-g`) — scope strictly to a dedicated greenfield landing repository (`-p`) or add `disable-model-invocation: true`.
@@ -52,8 +52,8 @@ Unlike its lightweight v1 ruleset, `tasteskill 2.5.1` (`design-taste-frontend`) 
 
 ## 4. Fit & Compatibility with Our Existing Stack
 
-- For daily web applications and product interfaces, our installed [**`impeccable`**](../ui-ux/impeccable.md) (`Operate` and `Persuade` modes) + [**`mobile-native`**](../mobile/mobile-native.md) stack is far safer because it respects each project's own framework and design tokens without injecting foreign `system.css` files.
-- **Cleaner landing-page & redesign alternative:** [**`Hallmark v2`**](hallmark.md) — ships `50` browsable themes, `755` openly licensed real photos, live app screenshot capture (`capture.mjs`), and lossless `--before/--kept` redesign verification in `~7.1 MB` with zero blocking `Stop` hooks and zero npm dependencies. Unless you specifically want `taste-skill`'s WebGL shaders, prefer `Hallmark v2` on demand for landing pages.
+- For daily web applications and product interfaces, our installed [**impeccable**](../ui-ux/impeccable.md) (`Operate` and `Persuade` modes) + [**mobile-native**](../mobile/mobile-native.md) stack is far safer because it respects each project's own framework and design tokens without injecting foreign `system.css` files.
+- **Cleaner landing-page & redesign alternative:** [**Hallmark v2**](hallmark.md) — ships `50` browsable themes, `755` openly licensed real photos, live app screenshot capture (`capture.mjs`), and lossless `--before/--kept` redesign verification in `~7.1 MB` with zero blocking `Stop` hooks and zero npm dependencies. Unless you specifically want `taste-skill`'s WebGL shaders, prefer `Hallmark v2` on demand for landing pages.
 
 ---
 

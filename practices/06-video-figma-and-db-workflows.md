@@ -4,7 +4,7 @@
 
 ⬅️ [Practices Mundarijasiga qaytish](README.md)
 
-- **Birlashtiriladigan vositalar:** `watch` (`video-analyzer`) + `figma` (`figma-implement-design`, `figma-generate-design`, `figma-use`) + [**`agent-desktop`**](../reviews/developer-tools/agent-desktop.md) (`agent-desktop-ffi`) + [**`graphify`**](../reviews/architecture/graphify.md) + `drizzle-relations-v2`
+- **Birlashtiriladigan vositalar:** `watch` (`video-analyzer`) + `figma` (`figma-implement-design`, `figma-generate-design`, `figma-use`) + [**agent-desktop**](../reviews/developer-tools/agent-desktop.md) (`agent-desktop-ffi`) + [**graphify**](../reviews/architecture/graphify.md) + `drizzle-relations-v2`
 - **Qo'llaniladigan vazifalar:** Video bug-reportlarni tahlil qilish, raqobatchi UI/animatsiyasini ko'chirish, Kod <-> Figma ikki tomonlama sinxronizatsiya va desktop dasturlarni avtomatlashtirish.
 
 ---
@@ -20,10 +20,10 @@ Tester yoki foydalanuvchi Telegram'dan *"ilovada xato chiqyapti"* deb ekran yozu
 ### 2) Yoqtirgan ilova yoki sayt animatsiyasini / UI oqimini 1:1 ko'chirish (`watch` + `impeccable` + `animate-expo`)
 Boshqa ilovadagi chiroyli o'tish (`transition`) yoki onboarding oqimini ko'chirmoqchi bo'lsangiz:
 - Ekran yozuvini `watch` ga *"5fps rejimda har bir kadrni ajrat"* deb berasiz;
-- Ajratilgan kadrlarni [**`impeccable`**](../reviews/ui-ux/impeccable.md) va [**`animate-expo`**](../reviews/mobile/animate-expo.md) ga berib, harakat fizikasini (`spring`, `stiffness`, `damping`) kodga aylantirasiz.
+- Ajratilgan kadrlarni [**impeccable**](../reviews/ui-ux/impeccable.md) va [**animate-expo**](../reviews/mobile/animate-expo.md) ga berib, harakat fizikasini (`spring`, `stiffness`, `damping`) kodga aylantirasiz.
 
 ### 3) Reklama Reels / YouTube darsliklardagi yolg'onlarni fosh qilish (`watch` + `tasted-skills`)
-Ijtimoiy tarmoqdagi *"bu tekin AI tool 90% ishni qiladi"* degan videolarni [`tasted-skills`](../skills/tasted-skills/SKILL.md) bilan tekshirganda:
+Ijtimoiy tarmoqdagi *"bu tekin AI tool 90% ishni qiladi"* degan videolarni [tasted-skills](../skills/tasted-skills/SKILL.md) bilan tekshirganda:
 - `watch` ekranda bir soniya ko'rinib ketadigan mayda yozuvlarni (`SELF-REPORTED`, `.env` dagi pullik kalitlar, sekin kadr tezlashtirilganini) ushlab beradi.
 
 ---

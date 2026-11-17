@@ -4,12 +4,12 @@
 
 - **Источник:** [KeygraphHQ/shannon](https://github.com/KeygraphHQ/shannon)
 - **Категория:** `Backend` *(White-Box аудит безопасности Web и HTTP API, автономный пентест)*
-- **Тип:** `Standalone CLI (Docker + Temporal)` + наш лёгкий скилл-триггер [`hacker-test`](../../../skills/hacker-test/SKILL.md)
+- **Тип:** `Standalone CLI (Docker + Temporal)` + наш лёгкий скилл-триггер [hacker-test](../../../skills/hacker-test/SKILL.md)
 - **Оценка качества:** **8.5 / 10**
 - **Частота нужды в работе:** **6.5 / 10**
-- **Рекомендуемый масштаб:** `On-Demand npx CLI + глобальный лёгкий скилл hacker-test` — *не ставить тяжёлый родной плагин, а вызывать через наш [`skills/hacker-test`](../../../skills/hacker-test/SKILL.md) строго на local/staging*
+- **Рекомендуемый масштаб:** `On-Demand npx CLI + глобальный лёгкий скилл hacker-test` — *не ставить тяжёлый родной плагин, а вызывать через наш [skills/hacker-test](../../../skills/hacker-test/SKILL.md) строго на local/staging*
 - **Дата проверки:** `2026-11-16`
-- **Текущий статус:** `👍 Хороший вариант` *(код проверен; в этот репозиторий добавлен и глобально синхронизирован [`skills/hacker-test`](../../../skills/hacker-test/SKILL.md))*
+- **Текущий статус:** `👍 Хороший вариант` *(код проверен; в этот репозиторий добавлен и глобально синхронизирован [skills/hacker-test](../../../skills/hacker-test/SKILL.md))*
 
 ---
 
@@ -56,13 +56,13 @@
 
 ---
 
-## 4. Наш подход: почему мы создали свой [`hacker-test`](../../../skills/hacker-test/SKILL.md) вместо установки родного плагина
+## 4. Наш подход: почему мы создали свой [hacker-test](../../../skills/hacker-test/SKILL.md) вместо установки родного плагина
 
 Пентест нужен не каждый день, а перед крупными релизами. Из-за этого возникают две крайности: **1)** если поставить официальный `plugins/shannon` глобально, с ним висит тяжёлый `llms-full.txt`; **2)** если вообще ничего не подключить, через месяц забываются и название инструмента, и флаги `host.docker.internal`, `pi`-авторизации и `--validate-model`.
 
 **Как мы решили обе проблемы:**
 1. Сам `Shannon` и его плагин постоянно не устанавливали (`0` фоновых процессов и лишнего веса).
-2. Внутри этого репозитория создали компактный (~45 токенов) скилл-обёртку [**`skills/hacker-test/SKILL.md`**](../../../skills/hacker-test/SKILL.md) и синхронизировали его во все агенты (`Antigravity`, `Claude Code`, `Codex`):
+2. Внутри этого репозитория создали компактный (~45 токенов) скилл-обёртку [**skills/hacker-test/SKILL.md**](../../../skills/hacker-test/SKILL.md) и синхронизировали его во все агенты (`Antigravity`, `Claude Code`, `Codex`):
    ```bash
    skillshare install TursunboyevJahongir/tasted-skills -s hacker-test -g && skillshare sync -g
    ```

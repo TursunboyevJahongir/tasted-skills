@@ -3,11 +3,11 @@
 **🇺🇿 O'zbekcha** | [🇬🇧 English](../en/local-models/minimax-m3-1-flash.md) | [🇷🇺 Русский](../ru/local-models/minimax-m3-1-flash.md)
 
 - **Manba:** [MiniMaxAI/MiniMax-M3.1-Flash (Hugging Face)](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash)
-- **Statistika va Benchmarklar:** [Hugging Face Model Card & Benchmarks](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [OpenRouter Live Stats (`minimax/minimax-m3.1-flash`)](https://openrouter.ai/minimax/minimax-m3.1-flash) · [Artificial Analysis Leaderboard](https://artificialanalysis.ai/leaderboards/models)
+- **Statistika va Benchmarklar:** [Hugging Face Model Card & Benchmarks](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [OpenRouter Live Stats (minimax/minimax-m3.1-flash)](https://openrouter.ai/minimax/minimax-m3.1-flash) · [Artificial Analysis Leaderboard](https://artificialanalysis.ai/leaderboards/models)
 - **Turkum:** `Lokal modellar` *(Ochiq vaznli Multimodal MoE — lokal kompyuter/serverda yoqish tahlili)*
 - **Turi:** `Open-Weight LLM` *(`~428B` umumiy / `~23B` aktiv parametr, `1M` kontekst, `MXFP8 + NVFP4`)*
 - **Sifat bahosi:** **8.0 / 10** *(tezkor multimodal `Flash` sinfidagi model sifatida)*
-- **Ishda kerak bo'lishi (Lokalda):** **1.0 / 10** *(oddiy kompyuterlarga sig'maydi; bulut API sifatida esa — [`👍 Yaxshi variant`](../external-apis/minimax-m3-1-flash-api.md))*
+- **Ishda kerak bo'lishi (Lokalda):** **1.0 / 10** *(oddiy kompyuterlarga sig'maydi; bulut API sifatida esa — [👍 Yaxshi variant](../external-apis/minimax-m3-1-flash-api.md))*
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik (Lokalda)` *(kerak bo'lsa [🔌 Tashqi API](../external-apis/minimax-m3-1-flash-api.md) orqali ishlatish)*
 - **Tekshirilgan sana:** `2026-11-16`
 - **Joriy holati:** `⚠️ Tavsiya etilmaydi` *(lokalda `~250–285 GB` joy va normal ishlashi uchun `8× H100 / 640 GB VRAM` server klasteri talab qiladi)*
@@ -58,7 +58,7 @@
 
 - **Bu modelni lokalda saqlash bizga umuman kerak emas (`1.0/10`):** `285 GB` vazn uchun `$9,000+` lik `512 GB` Mac Studio yoki `8× H100` server ushlash o'zini oqlamaydi.
 - **2 ta to'g'ri alternativa:**
-  1. **Aynan `MiniMax M3.1 Flash` imkoniyatlari kerak bo'lsa:** Uni lokalga tortmasdan, tayyor bulut API orqali (`$0.15 / $0.60`, `170+ tok/s`) ishlating — 👉 [**`MiniMax M3.1 Flash API`**](../external-apis/minimax-m3-1-flash-api.md).
+  1. **Aynan `MiniMax M3.1 Flash` imkoniyatlari kerak bo'lsa:** Uni lokalga tortmasdan, tayyor bulut API orqali (`$0.15 / $0.60`, `170+ tok/s`) ishlating — 👉 [**MiniMax M3.1 Flash API**](../external-apis/minimax-m3-1-flash-api.md).
   2. **100% lokal (oflayn) kod yozuvchi model kerak bo'lsa:** `32–64 GB` Mac RAM'iga to'liq sig'adigan **`Ollama` / `MLX` dagi `Qwen3-Coder` yoki `Qwen2.5-Coder-14B/32B`** (`~9–20 GB`, `30–65 tok/s`, Apache-2.0) ishlating.
 
 ---
