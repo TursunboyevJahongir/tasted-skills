@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **9.0 / 10**
 - **Ishda kerak bo'lishi:** **7.5 / 10**
 - **Tavsiya etilgan ko'lam:** `Global CLI (Homebrew)` — barcha lokal `iOS 18.5+` / `tvOS` simulyatorlarga xavfsiz profil bilan bir marta qo'llanadi
-- **Birga ishlaydigan tizimlar:** [**agent-device**](agent-device.md) + [**xcrun simctl**](ios-simulator-device-hub.md) + [**cross-platform-qa**](cross-platform-qa.md) *(eslatma: ushbu jamoaning yopiq `MobAI Pro` / `mobai-mcp` qismi kerak emas — UI boshqaruv to'liq `agent-device` da)*
+- **Birga ishlaydigan tizimlar:** [**agent-device**](agent-device.md) + [**xcrun simctl**](ios-simulator-device-hub.md) *(eslatma: ushbu jamoaning yopiq `MobAI Pro` / `mobai-mcp` qismi kerak emas — UI boshqaruv to'liq `agent-device` da)*
 - **Ishlatilayotgan sana:** `2026-11-16` dan
 - **Joriy holati:** `✅ Ishlatyapman`
 

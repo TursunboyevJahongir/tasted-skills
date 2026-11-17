@@ -58,7 +58,7 @@
   1. **Вырезан блок `## Initial Response`:** Удалено требование отвечать шаблонным приветствием при вызове без вопроса.
   2. **Сужено поле `description` (защита auto-trigger):** Срабатывает только на пользовательских мобильных веб-приложениях, PWA и мобильных WebView/Mini App; исключены десктопные **админ-панели**, ТВ-интерфейсы и нативные приложения **React Native / Expo**.
   3. **Заменены ссылки на неустановленные скиллы:** Упоминания `animate` и `review-animations` перенаправлены на [impeccable](../ui-ux/impeccable.md), а в пример `:active` добавлена защита `@media (prefers-reduced-motion: reduce)`.
-  4. **Добавлен `LOCAL-COMPATIBILITY.md`:** Прописаны чёткие границы ответственности с `impeccable`, `animate-expo`, `cross-platform-qa` и `ponytail`.
+  4. **Добавлен `LOCAL-COMPATIBILITY.md`:** Прописаны чёткие границы ответственности с `impeccable`, `animate-expo` и `ponytail`.
 
 ---
 
@@ -67,8 +67,6 @@
 После очистки **не конфликтует** с существующими глобальными скиллами, а закрывает пустующий слой мобильного браузера:
 - **[impeccable](../ui-ux/impeccable.md)** — отвечает за общую иерархию UI/UX, типографику, адаптивную перестройку макета (`adapt`) и веб-анимацию (`animate`); `mobile-native` правит только низкоуровневые правила мобильного браузера (`dvh/svh`, `interactive-widget`, `overscroll-behavior`, `pointer: coarse`, `safe-area-inset-*`).
 - **[animate-expo](animate-expo.md)** — только для нативных анимаций в UI-потоке React Native / Expo.
-- **`web-to-native-mobile`** — для переноса веб-функций в нативные приложения iOS/Android.
-- **[cross-platform-qa](cross-platform-qa.md)** — требование проверять результат на реальном телефоне на 100% совпадает с нашим 2-этапным QA-процессом.
 
 ---
 

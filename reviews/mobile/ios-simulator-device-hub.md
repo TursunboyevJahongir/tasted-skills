@@ -56,7 +56,7 @@ macOS'da iOS va Expo / React Native ilovalarini fonda ishga tushirish, boshqaris
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
-- **`xcrun simctl` va `devicectl`:** [agent-device](agent-device.md) hamda [cross-platform-qa](cross-platform-qa.md) uchun asosiy iOS/tvOS poydevor (simulyatorni oynasiz `boot`/`shutdown` qilish, `privacy` ruxsatlari va real iPhone'da ilova o'rnatish).
+- **`xcrun simctl` va `devicectl`:** [agent-device](agent-device.md) uchun asosiy iOS/tvOS poydevor (simulyatorni oynasiz `boot`/`shutdown` qilish, `privacy` ruxsatlari va real iPhone'da ilova o'rnatish).
 - **Xcode `Device Hub` + `agent-desktop`:** endi **zaxira (`fallback`)** vazifasini bajaradi — chunki u ekranda GUI oyna ochiq turishini talab qiladi, [agent-device](agent-device.md) esa oynasiz fonda `~197ms` da ishlaydi.
 
 ---

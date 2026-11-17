@@ -41,7 +41,7 @@ Kod yozish vaqtida ikkala skill birga ishlaydi:
 
 ### 4-Qadam: Mustaqil ikkinchi ko'z bilan tekshirish (`Orca` + `elephant-goldfish-model`)
 Kod yozib bo'lingach, uni yozgan agentning o'ziga emas, mustaqil tekshiruvchiga topshirish:
-- **Multi-Model Review (`Orca` + CLI Subagent):** Masalan, kodni `Codex` yozgan bo'lsa, CLI subagent orqali `Claude Opus` yoki `Argon` ni chaqirib diff'ni tekshirtirish.
+- **Multi-Model Review (`Orca`):** Masalan, kodni `Codex` yozgan bo'lsa, `orca orchestration` orqali `Claude Code` yoki `Gemini` ni chaqirib diff'ni mustaqil tekshirtirish.
 - **Arxitektura va Hujjat-Kod mosligi (`elephant-goldfish-model`):**
   - `egm-drift-report`: Hujjat (`README` / `DESIGN.md`) va haqiqiy kod o'rtasidagi farqlarni topadi.
   - `egm-review`: Xotirasiz *Goldfish* subagentlar (`egm-design`, `egm-codebase-details`, `egm-zoom-out`) kodni 5 xil burchakdan tanqid qiladi.

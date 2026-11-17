@@ -48,7 +48,7 @@
 ## 4. Полезность для нас и совместимость с существующими инструментами
 
 - Углубленная интерактивная форма принципа *Think Before Coding* из [karpathy-guidelines](karpathy-guidelines.md).
-- Тесно работает с `domain-modeling` и `task-context`: `grill-me` проясняет решения, а `task-context` записывает их для агентов-исполнителей (implementer) и ревьюеров (reviewer).
+- Тесно работает с `domain-modeling`, фиксируя принятые архитектурные решения прямо в `CONTEXT.md` и `docs/adr/`.
 
 ### Дополнительные скиллы из `mattpocock/skills` (`2026-11-16`)
 

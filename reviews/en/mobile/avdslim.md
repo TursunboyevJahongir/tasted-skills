@@ -8,7 +8,7 @@
 - **Quality Score:** **9.0 / 10**
 - **How Often Needed:** **7.5 / 10**
 - **Recommended Scope:** `Global CLI (/opt/homebrew/bin/avdslim)` — applied across local Android AVDs via `tune-avd` + `bake --headless` with GPS-preserving `defaults` (no SDK `install-shim` needed)
-- **Works Alongside:** [**agent-device**](agent-device.md) + [**adb**](adb.md) + [**simslim**](simslim.md) + [**cross-platform-qa**](cross-platform-qa.md)
+- **Works Alongside:** [**agent-device**](agent-device.md) + [**adb**](adb.md) + [**simslim**](simslim.md)
 - **Active Since:** `2026-11-16`
 - **Current Status:** `✅ Using`
 
@@ -77,4 +77,4 @@ Running both a headless iOS Simulator and a headless Android Emulator concurrent
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Full Go source audit, installed `v1.0.16`, configured GPS-safe `defaults` (`--skip=location --keep=com.google.android.apps.maps`), tuned all 4 AVDs, and baked headless Golden Snapshots on `API 35` phone & tablet AVDs | `✅ Using` | Verified `4,413 MB -> 2,640 MB` (`-40.2%` Footprint) and `SwiftShader -> Apple Metal GPU` upgrade; wired into `cross-platform-qa`. |
+| 2026-11-16 | Full Go source audit, installed `v1.0.16`, configured GPS-safe `defaults` (`--skip=location --keep=com.google.android.apps.maps`), tuned all 4 AVDs, and baked headless Golden Snapshots on `API 35` phone & tablet AVDs | `✅ Using` | Verified `4,413 MB -> 2,640 MB` (`-40.2%` Footprint) and `SwiftShader -> Apple Metal GPU` upgrade. |

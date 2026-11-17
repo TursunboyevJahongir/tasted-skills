@@ -65,7 +65,6 @@ Oldindan ishlatib kelayotgan vositalarimizning **birortasi ham o'chirilmadi** �
 | [**agent-desktop**](../developer-tools/agent-desktop.md) | `✅ Qoldi (Asosiy — Web/Desktop)` | **Google Chrome (Web)** va **macOS desktop** oynalarida 100% asosiy vosita bo'lib qoldi. Mobil va TV UI ishlari `agent-device` ga o'tdi. |
 | [**adb**](adb.md) | `✅ Qoldi (Transport + Port/Log)` | `agent-device` Android'da ichidan baribir `adb` ni chaqiradi. Bundan tashqari **`adb reverse`** (Metro/lokal backend port ulash), **`adb logcat`** (crash loglar), APK o'rnatish va **`emu kill`** `adb` ning o'zida qoldi — faqat sekin `uiautomator dump` + koordinatali `input tap` o'rnini `agent-device` oldi. |
 | [**xcrun simctl + devicectl**](ios-simulator-device-hub.md) | `✅ Qoldi (Boot + Real iPhone)` | Simulyatorni oynasiz fonda yoqish/yopish (`simctl boot/shutdown`) va real iPhone'ga build o'rnatish (`devicectl`) uchun kerak. **`Device Hub` oynasi** esa endi har safar ochilmaydi — faqat zaxira (`fallback`) bo'lib turadi. |
-| [**cross-platform-qa**](cross-platform-qa.md) | `✅ Yangilandi` | 2-bosqichli qoida saqlanib qoldi va ichidagi mobil/TV UI qismi `agent-device` ga ulandi. |
 
 ---
 
@@ -80,4 +79,4 @@ Oldindan ishlatib kelayotgan vositalarimizning **birortasi ham o'chirilmadi** �
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | Manba kodi auditi, iOS Simulator va real Android planshetda jonli benchmark, sanitarizatsiya va global o'rnatish | `✅ Ishlatyapman` | `0.21.37` global CLI + tozalangan `agent-device` skilli barcha 5 ta AI muhitiga ulandi va `cross-platform-qa` yangilandi (iOS `197 ms` oynasiz, Android `888 ms` / `~100 token`). |
+| 2026-11-16 | Manba kodi auditi, iOS Simulator va real Android planshetda jonli benchmark, sanitarizatsiya va global o'rnatish | `✅ Ishlatyapman` | `0.21.37` global CLI + tozalangan `agent-device` skilli barcha 5 ta AI muhitiga ulandi (iOS `197 ms` oynasiz, Android `888 ms` / `~100 token`). |

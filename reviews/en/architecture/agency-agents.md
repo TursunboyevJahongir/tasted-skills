@@ -8,7 +8,7 @@
 - **Quality Score:** **6.5 / 10**
 - **Relevance to Us:** **2.5 / 10**
 - **Recommended Scope:** `Do Not Install` *(global install severely bloats context)*
-- **Used Instead:** [**impeccable**](../ui-ux/impeccable.md) + [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) + [**elephant-goldfish-model**](elephant-goldfish-model.md) + [**cross-platform-qa**](../mobile/cross-platform-qa.md)
+- **Used Instead:** [**impeccable**](../ui-ux/impeccable.md) + [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) + [**elephant-goldfish-model**](elephant-goldfish-model.md)
 - **Reviewed Date:** `2026-11-16`
 - **Current Status:** `⚠️ Not Recommended` *(not needed — our existing focused skills are much cleaner and stronger)*
 
@@ -67,7 +67,6 @@ Every core domain in `agency-agents` is already covered much more cleanly by our
 | `Frontend Developer`, `UI Designer`, `UX Architect` | [**impeccable**](../ui-ux/impeccable.md) + [**mobile-native**](../mobile/mobile-native.md) + [**animate-expo**](../mobile/animate-expo.md) |
 | `Minimal Change Engineer` (207 lines + verbose report) | [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) (`2.5–3.5 KB`, zero report bloat) |
 | `Software Architect`, `Code Reviewer` | [**elephant-goldfish-model**](elephant-goldfish-model.md) (true `fresh-context` Goldfish subagents) + [**grill-me**](grill-me.md) |
-| `Reality Checker`, `Evidence Collector` | [**cross-platform-qa**](../mobile/cross-platform-qa.md) ([agent-desktop](../developer-tools/agent-desktop.md) + [Device Hub](../mobile/ios-simulator-device-hub.md) + [adb](../mobile/adb.md)) |
 
 ---
 
@@ -82,4 +81,4 @@ Every core domain in `agency-agents` is already covered much more cleanly by our
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Audited all 283 agent files, `convert.sh` / `install.sh`, and context footprint | `⚠️ Not Recommended` | Skipped due to `~18.5K`-token frontmatter bloat, generic roleplay/copy-paste artifacts, and full coverage by our stronger existing skills (`impeccable`, `ponytail`, `elephant-goldfish-model`, `cross-platform-qa`). |
+| 2026-11-16 | Audited all 283 agent files, `convert.sh` / `install.sh`, and context footprint | `⚠️ Not Recommended` | Skipped due to `~18.5K`-token frontmatter bloat, generic roleplay/copy-paste artifacts, and full coverage by our stronger existing skills (`impeccable`, `ponytail`, `elephant-goldfish-model`). |

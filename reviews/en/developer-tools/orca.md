@@ -16,15 +16,14 @@
 ## 1. What It Is and How It Works
 
 > [!IMPORTANT]
-> **In Plain Words (Main Job & Value):** Our primary multi-agent workspace: from a single prompt (*"have Codex implement, Claude check the plan, and Argon verify"*), the main agent spawns live inline worker cards in Chat UI and synthesizes their results. Stays awake on Mac `Lock Screen` (`caffeinate`) with rock-solid **`Orca IDE`** mobile control (`841 MB` RAM).
+> **In Plain Words (Main Job & Value):** Our primary multi-agent workspace: from a single prompt (*"have Codex implement, Claude check the plan, and Gemini verify"*), the main agent spawns live inline worker cards in Chat UI and synthesizes their results. Stays awake on Mac `Lock Screen` (`caffeinate`) with rock-solid **`Orca IDE`** mobile control (`841 MB` RAM).
 
-**Orca (`stablyai/orca`)** is an open-source (`MIT`) multi-agent orchestrator that runs `Codex`, `Claude Code`, `Antigravity (Gemini / Argon)`, and 25+ CLI coding agents in parallel across isolated Git worktrees (in rich Chat UI or raw Terminal mode) with native mobile control.
+**Orca (`stablyai/orca`)** is an open-source (`MIT`) multi-agent orchestrator that runs `Codex`, `Claude Code`, `Antigravity (Gemini)`, and 25+ CLI coding agents in parallel across isolated Git worktrees (in rich Chat UI or raw Terminal mode) with native mobile control.
 
 **How we use it in practice (2 key mechanisms):**
 1. **Single-prompt multi-AI chaining (`orca orchestration worker-start`):**
    - From a single prompt, the coordinator agent (e.g., `Codex` `GPT-6.1-Sol High`) spawns child worker agents (`--agent claude`, `--agent antigravity`, `--agent codex`) in parallel or sequence via `orca orchestration worker-start --worktree current` and ends its turn (`0` polling).
    - Each worker renders as a live clickable card (`Started worker ↗`, `Update from worker ↗`) directly inside the Chat UI; when a worker finishes (`worker_done`) or hits a quota/error (`escalation`), `Orca` automatically wakes the coordinator to synthesize the final result.
-   - Our global `task-context`, `claude-opus`, `antigravity-claude`, and `argon` CLI skills also work seamlessly inside `Orca`.
 2. **Mobile companion (`Orca IDE`) & Lock-Screen operation:**
    - Official native iOS ([App Store](https://apps.apple.com/us/app/orca-ide/id6766130217)) and Android ([Google Play](https://play.google.com/store/apps/details?id=dev.orca.app)) apps pair via QR/pairing code (`LAN / Tailscale` or `E2EE Orca Relay` with `APNs`/`FCM` push notifications).
    - Built-in `Keep computer awake: On` (`/usr/bin/caffeinate -i -s -w <pid>`) keeps the Mac awake even when the screen is locked (`Lock Screen`), preventing mobile disconnects.
@@ -60,14 +59,14 @@
 
 ## 4. Fit & Compatibility with Our Existing Stack
 
-- `Codex`, `Claude Code`, and `Antigravity` status hooks (`orca agent hooks on`) and the `orchestration` skill integrate cleanly with `task-context`, `grill-me`, `ponytail`, `agent-desktop`, and `agent-device`.
+- `Codex`, `Claude Code`, and `Antigravity` status hooks (`orca agent hooks on`) and the `orchestration` skill integrate cleanly with `grill-me`, `ponytail`, `agent-desktop`, and `agent-device`.
 - Uninstalled [**T3 Code**](t3-code.md) completely (freeing `~3.87 GB` of disk space) and migrated all 12 active repositories into `Orca`.
 
 ---
 
 ## 5. When to Use (and When Not To)
 
-- **When to use:** All daily coding and architecture work, single-prompt multi-AI review chains (*"have Codex implement and Claude/Argon verify"*), and remote steering from `Orca IDE` on iPhone/Android while away from the desk.
+- **When to use:** All daily coding and architecture work, single-prompt multi-AI review chains (*"have Codex implement and Claude/Gemini verify"*), and remote steering from `Orca IDE` on iPhone/Android while away from the desk.
 - **When not to use:** Do not spawn multi-agent workers (`worker-start`) for trivial 1-line edits or simple Q&A where a single chat turn suffices.
 
 ---

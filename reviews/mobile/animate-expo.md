@@ -52,8 +52,7 @@ Asosiy qaror qabul qilish zanjiri (ketma-ketlikda ishlaydi):
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
-- **`impeccable` + `animate-expo` + `web-to-native-mobile`** — mobil ilovalarimiz uchun yagona mukammal uchlikni tashkil qiladi:
-  - `web-to-native-mobile` — vebdagi funksiyani telefonga qanday moslashtirishni hal qiladi;
+- **`impeccable` + `animate-expo`** — mobil ilovalarimiz uchun yagona mukammal juftlikni tashkil qiladi:
   - `impeccable` — ekranning vizual dizayni, tipografiyasi va joylashuvini quradi;
   - `animate-expo` — jestlar, bottom-sheet, press feedback va Reanimated worklet'larini yozadi.
 

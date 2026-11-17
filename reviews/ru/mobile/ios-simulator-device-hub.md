@@ -56,7 +56,7 @@
 
 ## 4. Совместимость с нашими текущими инструментами
 
-- **`xcrun simctl` и `devicectl`:** Базовый фундамент жизненного цикла iOS/tvOS для [agent-device](agent-device.md) и [cross-platform-qa](cross-platform-qa.md) (фоновый `boot`/`shutdown` симулятора без окна, выдача разрешений `privacy` и установка сборок на физический iPhone).
+- **`xcrun simctl` и `devicectl`:** Базовый фундамент жизненного цикла iOS/tvOS для [agent-device](agent-device.md) (фоновый `boot`/`shutdown` симулятора без окна, выдача разрешений `privacy` и установка сборок на физический iPhone).
 - **Xcode `Device Hub` + `agent-desktop`:** Переведены в роль **резерва (`fallback`)** — `Device Hub` требует открытого окна на экране, тогда как [agent-device](agent-device.md) работает полностью без окна за `~197ms`.
 
 ---

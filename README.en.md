@@ -80,30 +80,25 @@ Tests iOS/tvOS (`~0.2s`) and Android/TV (`~0.9s`, full UTF-8 text input) apps co
 
 </details>
 
-### 9. [cross-platform-qa](reviews/en/mobile/cross-platform-qa.md) — 2-stage Web, Mobile & TV QA workflow that avoids slow USB rebuilds
-`✅ Using` · **Quality:** `9.5/10` · **How Often Needed:** `9.5/10` · **Type:** Skill · **Date:** Since `2026-11-15`
-
-Stops wasting time rebuilding onto physical USB phones during every code tweak: **Stage 1** runs all fast iterative UI checks locally in the background (`agent-desktop` + `agent-device` + `simslim` + `avdslim`), and **Stage 2** runs a single final confirmation pass on real hardware right before marking Done.
-
-### 10. [sentry](reviews/en/backend/sentry.md) — Production crash lines, slow API/SQL traces & video-like Session Replay
+### 9. [sentry](reviews/en/backend/sentry.md) — Production crash lines, slow API/SQL traces & video-like Session Replay
 `✅ Using` · **Quality:** `9.5/10` · **How Often Needed:** `9.5/10` · **Type:** Self-Hosted + Skill / MCP · **Date:** Since `2026-07-08`
 
 Eliminates guessing how a user hit a bug: captures exact source lines (`Source Maps`, `dSYM`, `ProGuard`), pre-crash user taps (`Breadcrumbs`), video-like `Session Replay`, and slow `v8+` OTel API/SQL traces so AI can pinpoint the root cause immediately.
 
-### 11. [skillshare](reviews/en/developer-tools/skillshare.md) — Single-source skill sync across all AI agents + `0.1s` security audit
+### 10. [skillshare](reviews/en/developer-tools/skillshare.md) — Single-source skill sync across all AI agents + `0.1s` security audit
 `✅ Using` · **Quality:** `9.5/10` · **How Often Needed:** `10.0/10` · **Type:** CLI + Skill · **Date:** Since `2026-05-30`
 
 Removes the headache of copying skills separately into `Codex`, `Claude`, and `Antigravity` — syncs everything from one folder. Its built-in **`skillshare audit`** scanner checks new skills in `0.1s` for prompt injection, hidden scripts, data exfiltration, and token bloat.
 
-### 12. [animate-expo](reviews/en/mobile/animate-expo.md) — Stutter-free `60/120fps` animations & gestures for Expo / React Native
+### 11. [animate-expo](reviews/en/mobile/animate-expo.md) — Stutter-free `60/120fps` animations & gestures for Expo / React Native
 `✅ Using` · **Quality:** `9.5/10` · **How Often Needed:** `9.0/10` · **Type:** Skill · **Date:** Since `2026-11-09`
 
 Prevents animations that look smooth in a simulator but drop frames on real Android/iOS phones by keeping sheets, swipes, press feedback, and haptics strictly on the `Reanimated` UI thread instead of blocking the JS thread.
 
-### 13. [Orca + CLI Subagent](reviews/en/developer-tools/orca.md) — Chain multiple AIs from one prompt & control everything from your phone
+### 12. [Orca](reviews/en/developer-tools/orca.md) — Chain multiple AIs from one prompt & control everything from your phone
 `✅ Using` · **Quality:** `9.5/10` · **How Often Needed:** `9.5/10` · **Type:** Desktop + Mobile App + CLI + Skill · **Date:** Since `2026-11-16`
 
-Ask in one prompt — *"have Codex write the code, Claude check the plan, and Argon verify the result"* — and the main agent spawns live worker cards right inside Chat UI and synthesizes their findings (`orca orchestration`). Keeps working even on Mac `Lock Screen` (`caffeinate`) with rock-solid **`Orca IDE`** mobile pairing (`PostHog` telemetry disabled).
+Ask in one prompt — *"have Codex write the code, Claude check the plan, and Gemini verify the result"* — and the main agent spawns live worker cards right inside Chat UI and synthesizes their findings (`orca orchestration`). Keeps working even on Mac `Lock Screen` (`caffeinate`) with rock-solid **`Orca IDE`** mobile pairing (`PostHog` telemetry disabled).
 
 <details>
 <summary>📊 Comparison & Stats (`Orca` vs. `T3 Code`)</summary>
@@ -114,17 +109,17 @@ Ask in one prompt — *"have Codex write the code, Claude check the plan, and Ar
 
 </details>
 
-### 14. [adb](reviews/en/mobile/adb.md) — Android port forwarding (`reverse`), `logcat` crash logs & APK installs
+### 13. [adb](reviews/en/mobile/adb.md) — Android port forwarding (`reverse`), `logcat` crash logs & APK installs
 `✅ Using` · **Quality:** `9.0/10` · **How Often Needed:** `10.0/10` · **Type:** CLI · **Date:** Since `2026-09-07`
 
 Essential low-level Android bridge for wiring local backend/Metro ports (`adb reverse`), reading native crash stack traces (`logcat`), and installing APKs across headless emulators and phones (always pass `-s <serial>`).
 
-### 15. [xcrun simctl + Device Hub](reviews/en/mobile/ios-simulator-device-hub.md) — Windowless iOS Simulator boot & physical iPhone build installation
+### 14. [xcrun simctl + Device Hub](reviews/en/mobile/ios-simulator-device-hub.md) — Windowless iOS Simulator boot & physical iPhone build installation
 `✅ Using` · **Quality:** `9.0/10` · **How Often Needed:** `9.5/10` · **Type:** Xcode CLI + App · **Date:** Since `2026-10-20`
 
 Boots and shuts down iOS Simulators invisibly in the background (`simctl boot/shutdown`) and installs builds directly onto physical iPhones (`devicectl`).
 
-### 16. [simslim](reviews/en/mobile/simslim.md) — Cuts iOS / tvOS Simulator RAM by `-57%` (`-77.5%` in GUI mode)
+### 15. [simslim](reviews/en/mobile/simslim.md) — Cuts iOS / tvOS Simulator RAM by `-57%` (`-77.5%` in GUI mode)
 `✅ Using` · **Quality:** `9.0/10` · **How Often Needed:** `7.5/10` · **Type:** Standalone Go CLI · **Date:** Since `2026-11-16`
 
 Disables `~150+` unneeded background Apple daemons (`Siri`, `Apple Intelligence`, `Wallpaper`) inside iOS Simulators, shrinking memory usage and cleaning excess logs/caches while keeping `push` and `agent-device` 100% intact.
@@ -138,7 +133,7 @@ Disables `~150+` unneeded background Apple daemons (`Siri`, `Apple Intelligence`
 
 </details>
 
-### 17. [avdslim](reviews/en/mobile/avdslim.md) — Cuts Android Emulator RAM by `-40%` with native Apple Metal GPU speed
+### 16. [avdslim](reviews/en/mobile/avdslim.md) — Cuts Android Emulator RAM by `-40%` with native Apple Metal GPU speed
 `✅ Using` · **Quality:** `9.0/10` · **How Often Needed:** `7.5/10` · **Type:** Standalone Go CLI · **Date:** Since `2026-11-16`
 
 Moves Android Emulator rendering off slow CPU `SwiftShader` onto **Apple Metal GPU (`host`)** and trims memory and boot times via Golden Snapshots while preserving GPS and Google Maps (`defaults` guard).
@@ -152,42 +147,32 @@ Moves Android Emulator rendering off slow CPU `SwiftShader` onto **Apple Metal G
 
 </details>
 
-### 18. [security-audit](reviews/en/backend/security-audit-skill.md) — Finds Backend, Web & Mobile security vulnerabilities with zero Docker setup
+### 17. [security-audit](reviews/en/backend/security-audit-skill.md) — Finds Backend, Web & Mobile security vulnerabilities with zero Docker setup
 `✅ Using` · **Quality:** `9.0/10` · **How Often Needed:** `7.5/10` · **Type:** Skill · **Date:** Since `2026-11-16`
 
 Audits Backend, Web, and **Mobile (`deep-link`, `WebView`)** source code like an attacker before PR/release with no servers required. Uses independent `Hunter` + `Verifier` subagents to filter out false alarms (configured to `quick/scoped` by default to save quota).
 
-### 19. [mobile-native + web-to-native-mobile](reviews/en/mobile/mobile-native.md) — Makes mobile web/PWAs feel native & guides Web-to-App feature ports
-`✅ Using` · **Quality:** `8.5/10` · **How Often Needed:** `7.5/10` · **Type:** Skill Suite · **Date:** Since `2026-11-15`
+### 18. [mobile-native](reviews/en/mobile/mobile-native.md) — Makes mobile web apps, PWAs & Mini Apps feel genuinely native on phones
+`✅ Using` · **Quality:** `8.5/10` · **How Often Needed:** `7.5/10` · **Type:** Skill · **Date:** Since `2026-11-15`
 
-Fixes the 11 classic mobile browser annoyances (iOS input auto-zoom, jumping `100vh` bars, notch clipping, sticky hover states, pull-to-refresh clashes) + helps decide what to keep, simplify, or redesign when porting desktop web features into native iOS/Android apps (`ui-message-punctuation` included).
+Fixes the 11 classic mobile browser annoyances (iOS input auto-zoom, jumping `100vh` bars, notch clipping, sticky hover states, pull-to-refresh clashes) with focused platform CSS and meta rules.
 
-### 20. [AssetDiet](reviews/en/developer-tools/assetdiet.md) — 100% local image, SVG, video & 3D compression with instant rollback
+### 19. [AssetDiet](reviews/en/developer-tools/assetdiet.md) — 100% local image, SVG, video & 3D compression with instant rollback
 `✅ Using` · **Quality:** `7.5/10` · **How Often Needed:** `6.5/10` · **Type:** CLI + [asset-diet](skills/asset-diet/SKILL.md) · **Date:** Since `2026-11-16`
 
 Finds and shrinks bloated PNG/JPG/WebP, SVG, video, and 3D files locally on your machine (nothing uploaded to the cloud) with 1-command rollback. Runs strictly on demand (`0` permanent MCP token overhead).
 
-### 21. [watch + video-analyzer](practices/en/06-video-figma-and-db-workflows.md) — Frame-by-frame analysis of YouTube/Reels tutorials & QA bug recordings
-`✅ Using` · **Quality:** `9.0/10` · **How Often Needed:** `7.5/10` · **Type:** Skill + CLI (`yt-dlp` + `ffmpeg`) · **Date:** Since `2026-10-25`
+### 20. [video-analyzer](practices/en/06-video-figma-and-db-workflows.md) — Frame-by-frame analysis of YouTube/Reels tutorials & QA bug recordings
+`✅ Using` · **Quality:** `9.0/10` · **How Often Needed:** `7.5/10` · **Type:** Skill + CLI (`ffmpeg` + `Whisper`) · **Date:** Since `2026-10-25`
 
-Combines `Whisper` audio transcripts with extracted scene-change frames so AI sees both what was said and what flashed on screen — ideal for auditing tech videos/Reels and pinpointing exact timestamps in user bug screen-recordings.
+Combines `Whisper` audio transcripts with extracted scene-change frames ([bsisduck/video-analyzer-skill](https://github.com/bsisduck/video-analyzer-skill)) so AI sees both what was said and what flashed on screen — ideal for auditing tech videos/Reels and pinpointing exact timestamps in bug screen-recordings.
 
-### 22. [figma skill suite](practices/en/06-video-figma-and-db-workflows.md) — Two-way bridge: Figma -> Production Code & Production Code -> Figma
-`✅ Using` · **Quality:** `9.0/10` · **How Often Needed:** `7.5/10` · **Type:** 6 Skills + MCP · **Date:** Since `2026-10-20`
+### 21. [figma skill suite](practices/en/06-video-figma-and-db-workflows.md) — Two-way bridge: Figma -> Production Code & Production Code -> Figma
+`✅ Using` · **Quality:** `9.0/10` · **How Often Needed:** `7.5/10` · **Type:** Official Figma Skills + MCP · **Date:** Since `2026-10-20`
 
-Translates Figma frames into 1:1 production code using real tokens (`figma-implement-design`), and pushes code-built screens back into editable Figma layouts and component libraries (`figma-generate-design`, `figma-generate-library`).
+Official Figma MCP (`mcp.figma.com`) two-way bridge: translates Figma frames into 1:1 production code using real tokens (`figma-implement-design`), and pushes code-built screens back into editable Figma layouts and component libraries (`figma-generate-design`, `figma-generate-library`).
 
-### 23. [client-performance-gate](practices/en/03-web-and-mobile-ui-polish.md) — Verifies end-user Web, Mobile Web & TV apps on slow CPUs and flaky networks
-`✅ Using` · **Quality:** `9.0/10` · **How Often Needed:** `8.0/10` · **Type:** Skill · **Date:** Since `2026-11-10`
-
-Ensures apps that feel fast on a developer Mac don't freeze on budget phones or smart TVs: tests `6x` CPU throttling + `3G`/offline drops and verifies automatic recovery without page reloads *(excluded on internal Admin panels)*.
-
-### 24. [drizzle-relations-v2](practices/en/06-video-figma-and-db-workflows.md) — Prevents AI from writing outdated Drizzle `v1` database relations
-`✅ Using` · **Quality:** `8.5/10` · **How Often Needed:** `7.5/10` · **Type:** Skill · **Date:** Since `2026-11-05`
-
-Models trained on older code often emit deprecated Drizzle `v1 relations()` syntax; this skill gives AI the exact `v2 defineRelations` and object-based filter rules so database queries compile cleanly on the first try.
-
-### 25. [Jev (TypeSafe AI)](reviews/en/external-apis/jev.md) — Sub-second (`~0.3s`), ultra-cheap server API for `true/false` & `select` image/text decisions
+### 22. [Jev (TypeSafe AI)](reviews/en/external-apis/jev.md) — Sub-second (`~0.3s`), ultra-cheap server API for `true/false` & `select` image/text decisions
 `✅ Using` · **Quality:** `9.0/10` · **How Often Needed:** `8.0/10` · **Type:** Cloud Decision Engine API (`System-1`) · **Date:** Since `2026-10`
 
 **Crucial distinction — this is NOT a generative chat or image-editing AI:** it is a non-autoregressive **decision (`judgment`) engine** that takes an image or text and returns **`true / false`** (`usable / unusable`) or **picks one option out of several (`select`)** with a `0–100%` confidence score. Across our media/video platform and other server backends, we needed to validate incoming images and pick best video frames across 3 options: **1) Paid GPT Vision API** — easy setup, but slow and expensive on image uploads; **2) Server-authenticated AI subscription (`GPT-6 Luna` `Medium`)** — cheaper since it uses our subscription, but multi-check image validation still takes **at least `~10 seconds` (`9–12s`)**, leaving users waiting; **3) `Jev`** — paid, yet **tiny in cost (`$0.042 / 1M` input, `$0.00` free output)** and **blazingly fast (`~0.3s`)**, easily outweighing its setup complexity when used in its exact lane. 📊 [typesafe.ai](https://typesafe.ai/) · [docs.typesafe.ai](https://docs.typesafe.ai/)
@@ -250,7 +235,7 @@ Capable multimodal (`text + image + video`, `1M` context) model, but its **`~250
 
 ### 🔌 External APIs
 
-> 💡 **Note:** Our primary production API for sub-second (`~0.3s`), ultra-cheap (`$0.042 / $0`) image & text validation (`true/false`) and multi-option `select` decisions is listed above in Top Essentials: [**#25. Jev (TypeSafe AI)**](reviews/en/external-apis/jev.md) (`✅ Using`).
+> 💡 **Note:** Our primary production API for sub-second (`~0.3s`), ultra-cheap (`$0.042 / $0`) image & text validation (`true/false`) and multi-option `select` decisions is listed above in Top Essentials: [**#22. Jev (TypeSafe AI)**](reviews/en/external-apis/jev.md) (`✅ Using`).
 
 #### [MiniMax M3.1 Flash API](reviews/en/external-apis/minimax-m3-1-flash-api.md) — Ultra-cheap, `170+ tok/s` multimodal API for product backend bots, translation & OCR
 `👍 Good Option` · **Quality:** `8.0/10` · **How Often Needed:** `5.0/10` · **Type:** Cloud Multimodal API · **Date:** `2026-11-16`
@@ -411,7 +396,7 @@ Thoughtful engineering discipline (`8.0/10`), but enforces mandatory TDD and mul
 
 #### [superpowers](reviews/en/architecture/superpowers.md) — 14-skill workflow plugin with mandatory TDD & `SessionStart` hooks
 `⚠️ Not Recommended` · **Quality:** `6.5/10` · **How Often Needed:** `2.0/10` · **Type:** Plugin (14 skills + hook) · **Date:** `2026-04-04 → 2026-09-01`<br>
-🔄 **Better Alternative:** [grill-me](reviews/en/architecture/grill-me.md) + [ponytail](reviews/en/architecture/ponytail.md) + [cross-platform-qa](reviews/en/mobile/cross-platform-qa.md)
+🔄 **Better Alternative:** [grill-me](reviews/en/architecture/grill-me.md) + [ponytail](reviews/en/architecture/ponytail.md) + [agent-device](reviews/en/mobile/agent-device.md)
 
 Tested for 5 months and removed.
 
@@ -422,7 +407,7 @@ Tested for 5 months and removed.
 <summary>📊 Comparison & Stats (`superpowers` vs. `grill-me + ponytail`)</summary>
 
 - **With `superpowers`:** Per-session hook overhead + mandatory upfront unit tests on Web/Mobile UI -> **`~2x` slower & `~2x` higher quota burn**.
-- **With `grill-me + ponytail + cross-platform-qa`:** Targeted planning when needed, minimal surgical diffs, and live emulator/browser verification (`~2–3x` faster).
+- **With `grill-me + ponytail + agent-device`:** Targeted planning when needed, minimal surgical diffs, and live emulator/browser verification (`~2–3x` faster).
 - 📖 [Full review →](reviews/en/architecture/superpowers.md) · [Summary comparison below ↓](#detailed-comparisons)
 
 </details>

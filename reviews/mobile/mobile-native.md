@@ -58,7 +58,7 @@ Skill hech qanday tashqi skript yoki kutubxona o'rnatmaydi. U bitta aniq vazifan
   1. **`## Initial Response` bloki olib tashlandi:** Savolsiz chaqirilganda faqat *"I'm ready to make your web app feel native on mobile..."* qaytarish talabi kesib tashlandi.
   2. **`description` aniq chegaralandi (Auto-trigger himoyasi):** Faqat foydalanuvchi mobil veb-ilovalari, PWA va mobil WebView/Mini App'larda ishga tushadigan qilindi; faqat kompyuterda ishlatiladigan ichki **admin panellar**, TV interfeyslar va toza **native React Native / Expo** ilovalar istisno qilindi.
   3. **O'rnatilmagan skill havolalari almashtirildi:** Asl matndagi `animate` va `review-animations` havolalari bizda ishlatilayotgan [impeccable](../ui-ux/impeccable.md) ga yo'naltirildi, `:active` bosish misoliga `@media (prefers-reduced-motion: reduce)` himoyasi qo'shildi.
-  4. **`LOCAL-COMPATIBILITY.md` qo'shildi:** [animate-expo](animate-expo.md) dagi kabi lokal moslik fayli yaratilib, `impeccable`, `animate-expo`, `cross-platform-qa` va `ponytail` bilan aniq vazifa taqsimoti belgilandi.
+  4. **`LOCAL-COMPATIBILITY.md` qo'shildi:** [animate-expo](animate-expo.md) dagi kabi lokal moslik fayli yaratilib, `impeccable`, `animate-expo` va `ponytail` bilan aniq vazifa taqsimoti belgilandi.
 
 ---
 
@@ -67,8 +67,6 @@ Skill hech qanday tashqi skript yoki kutubxona o'rnatmaydi. U bitta aniq vazifan
 Tozalangandan keyin mavjud global skillar bilan **umuman to'qnashmaydi**, aksincha ochiq qolgan mobil brauzer qatlamini yopadi:
 - **[impeccable](../ui-ux/impeccable.md)** — umumiy UI/UX, ierarxiya, tipografiya, responsive qayta joylashtirish (`adapt`) va veb animatsiyani (`animate`) boshqaradi; `mobile-native` esa faqat mobil brauzerning pastki platforma qoidalarini (`dvh/svh`, `interactive-widget`, `overscroll-behavior`, `pointer: coarse`, `safe-area-inset-*`) to'g'rilaydi.
 - **[animate-expo](animate-expo.md)** — faqat React Native / Expo native ilovalardagi UI-thread harakatlar uchun.
-- **`web-to-native-mobile`** — veb funksiyani native iOS/Android ilovaga ko'chirish uchun (mobil vebni qamrab olmaydi).
-- **[cross-platform-qa](cross-platform-qa.md)** — `mobile-native` ning "oxirida haqiqiy telefonda tekshir" qoidasi 2-bosqichli QA jarayonimiz (1-bosqich lokal, 2-bosqich real telefon) bilan 100% mos tushadi.
 
 ---
 

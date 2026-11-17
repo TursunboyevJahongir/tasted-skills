@@ -44,7 +44,7 @@
 
 ### 4. Обязательный TDD (`test-driven-development`) не подходит нашему стилю работы в Web, Mobile и Backend
 - В `test-driven-development/SKILL.md` жестко прописано правило: `"The Iron Law: NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST. Write code before the test? Delete it. Start over."`
-- **В Web и Mobile (iOS / Android):** Для UI и интерактивных экранов писать падающий (failing) тест до написания кода совершенно не нужно — гораздо быстрее и надежнее сразу проверить результат в живом браузере и симуляторе/эмуляторе (через [agent-desktop](../developer-tools/agent-desktop.md) + [Device Hub](../mobile/ios-simulator-device-hub.md) + [adb](../mobile/adb.md) в процессе [cross-platform-qa](../mobile/cross-platform-qa.md)).
+- **В Web и Mobile (iOS / Android):** Для UI и интерактивных экранов писать падающий (failing) тест до написания кода совершенно не нужно — гораздо быстрее и надежнее сразу проверить результат в живом браузере и симуляторе/эмуляторе (через [agent-desktop](../developer-tools/agent-desktop.md) + [Device Hub](../mobile/ios-simulator-device-hub.md) + [adb](../mobile/adb.md) в процессе `agent-device`).
 - **В Backend:** Писать тесты до начала работы, а затем подгонять под них код — это **двойная лишняя работа (`2x` затрат времени)**.
 
 ---
@@ -69,8 +69,7 @@
 |---|---|---|
 | **Вопросы и ответы по идее и плану** | `brainstorming` (включается автоматически на каждой задаче) | [**grill-me / grilling**](grill-me.md) (вызывается только когда нужно) |
 | **Дисциплина кода (простота)** | Циклы `writing-plans` + `subagent-driven-development` | [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) (минимальное решение без лишних абстракций) |
-| **Проверка Web / iOS / Android** | `test-driven-development` (обязательное написание unit-тестов заранее) | [**cross-platform-qa**](../mobile/cross-platform-qa.md) (`agent-desktop` + `Device Hub` + эмулятор `adb` + в конце 1 проверка на реальном телефоне) |
-| **Независимое код-ревью** | Цикл `task-reviewer` после каждой мелкой задачи | [**T3 Code**](../developer-tools/t3-code.md) / `argon` / `antigravity-claude` (одна четкая независимая проверка по завершении работы) |
+| **Независимое код-ревью** | Цикл `task-reviewer` после каждой мелкой задачи | **`Orca` (`orca orchestration`)** (одна четкая независимая проверка по завершении работы) |
 
 ---
 
@@ -86,4 +85,4 @@
 | Дата | Действие | Статус | Примечание |
 |---|---|---|---|
 | 2026-04-04 | Глобальная установка и проверка в реальной работе | `⚠️ Не рекомендуется` | За несколько месяцев реальных задач `SessionStart` overthinking и лишние вопросы `brainstorming` заметно замедлили работу (`2026-08-14` отключён обязательный `test-driven-development`). |
-| 2026-09-01 | Полный вывод из рабочего процесса | `⚠️ Не рекомендуется` | Заменён связкой [grill-me](grill-me.md), [ponytail](ponytail.md), [karpathy-guidelines](karpathy-guidelines.md) и `cross-platform-qa`. |
+| 2026-09-01 | Полный вывод из рабочего процесса | `⚠️ Не рекомендуется` | Заменён связкой [grill-me](grill-me.md), [ponytail](ponytail.md), [karpathy-guidelines](karpathy-guidelines.md) и `agent-device`. |

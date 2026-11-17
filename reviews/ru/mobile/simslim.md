@@ -8,7 +8,7 @@
 - **Оценка качества:** **9.0 / 10**
 - **Частота нужды в работе:** **7.5 / 10**
 - **Рекомендуемый масштаб:** `Global CLI (Homebrew)` — разово применяется ко всем локальным симуляторам `iOS 18.5+` / `tvOS` с безопасным профилем
-- **Работает в связке с:** [**agent-device**](agent-device.md) + [**xcrun simctl**](ios-simulator-device-hub.md) + [**cross-platform-qa**](cross-platform-qa.md) *(примечание: закрытое приложение `MobAI Pro` / `mobai-mcp` не нужно — управление UI полностью закрывает `agent-device`)*
+- **Работает в связке с:** [**agent-device**](agent-device.md) + [**xcrun simctl**](ios-simulator-device-hub.md) *(примечание: закрытое приложение `MobAI Pro` / `mobai-mcp` не нужно — управление UI полностью закрывает `agent-device`)*
 - **Используется с:** `2026-11-16`
 - **Текущий статус:** `✅ Использую`
 

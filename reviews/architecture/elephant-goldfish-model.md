@@ -63,7 +63,6 @@ Ichida **7 ta skill** mavjud:
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
 - `grill-me` / `grill-with-docs` + `domain-modeling` — bitta chatda tez 1-ga-1 savol-javob uchun yengil va qulay; EGM esa murakkab tizimlarda ko'p-agentli chuqur tekshiruv beradi.
-- `task-context` — **kod yozish jarayonida** implementer va reviewer'ga kontekstni ulashish uchun ishlasa, EGM **kod yozishdan oldin** kontekstni yashirib (Goldfish) arxitekturani sinash uchun ishlaydi. Ikki bosqich bir-birini to'ldiradi.
 - `egm-drift-report` funksiyasining muqobili mavjud skillarimiz orasida yo'q.
 
 ---

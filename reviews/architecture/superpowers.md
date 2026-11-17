@@ -44,7 +44,7 @@ Oldin o'rnatib real vazifalarda ishlatib ko'rilganda, foydadan ko'ra ko'proq zar
 
 ### 4. Majburiy TDD (`test-driven-development`) dizayni Web, Mobile va Backend ish uslubimizga mos emasligi
 - `test-driven-development/SKILL.md` da `"The Iron Law: NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST. Write code before the test? Delete it. Start over."` qoidasi qat'iy qo'yilgan.
-- **Web va Mobile (iOS / Android) da:** UI va interaktiv ekranlar uchun avval yiqiladigan (failing) test yozib keyin kod yozish umuman kerak emas — ularni jonli brauzer va simulyator/emulyatorda (`agent-desktop` + `Device Hub` + `adb` orqali `cross-platform-qa` oqimida) bevosita ishlatib ko'rish ancha tez va haqiqiy natijani ko'rsatadi.
+- **Web va Mobile (iOS / Android) da:** UI va interaktiv ekranlar uchun avval yiqiladigan (failing) test yozib keyin kod yozish umuman kerak emas — ularni jonli brauzer va simulyator/emulyatorda (`agent-desktop`, `agent-device` va `adb` orqali) bevosita ishlatib ko'rish ancha tez va haqiqiy natijani ko'rsatadi.
 - **Backend'da:** Ishni boshlashdan oldin test yozib olib, keyin kodni o'sha testga moslab chiqish **ikki hissa ortiqcha ish (`2x` vaqt sarfi)** bo'lib ketadi.
 
 ---
@@ -69,8 +69,8 @@ Oldin o'rnatib real vazifalarda ishlatib ko'rilganda, foydadan ko'ra ko'proq zar
 |---|---|---|
 | **G'oya va reja savol-javobi** | `brainstorming` (har bir ishda avtomatik yoqilib ketadi) | **`grill-me` / `grilling`** (faqat kerak paytda chaqiriladi) |
 | **Kod yozish intizomi (soddalik)** | `writing-plans` + `subagent-driven-development` looplari | **`ponytail` + `karpathy-guidelines`** (minimal, ortiqcha abstraksiyasiz yechim) |
-| **Web / iOS / Android tekshiruvi** | `test-driven-development` (oldindan majburiy unit-test yozish) | **`cross-platform-qa`** (`agent-desktop` + `Device Hub` + `adb` emulyator + yakunda 1 marta real telefon) |
-| **Mustaqil kod review** | Har bir mayda taskdan keyin `task-reviewer` loop | **`T3 Code` / `argon` / `antigravity-claude`** (ish bitganda bitta aniq mustaqil tekshiruv) |
+| **Web / iOS / Android tekshiruvi** | `test-driven-development` (oldindan majburiy unit-test yozish) | **`agent-desktop` + `agent-device` + `adb`** (lokal emulyator + yakunda 1 marta real telefon) |
+| **Mustaqil kod review** | Har bir mayda taskdan keyin `task-reviewer` loop | **`Orca` (`orca orchestration`)** (ish bitganda bitta aniq mustaqil tekshiruv) |
 
 ---
 
@@ -86,4 +86,4 @@ Oldin o'rnatib real vazifalarda ishlatib ko'rilganda, foydadan ko'ra ko'proq zar
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
 | 2026-04-04 | Global o'rnatib amaliyotda sinashni boshlash | `⚠️ Tavsiya etilmaydi` | 14 ta jarayon skilli ulandi; ko'p oylik real ishda `SessionStart` overthinking va `brainstorming` shovqini ishni sekinlashtirdi (`2026-08-14` da majburiy `test-driven-development` o'chirib qo'yildi). |
-| 2026-09-01 | Asosiy oqimdan butunlay olib tashlash | `⚠️ Tavsiya etilmaydi` | O'rniga `grill-me`, `ponytail`, `karpathy-guidelines` va `cross-platform-qa` qoldirildi. |
+| 2026-09-01 | Asosiy oqimdan butunlay olib tashlash | `⚠️ Tavsiya etilmaydi` | O'rniga `grill-me`, `ponytail`, `karpathy-guidelines` va `agent-device` qoldirildi. |

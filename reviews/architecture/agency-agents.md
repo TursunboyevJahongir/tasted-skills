@@ -8,7 +8,7 @@
 - **Sifat bahosi:** **6.5 / 10**
 - **Ishda kerak bo'lishi:** **2.5 / 10**
 - **Tavsiya etilgan ko'lam:** `O'rnatmaslik` *(global o'rnatish kontekstni shishirib yuboradi)*
-- **O'rniga ishlatiladigan muqobillar:** [**impeccable**](../ui-ux/impeccable.md) + [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) + [**elephant-goldfish-model**](elephant-goldfish-model.md) + [**cross-platform-qa**](../mobile/cross-platform-qa.md)
+- **O'rniga ishlatiladigan muqobillar:** [**impeccable**](../ui-ux/impeccable.md) + [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) + [**elephant-goldfish-model**](elephant-goldfish-model.md)
 - **Tekshirilgan sana:** `2026-11-16`
 - **Joriy holati:** `⚠️ Tavsiya etilmaydi` *(bizga kerak emas — mavjud ixtisoslashgan skillarimiz ancha toza va kuchli)*
 
@@ -67,7 +67,6 @@ Bu repodagi barcha asosiy yo'nalishlar bizda allaqachon ancha ixcham va amalda s
 | `Frontend Developer`, `UI Designer`, `UX Architect` | [**impeccable**](../ui-ux/impeccable.md) + [**mobile-native**](../mobile/mobile-native.md) + [**animate-expo**](../mobile/animate-expo.md) |
 | `Minimal Change Engineer` (207 qator + uzun hisobot) | [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) (`2.5–3.5 KB`, ortiqcha hisobotsiz) |
 | `Software Architect`, `Code Reviewer` | [**elephant-goldfish-model**](elephant-goldfish-model.md) (haqiqiy `fresh-context` Goldfish subagentlar) + [**grill-me**](grill-me.md) |
-| `Reality Checker`, `Evidence Collector` | [**cross-platform-qa**](../mobile/cross-platform-qa.md) ([agent-desktop](../developer-tools/agent-desktop.md) + [Device Hub](../mobile/ios-simulator-device-hub.md) + [adb](../mobile/adb.md)) |
 
 ---
 
@@ -82,4 +81,4 @@ Bu repodagi barcha asosiy yo'nalishlar bizda allaqachon ancha ixcham va amalda s
 
 | Sana | Amal | Holat | Izoh |
 |---|---|---|---|
-| 2026-11-16 | 283 ta agent fayli, `convert.sh` / `install.sh` va kontekst hajmi auditi | `⚠️ Tavsiya etilmaydi` | `~18.5K` tokenlik frontmatter shishishi, ko'p fayllardagi shablon matnlar/copy-paste qoldiqlari hamda mavjud skillarimiz (`impeccable`, `ponytail`, `elephant-goldfish-model`, `cross-platform-qa`) undan ancha ustun bo'lgani sababli o'rnatmaslikka qaror qilindi. |
+| 2026-11-16 | 283 ta agent fayli, `convert.sh` / `install.sh` va kontekst hajmi auditi | `⚠️ Tavsiya etilmaydi` | `~18.5K` tokenlik frontmatter shishishi, ko'p fayllardagi shablon matnlar/copy-paste qoldiqlari hamda mavjud skillarimiz (`impeccable`, `ponytail`, `elephant-goldfish-model`) undan ancha ustun bo'lgani sababli o'rnatmaslikka qaror qilindi. |

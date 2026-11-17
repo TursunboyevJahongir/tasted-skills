@@ -63,7 +63,6 @@ Includes **7 skills**:
 ## 4. Relevance & Compatibility with Our Existing Tools
 
 - [grill-me](grill-me.md) / `grill-with-docs` + `domain-modeling` are lightweight and ideal for fast 1-on-1 questioning in a single chat; EGM provides deep multi-agent verification for complex architectures.
-- `task-context` shares context with implementer and reviewer subagents **during coding**, whereas EGM intentionally withholds chat context (Goldfish) **before coding** to stress-test the architecture. Both stages complement each other.
 - None of our other skills replicate `egm-drift-report`.
 
 ---

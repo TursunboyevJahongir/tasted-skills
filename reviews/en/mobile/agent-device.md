@@ -65,7 +65,6 @@ Measured live on macOS against an iOS 26.5 Simulator and a connected Android tab
 | [**agent-desktop**](../developer-tools/agent-desktop.md) | `✅ Kept (Primary — Web/Desktop)` | Remains **100% primary** for **Google Chrome (Web)** and **macOS desktop** GUI windows. Mobile & TV UI flows moved to `agent-device`. |
 | [**adb**](adb.md) | `✅ Kept (Transport + Port/Logs)` | `agent-device` still invokes `adb` underneath on Android. In addition, **`adb reverse`** (Metro/local backend port forwarding), **`adb logcat`** (crash logs), APK installs, and **`emu kill`** stay directly on `adb` — only slow `uiautomator dump` + coordinate `input tap` loops were replaced by `agent-device`. |
 | [**xcrun simctl + devicectl**](ios-simulator-device-hub.md) | `✅ Kept (Boot + Physical iPhone)` | Still required for windowless simulator `boot`/`shutdown` (`simctl`) and physical iPhone build installs (`devicectl`). **`Device Hub`** is no longer opened routinely and serves strictly as a fallback. |
-| [**cross-platform-qa**](cross-platform-qa.md) | `✅ Upgraded` | Preserves our 2-stage QA discipline with mobile/TV UI verification upgraded to `agent-device`. |
 
 ---
 
@@ -80,4 +79,4 @@ Measured live on macOS against an iOS 26.5 Simulator and a connected Android tab
 
 | Date | Action | Status | Notes |
 |---|---|---|---|
-| 2026-11-16 | Source audit, live iOS Simulator & Android tablet benchmark, sanitization, and global install | `✅ Using` | Installed `0.21.37` CLI + sanitized `agent-device` skill across all 5 agent targets and upgraded `cross-platform-qa` (`197 ms` windowless iOS, `888 ms` / `~100-token` Android snapshots). |
+| 2026-11-16 | Source audit, live iOS Simulator & Android tablet benchmark, sanitization, and global install | `✅ Using` | Installed `0.21.37` CLI + sanitized `agent-device` skill across all 5 agent targets and upgraded `agent-device` (`197 ms` windowless iOS, `888 ms` / `~100-token` Android snapshots). |

@@ -53,8 +53,7 @@ Core decision sequence (executed in strict order):
 
 ## 4. Fit & Compatibility with Our Existing Stack
 
-- **`impeccable` + `animate-expo` + `web-to-native-mobile`** form our clean native mobile triad:
-  - `web-to-native-mobile` decides how web workflows adapt to native iOS/Android;
+- **`impeccable` + `animate-expo`** form our clean native mobile triad:
   - [impeccable](../ui-ux/impeccable.md) owns visual design, typography, and layout hierarchy;
   - `animate-expo` writes the Reanimated worklets, gestures, sheets, and haptics.
 

@@ -56,7 +56,7 @@ Apple's official toolchain for booting, driving, and verifying iOS and Expo / Re
 
 ## 4. Fit & Compatibility with Our Existing Stack
 
-- **`xcrun simctl` & `devicectl`:** Core iOS/tvOS lifecycle foundation underneath [agent-device](agent-device.md) and [cross-platform-qa](cross-platform-qa.md) (windowless simulator `boot`/`shutdown`, `privacy` grants, and physical iPhone build installs).
+- **`xcrun simctl` & `devicectl`:** Core iOS/tvOS lifecycle foundation underneath [agent-device](agent-device.md) (windowless simulator `boot`/`shutdown`, `privacy` grants, and physical iPhone build installs).
 - **Xcode `Device Hub` + `agent-desktop`:** Now serves as a **fallback** — `Device Hub` requires a GUI window open on screen, whereas [agent-device](agent-device.md) drives booted simulators completely windowlessly in `~197ms`.
 
 ---

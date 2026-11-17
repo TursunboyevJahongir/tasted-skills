@@ -8,7 +8,7 @@
 - **Оценка качества:** **6.5 / 10**
 - **Полезность для нас:** **2.5 / 10**
 - **Рекомендуемый охват:** `Не устанавливать` *(глобальная установка сильно раздувает контекст)*
-- **Используемая замена:** [**impeccable**](../ui-ux/impeccable.md) + [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) + [**elephant-goldfish-model**](elephant-goldfish-model.md) + [**cross-platform-qa**](../mobile/cross-platform-qa.md)
+- **Используемая замена:** [**impeccable**](../ui-ux/impeccable.md) + [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) + [**elephant-goldfish-model**](elephant-goldfish-model.md)
 - **Дата проверки:** `2026-11-16`
 - **Текущий статус:** `⚠️ Не рекомендуется` *(нам не нужен — существующие профильные скиллы намного чище и сильнее)*
 
@@ -67,7 +67,6 @@
 | `Frontend Developer`, `UI Designer`, `UX Architect` | [**impeccable**](../ui-ux/impeccable.md) + [**mobile-native**](../mobile/mobile-native.md) + [**animate-expo**](../mobile/animate-expo.md) |
 | `Minimal Change Engineer` (207 строк + длинный отчет) | [**ponytail**](ponytail.md) + [**karpathy-guidelines**](karpathy-guidelines.md) (`2.5–3.5 KB`, без лишних отчетов) |
 | `Software Architect`, `Code Reviewer` | [**elephant-goldfish-model**](elephant-goldfish-model.md) (реальные `fresh-context` субагенты Goldfish) + [**grill-me**](grill-me.md) |
-| `Reality Checker`, `Evidence Collector` | [**cross-platform-qa**](../mobile/cross-platform-qa.md) ([agent-desktop](../developer-tools/agent-desktop.md) + [Device Hub](../mobile/ios-simulator-device-hub.md) + [adb](../mobile/adb.md)) |
 
 ---
 
@@ -82,4 +81,4 @@
 
 | Дата | Действие | Статус | Примечание |
 |---|---|---|---|
-| 2026-11-16 | Аудит всех 283 файлов агентов, `convert.sh` / `install.sh` и нагрузки на контекст | `⚠️ Не рекомендуется` | Принято решение не устанавливать из-за раздувания frontmatter на `~18.5K` токенов, шаблонного текста и остатков copy-paste, а также полного превосходства наших текущих скиллов (`impeccable`, `ponytail`, `elephant-goldfish-model`, `cross-platform-qa`). |
+| 2026-11-16 | Аудит всех 283 файлов агентов, `convert.sh` / `install.sh` и нагрузки на контекст | `⚠️ Не рекомендуется` | Принято решение не устанавливать из-за раздувания frontmatter на `~18.5K` токенов, шаблонного текста и остатков copy-paste, а также полного превосходства наших текущих скиллов (`impeccable`, `ponytail`, `elephant-goldfish-model`). |

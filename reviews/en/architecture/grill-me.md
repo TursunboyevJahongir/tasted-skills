@@ -48,7 +48,7 @@ Created by Matt Pocock, this lightweight yet powerful skill stress-tests a plan 
 ## 4. Relevance & Compatibility with Our Existing Tools
 
 - Serves as the interactive, deep-dive counterpart to [karpathy-guidelines](karpathy-guidelines.md) (*Think Before Coding*).
-- Works seamlessly with `domain-modeling` and `task-context`: `grill-me` resolves design decisions, and `task-context` persists them for implementer and reviewer subagents.
+- Works seamlessly with `domain-modeling` to lock resolved architectural decisions directly into `CONTEXT.md` and `docs/adr/`.
 
 ### Additional Skills Adopted from `mattpocock/skills` (`2026-11-16`)
 

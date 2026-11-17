@@ -60,7 +60,6 @@ macOS'da iOS Simulator (`Device Hub` + `xcrun simctl`) ichki UI elementlarini Ac
 [agent-device](agent-device.md) va [agent-desktop](../developer-tools/agent-desktop.md) bilan bir-birini to'ldiradi:
 - **Android va TV ichki UI oqimi (`snapshot`, `@ref`, `press`, UTF-8 `fill`):** endi [agent-device](agent-device.md) asosiy vosita (kapot ostida baribir `adb` ustida ishlaydi, lekin `uiautomator dump` dan `4.5x` tez va `27x` kam token sarflaydi);
 - **Past darajadagi Android boshqaruvi (`adb reverse`, `adb logcat`, `emu kill`, APK install, fallback `screencap`):** aynan **`adb`** ning o'zi bajaradi;
-- Ushbu juftlik [cross-platform-qa](cross-platform-qa.md) ning Android qanotini tashkil qiladi.
 
 ---
 

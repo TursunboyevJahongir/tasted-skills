@@ -4,7 +4,7 @@
 
 ⬅️ [Вернуться к оглавлению практик](README.md)
 
-- **Связка инструментов:** [**simslim**](../../reviews/ru/mobile/simslim.md) + [**avdslim**](../../reviews/ru/mobile/avdslim.md) + [**agent-device**](../../reviews/ru/mobile/agent-device.md) + [**adb**](../../reviews/ru/mobile/adb.md) + [**xcrun simctl**](../../reviews/ru/mobile/ios-simulator-device-hub.md) + [**cross-platform-qa**](../../reviews/ru/mobile/cross-platform-qa.md)
+- **Связка инструментов:** [**simslim**](../../reviews/ru/mobile/simslim.md) + [**avdslim**](../../reviews/ru/mobile/avdslim.md) + [**agent-device**](../../reviews/ru/mobile/agent-device.md) + [**adb**](../../reviews/ru/mobile/adb.md) + [**xcrun simctl**](../../reviews/ru/mobile/ios-simulator-device-hub.md)
 - **Проекты:** `iOS`, `Android`, `tvOS (Apple TV)`, `Android TV`, `Expo / React Native`, `Swift / Kotlin`.
 
 ---

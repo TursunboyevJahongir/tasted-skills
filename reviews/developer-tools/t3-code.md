@@ -23,7 +23,6 @@
 **Bizdagi asosiy ishlatilish usuli (Multi-AI zanjiri):**
 Bitta vazifada bir nechta mustaqil AI modellarini birga ishlatish imkonini beradi. Masalan:
 - *"Codex yozsin, uni Claude tekshirsin"* (yoki aksincha) deb vazifa berilganda, asosiy agent kodni yozib bo'lgach, ikkinchi AI'ni **CLI orqali alohida subagent sifatida** chaqiradi;
-- Implementer va reviewer o'rtasida gitignore qilingan vazifa konteksti (`task-context`) hamda qat'iy fayl egaligi (`file ownership`) ulashiladi;
 - Ikkinchi AI mustaqil ko'z bilan xatolarni topadi va xulosa toza chiqmaguncha (`PASS`) tekshiruv sikli davom etadi.
 
 ---
@@ -32,7 +31,7 @@ Bitta vazifada bir nechta mustaqil AI modellarini birga ishlatish imkonini berad
 
 ### Kuchli tomonlari
 - **Qo'shimcha API to'lovisiz (BYOS):** O'zingizda allaqachon login qilingan Codex, Claude va Antigravity CLI obunalaridan to'g'ridan-to'g'ri foydalanadi.
-- **Haqiqiy Cross-Model tekshiruv:** Bitta model o'z xatosini o'zi ko'rmay qolishi mumkin; Codex yozgan kodni Claude (yoki Argon) CLI subagent orqali tekshirishi sifatni keskin oshiradi.
+- **Haqiqiy Cross-Model tekshiruv:** Bitta model o'z xatosini o'zi ko'rmay qolishi mumkin; Codex yozgan kodni Claude (yoki Gemini) CLI subagent orqali tekshirishi sifatni keskin oshiradi.
 - **Git worktree izolyatsiyasi:** Bir vaqtda bir nechta vazifani bir-biriga aralashtirmasdan parallel yurgizish qulay.
 
 ### Zaif tomonlari va nima uchun `Orca` ga o'tdik?
@@ -54,7 +53,6 @@ Bitta vazifada bir nechta mustaqil AI modellarini birga ishlatish imkonini berad
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
-Global muhitimizdagi `task-context`, `antigravity-claude`, `antigravity-consult`, `argon` va `claude-opus` skillari aynan shu ko'p-agentli CLI ish oqimini tartibga soladi — ular T3 Code va terminal sessiyalarida bitta yaxlit tizim bo'lib ishlaydi.
 
 ---
 

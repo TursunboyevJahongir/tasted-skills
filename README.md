@@ -80,30 +80,25 @@ Ekranda birorta ham simulyator oynasini ochmasdan, orqa fonda iOS/tvOS (`~0.2s`)
 
 </details>
 
-### 9. [cross-platform-qa](reviews/mobile/cross-platform-qa.md) — Web, Mobil va TV uchun 2 bosqichli sifat nazorati tartibi
-`✅ Ishlatyapman` · **Sifat:** `9.5/10` · **Ishda kerak bo'lishi:** `9.5/10` · **Turi:** Skill · **Sana:** `2026-11-15` dan
-
-Har mayda o'zgarishda telefonga kabel orqali qayta-qayta build yozib vaqt yo'qotmaslik qoidasi: **1-bosqichda** AI barcha tekshiruvlarni kompyuterning o'zida fonda (`agent-desktop` + `agent-device` + `simslim` + `avdslim`) bitiradi, **2-bosqichda** esa ishni "Tayyor" deyishdan oldin ulangan haqiqiy telefonda 1 marta yakuniy sinovdan o'tkazadi.
-
-### 10. [sentry](reviews/backend/sentry.md) — Production'dagi xatolar, sekin so'rovlar va foydalanuvchi ekran yozuvi
+### 9. [sentry](reviews/backend/sentry.md) — Production'dagi xatolar, sekin so'rovlar va foydalanuvchi ekran yozuvi
 `✅ Ishlatyapman` · **Sifat:** `9.5/10` · **Ishda kerak bo'lishi:** `9.5/10` · **Turi:** Self-Hosted + Skill / MCP · **Sana:** `2026-07-08` dan
 
 Mijozda xato chiqqanda "qanday qilib buzildi ekan?" deb taxmin qilib o'tirmaysiz: Backend, Web va Mobil crash'larning aniq kod qatorini, xatodan oldin bosilgan tugmalarni (`Breadcrumbs`), videodek ekran yozuvini (`Session Replay`) va sekin API/SQL so'rovlarni yig'ib, to'g'ridan-to'g'ri AI'ga tahlil qilib beradi.
 
-### 11. [skillshare](reviews/developer-tools/skillshare.md) — Barcha AI'lar uchun bitta skill markazi va xavfsizlik tekshiruvi (`audit`)
+### 10. [skillshare](reviews/developer-tools/skillshare.md) — Barcha AI'lar uchun bitta skill markazi va xavfsizlik tekshiruvi (`audit`)
 `✅ Ishlatyapman` · **Sifat:** `9.5/10` · **Ishda kerak bo'lishi:** `10.0/10` · **Turi:** CLI + Skill · **Sana:** `2026-05-30` dan
 
 `Codex`, `Claude` va `Antigravity` uchun skilllarni har biriga qo'lda alohida ko'chirib yurish azobini yo'qotadi — bitta papkadan hammasiga birdan tarqatadi. Ichidagi **`skillshare audit`** skaneri esa yangi skill ichida yashirin virus, prompt-injection yoki token shishishi bor-yo'qligini `0.1` soniyada tekshirib beradi.
 
-### 12. [animate-expo](reviews/mobile/animate-expo.md) — Expo / React Native ilovalarda qotmaydigan (`60/120fps`) silliq animatsiya
+### 11. [animate-expo](reviews/mobile/animate-expo.md) — Expo / React Native ilovalarda qotmaydigan (`60/120fps`) silliq animatsiya
 `✅ Ishlatyapman` · **Sifat:** `9.5/10` · **Ishda kerak bo'lishi:** `9.0/10` · **Turi:** Skill · **Sana:** `2026-11-09` dan
 
 Simulyatorda silliq ko'rinib, haqiqiy Android yoki iPhone'da qotib qoladigan animatsiyalarning oldini oladi. Barcha harakat va jestlarni (`bottom-sheet`, `swipe`, `press`, `haptics`) asosiy JS oqimini band qilmasdan `Reanimated` UI oqimida toza yozdiradi.
 
-### 13. [Orca + CLI Subagent](reviews/developer-tools/orca.md) — Bitta promptdan bir nechta AI'ni ishlatish va telefondan uzilmay boshqarish
+### 12. [Orca](reviews/developer-tools/orca.md) — Bitta promptdan bir nechta AI'ni ishlatish va telefondan uzilmay boshqarish
 `✅ Ishlatyapman` · **Sifat:** `9.5/10` · **Ishda kerak bo'lishi:** `9.5/10` · **Turi:** Desktop + Mobile App + CLI + Skill · **Sana:** `2026-11-16` dan
 
-Bitta xabarda *"Codex kod yozsin, Claude rejasini tekshirsin, Argon natijani test qilsin"* desangiz, asosiy agentning o'zi boshqa AI'larni ishga tushirib, xulosani bitta chatga yig'ib beradi (`orca orchestration`). Kompyuter blokda (`Lock Screen`) tursa ham uxlamaydi (`caffeinate`) va telefondagi **`Orca IDE`** ilovasidan aloqa uzilmay ishlaydi (`PostHog` telemetriyasi o'chirilgan).
+Bitta xabarda *"Codex kod yozsin, Claude rejasini tekshirsin, Gemini natijani test qilsin"* desangiz, asosiy agentning o'zi boshqa AI'larni ishga tushirib, xulosani bitta chatga yig'ib beradi (`orca orchestration`). Kompyuter blokda (`Lock Screen`) tursa ham uxlamaydi (`caffeinate`) va telefondagi **`Orca IDE`** ilovasidan aloqa uzilmay ishlaydi (`PostHog` telemetriyasi o'chirilgan).
 
 <details>
 <summary>📊 Solishtiruv va statistika (`Orca` vs `T3 Code`)</summary>
@@ -114,17 +109,17 @@ Bitta xabarda *"Codex kod yozsin, Claude rejasini tekshirsin, Argon natijani tes
 
 </details>
 
-### 14. [adb](reviews/mobile/adb.md) — Android port ulash (`reverse`), `logcat` xatolarini o'qish va APK o'rnatish
+### 13. [adb](reviews/mobile/adb.md) — Android port ulash (`reverse`), `logcat` xatolarini o'qish va APK o'rnatish
 `✅ Ishlatyapman` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `10.0/10` · **Turi:** CLI · **Sana:** `2026-09-07` dan
 
 Android emulyator va haqiqiy telefonlarda lokal backend portlarini ulash (`adb reverse`), ilova yiqilganda aniq xato loglarini (`logcat`) olish va APK o'rnatish uchun eng ishonchli past darajadagi vosita (bir nechta qurilma ulanganda `-s <serial>` ko'rsatish majburiy).
 
-### 15. [xcrun simctl + Device Hub](reviews/mobile/ios-simulator-device-hub.md) — iOS simulyatorni oynasiz yoqish va haqiqiy iPhone'ga ilova o'rnatish
+### 14. [xcrun simctl + Device Hub](reviews/mobile/ios-simulator-device-hub.md) — iOS simulyatorni oynasiz yoqish va haqiqiy iPhone'ga ilova o'rnatish
 `✅ Ishlatyapman` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `9.5/10` · **Turi:** Xcode CLI + App · **Sana:** `2026-10-20` dan
 
 iOS Simulator'ni ekranni to'smasdan fonda yoqib-o'chiradi (`simctl boot/shutdown`) va kabel/Wi-Fi orqali haqiqiy iPhone'ga tayyor build'ni o'rnatadi (`devicectl`).
 
-### 16. [simslim](reviews/mobile/simslim.md) — iOS / tvOS Simulator RAM sarfini `-57%` (`-77.5%` GUI da) kamaytirish
+### 15. [simslim](reviews/mobile/simslim.md) — iOS / tvOS Simulator RAM sarfini `-57%` (`-77.5%` GUI da) kamaytirish
 `✅ Ishlatyapman` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `7.5/10` · **Turi:** Standalone Go CLI · **Sana:** `2026-11-16` dan
 
 iOS Simulator ichida bekorga yotadigan `~150+` ta keraksiz Apple fon xizmatini (`Siri`, `Apple Intelligence`, `Wallpaper`) o'chirib, simulyator RAM sarfini keskin kamaytiradi va ilovalarga tegmay ortiqcha keshni tozalaydi (`push` va `agent-device` buzilmaydi).
@@ -138,7 +133,7 @@ iOS Simulator ichida bekorga yotadigan `~150+` ta keraksiz Apple fon xizmatini (
 
 </details>
 
-### 17. [avdslim](reviews/mobile/avdslim.md) — Android Emulator RAM sarfini `-40%` qisqartirish va Mac GPU tezlatgichi
+### 16. [avdslim](reviews/mobile/avdslim.md) — Android Emulator RAM sarfini `-40%` qisqartirish va Mac GPU tezlatgichi
 `✅ Ishlatyapman` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `7.5/10` · **Turi:** Standalone Go CLI · **Sana:** `2026-11-16` dan
 
 Android Emulator kompyuterni qotirib qo'ymasligi uchun grafikani sekin CPU'dan to'g'ridan-to'g'ri **Apple Metal GPU**'ga o'tkazadi va Golden Snapshot bilan xotira hamda yonish vaqtini keskin qisqartiradi (`defaults` himoyasi bilan GPS va Google Maps 100% ishlaydi).
@@ -152,42 +147,32 @@ Android Emulator kompyuterni qotirib qo'ymasligi uchun grafikani sekin CPU'dan t
 
 </details>
 
-### 18. [security-audit](reviews/backend/security-audit-skill.md) — Server ko'tarmasdan kod ichidagi xavfsizlik teshiklarini topish
+### 17. [security-audit](reviews/backend/security-audit-skill.md) — Server ko'tarmasdan kod ichidagi xavfsizlik teshiklarini topish
 `✅ Ishlatyapman` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `7.5/10` · **Turi:** Skill · **Sana:** `2026-11-16` dan
 
 PR yoki reliz oldidan Docker yoqmasdan Backend, Web va **Mobil (`deep-link`, `WebView`)** kodlarini xaker ko'zi bilan o'qib chiqadi. Yolg'on trevogalarni kamaytirish uchun bitta subagent topgan zaiflikni ikkinchi mustaqil subagent qayta tekshirib tasdiqlaydi (kvota yemasligi uchun tejamkor `quick/scoped` rejim o'rnatilgan).
 
-### 19. [mobile-native + web-to-native-mobile](reviews/mobile/mobile-native.md) — Mobil sayt/PWA'ni native ilovadek qilish va Web -> App ko'chirish
-`✅ Ishlatyapman` · **Sifat:** `8.5/10` · **Ishda kerak bo'lishi:** `7.5/10` · **Turi:** Skilllar to'plami · **Sana:** `2026-11-15` dan
+### 18. [mobile-native](reviews/mobile/mobile-native.md) — Mobil sayt, PWA va Mini App'larni telefonda native ilovadek silliq qilish
+`✅ Ishlatyapman` · **Sifat:** `8.5/10` · **Ishda kerak bo'lishi:** `7.5/10` · **Turi:** Skill · **Sana:** `2026-11-15` dan
 
-Telefonda ochilgan veb-sayt yoki Mini App'dagi noqulayliklarni (input bosganda ekran kattalashib ketishi, `100vh` sakrashi, iPhone `notch` ustiga chiqib ketish, yopishqoq `hover`) 11 ta tayyor CSS/meta qoida bilan tuzatadi + veb funksiyani mobil ilovaga ko'chirishda nimalarni soddalashtirish kerakligini hal qiladi (`ui-message-punctuation` bilan birga).
+Telefonda ochilgan veb-sayt yoki Mini App'dagi noqulayliklarni (input bosganda ekran kattalashib ketishi, `100vh` sakrashi, iPhone `notch` ustiga chiqib ketish, yopishqoq `hover`, `overscroll` tortilishi) 11 ta tayyor CSS va meta qoida bilan bir zarbada tuzatadi.
 
-### 20. [AssetDiet](reviews/developer-tools/assetdiet.md) — Loyihadagi og'ir rasm, SVG, video va 3D fayllarni sifatni buzmay siqish
+### 19. [AssetDiet](reviews/developer-tools/assetdiet.md) — Loyihadagi og'ir rasm, SVG, video va 3D fayllarni sifatni buzmay siqish
 `✅ Ishlatyapman` · **Sifat:** `7.5/10` · **Ishda kerak bo'lishi:** `6.5/10` · **Turi:** CLI + [asset-diet](skills/asset-diet/SKILL.md) · **Sana:** `2026-11-16` dan
 
 Sayt yoki mobil ilova hajmini shishirib yuborgan rasm, SVG va videolarni kompyuterning o'zida (bulutga yuklamasdan) topib siqib beradi va yoqmasa 1 buyruq bilan asl holiga qaytaradi (`rollback`). Kontekstni band qilmasligi uchun doimiy MCP o'rniga faqat chaqirilganda (`0` token yuk) ishlaydi.
 
-### 21. [watch + video-analyzer](practices/06-video-figma-and-db-workflows.md) — YouTube/Reels darsliklar va mijoz yuborgan bug-videolarni kadr-ba-kadr o'qish
-`✅ Ishlatyapman` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `7.5/10` · **Turi:** Skill + CLI (`yt-dlp` + `ffmpeg`) · **Sana:** `2026-10-25` dan
+### 20. [video-analyzer](practices/06-video-figma-and-db-workflows.md) — YouTube/Reels darsliklar va mijoz yuborgan bug-videolarni kadr-ba-kadr o'qish
+`✅ Ishlatyapman` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `7.5/10` · **Turi:** Skill + CLI (`ffmpeg` + `Whisper`) · **Sana:** `2026-10-25` dan
 
-AI videoni shunchaki taxmin qilmaydi: ovozni matnga o'giradi (`Whisper`) va aynan ekran almashgan kadrlarni kesib olib ko'radi. Ham videodagi yangi tool'larning haqiqiy nomini topishda, ham tester yuborgan "mana bu yerda qotyapti" degan ekran yozuvidan xato sababini sekundigacha tutishda vaqtni tejaydi.
+AI videoni shunchaki taxmin qilmaydi: ovozni matnga o'giradi (`Whisper`) va aynan ekran almashgan kadrlarni kesib olib ko'radi ([bsisduck/video-analyzer-skill](https://github.com/bsisduck/video-analyzer-skill)). Ham videodagi yangi tool'larning haqiqiy nomini topishda, ham tester yuborgan ekran yozuvidan xato sababini sekundigacha tutishda vaqtni tejaydi.
 
-### 22. [figma skilllar to'plami](practices/06-video-figma-and-db-workflows.md) — Figma dizayndan kod yozish va tayyor koddan Figma'ga dizayn chizish
-`✅ Ishlatyapman` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `7.5/10` · **Turi:** 6 ta Skill + MCP · **Sana:** `2026-10-20` dan
+### 21. [figma skilllar to'plami](practices/06-video-figma-and-db-workflows.md) — Figma dizayndan kod yozish va tayyor koddan Figma'ga dizayn chizish
+`✅ Ishlatyapman` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `7.5/10` · **Turi:** Rasmiy Figma Skills + MCP · **Sana:** `2026-10-20` dan
 
-Ikki tomonlama ko'prik: dizayner chizgan Figma maketni aniq o'lcham va ranglari bilan kodga o'giradi (`figma-implement-design`), yoki aksincha — dizaynersiz yozilgan tayyor dastur ekranlarini qayta Figma'ga toza maket va komponent qilib chizib beradi (`figma-generate-design`).
+Rasmiy Figma MCP (`mcp.figma.com`) bilan ikki tomonlama ko'prik: dizayner chizgan Figma maketni aniq o'lcham va ranglari bilan kodga o'giradi (`figma-implement-design`), yoki aksincha — tayyor dastur ekranlarini qayta Figma'ga toza maket va komponent qilib chizib beradi (`figma-generate-design`).
 
-### 23. [client-performance-gate](practices/03-web-and-mobile-ui-polish.md) — Mijoz ilovalarini past internet va kuchsiz qurilmada qotmaslikka tekshirish
-`✅ Ishlatyapman` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `8.0/10` · **Turi:** Skill · **Sana:** `2026-11-10` dan
-
-Dasturchining kuchli kompyuterida tez ishlagan sayt yoki TV ilova oddiy foydalanuvchining sekin telefoni va `3G` internetida qotib qolmasligini tekshiradi (`6x` sekin CPU + internet uzilib-ulanishida sahifani yangilamasdan o'zi tiklanishi shart; Admin panellarga qo'llanmaydi).
-
-### 24. [drizzle-relations-v2](practices/06-video-figma-and-db-workflows.md) — Drizzle ORM bazasida eski kod yozib xato qilishdan himoya
-`✅ Ishlatyapman` · **Sifat:** `8.5/10` · **Ishda kerak bo'lishi:** `7.5/10` · **Turi:** Skill · **Sana:** `2026-11-05` dan
-
-AI modellarining xotirasida eski Drizzle `v1` sintaksisi qolib ketgani sababli baza so'rovlarida xato yozib qo'yadi. Bu skill AI'ga yangi `v2 defineRelations` qoidalarini berib, birinchi urinishdayoq to'g'ri SQL sxema va so'rov yozdiradi.
-
-### 25. [Jev (TypeSafe AI)](reviews/external-apis/jev.md) — Rasm va matndan `~0.3s` da qaror (`true/false` va `select`) chiqaruvchi juda arzon server API
+### 22. [Jev (TypeSafe AI)](reviews/external-apis/jev.md) — Rasm va matndan `~0.3s` da qaror (`true/false` va `select`) chiqaruvchi juda arzon server API
 `✅ Ishlatyapman` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `8.0/10` · **Turi:** Cloud Decision Engine API (`System-1`) · **Sana:** `2026-10` dan
 
 **Muhim farq — bu matn yozadigan yoki rasm tahrirlaydigan AI model emas:** u faqat berilgan rasm yoki matnni tekshirib **`true / false`** (`yaroqli / yaroqsiz`) yoki **bir nechta variantdan eng mosini tanlab (`select`)** ishonch foizi (`0–100%`) bilan qaytaradigan qaror dvigateli. Media/video platformamiz va boshqa server loyihalarimizda kelgan rasmlar yaroqliligini tekshirish hamda video kadrlardan eng yaxshisini tanlashda 3 ta yo'ldan aynan shuni tanlaganmiz: **1) Pullik GPT API** — ulash oson, lekin rasm yuborilganda qimmat va sekin; **2) Serverda o'z AI obunamizdan (`GPT-6 Luna` `Medium`) ishlatish** — arzonroq, lekin eng tez rejimda ham rasmni bir necha tekshiruvdan o'tkazishga **kamida `~10 soniya` (`9–12s`)** ketib mijoz kutib qoladi; **3) `Jev`** — pullik bo'lsa ham **nihoyatda arzon (`$0.042 / 1M` kirish, chiqish `$0.00` tekin)** va **juda tez (`~0.3s`)** ishlagani barcha kamchiliklarini yopib ketadi. 📊 [typesafe.ai](https://typesafe.ai/) · [docs.typesafe.ai](https://docs.typesafe.ai/)
@@ -250,7 +235,7 @@ Matn, rasm va videoni tushunadigan (`1M` kontekst) tezkor model, lekin lokal o'r
 
 ### 🔌 Tashqi API'lar
 
-> 💡 **Eslatma:** Serverlarimizda rasm va matn yaroqliligini tekshirish (`true/false`) hamda variantlardan tanlash (`select`) uchun har kuni ishlatayotgan eng tez (`~0.3s`) va arzon (`$0.042 / $0`) vositamiz — yuqoridagi [**#25. Jev (TypeSafe AI)**](reviews/external-apis/jev.md) (`✅ Ishlatyapman`).
+> 💡 **Eslatma:** Serverlarimizda rasm va matn yaroqliligini tekshirish (`true/false`) hamda variantlardan tanlash (`select`) uchun har kuni ishlatayotgan eng tez (`~0.3s`) va arzon (`$0.042 / $0`) vositamiz — yuqoridagi [**#22. Jev (TypeSafe AI)**](reviews/external-apis/jev.md) (`✅ Ishlatyapman`).
 
 #### [MiniMax M3.1 Flash API](reviews/external-apis/minimax-m3-1-flash-api.md) — Mahsulot backendi (chatbot, tarjima, rasm/video OCR) uchun juda arzon va tez API
 `👍 Yaxshi variant` · **Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `5.0/10` · **Turi:** Cloud Multimodal API · **Sana:** `2026-11-16`
@@ -411,7 +396,7 @@ Muhandislik intizomi sifatli (`8.0/10`), lekin har bir oddiy vazifani majburiy T
 
 #### [superpowers](reviews/architecture/superpowers.md) — Har qadamda majburiy TDD va savollar qo'shadigan 14-skill plagin
 `⚠️ Tavsiya etilmaydi` · **Sifat:** `6.5/10` · **Ishda kerak bo'lishi:** `2.0/10` · **Turi:** Plugin (14 skill + hook) · **Sana:** `2026-04-04 → 2026-09-01`<br>
-🔄 **Alternativi yaxshiroq:** [grill-me](reviews/architecture/grill-me.md) + [ponytail](reviews/architecture/ponytail.md) + [cross-platform-qa](reviews/mobile/cross-platform-qa.md)
+🔄 **Alternativi yaxshiroq:** [grill-me](reviews/architecture/grill-me.md) + [ponytail](reviews/architecture/ponytail.md) + [agent-device](reviews/mobile/agent-device.md)
 
 5 oy ishlatib ko'rib o'chirib tashlaganmiz.
 
@@ -422,7 +407,7 @@ Muhandislik intizomi sifatli (`8.0/10`), lekin har bir oddiy vazifani majburiy T
 <summary>📊 Solishtiruv va statistika (`superpowers` vs `grill-me + ponytail`)</summary>
 
 - **`superpowers` bilan:** Har sessiyada avto-hook yuki + UI vazifalarda ham oldin unit-test yozish majburiyati -> **vaqt va kvota sarfi `~2x` ko'p**.
-- **`grill-me + ponytail + cross-platform-qa` bilan:** Faqat kerak paytda aniq reja (`grill-me`), minimal kod (`ponytail`) va jonli emulyator/brauzerda tekshiruv (`~2–3x` tezroq).
+- **`grill-me + ponytail + agent-device` bilan:** Faqat kerak paytda aniq reja (`grill-me`), minimal kod (`ponytail`) va jonli emulyator/brauzerda tekshiruv (`~2–3x` tezroq).
 - 📖 [Batafsil sharh →](reviews/architecture/superpowers.md) · [Pastdagi solishtiruv ↓](#batafsil-solishtirishlar)
 
 </details>

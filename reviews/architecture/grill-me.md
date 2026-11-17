@@ -48,7 +48,7 @@ Matt Pocock tomonidan yaratilgan, reja yoki arxitektura g'oyasini kod yozishdan 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
 - `karpathy-guidelines` (*Think Before Coding*) tamoyilining chuqurlashtirilgan interaktiv shakli.
-- `domain-modeling` va `task-context` bilan uzviy ishlaydi: `grill-me` qarorlarni aniqlashtiradi, `task-context` esa ularni implementer va reviewer agentlar uchun yozib qo'yadi.
+- `domain-modeling` bilan uzviy ishlaydi va aniqlashtirilgan qarorlarni `CONTEXT.md` / `docs/adr/` ga muhrlaydi.
 
 ### `mattpocock/skills` to'plamidagi qo'shimcha skillar (`2026-11-16`)
 

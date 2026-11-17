@@ -60,7 +60,6 @@ On macOS, iOS Simulator (`Device Hub` + `xcrun simctl`) exposes internal UI elem
 Complements [agent-device](agent-device.md) and [agent-desktop](../developer-tools/agent-desktop.md):
 - **Interactive Android & Android TV UI flows (`snapshot`, `@ref`, `press`, UTF-8 `fill`):** now driven primarily via [agent-device](agent-device.md) (which uses `adb` under the hood, running `4.5x` faster with `27x` fewer tokens than raw `uiautomator dump`);
 - **Low-level Android operations (`adb reverse`, `adb logcat`, `emu kill`, APK installs, fallback `screencap`):** handled directly by **`adb`**;
-- Together they power the Android wing of [cross-platform-qa](cross-platform-qa.md).
 
 ---
 

@@ -60,7 +60,6 @@
 Дополняет [agent-device](agent-device.md) и [agent-desktop](../developer-tools/agent-desktop.md):
 - **Интерактивный UI Android и Android TV (`snapshot`, `@ref`, `press`, UTF-8 `fill`):** теперь ведётся через [agent-device](agent-device.md) (который под капотом использует `adb`, работая в `4.5x` быстрее и тратя в `27x` меньше токенов, чем сырой `uiautomator dump`);
 - **Низкоуровневое управление Android (`adb reverse`, `adb logcat`, `emu kill`, установка APK, резервный `screencap`):** выполняется напрямую через **`adb`**;
-- Вместе они образуют Android-крыло процесса [cross-platform-qa](cross-platform-qa.md).
 
 ---
 

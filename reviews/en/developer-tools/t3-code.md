@@ -23,7 +23,6 @@
 **How we use it in practice (Multi-AI pipeline):**
 It enables combining multiple independent AI models on a single task. For example:
 - When instructed *"let Codex implement and Claude review"* (or vice versa), the primary agent completes implementation and invokes the second AI **as an isolated CLI subagent**;
-- Both agents share a gitignored task folder (`task-context`) with strict file-ownership rules;
 - The second model performs an independent review and reports findings until the change reaches a clean `PASS`.
 
 ---
@@ -32,7 +31,7 @@ It enables combining multiple independent AI models on a single task. For exampl
 
 ### Strengths
 - **Zero extra API billing (BYOS):** Reuses your already-authenticated Codex, Claude, and Antigravity CLI subscriptions directly.
-- **True Cross-Model verification:** One model often misses its own blind spots; having Claude or Argon review Codex's code (or vice versa) catches subtle bugs early.
+- **True Cross-Model verification:** One model often misses its own blind spots; having Claude or Gemini review Codex's code (or vice versa) catches subtle bugs early.
 - **Git worktree isolation:** Run parallel tasks across branches without working-tree collisions.
 
 ### Weaknesses and Why We Switched to `Orca`
@@ -54,7 +53,6 @@ It enables combining multiple independent AI models on a single task. For exampl
 
 ## 4. Fit & Compatibility with Our Existing Stack
 
-Works seamlessly alongside our global `task-context`, `antigravity-claude`, `antigravity-consult`, `argon`, and `claude-opus` skills across both T3 Code and terminal sessions.
 
 ---
 

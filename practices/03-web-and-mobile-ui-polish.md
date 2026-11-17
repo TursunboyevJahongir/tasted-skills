@@ -48,5 +48,3 @@ agent-desktop click @<snapshot_id>:e12
 ## 3. Qo'shimcha nimalar qilish mumkin? (Pro-amaliyotlar)
 
 - **Noldan marketing landing sahifa yoki to'liq veb-redizayn qilishda ([Hallmark v2](../reviews/web/hallmark.md) — faqat kerak bo'lganda `-p` / `/hallmark`):** Kundalik veb/mobil ekranlar uchun `impeccable` ishlatiladi, lekin alohida promo/landing sayt yig'ish yoki eski veb-sahifani barcha link va formalarini saqlagan holda (`sloplint --before/--kept`) noldan yangilash kerak bo'lganda `Hallmark v2` (`50` ta shablon + `755` ta haqiqiy rasm + `capture.mjs`) vaqtinchalik ulanadi.
-- **Veb funksiyani mobil ilovaga ko'chirishda (`web-to-native-mobile` + `impeccable`):** Desktop jadval yoki murakkab filtrni telefonga ko'chirishdan oldin `web-to-native-mobile` orqali nima asosiy ekranda qolishi (`Keep visible`) va nima sheet/menuga o'tishi (`Relocate`) ajratib olinadi.
-- **Yakuniy nashr oldidan (`client-performance-gate`):** Foydalanuvchi ilovalarida (admin paneldan tashqari) sekin tarmoq va kuchsiz qurilma rejimida FPS hamda tiklanish (`recovery`) tekshiriladi.

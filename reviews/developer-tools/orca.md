@@ -16,15 +16,14 @@
 ## 1. Nima va qanday ishlaydi?
 
 > [!IMPORTANT]
-> **Oddiy tilda (Asosiy vazifasi va foydasi):** Asosiy ko'p-agentli ish muhitimiz: bitta promptda *"Codex yozsin, Claude rejasini tekshirsin, Argon natijani test qilsin"* deyilsa, asosiy agentning o'zi boshqa AI'larni Chat UI ichida jonli kartalar bilan ishga tushirib, xulosani bitta joyga yig'adi. Kompyuter blokda (`Lock Screen`) tursa ham uxlamaydi (`caffeinate`) va telefondagi **`Orca IDE`** ilovasidan uzilmay ishlaydi (`841 MB` RAM).
+> **Oddiy tilda (Asosiy vazifasi va foydasi):** Asosiy ko'p-agentli ish muhitimiz: bitta promptda *"Codex yozsin, Claude rejasini tekshirsin, Gemini natijani test qilsin"* deyilsa, asosiy agentning o'zi boshqa AI'larni Chat UI ichida jonli kartalar bilan ishga tushirib, xulosani bitta joyga yig'adi. Kompyuter blokda (`Lock Screen`) tursa ham uxlamaydi (`caffeinate`) va telefondagi **`Orca IDE`** ilovasidan uzilmay ishlaydi (`841 MB` RAM).
 
-**Orca (`stablyai/orca`)** — `Codex`, `Claude Code`, `Antigravity (Gemini / Argon)` va boshqa 25+ CLI coding agentlarni bitta oynada (Chat UI yoki Terminal rejimida), alohida Git worktree'larda hamda telefon orqali boshqaradigan open-source (`MIT`) orkestrator.
+**Orca (`stablyai/orca`)** — `Codex`, `Claude Code`, `Antigravity (Gemini)` va boshqa 25+ CLI coding agentlarni bitta oynada (Chat UI yoki Terminal rejimida), alohida Git worktree'larda hamda telefon orqali boshqaradigan open-source (`MIT`) orkestrator.
 
 **Bizda qanday ishlaydi (2 ta muhim mexanizm):**
 1. **Bitta promptdan bir nechta AI'ni zanjir qilib ishlatish (`orca orchestration worker-start`):**
    - Asosiy agentga (masalan, `Codex` `GPT-6.1-Sol High`) bitta prompt berilganda, u o'zi `orca orchestration worker-start --worktree current --agent claude` va `--agent antigravity` orqali yordamchi subagentlarni parallel yoki ketma-ket ishga tushiradi va o'z navbatini tugatadi (`0` polling).
    - Har bir chaqirilgan subagent Chat UI ichida alohida kliklanadigan karta (`Started worker ↗`, `Update from worker ↗`) bo'lib ko'rinadi; subagent ishini tugatib `worker_done` qilganda (yoki limitga tushib `escalation` berganda) `Orca` avtomatik ravishda asosiy agentni uyg'otadi va natijalarni bitta suhbatga yig'ib beradi.
-   - Bundan tashqari, global `task-context`, `claude-opus`, `antigravity-claude` va `argon` CLI skilllarimiz ham `Orca` ichida to'liq ishlaydi.
 2. **Telefon ilovasi (`Orca IDE`) va kompyuter blokda (`Lock Screen`) ishlashi:**
    - Rasmiy iOS ([App Store](https://apps.apple.com/us/app/orca-ide/id6766130217)) va Android ([Google Play](https://play.google.com/store/apps/details?id=dev.orca.app)) ilovasi QR-kod yoki pairing kodi orqali ulanadi (`LAN / Tailscale` yoki `E2EE Orca Relay` + `APNs`/`FCM` Push xabarnomalari).
    - Ichki `Keep computer awake: On` rejimi (`/usr/bin/caffeinate -i -s -w <pid>`) tufayli kompyuter ekran blokda (`Lock Screen`) turganda ham sessiyalar uxlamaydi va telefon aloqasi uzilib qolmaydi.
@@ -60,14 +59,14 @@
 
 ## 4. Bizga qanchalik kerak va mavjud vositalar bilan mosligi
 
-- `Codex`, `Claude Code` va `Antigravity` status hooklari (`orca agent hooks on`) hamda `orchestration` skilli mavjud `task-context`, `grill-me`, `ponytail`, `agent-desktop` va `agent-device` oqimimiz bilan 100% mos ishlaydi.
+- `Codex`, `Claude Code` va `Antigravity` status hooklari (`orca agent hooks on`) hamda `orchestration` skilli mavjud `grill-me`, `ponytail`, `agent-desktop` va `agent-device` oqimimiz bilan 100% mos ishlaydi.
 - Oldin ishlatilgan [**T3 Code**](t3-code.md) to'liq o'chirilib (`~3.87 GB` disk joyi bo'shatildi), barcha 12 ta asosiy repozitoriy `Orca` ga ko'chirildi.
 
 ---
 
 ## 5. Qaysi yo'nalish va vazifalarda foydali?
 
-- **Qachon ishlatish kerak:** Kundalik barcha kod yozish va arxitektura ishlarida, bitta prompt orqali bir nechta AI'ni (*"Codex yozsin -> Claude/Argon tekshirsin"*) zanjir qilib ishlatishda hamda kompyuter oldida bo'lmaganda telefondan (`Orca IDE`) jarayonni boshqarishda.
+- **Qachon ishlatish kerak:** Kundalik barcha kod yozish va arxitektura ishlarida, bitta prompt orqali bir nechta AI'ni (*"Codex yozsin -> Claude yoki Gemini tekshirsin"*) zanjir qilib ishlatishda hamda kompyuter oldida bo'lmaganda telefondan (`Orca IDE`) jarayonni boshqarishda.
 - **Qachon ishlatmaslik kerak:** Oddiy 1 qatorli savol-javobda subagent (`worker-start`) ochish shart emas — bitta asosiy chatning o'zi yetarli.
 
 ---

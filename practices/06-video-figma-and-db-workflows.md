@@ -1,36 +1,36 @@
-# 6. Video Tahlil (`watch`), Figma Ko'prigi (`figma`) va Qo'shimcha Imkoniyatlari
+# 6. Video Tahlil (`video-analyzer`), Figma Ko'prigi (`figma`) va Qo'shimcha Imkoniyatlari
 
 **🇺🇿 O'zbekcha** | [🇬🇧 English](en/06-video-figma-and-db-workflows.md) | [🇷🇺 Русский](ru/06-video-figma-and-db-workflows.md)
 
 ⬅️ [Practices Mundarijasiga qaytish](README.md)
 
-- **Birlashtiriladigan vositalar:** `watch` (`video-analyzer`) + `figma` (`figma-implement-design`, `figma-generate-design`, `figma-use`) + [**agent-desktop**](../reviews/developer-tools/agent-desktop.md) (`agent-desktop-ffi`) + [**graphify**](../reviews/architecture/graphify.md) + `drizzle-relations-v2`
+- **Birlashtiriladigan vositalar:** [**video-analyzer**](https://github.com/bsisduck/video-analyzer-skill) + **Figma MCP & Skills** (`figma-implement-design`, `figma-generate-design`, `figma-use`) + [**agent-desktop**](../reviews/developer-tools/agent-desktop.md) (`agent-desktop-ffi`) + [**graphify**](../reviews/architecture/graphify.md)
 - **Qo'llaniladigan vazifalar:** Video bug-reportlarni tahlil qilish, raqobatchi UI/animatsiyasini ko'chirish, Kod <-> Figma ikki tomonlama sinxronizatsiya va desktop dasturlarni avtomatlashtirish.
 
 ---
 
-## 1. `watch` (`video-analyzer`) — Faqat YouTube ko'rish uchun emas! (3 ta kuchli usul)
+## 1. `video-analyzer` — Faqat YouTube ko'rish uchun emas! (3 ta kuchli usul)
 
-Ko'pchilik `watch` skillini faqat YouTube videoni xulosalash uchun deb o'ylaydi. Aslida u **ovoz (`Whisper`/`subtitles`) + sahna almashish kadrlari (`ffmpeg scene detection`)** ni birga o'qigani uchun quyidagi 3 ta ishda juda katta vaqt tejaydi:
+Ko'pchilik [`video-analyzer`](https://github.com/bsisduck/video-analyzer-skill) skillini faqat videoni xulosalash uchun deb o'ylaydi. Aslida u **ovoz (`Whisper` transkripsiya) + sahna almashish kadrlari (`ffmpeg scene detection` va `3x5` / `4x4` kadrlar jadvali)** ni birga o'qigani uchun quyidagi 3 ta ishda katta vaqt tejaydi:
 
 ### 1) QA va Mijoz yuborgan Bug-Report videolarini (`mp4`/`mov`) avtomatik tahlil qilish
-Tester yoki foydalanuvchi Telegram'dan *"ilovada xato chiqyapti"* deb ekran yozuvini tashlaganda:
-- `watch` videoni kadr-ba-kadr (`scene_index.csv` + `frames-selected/`) yoyib, xato aynan qaysi sekundda, qaysi ekranda va qanday xabar bilan chiqqanini o'qib beradi — ketidan `diagnosing-bugs` + `sentry` bilan ildiz sababi topiladi.
+Tester yoki foydalanuvchi *"ilovada xato chiqyapti"* deb ekran yozuvini yuborganda:
+- `video-analyzer` videoni sahna almashishlari bo'yicha kadrlarga ajratib, xato aynan qaysi sekundda, qaysi ekranda va qanday xabar bilan chiqqanini o'qib beradi — ketidan `diagnosing-bugs` + `sentry` bilan ildiz sababi topiladi.
 
-### 2) Yoqtirgan ilova yoki sayt animatsiyasini / UI oqimini 1:1 ko'chirish (`watch` + `impeccable` + `animate-expo`)
+### 2) Yoqtirgan ilova yoki sayt animatsiyasini / UI oqimini 1:1 ko'chirish (`video-analyzer` + `impeccable` + `animate-expo`)
 Boshqa ilovadagi chiroyli o'tish (`transition`) yoki onboarding oqimini ko'chirmoqchi bo'lsangiz:
-- Ekran yozuvini `watch` ga *"5fps rejimda har bir kadrni ajrat"* deb berasiz;
+- Ekran yozuvini `video-analyzer` ga `5fps` rejimida kadrlarga ajrattirasiz;
 - Ajratilgan kadrlarni [**impeccable**](../reviews/ui-ux/impeccable.md) va [**animate-expo**](../reviews/mobile/animate-expo.md) ga berib, harakat fizikasini (`spring`, `stiffness`, `damping`) kodga aylantirasiz.
 
-### 3) Reklama Reels / YouTube darsliklardagi yolg'onlarni fosh qilish (`watch` + `tasted-skills`)
+### 3) Reklama Reels / YouTube darsliklardagi yolg'onlarni fosh qilish (`video-analyzer` + `tasted-skills`)
 Ijtimoiy tarmoqdagi *"bu tekin AI tool 90% ishni qiladi"* degan videolarni [tasted-skills](../skills/tasted-skills/SKILL.md) bilan tekshirganda:
-- `watch` ekranda bir soniya ko'rinib ketadigan mayda yozuvlarni (`SELF-REPORTED`, `.env` dagi pullik kalitlar, sekin kadr tezlashtirilganini) ushlab beradi.
+- `video-analyzer` ekranda bir soniya ko'rinib ketadigan mayda yozuvlarni (`SELF-REPORTED`, `.env` dagi pullik kalitlar, sekin kadr tezlashtirilganini) ushlab beradi.
 
 ---
 
-## 2. `figma` Skilllar Oila-To'plami — Ikki Tomonlama Ko'prik (`Figma ↔ Kod`)
+## 2. Rasmiy `figma` Skilllar Oila-To'plami — Ikki Tomonlama Ko'prik (`Figma ↔ Kod`)
 
-Bizda o'rnatilgan 5 ta Figma skilli (`figma`, `figma-implement-design`, `figma-generate-design`, `figma-generate-library`, `figma-use`) faqat Figma'dan kod yozish uchun emas, **teskari yo'nalishda ham** ishlaydi:
+Rasmiy Figma MCP (`mcp.figma.com`) va skilllari (`figma`, `figma-implement-design`, `figma-generate-design`, `figma-generate-library`, `figma-use`) faqat Figma'dan kod yozish uchun emas, **teskari yo'nalishda ham** ishlaydi:
 
 1. **Figma -> Production Kod (`figma-implement-design` + `impeccable` + `asset-diet`):**
    - Figma link/node berilganda, shunchaki skrinshotga qarab emas, balki aniq auto-layout, spacing va rang tokenlarini o'qib 1:1 komponent yozadi, rasmlarni esa `asset-diet` bilan siqadi.
@@ -49,6 +49,3 @@ Bizda o'rnatilgan 5 ta Figma skilli (`figma`, `figma-implement-design`, `figma-g
 
 ### B. `graphify` — Faqat kod uchun emas
 - Loyiha papkasiga **texnik topshiriq (PDF/Markdown), ma'lumotlar bazasi sxemasi, arxitektura chizmalari (rasm) va uchrashuv videolari** tashlansa, `graphify` ularning barchasini kod modullari bilan bitta yagona grafga (`graph.json` + Obsidian Vault / interaktiv HTML) bog'lab beradi.
-
-### C. `drizzle-relations-v2` — Drizzle ORM yangilashda xatosiz migratsiya
-- Backend'da Drizzle ORM sxemalari va bog'lanishlarini (`relations`) yozishda eski `v1` sintaksisiga tushib qolmasdan, to'g'ridan-to'g'ri `v2` (`defineRelations` va yangi relational query filterlar) standartida yozishni ta'minlaydi.

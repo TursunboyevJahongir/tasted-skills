@@ -39,7 +39,7 @@ Both skills stay active together during implementation:
 
 ### Stage 4: Verify with a Second Pair of Eyes (`Orca` + `elephant-goldfish-model`)
 Never let the authoring agent be the sole reviewer of complex changes:
-- **Cross-Model CLI Review (`Orca`):** When `Codex` writes the implementation, spawn `Claude Opus` or `Argon` as an isolated CLI subagent to audit the diff independently.
+- **Cross-Model CLI Review (`Orca`):** When `Codex` writes the implementation, spawn `Claude Code` or `Gemini` as an isolated CLI subagent to audit the diff independently.
 - **Doc-Code Drift & Hostile Review (`elephant-goldfish-model`):**
   - `egm-drift-report`: Detects mismatches between `README` / `DESIGN.md` and actual code.
   - `egm-review`: Dispatches stateless *Goldfish* critics (`egm-design`, `egm-codebase-details`, `egm-zoom-out`) across 5 review angles.

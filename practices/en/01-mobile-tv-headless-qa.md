@@ -4,7 +4,7 @@
 
 ⬅️ [Back to Practices Table of Contents](README.md)
 
-- **Combined Tools:** [**simslim**](../../reviews/en/mobile/simslim.md) + [**avdslim**](../../reviews/en/mobile/avdslim.md) + [**agent-device**](../../reviews/en/mobile/agent-device.md) + [**adb**](../../reviews/en/mobile/adb.md) + [**xcrun simctl**](../../reviews/en/mobile/ios-simulator-device-hub.md) + [**cross-platform-qa**](../../reviews/en/mobile/cross-platform-qa.md)
+- **Combined Tools:** [**simslim**](../../reviews/en/mobile/simslim.md) + [**avdslim**](../../reviews/en/mobile/avdslim.md) + [**agent-device**](../../reviews/en/mobile/agent-device.md) + [**adb**](../../reviews/en/mobile/adb.md) + [**xcrun simctl**](../../reviews/en/mobile/ios-simulator-device-hub.md)
 - **Target Projects:** `iOS`, `Android`, `tvOS (Apple TV)`, `Android TV`, `Expo / React Native`, `Swift / Kotlin`.
 
 ---
