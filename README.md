@@ -162,17 +162,12 @@ Telefonda ochilgan veb-sayt yoki Mini App'dagi noqulayliklarni (input bosganda e
 
 Sayt yoki mobil ilova hajmini shishirib yuborgan rasm, SVG va videolarni kompyuterning o'zida (bulutga yuklamasdan) topib siqib beradi va yoqmasa 1 buyruq bilan asl holiga qaytaradi (`rollback`). Kontekstni band qilmasligi uchun doimiy MCP o'rniga faqat chaqirilganda (`0` token yuk) ishlaydi.
 
-### 20. [video-analyzer](practices/06-video-figma-and-db-workflows.md) — YouTube/Reels darsliklar va mijoz yuborgan bug-videolarni kadr-ba-kadr o'qish
+### 20. [video-analyzer](practices/06-video-and-desktop-workflows.md) — YouTube/Reels darsliklar va mijoz yuborgan bug-videolarni kadr-ba-kadr o'qish
 `✅ Ishlatyapman` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `7.5/10` · **Turi:** Skill + CLI (`ffmpeg` + `Whisper`) · **Sana:** `2026-10-25` dan
 
 AI videoni shunchaki taxmin qilmaydi: ovozni matnga o'giradi (`Whisper`) va aynan ekran almashgan kadrlarni kesib olib ko'radi ([bsisduck/video-analyzer-skill](https://github.com/bsisduck/video-analyzer-skill)). Ham videodagi yangi tool'larning haqiqiy nomini topishda, ham tester yuborgan ekran yozuvidan xato sababini sekundigacha tutishda vaqtni tejaydi.
 
-### 21. [figma skilllar to'plami](practices/06-video-figma-and-db-workflows.md) — Figma dizayndan kod yozish va tayyor koddan Figma'ga dizayn chizish
-`✅ Ishlatyapman` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `7.5/10` · **Turi:** Rasmiy Figma Skills + MCP · **Sana:** `2026-10-20` dan
-
-Rasmiy Figma MCP (`mcp.figma.com`) bilan ikki tomonlama ko'prik: dizayner chizgan Figma maketni aniq o'lcham va ranglari bilan kodga o'giradi (`figma-implement-design`), yoki aksincha — tayyor dastur ekranlarini qayta Figma'ga toza maket va komponent qilib chizib beradi (`figma-generate-design`).
-
-### 22. [Jev (TypeSafe AI)](reviews/external-apis/jev.md) — Rasm va matndan `~0.3s` da qaror (`true/false` va `select`) chiqaruvchi juda arzon server API
+### 21. [Jev (TypeSafe AI)](reviews/external-apis/jev.md) — Rasm va matndan `~0.3s` da qaror (`true/false` va `select`) chiqaruvchi juda arzon server API
 `✅ Ishlatyapman` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `8.0/10` · **Turi:** Cloud Decision Engine API (`System-1`) · **Sana:** `2026-10` dan
 
 **Muhim farq — bu matn yozadigan yoki rasm tahrirlaydigan AI model emas:** u faqat berilgan rasm yoki matnni tekshirib **`true / false`** (`yaroqli / yaroqsiz`) yoki **bir nechta variantdan eng mosini tanlab (`select`)** ishonch foizi (`0–100%`) bilan qaytaradigan qaror dvigateli. Media/video platformamiz va boshqa server loyihalarimizda kelgan rasmlar yaroqliligini tekshirish hamda video kadrlardan eng yaxshisini tanlashda 3 ta yo'ldan aynan shuni tanlaganmiz: **1) Pullik GPT API** — ulash oson, lekin rasm yuborilganda qimmat va sekin; **2) Serverda o'z AI obunamizdan (`GPT-6 Luna` `Medium`) ishlatish** — arzonroq, lekin eng tez rejimda ham rasmni bir necha tekshiruvdan o'tkazishga **kamida `~10 soniya` (`9–12s`)** ketib mijoz kutib qoladi; **3) `Jev`** — pullik bo'lsa ham **nihoyatda arzon (`$0.042 / 1M` kirish, chiqish `$0.00` tekin)** va **juda tez (`~0.3s`)** ishlagani barcha kamchiliklarini yopib ketadi. 📊 [typesafe.ai](https://typesafe.ai/) · [docs.typesafe.ai](https://docs.typesafe.ai/)
@@ -235,7 +230,7 @@ Matn, rasm va videoni tushunadigan (`1M` kontekst) tezkor model, lekin lokal o'r
 
 ### 🔌 Tashqi API'lar
 
-> 💡 **Eslatma:** Serverlarimizda rasm va matn yaroqliligini tekshirish (`true/false`) hamda variantlardan tanlash (`select`) uchun har kuni ishlatayotgan eng tez (`~0.3s`) va arzon (`$0.042 / $0`) vositamiz — yuqoridagi [**#22. Jev (TypeSafe AI)**](reviews/external-apis/jev.md) (`✅ Ishlatyapman`).
+> 💡 **Eslatma:** Serverlarimizda rasm va matn yaroqliligini tekshirish (`true/false`) hamda variantlardan tanlash (`select`) uchun har kuni ishlatayotgan eng tez (`~0.3s`) va arzon (`$0.042 / $0`) vositamiz — yuqoridagi [**#21. Jev (TypeSafe AI)**](reviews/external-apis/jev.md) (`✅ Ishlatyapman`).
 
 #### [MiniMax M3.1 Flash API](reviews/external-apis/minimax-m3-1-flash-api.md) — Mahsulot backendi (chatbot, tarjima, rasm/video OCR) uchun juda arzon va tez API
 `👍 Yaxshi variant` · **Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `5.0/10` · **Turi:** Cloud Multimodal API · **Sana:** `2026-11-16`

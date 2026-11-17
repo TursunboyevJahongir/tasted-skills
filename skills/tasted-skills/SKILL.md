@@ -37,7 +37,7 @@ Categories:
 - `external-apis` — External LLM & multimodal APIs (`OpenRouter`, provider APIs), cost/speed trade-offs for product backends vs coding agents
 - `web` — Web apps, landing engines, browser rendering, frontend frameworks
 - `mobile` — Mobile web, PWA, React Native, Expo, iOS, Android
-- `ui-ux` — Design systems, UI polish, Figma, motion, accessibility
+- `ui-ux` — Design systems, UI polish, motion, accessibility
 - `architecture` — Spec-driven design, code/design review, domain modeling, drift checks
 - `backend` — APIs, databases, cloud, pipelines, observability
 - `developer-tools` — Memory (`claude-mem`, etc.), browser/desktop automation (`agent-desktop`, etc.), CLIs, MCP servers, workflow tools

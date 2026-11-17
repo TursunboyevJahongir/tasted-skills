@@ -1,11 +1,11 @@
-# 6. Video Tahlil (`video-analyzer`), Figma Ko'prigi (`figma`) va Qo'shimcha Imkoniyatlari
+# 6. Video Tahlil (`video-analyzer`) va Desktop/Graf Qo'shimcha Imkoniyatlari
 
-**🇺🇿 O'zbekcha** | [🇬🇧 English](en/06-video-figma-and-db-workflows.md) | [🇷🇺 Русский](ru/06-video-figma-and-db-workflows.md)
+**🇺🇿 O'zbekcha** | [🇬🇧 English](en/06-video-and-desktop-workflows.md) | [🇷🇺 Русский](ru/06-video-and-desktop-workflows.md)
 
 ⬅️ [Practices Mundarijasiga qaytish](README.md)
 
-- **Birlashtiriladigan vositalar:** [**video-analyzer**](https://github.com/bsisduck/video-analyzer-skill) + **Figma MCP & Skills** (`figma-implement-design`, `figma-generate-design`, `figma-use`) + [**agent-desktop**](../reviews/developer-tools/agent-desktop.md) (`agent-desktop-ffi`) + [**graphify**](../reviews/architecture/graphify.md)
-- **Qo'llaniladigan vazifalar:** Video bug-reportlarni tahlil qilish, raqobatchi UI/animatsiyasini ko'chirish, Kod <-> Figma ikki tomonlama sinxronizatsiya va desktop dasturlarni avtomatlashtirish.
+- **Birlashtiriladigan vositalar:** [**video-analyzer**](https://github.com/bsisduck/video-analyzer-skill) + [**agent-desktop**](../reviews/developer-tools/agent-desktop.md) (`agent-desktop-ffi`) + [**graphify**](../reviews/architecture/graphify.md)
+- **Qo'llaniladigan vazifalar:** Video bug-reportlarni kadr-ba-kadr tahlil qilish, referens UI/animatsiyasini ko'chirish, reklama darsliklarini tekshirish hamda desktop dasturlar va hujjatlarni avtomatlashtirish.
 
 ---
 
@@ -28,20 +28,7 @@ Ijtimoiy tarmoqdagi *"bu tekin AI tool 90% ishni qiladi"* degan videolarni [tast
 
 ---
 
-## 2. Rasmiy `figma` Skilllar Oila-To'plami — Ikki Tomonlama Ko'prik (`Figma ↔ Kod`)
-
-Rasmiy Figma MCP (`mcp.figma.com`) va skilllari (`figma`, `figma-implement-design`, `figma-generate-design`, `figma-generate-library`, `figma-use`) faqat Figma'dan kod yozish uchun emas, **teskari yo'nalishda ham** ishlaydi:
-
-1. **Figma -> Production Kod (`figma-implement-design` + `impeccable` + `asset-diet`):**
-   - Figma link/node berilganda, shunchaki skrinshotga qarab emas, balki aniq auto-layout, spacing va rang tokenlarini o'qib 1:1 komponent yozadi, rasmlarni esa `asset-diet` bilan siqadi.
-2. **Tayyor Kod -> Figma Ekran (`figma-generate-design` + `figma-use`):**
-   - Agar sizda kodda tayyor ishlab turgan sahifa bor bo'lsa-yu, dizaynerda uning yangi Figma varianti bo'lmasa — agentingiz kodni o'qib, Figma fayl ichiga haqiqiy auto-layout'li ekranlarni qismma-qism chizib beradi.
-3. **Kod bazasidan Figma Design System yaratish (`figma-generate-library` + `figma-use`):**
-   - Loyihadagi CSS/Tailwind yoki React Native rang, shrift va komponent tokenlarini o'qib, Figma'da tayyor Variable (`Light/Dark mode`) va Component Library qurib beradi.
-
----
-
-## 3. `agent-desktop` va `graphify` ning Ko'p Bilinmaydigan Imkoniyatlari
+## 2. `agent-desktop` va `graphify` ning Ko'p Bilinmaydigan Imkoniyatlari
 
 ### A. `agent-desktop` — Faqat Chrome uchun emas
 - **Har qanday macOS dasturini fonda boshqarish:** Postman, Docker Desktop, Finder, Terminal, Telegram Desktop, tizim menyulari (`menubar`, `sheet`, `popover`, `Notification Center`) va Electron ilovalarni (`launch --cdp`) sichqonchani qimirlatmasdan boshqaradi.

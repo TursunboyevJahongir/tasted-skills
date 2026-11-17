@@ -162,17 +162,12 @@ Fixes the 11 classic mobile browser annoyances (iOS input auto-zoom, jumping `10
 
 Finds and shrinks bloated PNG/JPG/WebP, SVG, video, and 3D files locally on your machine (nothing uploaded to the cloud) with 1-command rollback. Runs strictly on demand (`0` permanent MCP token overhead).
 
-### 20. [video-analyzer](practices/en/06-video-figma-and-db-workflows.md) — Frame-by-frame analysis of YouTube/Reels tutorials & QA bug recordings
+### 20. [video-analyzer](practices/en/06-video-and-desktop-workflows.md) — Frame-by-frame analysis of YouTube/Reels tutorials & QA bug recordings
 `✅ Using` · **Quality:** `9.0/10` · **How Often Needed:** `7.5/10` · **Type:** Skill + CLI (`ffmpeg` + `Whisper`) · **Date:** Since `2026-10-25`
 
 Combines `Whisper` audio transcripts with extracted scene-change frames ([bsisduck/video-analyzer-skill](https://github.com/bsisduck/video-analyzer-skill)) so AI sees both what was said and what flashed on screen — ideal for auditing tech videos/Reels and pinpointing exact timestamps in bug screen-recordings.
 
-### 21. [figma skill suite](practices/en/06-video-figma-and-db-workflows.md) — Two-way bridge: Figma -> Production Code & Production Code -> Figma
-`✅ Using` · **Quality:** `9.0/10` · **How Often Needed:** `7.5/10` · **Type:** Official Figma Skills + MCP · **Date:** Since `2026-10-20`
-
-Official Figma MCP (`mcp.figma.com`) two-way bridge: translates Figma frames into 1:1 production code using real tokens (`figma-implement-design`), and pushes code-built screens back into editable Figma layouts and component libraries (`figma-generate-design`, `figma-generate-library`).
-
-### 22. [Jev (TypeSafe AI)](reviews/en/external-apis/jev.md) — Sub-second (`~0.3s`), ultra-cheap server API for `true/false` & `select` image/text decisions
+### 21. [Jev (TypeSafe AI)](reviews/en/external-apis/jev.md) — Sub-second (`~0.3s`), ultra-cheap server API for `true/false` & `select` image/text decisions
 `✅ Using` · **Quality:** `9.0/10` · **How Often Needed:** `8.0/10` · **Type:** Cloud Decision Engine API (`System-1`) · **Date:** Since `2026-10`
 
 **Crucial distinction — this is NOT a generative chat or image-editing AI:** it is a non-autoregressive **decision (`judgment`) engine** that takes an image or text and returns **`true / false`** (`usable / unusable`) or **picks one option out of several (`select`)** with a `0–100%` confidence score. Across our media/video platform and other server backends, we needed to validate incoming images and pick best video frames across 3 options: **1) Paid GPT Vision API** — easy setup, but slow and expensive on image uploads; **2) Server-authenticated AI subscription (`GPT-6 Luna` `Medium`)** — cheaper since it uses our subscription, but multi-check image validation still takes **at least `~10 seconds` (`9–12s`)**, leaving users waiting; **3) `Jev`** — paid, yet **tiny in cost (`$0.042 / 1M` input, `$0.00` free output)** and **blazingly fast (`~0.3s`)**, easily outweighing its setup complexity when used in its exact lane. 📊 [typesafe.ai](https://typesafe.ai/) · [docs.typesafe.ai](https://docs.typesafe.ai/)
@@ -235,7 +230,7 @@ Capable multimodal (`text + image + video`, `1M` context) model, but its **`~250
 
 ### 🔌 External APIs
 
-> 💡 **Note:** Our primary production API for sub-second (`~0.3s`), ultra-cheap (`$0.042 / $0`) image & text validation (`true/false`) and multi-option `select` decisions is listed above in Top Essentials: [**#22. Jev (TypeSafe AI)**](reviews/en/external-apis/jev.md) (`✅ Using`).
+> 💡 **Note:** Our primary production API for sub-second (`~0.3s`), ultra-cheap (`$0.042 / $0`) image & text validation (`true/false`) and multi-option `select` decisions is listed above in Top Essentials: [**#21. Jev (TypeSafe AI)**](reviews/en/external-apis/jev.md) (`✅ Using`).
 
 #### [MiniMax M3.1 Flash API](reviews/en/external-apis/minimax-m3-1-flash-api.md) — Ultra-cheap, `170+ tok/s` multimodal API for product backend bots, translation & OCR
 `👍 Good Option` · **Quality:** `8.0/10` · **How Often Needed:** `5.0/10` · **Type:** Cloud Multimodal API · **Date:** `2026-11-16`

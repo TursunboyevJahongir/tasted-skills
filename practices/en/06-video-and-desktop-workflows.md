@@ -1,11 +1,11 @@
-# 6. Video Analysis (`video-analyzer`), Two-Way Figma Bridge (`figma`) & Additional Capabilities
+# 6. Video Analysis (`video-analyzer`) & Desktop/Graph Additional Capabilities
 
-[🇺🇿 O'zbekcha](../06-video-figma-and-db-workflows.md) | **🇬🇧 English** | [🇷🇺 Русский](../ru/06-video-figma-and-db-workflows.md)
+[🇺🇿 O'zbekcha](../06-video-and-desktop-workflows.md) | **🇬🇧 English** | [🇷🇺 Русский](../ru/06-video-and-desktop-workflows.md)
 
 ⬅️ [Back to Practices Table of Contents](README.md)
 
-- **Combined Tools:** [**video-analyzer**](https://github.com/bsisduck/video-analyzer-skill) + **Figma MCP & Skills** (`figma-implement-design`, `figma-generate-design`, `figma-use`) + [**agent-desktop**](../../reviews/en/developer-tools/agent-desktop.md) (`agent-desktop-ffi`) + [**graphify**](../../reviews/en/architecture/graphify.md)
-- **Target Tasks:** Video bug-report triage, motion/UI cloning from screen recordings, two-way Code <-> Figma sync, and high-speed desktop automation.
+- **Combined Tools:** [**video-analyzer**](https://github.com/bsisduck/video-analyzer-skill) + [**agent-desktop**](../../reviews/en/developer-tools/agent-desktop.md) (`agent-desktop-ffi`) + [**graphify**](../../reviews/en/architecture/graphify.md)
+- **Target Tasks:** Frame-by-frame video bug-report triage, motion/UI cloning from screen recordings, fact-checking demo videos, and high-speed desktop & multimodal graph automation.
 
 ---
 
@@ -28,20 +28,7 @@ When auditing viral tool reels or tutorials with [tasted-skills](../../skills/ta
 
 ---
 
-## 2. Official `figma` Skill Suite — A Two-Way Bridge (`Figma ↔ Code`)
-
-Official Figma MCP (`mcp.figma.com`) and skills (`figma`, `figma-implement-design`, `figma-generate-design`, `figma-generate-library`, `figma-use`) work **in both directions**:
-
-1. **Figma -> Production Code (`figma-implement-design` + `impeccable` + `asset-diet`):**
-   - Reads node tokens, auto-layout, and variables (not just screenshots) for 1:1 implementation, then compresses exported assets locally via `asset-diet`.
-2. **Production Code -> Figma Screens (`figma-generate-design` + `figma-use`):**
-   - Built a screen directly in code without a Figma mockup? Your agent can read the live page/component code and assemble editable, token-bound auto-layout screens inside Figma section by section.
-3. **Codebase -> Figma Design System (`figma-generate-library` + `figma-use`):**
-   - Extracts CSS/Tailwind or React Native tokens from your repo to build Figma Variables (`Light/Dark` modes) and component variants automatically.
-
----
-
-## 3. Non-Obvious Capabilities in `agent-desktop` & `graphify`
+## 2. Non-Obvious Capabilities in `agent-desktop` & `graphify`
 
 ### A. `agent-desktop` — Beyond Google Chrome
 - **Drive any macOS app in the background:** Controls Postman, Docker Desktop, Finder, Terminal, Telegram Desktop, system sheets/popovers/menus (`Notification Center`, `Menu Bar`), and Electron apps (`launch --cdp`) without moving the cursor.

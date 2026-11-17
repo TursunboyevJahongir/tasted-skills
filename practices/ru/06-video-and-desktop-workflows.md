@@ -1,11 +1,11 @@
-# 6. Видео-Анализ (`video-analyzer`), Двусторонний Мост Figma (`figma`) и Дополнительные Возможности
+# 6. Видео-Анализ (`video-analyzer`) и Дополнительные Возможности Desktop/Графа
 
-[🇺🇿 O'zbekcha](../06-video-figma-and-db-workflows.md) | [🇬🇧 English](../en/06-video-figma-and-db-workflows.md) | **🇷🇺 Русский**
+[🇺🇿 O'zbekcha](../06-video-and-desktop-workflows.md) | [🇬🇧 English](../en/06-video-and-desktop-workflows.md) | **🇷🇺 Русский**
 
 ⬅️ [Вернуться к оглавлению практик](README.md)
 
-- **Связка инструментов:** [**video-analyzer**](https://github.com/bsisduck/video-analyzer-skill) + **Figma MCP & Skills** (`figma-implement-design`, `figma-generate-design`, `figma-use`) + [**agent-desktop**](../../reviews/ru/developer-tools/agent-desktop.md) (`agent-desktop-ffi`) + [**graphify**](../../reviews/ru/architecture/graphify.md)
-- **Задачи:** Разбор видео-багрепортов, клонирование анимаций и UI-потоков с видео, двусторонняя синхронизация Код <-> Figma и быстрая десктоп-автоматизация.
+- **Связка инструментов:** [**video-analyzer**](https://github.com/bsisduck/video-analyzer-skill) + [**agent-desktop**](../../reviews/ru/developer-tools/agent-desktop.md) (`agent-desktop-ffi`) + [**graphify**](../../reviews/ru/architecture/graphify.md)
+- **Задачи:** Покадровый разбор видео-багрепортов, клонирование анимаций и UI-потоков с видео, проверка рекламных роликов и быстрая десктоп-автоматизация.
 
 ---
 
@@ -28,20 +28,7 @@
 
 ---
 
-## 2. Официальное семейство скиллов `figma` — Двусторонний мост (`Figma ↔ Код`)
-
-Официальный Figma MCP (`mcp.figma.com`) и скиллы (`figma`, `figma-implement-design`, `figma-generate-design`, `figma-generate-library`, `figma-use`) работают **в обе стороны**:
-
-1. **Figma -> Продакшен-код (`figma-implement-design` + `impeccable` + `asset-diet`):**
-   - Читает не просто картинку, а точные токены, auto-layout и переменные узла для переноса 1:1, а экспортированные изображения сразу сжимает через `asset-diet`.
-2. **Готовый Код -> Экраны в Figma (`figma-generate-design` + `figma-use`):**
-   - Если страница уже свёрстана в коде, а макета в Figma нет — агент читает код и секция за секцией собирает редактируемые auto-layout экраны прямо внутри файла Figma.
-3. **Кодовая база -> Дизайн-система в Figma (`figma-generate-library` + `figma-use`):**
-   - Извлекает цвета, шрифты и токены из CSS/Tailwind или React Native и автоматически строит в Figma Variables (`Light/Dark` темы) и библиотеку компонентов.
-
----
-
-## 3. Неочевидные возможности `agent-desktop` и `graphify`
+## 2. Неочевидные возможности `agent-desktop` и `graphify`
 
 ### A. `agent-desktop` — Далеко не только для Chrome
 - **Фоновое управление любым приложением macOS:** Управляет Postman, Docker Desktop, Finder, Terminal, Telegram Desktop, системными меню (`menubar`, `sheet`, `popover`, `Notification Center`) и Electron-приложениями (`launch --cdp`) без перехвата мыши.
