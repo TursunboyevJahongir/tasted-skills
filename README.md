@@ -5,7 +5,7 @@
 **Holatlar (qaysi belgi nimani bildiradi):**
 - `✅ Ishlatyapman` — har kuni doimiy ishlataman.
 - `👍 Yaxshi variant` — sifatli vosita, mos vaziyat chiqqanda ishlatishga arziydi.
-- `🔄 Alternativi yaxshiroq` — o'zi yaxshi, shunchaki bizda undan qulayroq muqobili bor.
+- 🔄 **Alternativi yaxshiroq:** `[havola]` — o'zi yaxshi, shunchaki bizda undan qulayroq muqobili bor (alohida qatorda havolasi bilan beriladi).
 - `⚠️ Tavsiya etilmaydi` — xavfi yoki zarari bor (har birida sababi yozilgan).
 
 **Baholar (ikkisi ikki xil narsa):**
@@ -187,6 +187,24 @@ Dasturchining kuchli kompyuterida tez ishlagan sayt yoki TV ilova oddiy foydalan
 
 AI modellarining xotirasida eski Drizzle `v1` sintaksisi qolib ketgani sababli baza so'rovlarida xato yozib qo'yadi. Bu skill AI'ga yangi `v2 defineRelations` qoidalarini berib, birinchi urinishdayoq to'g'ri SQL sxema va so'rov yozdiradi.
 
+### 25. [Jev (TypeSafe AI)](reviews/external-apis/jev.md) — Rasm va matndan `~0.3s` da qaror (`true/false` va `select`) chiqaruvchi juda arzon server API
+`✅ Ishlatyapman` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `8.0/10` · **Turi:** Cloud Decision Engine API (`System-1`) · **Sana:** `2026-10` dan
+
+**Muhim farq — bu matn yozadigan yoki rasm tahrirlaydigan AI model emas:** u faqat berilgan rasm yoki matnni tekshirib **`true / false`** (`yaroqli / yaroqsiz`) yoki **bir nechta variantdan eng mosini tanlab (`select`)** ishonch foizi (`0–100%`) bilan qaytaradigan qaror dvigateli. Media/video platformamiz va boshqa server loyihalarimizda kelgan rasmlar yaroqliligini tekshirish hamda video kadrlardan eng yaxshisini tanlashda 3 ta yo'ldan aynan shuni tanlaganmiz: **1) Pullik GPT API** — ulash oson, lekin rasm yuborilganda qimmat va sekin; **2) Serverda o'z AI obunamizdan (`GPT-6 Luna` `Medium`) ishlatish** — arzonroq, lekin eng tez rejimda ham rasmni bir necha tekshiruvdan o'tkazishga **kamida `~10 soniya` (`9–12s`)** ketib mijoz kutib qoladi; **3) `Jev`** — pullik bo'lsa ham **nihoyatda arzon (`$0.042 / 1M` kirish, chiqish `$0.00` tekin)** va **juda tez (`~0.3s`)** ishlagani barcha kamchiliklarini yopib ketadi. 📊 [typesafe.ai](https://typesafe.ai/) · [docs.typesafe.ai](https://docs.typesafe.ai/)
+
+> [!WARNING]
+> **Faqat o'z joyida va himoya (`Fallback`) bilan ishlating:** 1) Sozlash "o'rnatding — ishladi" emas, savollarni real holatlarda sinab kalibrlash shart; 2) Yoniga albatta kuchliroq AI (`GPT-6 Luna` / `Codex` / GPT) qo'ying — `Jev` ikkilansa (**ishonchi `< 80%`** bo'lsa) so'rovni o'sha AI'ga o'tkazing; 3) Ba'zan connect bermay yoki javob qaytarmay qolishi mumkin — qat'iy `timeout` (`3–6s`) va zaxira AI'ga avto-o'tish (`failover`) qo'yish majburiy!
+
+<details>
+<summary>📊 Solishtiruv va statistika (`Jev` vs `GPT Vision API` vs `GPT-6 Luna Medium`)</summary>
+
+- **1-yo'l — Pullik `GPT Vision API` (`GPT-5`):** `$1.25` kirish / `$10.00` chiqish (`1M` tokenga), javob vaqti `~4–10+ soniya` — katta rasm oqimida juda qimmat.
+- **2-yo'l — Server AI obuna (`GPT-6 Luna Medium`):** Obuna ichida arzon (yoki API'da `$0.10 / $0.50`), lekin 6 bandli rasm tekshiruvida **`p50: ~9.02–12.4 soniya`** — foydalanuvchi kutib qoladi.
+- **3-yo'l — `Jev` (`TypeSafe AI`) + `<80%` Fallback:** Kirish **`$0.042 / 1M`** va chiqish **`$0.00` (`Luna` API'dan `~2.4x–10x`, `GPT-5` dan `~30x–100x+` arzon)**, 6 savolli rasm tekshiruvi **`p50: ~0.30–0.35 soniya` (`~25–30x` tezroq)**, 6 ta video kadrdan `main` tanlash `~3.3s`.
+- 📖 [Batafsil sharh va server arxitekturasi →](reviews/external-apis/jev.md) · [Pastdagi solishtiruv ↓](#batafsil-solishtirishlar)
+
+</details>
+
 ---
 
 ## Yo'nalishlar bo'yicha
@@ -194,9 +212,10 @@ AI modellarining xotirasida eski Drizzle `v1` sintaksisi qolib ketgani sababli b
 ### 🧠 Lokal modellar
 
 #### [kimi-k3-in-c](reviews/local-models/kimi-k3-in-c.md) — `2.78T` gigant modelni GPU'siz SSD diskdan o'qish eksperimenti
-`⚠️ Tavsiya etilmaydi` · **Sifat:** `8.5/10` *(C99 eksperiment sifatida)* · **Ishda kerak bo'lishi:** `1.0/10` · **Turi:** C99 CLI Engine (`2.78T` MoE) · **Sana:** `2026-11-16`
+`⚠️ Tavsiya etilmaydi` · **Sifat:** `8.5/10` *(C99 eksperiment sifatida)* · **Ishda kerak bo'lishi:** `1.0/10` · **Turi:** C99 CLI Engine (`2.78T` MoE) · **Sana:** `2026-11-16`<br>
+🔄 **Alternativi yaxshiroq:** [Ollama](https://ollama.com/library/qwen3-coder) / `MLX` (`Qwen3-Coder`)
 
-Katta `Kimi K3` modelini videokartasiz to'g'ridan-to'g'ri NVMe SSD diskdan o'qib ishlatish tajribasi. Modelning o'zi kuchli bo'lsa ham, diskdan stream qilish usulida **amaliy kod yozib bo'lmaydi**. 👉 **Yaxshiroq lokal alternativ:** `32–64 GB` Mac RAM'iga to'liq sig'adigan **`Ollama` / `MLX` (`Qwen3-Coder`)**. 📊 [GitHub](https://github.com/FareedKhan-dev/kimi-k3-in-c) · [Artificial Analysis](https://artificialanalysis.ai/leaderboards/models)
+Katta `Kimi K3` modelini videokartasiz to'g'ridan-to'g'ri NVMe SSD diskdan o'qib ishlatish tajribasi. Modelning o'zi kuchli bo'lsa ham, diskdan stream qilish usulida **amaliy kod yozib bo'lmaydi** (`32–64 GB` Mac RAM'iga to'liq sig'adigan `Ollama / MLX Qwen3-Coder` ishlating). 📊 [GitHub](https://github.com/FareedKhan-dev/kimi-k3-in-c) · [Artificial Analysis](https://artificialanalysis.ai/leaderboards/models)
 
 > [!WARNING]
 > **Xavf (SSD umri va kod sizib chiqishi):** Bitta `500` tokenlik javob uchun NVMe diskdan **`~50 TB` o'qish** bo'lib, lehimlangan noutbuk SSD umrini (`TBW`) tez yeb bitiradi; tekin `:free` proxy'larga esa yopiq loyiha kodini ulamang.
@@ -211,9 +230,10 @@ Katta `Kimi K3` modelini videokartasiz to'g'ridan-to'g'ri NVMe SSD diskdan o'qib
 </details>
 
 #### [MiniMax-M3.1-Flash *(Lokal)*](reviews/local-models/minimax-m3-1-flash.md) — `428B` multimodal modelni lokal kompyuterda ko'tarish
-`⚠️ Tavsiya etilmaydi` · **Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `1.0/10` · **Turi:** Open-Weight `428B` MoE (`~23B` aktiv) · **Sana:** `2026-11-16`
+`⚠️ Tavsiya etilmaydi` · **Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `1.0/10` · **Turi:** Open-Weight `428B` MoE (`~23B` aktiv) · **Sana:** `2026-11-16`<br>
+🔄 **Alternativi yaxshiroq:** [Ollama (Qwen3-Coder)](https://ollama.com/library/qwen3-coder) *(lokal kod uchun)* · [MiniMax M3.1 Flash API](reviews/external-apis/minimax-m3-1-flash-api.md) *(bulut API)*
 
-Matn, rasm va videoni tushunadigan (`1M` kontekst) tezkor model, lekin lokal o'rnatish uchun og'irligi **`~250–285 GB`** — oddiy dasturchi kompyuterlariga sig'maydi va murakkab repozitoriy arxitekturasida asosiy coder emas (`Terminal-Bench 4.0: 38.1%`). 👉 **Yaxshiroq alternativ:** lokalda kod yozish uchun **`Ollama` / `MLX` (`Qwen3-Coder`)**; aynan shu model kerak bo'lsa — [🔌 **`MiniMax M3.1 Flash API`**](reviews/external-apis/minimax-m3-1-flash-api.md). 📊 [HuggingFace](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [OpenRouter](https://openrouter.ai/minimax/minimax-m3.1-flash)
+Matn, rasm va videoni tushunadigan (`1M` kontekst) tezkor model, lekin lokal o'rnatish uchun og'irligi **`~250–285 GB`** — oddiy dasturchi kompyuterlariga sig'maydi va murakkab repozitoriy arxitekturasida asosiy coder emas (`Terminal-Bench 4.0: 38.1%`). 📊 [HuggingFace](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash) · [OpenRouter](https://openrouter.ai/minimax/minimax-m3.1-flash)
 
 > [!WARNING]
 > **Xavf:** `32–64 GB` kompyuterda disk-offload/swap orqali majburlab yoqish SSD'ni yemiradi, begona kvantlarda `trust_remote_code=True` (`RCE`) xavfi bor, tekin veb-kreditlar va `:free` endpointlarda esa yopiq kod model o'qitishga ketib qoladi.
@@ -229,6 +249,8 @@ Matn, rasm va videoni tushunadigan (`1M` kontekst) tezkor model, lekin lokal o'r
 </details>
 
 ### 🔌 Tashqi API'lar
+
+> 💡 **Eslatma:** Serverlarimizda rasm va matn yaroqliligini tekshirish (`true/false`) hamda variantlardan tanlash (`select`) uchun har kuni ishlatayotgan eng tez (`~0.3s`) va arzon (`$0.042 / $0`) vositamiz — yuqoridagi [**#25. Jev (TypeSafe AI)**](reviews/external-apis/jev.md) (`✅ Ishlatyapman`).
 
 #### [MiniMax M3.1 Flash API](reviews/external-apis/minimax-m3-1-flash-api.md) — Mahsulot backendi (chatbot, tarjima, rasm/video OCR) uchun juda arzon va tez API
 `👍 Yaxshi variant` · **Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `5.0/10` · **Turi:** Cloud Multimodal API · **Sana:** `2026-11-16`
@@ -265,14 +287,16 @@ Noldan **yangi landing page, mahsulot taqdimot sayti (promo-sayt) qurish** yoki 
 </details>
 
 #### [taste-skill v2.5](reviews/web/taste-skill.md) — Noldan chiroyli reklama va promo-landing sahifalar qurish to'plami
-`👍 Yaxshi variant` · **Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `3.5/10` · **Turi:** Landing Kit + Hook · **Sana:** `2026-11-15`
+`👍 Yaxshi variant` · **Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `3.5/10` · **Turi:** Landing Kit + Hook · **Sana:** `2026-11-15`<br>
+🔄 **Alternativi yaxshiroq:** [Hallmark v2](reviews/web/hallmark.md) *(landing page uchun)* · [impeccable](reviews/ui-ux/impeccable.md) *(kundalik UI uchun)*
 
-Promo-landing yig'ish uchun yaxshi variant, lekin hozir landing sahifalar uchun undan ko'ra 👉 [**`Hallmark v2`**](reviews/web/hallmark.md) kuchliroq va xavfsizroq (kundalik mahsulot UI'i uchun esa 👉 [**`impeccable`**](reviews/ui-ux/impeccable.md)). *Agar `taste-skill` olinsa, ichidagi 600s `Stop` hookni olib tashlab faqat `-p` da ishlatish shart.*
+WebGL shaderli promo-landing yig'ish uchun yaxshi variant, lekin odatiy landing sahifalar uchun `Hallmark v2` kuchliroq va xavfsizroq. *Agar `taste-skill` olinsa, ichidagi 600s `Stop` hookni olib tashlab faqat `-p` da ishlatish shart.*
 
 #### [vercel-labs/ui](reviews/web/vercel-ui-sdk.md) — Faqat o'zining `@ui-sdk/*` teglarida yozilgan saytlarnigina ko'radigan Beta kutubxona
-`🔄 Alternativi yaxshiroq` · **Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `2.0/10` · **Turi:** `@ui-sdk/*` Library + Skill (`Beta`) · **Sana:** `2026-11-16`
+🔄 **Alternativi yaxshiroq:** [agent-desktop](reviews/developer-tools/agent-desktop.md) + [impeccable](reviews/ui-ux/impeccable.md)<br>
+**Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `2.0/10` · **Turi:** `@ui-sdk/*` Library + Skill (`Beta`) · **Sana:** `2026-11-16`
 
-Vercel Labs'ning g'oyasi qiziq (`8.0/10`), lekin *"skrinshotsiz 2x tez agent boshqaruvi"* faqat noldan `@ui-sdk/*` komponentlarida qayta yozilgan saytlardagina ishlaydi (oddiy `<button>`, `<input>`, `Shadcn`/`Radix` va `Expo` da ishlamaydi). 👉 **Yaxshiroq alternativ:** har qanday tayyor sayt va dasturda qayta yozishsiz ishlaydigan [**`agent-desktop`**](reviews/developer-tools/agent-desktop.md) + [**`impeccable`**](reviews/ui-ux/impeccable.md).
+Vercel Labs'ning g'oyasi qiziq (`8.0/10`), lekin *"skrinshotsiz 2x tez agent boshqaruvi"* faqat noldan `@ui-sdk/*` komponentlarida qayta yozilgan saytlardagina ishlaydi (oddiy `<button>`, `<input>`, `Shadcn`/`Radix` va `Expo` da ishlamaydi).
 
 <details>
 <summary>📊 Solishtiruv va statistika (`vercel-labs/ui` vs `agent-desktop`)</summary>
@@ -286,14 +310,16 @@ Vercel Labs'ning g'oyasi qiziq (`8.0/10`), lekin *"skrinshotsiz 2x tez agent bos
 ### 📱 Mobile
 
 #### [swiftui-agent-skill](reviews/mobile/swiftui-agent-skill.md) — Sof Apple SwiftUI (`Widget`, `Live Activity`) qoidalari to'plami
-`👍 Yaxshi variant` · **Sifat:** `8.5/10` · **Ishda kerak bo'lishi:** `3.0/10` · **Turi:** Skill · **Sana:** `2026-11-16`
+`👍 Yaxshi variant` · **Sifat:** `8.5/10` · **Ishda kerak bo'lishi:** `3.0/10` · **Turi:** Skill · **Sana:** `2026-11-16`<br>
+🔄 **Alternativi yaxshiroq *(Expo uchun)*:** [impeccable](reviews/ui-ux/impeccable.md) + [animate-expo](reviews/mobile/animate-expo.md)
 
-Sof SwiftUI va Apple dizayn qoidalari juda yuqori sifatda (`8.5/10`) yozilgan. `Ishda kerak bo'lishi: 3.0/10` bo'lishining yagona sababi — asosiy mobil stekimiz `Expo / React Native` ekanligi; iPhone uchun alohida native Widget yoki Live Activity yozilganda `-p` qilib ulashga eng zo'r variant. 👉 **Kundalik Expo ishlarimiz uchun:** [**`impeccable`**](reviews/ui-ux/impeccable.md) + [**`animate-expo`**](reviews/mobile/animate-expo.md).
+Sof SwiftUI va Apple dizayn qoidalari juda yuqori sifatda (`8.5/10`) yozilgan. `Ishda kerak bo'lishi: 3.0/10` bo'lishining yagona sababi — asosiy mobil stekimiz `Expo / React Native` ekanligi; iPhone uchun alohida native Widget yoki Live Activity yozilganda `-p` qilib ulashga eng zo'r variant.
 
 #### [ARTEMIS](reviews/mobile/artemis.md) — Google'ning rasm va OCR orqali o'zi yuradigan avtonom Android QA agenti
-`👍 Yaxshi variant` · **Sifat:** `8.5/10` · **Ishda kerak bo'lishi:** `2.5/10` · **Turi:** Python CLI / SDK + MCP · **Sana:** `2026-11-16`
+`👍 Yaxshi variant` · **Sifat:** `8.5/10` · **Ishda kerak bo'lishi:** `2.5/10` · **Turi:** Python CLI / SDK + MCP · **Sana:** `2026-11-16`<br>
+🔄 **Alternativi yaxshiroq *(kundalik QA uchun)*:** [agent-device](reviews/mobile/agent-device.md)
 
-Oddiy UI daraxti ko'rinmaydigan o'yin yoki murakkab `Canvas` ekranlarini rasm (`OCR`) orqali tekshirishda juda kuchli (`AndroidWorld: 99%+`), faqat kundalik ishda kam kerak bo'ladi (`2.5/10`). 👉 **Kundalik bepul va tezkor alternativ:** `iOS + Android + TV` da `0.2–0.9s` da ishlaydigan [**`agent-device`**](reviews/mobile/agent-device.md).
+Oddiy UI daraxti ko'rinmaydigan o'yin yoki murakkab `Canvas` ekranlarini rasm (`OCR`) orqali tekshirishda juda kuchli (`AndroidWorld: 99%+`), faqat kundalik ishda kam kerak bo'ladi (`2.5/10`).
 
 > [!WARNING]
 > **Xarajat eslatmasi:** "Open-source" bo'lsa ham, ishlatish **pullik** — `.env` ga alohida per-token pullik LLM API kalit ulashni talab qiladi va global `artemis mcp --install all` qilib o'rnatmaslik kerak.
@@ -308,9 +334,10 @@ Oddiy UI daraxti ko'rinmaydigan o'yin yoki murakkab `Canvas` ekranlarini rasm (`
 </details>
 
 #### [mobile-mcp](reviews/mobile/mobile-mcp.md) — Kontekstni shishiradigan va `agent-device` dan `6.5x–37x` sekin mobil MCP server
-`⚠️ Tavsiya etilmaydi` · **Sifat:** `7.0/10` · **Ishda kerak bo'lishi:** `2.0/10` · **Turi:** MCP Server (34 tool) · **Sana:** `2026-11-16`
+`⚠️ Tavsiya etilmaydi` · **Sifat:** `7.0/10` · **Ishda kerak bo'lishi:** `2.0/10` · **Turi:** MCP Server (34 tool) · **Sana:** `2026-11-16`<br>
+🔄 **Alternativi yaxshiroq:** [agent-device](reviews/mobile/agent-device.md) + [adb](reviews/mobile/adb.md)
 
-Mobil ekranlarni MCP orqali boshqarish serveri, lekin jonli sinovda ham tezlik, ham token tejamkorligi bo'yicha yutqazdi. 👉 **Yaxshiroq alternativ:** [**`agent-device`**](reviews/mobile/agent-device.md) + [**`adb`**](reviews/mobile/adb.md).
+Mobil ekranlarni MCP orqali boshqarish serveri, lekin jonli sinovda ham tezlik, ham token tejamkorligi bo'yicha yutqazdi.
 
 > [!WARNING]
 > **Nega tavsiya etilmaydi:** Ishlatmasangiz ham har bitta xabarda **`~7,580` token kontekstni bekorga band qiladi** va ichida `Scarf` + `PostHog` telemetriyasi hamda `mobilenext.ai` cloud reklamalari bor.
@@ -327,19 +354,22 @@ Mobil ekranlarni MCP orqali boshqarish serveri, lekin jonli sinovda ham tezlik, 
 ### 🎨 UI/UX
 
 #### [animate](reviews/ui-ux/animate.md) — Emil Kowalski'ning Web animatsiya skilli
-`🔄 Alternativi yaxshiroq` · **Sifat:** `8.5/10` · **Ishda kerak bo'lishi:** `3.0/10` · **Turi:** Skill (2 fayl) · **Sana:** `2026-11-15`
+🔄 **Alternativi yaxshiroq:** [impeccable](reviews/ui-ux/impeccable.md) (`animate`) + [animate-expo](reviews/mobile/animate-expo.md)<br>
+**Sifat:** `8.5/10` · **Ishda kerak bo'lishi:** `3.0/10` · **Turi:** Skill (2 fayl) · **Sana:** `2026-11-15`
 
-Veb-animatsiya qoidalari sifatli (`8.5/10`), lekin faqat Web uchun yozilgan va o'rnatilsa mobil `animate-expo` bilan auto-trigger to'qnashuvi beradi. 👉 **Yaxshiroq alternativ:** xuddi shu Web motion qoidalarini ham, mobil `60/120fps` animatsiyani ham to'qnashuvsiz qamrab oladigan [**`impeccable`**](reviews/ui-ux/impeccable.md) (`animate`) + [**`animate-expo`**](reviews/mobile/animate-expo.md).
+Veb-animatsiya qoidalari sifatli (`8.5/10`), lekin faqat Web uchun yozilgan va o'rnatilsa mobil `animate-expo` bilan auto-trigger to'qnashuvi beradi.
 
 #### [unslop](reviews/ui-ux/unslop.md) — AI chizgan veb-sahifalarni 9 bosqichda tozalovchi skill
-`🔄 Alternativi yaxshiroq` · **Sifat:** `8.5/10` · **Ishda kerak bo'lishi:** `2.5/10` · **Turi:** Skill + Playwright skriptlar · **Sana:** `2026-11-16`
+🔄 **Alternativi yaxshiroq:** [impeccable](reviews/ui-ux/impeccable.md) (`polish` / `quieter` / `clarify`)<br>
+**Sifat:** `8.5/10` · **Ishda kerak bo'lishi:** `2.5/10` · **Turi:** Skill + Playwright skriptlar · **Sana:** `2026-11-16`
 
-Veb-sahifalardagi "AI-slop" shablonlarni yaxshi tozalaydi (`8.5/10`), lekin mobil ilovalarda ishlamaydi va `impeccable` bilan bir xil joyda uyg'onadi. 👉 **Yaxshiroq alternativ:** ham Web, ham Mobil UI'ni tozalaydigan [**`impeccable`**](reviews/ui-ux/impeccable.md) (`polish` / `quieter` / `clarify`).
+Veb-sahifalardagi "AI-slop" shablonlarni yaxshi tozalaydi (`8.5/10`), lekin mobil ilovalarda ishlamaydi va `impeccable` bilan bir xil joyda uyg'onadi.
 
 #### [break-ui](reviews/ui-ux/break-ui.md) — UI'ni uzun/bo'sh matnlar bilan stress-test qiluvchi skill
-`🔄 Alternativi yaxshiroq` · **Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `3.0/10` · **Turi:** Skill (2 fayl) · **Sana:** `2026-11-15`
+🔄 **Alternativi yaxshiroq:** [impeccable](reviews/ui-ux/impeccable.md) (`harden`)<br>
+**Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `3.0/10` · **Turi:** Skill (2 fayl) · **Sana:** `2026-11-15`
 
-Sahifaga ekstremal uzun ism yoki bo'sh ro'yxat kiritib qayeri sinishini ko'rsatadi (`8.0/10`), biroq repoga vaqtinchalik test tugmalar qo'shib ketadi va xatoni o'zi tuzatmaydi. 👉 **Yaxshiroq alternativ:** xatoni topiboq kodda darhol tuzatib ketadigan [**`impeccable`**](reviews/ui-ux/impeccable.md) (`harden`).
+Sahifaga ekstremal uzun ism yoki bo'sh ro'yxat kiritib qayeri sinishini ko'rsatadi (`8.0/10`), biroq repoga vaqtinchalik test tugmalar qo'shib ketadi va xatoni o'zi tuzatmaydi.
 
 <details>
 <summary>📊 Solishtiruv (`break-ui` vs `impeccable harden`)</summary>
@@ -351,34 +381,39 @@ Sahifaga ekstremal uzun ism yoki bo'sh ro'yxat kiritib qayeri sinishini ko'rsata
 </details>
 
 #### [make-interfaces-feel-better](reviews/ui-ux/make-interfaces-feel-better.md) — Mayda UI detallarni tekshiruvchi veb-skill
-`🔄 Alternativi yaxshiroq` · **Sifat:** `7.5/10` · **Ishda kerak bo'lishi:** `2.5/10` · **Turi:** Skill (6 fayl) · **Sana:** `2026-10-31 → 2026-11-15`
+🔄 **Alternativi yaxshiroq:** [impeccable](reviews/ui-ux/impeccable.md) + [animate-expo](reviews/mobile/animate-expo.md)<br>
+**Sifat:** `7.5/10` · **Ishda kerak bo'lishi:** `2.5/10` · **Turi:** Skill (6 fayl) · **Sana:** `2026-10-31 → 2026-11-15`
 
-Chegara, burchak radiusi va soyalar bo'yicha yaxshi maslahatlari bor, lekin 16 kun ishlatganimizda oddiy UI o'zgarishida ham 4 tadan uzun Markdown jadval chiqarib tokenni ko'p yegani uchun olib tashlandi. 👉 **Yaxshiroq alternativ:** [**`impeccable`**](reviews/ui-ux/impeccable.md) + [**`animate-expo`**](reviews/mobile/animate-expo.md).
+Chegara, burchak radiusi va soyalar bo'yicha yaxshi maslahatlari bor, lekin 16 kun ishlatganimizda oddiy UI o'zgarishida ham 4 tadan uzun Markdown jadval chiqarib tokenni ko'p yegani uchun olib tashlandi.
 
 #### [ui-ux-pro-max](reviews/ui-ux/ui-ux-pro-max.md) — CSV jadvallardan rang va shrift tanlovchi skill
-`🔄 Alternativi yaxshiroq` · **Sifat:** `7.0/10` · **Ishda kerak bo'lishi:** `3.5/10` · **Turi:** Skill + CSV/Python · **Sana:** `2026-11-15`
+🔄 **Alternativi yaxshiroq:** [impeccable](reviews/ui-ux/impeccable.md) (`APCA` kontrast bilan)<br>
+**Sifat:** `7.0/10` · **Ishda kerak bo'lishi:** `3.5/10` · **Turi:** Skill + CSV/Python · **Sana:** `2026-11-15`
 
-Tayyor CSV ro'yxatdan rang va shrift taklif qiladi, lekin bir xil shablon dizayn beradi va `impeccable` bilan to'qnashadi. 👉 **Yaxshiroq alternativ:** [**`impeccable`**](reviews/ui-ux/impeccable.md) (`APCA` kontrast bilan).
+Tayyor CSV ro'yxatdan rang va shrift taklif qiladi, lekin bir xil shablon dizayn beradi va `impeccable` bilan to'qnashadi.
 
 ### 🏗️ Arxitektura va Review
 
 #### [addy-agent-skills](reviews/architecture/addy-agent-skills.md) — Addy Osmani'ning 25 ta skilldan iborat `/spec -> /ship` to'plami
-`🔄 Alternativi yaxshiroq` · **Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `2.5/10` · **Turi:** Plugin (25 skill + 9 command) · **Sana:** `2026-11-16`
+🔄 **Alternativi yaxshiroq:** [grill-me](reviews/architecture/grill-me.md) + [ponytail](reviews/architecture/ponytail.md) + [elephant-goldfish-model](reviews/architecture/elephant-goldfish-model.md)<br>
+**Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `2.5/10` · **Turi:** Plugin (25 skill + 9 command) · **Sana:** `2026-11-16`
 
-Muhandislik intizomi sifatli (`8.0/10`), lekin har bir oddiy vazifani majburiy TDD va ko'p bosqichli to'xtashlarga solgani uchun kundalik ishni sekinlashtiradi. 👉 **Yaxshiroq alternativ:** tez va og'ir byurokratiyasiz ishlaydigan [**`grill-me`**](reviews/architecture/grill-me.md) + [**`ponytail`**](reviews/architecture/ponytail.md) + [**`elephant-goldfish-model`**](reviews/architecture/elephant-goldfish-model.md).
+Muhandislik intizomi sifatli (`8.0/10`), lekin har bir oddiy vazifani majburiy TDD va ko'p bosqichli to'xtashlarga solgani uchun kundalik ishni sekinlashtiradi.
 
 #### [agency-agents](reviews/architecture/agency-agents.md) — 283 ta rol-promptlar ("Sen marketologsan / dizaynersan") to'plami
-`⚠️ Tavsiya etilmaydi` · **Sifat:** `6.5/10` · **Ishda kerak bo'lishi:** `2.5/10` · **Turi:** 283 persona prompt + installer · **Sana:** `2026-11-16`
+`⚠️ Tavsiya etilmaydi` · **Sifat:** `6.5/10` · **Ishda kerak bo'lishi:** `2.5/10` · **Turi:** 283 persona prompt + installer · **Sana:** `2026-11-16`<br>
+🔄 **Alternativi yaxshiroq:** [impeccable](reviews/ui-ux/impeccable.md) + [ponytail](reviews/architecture/ponytail.md) + [elephant-goldfish-model](reviews/architecture/elephant-goldfish-model.md)
 
-18 bo'lim bo'yicha 283 ta tayyor rol shablonlari jamlanmasi. 👉 **Yaxshiroq alternativ:** chuqur tekshirilgan [**`impeccable`**](reviews/ui-ux/impeccable.md), [**`ponytail`**](reviews/architecture/ponytail.md), [**`elephant-goldfish-model`**](reviews/architecture/elephant-goldfish-model.md).
+18 bo'lim bo'yicha 283 ta tayyor rol shablonlari jamlanmasi.
 
 > [!WARNING]
 > **Kontekst shishishi xavfi:** Hammasini global o'rnatganda yuzaki shablon gaplar uchun **`~18,500` token kontekstni doimiy band qilib**, agentning asosiy qoidalarga e'tiborini susaytiradi.
 
 #### [superpowers](reviews/architecture/superpowers.md) — Har qadamda majburiy TDD va savollar qo'shadigan 14-skill plagin
-`⚠️ Tavsiya etilmaydi` · **Sifat:** `6.5/10` · **Ishda kerak bo'lishi:** `2.0/10` · **Turi:** Plugin (14 skill + hook) · **Sana:** `2026-04-04 → 2026-09-01`
+`⚠️ Tavsiya etilmaydi` · **Sifat:** `6.5/10` · **Ishda kerak bo'lishi:** `2.0/10` · **Turi:** Plugin (14 skill + hook) · **Sana:** `2026-04-04 → 2026-09-01`<br>
+🔄 **Alternativi yaxshiroq:** [grill-me](reviews/architecture/grill-me.md) + [ponytail](reviews/architecture/ponytail.md) + [cross-platform-qa](reviews/mobile/cross-platform-qa.md)
 
-5 oy ishlatib ko'rib o'chirib tashlaganmiz. 👉 **Yaxshiroq alternativ:** [**`grill-me`**](reviews/architecture/grill-me.md) + [**`ponytail`**](reviews/architecture/ponytail.md) + [**`cross-platform-qa`**](reviews/mobile/cross-platform-qa.md).
+5 oy ishlatib ko'rib o'chirib tashlaganmiz.
 
 > [!WARNING]
 > **Vaqt va kvota zarari:** Har chat boshidagi `SessionStart` hook, keraksiz `brainstorming` savollari va Web/Mobil UI'da ham majburiy TDD talab qilishi sabab **ish vaqti hamda token sarfini `2x` oshirib yuboradi**.
@@ -395,14 +430,15 @@ Muhandislik intizomi sifatli (`8.0/10`), lekin har bir oddiy vazifani majburiy T
 ### ⚙️ Backend
 
 #### [opentelemetry](reviews/backend/opentelemetry.md) — O'nlab mikroservis va server yuklamasini kuzatish standarti
-`👍 Yaxshi variant` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `4.0/10` · **Turi:** Standard + Collector (`SigNoz` / `Grafana`) · **Sana:** `2026-11-15`
+`👍 Yaxshi variant` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `4.0/10` · **Turi:** Standard + Collector (`SigNoz` / `Grafana`) · **Sana:** `2026-11-15`<br>
+🔄 **Alternativi yaxshiroq *(hozirgi miqyosimiz uchun)*:** [sentry](reviews/backend/sentry.md)
 
-Katta infratuzilmada server CPU/RAM, DB ulanishlari va servislararo trace'larni kuzatish uchun eng kuchli sanoat standarti (`9.0/10`), faqat alohida `Collector + SigNoz/Grafana` klasterini talab qiladi. Hozirgi barcha xato, replay va bazaviy trace ehtiyojimizni bitta 👉 [**`sentry`**](reviews/backend/sentry.md) oson yopadi.
+Katta infratuzilmada server CPU/RAM, DB ulanishlari va servislararo trace'larni kuzatish uchun eng kuchli sanoat standarti (`9.0/10`), faqat alohida `Collector + SigNoz/Grafana` klasterini talab qiladi. Hozirgi barcha xato, replay va bazaviy trace ehtiyojimizni bitta `sentry` oson yopadi.
 
 #### [Shannon](reviews/backend/shannon.md) — Lokal/staging sayt va API'ga haqiqiy xakerdek hujum qilib tekshiruvchi AI pentester
-`👍 Yaxshi variant` · **Sifat:** `8.5/10` · **Ishda kerak bo'lishi:** `6.5/10` · **Turi:** Standalone CLI + [`hacker-test`](skills/hacker-test/SKILL.md) · **Sana:** `2026-11-16`
+`👍 Yaxshi variant` · **Sifat:** `8.5/10` · **Ishda kerak bo'lishi:** `6.5/10` · **Turi:** Standalone CLI + [hacker-test](skills/hacker-test/SKILL.md) · **Sana:** `2026-11-16`
 
-Katta reliz oldidan ko'tarilgan lokal yoki staging serverga real exploit so'rovlar (`Auth bypass`, `IDOR`, `SQLi`, `XSS`, `SSRF`) otib, teshiklarni amalda isbotlab beradi (`0` token kontekst yuki bilan [`hacker-test`](skills/hacker-test/SKILL.md) orqali chaqiriladi). Kundalik PR tekshiruvida esa Docker'siz 👉 [**`security-audit`**](reviews/backend/security-audit-skill.md) ishlatiladi.
+Katta reliz oldidan ko'tarilgan lokal yoki staging serverga real exploit so'rovlar (`Auth bypass`, `IDOR`, `SQLi`, `XSS`, `SSRF`) otib, teshiklarni amalda isbotlab beradi (`0` token kontekst yuki bilan [hacker-test](skills/hacker-test/SKILL.md) orqali chaqiriladi). Kundalik PR tekshiruvida esa Docker'siz 👉 [security-audit](reviews/backend/security-audit-skill.md) ishlatiladi.
 
 > [!WARNING]
 > **Qat'iy chegara:** Jonli bazani o'zgartiruvchi exploitlar otgani sababli **hech qachon production serverga qarshi ishga tushirmang** — faqat lokal yoki test/staging muhitda ishlating!
@@ -410,26 +446,27 @@ Katta reliz oldidan ko'tarilgan lokal yoki staging serverga real exploit so'rovl
 ### 🛠️ Developer Tools va Memory
 
 #### [REA](reviews/developer-tools/rea.md) — Manba kodi yo'q begona dastur, `.asar`, `.apk` va binarlarni ichidan ochib o'rganish
-`👍 Yaxshi variant` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `3.5/10` · **Turi:** Standalone CLI + [`rea`](skills/rea/SKILL.md) · **Sana:** `2026-11-17`
+`👍 Yaxshi variant` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `3.5/10` · **Turi:** Standalone CLI + [rea](skills/rea/SKILL.md) · **Sana:** `2026-11-17`
 
-Begona desktop/mobil/veb ilovadagi yoqqan funksiyani manba kodisiz (`Electron .asar`, JS bundle, Android `.apk`, `.NET`, `Mach-O`/`ELF`/`PE`) dalillari bilan tiklab beradi (`9.0/10`), shuningdek o'zimizning reliz paketimizda `.map`/`.dSYM` qolib ketmaganini tekshiradi (`audit-release-exposure`). Bizdagi [`rea`](skills/rea/SKILL.md) skilli orqali `"rea"` deb signal berilganda **avval Node.js versiyasini (eski bo'lsa kerakli versiyaga yangilab) hamda nishon turiga mos yordamchi dasturlarni (`openjdk`, `jadx`, `apktool`, `ghidra`, `rizin`) tekshirib o'rnatadi** va **`0` doimiy token yuki bilan** vaqtinchalik ishlab beradi. *(O'zimizning manba kodi bor loyihalarimiz uchun 👉 [**`graphify`**](reviews/architecture/graphify.md) ishlatiladi).*
+Begona desktop/mobil/veb ilovadagi yoqqan funksiyani manba kodisiz (`Electron .asar`, JS bundle, Android `.apk`, `.NET`, `Mach-O`/`ELF`/`PE`) dalillari bilan tiklab beradi (`9.0/10`), shuningdek o'zimizning reliz paketimizda `.map`/`.dSYM` qolib ketmaganini tekshiradi (`audit-release-exposure`). Bizdagi [rea](skills/rea/SKILL.md) skilli orqali `"rea"` deb signal berilganda **avval Node.js versiyasini (eski bo'lsa kerakli versiyaga yangilab) hamda nishon turiga mos yordamchi dasturlarni (`openjdk`, `jadx`, `apktool`, `ghidra`, `rizin`) tekshirib o'rnatadi** va **`0` doimiy token yuki bilan** vaqtinchalik ishlab beradi. *(O'zimizning manba kodi bor loyihalarimiz uchun 👉 [graphify](reviews/architecture/graphify.md) ishlatiladi).*
 
 > [!WARNING]
-> **Kontekst tuzog'i:** Hech qachon `npx rea-agents setup` orqali global MCP qilib ulamang — uning `200+` ta MCP tool'i har suhbatda **`~300 KB` (`~75,000+` token)** kontekstni bekorga yeb qo'yadi! Faqat bizdagi vaqtinchalik [`rea`](skills/rea/SKILL.md) skilli orqali ishlating.
+> **Kontekst tuzog'i:** Hech qachon `npx rea-agents setup` orqali global MCP qilib ulamang — uning `200+` ta MCP tool'i har suhbatda **`~300 KB` (`~75,000+` token)** kontekstni bekorga yeb qo'yadi! Faqat bizdagi vaqtinchalik [rea](skills/rea/SKILL.md) skilli orqali ishlating.
 
 <details>
 <summary>📊 Solishtiruv va statistika (Global `REA` MCP vs bizning `rea` skilli)</summary>
 
 - **Standart `npx rea-agents setup` bilan:** `200+` tool (`~75,000+` token har sessiyada) + `~198 KB` (`~50K` token) skill referenslar + `189.6 MB` npm hajm; `Node 24.20.0` da versiya xatosi bilan yiqiladi.
-- **Bizning [`rea`](skills/rea/SKILL.md) wrapper skilli bilan:** Kundalik suhbatlarda **`0` token yuk**; `"rea"` deb chaqirilganda mos `Node 26+`/`24.22+` ni o'zi tanlaydi (eski bo'lsa avto-yangilaydi), nishonga qarab yetishmayotgan dekompilyatorlarni aniqlab o'rnatadi va `/tmp` da ishlab, yakunda tozalab ketadi.
+- **Bizning [rea](skills/rea/SKILL.md) wrapper skilli bilan:** Kundalik suhbatlarda **`0` token yuk**; `"rea"` deb chaqirilganda mos `Node 26+`/`24.22+` ni o'zi tanlaydi (eski bo'lsa avto-yangilaydi), nishonga qarab yetishmayotgan dekompilyatorlarni aniqlab o'rnatadi va `/tmp` da ishlab, yakunda tozalab ketadi.
 - 📖 [Batafsil sharh →](reviews/developer-tools/rea.md) · [Pastdagi solishtiruv ↓](#batafsil-solishtirishlar)
 
 </details>
 
 #### [SkillSpector](reviews/developer-tools/skillspector.md) — NVIDIA'ning Docker va Python asosidagi skill-xavfsizlik skaneri
-`🔄 Alternativi yaxshiroq` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `3.5/10` · **Turi:** Python CLI + MCP + Skill · **Sana:** `2026-11-16`
+🔄 **Alternativi yaxshiroq:** [skillshare](reviews/developer-tools/skillshare.md) (`skillshare audit`) + AI manba tekshiruvi<br>
+**Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `3.5/10` · **Turi:** Python CLI + MCP + Skill · **Sana:** `2026-11-16`
 
-NVIDIA jamoasi yozgan juda sifatli skaner (`9.0/10`), lekin har bitta skill uchun alohida Python/Docker/YARA konveyerini ko'tarish kundalik ishda ortiqcha vaqt oladi. 👉 **Yaxshiroq va tezroq alternativ:** `0.1` soniyada ishlaydigan [**`skillshare`**](reviews/developer-tools/skillshare.md) (`skillshare audit`) + **AI agentimizga skill kodini bevosita o'qitib tekshirtirish**.
+NVIDIA jamoasi yozgan juda sifatli skaner (`9.0/10`), lekin har bitta skill uchun alohida Python/Docker/YARA konveyerini ko'tarish kundalik ishda ortiqcha vaqt oladi.
 
 <details>
 <summary>📊 Solishtiruv va statistika (`SkillSpector` vs `skillshare audit + AI tekshiruv`)</summary>
@@ -441,9 +478,10 @@ NVIDIA jamoasi yozgan juda sifatli skaner (`9.0/10`), lekin har bitta skill uchu
 </details>
 
 #### [T3 Code](reviews/developer-tools/t3-code.md) — Oldin ishlatgan ko'p-agentli desktop dasturimiz (`Orca` ga almashtirildi)
-`🔄 Alternativi yaxshiroq` · **Sifat:** `8.5/10` · **Ishda kerak bo'lishi:** `2.5/10` · **Turi:** Desktop App + CLI · **Sana:** `2026-10-23 → 2026-11-16`
+🔄 **Alternativi yaxshiroq:** [Orca](reviews/developer-tools/orca.md)<br>
+**Sifat:** `8.5/10` · **Ishda kerak bo'lishi:** `2.5/10` · **Turi:** Desktop App + CLI · **Sana:** `2026-10-23 → 2026-11-16`
 
-Yaxshi ishlangan desktop muhit (`8.5/10`), bir necha hafta kundalik ishlatdik. Keyinchalik telefon ilovasi (Beta) ekran o'chganda uzilib qolishi, kompyuter bloklanganda (`Lock Screen`) to'xtashi va Chat UI ichida subagent kartalari yo'qligi sabab o'chirildi (`~3.87 GB` joy bo'shadi). 👉 **Yaxshiroq alternativ:** har uchala kamchilikni hal qilgan [**`Orca`**](reviews/developer-tools/orca.md).
+Yaxshi ishlangan desktop muhit (`8.5/10`), bir necha hafta kundalik ishlatdik. Keyinchalik telefon ilovasi (Beta) ekran o'chganda uzilib qolishi, kompyuter bloklanganda (`Lock Screen`) to'xtashi va Chat UI ichida subagent kartalari yo'qligi sabab o'chirildi (`~3.87 GB` joy bo'shadi).
 
 <details>
 <summary>📊 Solishtiruv va statistika (`T3 Code` vs `Orca`)</summary>
@@ -455,9 +493,10 @@ Yaxshi ishlangan desktop muhit (`8.5/10`), bir necha hafta kundalik ishlatdik. K
 </details>
 
 #### [caveman](reviews/developer-tools/caveman.md) — AI suhbat javoblarini `~65%` gacha qisqartiruvchi skill
-`👍 Yaxshi variant` · **Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `3.5/10` · **Turi:** Skill *(+ ixtiyoriy CLI)* · **Sana:** `2026-11-16`
+`👍 Yaxshi variant` · **Sifat:** `8.0/10` · **Ishda kerak bo'lishi:** `3.5/10` · **Turi:** Skill *(+ ixtiyoriy CLI)* · **Sana:** `2026-11-16`<br>
+🔄 **Alternativi yaxshiroq:** [ponytail](reviews/architecture/ponytail.md)
 
-Chatdagi ortiqcha gap-so'zlarni qisqartirib chiqish matn tokenini tejaydi (`~65%`), lekin AI yozadigan kodning shishib ketishiga ta'sir qilmaydi. 👉 **Yaxshiroq alternativ:** ham javob matnini, ham yoziladigan kod/diff hajmini baravar qisqartiradigan [**`ponytail`**](reviews/architecture/ponytail.md). *(Agar `caveman` olinsa, telemetriyali CLI paketini emas, faqat toza yolg'iz `SKILL.md` faylini oling).*
+Chatdagi ortiqcha gap-so'zlarni qisqartirib chiqish matn tokenini tejaydi (`~65%`), lekin AI yozadigan kodning shishib ketishiga ta'sir qilmaydi. *(Agar `caveman` olinsa, telemetriyali CLI paketini emas, faqat toza yolg'iz `SKILL.md` faylini oling).*
 
 <details>
 <summary>📊 Solishtiruv va statistika (`caveman` vs `ponytail`)</summary>
@@ -469,19 +508,22 @@ Chatdagi ortiqcha gap-so'zlarni qisqartirib chiqish matn tokenini tejaydi (`~65%
 </details>
 
 #### [humanizer + stop-slop](reviews/developer-tools/humanizer-stop-slop.md) — Maqola va postlardagi "sun'iy intellekt ohangi"ni tozalovchi matn muharriri
-`🔄 Alternativi yaxshiroq` · **Sifat:** `7.5/10` · **Ishda kerak bo'lishi:** `2.0/10` · **Turi:** Skill (`Markdown`) · **Sana:** `2026-11-16`
+🔄 **Alternativi yaxshiroq:** [ponytail](reviews/architecture/ponytail.md) + [impeccable](reviews/ui-ux/impeccable.md) (`clarify`)<br>
+**Sifat:** `7.5/10` · **Ishda kerak bo'lishi:** `2.0/10` · **Turi:** Skill (`Markdown`) · **Sana:** `2026-11-16`
 
-Blog maqola va esselar yozuvchilar uchun foydali (`humanizer` `~32 KB` kontekst oladi), shunchaki dasturlash va mahsulot interfeysi uchun mo'ljallanmagan. 👉 **Kod va UI matnlari uchun alternativ:** [**`ponytail`**](reviews/architecture/ponytail.md) + [**`impeccable`**](reviews/ui-ux/impeccable.md) (`clarify`).
+Blog maqola va esselar yozuvchilar uchun foydali (`humanizer` `~32 KB` kontekst oladi), shunchaki dasturlash va mahsulot interfeysi uchun mo'ljallanmagan.
 
 #### [claude-code-setup](reviews/developer-tools/claude-code-setup.md) — Yangi boshlovchilar uchun Claude Code sozlamalarini tavsiya qiluvchi plagin
-`🔄 Alternativi yaxshiroq` · **Sifat:** `7.5/10` · **Ishda kerak bo'lishi:** `2.0/10` · **Turi:** Plugin · **Sana:** `2026-11-16`
+🔄 **Alternativi yaxshiroq:** [skillshare](reviews/developer-tools/skillshare.md)<br>
+**Sifat:** `7.5/10` · **Ishda kerak bo'lishi:** `2.0/10` · **Turi:** Plugin · **Sana:** `2026-11-16`
 
-Yangi o'rganuvchilarga boshlang'ich `CLAUDE.md` va hooklar tavsiya qiladi; tayyor global tizim borligi uchun bizga shart emas. 👉 **Yaxshiroq alternativ:** barcha AI'larni bitta markazdan boshqaradigan [**`skillshare`**](reviews/developer-tools/skillshare.md).
+Yangi o'rganuvchilarga boshlang'ich `CLAUDE.md` va hooklar tavsiya qiladi; tayyor global tizim borligi uchun bizga shart emas.
 
 #### [OmniRoute](reviews/developer-tools/omniroute.md) — Obunalarni aylantiruvchi lokal LLM reverse-proxy (`localhost:20128`)
-`⚠️ Tavsiya etilmaydi` · **Sifat:** `7.5/10` · **Ishda kerak bo'lishi:** `2.0/10` · **Turi:** Local Proxy + 44 Admin Skill · **Sana:** `2026-11-16`
+`⚠️ Tavsiya etilmaydi` · **Sifat:** `7.5/10` · **Ishda kerak bo'lishi:** `2.0/10` · **Turi:** Local Proxy + 44 Admin Skill · **Sana:** `2026-11-16`<br>
+🔄 **Alternativi yaxshiroq:** [Orca](reviews/developer-tools/orca.md) + [ponytail](reviews/architecture/ponytail.md)
 
-O'nlab arzon API kalitlarni bitta shlyuzga yig'ish uchun yozilgan lokal proxy server (ichidagi 44 ta skill kodlash uchun emas, faqat proxy sozlamalari). 👉 **Xavfsiz va barqaror alternativ:** rasmiy obunalarni to'g'ridan-to'g'ri boshqaradigan [**`Orca`**](reviews/developer-tools/orca.md) + [**`ponytail`**](reviews/architecture/ponytail.md).
+O'nlab arzon API kalitlarni bitta shlyuzga yig'ish uchun yozilgan lokal proxy server (ichidagi 44 ta skill kodlash uchun emas, faqat proxy sozlamalari).
 
 > [!WARNING]
 > **Akkaunt ban (`ToS`) va sessiya uzilishi xavfi:** Pullik `Claude` / `ChatGPT` / `Google` obunalarini `wreq-js` TLS-stealth orqali ulash **akkaunt bloklanishiga (`ban`)** olib kelishi mumkin; bundan tashqari uzoq kodlash sessiyalarini uzib qo'yadi (`#7287`) va limit tugaganda yashirincha kuchsiz modelga tushirib kod sifatini buzadi.
@@ -522,7 +564,7 @@ Yuqoridagi barcha sinovlar va raqamlarning 7 yo'nalish bo'yicha to'liq qiyosiy j
   - ✅ [**`skillshare audit`**](reviews/developer-tools/skillshare.md) (`0.1s` skill tekshiruv) + [**`security-audit`**](reviews/backend/security-audit-skill.md) (Docker'siz manba kodi auditi) + [**`Shannon`**](reviews/backend/shannon.md) (staging'da jonli exploit pentest) + [**`sentry`**](reviews/backend/sentry.md) (xato + Replay + trace).
   - ⚖️ Muqobillar: [**`SkillSpector`**](reviews/developer-tools/skillspector.md) (og'ir Docker/YARA sikli) · [**`opentelemetry`**](reviews/backend/opentelemetry.md) (`Collector + SigNoz/Grafana` katta klasterlar uchun) · 👍 [**`REA`**](reviews/developer-tools/rea.md) (faqat manba kodi yo'q begona `.asar`/`.apk`/binarlarni [`rea`](skills/rea/SKILL.md) orqali vaqtinchalik ochish va `audit-release-exposure` uchun).
 - **🧠 Lokal Modellar va 🔌 Tashqi API'lar:**
-  - ✅ Haqiqiy lokal coder kerak bo'lsa: **`Ollama` / `MLX` (`Qwen3-Coder`)** (`32–64 GB` Mac RAM ichida `30–65 tok/s`, SSD'ga zararsiz) · Mahsulot backendi uchun arzon API: [**`MiniMax M3.1 Flash API`**](reviews/external-apis/minimax-m3-1-flash-api.md) (`$0.15/$0.60`, `170+ tok/s`).
+  - ✅ Serverda tezkor qaror (`true/false` va `select`): [**`Jev (TypeSafe AI)`**](reviews/external-apis/jev.md) (`~0.3s`, `$0.042/$0`, `<80%` va `timeout` fallback bilan — `GPT-6 Luna Medium` `~9–12s` kutishini yo'qotadi) · Mahsulot backendida matn/chat/OCR generatsiya kerak bo'lsa: [**`MiniMax M3.1 Flash API`**](reviews/external-apis/minimax-m3-1-flash-api.md) (`$0.15/$0.60`, `170+ tok/s`) · Oflayn lokal coder: **`Ollama` / `MLX` (`Qwen3-Coder`)** (`32–64 GB` Mac RAM ichida `30–65 tok/s`).
   - ⚠️ Lokal ishchi kompyuterda tavsiya etilmaydi: [**`kimi-k3-in-c`**](reviews/local-models/kimi-k3-in-c.md) (`1 token = ~30s`, `~50 TB` SSD o'qish) · [**`MiniMax-M3.1-Flash` *(Lokal)* **](reviews/local-models/minimax-m3-1-flash.md) (`285 GB` vazn, `640 GB VRAM` server kerak).
 
 ---

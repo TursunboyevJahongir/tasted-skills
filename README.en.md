@@ -187,6 +187,24 @@ Ensures apps that feel fast on a developer Mac don't freeze on budget phones or 
 
 Models trained on older code often emit deprecated Drizzle `v1 relations()` syntax; this skill gives AI the exact `v2 defineRelations` and object-based filter rules so database queries compile cleanly on the first try.
 
+### 25. [Jev (TypeSafe AI)](reviews/en/external-apis/jev.md) — Sub-second (`~0.3s`), ultra-cheap server API for `true/false` & `select` image/text decisions
+`✅ Using` · **Quality:** `9.0/10` · **How Often Needed:** `8.0/10` · **Type:** Cloud Decision Engine API (`System-1`) · **Date:** Since `2026-10`
+
+**Crucial distinction — this is NOT a generative chat or image-editing AI:** it is a non-autoregressive **decision (`judgment`) engine** that takes an image or text and returns **`true / false`** (`usable / unusable`) or **picks one option out of several (`select`)** with a `0–100%` confidence score. Across our media/video platform and other server backends, we needed to validate incoming images and pick best video frames across 3 options: **1) Paid GPT Vision API** — easy setup, but slow and expensive on image uploads; **2) Server-authenticated AI subscription (`GPT-6 Luna` `Medium`)** — cheaper since it uses our subscription, but multi-check image validation still takes **at least `~10 seconds` (`9–12s`)**, leaving users waiting; **3) `Jev`** — paid, yet **tiny in cost (`$0.042 / 1M` input, `$0.00` free output)** and **blazingly fast (`~0.3s`)**, easily outweighing its setup complexity when used in its exact lane. 📊 [typesafe.ai](https://typesafe.ai/) · [docs.typesafe.ai](https://docs.typesafe.ai/)
+
+> [!WARNING]
+> **Use Strictly in Its Lane with Fallback Guards:** 1) Not plug-and-play — calibrate typed questions against real edge cases first; 2) Always pair it with a stronger AI (`GPT-6 Luna` / `Codex` / GPT) and escalate whenever `Jev` is uncertain (**confidence `< 80%`**); 3) Never assume 100% connectivity — enforce strict timeouts (`3–6s`) and automatic failover so occasional timeouts or connection drops never stall production!
+
+<details>
+<summary>📊 Comparison & Stats (`Jev` vs. `GPT Vision API` vs. `GPT-6 Luna Medium`)</summary>
+
+- **Option 1 — Paid `GPT Vision API` (`GPT-5`):** `$1.25` input / `$10.00` output per `1M` tokens, `~4–10+s` latency — costly at image upload scale.
+- **Option 2 — Server AI Subscription (`GPT-6 Luna Medium`):** Low marginal cost on subscription (`$0.10 / $0.50` on API), but 6-question image validation takes **`p50: ~9.02–12.4 seconds`** — users wait too long.
+- **Option 3 — `Jev` (`TypeSafe AI`) + `<80%` Fallback:** **`$0.042 / 1M` input** & **`$0.00` output (`~2.4x–10x` cheaper than `Luna` API, `~30x–100x+` cheaper than `GPT-5`)**, 6-question image check **`p50: ~0.30–0.35s` (`~25–30x` faster)**, best-of-6 video frame selection `~3.3s`.
+- 📖 [Full review & server fallback architecture →](reviews/en/external-apis/jev.md) · [Summary comparison below ↓](#detailed-comparisons)
+
+</details>
+
 ---
 
 ## By Category
@@ -229,6 +247,8 @@ Capable multimodal (`text + image + video`, `1M` context) model, but its **`~250
 </details>
 
 ### 🔌 External APIs
+
+> 💡 **Note:** Our primary production API for sub-second (`~0.3s`), ultra-cheap (`$0.042 / $0`) image & text validation (`true/false`) and multi-option `select` decisions is listed above in Top Essentials: [**#25. Jev (TypeSafe AI)**](reviews/en/external-apis/jev.md) (`✅ Using`).
 
 #### [MiniMax M3.1 Flash API](reviews/en/external-apis/minimax-m3-1-flash-api.md) — Ultra-cheap, `170+ tok/s` multimodal API for product backend bots, translation & OCR
 `👍 Good Option` · **Quality:** `8.0/10` · **How Often Needed:** `5.0/10` · **Type:** Cloud Multimodal API · **Date:** `2026-11-16`
@@ -522,7 +542,7 @@ For the full 7-domain side-by-side benchmark tables, see: 👉 [**Open Full 7-Do
   - ✅ [**`skillshare audit`**](reviews/en/developer-tools/skillshare.md) (`0.1s` skill check) + [**`security-audit`**](reviews/en/backend/security-audit-skill.md) (Docker-free source audit) + [**`Shannon`**](reviews/en/backend/shannon.md) (live staging exploit pentest) + [**`sentry`**](reviews/en/backend/sentry.md) (errors + Replay + traces).
   - ⚖️ Alternatives: [**`SkillSpector`**](reviews/en/developer-tools/skillspector.md) (heavy Docker/YARA pipeline) · [**`opentelemetry`**](reviews/en/backend/opentelemetry.md) (`Collector + SigNoz/Grafana` for large clusters) · 👍 [**`REA`**](reviews/en/developer-tools/rea.md) (for inspecting closed-source `.asar`/`.apk`/binaries temporarily via [`rea`](skills/rea/SKILL.md) and `audit-release-exposure`).
 - **🧠 Local Models & 🔌 External APIs:**
-  - ✅ Real offline local coder: **`Ollama` / `MLX` (`Qwen3-Coder`)** (`30–65 tok/s` in `32–64 GB` Mac RAM, zero SSD wear) · Budget backend API: [**`MiniMax M3.1 Flash API`**](reviews/en/external-apis/minimax-m3-1-flash-api.md) (`$0.15/$0.60`, `170+ tok/s`).
+  - ✅ Sub-second server decisions (`true/false` & `select`): [**`Jev (TypeSafe AI)`**](reviews/en/external-apis/jev.md) (`~0.3s`, `$0.042/$0` with `<80%` & timeout fallback — eliminates `GPT-6 Luna Medium`'s `~9–12s` wait) · Generative backend chat/OCR: [**`MiniMax M3.1 Flash API`**](reviews/en/external-apis/minimax-m3-1-flash-api.md) (`$0.15/$0.60`, `170+ tok/s`) · Offline local coder: **`Ollama` / `MLX` (`Qwen3-Coder`)** (`30–65 tok/s` in `32–64 GB` Mac RAM).
   - ⚠️ Not recommended on developer laptops: [**`kimi-k3-in-c`**](reviews/en/local-models/kimi-k3-in-c.md) (`1 token = ~30s`, `~50 TB` SSD reads) · [**`MiniMax-M3.1-Flash` *(Local)* **](reviews/en/local-models/minimax-m3-1-flash.md) (`285 GB` weights, needs `640 GB VRAM`).
 
 ---
