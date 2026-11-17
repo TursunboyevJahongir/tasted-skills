@@ -46,7 +46,7 @@
   1. **Отказались от глобального MCP и `200 KB` скилла:** `npx rea-agents setup` не используется -> **`0` токенов** нагрузки в обычной разработке.
   2. **Создали [`skills/rea`](../../../skills/rea/SKILL.md) + [`rea-session.sh`](../../../skills/rea/scripts/rea-session.sh):**
      - Активируется **только** по явному сигналу (`"rea"`, `"/rea"`).
-     - **Шаг `preflight`:** Автоматически находит подходящий Node (`v26.12.1+` / `v24.22.1+`), подключает Homebrew `openjdk` (`JAVA_HOME`) и `GHIDRA_INSTALL_DIR`, определяет тип цели (`Electron .asar`, `Web URL`, `Android .apk`, `Native Mach-O/ELF/PE`, `.wasm`, `.pcap`) и показывает точные недостающие пакеты (`brew install openjdk jadx apktool` или `brew install --cask ghidra` / `rizin`) для установки перед глубоким разбором.
+     - **Шаг `preflight` и `ensure-node`:** Ищет подходящий Node (`v26.12.1+` / `v24.22.1+`) — **а если установленный Node устарел, автоматически обновляет/доустанавливает нужную версию (`fnm install 24` или `brew upgrade node`)**, подключает Homebrew `openjdk` (`JAVA_HOME`) и `GHIDRA_INSTALL_DIR`, определяет тип цели (`Electron .asar`, `Web URL`, `Android .apk`, `Native Mach-O/ELF/PE`, `.wasm`, `.pcap`) и показывает точные недостающие пакеты (`brew install openjdk jadx apktool` или `brew install --cask ghidra` / `rizin`) для установки перед глубоким разбором.
      - **Изолированный `run` и `cleanup`:** Выполняет команды во временной папке `/tmp/rea-ephemeral` и очищает временные файлы по завершении.
 
 ---

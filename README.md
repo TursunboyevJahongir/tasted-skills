@@ -397,7 +397,7 @@ Katta reliz oldidan ko'tarilgan lokal yoki staging serverga real exploit so'rovl
 #### [REA](reviews/developer-tools/rea.md) — Manba kodi yo'q begona dastur, `.asar`, `.apk` va binarlarni ichidan ochib o'rganish
 `👍 Yaxshi variant` · **Sifat:** `9.0/10` · **Ishda kerak bo'lishi:** `3.5/10` · **Turi:** Standalone CLI + [`rea`](skills/rea/SKILL.md) · **Sana:** `2026-11-17`
 
-Begona desktop/mobil/veb ilovadagi yoqqan funksiyani manba kodisiz (`Electron .asar`, JS bundle, Android `.apk`, `.NET`, `Mach-O`/`ELF`/`PE`) dalillari bilan tiklab beradi (`9.0/10`), shuningdek o'zimizning reliz paketimizda `.map`/`.dSYM` qolib ketmaganini tekshiradi (`audit-release-exposure`). Bizdagi [`rea`](skills/rea/SKILL.md) skilli orqali `"rea"` deb signal berilganda **avval nishon turiga mos yordamchi dasturlarni (`openjdk`, `jadx`, `apktool`, `ghidra`, `rizin`) tekshirib o'rnatadi** va **`0` doimiy token yuki bilan** vaqtinchalik ishlab beradi. *(O'zimizning manba kodi bor loyihalarimiz uchun 👉 [**`graphify`**](reviews/architecture/graphify.md) ishlatiladi).*
+Begona desktop/mobil/veb ilovadagi yoqqan funksiyani manba kodisiz (`Electron .asar`, JS bundle, Android `.apk`, `.NET`, `Mach-O`/`ELF`/`PE`) dalillari bilan tiklab beradi (`9.0/10`), shuningdek o'zimizning reliz paketimizda `.map`/`.dSYM` qolib ketmaganini tekshiradi (`audit-release-exposure`). Bizdagi [`rea`](skills/rea/SKILL.md) skilli orqali `"rea"` deb signal berilganda **avval Node.js versiyasini (eski bo'lsa kerakli versiyaga yangilab) hamda nishon turiga mos yordamchi dasturlarni (`openjdk`, `jadx`, `apktool`, `ghidra`, `rizin`) tekshirib o'rnatadi** va **`0` doimiy token yuki bilan** vaqtinchalik ishlab beradi. *(O'zimizning manba kodi bor loyihalarimiz uchun 👉 [**`graphify`**](reviews/architecture/graphify.md) ishlatiladi).*
 
 > [!WARNING]
 > **Kontekst tuzog'i:** Hech qachon `npx rea-agents setup` orqali global MCP qilib ulamang — uning `200+` ta MCP tool'i har suhbatda **`~300 KB` (`~75,000+` token)** kontekstni bekorga yeb qo'yadi! Faqat bizdagi vaqtinchalik [`rea`](skills/rea/SKILL.md) skilli orqali ishlating.
@@ -406,7 +406,7 @@ Begona desktop/mobil/veb ilovadagi yoqqan funksiyani manba kodisiz (`Electron .a
 <summary>📊 Solishtiruv va statistika (Global `REA` MCP vs bizning `rea` skilli)</summary>
 
 - **Standart `npx rea-agents setup` bilan:** `200+` tool (`~75,000+` token har sessiyada) + `~198 KB` (`~50K` token) skill referenslar + `189.6 MB` npm hajm; `Node 24.20.0` da versiya xatosi bilan yiqiladi.
-- **Bizning [`rea`](skills/rea/SKILL.md) wrapper skilli bilan:** Kundalik suhbatlarda **`0` token yuk**; `"rea"` deb chaqirilganda mos `Node 26+` ni o'zi tanlaydi, nishonga qarab yetishmayotgan dekompilyatorlarni aniqlab o'rnatadi va `/tmp` da ishlab, yakunda tozalab ketadi.
+- **Bizning [`rea`](skills/rea/SKILL.md) wrapper skilli bilan:** Kundalik suhbatlarda **`0` token yuk**; `"rea"` deb chaqirilganda mos `Node 26+`/`24.22+` ni o'zi tanlaydi (eski bo'lsa avto-yangilaydi), nishonga qarab yetishmayotgan dekompilyatorlarni aniqlab o'rnatadi va `/tmp` da ishlab, yakunda tozalab ketadi.
 - 📖 [Batafsil sharh →](reviews/developer-tools/rea.md) · [Pastdagi solishtiruv ↓](#batafsil-solishtirishlar)
 
 </details>

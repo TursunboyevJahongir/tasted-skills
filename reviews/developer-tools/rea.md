@@ -46,7 +46,7 @@
   1. **Asl MCP va `200 KB` skill o'rnatilmadi:** `npx rea-agents setup` umuman ishlatilmaydi -> kundalik sessiyalarda **`0` token yuk**.
   2. **Maxsus [`skills/rea`](../../skills/rea/SKILL.md) + [`rea-session.sh`](../../skills/rea/scripts/rea-session.sh) yaratildi:**
      - Faqat `"rea"`, `"/rea"`, `"rea bilan tekshir"` deb signal berilgandagina uyg'onadi.
-     - **`preflight` bosqichi:** Avval kompyuterdagi mos Node (`v26.12.1+` / `v24.22.1+`), `openjdk` (`JAVA_HOME`) va `GHIDRA_INSTALL_DIR` ni avtomatik topadi; keyin **tekshirilayotgan nishon turiga qarab** (`Electron .asar`, `Web URL`, `Android .apk`, `Native Mach-O/ELF/PE`, `.wasm`, `.pcap`) qaysi qo'shimcha dasturlar yetishmayotganini aniqlab, aynan keraklisini (`brew install openjdk jadx apktool` yoki `brew install --cask ghidra` / `rizin`) o'rnatib olgach tekshiruvni boshlaydi.
+     - **`preflight` va `ensure-node` bosqichi:** Avval kompyuterdagi mos Node (`v26.12.1+` / `v24.22.1+`) ni qidiradi — **agar kompyuterdagi Node eski bo'lsa, uni avtomatik kerakli versiyaga yangilab/o'rnatib oladi** (`fnm install 24` yoki `brew upgrade node`), shuningdek `openjdk` (`JAVA_HOME`) va `GHIDRA_INSTALL_DIR` ni avtomatik ulaydi; keyin **tekshirilayotgan nishon turiga qarab** (`Electron .asar`, `Web URL`, `Android .apk`, `Native Mach-O/ELF/PE`, `.wasm`, `.pcap`) qaysi qo'shimcha dasturlar yetishmayotganini aniqlab, aynan keraklisini (`brew install openjdk jadx apktool` yoki `brew install --cask ghidra` / `rizin`) o'rnatib olgach tekshiruvni boshlaydi.
      - **`run` va `cleanup` bosqichi:** Barcha ishlarni vaqtinchalik `/tmp/rea-ephemeral` papkasida bajarib, ish tugagach vaqtinchalik fayllarni tozalab tashlaydi.
 
 ---

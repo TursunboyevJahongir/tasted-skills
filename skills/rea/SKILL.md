@@ -42,11 +42,12 @@ bash "<skill-dir>/scripts/rea-session.sh" preflight "/absolute/path/to/target"
 ```
 
 `preflight` automatically:
-1. Selects a compatible Node runtime (`^22.23.4 || ^24.22.1 || >=26.12.1`, e.g. `/opt/homebrew/bin/node` even when `fnm`/`nvm` defaults to an older minor);
+1. Checks for a compatible Node runtime (`^22.23.4 || ^24.22.1 || >=26.12.1`, e.g. `/opt/homebrew/bin/node`, `fnm`, `nvm`) — and if no installed Node meets the version floor (`NODE_RUNTIME=NEEDS_UPGRADE`), `rea-session.sh ensure-node` (or `run`) **automatically upgrades/installs a supported Node version** (`fnm install 24`, `brew upgrade node || brew install node`, or `nvm install 24`);
 2. Wires Homebrew `openjdk` (`JAVA_HOME`) and `GHIDRA_INSTALL_DIR` automatically if installed;
 3. Classifies the target and outputs `READY_NOW_COMMANDS`, `MISSING_PREREQUISITES`, and `INSTALL_CMD`.
 
 **Act on `MISSING_PREREQUISITES` according to what the investigation needs:**
+- **`NODE_RUNTIME=NEEDS_UPGRADE`**: Run `bash "<skill-dir>/scripts/rea-session.sh" ensure-node` (or let `run` upgrade Node automatically) to install/upgrade Node to a compatible `24.22.1+` / `26.12.1+` release.
 - **`MISSING_PREREQUISITES=none`** (e.g., Electron `.asar`, JS bundles, `.NET`, Unity `IL2CPP`, Godot `.pck`, `GGUF`, SQLite, APK signature/Flutter check, or tools already installed) -> start Step 2 immediately.
 - **External decompiler/decoder needed for the user's question** (`INSTALL_CMD` is non-empty):
   - **Android `.apk` Java/Kotlin classes, methods & XML resources:** `brew install openjdk jadx apktool`

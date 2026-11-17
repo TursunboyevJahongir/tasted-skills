@@ -397,7 +397,7 @@ Fires real `Auth bypass`, `IDOR`, `SQLi`, `XSS`, and `SSRF` exploits against loc
 #### [REA](reviews/en/developer-tools/rea.md) — Reverse engineer closed-source apps, `.asar`s, `.apk`s & native binaries without source code
 `👍 Good Option` · **Quality:** `9.0/10` · **How Often Needed:** `3.5/10` · **Type:** Standalone CLI + [`rea`](skills/rea/SKILL.md) · **Date:** `2026-11-17`
 
-Recovers how a feature works inside shipped third-party desktop/mobile/web apps without source code (`Electron .asar`, JS bundles, Android `.apk`, `.NET`, `Mach-O`/`ELF`/`PE`) with Evidence IDs (`9.0/10`), and checks your own release artifacts for leaked `.map`/`.dSYM` files (`audit-release-exposure`). Triggered on demand via our [`rea`](skills/rea/SKILL.md) skill (`"rea"`), which **checks and installs target-specific prerequisites first (`openjdk`, `jadx`, `apktool`, `ghidra`, `rizin`)** and runs **temporarily at `0` idle token cost**. *(For our own source repositories, use 👉 [**`graphify`**](reviews/en/architecture/graphify.md)).*
+Recovers how a feature works inside shipped third-party desktop/mobile/web apps without source code (`Electron .asar`, JS bundles, Android `.apk`, `.NET`, `Mach-O`/`ELF`/`PE`) with Evidence IDs (`9.0/10`), and checks your own release artifacts for leaked `.map`/`.dSYM` files (`audit-release-exposure`). Triggered on demand via our [`rea`](skills/rea/SKILL.md) skill (`"rea"`), which **checks/auto-upgrades Node.js to a compatible release if needed, installs target-specific prerequisites (`openjdk`, `jadx`, `apktool`, `ghidra`, `rizin`)**, and runs **temporarily at `0` idle token cost**. *(For our own source repositories, use 👉 [**`graphify`**](reviews/en/architecture/graphify.md)).*
 
 > [!WARNING]
 > **Context Bloat Trap:** Never register global MCP via `npx rea-agents setup` — its `200+` MCP tools add **`~300 KB` (`~75,000+` tokens)** of schema overhead per session! Always invoke temporarily through our [`rea`](skills/rea/SKILL.md) wrapper skill.
@@ -406,7 +406,7 @@ Recovers how a feature works inside shipped third-party desktop/mobile/web apps 
 <summary>📊 Comparison & Stats (Global `REA` MCP vs. our `rea` wrapper skill)</summary>
 
 - **With default `npx rea-agents setup`:** `200+` tools (`~75,000+` tokens/session) + `~198 KB` (`~50K` tokens) skill references + `189.6 MB` npm footprint; fails on `Node 24.20.0`.
-- **With our [`rea`](skills/rea/SKILL.md) wrapper skill:** **`0` idle tokens** in daily coding chats; when signaled with `"rea"`, auto-selects compatible `Node 26+`, detects/installs only target-needed decompilers, executes in `/tmp`, and cleans up afterward.
+- **With our [`rea`](skills/rea/SKILL.md) wrapper skill:** **`0` idle tokens** in daily coding chats; when signaled with `"rea"`, auto-selects or upgrades to compatible `Node 26+`/`24.22+`, detects/installs only target-needed decompilers, executes in `/tmp`, and cleans up afterward.
 - 📖 [Full review →](reviews/en/developer-tools/rea.md) · [Summary comparison below ↓](#detailed-comparisons)
 
 </details>

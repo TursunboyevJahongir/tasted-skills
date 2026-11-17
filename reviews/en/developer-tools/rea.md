@@ -46,7 +46,7 @@
   1. **Skipped upstream MCP & `200 KB` skill bundle:** `npx rea-agents setup` is never executed -> **`0` permanent token overhead** in daily sessions.
   2. **Built [`skills/rea`](../../../skills/rea/SKILL.md) + [`rea-session.sh`](../../../skills/rea/scripts/rea-session.sh):**
      - Triggers **only** when explicitly invoked (`"rea"`, `"/rea"`, `"rea bilan tekshir"`).
-     - **`preflight` gate:** Automatically selects a compatible Node runtime (`v26.12.1+` / `v24.22.1+`), wires Homebrew `openjdk` (`JAVA_HOME`) and `GHIDRA_INSTALL_DIR`, classifies the target (`Electron .asar`, `Web URL`, `Android .apk`, `Native Mach-O/ELF/PE`, `.wasm`, `.pcap`), and identifies exact missing Homebrew prerequisites (`brew install openjdk jadx apktool` or `brew install --cask ghidra` / `rizin`) to install before starting deep analysis.
+     - **`preflight` & `ensure-node` gate:** Searches for a compatible Node runtime (`v26.12.1+` / `v24.22.1+`) — **and automatically upgrades/installs the required Node version (`fnm install 24` or `brew upgrade node`) if the machine's Node is outdated**, wires Homebrew `openjdk` (`JAVA_HOME`) and `GHIDRA_INSTALL_DIR`, classifies the target (`Electron .asar`, `Web URL`, `Android .apk`, `Native Mach-O/ELF/PE`, `.wasm`, `.pcap`), and identifies exact missing Homebrew prerequisites (`brew install openjdk jadx apktool` or `brew install --cask ghidra` / `rizin`) to install before starting deep analysis.
      - **Isolated `run` & `cleanup`:** Executes inside `/tmp/rea-ephemeral` outside target directories and cleans up temporary artifacts once finished.
 
 ---

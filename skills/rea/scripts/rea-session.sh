@@ -73,14 +73,64 @@ detect_ghidra_dir() {
   return 1
 }
 
-wire_environment() {
+suggest_node_upgrade_cmd() {
+  if command -v fnm >/dev/null 2>&1 || [[ -x "/opt/homebrew/bin/fnm" ]]; then
+    printf 'fnm install 24\n'
+  elif command -v brew >/dev/null 2>&1 || [[ -x "/opt/homebrew/bin/brew" ]]; then
+    printf 'brew upgrade node || brew install node\n'
+  elif [[ -s "$HOME/.nvm/nvm.sh" ]]; then
+    printf 'source ~/.nvm/nvm.sh && nvm install 24\n'
+  else
+    printf 'Install Node.js >=24.22.1 or >=26.12.1 from https://nodejs.org\n'
+  fi
+}
+
+ensure_compatible_node() {
   local node_dir
-  if ! node_dir="$(resolve_node_bin_dir)"; then
-    printf 'ERROR: No compatible Node.js found (REA requires ^22.23.4 || ^24.22.1 || >=26.12.1).\n' >&2
-    printf 'INSTALL_NODE_CMD: brew install node\n' >&2
+  if node_dir="$(resolve_node_bin_dir)"; then
+    printf '%s\n' "$node_dir"
+    return 0
+  fi
+
+  printf 'No compatible Node.js found for REA (^22.23.4 || ^24.22.1 || >=26.12.1). Upgrading/installing automatically...\n' >&2
+  export PATH="/opt/homebrew/bin:/usr/local/bin:${PATH}"
+
+  if command -v fnm >/dev/null 2>&1; then
+    fnm install 24 >&2
+  elif command -v brew >/dev/null 2>&1; then
+    (brew upgrade node || brew install node) >&2
+  elif [[ -s "$HOME/.nvm/nvm.sh" ]]; then
+    # shellcheck disable=SC1090
+    source "$HOME/.nvm/nvm.sh" && nvm install 24 >&2
+  else
+    printf 'ERROR: Could not auto-install Node.js (neither fnm, brew, nor nvm found).\n' >&2
     exit 2
   fi
-  export PATH="${node_dir}:/opt/homebrew/bin:/usr/local/bin:${PATH}"
+
+  if node_dir="$(resolve_node_bin_dir)"; then
+    printf '%s\n' "$node_dir"
+    return 0
+  fi
+
+  printf 'ERROR: Node.js upgrade completed, but no compatible binary was found.\n' >&2
+  exit 2
+}
+
+NODE_NEEDS_UPGRADE=false
+
+wire_environment() {
+  local mode="${1:-ensure}"
+  local node_dir=""
+
+  if node_dir="$(resolve_node_bin_dir)"; then
+    export PATH="${node_dir}:/opt/homebrew/bin:/usr/local/bin:${PATH}"
+  elif [[ "$mode" == "check" ]]; then
+    NODE_NEEDS_UPGRADE=true
+    export PATH="/opt/homebrew/bin:/usr/local/bin:${PATH}"
+  else
+    node_dir="$(ensure_compatible_node)"
+    export PATH="${node_dir}:/opt/homebrew/bin:/usr/local/bin:${PATH}"
+  fi
 
   if [[ -d "/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home" ]]; then
     export JAVA_HOME="${JAVA_HOME:-/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home}"
@@ -167,16 +217,27 @@ cmd_preflight() {
     exit 1
   fi
 
-  wire_environment
+  wire_environment check
   local node_ver tclass
-  node_ver="$(node -v)"
+  if [[ "$NODE_NEEDS_UPGRADE" == true ]]; then
+    node_ver="outdated/missing (current: $(command -v node >/dev/null 2>&1 && node -v || echo none))"
+  else
+    node_ver="$(node -v)"
+  fi
   tclass="$(classify_target "$target")"
 
+  local missing_items=()
   local brew_formulae=()
   local brew_casks=()
+  local install_parts=()
   local zero_install="inspect-artifact"
   local deep_cmds=""
   local notes=""
+
+  if [[ "$NODE_NEEDS_UPGRADE" == true ]]; then
+    missing_items+=("node>=24.22.1")
+    install_parts+=("$(suggest_node_upgrade_cmd)")
+  fi
 
   case "$tclass" in
     javascript-electron|electron-macos-app)
@@ -242,7 +303,11 @@ cmd_preflight() {
       ;;
   esac
 
-  printf 'NODE_RUNTIME=%s (%s)\n' "$(command -v node)" "$node_ver"
+  if [[ "$NODE_NEEDS_UPGRADE" == true ]]; then
+    printf 'NODE_RUNTIME=NEEDS_UPGRADE (%s)\n' "$node_ver"
+  else
+    printf 'NODE_RUNTIME=%s (%s)\n' "$(command -v node)" "$node_ver"
+  fi
   printf 'REA_PACKAGE=rea-agents@%s\n' "$REA_VERSION"
   printf 'TARGET=%s\n' "$target"
   printf 'TARGET_CLASS=%s\n' "$tclass"
@@ -250,11 +315,12 @@ cmd_preflight() {
   [[ -n "$deep_cmds" ]] && printf 'DEEP_ANALYSIS_COMMANDS=%s\n' "$deep_cmds"
   [[ -n "${GHIDRA_INSTALL_DIR:-}" ]] && printf 'GHIDRA_INSTALL_DIR=%s\n' "$GHIDRA_INSTALL_DIR"
 
-  local install_parts=()
   if (( ${#brew_formulae[@]} > 0 )); then
+    missing_items+=("${brew_formulae[@]}")
     install_parts+=("brew install ${brew_formulae[*]}")
   fi
   if (( ${#brew_casks[@]} > 0 )); then
+    missing_items+=("${brew_casks[@]}")
     install_parts+=("brew install --cask ${brew_casks[*]}")
   fi
 
@@ -262,7 +328,7 @@ cmd_preflight() {
     printf 'MISSING_PREREQUISITES=none\n'
     printf 'INSTALL_CMD=none\n'
   else
-    printf 'MISSING_PREREQUISITES=%s\n' "${brew_formulae[*]:-} ${brew_casks[*]:-}"
+    printf 'MISSING_PREREQUISITES=%s\n' "${missing_items[*]}"
     local joined=""
     local p
     for p in "${install_parts[@]}"; do
@@ -273,8 +339,13 @@ cmd_preflight() {
   printf 'NOTES=%s\n' "$notes"
 }
 
+cmd_ensure_node() {
+  wire_environment ensure
+  printf 'READY_NODE_RUNTIME=%s (%s)\n' "$(command -v node)" "$(node -v)"
+}
+
 cmd_run() {
-  wire_environment
+  wire_environment ensure
   mkdir -p "$REA_WORK_ROOT"
   local run_dir
   run_dir="$(mktemp -d "${REA_WORK_ROOT}/run-XXXXXX")"
@@ -296,11 +367,13 @@ sub="${1:-}"
 shift || true
 case "$sub" in
   preflight) cmd_preflight "$@" ;;
+  ensure-node) cmd_ensure_node ;;
   run) cmd_run "$@" ;;
   cleanup) cmd_cleanup ;;
   *)
     printf 'Usage:\n' >&2
     printf '  rea-session.sh preflight <target-path-or-url>\n' >&2
+    printf '  rea-session.sh ensure-node\n' >&2
     printf '  rea-session.sh run <rea-command> [args...]\n' >&2
     printf '  rea-session.sh cleanup\n' >&2
     exit 1
