@@ -2,23 +2,20 @@
 
 [🇺🇿 O'zbekcha](README.md) | **🇬🇧 English** | [🇷🇺 Русский](README.ru.md)
 
-### How to Read Status Badges & Scores
+**Statuses (what each badge means):**
+- `✅ Using` — used daily in our workflow.
+- `👍 Good Option` — good tool, worth using when the right task comes up.
+- `🔄 Better Alternative` — good tool, we simply have a more convenient option for its job.
+- `⚠️ Not Recommended` — carries risk or practical harm (reason noted on each entry).
 
-- `✅ Using` — used daily in our active workflow.
-- `👍 Good Option` — vetted, high-quality tool worth reaching for when that specific task comes up.
-- `🔄 Better Alternative` — **the tool itself is NOT bad**, we simply have a faster, broader, or collision-free alternative that already covers its job.
-- `⚠️ Not Recommended` — **use caution:** carries practical risk or harm (account ToS ban risk, private code leakage, SSD endurance wear, hidden telemetry, or `2x–10x` wasted time/tokens).
-
-> [!NOTE]
-> **💡 "`How Often Needed: 3/10`" Does NOT Mean a Tool Is Bad!**
-> Every entry separates two distinct ratings:
-> 1. **`Quality` (`8.5/10`, `9.0/10`)** — how well-engineered and capable the tool itself is.
-> 2. **`How Often Needed` (`1/10` – `10/10`)** — how frequently we need it in day-to-day work. For example, `Quality: 8.5/10` with `How Often Needed: 3.0/10` means a great tool built for a narrow niche (such as native iOS Widgets) or one whose everyday job is already covered by our primary stack.
-
-📖 [Combined workflow guides & additional capabilities →](practices/en/README.md) · [⚖️ Jump to Detailed Comparisons & Benchmarks below ↓](#detailed-comparisons)
+**Scores (two separate things):**
+- **`Quality` (`1–10`)** — how well-made the tool itself is.
+- **`How Often Needed` (`1–10`)** — how often it is needed in daily work *(`3/10` does NOT mean bad — just rarely needed)*.
 
 > [!TIP]
 > **🛡️ Our Security Rule (Recommended for You Too):** Never install third-party skills, plugins, or MCP servers based solely on their `README` or GitHub stars. Before installing anything, **we always have our AI coding agent inspect the primary source code directly** (`SKILL.md`, scripts, hooks, network/env access) and run [**`skillshare`**](reviews/en/developer-tools/skillshare.md)'s built-in `skillshare audit` check.
+
+📖 [Combined workflow guides & additional capabilities →](practices/en/README.md) · [⚖️ Jump to Detailed Comparisons & Benchmarks below ↓](#detailed-comparisons)
 
 ---
 
@@ -192,9 +189,7 @@ Models trained on older code often emit deprecated Drizzle `v1 relations()` synt
 
 ---
 
-## By Category (Vetted Options, Better Alternatives & Risk Warnings)
-
-> *Note: `How Often Needed: 2.5/10` or `3.0/10` does NOT mean poor quality — it simply reflects how rarely that niche arises in daily work or that a stronger alternative already covers it.*
+## By Category
 
 ### 🧠 Local Models
 

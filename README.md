@@ -2,23 +2,20 @@
 
 **🇺🇿 O'zbekcha** | [🇬🇧 English](README.en.md) | [🇷🇺 Русский](README.ru.md)
 
-### Holat belgilari va baholarni qanday tushunish kerak?
+**Holatlar (qaysi belgi nimani bildiradi):**
+- `✅ Ishlatyapman` — har kuni doimiy ishlataman.
+- `👍 Yaxshi variant` — sifatli vosita, mos vaziyat chiqqanda ishlatishga arziydi.
+- `🔄 Alternativi yaxshiroq` — o'zi yaxshi, shunchaki bizda undan qulayroq muqobili bor.
+- `⚠️ Tavsiya etilmaydi` — xavfi yoki zarari bor (har birida sababi yozilgan).
 
-- `✅ Ishlatyapman` — kundalik ishda doimiy ishlatilyapti.
-- `👍 Yaxshi variant` — tekshirilgan sifatli vosita; har kuni kerak bo'lmasa ham, aynan mos vazifa chiqqanda ishlatishga arziydi.
-- `🔄 Alternativi yaxshiroq` — **vositaning o'zi yomon emas**, shunchaki uning vazifasini bizda tezroq, kengroq yoki to'qnashuvsiz bajaradigan yaxshiroq muqobili bor.
-- `⚠️ Tavsiya etilmaydi` — **ehtiyot bo'ling:** amalda xavf yoki zarar bor (akkaunt ban xavfi, maxfiy kod chiqib ketishi, SSD disk yemirilishi, yashirin telemetriya yoki vaqt va tokenni `2x–10x` bekorga yeyishi).
-
-> [!NOTE]
-> **💡 «Ishda kerak bo'lishi: `3/10`» degani yomon vosita degani EMAS!**
-> Har bir vositada ikkita alohida ko'rsatkich bor:
-> 1. **`Sifat` (`8.5/10`, `9.0/10`)** — vositaning o'zi texnik jihatdan qanchalik pishiq va sifatli yozilgani.
-> 2. **`Ishda kerak bo'lishi` (`1/10` – `10/10`)** — kundalik ishimizda unga qanchalik tez-tez ehtiyoj tushishi. Masalan, `Sifat: 8.5/10` va `Ishda kerak bo'lishi: 3.0/10` bo'lsa — bu juda sifatli vosita, lekin faqat tor/maxsus vaziyatda (masalan, faqat iOS Widget yozganda) kerak bo'ladi yoki uning ishini bizdagi asosiy vosita allaqachon yopib ketadi.
-
-📖 [Qaysi skill va tool'larni bir-biri bilan birga ishlatish bo'yicha amaliy qo'llanmalar →](practices/README.md) · [⚖️ Pastdagi batafsil solishtirishlar jadvaliga tushish ↓](#batafsil-solishtirishlar)
+**Baholar (ikkisi ikki xil narsa):**
+- **`Sifat` (`1–10`)** — vositaning o'zi qanchalik sifatli ishlangani.
+- **`Ishda kerak bo'lishi` (`1–10`)** — kundalik ishda qanchalik tez-tez kerak bo'lishi *(`3/10` — yomon degani emas, shunchaki kam kerak bo'ladi)*.
 
 > [!TIP]
 > **🛡️ Xavfsizlik qoidamiz (sizga ham tavsiya):** Hech qachon begona skill, plugin yoki MCP serverni faqat chiroyli `README` yoki yulduzlariga qarab o'rnatmang. Biz har bitta nomzodni o'rnatishdan oldin **o'zimizning AI coding agentga uning ichki kodini (`SKILL.md`, skriptlar, hooklar, tarmoq/env murojaatlari) o'qitib tekshirtiramiz** hamda [**`skillshare`**](reviews/developer-tools/skillshare.md) ichidagi tayyor `skillshare audit` tekshiruvidan o'tkazamiz.
+
+📖 [Qaysi skill va tool'larni bir-biri bilan birga ishlatish bo'yicha amaliy qo'llanmalar →](practices/README.md) · [⚖️ Pastdagi batafsil solishtirishlar jadvaliga tushish ↓](#batafsil-solishtirishlar)
 
 ---
 
@@ -192,9 +189,7 @@ AI modellarining xotirasida eski Drizzle `v1` sintaksisi qolib ketgani sababli b
 
 ---
 
-## Yo'nalishlar bo'yicha (Tekshirilgan variantlar, alternativalar va ogohlantirishlar)
-
-> *Eslatma: `Ishda kerak bo'lishi: 2.5/10` yoki `3.0/10` — vosita yomon degani emas, balki kundalik ishda kamdan-kam kerak bo'lishini yoki bizda undan qulayroq alternativ borligini bildiradi.*
+## Yo'nalishlar bo'yicha
 
 ### 🧠 Lokal modellar
 
